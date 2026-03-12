@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, Star, ShieldCheck, Users } from 'lucide-react';
+import { ArrowRight, Star, ShieldCheck, Users, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const POPULAR = [
@@ -19,97 +19,143 @@ const STATS = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen bg-[#060C18] flex items-center overflow-hidden pt-16">
-      {/* Background glows */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-[-10%] right-[-5%] w-[700px] h-[700px] bg-indigo-600/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[-10%] left-[-5%]  w-[500px] h-[500px] bg-violet-700/10  rounded-full blur-[100px]" />
-        {/* subtle grid */}
+    <section className="relative bg-gradient-to-br from-slate-50 via-white to-indigo-50/40 flex items-center overflow-hidden pt-16 min-h-screen">
+      {/* Decorative background shapes */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-indigo-100/60 rounded-full blur-[120px] translate-x-1/3 -translate-y-1/4" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-100/50 rounded-full blur-[100px] -translate-x-1/4 translate-y-1/4" />
+        {/* Dot grid */}
         <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.35]"
           style={{
-            backgroundImage:
-              'linear-gradient(white 1px,transparent 1px),linear-gradient(90deg,white 1px,transparent 1px)',
-            backgroundSize: '48px 48px',
+            backgroundImage: 'radial-gradient(circle, #CBD5E1 1px, transparent 1px)',
+            backgroundSize: '28px 28px',
           }}
         />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full py-20">
-        <div className="max-w-4xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-xs font-semibold mb-8"
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
-            India's trusted business compliance platform
-          </motion.div>
-
-          {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.05 }}
-            className="text-4xl sm:text-5xl lg:text-[64px] font-bold text-white tracking-tight leading-[1.08] mb-6"
-          >
-            Launch & grow your business{' '}
-            <span className="bg-gradient-to-r from-indigo-400 via-violet-400 to-blue-400 bg-clip-text text-transparent">
-              with complete legal compliance
-            </span>
-          </motion.h1>
-
-          {/* Sub-headline */}
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-lg text-white/55 leading-relaxed max-w-2xl mb-10"
-          >
-            GST Registration, Company Formation, Trademark, Tax Filing and 120+ more services — handled end‑to‑end by our expert team.
-          </motion.p>
-
-          {/* CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="flex flex-wrap items-center gap-3 mb-12"
-          >
-            <Link
-              to="/category/new-business"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-[14px] font-semibold hover:shadow-[0_0_28px_rgba(99,102,241,0.45)] hover:-translate-y-px transition-all"
+          {/* Left content */}
+          <div>
+            {/* Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-indigo-200 bg-indigo-50 text-indigo-700 text-xs font-semibold mb-8"
             >
-              Get Started <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
-              to="/category/registration"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/15 text-white/80 text-[14px] font-semibold hover:bg-white/6 hover:border-white/25 transition-all"
-            >
-              View all services
-            </Link>
-          </motion.div>
+              <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" />
+              India's trusted business compliance platform
+            </motion.div>
 
-          {/* Popular services chips */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-wrap items-center gap-2"
-          >
-            <span className="text-xs text-white/35 font-medium mr-1">Popular:</span>
-            {POPULAR.map((p) => (
+            {/* Headline */}
+            <motion.h1
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.05 }}
+              className="text-4xl sm:text-5xl lg:text-[58px] font-bold text-gray-900 tracking-tight leading-[1.1] mb-6"
+            >
+              Launch & grow your business{' '}
+              <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-blue-600 bg-clip-text text-transparent">
+                with complete legal compliance
+              </span>
+            </motion.h1>
+
+            {/* Sub-headline */}
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-[17px] text-gray-500 leading-relaxed max-w-xl mb-10"
+            >
+              GST Registration, Company Formation, Trademark, Tax Filing and 120+ more services — handled end‑to‑end by our expert team.
+            </motion.p>
+
+            {/* CTAs */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="flex flex-wrap items-center gap-3 mb-12"
+            >
               <Link
-                key={p.to}
-                to={p.to}
-                className="text-xs text-white/55 hover:text-white border border-white/10 hover:border-white/25 bg-white/4 hover:bg-white/8 rounded-full px-3.5 py-1.5 transition-all"
+                to="/category/new-business"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-[14px] font-semibold shadow-lg shadow-indigo-200 hover:shadow-xl hover:shadow-indigo-300 hover:-translate-y-0.5 transition-all"
               >
-                {p.label}
+                Get Started <ArrowRight className="w-4 h-4" />
               </Link>
-            ))}
+              <a
+                href="tel:+919876543210"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border border-gray-200 text-gray-700 text-[14px] font-semibold hover:bg-gray-50 hover:border-gray-300 transition-all"
+              >
+                <Phone className="w-4 h-4 text-indigo-500" /> Talk to an expert
+              </a>
+            </motion.div>
+
+            {/* Popular service chips */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex flex-wrap items-center gap-2"
+            >
+              <span className="text-xs text-gray-400 font-medium mr-1">Popular:</span>
+              {POPULAR.map((p) => (
+                <Link
+                  key={p.to}
+                  to={p.to}
+                  className="text-xs text-gray-600 hover:text-indigo-700 border border-gray-200 hover:border-indigo-300 bg-white hover:bg-indigo-50 rounded-full px-3.5 py-1.5 transition-all shadow-sm"
+                >
+                  {p.label}
+                </Link>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Right — Trust card panel */}
+          <motion.div
+            initial={{ opacity: 0, x: 24 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="hidden lg:block"
+          >
+            <div className="relative">
+              {/* Main card */}
+              <div className="bg-white rounded-3xl shadow-2xl shadow-gray-200/80 border border-gray-100 p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <img src="/assets/logo.png" alt="Mridhuv Associates" className="h-10 w-auto" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-1">Expert Advisory</h3>
+                <p className="text-gray-500 text-[14px] mb-6">Your business, our expertise — from registration to compliance.</p>
+                <div className="space-y-3 mb-6">
+                  {[
+                    { label: 'GST Registration', time: '3–5 days', color: 'bg-green-50 text-green-700 border-green-200' },
+                    { label: 'Company Incorporation', time: '7–10 days', color: 'bg-blue-50 text-blue-700 border-blue-200' },
+                    { label: 'Trademark Registration', time: '2–3 weeks', color: 'bg-violet-50 text-violet-700 border-violet-200' },
+                  ].map((item) => (
+                    <div key={item.label} className="flex items-center justify-between py-2.5 px-4 rounded-xl bg-gray-50 border border-gray-100">
+                      <span className="text-[13.5px] font-semibold text-gray-700">{item.label}</span>
+                      <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full border ${item.color}`}>{item.time}</span>
+                    </div>
+                  ))}
+                </div>
+                {/* Rating */}
+                <div className="flex items-center gap-2 pt-4 border-t border-gray-100">
+                  {[1,2,3,4,5].map((s) => (
+                    <Star key={s} className="w-4 h-4 text-amber-400 fill-amber-400" />
+                  ))}
+                  <span className="text-[13px] font-semibold text-gray-700 ml-1">4.9</span>
+                  <span className="text-[12px] text-gray-400">· 12,000+ reviews</span>
+                </div>
+              </div>
+              {/* Floating badge */}
+              <div className="absolute -top-4 -right-4 bg-indigo-600 text-white rounded-2xl px-4 py-2.5 shadow-lg shadow-indigo-300">
+                <div className="text-[22px] font-black leading-none">50K+</div>
+                <div className="text-[10px] font-semibold opacity-80">Businesses</div>
+              </div>
+            </div>
           </motion.div>
         </div>
 
@@ -117,18 +163,15 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-px border border-white/8 rounded-2xl overflow-hidden max-w-2xl bg-white/8"
+          transition={{ duration: 0.6, delay: 0.35 }}
+          className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-px border border-gray-200 rounded-2xl overflow-hidden max-w-2xl bg-gray-200 shadow-sm"
         >
           {STATS.map((s) => (
-            <div
-              key={s.label}
-              className="flex items-center gap-3 bg-[#060C18] px-6 py-5"
-            >
-              <div className="text-indigo-400">{s.icon}</div>
+            <div key={s.label} className="flex items-center gap-3 bg-white px-6 py-5">
+              <div className="text-indigo-600">{s.icon}</div>
               <div>
-                <div className="text-white font-bold text-lg leading-tight">{s.value}</div>
-                <div className="text-white/40 text-xs">{s.label}</div>
+                <div className="text-gray-900 font-bold text-lg leading-tight">{s.value}</div>
+                <div className="text-gray-400 text-xs">{s.label}</div>
               </div>
             </div>
           ))}

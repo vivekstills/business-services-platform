@@ -1,10 +1,20 @@
 import React, { useMemo, useState } from 'react';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import { Link, useNavigate } from 'react-router-dom';
 import type { Service } from '../data/services';
 import { SERVICE_CATEGORIES } from '../data/services';
+import FAQS from '../data/faqs';
+import ServiceFAQ from '../components/ServiceFAQ';
 import {
-  AlertCircle, CheckCircle2, Mail, Phone, User, ChevronRight, Check
+  INDIAN_STATES,
+  type IndianState,
+  getStateFAQs,
+  getStatePackages,
+  hasProfessionalTax,
+  isNEHillyState,
+} from '../data/stateData';
+import {
+  AlertCircle, CheckCircle2, Mail, Phone, User, ChevronRight, Check, MapPin, Info,
 } from 'lucide-react';
 
 type Props = { service: Service };
@@ -48,17 +58,43 @@ function stepsFor(service: Service): string[] {
   ];
 }
 
-export default function ServiceLeadHero({ service }: Props) {
-  const steps = useMemo(() => stepsFor(service), [service]);
-  const navigate = useNavigate();
+// Contextual state hint shown below the state dropdown for relevant services
+function stateHint(serviceId: string, state: IndianState | ''): string | null {
+  if (!state) return null;
+  if (serviceId === 'gst-registration') {
+    if (isNEHillyState(state))
+      return `${state} is a special category state — mandatory GST threshold is ₹10 Lakhs (not ₹20 Lakhs).`;
+  }
+  if (serviceId === 'professional-tax-registration') {
+    if (!hasProfessionalTax(state))
+      return `Professional Tax is NOT applicable in ${state}. No PT registration is required here.`;
+    return `${state} levies Professional Tax. Applicable rates and slabs are shown in the FAQ below.`;
+  }
+  if (serviceId === 'private-limited-company' || serviceId === 'llp') {
+    if (state === 'Maharashtra') return 'Maharashtra has higher stamp duty on MOA/AOA. State-specific pricing is reflected below.';
+    if (state === 'Delhi (NCT)')  return 'Delhi has low stamp duty and NO Professional Tax — one of the most cost-effective states to incorporate.';
+    if (state === 'Karnataka')    return 'Karnataka requires Shops Act + BBMP Trade Licence post-incorporation.';
+  }
+  return null;
+}
 
+export default function ServiceLeadHero({ service }: Props) {
+  const steps   = useMemo(() => stepsFor(service), [service]);
+  const navigate = useNavigate();
   const category = SERVICE_CATEGORIES.find((c) => c.id === service.categoryId);
 
-  const [formData, setFormData]     = useState({ name: '', email: '', phone: '' });
-  const [errors, setErrors]         = useState<Record<string, string>>({});
+  const [formData, setFormData]         = useState({ name: '', email: '', phone: '', state: '' as IndianState | '' });
+  const [errors, setErrors]             = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted]   = useState(false);
   const [submitError, setSubmitError]   = useState<string | null>(null);
+
+  // Derive state-specific data reactively
+  const selectedState = formData.state;
+  const stateFAQs     = useMemo(() => getStateFAQs(service.id, selectedState), [service.id, selectedState]);
+  const statePackages = useMemo(() => getStatePackages(service.id, selectedState), [service.id, selectedState]);
+  const activePackages = statePackages ?? service.packages;
+  const hint = useMemo(() => stateHint(service.id, selectedState), [service.id, selectedState]);
 
   const validate = () => {
     const e: Record<string, string> = {};
@@ -66,6 +102,7 @@ export default function ServiceLeadHero({ service }: Props) {
     if (!formData.email.trim()) e.email = 'Email is required';
     else if (!/\S+@\S+\.\S+/.test(formData.email)) e.email = 'Invalid email';
     if (!formData.phone.trim()) e.phone = 'Phone is required';
+    if (!formData.state)        e.state = 'Please select your state';
     setErrors(e);
     return Object.keys(e).length === 0;
   };
@@ -79,14 +116,19 @@ export default function ServiceLeadHero({ service }: Props) {
       const res = await fetch('/api/enquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...formData, serviceId: service.id, serviceName: service.name }),
+        body: JSON.stringify({
+          ...formData,
+          serviceId: service.id,
+          serviceName: service.name,
+          state: formData.state,
+        }),
       });
       if (!res.ok) {
         const d = await res.json().catch(() => ({}));
         throw new Error(d?.error ?? 'Submission failed. Please try again.');
       }
       setIsSubmitted(true);
-      setFormData({ name: '', email: '', phone: '' });
+      setFormData({ name: '', email: '', phone: '', state: '' });
       setTimeout(() => setIsSubmitted(false), 5000);
     } catch (err: unknown) {
       setSubmitError(err instanceof Error ? err.message : 'Something went wrong.');
@@ -96,71 +138,74 @@ export default function ServiceLeadHero({ service }: Props) {
   };
 
   const inputCls = (key: string) =>
-    `w-full h-[44px] rounded-xl bg-[#040810] border px-3 pl-9 text-[13.5px] text-white placeholder-white/25 focus:outline-none transition-all ${
+    `w-full h-[44px] rounded-xl bg-white border px-3 pl-9 text-[13.5px] text-gray-800 placeholder-gray-300 focus:outline-none transition-all shadow-sm ${
       errors[key]
-        ? 'border-red-500/50 focus:border-red-500'
-        : 'border-white/10 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/30'
+        ? 'border-red-300 focus:border-red-400 focus:ring-2 focus:ring-red-100'
+        : 'border-gray-200 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100'
+    }`;
+
+  const selectCls = (key: string) =>
+    `w-full h-[44px] rounded-xl bg-white border pl-9 pr-4 text-[13.5px] text-gray-700 focus:outline-none transition-all shadow-sm appearance-none cursor-pointer ${
+      errors[key]
+        ? 'border-red-300 focus:border-red-400 focus:ring-2 focus:ring-red-100'
+        : 'border-gray-200 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100'
     }`;
 
   return (
-    <div className="min-h-screen bg-[#060C18] pt-16">
+    <div className="min-h-screen bg-gray-50 pt-16">
 
       {/* Hero section */}
-      <div className="relative bg-[#07101F] border-b border-white/6 overflow-hidden">
+      <div className="relative bg-white border-b border-gray-200 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-[-20%] right-[-5%] w-[600px] h-[500px] bg-indigo-700/10 rounded-full blur-[100px]" />
-          <div className="absolute bottom-[-10%] left-[10%] w-[300px] h-[300px] bg-violet-700/8 rounded-full blur-[80px]" />
+          <div className="absolute top-0 right-0 w-[500px] h-[400px] bg-indigo-50/80 rounded-full blur-[100px]" />
+          <div className="absolute bottom-0 left-[10%] w-[300px] h-[200px] bg-blue-50 rounded-full blur-[80px]" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-10">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-xs text-white/30 mb-8 flex-wrap">
-            <Link to="/" className="hover:text-white/55 transition-colors">Home</Link>
+          <div className="flex items-center gap-2 text-xs text-gray-400 mb-8 flex-wrap">
+            <Link to="/" className="hover:text-gray-600 transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
             {category && (
               <>
-                <Link to={`/category/${category.id}`} className="hover:text-white/55 transition-colors">
+                <Link to={`/category/${category.id}`} className="hover:text-gray-600 transition-colors">
                   {category.title}
                 </Link>
                 <ChevronRight className="w-3 h-3" />
               </>
             )}
-            <span className="text-white/55">{service.name}</span>
+            <span className="text-gray-600 font-medium">{service.name}</span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left — info */}
             <div>
               <motion.h1
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="text-3xl md:text-4xl font-bold text-white tracking-tight leading-tight mb-4"
+                initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
+                className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight leading-tight mb-4"
               >
                 {service.name}
               </motion.h1>
               <motion.p
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.05 }}
-                className="text-white/55 text-[15px] leading-relaxed mb-8"
+                className="text-gray-500 text-[15px] leading-relaxed mb-8"
               >
                 {service.shortDescription || 'Get complete expert support. We handle documentation, filing and follow-ups — so you can focus on your business.'}
               </motion.p>
 
-              {/* Steps */}
               <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
                 className="space-y-3"
               >
-                <p className="text-[12px] font-bold uppercase tracking-widest text-white/30 mb-4">How it works</p>
+                <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-4">How it works</p>
                 {steps.map((step, idx) => (
                   <div key={idx} className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-indigo-500/15 border border-indigo-500/25 flex items-center justify-center text-[11px] font-bold text-indigo-400 flex-shrink-0 mt-0.5">
+                    <div className="w-6 h-6 rounded-full bg-indigo-100 border border-indigo-200 flex items-center justify-center text-[11px] font-bold text-indigo-700 flex-shrink-0 mt-0.5">
                       {idx + 1}
                     </div>
-                    <span className="text-[13.5px] text-white/65 leading-snug">{step}</span>
+                    <span className="text-[13.5px] text-gray-600 leading-snug">{step}</span>
                   </div>
                 ))}
               </motion.div>
@@ -168,50 +213,112 @@ export default function ServiceLeadHero({ service }: Props) {
 
             {/* Right — form */}
             <motion.div
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.08 }}
             >
-              <div className="bg-white/[0.04] border border-white/12 rounded-2xl p-7 backdrop-blur-sm">
-                <p className="text-[12px] font-bold uppercase tracking-widest text-white/35 mb-1">Apply for</p>
-                <h2 className="text-xl font-bold text-white mb-6">{service.name}</h2>
+              <div className="bg-white border border-gray-200 rounded-2xl p-7 shadow-lg shadow-gray-100">
+                <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-1">Apply for</p>
+                <h2 className="text-xl font-bold text-gray-900 mb-6">{service.name}</h2>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                   {/* Name */}
                   <div>
-                    <label className="block text-[12px] font-semibold text-white/45 uppercase tracking-wider mb-1.5">Name</label>
+                    <label className="block text-[12px] font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
+                      Name
+                    </label>
                     <div className="relative">
-                      <User className={`absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 ${errors.name ? 'text-red-400' : 'text-white/25'}`} />
-                      <input value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} className={inputCls('name')} placeholder="Your full name" />
+                      <User className={`absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 ${errors.name ? 'text-red-400' : 'text-gray-300'}`} />
+                      <input
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        className={inputCls('name')}
+                        placeholder="Your full name"
+                      />
                       {errors.name && <AlertCircle className="absolute right-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-red-400" />}
                     </div>
-                    {errors.name && <p className="text-[11px] text-red-400 mt-1">{errors.name}</p>}
+                    {errors.name && <p className="text-[11px] text-red-500 mt-1">{errors.name}</p>}
                   </div>
 
                   {/* Email */}
                   <div>
-                    <label className="block text-[12px] font-semibold text-white/45 uppercase tracking-wider mb-1.5">Email</label>
+                    <label className="block text-[12px] font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
+                      Email
+                    </label>
                     <div className="relative">
-                      <Mail className={`absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 ${errors.email ? 'text-red-400' : 'text-white/25'}`} />
-                      <input type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className={inputCls('email')} placeholder="you@company.com" />
+                      <Mail className={`absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 ${errors.email ? 'text-red-400' : 'text-gray-300'}`} />
+                      <input
+                        type="email"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        className={inputCls('email')}
+                        placeholder="you@company.com"
+                      />
                     </div>
-                    {errors.email && <p className="text-[11px] text-red-400 mt-1">{errors.email}</p>}
+                    {errors.email && <p className="text-[11px] text-red-500 mt-1">{errors.email}</p>}
                   </div>
 
                   {/* Phone */}
                   <div>
-                    <label className="block text-[12px] font-semibold text-white/45 uppercase tracking-wider mb-1.5">Phone Number</label>
+                    <label className="block text-[12px] font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
+                      Phone Number
+                    </label>
                     <div className="relative">
-                      <Phone className={`absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 ${errors.phone ? 'text-red-400' : 'text-white/25'}`} />
-                      <input type="tel" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} className={inputCls('phone')} placeholder="Your phone number" />
+                      <Phone className={`absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 ${errors.phone ? 'text-red-400' : 'text-gray-300'}`} />
+                      <input
+                        type="tel"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        className={inputCls('phone')}
+                        placeholder="Your phone number"
+                      />
                     </div>
-                    {errors.phone && <p className="text-[11px] text-red-400 mt-1">{errors.phone}</p>}
+                    {errors.phone && <p className="text-[11px] text-red-500 mt-1">{errors.phone}</p>}
+                  </div>
+
+                  {/* State */}
+                  <div>
+                    <label className="block text-[12px] font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
+                      State / UT
+                    </label>
+                    <div className="relative">
+                      <MapPin className={`absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 z-10 pointer-events-none ${errors.state ? 'text-red-400' : 'text-gray-300'}`} />
+                      <select
+                        value={formData.state}
+                        onChange={(e) => setFormData({ ...formData, state: e.target.value as IndianState | '' })}
+                        className={selectCls('state')}
+                      >
+                        <option value="">Select your state / UT…</option>
+                        {INDIAN_STATES.map((s) => (
+                          <option key={s} value={s}>{s}</option>
+                        ))}
+                      </select>
+                      {errors.state && <AlertCircle className="absolute right-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-red-400 pointer-events-none" />}
+                    </div>
+                    {errors.state && <p className="text-[11px] text-red-500 mt-1">{errors.state}</p>}
+
+                    {/* Contextual state hint */}
+                    <AnimatePresence>
+                      {hint && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.2 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="mt-2 flex items-start gap-2 bg-indigo-50 border border-indigo-100 rounded-lg px-3 py-2">
+                            <Info className="w-3.5 h-3.5 text-indigo-500 flex-shrink-0 mt-0.5" />
+                            <p className="text-[11.5px] text-indigo-700 leading-snug">{hint}</p>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full h-[46px] rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-[14px] font-semibold flex items-center justify-center gap-2 hover:shadow-[0_0_28px_rgba(99,102,241,0.4)] hover:-translate-y-px transition-all disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                    className="w-full h-[46px] rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-[14px] font-semibold flex items-center justify-center gap-2 shadow-lg shadow-indigo-200 hover:shadow-xl hover:shadow-indigo-300 hover:-translate-y-0.5 transition-all disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                   >
                     {isSubmitting ? (
                       <><svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" /></svg> Submitting…</>
@@ -221,24 +328,23 @@ export default function ServiceLeadHero({ service }: Props) {
                   </button>
 
                   {submitError && (
-                    <div className="flex items-start gap-2 bg-red-950/40 border border-red-700/30 rounded-xl p-3">
-                      <AlertCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-[12px] text-red-300">{submitError}</span>
+                    <div className="flex items-start gap-2 bg-red-50 border border-red-200 rounded-xl p-3">
+                      <AlertCircle className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" />
+                      <span className="text-[12px] text-red-600">{submitError}</span>
                     </div>
                   )}
-
                   {isSubmitted && (
-                    <div className="flex items-start gap-2 bg-emerald-950/40 border border-emerald-700/30 rounded-xl p-3">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-[12px] text-emerald-300">
+                    <div className="flex items-start gap-2 bg-emerald-50 border border-emerald-200 rounded-xl p-3">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span className="text-[12px] text-emerald-700">
                         Confirmation sent to your email & phone. Our team will contact you shortly.
                       </span>
                     </div>
                   )}
 
-                  <p className="text-[11px] text-white/25 leading-relaxed">
+                  <p className="text-[11px] text-gray-400 leading-relaxed">
                     By continuing you agree to be contacted by our team regarding{' '}
-                    <span className="text-white/45">{service.name}</span>.
+                    <span className="text-gray-600">{service.name}</span>.
                   </p>
                 </form>
               </div>
@@ -247,38 +353,87 @@ export default function ServiceLeadHero({ service }: Props) {
         </div>
       </div>
 
-      {/* Content section */}
+      {/* Content + Packages section */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
 
           {/* Main content */}
           <div className="lg:col-span-2">
-            <h2 className="text-xl font-bold text-white mb-4">About {service.name}</h2>
-            <div className="text-[14.5px] text-white/55 leading-relaxed whitespace-pre-line">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">About {service.name}</h2>
+            <div className="text-[14.5px] text-gray-500 leading-relaxed whitespace-pre-line">
               {service.content}
             </div>
+
+            {/* FAQs — general + state-specific */}
+            <ServiceFAQ
+              faqs={FAQS[service.id] ?? []}
+              stateFAQs={stateFAQs}
+              serviceName={service.name}
+              selectedState={selectedState}
+            />
           </div>
 
           {/* Packages sidebar */}
-          {service.packages.length > 0 && (
+          {activePackages.length > 0 && (
             <div className="space-y-4">
-              <h2 className="text-sm font-bold text-white/40 uppercase tracking-widest">Packages</h2>
-              {service.packages.map((pkg) => (
-                <div
-                  key={pkg.name}
-                  className="bg-white/[0.03] border border-white/8 rounded-xl p-5"
-                >
-                  <div className="text-[11px] font-bold text-indigo-400 uppercase tracking-widest mb-1">{pkg.name}</div>
-                  <div className="text-2xl font-bold text-white mb-2">{pkg.price}</div>
-                  <p className="text-[13px] text-white/45 leading-relaxed">{pkg.description}</p>
-                  <button
-                    onClick={() => document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="mt-4 w-full h-9 rounded-lg border border-white/10 text-white/60 text-[12px] font-semibold hover:bg-white/5 hover:text-white transition-all flex items-center justify-center gap-1"
+              <div className="flex items-center justify-between">
+                <h2 className="text-sm font-bold text-gray-400 uppercase tracking-widest">Packages</h2>
+                <AnimatePresence>
+                  {selectedState && (
+                    <motion.span
+                      initial={{ opacity: 0, scale: 0.85 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.85 }}
+                      className="text-[10px] font-bold text-indigo-600 bg-indigo-50 border border-indigo-100 px-2 py-0.5 rounded-full"
+                    >
+                      {statePackages ? `${selectedState}` : 'Standard'}
+                    </motion.span>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {/* State-adjusted pricing notice */}
+              <AnimatePresence>
+                {selectedState && statePackages && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -6 }}
+                    transition={{ duration: 0.2 }}
+                    className="flex items-start gap-2 bg-indigo-50 border border-indigo-100 rounded-xl px-3.5 py-3"
                   >
-                    Get started <Check className="w-3 h-3" />
-                  </button>
-                </div>
-              ))}
+                    <MapPin className="w-3.5 h-3.5 text-indigo-500 flex-shrink-0 mt-0.5" />
+                    <p className="text-[11.5px] text-indigo-700 leading-snug">
+                      Pricing updated for <strong>{selectedState}</strong> — includes state-specific government fees & compliance.
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={selectedState || 'default'}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.22 }}
+                  className="space-y-4"
+                >
+                  {activePackages.map((pkg) => (
+                    <div key={pkg.name} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow">
+                      <div className="text-[11px] font-bold text-indigo-600 uppercase tracking-widest mb-1">{pkg.name}</div>
+                      <div className="text-2xl font-bold text-gray-900 mb-2">{pkg.price}</div>
+                      <p className="text-[13px] text-gray-500 leading-relaxed">{pkg.description}</p>
+                      <button
+                        onClick={() => document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' })}
+                        className="mt-4 w-full h-9 rounded-lg border border-gray-200 text-gray-600 text-[12px] font-semibold hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-200 transition-all flex items-center justify-center gap-1"
+                      >
+                        Get started <Check className="w-3 h-3" />
+                      </button>
+                    </div>
+                  ))}
+                </motion.div>
+              </AnimatePresence>
             </div>
           )}
         </div>

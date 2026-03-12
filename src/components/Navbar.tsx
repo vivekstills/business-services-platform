@@ -7,9 +7,6 @@ import {
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { SERVICE_CATEGORIES, getServiceById, getServicesByCategory, type ServiceCategory } from '../data/services';
 
-// ─── Top-level nav groups ─────────────────────────────────────────────────────
-// Each group maps to one button in the header bar.
-// `categoryIds` lists which SERVICE_CATEGORIES appear in that dropdown.
 type NavGroup = {
   label: string;
   icon: React.ReactNode;
@@ -17,39 +14,14 @@ type NavGroup = {
 };
 
 const NAV_GROUPS: NavGroup[] = [
-  {
-    label: 'Form New Business',
-    icon: <Briefcase className="w-4 h-4" />,
-    categoryIds: ['new-business', 'international-incorporations'],
-  },
-  {
-    label: 'Registrations',
-    icon: <FileText className="w-4 h-4" />,
-    categoryIds: ['registration', 'hr-compliance', 'ngo-registrations'],
-  },
-  {
-    label: 'GST & Taxes',
-    icon: <Calculator className="w-4 h-4" />,
-    categoryIds: ['gst-services', 'income-tax', 'return-filing'],
-  },
-  {
-    label: 'Trademark & IP',
-    icon: <Shield className="w-4 h-4" />,
-    categoryIds: ['trademark-ip'],
-  },
-  {
-    label: 'Compliance',
-    icon: <Scale className="w-4 h-4" />,
-    categoryIds: ['legal-compliance'],
-  },
-  {
-    label: 'Licenses & More',
-    icon: <Landmark className="w-4 h-4" />,
-    categoryIds: ['liquor-licenses', 'mandatory-licenses', 'web-digital'],
-  },
+  { label: 'Form New Business', icon: <Briefcase className="w-4 h-4" />, categoryIds: ['new-business', 'international-incorporations'] },
+  { label: 'Registrations',     icon: <FileText className="w-4 h-4" />,  categoryIds: ['registration', 'hr-compliance', 'ngo-registrations'] },
+  { label: 'GST & Taxes',       icon: <Calculator className="w-4 h-4" />,categoryIds: ['gst-services', 'income-tax', 'return-filing'] },
+  { label: 'Trademark & IP',    icon: <Shield className="w-4 h-4" />,    categoryIds: ['trademark-ip'] },
+  { label: 'Compliance',        icon: <Scale className="w-4 h-4" />,     categoryIds: ['legal-compliance'] },
+  { label: 'Licenses & More',   icon: <Landmark className="w-4 h-4" />, categoryIds: ['liquor-licenses', 'mandatory-licenses', 'web-digital'] },
 ];
 
-// Category icon map for the dropdown panels
 const CATEGORY_ICON: Record<string, React.ReactNode> = {
   'new-business':               <Briefcase className="w-4 h-4" />,
   'international-incorporations': <Globe className="w-4 h-4" />,
@@ -66,23 +38,20 @@ const CATEGORY_ICON: Record<string, React.ReactNode> = {
   'web-digital':                <Monitor className="w-4 h-4" />,
 };
 
-// ─── Component ────────────────────────────────────────────────────────────────
 export default function Navbar() {
-  const [isScrolled, setIsScrolled]         = useState(false);
-  const [openGroup, setOpenGroup]           = useState<string | null>(null);
-  const [isMobileOpen, setIsMobileOpen]     = useState(false);
+  const [isScrolled, setIsScrolled]           = useState(false);
+  const [openGroup, setOpenGroup]             = useState<string | null>(null);
+  const [isMobileOpen, setIsMobileOpen]       = useState(false);
   const [mobileOpenGroup, setMobileOpenGroup] = useState<string | null>(null);
-  const navRef = useRef<HTMLElement>(null);
-  const navigate  = useNavigate();
-  const location  = useLocation();
+  const navRef  = useRef<HTMLElement>(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  // Derive which nav group is "active" from the current URL
   const activeGroupLabel = useMemo(() => {
     const p = location.pathname;
     let categoryId: string | null = null;
-    if (p.startsWith('/category/')) {
-      categoryId = decodeURIComponent(p.replace('/category/', '').split('/')[0]);
-    } else if (p.startsWith('/service/')) {
+    if (p.startsWith('/category/'))  categoryId = decodeURIComponent(p.replace('/category/', '').split('/')[0]);
+    else if (p.startsWith('/service/')) {
       const sid = decodeURIComponent(p.replace('/service/', '').split('/')[0]);
       categoryId = getServiceById(sid)?.categoryId ?? null;
     }
@@ -90,97 +59,85 @@ export default function Navbar() {
     return NAV_GROUPS.find((g) => g.categoryIds.includes(categoryId!))?.label ?? null;
   }, [location.pathname]);
 
-  // Scroll effect
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 8);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Close dropdown on outside click
   useEffect(() => {
     const onOutside = (e: MouseEvent) => {
-      if (openGroup && navRef.current && !navRef.current.contains(e.target as Node)) {
-        setOpenGroup(null);
-      }
+      if (openGroup && navRef.current && !navRef.current.contains(e.target as Node)) setOpenGroup(null);
     };
     document.addEventListener('mousedown', onOutside);
     return () => document.removeEventListener('mousedown', onOutside);
   }, [openGroup]);
 
-  // Close dropdown on route change
   useEffect(() => { setOpenGroup(null); setIsMobileOpen(false); }, [location.pathname]);
 
   const categoriesForGroup = (group: NavGroup): ServiceCategory[] =>
-    group.categoryIds
-      .map((id) => SERVICE_CATEGORIES.find((c) => c.id === id))
-      .filter(Boolean) as ServiceCategory[];
+    group.categoryIds.map((id) => SERVICE_CATEGORIES.find((c) => c.id === id)).filter(Boolean) as ServiceCategory[];
 
   return (
     <nav
       ref={navRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#080C18]/95 backdrop-blur-xl border-b border-white/8 shadow-[0_4px_24px_rgba(0,0,0,0.4)]'
-          : 'bg-[#080C18] border-b border-white/8'
+          ? 'bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-sm'
+          : 'bg-white border-b border-gray-100'
       }`}
     >
-      {/* ── Top bar ── */}
+      {/* Top bar */}
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16">
 
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5 flex-shrink-0 group">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#6366F1] to-[#2563EB] flex items-center justify-center shadow-lg shadow-indigo-500/25">
-              <span className="text-white font-bold text-sm">Y</span>
-            </div>
-            <span className="text-[17px] font-bold text-white tracking-tight group-hover:text-white/90 transition-colors">
-              YourBrand
-            </span>
+          <Link to="/" className="flex items-center flex-shrink-0">
+            <img
+              src="/assets/logo.png"
+              alt="Mridhuv Associates"
+              className="h-10 w-auto object-contain"
+            />
           </Link>
 
-          {/* Desktop nav items */}
-          <div className="hidden lg:flex items-center gap-1">
+          {/* Desktop nav */}
+          <div className="hidden lg:flex items-center gap-0.5">
             {NAV_GROUPS.map((group) => {
               const isActive = activeGroupLabel === group.label;
               const isOpen   = openGroup === group.label;
               return (
                 <button
                   key={group.label}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setOpenGroup(isOpen ? null : group.label);
-                  }}
-                  className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-[13.5px] font-medium transition-all duration-150 ${
+                  onClick={(e) => { e.stopPropagation(); setOpenGroup(isOpen ? null : group.label); }}
+                  className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-[13px] font-medium transition-all duration-150 ${
                     isActive || isOpen
-                      ? 'bg-white/10 text-white'
-                      : 'text-white/65 hover:text-white hover:bg-white/6'
+                      ? 'bg-indigo-50 text-indigo-700'
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                   }`}
                 >
                   {group.label}
-                  <ChevronDown
-                    className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                      isOpen ? 'rotate-180 text-indigo-400' : 'text-white/40'
-                    }`}
-                  />
+                  <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isOpen ? 'rotate-180 text-indigo-500' : 'text-gray-400'}`} />
                 </button>
               );
             })}
           </div>
 
           {/* Right actions */}
-          <div className="hidden lg:flex items-center gap-3">
-            <button className="text-[13.5px] font-medium text-white/60 hover:text-white px-3 py-2 rounded-lg hover:bg-white/6 transition-all">
-              Login
-            </button>
-            <button className="h-8 px-4 rounded-lg bg-gradient-to-r from-[#6366F1] to-[#2563EB] text-white text-[13px] font-semibold hover:shadow-[0_0_20px_rgba(99,102,241,0.4)] transition-all hover:-translate-y-px">
+          <div className="hidden lg:flex items-center gap-2">
+            <a href="tel:+919876543210" className="text-[13px] font-medium text-gray-600 hover:text-gray-900 px-3 py-2 rounded-lg hover:bg-gray-50 transition-all">
+              +91 98765 43210
+            </a>
+            <Link
+              to="/category/new-business"
+              className="h-9 px-5 rounded-lg bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-[13px] font-semibold hover:shadow-lg hover:shadow-indigo-200 transition-all hover:-translate-y-px flex items-center"
+            >
               Get Started
-            </button>
+            </Link>
           </div>
 
           {/* Mobile burger */}
           <button
-            className="lg:hidden p-2 rounded-lg text-white hover:bg-white/8 transition-colors"
+            className="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             aria-label="Toggle menu"
           >
@@ -189,7 +146,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* ── Desktop mega-dropdown ── */}
+      {/* Desktop mega-dropdown */}
       <AnimatePresence>
         {openGroup && (
           <motion.div
@@ -197,8 +154,8 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -6 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
-            transition={{ duration: 0.18, ease: 'easeOut' }}
-            className="hidden lg:block absolute left-0 right-0 top-16 bg-[#0D1120] border-b border-white/8 shadow-[0_20px_60px_rgba(0,0,0,0.55)]"
+            transition={{ duration: 0.16, ease: 'easeOut' }}
+            className="hidden lg:block absolute left-0 right-0 top-16 bg-white border-b border-gray-200 shadow-xl shadow-gray-200/60"
           >
             <div className="max-w-7xl mx-auto px-8 py-8">
               {(() => {
@@ -210,29 +167,26 @@ export default function Navbar() {
                       const services = getServicesByCategory(cat.id);
                       return (
                         <div key={cat.id}>
-                          {/* Category header */}
                           <button
                             onClick={() => { navigate(`/category/${cat.id}`); setOpenGroup(null); }}
                             className="group flex items-center gap-2 mb-3 w-full text-left"
                           >
-                            <div className="w-6 h-6 rounded-md bg-indigo-500/15 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
+                            <div className="w-6 h-6 rounded-md bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600">
                               {CATEGORY_ICON[cat.id] ?? <FileText className="w-3.5 h-3.5" />}
                             </div>
-                            <span className="text-[12px] font-bold uppercase tracking-widest text-white/40 group-hover:text-indigo-400 transition-colors">
+                            <span className="text-[11px] font-bold uppercase tracking-widest text-gray-400 group-hover:text-indigo-600 transition-colors">
                               {cat.title}
                             </span>
-                            <ArrowRight className="w-3 h-3 text-white/20 group-hover:text-indigo-400 group-hover:translate-x-0.5 transition-all ml-auto" />
+                            <ArrowRight className="w-3 h-3 text-gray-300 group-hover:text-indigo-500 group-hover:translate-x-0.5 transition-all ml-auto" />
                           </button>
-
-                          {/* Services list */}
                           <div className="space-y-0.5">
                             {services.map((svc) => (
                               <button
                                 key={svc.id}
                                 onClick={() => { navigate(`/service/${svc.id}`); setOpenGroup(null); }}
-                                className="group w-full text-left px-3 py-2 rounded-lg hover:bg-white/5 transition-colors"
+                                className="group w-full text-left px-3 py-2 rounded-lg hover:bg-indigo-50 transition-colors"
                               >
-                                <div className="text-[13.5px] font-medium text-white/80 group-hover:text-white transition-colors leading-snug">
+                                <div className="text-[13px] font-medium text-gray-600 group-hover:text-indigo-700 transition-colors leading-snug">
                                   {svc.name}
                                 </div>
                               </button>
@@ -249,51 +203,40 @@ export default function Navbar() {
         )}
       </AnimatePresence>
 
-      {/* ── Mobile drawer ── */}
+      {/* Mobile drawer */}
       <AnimatePresence>
         {isMobileOpen && (
           <>
-            {/* Backdrop */}
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 top-16 bg-black/60 backdrop-blur-sm z-30 lg:hidden"
+              initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+              className="fixed inset-0 top-16 bg-black/30 backdrop-blur-sm z-30 lg:hidden"
               onClick={() => setIsMobileOpen(false)}
             />
-            {/* Drawer */}
             <motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
+              initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 28, stiffness: 240 }}
-              className="fixed top-16 right-0 bottom-0 w-[300px] bg-[#0D1120] border-l border-white/8 z-40 overflow-y-auto lg:hidden"
+              className="fixed top-16 right-0 bottom-0 w-[300px] bg-white border-l border-gray-200 z-40 overflow-y-auto lg:hidden shadow-2xl"
             >
               <div className="py-4">
                 {NAV_GROUPS.map((group) => {
-                  const cats    = categoriesForGroup(group);
-                  const isOpen  = mobileOpenGroup === group.label;
+                  const cats   = categoriesForGroup(group);
+                  const isOpen = mobileOpenGroup === group.label;
                   return (
-                    <div key={group.label} className="border-b border-white/6 last:border-none">
+                    <div key={group.label} className="border-b border-gray-100 last:border-none">
                       <button
                         onClick={() => setMobileOpenGroup(isOpen ? null : group.label)}
                         className="flex items-center justify-between w-full px-5 py-3.5 text-left"
                       >
                         <div className="flex items-center gap-2.5">
-                          <span className="text-white/40">{group.icon}</span>
-                          <span className="text-[14px] font-semibold text-white">{group.label}</span>
+                          <span className="text-gray-400">{group.icon}</span>
+                          <span className="text-[14px] font-semibold text-gray-800">{group.label}</span>
                         </div>
-                        <ChevronDown
-                          className={`w-4 h-4 text-white/30 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
-                        />
+                        <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
                       </button>
-
                       <AnimatePresence>
                         {isOpen && (
                           <motion.div
-                            initial={{ height: 0 }}
-                            animate={{ height: 'auto' }}
-                            exit={{ height: 0 }}
+                            initial={{ height: 0 }} animate={{ height: 'auto' }} exit={{ height: 0 }}
                             transition={{ duration: 0.2 }}
                             className="overflow-hidden"
                           >
@@ -305,16 +248,14 @@ export default function Navbar() {
                                     onClick={() => { navigate(`/category/${cat.id}`); setIsMobileOpen(false); }}
                                     className="flex items-center gap-2 mb-1.5 mt-2 w-full text-left"
                                   >
-                                    <span className="text-[11px] font-bold uppercase tracking-wider text-indigo-400">
-                                      {cat.title}
-                                    </span>
+                                    <span className="text-[11px] font-bold uppercase tracking-wider text-indigo-600">{cat.title}</span>
                                   </button>
                                   <div className="space-y-0.5 pl-1">
                                     {services.map((svc) => (
                                       <button
                                         key={svc.id}
                                         onClick={() => { navigate(`/service/${svc.id}`); setIsMobileOpen(false); }}
-                                        className="w-full text-left px-2 py-1.5 rounded-md text-[13px] text-white/65 hover:text-white hover:bg-white/5 transition-colors block"
+                                        className="w-full text-left px-2 py-1.5 rounded-md text-[13px] text-gray-500 hover:text-indigo-700 hover:bg-indigo-50 transition-colors block"
                                       >
                                         {svc.name}
                                       </button>
@@ -329,15 +270,17 @@ export default function Navbar() {
                     </div>
                   );
                 })}
-
-                {/* Mobile CTA */}
                 <div className="px-5 pt-5 pb-6 space-y-3">
-                  <button className="w-full py-2.5 rounded-lg border border-white/10 text-[14px] font-medium text-white/80 hover:bg-white/5 transition-colors">
-                    Login
-                  </button>
-                  <button className="w-full py-2.5 rounded-lg bg-gradient-to-r from-[#6366F1] to-[#2563EB] text-[14px] font-semibold text-white hover:opacity-95 transition-opacity">
+                  <a href="tel:+919876543210" className="w-full py-2.5 rounded-lg border border-gray-200 text-[14px] font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center">
+                    +91 98765 43210
+                  </a>
+                  <Link
+                    to="/category/new-business"
+                    onClick={() => setIsMobileOpen(false)}
+                    className="w-full py-2.5 rounded-lg bg-gradient-to-r from-indigo-600 to-blue-600 text-[14px] font-semibold text-white hover:opacity-95 transition-opacity flex items-center justify-center"
+                  >
                     Get Started
-                  </button>
+                  </Link>
                 </div>
               </div>
             </motion.div>
