@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Search, Building2, ExternalLink, ChevronRight } from 'lucide-react';
 
-const MCA_SEARCH_URL = 'https://www.mca.gov.in/mcafoportal/showCompanyMasterData.do';
+const MCA_SEARCH_URL = 'https://www.mca.gov.in/content/mca/global/en/mca/fo-llp-services/company-llp-name-search.html';
 
 export default function BusinessSearchPage() {
   const [query, setQuery] = useState('');
@@ -43,8 +43,8 @@ export default function BusinessSearchPage() {
               <Search className="w-6 h-6 text-blue-600" />
             </div>
             <div>
-              <h2 className="text-lg font-bold text-gray-900">MCA Company Master Data</h2>
-              <p className="text-[13px] text-gray-500">Search by company name or Corporate Identification Number (CIN)</p>
+              <h2 className="text-lg font-bold text-gray-900">MCA.gov.in — Company / LLP Name Search</h2>
+              <p className="text-[13px] text-gray-500">Search by company name or CIN on the official MCA portal</p>
             </div>
           </div>
 
@@ -60,14 +60,14 @@ export default function BusinessSearchPage() {
               href={MCA_SEARCH_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="h-12 px-6 rounded-xl bg-gradient-to-r from-blue-600 to-blue-600 text-white font-semibold flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-blue-200 transition-all hover:-translate-y-0.5"
+              className="h-12 px-6 rounded-xl bg-gradient-to-r from-blue-600 to-sky-600 text-white font-semibold flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-blue-200 transition-all hover:-translate-y-0.5"
             >
-              Search on MCA <ExternalLink className="w-4 h-4" />
+              Search on MCA.gov.in <ExternalLink className="w-4 h-4" />
             </a>
           </div>
 
           <p className="text-[12px] text-gray-400 mt-4">
-            You will be redirected to the official MCA portal. Our team can also help you with company search, due diligence, or compliance verification — contact us at{' '}
+            You will be redirected to the official <strong>MCA.gov.in</strong> Company/LLP Name Search. Our team can also help you with company search, due diligence, or compliance verification — contact us at{' '}
             <a href="mailto:enquiry@mridhuvassociates.com" className="text-blue-600 font-medium">enquiry@mridhuvassociates.com</a>.
           </p>
         </motion.div>

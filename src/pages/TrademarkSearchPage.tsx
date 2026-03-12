@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Search, FileText, ExternalLink, ChevronRight } from 'lucide-react';
 
-const IP_INDIA_SEARCH_URL = 'https://ipindiaservices.gov.in/publicsearch';
+const TM_SEARCH_URL = 'https://tmsearch.ipindia.gov.in/tmrpublicsearch/frmmain.aspx';
 
 export default function TrademarkSearchPage() {
   const [query, setQuery] = useState('');
@@ -23,7 +23,7 @@ export default function TrademarkSearchPage() {
           className="text-center mb-12"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-xs font-semibold mb-6">
-            <FileText className="w-3.5 h-3.5" /> IP India Portal
+            <FileText className="w-3.5 h-3.5" /> tmsearch.ipindia.gov.in
           </div>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-4">
             Search for Trademarks
@@ -44,8 +44,8 @@ export default function TrademarkSearchPage() {
               <Search className="w-6 h-6 text-emerald-600" />
             </div>
             <div>
-              <h2 className="text-lg font-bold text-gray-900">Trademark Public Search</h2>
-              <p className="text-[13px] text-gray-500">Search by wordmark, device, or combination</p>
+              <h2 className="text-lg font-bold text-gray-900">tmsearch.ipindia.gov.in — Trademark Public Search</h2>
+              <p className="text-[13px] text-gray-500">Search by wordmark, device, or combination on the official IP India portal</p>
             </div>
           </div>
 
@@ -58,17 +58,17 @@ export default function TrademarkSearchPage() {
               className="flex-1 h-12 rounded-xl border border-gray-200 px-4 text-[15px] text-gray-800 placeholder-gray-400 focus:outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100"
             />
             <a
-              href={IP_INDIA_SEARCH_URL}
+              href={TM_SEARCH_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="h-12 px-6 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-emerald-200 transition-all hover:-translate-y-0.5"
             >
-              Search on IP India <ExternalLink className="w-4 h-4" />
+              Search on tmsearch.ipindia.gov.in <ExternalLink className="w-4 h-4" />
             </a>
           </div>
 
           <p className="text-[12px] text-gray-400 mt-4">
-            You will be redirected to the official IP India portal. Our team can help you with trademark search, class selection, and registration — contact us at{' '}
+            You will be redirected to the official <strong>tmsearch.ipindia.gov.in</strong> Trademark Public Search. Our team can help you with trademark search, class selection, and registration — contact us at{' '}
             <a href="mailto:enquiry@mridhuvassociates.com" className="text-emerald-600 font-medium">enquiry@mridhuvassociates.com</a>.
           </p>
         </motion.div>
