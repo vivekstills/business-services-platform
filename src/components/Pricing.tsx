@@ -64,7 +64,7 @@ export default function Pricing() {
         <div className="max-w-2xl mb-16">
           <motion.p
             initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="text-xs font-bold text-indigo-600 uppercase tracking-[0.2em] mb-4"
+            className="text-xs font-bold text-blue-600 uppercase tracking-[0.2em] mb-4"
           >
             Pricing
           </motion.p>
@@ -94,8 +94,8 @@ export default function Pricing() {
               transition={{ delay: i * 0.07 }}
               className={`relative flex flex-col rounded-2xl border p-8 transition-all ${
                 plan.highlight
-                  ? 'bg-gradient-to-b from-indigo-600 to-blue-700 border-indigo-600 shadow-2xl shadow-indigo-200 -translate-y-2'
-                  : 'bg-white border-gray-200 hover:shadow-lg hover:border-gray-300 hover:-translate-y-0.5'
+                  ? 'bg-gradient-to-b from-blue-600 to-blue-700 border-blue-500/50 shadow-2xl shadow-blue-200/40 -translate-y-2 ring-2 ring-blue-100'
+                  : 'bg-white border-gray-200/80 hover:shadow-xl hover:shadow-gray-200/50 hover:border-blue-100 hover:-translate-y-1'
               }`}
             >
               {plan.badge && (
@@ -107,7 +107,7 @@ export default function Pricing() {
               )}
 
               <div className="mb-6">
-                <h3 className={`text-sm font-bold uppercase tracking-widest mb-3 ${plan.highlight ? 'text-indigo-200' : 'text-gray-400'}`}>
+                <h3 className={`text-sm font-bold uppercase tracking-widest mb-3 ${plan.highlight ? 'text-blue-200' : 'text-gray-400'}`}>
                   {plan.name}
                 </h3>
                 <div className="flex items-baseline gap-1 mb-1">
@@ -115,13 +115,13 @@ export default function Pricing() {
                     {plan.price}
                   </span>
                 </div>
-                <p className={`text-[13px] ${plan.highlight ? 'text-indigo-200' : 'text-gray-400'}`}>{plan.tagline}</p>
+                <p className={`text-[13px] ${plan.highlight ? 'text-blue-200' : 'text-gray-400'}`}>{plan.tagline}</p>
               </div>
 
               <div className="flex-1 mb-8">
                 <ul className="space-y-3">
                   {plan.features.map((f) => (
-                    <li key={f} className={`flex items-start gap-2.5 text-[13.5px] ${plan.highlight ? 'text-indigo-100' : 'text-gray-600'}`}>
+                    <li key={f} className={`flex items-start gap-2.5 text-[13.5px] ${plan.highlight ? 'text-blue-100' : 'text-gray-600'}`}>
                       <div className={`mt-0.5 w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 ${plan.highlight ? 'bg-white/20' : 'bg-emerald-50'}`}>
                         <Check className={`w-2.5 h-2.5 ${plan.highlight ? 'text-white' : 'text-emerald-600'}`} />
                       </div>
@@ -135,7 +135,7 @@ export default function Pricing() {
                 to={plan.ctaTo}
                 className={`flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-[13.5px] font-semibold transition-all ${
                   plan.highlight
-                    ? 'bg-white text-indigo-700 hover:bg-indigo-50 shadow-lg'
+                    ? 'bg-white text-blue-700 hover:bg-blue-50 shadow-lg'
                     : 'border border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300'
                 }`}
               >

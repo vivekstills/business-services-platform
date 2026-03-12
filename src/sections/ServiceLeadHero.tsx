@@ -141,14 +141,14 @@ export default function ServiceLeadHero({ service }: Props) {
     `w-full h-[44px] rounded-xl bg-white border px-3 pl-9 text-[13.5px] text-gray-800 placeholder-gray-300 focus:outline-none transition-all shadow-sm ${
       errors[key]
         ? 'border-red-300 focus:border-red-400 focus:ring-2 focus:ring-red-100'
-        : 'border-gray-200 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100'
+        : 'border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100'
     }`;
 
   const selectCls = (key: string) =>
     `w-full h-[44px] rounded-xl bg-white border pl-9 pr-4 text-[13.5px] text-gray-700 focus:outline-none transition-all shadow-sm appearance-none cursor-pointer ${
       errors[key]
         ? 'border-red-300 focus:border-red-400 focus:ring-2 focus:ring-red-100'
-        : 'border-gray-200 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100'
+        : 'border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100'
     }`;
 
   return (
@@ -157,7 +157,7 @@ export default function ServiceLeadHero({ service }: Props) {
       {/* Hero section */}
       <div className="relative bg-white border-b border-gray-200 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-0 w-[500px] h-[400px] bg-indigo-50/80 rounded-full blur-[100px]" />
+          <div className="absolute top-0 right-0 w-[500px] h-[400px] bg-blue-50/80 rounded-full blur-[100px]" />
           <div className="absolute bottom-0 left-[10%] w-[300px] h-[200px] bg-blue-50 rounded-full blur-[80px]" />
         </div>
 
@@ -202,7 +202,7 @@ export default function ServiceLeadHero({ service }: Props) {
                 <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-4">How it works</p>
                 {steps.map((step, idx) => (
                   <div key={idx} className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-indigo-100 border border-indigo-200 flex items-center justify-center text-[11px] font-bold text-indigo-700 flex-shrink-0 mt-0.5">
+                    <div className="w-6 h-6 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center text-[11px] font-bold text-blue-700 flex-shrink-0 mt-0.5">
                       {idx + 1}
                     </div>
                     <span className="text-[13.5px] text-gray-600 leading-snug">{step}</span>
@@ -216,7 +216,7 @@ export default function ServiceLeadHero({ service }: Props) {
               initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.08 }}
             >
-              <div className="bg-white border border-gray-200 rounded-2xl p-7 shadow-lg shadow-gray-100">
+              <div className="bg-white border border-gray-200/80 rounded-2xl p-7 shadow-xl shadow-gray-200/40">
                 <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-1">Apply for</p>
                 <h2 className="text-xl font-bold text-gray-900 mb-6">{service.name}</h2>
 
@@ -306,9 +306,9 @@ export default function ServiceLeadHero({ service }: Props) {
                           transition={{ duration: 0.2 }}
                           className="overflow-hidden"
                         >
-                          <div className="mt-2 flex items-start gap-2 bg-indigo-50 border border-indigo-100 rounded-lg px-3 py-2">
-                            <Info className="w-3.5 h-3.5 text-indigo-500 flex-shrink-0 mt-0.5" />
-                            <p className="text-[11.5px] text-indigo-700 leading-snug">{hint}</p>
+                          <div className="mt-2 flex items-start gap-2 bg-blue-50 border border-blue-100 rounded-lg px-3 py-2">
+                            <Info className="w-3.5 h-3.5 text-blue-500 flex-shrink-0 mt-0.5" />
+                            <p className="text-[11.5px] text-blue-700 leading-snug">{hint}</p>
                           </div>
                         </motion.div>
                       )}
@@ -318,7 +318,7 @@ export default function ServiceLeadHero({ service }: Props) {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full h-[46px] rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-[14px] font-semibold flex items-center justify-center gap-2 shadow-lg shadow-indigo-200 hover:shadow-xl hover:shadow-indigo-300 hover:-translate-y-0.5 transition-all disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                    className="w-full h-[46px] rounded-xl bg-gradient-to-r from-blue-600 to-blue-600 text-white text-[14px] font-semibold flex items-center justify-center gap-2 shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-0.5 transition-all disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                   >
                     {isSubmitting ? (
                       <><svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" /></svg> Submitting…</>
@@ -384,7 +384,7 @@ export default function ServiceLeadHero({ service }: Props) {
                       initial={{ opacity: 0, scale: 0.85 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.85 }}
-                      className="text-[10px] font-bold text-indigo-600 bg-indigo-50 border border-indigo-100 px-2 py-0.5 rounded-full"
+                      className="text-[10px] font-bold text-blue-600 bg-blue-50 border border-blue-100 px-2 py-0.5 rounded-full"
                     >
                       {statePackages ? `${selectedState}` : 'Standard'}
                     </motion.span>
@@ -400,10 +400,10 @@ export default function ServiceLeadHero({ service }: Props) {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -6 }}
                     transition={{ duration: 0.2 }}
-                    className="flex items-start gap-2 bg-indigo-50 border border-indigo-100 rounded-xl px-3.5 py-3"
+                    className="flex items-start gap-2 bg-blue-50 border border-blue-100 rounded-xl px-3.5 py-3"
                   >
-                    <MapPin className="w-3.5 h-3.5 text-indigo-500 flex-shrink-0 mt-0.5" />
-                    <p className="text-[11.5px] text-indigo-700 leading-snug">
+                    <MapPin className="w-3.5 h-3.5 text-blue-500 flex-shrink-0 mt-0.5" />
+                    <p className="text-[11.5px] text-blue-700 leading-snug">
                       Pricing updated for <strong>{selectedState}</strong> — includes state-specific government fees & compliance.
                     </p>
                   </motion.div>
@@ -421,12 +421,12 @@ export default function ServiceLeadHero({ service }: Props) {
                 >
                   {activePackages.map((pkg) => (
                     <div key={pkg.name} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow">
-                      <div className="text-[11px] font-bold text-indigo-600 uppercase tracking-widest mb-1">{pkg.name}</div>
+                      <div className="text-[11px] font-bold text-blue-600 uppercase tracking-widest mb-1">{pkg.name}</div>
                       <div className="text-2xl font-bold text-gray-900 mb-2">{pkg.price}</div>
                       <p className="text-[13px] text-gray-500 leading-relaxed">{pkg.description}</p>
                       <button
                         onClick={() => document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="mt-4 w-full h-9 rounded-lg border border-gray-200 text-gray-600 text-[12px] font-semibold hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-200 transition-all flex items-center justify-center gap-1"
+                        className="mt-4 w-full h-9 rounded-lg border border-gray-200 text-gray-600 text-[12px] font-semibold hover:bg-blue-50 hover:text-blue-700 hover:border-blue-200 transition-all flex items-center justify-center gap-1"
                       >
                         Get started <Check className="w-3 h-3" />
                       </button>

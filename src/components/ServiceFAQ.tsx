@@ -21,7 +21,7 @@ function FAQItem({ faq, index, openIndex, setOpenIndex }: {
     <div
       className={`rounded-xl border transition-all duration-200 ${
         isOpen
-          ? 'bg-indigo-50/60 border-indigo-200'
+          ? 'bg-blue-50/60 border-blue-200'
           : 'bg-white border-gray-200 hover:bg-gray-50 hover:border-gray-300'
       }`}
     >
@@ -29,11 +29,11 @@ function FAQItem({ faq, index, openIndex, setOpenIndex }: {
         onClick={() => setOpenIndex(isOpen ? null : index)}
         className="w-full flex items-start justify-between gap-4 px-5 py-4 text-left"
       >
-        <span className={`text-[14px] font-medium leading-snug transition-colors ${isOpen ? 'text-indigo-800' : 'text-gray-700'}`}>
+        <span className={`text-[14px] font-medium leading-snug transition-colors ${isOpen ? 'text-blue-800' : 'text-gray-700'}`}>
           {faq.q}
         </span>
         <ChevronDown
-          className={`w-4 h-4 flex-shrink-0 mt-0.5 transition-all duration-200 ${isOpen ? 'rotate-180 text-indigo-600' : 'text-gray-400'}`}
+          className={`w-4 h-4 flex-shrink-0 mt-0.5 transition-all duration-200 ${isOpen ? 'rotate-180 text-blue-600' : 'text-gray-400'}`}
         />
       </button>
 
@@ -48,7 +48,7 @@ function FAQItem({ faq, index, openIndex, setOpenIndex }: {
             className="overflow-hidden"
           >
             <div className="px-5 pb-5 pt-0">
-              <div className="h-px bg-indigo-100 mb-4" />
+              <div className="h-px bg-blue-100 mb-4" />
               <p className="text-[13.5px] text-gray-500 leading-relaxed">{faq.a}</p>
             </div>
           </motion.div>
@@ -105,7 +105,7 @@ export default function ServiceFAQ({ faqs, stateFAQs = [], serviceName, selected
           >
             {/* Section header */}
             <div className="flex items-center gap-2.5 mb-5">
-              <div className="flex items-center gap-2 bg-indigo-600 text-white px-3.5 py-1.5 rounded-full">
+              <div className="flex items-center gap-2 bg-blue-600 text-white px-3.5 py-1.5 rounded-full">
                 <MapPin className="w-3.5 h-3.5" />
                 <span className="text-[12px] font-bold">{selectedState}</span>
               </div>
@@ -173,7 +173,7 @@ export default function ServiceFAQ({ faqs, stateFAQs = [], serviceName, selected
             <MapPin className="w-4 h-4 text-gray-400 flex-shrink-0" />
             <p className="text-[12.5px] text-gray-500">
               The FAQs above apply to <strong>{selectedState}</strong>. For state-specific queries, call us at{' '}
-              <a href="tel:+919876543210" className="text-indigo-600 font-semibold">+91 98765 43210</a>.
+              <a href="tel:+919876543210" className="text-blue-600 font-semibold">+91 98765 43210</a>.
             </p>
           </motion.div>
         )}

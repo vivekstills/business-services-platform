@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Star, ShieldCheck, Users, Phone } from 'lucide-react';
+import { CONTACT_PHONE } from '../data/constants';
 import { Link } from 'react-router-dom';
 
 const POPULAR = [
@@ -19,10 +20,10 @@ const STATS = [
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-slate-50 via-white to-indigo-50/40 flex items-center overflow-hidden pt-16 min-h-screen">
+    <section className="relative bg-gradient-to-br from-slate-50/80 via-white to-blue-50/30 flex items-center overflow-hidden pt-16 min-h-screen">
       {/* Decorative background shapes */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-indigo-100/60 rounded-full blur-[120px] translate-x-1/3 -translate-y-1/4" />
+        <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-blue-100/50 rounded-full blur-[120px] translate-x-1/3 -translate-y-1/4" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-100/50 rounded-full blur-[100px] -translate-x-1/4 translate-y-1/4" />
         {/* Dot grid */}
         <div
@@ -44,9 +45,9 @@ export default function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-indigo-200 bg-indigo-50 text-indigo-700 text-xs font-semibold mb-8"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-blue-200 bg-blue-50 text-blue-700 text-xs font-semibold mb-8"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
               India's trusted business compliance platform
             </motion.div>
 
@@ -58,7 +59,7 @@ export default function Hero() {
               className="text-4xl sm:text-5xl lg:text-[58px] font-bold text-gray-900 tracking-tight leading-[1.1] mb-6"
             >
               Launch & grow your business{' '}
-              <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-blue-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-sky-600 bg-clip-text text-transparent">
                 with complete legal compliance
               </span>
             </motion.h1>
@@ -82,15 +83,15 @@ export default function Hero() {
             >
               <Link
                 to="/category/new-business"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-[14px] font-semibold shadow-lg shadow-indigo-200 hover:shadow-xl hover:shadow-indigo-300 hover:-translate-y-0.5 transition-all"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-sky-600 text-white text-[14px] font-semibold shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-0.5 transition-all"
               >
                 Get Started <ArrowRight className="w-4 h-4" />
               </Link>
               <a
-                href="tel:+919876543210"
+                href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`}
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border border-gray-200 text-gray-700 text-[14px] font-semibold hover:bg-gray-50 hover:border-gray-300 transition-all"
               >
-                <Phone className="w-4 h-4 text-indigo-500" /> Talk to an expert
+                <Phone className="w-4 h-4 text-blue-500" /> Talk to an expert
               </a>
             </motion.div>
 
@@ -106,7 +107,7 @@ export default function Hero() {
                 <Link
                   key={p.to}
                   to={p.to}
-                  className="text-xs text-gray-600 hover:text-indigo-700 border border-gray-200 hover:border-indigo-300 bg-white hover:bg-indigo-50 rounded-full px-3.5 py-1.5 transition-all shadow-sm"
+                  className="text-xs text-gray-600 hover:text-blue-700 border border-gray-200 hover:border-blue-300 bg-white hover:bg-blue-50 rounded-full px-3.5 py-1.5 transition-all shadow-sm"
                 >
                   {p.label}
                 </Link>
@@ -123,7 +124,7 @@ export default function Hero() {
           >
             <div className="relative">
               {/* Main card */}
-              <div className="bg-white rounded-3xl shadow-2xl shadow-gray-200/80 border border-gray-100 p-8">
+              <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-xl shadow-gray-200/50 border border-gray-100/80 p-8">
                 <div className="flex items-center gap-3 mb-6">
                   <img src="/assets/logo.png" alt="Mridhuv Associates" className="h-10 w-auto" />
                 </div>
@@ -133,7 +134,7 @@ export default function Hero() {
                   {[
                     { label: 'GST Registration', time: '3–5 days', color: 'bg-green-50 text-green-700 border-green-200' },
                     { label: 'Company Incorporation', time: '7–10 days', color: 'bg-blue-50 text-blue-700 border-blue-200' },
-                    { label: 'Trademark Registration', time: '2–3 weeks', color: 'bg-violet-50 text-violet-700 border-violet-200' },
+                    { label: 'Trademark Registration', time: '2–3 weeks', color: 'bg-sky-50 text-sky-700 border-sky-200' },
                   ].map((item) => (
                     <div key={item.label} className="flex items-center justify-between py-2.5 px-4 rounded-xl bg-gray-50 border border-gray-100">
                       <span className="text-[13.5px] font-semibold text-gray-700">{item.label}</span>
@@ -151,7 +152,7 @@ export default function Hero() {
                 </div>
               </div>
               {/* Floating badge */}
-              <div className="absolute -top-4 -right-4 bg-indigo-600 text-white rounded-2xl px-4 py-2.5 shadow-lg shadow-indigo-300">
+              <div className="absolute -top-4 -right-4 bg-blue-600 text-white rounded-2xl px-4 py-2.5 shadow-lg shadow-blue-200">
                 <div className="text-[22px] font-black leading-none">50K+</div>
                 <div className="text-[10px] font-semibold opacity-80">Businesses</div>
               </div>
@@ -168,7 +169,7 @@ export default function Hero() {
         >
           {STATS.map((s) => (
             <div key={s.label} className="flex items-center gap-3 bg-white px-6 py-5">
-              <div className="text-indigo-600">{s.icon}</div>
+              <div className="text-blue-600">{s.icon}</div>
               <div>
                 <div className="text-gray-900 font-bold text-lg leading-tight">{s.value}</div>
                 <div className="text-gray-400 text-xs">{s.label}</div>

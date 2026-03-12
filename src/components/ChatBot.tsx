@@ -65,7 +65,7 @@ const RESPONSES: Array<{ patterns: RegExp[]; answer: string }> = [
   {
     patterns: [/contact|call|speak|talk|phone|reach/i],
     answer:
-      'You can reach us at 📞 +91 98765 43210 or email us at info@mridhuvassociates.com. Our team is available Mon–Sat, 9 AM – 7 PM. You can also fill the enquiry form on any service page.',
+      'You can reach us at 📞 +91 98765 43210 or email us at enquiry@mridhuvassociates.com. Our team is available Mon–Sat, 9 AM – 7 PM. You can also fill the enquiry form on any service page.',
   },
   {
     patterns: [/document|docs\s*required|what.*need/i],
@@ -115,7 +115,7 @@ function getBotReply(input: string): string {
   for (const entry of RESPONSES) {
     if (entry.patterns.some((p) => p.test(trimmed))) return entry.answer;
   }
-  return `Thanks for your question! Our team specialises in GST, company registration, trademark, income tax, and compliance. Could you be more specific about which service you need? Or call us directly at +91 98765 43210.`;
+  return `Thanks for your question! Our team specialises in GST, company registration, trademark, income tax, and compliance. Could you be more specific? Email enquiry@mridhuvassociates.com or call +91 98765 43210.`;
 }
 
 export default function ChatBot() {
@@ -177,7 +177,7 @@ export default function ChatBot() {
         <motion.button
           onClick={() => setIsOpen((v) => !v)}
           whileTap={{ scale: 0.92 }}
-          className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-600 to-blue-700 text-white flex items-center justify-center shadow-2xl shadow-indigo-300 hover:shadow-indigo-400 hover:-translate-y-0.5 transition-all"
+          className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 text-white flex items-center justify-center shadow-2xl shadow-blue-300 hover:shadow-blue-400 hover:-translate-y-0.5 transition-all"
           aria-label="Open chat"
         >
           <AnimatePresence mode="wait">
@@ -206,7 +206,7 @@ export default function ChatBot() {
             style={{ height: '520px' }}
           >
             {/* Header */}
-            <div className="flex items-center gap-3 px-4 py-3.5 bg-gradient-to-r from-indigo-600 to-blue-700 flex-shrink-0">
+            <div className="flex items-center gap-3 px-4 py-3.5 bg-gradient-to-r from-blue-600 to-blue-700 flex-shrink-0">
               <div className="w-9 h-9 rounded-xl bg-white/20 flex items-center justify-center">
                 <Bot className="w-5 h-5 text-white" />
               </div>
@@ -214,7 +214,7 @@ export default function ChatBot() {
                 <div className="text-white font-bold text-[14px] leading-tight">Mridhuv Assistant</div>
                 <div className="flex items-center gap-1.5 mt-0.5">
                   <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="text-indigo-200 text-[11px]">Online · Replies instantly</span>
+                  <span className="text-blue-200 text-[11px]">Online · Replies instantly</span>
                 </div>
               </div>
               <button onClick={() => setIsOpen(false)} className="text-white/70 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-colors">
@@ -233,14 +233,14 @@ export default function ChatBot() {
                   className={`flex gap-2 ${msg.from === 'user' ? 'flex-row-reverse' : 'flex-row'}`}
                 >
                   {msg.from === 'bot' && (
-                    <div className="w-7 h-7 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0 mt-auto">
-                      <Bot className="w-3.5 h-3.5 text-indigo-600" />
+                    <div className="w-7 h-7 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-auto">
+                      <Bot className="w-3.5 h-3.5 text-blue-600" />
                     </div>
                   )}
                   <div
                     className={`max-w-[78%] px-3.5 py-2.5 rounded-2xl text-[13.5px] leading-relaxed whitespace-pre-line ${
                       msg.from === 'user'
-                        ? 'bg-indigo-600 text-white rounded-br-sm'
+                        ? 'bg-blue-600 text-white rounded-br-sm'
                         : 'bg-white border border-gray-200 text-gray-700 rounded-bl-sm shadow-sm'
                     }`}
                   >
@@ -256,8 +256,8 @@ export default function ChatBot() {
                   animate={{ opacity: 1, y: 0 }}
                   className="flex gap-2"
                 >
-                  <div className="w-7 h-7 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0">
-                    <Bot className="w-3.5 h-3.5 text-indigo-600" />
+                  <div className="w-7 h-7 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                    <Bot className="w-3.5 h-3.5 text-blue-600" />
                   </div>
                   <div className="bg-white border border-gray-200 rounded-2xl rounded-bl-sm px-4 py-3 shadow-sm">
                     <div className="flex gap-1 items-center h-4">
@@ -283,7 +283,7 @@ export default function ChatBot() {
                   <button
                     key={qr.value}
                     onClick={() => sendMessage(qr.value)}
-                    className="text-[11.5px] font-medium text-indigo-700 bg-indigo-50 hover:bg-indigo-100 border border-indigo-100 rounded-full px-3 py-1 transition-colors"
+                    className="text-[11.5px] font-medium text-blue-700 bg-blue-50 hover:bg-blue-100 border border-blue-100 rounded-full px-3 py-1 transition-colors"
                   >
                     {qr.label}
                   </button>
@@ -301,12 +301,12 @@ export default function ChatBot() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Type your question…"
-                className="flex-1 h-9 rounded-xl border border-gray-200 px-3.5 text-[13.5px] text-gray-700 placeholder-gray-300 focus:outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 transition-all bg-gray-50"
+                className="flex-1 h-9 rounded-xl border border-gray-200 px-3.5 text-[13.5px] text-gray-700 placeholder-gray-300 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all bg-gray-50"
               />
               <button
                 type="submit"
                 disabled={!input.trim() || isTyping}
-                className="w-9 h-9 rounded-xl bg-indigo-600 text-white flex items-center justify-center hover:bg-indigo-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed flex-shrink-0"
+                className="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed flex-shrink-0"
               >
                 <Send className="w-3.5 h-3.5" />
               </button>

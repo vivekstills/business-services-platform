@@ -9,9 +9,9 @@ const CATEGORIES = [
     label: 'Form New Business',
     description: 'Proprietorship, Partnership, LLP, Private/Public Ltd, OPC, Nidhi and more.',
     icon: <Briefcase className="w-5 h-5" />,
-    bg: 'bg-indigo-50',
-    iconColor: 'text-indigo-600',
-    border: 'border-indigo-100',
+    bg: 'bg-blue-50',
+    iconColor: 'text-blue-600',
+    border: 'border-blue-100',
     count: 12,
   },
   {
@@ -19,9 +19,9 @@ const CATEGORIES = [
     label: 'Registrations',
     description: 'GST, FSSAI, Trade License, IEC, Digital Signature, Health License and more.',
     icon: <FileText className="w-5 h-5" />,
-    bg: 'bg-violet-50',
-    iconColor: 'text-violet-600',
-    border: 'border-violet-100',
+    bg: 'bg-sky-50',
+    iconColor: 'text-sky-600',
+    border: 'border-sky-100',
     count: 10,
   },
   {
@@ -74,7 +74,7 @@ export default function Services() {
         <div className="max-w-2xl mb-16">
           <motion.p
             initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="text-xs font-bold text-indigo-600 uppercase tracking-[0.2em] mb-4"
+            className="text-xs font-bold text-blue-600 uppercase tracking-[0.2em] mb-4"
           >
             Our Services
           </motion.p>
@@ -105,14 +105,14 @@ export default function Services() {
             >
               <Link
                 to={`/category/${cat.id}`}
-                className="group flex flex-col h-full p-6 rounded-2xl border border-gray-200 bg-white hover:shadow-lg hover:shadow-gray-100 hover:border-gray-300 hover:-translate-y-0.5 transition-all duration-200"
+                className="group flex flex-col h-full p-6 rounded-2xl border border-gray-200/80 bg-white hover:shadow-xl hover:shadow-gray-200/60 hover:border-blue-100 hover:-translate-y-1 transition-all duration-300"
               >
                 <div className={`w-11 h-11 rounded-xl ${cat.bg} border ${cat.border} flex items-center justify-center mb-5 ${cat.iconColor}`}>
                   {cat.icon}
                 </div>
                 <div className="flex-1">
                   <div className="flex items-start justify-between mb-2">
-                    <h3 className="text-[15px] font-bold text-gray-800 group-hover:text-indigo-700 transition-colors leading-snug">
+                    <h3 className="text-[15px] font-bold text-gray-800 group-hover:text-blue-700 transition-colors leading-snug">
                       {cat.label}
                     </h3>
                     <span className="text-[11px] text-gray-400 font-medium ml-3 flex-shrink-0 mt-0.5">
@@ -121,7 +121,7 @@ export default function Services() {
                   </div>
                   <p className="text-[13px] text-gray-500 leading-relaxed">{cat.description}</p>
                 </div>
-                <div className="mt-5 flex items-center gap-1.5 text-[12px] font-semibold text-gray-400 group-hover:text-indigo-600 transition-colors">
+                <div className="mt-5 flex items-center gap-1.5 text-[12px] font-semibold text-gray-400 group-hover:text-blue-600 transition-colors">
                   View all <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                 </div>
               </Link>

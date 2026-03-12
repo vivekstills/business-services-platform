@@ -51,7 +51,7 @@ export default function ContactSection() {
     `w-full h-[46px] bg-white border rounded-xl pl-10 pr-4 text-[14px] text-gray-800 placeholder-gray-300 focus:outline-none transition-all shadow-sm ${
       errors[key]
         ? 'border-red-300 focus:border-red-400 focus:ring-2 focus:ring-red-100'
-        : 'border-gray-200 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100'
+        : 'border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100'
     }`;
 
   return (
@@ -63,7 +63,7 @@ export default function ContactSection() {
           <div>
             <motion.p
               initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-              className="text-xs font-bold text-indigo-600 uppercase tracking-[0.2em] mb-4"
+              className="text-xs font-bold text-blue-600 uppercase tracking-[0.2em] mb-4"
             >
               Get in Touch
             </motion.p>
@@ -84,12 +84,12 @@ export default function ContactSection() {
 
             <div className="space-y-5">
               {[
-                { icon: <BadgeCheck className="w-4 h-4 text-indigo-600" />, label: 'Expert consultation', desc: 'Talk to a specialist who understands your industry.' },
-                { icon: <Clock className="w-4 h-4 text-indigo-600" />,      label: 'Fast turnaround',    desc: 'Most services completed within 7–10 working days.' },
-                { icon: <Wallet className="w-4 h-4 text-indigo-600" />,     label: 'Fixed pricing',      desc: 'No hidden fees — you know the cost upfront.' },
+                { icon: <BadgeCheck className="w-4 h-4 text-blue-600" />, label: 'Expert consultation', desc: 'Talk to a specialist who understands your industry.' },
+                { icon: <Clock className="w-4 h-4 text-blue-600" />,      label: 'Fast turnaround',    desc: 'Most services completed within 7–10 working days.' },
+                { icon: <Wallet className="w-4 h-4 text-blue-600" />,     label: 'Fixed pricing',      desc: 'No hidden fees — you know the cost upfront.' },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-4 p-4 rounded-xl bg-white border border-gray-100 shadow-sm">
-                  <div className="w-8 h-8 rounded-lg bg-indigo-50 flex items-center justify-center flex-shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0">
                     {item.icon}
                   </div>
                   <div>
@@ -105,7 +105,7 @@ export default function ContactSection() {
           <motion.div
             initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg shadow-gray-100"
+            className="bg-white border border-gray-200/80 rounded-2xl p-8 shadow-xl shadow-gray-200/40"
           >
             <form onSubmit={handleSubmit} className="space-y-5">
               {/* Name */}
@@ -145,7 +145,7 @@ export default function ContactSection() {
                 <select
                   {...field('service')}
                   className={`w-full h-[46px] bg-white border rounded-xl px-4 text-[14px] text-gray-700 focus:outline-none transition-all appearance-none cursor-pointer shadow-sm ${
-                    errors.service ? 'border-red-300 focus:ring-2 focus:ring-red-100' : 'border-gray-200 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100'
+                    errors.service ? 'border-red-300 focus:ring-2 focus:ring-red-100' : 'border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100'
                   }`}
                 >
                   <option value="">Select a service…</option>
@@ -162,7 +162,7 @@ export default function ContactSection() {
                   <textarea
                     {...field('message')}
                     rows={3}
-                    className="w-full bg-white border border-gray-200 rounded-xl pl-10 pr-4 py-3 text-[14px] text-gray-700 placeholder-gray-300 focus:outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 transition-all resize-none shadow-sm"
+                    className="w-full bg-white border border-gray-200 rounded-xl pl-10 pr-4 py-3 text-[14px] text-gray-700 placeholder-gray-300 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all resize-none shadow-sm"
                     placeholder="Tell us more about your requirements…"
                   />
                 </div>
@@ -172,7 +172,7 @@ export default function ContactSection() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full h-12 rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-[14px] font-semibold flex items-center justify-center gap-2 shadow-lg shadow-indigo-200 hover:shadow-xl hover:shadow-indigo-300 hover:-translate-y-0.5 transition-all disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                className="w-full h-12 rounded-xl bg-gradient-to-r from-blue-600 to-blue-600 text-white text-[14px] font-semibold flex items-center justify-center gap-2 shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-0.5 transition-all disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
               >
                 {isSubmitting ? (
                   <><svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" /></svg> Sending…</>
