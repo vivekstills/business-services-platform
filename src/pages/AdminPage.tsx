@@ -138,6 +138,34 @@ export default function AdminPage() {
     setToken(null);
   };
 
+  const [autoLoginDone, setAutoLoginDone] = useState(false);
+
+  useEffect(() => {
+    if (token) return;
+    fetch('/api/admin/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password: '' }),
+    })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (data?.token) {
+          localStorage.setItem(TOKEN_KEY, data.token);
+          setToken(data.token);
+        }
+      })
+      .catch(() => {})
+      .finally(() => setAutoLoginDone(true));
+  }, []);
+
+  if (!token && !autoLoginDone) {
+    return (
+      <div className="min-h-screen bg-slate-50 flex items-center justify-center">
+        <Loader2 className="w-8 h-8 text-blue-600 animate-spin" />
+      </div>
+    );
+  }
+
   if (!token) {
     return <Navigate to="/admin/login" replace />;
   }

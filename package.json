@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"npm run server\" \"vite --port=5173 --host=127.0.0.1\"",
+    "dev": "concurrently \"npm run server\" \"vite --port=5173 --host=0.0.0.0\"",
     "server": "tsx watch server.ts",
     "seed": "tsx scripts/seed-content.ts",
     "build": "vite build",
