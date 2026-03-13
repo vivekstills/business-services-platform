@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { SERVICE_CATEGORIES, getServicesByCategory } from '../data/services';
+import { useContent, getServicesByCategory } from '../context/ContentContext';
 import { ArrowRight, ChevronRight } from 'lucide-react';
 
 export default function CategoryPage() {
   const { categoryId } = useParams();
-  const category = SERVICE_CATEGORIES.find((c) => c.id === categoryId) ?? null;
-  const services = categoryId ? getServicesByCategory(categoryId) : [];
+  const { content } = useContent();
+  const category = content.categories.find((c) => c.id === categoryId) ?? null;
+  const services = categoryId ? getServicesByCategory(content.services, categoryId) : [];
 
   if (!categoryId || !category) {
     return (
@@ -24,11 +25,13 @@ export default function CategoryPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-16">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50/80 via-gray-50 to-white pt-16 noise-overlay">
       {/* Hero header */}
-      <div className="relative bg-white border-b border-gray-200 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-0 w-[400px] h-[300px] bg-blue-50 rounded-full blur-[80px]" />
+      <div className="relative bg-gradient-to-br from-white via-white to-blue-50/30 border-b border-gray-200/60 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute -top-20 right-0 w-[500px] h-[400px] bg-gradient-to-bl from-blue-100/30 to-sky-50/20 rounded-full blur-[100px] animate-float-glow" />
+          <div className="absolute bottom-0 left-0 w-[300px] h-[200px] bg-gradient-to-tr from-indigo-100/20 to-transparent rounded-full blur-[80px]" />
+          <div className="absolute inset-0 dot-grid" />
         </div>
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-12">
           {/* Breadcrumb */}
@@ -75,7 +78,7 @@ export default function CategoryPage() {
               >
                 <Link
                   to={`/service/${s.id}`}
-                  className="group flex flex-col h-full p-6 rounded-xl border border-gray-200/80 bg-white hover:shadow-xl hover:shadow-gray-200/50 hover:border-blue-100 hover:-translate-y-1 transition-all duration-300"
+                  className="group flex flex-col h-full p-6 rounded-xl border border-gray-200/60 bg-white/80 backdrop-blur-sm shadow-sm hover:shadow-xl hover:shadow-blue-100/40 hover:border-blue-200/60 hover:-translate-y-1 transition-all duration-300"
                 >
                   <div className="flex-1">
                     <div className="text-[11px] font-bold text-blue-500 uppercase tracking-widest mb-2">

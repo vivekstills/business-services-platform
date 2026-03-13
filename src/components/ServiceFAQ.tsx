@@ -15,6 +15,7 @@ function FAQItem({ faq, index, openIndex, setOpenIndex }: {
   index: number;
   openIndex: number | null;
   setOpenIndex: (i: number | null) => void;
+  key?: React.Key;
 }) {
   const isOpen = openIndex === index;
   return (

@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { User, Mail, Phone, MessageSquare, AlertCircle, CheckCircle2, ArrowRight, Clock, BadgeCheck, Wallet } from 'lucide-react';
-
-const SERVICES_LIST = [
-  'GST Registration', 'Private Limited Company', 'LLP Formation', 'Trademark Registration',
-  'FSSAI Registration', 'Import Export Code', 'ITR Filing', 'TDS Return', 'Other',
-];
+import { useContent } from '../context/ContentContext';
 
 export default function ContactSection() {
+  const { content } = useContent();
+  const cs = content.contactSection;
+  const SERVICES_LIST = cs.servicesList;
   const [formData, setFormData]     = useState({ name: '', email: '', phone: '', service: '', message: '' });
   const [errors, setErrors]         = useState<Record<string, string>>({});
   const [isSubmitted, setIsSubmitted]   = useState(false);
@@ -55,8 +54,13 @@ export default function ContactSection() {
     }`;
 
   return (
-    <section className="bg-gray-50 py-24 lg:py-32 border-t border-gray-100">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="relative bg-gradient-to-b from-gray-50/80 via-slate-50 to-gray-50/60 py-24 lg:py-32 overflow-hidden noise-overlay">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute -bottom-40 left-1/4 w-[600px] h-[600px] bg-gradient-to-t from-blue-100/25 to-transparent rounded-full blur-[130px] animate-float-glow-slow" />
+        <div className="absolute top-0 right-0 w-[350px] h-[350px] bg-gradient-to-bl from-indigo-100/20 to-transparent rounded-full blur-[100px] animate-float-glow" />
+        <div className="absolute inset-0 dot-grid" />
+      </div>
+      <div className="relative z-[2] max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
           {/* Left */}
@@ -65,39 +69,38 @@ export default function ContactSection() {
               initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               className="text-xs font-bold text-blue-600 uppercase tracking-[0.2em] mb-4"
             >
-              Get in Touch
+              {cs.label}
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ delay: 0.05 }}
               className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight leading-tight mb-4"
             >
-              Let's get your business started
+              {cs.heading}
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ delay: 0.1 }}
               className="text-gray-500 text-[15px] leading-relaxed mb-10"
             >
-              Fill out the form and our team will reach out within 24 business hours with a personalised plan for your requirements.
+              {cs.subheading}
             </motion.p>
 
             <div className="space-y-5">
-              {[
-                { icon: <BadgeCheck className="w-4 h-4 text-blue-600" />, label: 'Expert consultation', desc: 'Talk to a specialist who understands your industry.' },
-                { icon: <Clock className="w-4 h-4 text-blue-600" />,      label: 'Fast turnaround',    desc: 'Most services completed within 7–10 working days.' },
-                { icon: <Wallet className="w-4 h-4 text-blue-600" />,     label: 'Fixed pricing',      desc: 'No hidden fees — you know the cost upfront.' },
-              ].map((item) => (
-                <div key={item.label} className="flex items-start gap-4 p-4 rounded-xl bg-white border border-gray-100 shadow-sm">
+              {cs.features.map((item, i) => {
+                const icons = [<BadgeCheck className="w-4 h-4 text-blue-600" key="b" />, <Clock className="w-4 h-4 text-blue-600" key="c" />, <Wallet className="w-4 h-4 text-blue-600" key="w" />];
+                return (
+                <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-white/70 backdrop-blur-sm border border-gray-100/80 shadow-sm">
                   <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0">
-                    {item.icon}
+                    {icons[i] ?? icons[0]}
                   </div>
                   <div>
                     <div className="text-[14px] font-semibold text-gray-800">{item.label}</div>
                     <div className="text-[13px] text-gray-500 mt-0.5">{item.desc}</div>
                   </div>
                 </div>
-              ))}
+              );
+              })}
             </div>
           </div>
 
@@ -105,7 +108,7 @@ export default function ContactSection() {
           <motion.div
             initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="bg-white border border-gray-200/80 rounded-2xl p-8 shadow-xl shadow-gray-200/40"
+            className="bg-white/90 backdrop-blur-xl border border-white/60 ring-1 ring-gray-200/50 rounded-2xl p-8 shadow-2xl shadow-blue-100/20"
           >
             <form onSubmit={handleSubmit} className="space-y-5">
               {/* Name */}

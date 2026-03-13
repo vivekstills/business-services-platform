@@ -2,100 +2,61 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Briefcase, FileText, Calculator, Shield, Scale, Landmark } from 'lucide-react';
+import { useContent, getServicesByCategory } from '../context/ContentContext';
 
-const CATEGORIES = [
-  {
-    id: 'new-business',
-    label: 'Form New Business',
-    description: 'Proprietorship, Partnership, LLP, Private/Public Ltd, OPC, Nidhi and more.',
-    icon: <Briefcase className="w-5 h-5" />,
-    bg: 'bg-blue-50',
-    iconColor: 'text-blue-600',
-    border: 'border-blue-100',
-    count: 12,
-  },
-  {
-    id: 'registration',
-    label: 'Registrations',
-    description: 'GST, FSSAI, Trade License, IEC, Digital Signature, Health License and more.',
-    icon: <FileText className="w-5 h-5" />,
-    bg: 'bg-sky-50',
-    iconColor: 'text-sky-600',
-    border: 'border-sky-100',
-    count: 10,
-  },
-  {
-    id: 'gst-services',
-    label: 'GST Services',
-    description: 'Registration, return filing, advisory, refunds, LUT, ITC reconciliation.',
-    icon: <Calculator className="w-5 h-5" />,
-    bg: 'bg-sky-50',
-    iconColor: 'text-sky-600',
-    border: 'border-sky-100',
-    count: 11,
-  },
-  {
-    id: 'trademark-ip',
-    label: 'Trademark & IP',
-    description: 'Trademark registration, objection, renewal, copyright, patents, design.',
-    icon: <Shield className="w-5 h-5" />,
-    bg: 'bg-emerald-50',
-    iconColor: 'text-emerald-600',
-    border: 'border-emerald-100',
-    count: 13,
-  },
-  {
-    id: 'legal-compliance',
-    label: 'Compliance',
-    description: 'Annual filings, director changes, conversions, capital increase and more.',
-    icon: <Scale className="w-5 h-5" />,
-    bg: 'bg-amber-50',
-    iconColor: 'text-amber-600',
-    border: 'border-amber-100',
-    count: 22,
-  },
-  {
-    id: 'mandatory-licenses',
-    label: 'Licenses & More',
-    description: 'Factory, contract labour, PCB, liquor licenses, web design and SEO.',
-    icon: <Landmark className="w-5 h-5" />,
-    bg: 'bg-rose-50',
-    iconColor: 'text-rose-600',
-    border: 'border-rose-100',
-    count: 18,
-  },
-];
+const CATEGORY_CONFIG: Record<string, { icon: React.ReactNode; bg: string; iconColor: string; border: string }> = {
+  'new-business': { icon: <Briefcase className="w-5 h-5" />, bg: 'bg-blue-50', iconColor: 'text-blue-600', border: 'border-blue-100' },
+  'registration': { icon: <FileText className="w-5 h-5" />, bg: 'bg-sky-50', iconColor: 'text-sky-600', border: 'border-sky-100' },
+  'gst-services': { icon: <Calculator className="w-5 h-5" />, bg: 'bg-sky-50', iconColor: 'text-sky-600', border: 'border-sky-100' },
+  'trademark-ip': { icon: <Shield className="w-5 h-5" />, bg: 'bg-emerald-50', iconColor: 'text-emerald-600', border: 'border-emerald-100' },
+  'legal-compliance': { icon: <Scale className="w-5 h-5" />, bg: 'bg-amber-50', iconColor: 'text-amber-600', border: 'border-amber-100' },
+  'mandatory-licenses': { icon: <Landmark className="w-5 h-5" />, bg: 'bg-rose-50', iconColor: 'text-rose-600', border: 'border-rose-100' },
+};
 
 export default function Services() {
+  const { content } = useContent();
+  const ss = content.servicesSection;
+  const categories = content.categories
+    .filter((c) => ['new-business', 'registration', 'gst-services', 'trademark-ip', 'legal-compliance', 'mandatory-licenses'].includes(c.id))
+    .map((c) => {
+      const cfg = CATEGORY_CONFIG[c.id] ?? CATEGORY_CONFIG['registration'];
+      const count = getServicesByCategory(content.services, c.id).length;
+      return { ...c, label: c.title, ...cfg, count };
+    });
   return (
-    <section className="bg-gray-50 py-24 lg:py-32 border-t border-gray-100">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="relative bg-gradient-to-b from-slate-50 via-gray-50/80 to-white py-24 lg:py-32 overflow-hidden noise-overlay">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-blue-100/30 to-sky-100/20 rounded-full blur-[120px] animate-float-glow-slow" />
+        <div className="absolute -bottom-20 -right-20 w-[400px] h-[400px] bg-gradient-to-tl from-indigo-100/25 to-transparent rounded-full blur-[100px] animate-float-glow" />
+        <div className="absolute inset-0 crosshatch" />
+      </div>
+      <div className="relative z-[2] max-w-7xl mx-auto px-6 lg:px-8">
 
         <div className="max-w-2xl mb-16">
           <motion.p
             initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="text-xs font-bold text-blue-600 uppercase tracking-[0.2em] mb-4"
           >
-            Our Services
+            {ss.label}
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             transition={{ delay: 0.05 }}
             className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight leading-tight mb-4"
           >
-            Everything you need to start & run your business
+            {ss.heading}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             className="text-gray-500 text-[15px] leading-relaxed"
           >
-            120+ services across registrations, tax, IP, compliance and more — handled end‑to‑end by experts.
+            {ss.description}
           </motion.p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {CATEGORIES.map((cat, i) => (
+          {categories.map((cat, i) => (
             <motion.div
               key={cat.id}
               initial={{ opacity: 0, y: 18 }}
@@ -105,7 +66,7 @@ export default function Services() {
             >
               <Link
                 to={`/category/${cat.id}`}
-                className="group flex flex-col h-full p-6 rounded-2xl border border-gray-200/80 bg-white hover:shadow-xl hover:shadow-gray-200/60 hover:border-blue-100 hover:-translate-y-1 transition-all duration-300"
+                className="group flex flex-col h-full p-6 rounded-2xl border border-gray-200/60 bg-white/80 backdrop-blur-sm shadow-sm hover:shadow-xl hover:shadow-blue-100/40 hover:border-blue-200/60 hover:-translate-y-1 transition-all duration-300"
               >
                 <div className={`w-11 h-11 rounded-xl ${cat.bg} border ${cat.border} flex items-center justify-center mb-5 ${cat.iconColor}`}>
                   {cat.icon}

@@ -3,16 +3,13 @@ import Hero from '../components/Hero';
 import Services from '../components/Services';
 import Pricing from '../components/Pricing';
 import ContactSection from '../components/ContactSection';
-import Footer from '../components/Footer';
-
 export default function HomePage() {
   return (
-    <div className="bg-[#060C18] text-white">
+    <div className="bg-white text-gray-900">
       <Hero />
       <Services />
       <Pricing />
       <ContactSection />
-      <Footer />
     </div>
   );
 }

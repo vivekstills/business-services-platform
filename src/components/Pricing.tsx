@@ -2,64 +2,18 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Check, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-const PLANS = [
-  {
-    name: 'Standard',
-    badge: null,
-    price: '₹4,500',
-    tagline: 'Essential setup for new ventures',
-    features: [
-      'Company / entity registration',
-      'PAN & TAN application',
-      'Digital Signature (DSC)',
-      'Director Identification Number (DIN)',
-      'Basic compliance guidance',
-    ],
-    cta: 'Get Standard',
-    ctaTo: '/category/new-business',
-    highlight: false,
-  },
-  {
-    name: 'Deluxe',
-    badge: 'Most popular',
-    price: '₹8,999',
-    tagline: 'Complete compliance for growing companies',
-    features: [
-      'Everything in Standard',
-      'GST Registration & 3-month filing',
-      'MSME Registration',
-      'Bank account opening support',
-      '1 year annual compliance filing',
-      'Dedicated account manager',
-    ],
-    cta: 'Get Deluxe',
-    ctaTo: '/category/new-business',
-    highlight: true,
-  },
-  {
-    name: 'Premium',
-    badge: null,
-    price: '₹15,499',
-    tagline: 'Full-service with trademark & legal support',
-    features: [
-      'Everything in Deluxe',
-      'Trademark Registration',
-      'Shareholders Agreement',
-      'Employment contracts template',
-      'Priority support (24 × 7)',
-      'Legal consultation (2 hours)',
-    ],
-    cta: 'Get Premium',
-    ctaTo: '/category/new-business',
-    highlight: false,
-  },
-];
+import { useContent } from '../context/ContentContext';
 
 export default function Pricing() {
+  const { content } = useContent();
+  const PLANS = content.pricing.plans;
   return (
-    <section className="bg-white py-24 lg:py-32 border-t border-gray-100">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="relative bg-gradient-to-b from-white via-slate-50/50 to-white py-24 lg:py-32 overflow-hidden noise-overlay">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-br from-blue-100/20 via-transparent to-indigo-100/15 rounded-full blur-[130px] animate-float-glow" />
+        <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-gradient-to-bl from-sky-100/20 to-transparent rounded-full blur-[80px]" />
+      </div>
+      <div className="relative z-[2] max-w-7xl mx-auto px-6 lg:px-8">
 
         <div className="max-w-2xl mb-16">
           <motion.p
@@ -149,7 +103,7 @@ export default function Pricing() {
           initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.3 }}
           className="text-center text-gray-400 text-sm mt-10"
         >
-          Each individual service also has its own tailored packages — browse any service for specific pricing.
+          {content.pricing.footnote}
         </motion.p>
       </div>
     </section>

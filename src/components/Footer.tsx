@@ -1,72 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Search, FileText } from 'lucide-react';
-
-const FOOTER_EMAIL = 'enquiry@mridhuvassociates.com';
-const FOOTER_PHONE = '+91 98765 43210';
-
-const SERVICE_LINKS = [
-  {
-    heading: 'Form New Business',
-    items: [
-      { label: 'Private Limited Company', to: '/service/private-limited-company' },
-      { label: 'LLP',                     to: '/service/llp' },
-      { label: 'One Person Company',      to: '/service/one-person-company' },
-      { label: 'Partnership',             to: '/service/partnership' },
-      { label: 'Nidhi Company',           to: '/service/nidhi-company' },
-    ],
-  },
-  {
-    heading: 'Registrations',
-    items: [
-      { label: 'GST Registration',   to: '/service/gst-registration' },
-      { label: 'FSSAI Registration', to: '/service/fssai-registration' },
-      { label: 'Trade License',      to: '/service/trade-license' },
-      { label: 'Import Export Code', to: '/service/import-export-code' },
-      { label: 'Digital Signature',  to: '/service/digital-signature' },
-    ],
-  },
-  {
-    heading: 'GST & Tax',
-    items: [
-      { label: 'GST Return Filing',  to: '/service/gst-return-filing' },
-      { label: 'GST Refund',         to: '/service/gst-refund' },
-      { label: 'ITR-1 Filing',       to: '/service/itr-1-filing' },
-      { label: 'ITR-3 Filing',       to: '/service/itr-3-filing' },
-      { label: 'TDS Return Filing',  to: '/service/tds-return-filing' },
-    ],
-  },
-  {
-    heading: 'Trademark & IP',
-    items: [
-      { label: 'Trademark Registration', to: '/service/trademark-registration' },
-      { label: 'Trademark Renewal',      to: '/service/trademark-renewal' },
-      { label: 'Copyright Registration', to: '/service/copyright-registration' },
-      { label: 'Patent Registration',    to: '/service/patent-registration' },
-    ],
-  },
-];
-
-const POLICY_LINKS = [
-  { label: 'Privacy Policy',        to: '/privacy-policy' },
-  { label: 'Refund Policy',          to: '/refund-policy' },
-  { label: 'Confidentiality Policy', to: '/confidentiality-policy' },
-  { label: 'Disclaimer Policy',      to: '/disclaimer-policy' },
-  { label: 'Terms & Conditions',     to: '/terms-conditions' },
-  { label: 'Review Page',            to: '/reviews' },
-  { label: 'About Us',               to: '/about-us' },
-  { label: 'Contact Us',             to: '/contact-us' },
-];
+import { useContent } from '../context/ContentContext';
 
 const TOOL_LINKS = [
-  { label: 'Business Search',   to: '/business-search', icon: <Search className="w-3.5 h-3.5" /> },
-  { label: 'Trademark Search',   to: '/trademark-search', icon: <FileText className="w-3.5 h-3.5" /> },
+  { label: 'Business Search', to: '/business-search', icon: <Search className="w-3.5 h-3.5" /> },
+  { label: 'Trademark Search', to: '/trademark-search', icon: <FileText className="w-3.5 h-3.5" /> },
 ];
 
 export default function Footer() {
+  const { content } = useContent();
+  const footer = content.footer;
+  const contact = content.contact;
   return (
-    <footer className="bg-[#0f172a] text-white border-t border-slate-700/50">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-10">
+    <footer className="relative bg-[#0f172a] text-white overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-0 left-1/4 w-[600px] h-[300px] bg-gradient-to-b from-blue-500/[0.06] to-transparent rounded-full blur-[100px]" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tl from-indigo-500/[0.05] to-transparent rounded-full blur-[120px]" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-500/30 to-transparent" />
+      </div>
+      <div className="relative z-[2] max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-10">
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 mb-14">
           {/* Brand + Contact */}
@@ -77,17 +30,17 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-[13px] text-slate-400 leading-relaxed mb-6">
-              India's trusted platform for business registrations, tax compliance and legal services.
+              {footer.tagline}
             </p>
             <div className="space-y-2.5">
-              <a href={`tel:${FOOTER_PHONE.replace(/\s/g, '')}`} className="flex items-center gap-2.5 text-[13px] text-slate-400 hover:text-white transition-colors">
-                <Phone className="w-3.5 h-3.5 text-blue-400 flex-shrink-0" /> {FOOTER_PHONE}
+              <a href={`tel:${contact.phone.replace(/\s/g, '')}`} className="flex items-center gap-2.5 text-[13px] text-slate-400 hover:text-white transition-colors">
+                <Phone className="w-3.5 h-3.5 text-blue-400 flex-shrink-0" /> {contact.phone}
               </a>
-              <a href={`mailto:${FOOTER_EMAIL}`} className="flex items-center gap-2.5 text-[13px] text-slate-400 hover:text-white transition-colors break-all">
-                <Mail className="w-3.5 h-3.5 text-blue-400 flex-shrink-0" /> {FOOTER_EMAIL}
+              <a href={`mailto:${contact.email}`} className="flex items-center gap-2.5 text-[13px] text-slate-400 hover:text-white transition-colors break-all">
+                <Mail className="w-3.5 h-3.5 text-blue-400 flex-shrink-0" /> {contact.email}
               </a>
               <div className="flex items-start gap-2.5 text-[13px] text-slate-400">
-                <MapPin className="w-3.5 h-3.5 text-blue-400 mt-0.5 flex-shrink-0" /> Mumbai, Maharashtra, India
+                <MapPin className="w-3.5 h-3.5 text-blue-400 mt-0.5 flex-shrink-0" /> {footer.address || contact.address}
               </div>
             </div>
 
@@ -109,7 +62,7 @@ export default function Footer() {
           </div>
 
           {/* Service columns */}
-          {SERVICE_LINKS.map((col) => (
+          {footer.serviceLinks.map((col) => (
             <div key={col.heading}>
               <h4 className="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-4">{col.heading}</h4>
               <ul className="space-y-2.5">
@@ -127,7 +80,7 @@ export default function Footer() {
 
         {/* Policy links row */}
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 py-6 border-t border-slate-700/50">
-          {POLICY_LINKS.map((item) => (
+          {footer.policyLinks.map((item) => (
             <Link key={item.to} to={item.to} className="text-[12px] text-slate-400 hover:text-white transition-colors">
               {item.label}
             </Link>
@@ -140,8 +93,8 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Mridhuv Associates. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-[12px] text-slate-400">
-            <a href={`mailto:${FOOTER_EMAIL}`} className="hover:text-white transition-colors">{FOOTER_EMAIL}</a>
-            <a href={`tel:${FOOTER_PHONE.replace(/\s/g, '')}`} className="hover:text-white transition-colors">{FOOTER_PHONE}</a>
+            <a href={`mailto:${contact.email}`} className="hover:text-white transition-colors">{contact.email}</a>
+            <a href={`tel:${contact.phone.replace(/\s/g, '')}`} className="hover:text-white transition-colors">{contact.phone}</a>
           </div>
         </div>
       </div>

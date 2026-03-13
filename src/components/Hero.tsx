@@ -1,38 +1,29 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Star, ShieldCheck, Users, Phone } from 'lucide-react';
-import { CONTACT_PHONE } from '../data/constants';
+import { useContent } from '../context/ContentContext';
 import { Link } from 'react-router-dom';
 
-const POPULAR = [
-  { label: 'GST Registration',    to: '/service/gst-registration' },
-  { label: 'Private Limited Co.', to: '/service/private-limited-company' },
-  { label: 'Trademark',           to: '/service/trademark-registration' },
-  { label: 'ITR Filing',          to: '/service/itr-1-filing' },
-  { label: 'Import Export Code',  to: '/service/import-export-code' },
-];
-
-const STATS = [
-  { icon: <Users className="w-4 h-4" />,      value: '50,000+',  label: 'Businesses served' },
-  { icon: <Star className="w-4 h-4" />,        value: '4.9 / 5',  label: 'Average rating' },
-  { icon: <ShieldCheck className="w-4 h-4" />, value: '100%',     label: 'Govt. approved process' },
+const STAT_ICONS = [
+  <Users className="w-4 h-4" key="users" />,
+  <Star className="w-4 h-4" key="star" />,
+  <ShieldCheck className="w-4 h-4" key="shield" />,
 ];
 
 export default function Hero() {
+  const { content } = useContent();
+  const hero = content.hero;
+  const contact = content.contact;
+  const POPULAR = hero.popular;
+  const STATS = hero.stats.map((s, i) => ({ ...s, icon: STAT_ICONS[i] ?? STAT_ICONS[0] }));
   return (
-    <section className="relative bg-gradient-to-br from-slate-50/80 via-white to-blue-50/30 flex items-center overflow-hidden pt-16 min-h-screen">
-      {/* Decorative background shapes */}
+    <section className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50/40 flex items-center overflow-hidden pt-16 min-h-screen noise-overlay">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-blue-100/50 rounded-full blur-[120px] translate-x-1/3 -translate-y-1/4" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-100/50 rounded-full blur-[100px] -translate-x-1/4 translate-y-1/4" />
-        {/* Dot grid */}
-        <div
-          className="absolute inset-0 opacity-[0.35]"
-          style={{
-            backgroundImage: 'radial-gradient(circle, #CBD5E1 1px, transparent 1px)',
-            backgroundSize: '28px 28px',
-          }}
-        />
+        <div className="absolute -top-32 right-0 w-[800px] h-[800px] bg-gradient-to-br from-blue-200/40 to-sky-100/30 rounded-full blur-[140px] translate-x-1/4 animate-float-glow" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-indigo-100/40 to-blue-100/30 rounded-full blur-[120px] -translate-x-1/4 translate-y-1/4 animate-float-glow-slow" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-to-r from-sky-100/20 via-transparent to-blue-100/20 rounded-full blur-[100px]" />
+        <div className="absolute inset-0 dot-grid" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/80 to-transparent" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full py-20">
@@ -48,7 +39,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-blue-200 bg-blue-50 text-blue-700 text-xs font-semibold mb-8"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
-              India's trusted business compliance platform
+              {hero.badge}
             </motion.div>
 
             {/* Headline */}
@@ -58,10 +49,18 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.05 }}
               className="text-4xl sm:text-5xl lg:text-[58px] font-bold text-gray-900 tracking-tight leading-[1.1] mb-6"
             >
-              Launch & grow your business{' '}
-              <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-sky-600 bg-clip-text text-transparent">
-                with complete legal compliance
-              </span>
+              {hero.headline.includes(' with ') ? (
+                <>
+                  {hero.headline.split(' with ')[0]}{' '}
+                  <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-sky-600 bg-clip-text text-transparent">
+                    with {hero.headline.split(' with ')[1]}
+                  </span>
+                </>
+              ) : (
+                <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-sky-600 bg-clip-text text-transparent">
+                  {hero.headline}
+                </span>
+              )}
             </motion.h1>
 
             {/* Sub-headline */}
@@ -71,7 +70,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-[17px] text-gray-500 leading-relaxed max-w-xl mb-10"
             >
-              GST Registration, Company Formation, Trademark, Tax Filing and 120+ more services — handled end‑to‑end by our expert team.
+              {hero.subheadline}
             </motion.p>
 
             {/* CTAs */}
@@ -88,7 +87,7 @@ export default function Hero() {
                 Get Started <ArrowRight className="w-4 h-4" />
               </Link>
               <a
-                href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`}
+                href={`tel:${contact.phone.replace(/\s/g, '')}`}
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border border-gray-200 text-gray-700 text-[14px] font-semibold hover:bg-gray-50 hover:border-gray-300 transition-all"
               >
                 <Phone className="w-4 h-4 text-blue-500" /> Talk to an expert
@@ -124,37 +123,36 @@ export default function Hero() {
           >
             <div className="relative">
               {/* Main card */}
-              <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-xl shadow-gray-200/50 border border-gray-100/80 p-8">
+              <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl shadow-blue-100/30 border border-white/60 ring-1 ring-gray-100/50 p-8">
                 <div className="flex items-center gap-3 mb-6">
                   <img src="/assets/logo.png" alt="Mridhuv Associates" className="h-10 w-auto" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-1">Expert Advisory</h3>
-                <p className="text-gray-500 text-[14px] mb-6">Your business, our expertise — from registration to compliance.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-1">{hero.trustCard.title}</h3>
+                <p className="text-gray-500 text-[14px] mb-6">{hero.trustCard.subtitle}</p>
                 <div className="space-y-3 mb-6">
-                  {[
-                    { label: 'GST Registration', time: '3–5 days', color: 'bg-green-50 text-green-700 border-green-200' },
-                    { label: 'Company Incorporation', time: '7–10 days', color: 'bg-blue-50 text-blue-700 border-blue-200' },
-                    { label: 'Trademark Registration', time: '2–3 weeks', color: 'bg-sky-50 text-sky-700 border-sky-200' },
-                  ].map((item) => (
-                    <div key={item.label} className="flex items-center justify-between py-2.5 px-4 rounded-xl bg-gray-50 border border-gray-100">
+                  {hero.trustCard.items.map((item, idx) => {
+                    const colors = ['bg-green-50 text-green-700 border-green-200', 'bg-blue-50 text-blue-700 border-blue-200', 'bg-sky-50 text-sky-700 border-sky-200'];
+                    return (
+                    <div key={idx} className="flex items-center justify-between py-2.5 px-4 rounded-xl bg-gray-50 border border-gray-100">
                       <span className="text-[13.5px] font-semibold text-gray-700">{item.label}</span>
-                      <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full border ${item.color}`}>{item.time}</span>
+                      <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full border ${colors[idx] ?? colors[0]}`}>{item.time}</span>
                     </div>
-                  ))}
+                  );
+                  })}
                 </div>
                 {/* Rating */}
                 <div className="flex items-center gap-2 pt-4 border-t border-gray-100">
                   {[1,2,3,4,5].map((s) => (
                     <Star key={s} className="w-4 h-4 text-amber-400 fill-amber-400" />
                   ))}
-                  <span className="text-[13px] font-semibold text-gray-700 ml-1">4.9</span>
-                  <span className="text-[12px] text-gray-400">· 12,000+ reviews</span>
+                  <span className="text-[13px] font-semibold text-gray-700 ml-1">{hero.trustCard.rating}</span>
+                  <span className="text-[12px] text-gray-400">· {hero.trustCard.reviews}</span>
                 </div>
               </div>
               {/* Floating badge */}
               <div className="absolute -top-4 -right-4 bg-blue-600 text-white rounded-2xl px-4 py-2.5 shadow-lg shadow-blue-200">
-                <div className="text-[22px] font-black leading-none">50K+</div>
-                <div className="text-[10px] font-semibold opacity-80">Businesses</div>
+                <div className="text-[22px] font-black leading-none">{hero.trustCard.badgeValue}</div>
+                <div className="text-[10px] font-semibold opacity-80">{hero.trustCard.badgeLabel}</div>
               </div>
             </div>
           </motion.div>
@@ -165,7 +163,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.35 }}
-          className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-px border border-gray-200 rounded-2xl overflow-hidden max-w-2xl bg-gray-200 shadow-sm"
+          className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-px border border-gray-200/60 rounded-2xl overflow-hidden max-w-2xl bg-gray-200/50 shadow-sm backdrop-blur-sm"
         >
           {STATS.map((s) => (
             <div key={s.label} className="flex items-center gap-3 bg-white px-6 py-5">

@@ -1,9 +1,12 @@
 import React from 'react';
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
+import { ContentProvider } from './context/ContentContext';
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import CategoryPage from './pages/CategoryPage';
 import ServicePage from './pages/ServicePage';
+import AdminPage from './pages/AdminPage';
+import AdminLoginPage from './pages/AdminLoginPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import RefundPolicyPage from './pages/RefundPolicyPage';
 import ConfidentialityPolicyPage from './pages/ConfidentialityPolicyPage';
@@ -14,12 +17,17 @@ import AboutUsPage from './pages/AboutUsPage';
 import ContactUsPage from './pages/ContactUsPage';
 import BusinessSearchPage from './pages/BusinessSearchPage';
 import TrademarkSearchPage from './pages/TrademarkSearchPage';
+import Footer from './components/Footer';
 import ChatBot from './components/ChatBot';
+import LeadCapturePopup from './components/LeadCapturePopup';
 
-export default function App() {
+function AppContent() {
+  const loc = useLocation();
+  const isAdmin = loc.pathname.startsWith('/admin');
+
   return (
     <div className="min-h-screen bg-white font-sans antialiased">
-      <Navbar />
+      {!isAdmin && <Navbar />}
       <Routes>
         <Route path="/"                       element={<HomePage />} />
         <Route path="/category/:categoryId"   element={<CategoryPage />} />
@@ -34,9 +42,21 @@ export default function App() {
         <Route path="/contact-us"             element={<ContactUsPage />} />
         <Route path="/business-search"        element={<BusinessSearchPage />} />
         <Route path="/trademark-search"       element={<TrademarkSearchPage />} />
+        <Route path="/admin"                  element={<AdminPage />} />
+        <Route path="/admin/login"            element={<AdminLoginPage />} />
         <Route path="*"                       element={<Navigate to="/" replace />} />
       </Routes>
-      <ChatBot />
+      {!isAdmin && <Footer />}
+      {!isAdmin && <ChatBot />}
+      {!isAdmin && <LeadCapturePopup />}
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <ContentProvider>
+      <AppContent />
+    </ContentProvider>
   );
 }

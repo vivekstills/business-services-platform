@@ -1,10 +1,11 @@
 import React, { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import type { Service } from '../data/services';
-import { SERVICE_CATEGORIES } from '../data/services';
-import FAQS from '../data/faqs';
+import { useContent } from '../context/ContentContext';
 import ServiceFAQ from '../components/ServiceFAQ';
+import PaymentModal from '../components/PaymentModal';
+import { parsePriceToAmount } from '../utils/price';
 import {
   INDIAN_STATES,
   type IndianState,
@@ -14,7 +15,7 @@ import {
   isNEHillyState,
 } from '../data/stateData';
 import {
-  AlertCircle, CheckCircle2, Mail, Phone, User, ChevronRight, Check, MapPin, Info,
+  AlertCircle, CheckCircle2, Mail, Phone, User, ChevronRight, Check, MapPin, Info, CreditCard,
 } from 'lucide-react';
 
 type Props = { service: Service };
@@ -79,15 +80,20 @@ function stateHint(serviceId: string, state: IndianState | ''): string | null {
 }
 
 export default function ServiceLeadHero({ service }: Props) {
+  const { content } = useContent();
   const steps   = useMemo(() => stepsFor(service), [service]);
-  const navigate = useNavigate();
-  const category = SERVICE_CATEGORIES.find((c) => c.id === service.categoryId);
+  const category = content.categories.find((c) => c.id === service.categoryId);
+  const faqs = content.faqs[service.id] ?? [];
 
   const [formData, setFormData]         = useState({ name: '', email: '', phone: '', state: '' as IndianState | '' });
   const [errors, setErrors]             = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted]   = useState(false);
   const [submitError, setSubmitError]   = useState<string | null>(null);
+
+  // Payment modal state
+  const [paymentOpen, setPaymentOpen]   = useState(false);
+  const [paymentPkg, setPaymentPkg]     = useState<{ name: string; price: string; amount: number } | null>(null);
 
   // Derive state-specific data reactively
   const selectedState = formData.state;
@@ -152,13 +158,14 @@ export default function ServiceLeadHero({ service }: Props) {
     }`;
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-16">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50/80 via-gray-50 to-white pt-16 noise-overlay">
 
       {/* Hero section */}
-      <div className="relative bg-white border-b border-gray-200 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-0 w-[500px] h-[400px] bg-blue-50/80 rounded-full blur-[100px]" />
-          <div className="absolute bottom-0 left-[10%] w-[300px] h-[200px] bg-blue-50 rounded-full blur-[80px]" />
+      <div className="relative bg-gradient-to-br from-white via-white to-blue-50/30 border-b border-gray-200/60 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute -top-20 right-0 w-[600px] h-[500px] bg-gradient-to-bl from-blue-100/30 to-sky-50/20 rounded-full blur-[120px] animate-float-glow" />
+          <div className="absolute bottom-0 left-[10%] w-[350px] h-[250px] bg-gradient-to-tr from-indigo-100/20 to-transparent rounded-full blur-[90px] animate-float-glow-slow" />
+          <div className="absolute inset-0 dot-grid" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-10">
@@ -216,7 +223,7 @@ export default function ServiceLeadHero({ service }: Props) {
               initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.08 }}
             >
-              <div className="bg-white border border-gray-200/80 rounded-2xl p-7 shadow-xl shadow-gray-200/40">
+              <div className="bg-white/90 backdrop-blur-xl border border-white/60 ring-1 ring-gray-200/50 rounded-2xl p-7 shadow-2xl shadow-blue-100/20">
                 <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-1">Apply for</p>
                 <h2 className="text-xl font-bold text-gray-900 mb-6">{service.name}</h2>
 
@@ -366,7 +373,7 @@ export default function ServiceLeadHero({ service }: Props) {
 
             {/* FAQs — general + state-specific */}
             <ServiceFAQ
-              faqs={FAQS[service.id] ?? []}
+              faqs={faqs}
               stateFAQs={stateFAQs}
               serviceName={service.name}
               selectedState={selectedState}
@@ -419,25 +426,53 @@ export default function ServiceLeadHero({ service }: Props) {
                   transition={{ duration: 0.22 }}
                   className="space-y-4"
                 >
-                  {activePackages.map((pkg) => (
-                    <div key={pkg.name} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow">
-                      <div className="text-[11px] font-bold text-blue-600 uppercase tracking-widest mb-1">{pkg.name}</div>
-                      <div className="text-2xl font-bold text-gray-900 mb-2">{pkg.price}</div>
-                      <p className="text-[13px] text-gray-500 leading-relaxed">{pkg.description}</p>
-                      <button
-                        onClick={() => document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="mt-4 w-full h-9 rounded-lg border border-gray-200 text-gray-600 text-[12px] font-semibold hover:bg-blue-50 hover:text-blue-700 hover:border-blue-200 transition-all flex items-center justify-center gap-1"
-                      >
-                        Get started <Check className="w-3 h-3" />
-                      </button>
-                    </div>
-                  ))}
+                  {activePackages.map((pkg) => {
+                    const amountPaise = parsePriceToAmount(pkg.price);
+                    return (
+                      <div key={pkg.name} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow">
+                        <div className="text-[11px] font-bold text-blue-600 uppercase tracking-widest mb-1">{pkg.name}</div>
+                        <div className="text-2xl font-bold text-gray-900 mb-2">{pkg.price}</div>
+                        <p className="text-[13px] text-gray-500 leading-relaxed">{pkg.description}</p>
+                        <div className="mt-4 space-y-2">
+                          {amountPaise !== null && (
+                            <button
+                              onClick={() => {
+                                setPaymentPkg({ name: pkg.name, price: pkg.price, amount: amountPaise });
+                                setPaymentOpen(true);
+                              }}
+                              className="w-full h-9 rounded-lg bg-blue-600 text-white text-[12px] font-semibold hover:bg-blue-700 transition-all flex items-center justify-center gap-1.5"
+                            >
+                              <CreditCard className="w-3.5 h-3.5" /> Pay {pkg.price}
+                            </button>
+                          )}
+                          <button
+                            onClick={() => document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' })}
+                            className="w-full h-9 rounded-lg border border-gray-200 text-gray-600 text-[12px] font-semibold hover:bg-blue-50 hover:text-blue-700 hover:border-blue-200 transition-all flex items-center justify-center gap-1"
+                          >
+                            Get started <Check className="w-3 h-3" />
+                          </button>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </motion.div>
               </AnimatePresence>
             </div>
           )}
         </div>
       </div>
+
+      {paymentPkg && (
+        <PaymentModal
+          open={paymentOpen}
+          onClose={() => { setPaymentOpen(false); setPaymentPkg(null); }}
+          serviceName={service.name}
+          serviceId={service.id}
+          packageName={paymentPkg.name}
+          amount={paymentPkg.amount}
+          displayPrice={paymentPkg.price}
+        />
+      )}
     </div>
   );
 }

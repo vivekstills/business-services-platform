@@ -1,11 +1,13 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { getServiceById } from '../data/services';
+import { getServiceById } from '../context/ContentContext';
+import { useContent } from '../context/ContentContext';
 import ServiceLeadHero from '../sections/ServiceLeadHero';
 
 export default function ServicePage() {
   const { serviceId } = useParams();
-  const service = serviceId ? getServiceById(serviceId) ?? null : null;
+  const { content } = useContent();
+  const service = serviceId ? getServiceById(content.services, serviceId) ?? null : null;
 
   if (!service) {
     return (

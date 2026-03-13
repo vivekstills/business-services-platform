@@ -9,7 +9,7 @@ export default function TrademarkSearchPage() {
   const [query, setQuery] = useState('');
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-16">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50/80 via-gray-50 to-white pt-16 noise-overlay">
       <div className="max-w-4xl mx-auto px-6 lg:px-8 py-16">
         <div className="flex items-center gap-2 text-xs text-gray-400 mb-6">
           <Link to="/" className="hover:text-gray-600 transition-colors">Home</Link>

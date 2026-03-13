@@ -5,8 +5,8 @@ import {
   Briefcase, FileText, Calculator, Shield, Scale, Globe, Landmark, Wine, Building2, Monitor
 } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { SERVICE_CATEGORIES, getServiceById, getServicesByCategory, type ServiceCategory } from '../data/services';
-import { CONTACT_PHONE } from '../data/constants';
+import { useContent, getServiceById, getServicesByCategory } from '../context/ContentContext';
+import type { ServiceCategory } from '../data/services';
 
 type NavGroup = {
   label: string;
@@ -40,6 +40,7 @@ const CATEGORY_ICON: Record<string, React.ReactNode> = {
 };
 
 export default function Navbar() {
+  const { content } = useContent();
   const [isScrolled, setIsScrolled]           = useState(false);
   const [openGroup, setOpenGroup]             = useState<string | null>(null);
   const [isMobileOpen, setIsMobileOpen]       = useState(false);
@@ -54,11 +55,11 @@ export default function Navbar() {
     if (p.startsWith('/category/'))  categoryId = decodeURIComponent(p.replace('/category/', '').split('/')[0]);
     else if (p.startsWith('/service/')) {
       const sid = decodeURIComponent(p.replace('/service/', '').split('/')[0]);
-      categoryId = getServiceById(sid)?.categoryId ?? null;
+      categoryId = getServiceById(content.services, sid)?.categoryId ?? null;
     }
     if (!categoryId) return null;
     return NAV_GROUPS.find((g) => g.categoryIds.includes(categoryId!))?.label ?? null;
-  }, [location.pathname]);
+  }, [location.pathname, content.services]);
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 8);
@@ -77,15 +78,15 @@ export default function Navbar() {
   useEffect(() => { setOpenGroup(null); setIsMobileOpen(false); }, [location.pathname]);
 
   const categoriesForGroup = (group: NavGroup): ServiceCategory[] =>
-    group.categoryIds.map((id) => SERVICE_CATEGORIES.find((c) => c.id === id)).filter(Boolean) as ServiceCategory[];
+    group.categoryIds.map((id) => content.categories.find((c) => c.id === id)).filter(Boolean) as ServiceCategory[];
 
   return (
     <nav
       ref={navRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/98 backdrop-blur-xl border-b border-gray-200/80 shadow-sm shadow-gray-100/50'
-          : 'bg-white/95 backdrop-blur-sm border-b border-gray-100'
+          ? 'bg-white/95 backdrop-blur-2xl border-b border-gray-200/50 shadow-[0_1px_3px_rgba(0,0,0,0.04)]'
+          : 'bg-white/90 backdrop-blur-lg border-b border-gray-100/50'
       }`}
     >
       {/* Top bar */}
@@ -125,8 +126,8 @@ export default function Navbar() {
 
           {/* Right actions */}
           <div className="hidden lg:flex items-center gap-2">
-            <a href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`} className="text-[13px] font-medium text-gray-600 hover:text-gray-900 px-3 py-2 rounded-lg hover:bg-gray-50 transition-all">
-              {CONTACT_PHONE}
+            <a href={`tel:${content.contact.phone.replace(/\s/g, '')}`} className="text-[13px] font-medium text-gray-600 hover:text-gray-900 px-3 py-2 rounded-lg hover:bg-gray-50 transition-all">
+              {content.contact.phone}
             </a>
             <Link
               to="/category/new-business"
@@ -165,7 +166,7 @@ export default function Navbar() {
                 return (
                   <div className={`grid gap-8 ${cats.length === 1 ? 'grid-cols-1' : cats.length === 2 ? 'grid-cols-2' : 'grid-cols-3'}`}>
                     {cats.map((cat) => {
-                      const services = getServicesByCategory(cat.id);
+                      const services = getServicesByCategory(content.services, cat.id);
                       return (
                         <div key={cat.id}>
                           <button
@@ -242,7 +243,7 @@ export default function Navbar() {
                             className="overflow-hidden"
                           >
                             {cats.map((cat) => {
-                              const services = getServicesByCategory(cat.id);
+                              const services = getServicesByCategory(content.services, cat.id);
                               return (
                                 <div key={cat.id} className="px-5 pb-3">
                                   <button
@@ -272,8 +273,8 @@ export default function Navbar() {
                   );
                 })}
                 <div className="px-5 pt-5 pb-6 space-y-3">
-                  <a href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`} className="w-full py-2.5 rounded-lg border border-gray-200 text-[14px] font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center">
-                    {CONTACT_PHONE}
+                  <a href={`tel:${content.contact.phone.replace(/\s/g, '')}`} className="w-full py-2.5 rounded-lg border border-gray-200 text-[14px] font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center">
+                    {content.contact.phone}
                   </a>
                   <Link
                     to="/category/new-business"
