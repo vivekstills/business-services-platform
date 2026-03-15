@@ -14,7 +14,7 @@ const app = express();
 
 // Raw body needed for webhook signature verification
 app.use('/api/webhooks/razorpay', express.raw({ type: 'application/json' }));
-app.use(express.json());
+app.use(express.json({ limit: '10mb' }));
 
 // ─── SQLite database ──────────────────────────────────────────────────────────
 const dataDir = join(process.cwd(), 'data');
