@@ -81,4 +81,10 @@ export type Content = {
     heading: string;
     description: string;
   };
+  stateFaqConfig?: Record<string, {
+    mode: 'all-states' | 'per-state';
+    allStateFaqs: FAQ[];
+    perStateFaqs: Record<string, FAQ[]>;
+  }>;
+  statePackages?: Record<string, Record<string, ServicePackage[]>>;
 };

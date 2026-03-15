@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { Save, Search, ChevronDown, ChevronUp } from 'lucide-react';
+import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react';
+import { Save, Search, ChevronDown, ChevronUp, Heading2, Heading3, List, ListOrdered, Bold, Eye, EyeOff } from 'lucide-react';
 import { SortableList } from './SortableList';
+import RichContent from '../RichContent';
 
 type ServicePackage = { name: string; price: string; description: string };
 type Service = {
@@ -18,6 +19,83 @@ type Props = {
   onSave: (data: unknown[]) => void;
   saving: boolean;
 };
+
+function ContentEditor({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+  const ref = useRef<HTMLTextAreaElement>(null);
+  const [preview, setPreview] = useState(false);
+
+  const insert = useCallback((prefix: string, suffix = '') => {
+    const ta = ref.current;
+    if (!ta) return;
+    const start = ta.selectionStart;
+    const end = ta.selectionEnd;
+    const selected = value.slice(start, end);
+    const before = value.slice(0, start);
+    const after = value.slice(end);
+    const inserted = prefix + (selected || 'text') + suffix;
+    const next = before + inserted + after;
+    onChange(next);
+    requestAnimationFrame(() => {
+      ta.focus();
+      const newCursorPos = start + prefix.length;
+      ta.setSelectionRange(newCursorPos, newCursorPos + (selected || 'text').length);
+    });
+  }, [value, onChange]);
+
+  const toolbar = [
+    { icon: Heading2, label: 'H2', action: () => insert('\n## ', '\n') },
+    { icon: Heading3, label: 'H3', action: () => insert('\n### ', '\n') },
+    { icon: Bold, label: 'Bold', action: () => insert('**', '**') },
+    { icon: List, label: 'Bullets', action: () => insert('\n- ') },
+    { icon: ListOrdered, label: 'Numbered', action: () => insert('\n1. ') },
+  ];
+
+  return (
+    <div className="space-y-2">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1">
+          {toolbar.map((btn) => (
+            <button
+              key={btn.label}
+              type="button"
+              onClick={btn.action}
+              title={btn.label}
+              className="p-1.5 rounded-md hover:bg-white hover:shadow-sm text-gray-500 hover:text-blue-600 transition-all"
+            >
+              <btn.icon className="w-4 h-4" />
+            </button>
+          ))}
+        </div>
+        <button
+          type="button"
+          onClick={() => setPreview(!preview)}
+          className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium text-gray-500 hover:bg-gray-100 transition-all"
+        >
+          {preview ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
+          {preview ? 'Edit' : 'Preview'}
+        </button>
+      </div>
+
+      {preview ? (
+        <div className="px-4 py-3 rounded-lg border border-gray-200 bg-white min-h-[180px]">
+          <RichContent content={value} />
+        </div>
+      ) : (
+        <textarea
+          ref={ref}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          rows={10}
+          placeholder="## Heading&#10;&#10;Paragraph text here.&#10;&#10;- Bullet point&#10;- Another point&#10;&#10;1. Numbered step&#10;2. Next step&#10;&#10;**Bold text**"
+          className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-blue-400 focus:ring-1 focus:ring-blue-100 font-mono text-sm leading-relaxed"
+        />
+      )}
+      <p className="text-[11px] text-gray-400">
+        Use ## for headings, ### for subheadings, - for bullets, 1. for numbered lists, **text** for bold
+      </p>
+    </div>
+  );
+}
 
 export default function AdminServicesSection({ data, onSave, saving }: Props) {
   const [services, setServices] = useState<Service[]>([]);
@@ -141,12 +219,7 @@ export default function AdminServicesSection({ data, onSave, saving }: Props) {
                 </div>
                 <div>
                   <label className="block text-xs font-medium text-gray-500 mb-1">Content</label>
-                  <textarea
-                    value={s.content}
-                    onChange={(e) => update(s.id, { content: e.target.value })}
-                    rows={6}
-                    className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-blue-400 focus:ring-1 focus:ring-blue-100 font-mono text-sm"
-                  />
+                  <ContentEditor value={s.content} onChange={(v) => update(s.id, { content: v })} />
                 </div>
 
                 <div>
@@ -229,12 +302,7 @@ export default function AdminServicesSection({ data, onSave, saving }: Props) {
                 </div>
                 <div>
                   <label className="block text-xs font-medium text-gray-500 mb-1">Content</label>
-                  <textarea
-                    value={s.content}
-                    onChange={(e) => update(s.id, { content: e.target.value })}
-                    rows={6}
-                    className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-blue-400 focus:ring-1 focus:ring-blue-100 font-mono text-sm"
-                  />
+                  <ContentEditor value={s.content} onChange={(v) => update(s.id, { content: v })} />
                 </div>
 
                 <div>

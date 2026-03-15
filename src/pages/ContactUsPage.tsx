@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { User, Mail, Phone, MessageSquare, MapPin, CheckCircle2, ArrowRight } from 'lucide-react';
 import PolicyLayout from '../components/PolicyLayout';
-
-const EMAIL = 'enquiry@mridhuvassociates.com';
-const PHONE = '+91 98765 43210';
+import { useContent } from '../context/ContentContext';
 
 export default function ContactUsPage() {
+  const { content } = useContent();
+  const EMAIL = content.contact.email;
+  const PHONE = content.contact.phone;
+  const ADDRESS = content.contact.address;
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -70,7 +72,7 @@ export default function ContactUsPage() {
               <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0"><MapPin className="w-5 h-5 text-blue-600" /></div>
               <div>
                 <div className="text-[11px] font-bold uppercase tracking-wider text-gray-400">Address</div>
-                <div className="font-medium text-gray-800">Mumbai, Maharashtra, India</div>
+                <div className="font-medium text-gray-800">{ADDRESS}</div>
               </div>
             </div>
           </div>

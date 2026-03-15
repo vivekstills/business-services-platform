@@ -17,6 +17,7 @@ import {
 import {
   AlertCircle, CheckCircle2, Mail, Phone, User, ChevronRight, Check, MapPin, Info, CreditCard,
 } from 'lucide-react';
+import RichContent from '../components/RichContent';
 
 type Props = { service: Service };
 
@@ -97,8 +98,10 @@ export default function ServiceLeadHero({ service }: Props) {
 
   // Derive state-specific data reactively
   const selectedState = formData.state;
-  const stateFAQs     = useMemo(() => getStateFAQs(service.id, selectedState), [service.id, selectedState]);
-  const statePackages = useMemo(() => getStatePackages(service.id, selectedState), [service.id, selectedState]);
+  const stateFaqConfig = content.stateFaqConfig;
+  const contentStatePackages = content.statePackages;
+  const stateFAQs     = useMemo(() => getStateFAQs(service.id, selectedState, stateFaqConfig), [service.id, selectedState, stateFaqConfig]);
+  const statePackages = useMemo(() => getStatePackages(service.id, selectedState, contentStatePackages), [service.id, selectedState, contentStatePackages]);
   const activePackages = statePackages ?? service.packages;
   const hint = useMemo(() => stateHint(service.id, selectedState), [service.id, selectedState]);
 
@@ -367,9 +370,7 @@ export default function ServiceLeadHero({ service }: Props) {
           {/* Main content */}
           <div className="lg:col-span-2">
             <h2 className="text-xl font-bold text-gray-900 mb-4">About {service.name}</h2>
-            <div className="text-[14.5px] text-gray-500 leading-relaxed whitespace-pre-line">
-              {service.content}
-            </div>
+            <RichContent content={service.content} />
 
             {/* FAQs — general + state-specific */}
             <ServiceFAQ

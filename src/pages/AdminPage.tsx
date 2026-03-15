@@ -29,7 +29,9 @@ import AdminOurServicesSection from '../components/admin/AdminOurServicesSection
 import AdminJsonEditor from '../components/admin/AdminJsonEditor';
 import AdminLeadsSection from '../components/admin/AdminLeadsSection';
 import AdminOrdersSection from '../components/admin/AdminOrdersSection';
-import { Search, Code, Users, CreditCard as CreditCardIcon } from 'lucide-react';
+import AdminStateFAQSection from '../components/admin/AdminStateFAQSection';
+import AdminStatePricingSection from '../components/admin/AdminStatePricingSection';
+import { Search, Code, Users, CreditCard as CreditCardIcon, MapPin, DollarSign } from 'lucide-react';
 
 const TOKEN_KEY = 'admin_token';
 
@@ -56,6 +58,8 @@ const SECTION_GROUPS = [
       { id: 'services', label: 'Services', icon: Briefcase },
       { id: 'faqs', label: 'FAQs', icon: HelpCircle },
       { id: 'pricing', label: 'Pricing', icon: CreditCard },
+      { id: 'stateFaqs', label: 'State FAQs', icon: MapPin },
+      { id: 'statePackages', label: 'State Pricing', icon: DollarSign },
     ],
   },
   {
@@ -241,7 +245,7 @@ export default function AdminPage() {
           );
         })}
       </nav>
-      <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-slate-700/50">
+      <div className="flex-shrink-0 p-4 border-t border-slate-700/50">
         <a
           href="/"
           className="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-white transition-colors">
@@ -345,6 +349,22 @@ export default function AdminPage() {
             <AdminOurServicesSection
               data={(content?.servicesSection ?? {}) as Record<string, unknown>}
               onSave={(d) => handleSave('servicesSection', d)}
+              saving={saving}
+            />
+          )}
+          {section === 'stateFaqs' && (
+            <AdminStateFAQSection
+              data={(content?.stateFaqConfig ?? {}) as Record<string, unknown>}
+              services={(content?.services ?? []) as { id: string; name: string }[]}
+              onSave={(d) => handleSave('stateFaqConfig', d)}
+              saving={saving}
+            />
+          )}
+          {section === 'statePackages' && (
+            <AdminStatePricingSection
+              data={(content?.statePackages ?? {}) as Record<string, unknown>}
+              services={(content?.services ?? []) as { id: string; name: string }[]}
+              onSave={(d) => handleSave('statePackages', d)}
               saving={saving}
             />
           )}

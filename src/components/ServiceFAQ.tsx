@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronDown, MapPin } from 'lucide-react';
 import type { FAQ } from '../data/faqs';
+import { useContent } from '../context/ContentContext';
 
 type Props = {
   faqs: FAQ[];
@@ -60,6 +61,8 @@ function FAQItem({ faq, index, openIndex, setOpenIndex }: {
 }
 
 export default function ServiceFAQ({ faqs, stateFAQs = [], serviceName, selectedState }: Props) {
+  const { content } = useContent();
+  const phone = content.contact.phone;
   const [genOpen, setGenOpen]     = useState<number | null>(0);
   const [stateOpen, setStateOpen] = useState<number | null>(0);
 
@@ -174,7 +177,7 @@ export default function ServiceFAQ({ faqs, stateFAQs = [], serviceName, selected
             <MapPin className="w-4 h-4 text-gray-400 flex-shrink-0" />
             <p className="text-[12.5px] text-gray-500">
               The FAQs above apply to <strong>{selectedState}</strong>. For state-specific queries, call us at{' '}
-              <a href="tel:+919876543210" className="text-blue-600 font-semibold">+91 98765 43210</a>.
+              <a href={`tel:${phone.replace(/\s/g, '')}`} className="text-blue-600 font-semibold">{phone}</a>.
             </p>
           </motion.div>
         )}

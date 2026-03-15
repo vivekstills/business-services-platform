@@ -741,12 +741,53 @@ export const STATE_PACKAGES: StatePackages = {
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
-export function getStateFAQs(serviceId: string, state: IndianState | ''): FAQ[] {
+type ServiceStateFaqs = {
+  mode: 'all-states' | 'per-state';
+  allStateFaqs: FAQ[];
+  perStateFaqs: Record<string, FAQ[]>;
+};
+
+type StateFaqConfig = Record<string, ServiceStateFaqs> & {
+  mode?: string;
+  globalFaqs?: Record<string, FAQ[]>;
+  serviceFaqs?: Record<string, Record<string, FAQ[]>>;
+};
+
+export function getStateFAQs(
+  serviceId: string,
+  state: IndianState | '',
+  contentConfig?: StateFaqConfig,
+): FAQ[] {
   if (!state) return [];
+  if (contentConfig) {
+    const svcConfig = contentConfig[serviceId] as ServiceStateFaqs | undefined;
+    if (svcConfig) {
+      if (svcConfig.mode === 'all-states' && svcConfig.allStateFaqs?.length) {
+        return svcConfig.allStateFaqs;
+      }
+      if (svcConfig.mode === 'per-state') {
+        const fromState = svcConfig.perStateFaqs?.[state];
+        if (fromState) return fromState;
+      }
+    }
+    // Legacy format fallback
+    if (contentConfig.serviceFaqs) {
+      const fromContent = contentConfig.serviceFaqs[serviceId]?.[state];
+      if (fromContent) return fromContent;
+    }
+  }
   return STATE_FAQS[serviceId]?.[state as IndianState] ?? [];
 }
 
-export function getStatePackages(serviceId: string, state: IndianState | ''): ServicePackage[] | null {
+export function getStatePackages(
+  serviceId: string,
+  state: IndianState | '',
+  contentPackages?: Record<string, Record<string, ServicePackage[]>>,
+): ServicePackage[] | null {
   if (!state) return null;
+  if (contentPackages) {
+    const fromContent = contentPackages[serviceId]?.[state];
+    if (fromContent) return fromContent;
+  }
   return STATE_PACKAGES[serviceId]?.[state as IndianState] ?? null;
 }

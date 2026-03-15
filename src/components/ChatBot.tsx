@@ -1,6 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Send, MessageCircle, Bot } from 'lucide-react';
+import { useContent } from '../context/ContentContext';
 
 type Message = {
   id: number;
