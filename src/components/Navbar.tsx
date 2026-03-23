@@ -124,6 +124,18 @@ export default function Navbar() {
             })}
           </div>
 
+          {/* Articles link */}
+          <Link
+            to="/articles"
+            className={`hidden lg:flex items-center gap-1.5 px-3 py-2 rounded-lg text-[13px] font-medium transition-all duration-150 ${
+              location.pathname.startsWith('/articles')
+                ? 'bg-blue-50 text-blue-700'
+                : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+            }`}
+          >
+            Articles
+          </Link>
+
           {/* Right actions */}
           <div className="hidden lg:flex items-center gap-2">
             <a href={`tel:${content.contact.phone.replace(/\s/g, '')}`} className="text-[13px] font-medium text-gray-600 hover:text-gray-900 px-3 py-2 rounded-lg hover:bg-gray-50 transition-all">
@@ -273,6 +285,13 @@ export default function Navbar() {
                   );
                 })}
                 <div className="px-5 pt-5 pb-6 space-y-3">
+                  <Link
+                    to="/articles"
+                    onClick={() => setIsMobileOpen(false)}
+                    className="w-full py-2.5 rounded-lg border border-gray-200 text-[14px] font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center"
+                  >
+                    Articles
+                  </Link>
                   <a href={`tel:${content.contact.phone.replace(/\s/g, '')}`} className="w-full py-2.5 rounded-lg border border-gray-200 text-[14px] font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center">
                     {content.contact.phone}
                   </a>

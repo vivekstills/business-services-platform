@@ -31,7 +31,8 @@ import AdminLeadsSection from '../components/admin/AdminLeadsSection';
 import AdminOrdersSection from '../components/admin/AdminOrdersSection';
 import AdminStateFAQSection from '../components/admin/AdminStateFAQSection';
 import AdminStatePricingSection from '../components/admin/AdminStatePricingSection';
-import { Search, Code, Users, CreditCard as CreditCardIcon, MapPin, DollarSign } from 'lucide-react';
+import AdminArticlesSection from '../components/admin/AdminArticlesSection';
+import { Search, Code, Users, CreditCard as CreditCardIcon, MapPin, DollarSign, BookOpen } from 'lucide-react';
 
 const TOKEN_KEY = 'admin_token';
 
@@ -60,6 +61,12 @@ const SECTION_GROUPS = [
       { id: 'pricing', label: 'Pricing', icon: CreditCard },
       { id: 'stateFaqs', label: 'State FAQs', icon: MapPin },
       { id: 'statePackages', label: 'State Pricing', icon: DollarSign },
+    ],
+  },
+  {
+    label: 'Content Writing',
+    sections: [
+      { id: 'articles', label: 'Articles', icon: BookOpen },
     ],
   },
   {
@@ -365,6 +372,17 @@ export default function AdminPage() {
               data={(content?.statePackages ?? {}) as Record<string, unknown>}
               services={(content?.services ?? []) as { id: string; name: string }[]}
               onSave={(d) => handleSave('statePackages', d)}
+              saving={saving}
+            />
+          )}
+          {section === 'articles' && content && (
+            <AdminArticlesSection
+              data={(content?.articles ?? []) as import('../types/content').Article[]}
+              categories={(content?.articleCategories ?? []) as string[]}
+              onSave={(articles, categories) => {
+                const merged = { ...content, articles, articleCategories: categories };
+                handleSave('json', merged as unknown as Record<string, unknown>);
+              }}
               saving={saving}
             />
           )}

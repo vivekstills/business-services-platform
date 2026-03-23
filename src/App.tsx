@@ -17,6 +17,8 @@ import AboutUsPage from './pages/AboutUsPage';
 import ContactUsPage from './pages/ContactUsPage';
 import BusinessSearchPage from './pages/BusinessSearchPage';
 import TrademarkSearchPage from './pages/TrademarkSearchPage';
+import ArticlesPage from './pages/ArticlesPage';
+import ArticlePage from './pages/ArticlePage';
 import Footer from './components/Footer';
 import ChatBot from './components/ChatBot';
 import LeadCapturePopup from './components/LeadCapturePopup';
@@ -42,6 +44,8 @@ function AppContent() {
         <Route path="/contact-us"             element={<ContactUsPage />} />
         <Route path="/business-search"        element={<BusinessSearchPage />} />
         <Route path="/trademark-search"       element={<TrademarkSearchPage />} />
+        <Route path="/articles"               element={<ArticlesPage />} />
+        <Route path="/articles/:slug"         element={<ArticlePage />} />
         <Route path="/admin"                  element={<AdminPage />} />
         <Route path="/admin/login"            element={<AdminLoginPage />} />
         <Route path="*"                       element={<Navigate to="/" replace />} />

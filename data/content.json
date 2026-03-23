@@ -4392,5 +4392,106 @@
         }
       ]
     }
-  }
+  },
+  "articleCategories": [
+    "GST & Tax",
+    "Company Registration",
+    "Trademark & IP",
+    "Compliance",
+    "Registrations",
+    "Income Tax",
+    "Licensing"
+  ],
+  "articles": [
+    {
+      "id": "gst-registration-guide-2024",
+      "title": "Complete Guide to GST Registration in India 2024",
+      "slug": "gst-registration-guide-2024",
+      "category": "GST & Tax",
+      "excerpt": "A step-by-step walkthrough of the GST registration process — who needs it, documents required, timelines, and penalties for non-compliance.",
+      "content": "## What is GST Registration?\n\nGST (Goods and Services Tax) registration is mandatory for businesses whose annual turnover exceeds the prescribed threshold. Once registered, businesses can collect GST from customers and claim input tax credit.\n\n## Who Needs to Register?\n\n- Businesses with annual turnover above **Rs.40 Lakhs** (Rs.20 Lakhs for special category states)\n- Inter-state suppliers regardless of turnover\n- E-commerce operators and sellers\n- Casual taxable persons and non-resident taxable persons\n\n## Documents Required\n\n- PAN card of the business or proprietor\n- Aadhaar card of the authorised signatory\n- Proof of business registration (MOA, partnership deed, etc.)\n- Bank account statement or cancelled cheque\n- Address proof of the principal place of business\n- Digital Signature Certificate (for companies and LLPs)\n\n## Step-by-Step Process\n\n1. Visit the GST Portal and click on \"New Registration\"\n2. Fill Part A — enter PAN, mobile number, and email to receive OTP\n3. Receive TRN (Temporary Reference Number) on your mobile and email\n4. Fill Part B — business details, promoter details, authorised signatory, and upload documents\n5. Submit the application and receive ARN (Application Reference Number)\n6. Verification by GST officer (typically 3-5 working days)\n7. Receive GSTIN and GST Registration Certificate\n\n## Timeline and Fees\n\nTypically completed in **3-7 working days**. Government fee: **NIL**. Professional service fee varies.\n\n## Penalties for Non-Compliance\n\nNon-registration when required attracts a penalty of **10% of the tax amount** or **Rs.10,000**, whichever is higher.",
+      "author": "Mridhuv Associates",
+      "date": "2024-03-10",
+      "published": true,
+      "tags": [
+        "GST",
+        "Registration",
+        "Tax",
+        "GSTIN"
+      ],
+      "readingTime": "6 min read"
+    },
+    {
+      "id": "private-limited-company-registration",
+      "title": "How to Register a Private Limited Company in India",
+      "slug": "private-limited-company-registration",
+      "category": "Company Registration",
+      "excerpt": "Everything you need to know about incorporating a Private Limited Company — from choosing a name to receiving your Certificate of Incorporation.",
+      "content": "## Why Choose a Private Limited Company?\n\nA Private Limited Company (Pvt. Ltd.) is the most popular business structure in India for startups and growing businesses. It offers **limited liability protection**, easy fundraising, and greater credibility.\n\n## Key Requirements\n\n- Minimum **2 directors** (at least one must be an Indian resident)\n- Minimum **2 shareholders** (can be the same as directors)\n- Minimum authorised capital: **Rs.1 Lakh**\n- Registered office address in India\n\n## Step-by-Step Registration Process\n\n1. Obtain Digital Signature Certificates (DSC) for all proposed directors\n2. Apply for Director Identification Numbers (DIN) via SPICe+ form\n3. Name reservation — apply for RUN (Reserve Unique Name) on the MCA portal\n4. Prepare MOA (Memorandum of Association) and AOA (Articles of Association)\n5. File SPICe+ (INC-32) — single integrated form for incorporation, DIN, PAN, TAN, GST\n6. Receive Certificate of Incorporation with CIN, PAN, and TAN\n\n## Documents Required\n\n- PAN and Aadhaar of all directors and shareholders\n- Passport-size photographs of all directors\n- Address proof of directors (utility bill, bank statement)\n- Registered office proof (rent agreement + NOC from owner)\n- Utility bill of the registered office (not older than 2 months)\n\n## Timeline\n\nTypically **7-10 working days** from submission of complete documents.\n\n## Annual Compliance Requirements\n\n- Hold Annual General Meeting (AGM) within 6 months of financial year end\n- File ROC returns: **AOC-4** and **MGT-7** annually\n- Maintain proper books of accounts and get them audited",
+      "author": "Mridhuv Associates",
+      "date": "2024-02-22",
+      "published": true,
+      "tags": [
+        "Company Registration",
+        "Pvt Ltd",
+        "Incorporation",
+        "MCA"
+      ],
+      "readingTime": "7 min read"
+    },
+    {
+      "id": "trademark-registration-india",
+      "title": "Trademark Registration in India: Complete Process & Classes",
+      "slug": "trademark-registration-india",
+      "category": "Trademark & IP",
+      "excerpt": "Protect your brand name, logo, and tagline with trademark registration. Understand the 45 trademark classes, the opposition process, and common mistakes to avoid.",
+      "content": "## What Can You Trademark?\n\nA trademark is a unique sign that distinguishes your goods or services from others. You can register:\n\n- Brand names and wordmarks\n- Logos and device marks\n- Taglines and slogans\n- Colours and shapes (in specific cases)\n\n## The 45 Trademark Classes\n\nTrademarks are classified into **45 classes** under the Nice Classification — Classes 1-34 cover goods, and Classes 35-45 cover services.\n\n**Popular classes in India:**\n- **Class 35** — Advertising, business management\n- **Class 36** — Financial and insurance services\n- **Class 41** — Education and training\n- **Class 42** — Technology and software services\n- **Class 45** — Legal services\n\n## Step-by-Step Process\n\n1. Conduct a trademark search on the IP India portal to ensure your mark is unique\n2. Prepare the application — trademark name/logo, class, description of goods/services\n3. File application on the Trademark Registry portal\n4. Receive filing date and application number\n5. Examination and possible office action within 12-18 months\n6. Publication in Trademark Journal — 4-month opposition window\n7. Registration Certificate issued if no opposition\n\n## Fees\n\n- Individual / Startup / Small Enterprise: **Rs.4,500** per class (online filing)\n- Others: **Rs.9,000** per class (online filing)\n\n## Timeline\n\nFiling to registration typically takes **18-24 months** if no opposition is filed. The TM symbol can be used from the filing date, while the R symbol is only allowed after registration.",
+      "author": "Mridhuv Associates",
+      "date": "2024-01-30",
+      "published": true,
+      "tags": [
+        "Trademark",
+        "Brand Protection",
+        "IP",
+        "Nice Classification"
+      ],
+      "readingTime": "5 min read"
+    },
+    {
+      "id": "itr-filing-which-form",
+      "title": "ITR Filing 2024-25: Which ITR Form Should You Use?",
+      "slug": "itr-filing-which-form",
+      "category": "Income Tax",
+      "excerpt": "Confused about ITR-1, ITR-2, ITR-3, or ITR-4? This guide maps every type of taxpayer to the correct ITR form with filing deadlines and required documents.",
+      "content": "## Overview of ITR Forms\n\nChoosing the wrong ITR form can lead to a defective return notice from the Income Tax Department. Here is a quick guide to help you pick the correct form.\n\n## ITR Form Selection Guide\n\n### ITR-1 (Sahaj)\n\nFor resident individuals with income from salary or pension up to **Rs.50 Lakhs**, one house property, and other sources like interest. Cannot be used if you have capital gains.\n\n### ITR-2\n\nFor individuals and HUFs with income above Rs.50 Lakhs, **capital gains**, more than one house property, or foreign income and assets.\n\n### ITR-3\n\nFor individuals and HUFs having **income from business or profession**, including partners in a partnership firm.\n\n### ITR-4 (Sugam)\n\nFor individuals, HUFs, and firms (other than LLP) opting for **presumptive taxation** under Section 44AD, 44ADA, or 44AE.\n\n## Key Filing Deadlines\n\n- **31 July** — Individuals not requiring audit\n- **31 October** — Individuals requiring audit\n- **31 December** — Belated return filing deadline\n\n## Documents Required\n\n- Form 16 from employer\n- Bank statements and Form 26AS / AIS\n- Capital gains statements from broker\n- Investment proofs for deductions (80C, 80D, etc.)\n- Home loan interest certificate if applicable",
+      "author": "Mridhuv Associates",
+      "date": "2024-04-05",
+      "published": true,
+      "tags": [
+        "ITR",
+        "Income Tax",
+        "Tax Filing",
+        "Tax Return"
+      ],
+      "readingTime": "5 min read"
+    },
+    {
+      "id": "fssai-registration-vs-license",
+      "title": "FSSAI Registration vs FSSAI License: Key Differences Explained",
+      "slug": "fssai-registration-vs-license",
+      "category": "Licensing",
+      "excerpt": "Not sure whether your food business needs an FSSAI Basic Registration or a State/Central License? This article breaks down eligibility, process, and costs.",
+      "content": "## Why FSSAI Compliance Matters\n\nThe Food Safety and Standards Authority of India (FSSAI) regulates food businesses across India. Non-compliance can result in heavy fines and business closure. Every food business operator must obtain the appropriate license or registration.\n\n## Three Levels of FSSAI Compliance\n\n### 1. FSSAI Basic Registration (Form A)\n\nFor petty food businesses with annual turnover **below Rs.12 Lakhs** — small manufacturers, hawkers, and temporary stalls. 14-digit number starting with \"2\", issued by State Authority.\n\n### 2. State FSSAI License (Form B)\n\nFor manufacturers, traders, and transporters with turnover **Rs.12 Lakhs to Rs.20 Crores**. Issued by State Food Safety Department.\n\n### 3. Central FSSAI License (Form B — Central)\n\nFor businesses with turnover **above Rs.20 Crores**, importers, exporters, e-commerce food businesses operating across multiple states, and large caterers. 14-digit number starting with \"1\".\n\n## Fee Structure\n\n- Basic Registration: **Rs.100** per year\n- State License: **Rs.2,000 - Rs.5,000** per year (based on capacity)\n- Central License: **Rs.7,500** per year\n\n## Documents Required\n\n- PAN card and photo ID of proprietor/directors\n- Proof of business premises\n- List of food products to be manufactured or handled\n- Water testing report (for manufacturing units)\n- NOC from municipality",
+      "author": "Mridhuv Associates",
+      "date": "2024-03-20",
+      "published": true,
+      "tags": [
+        "FSSAI",
+        "Food License",
+        "Food Safety",
+        "Licensing"
+      ],
+      "readingTime": "4 min read"
+    }
+  ]
 }

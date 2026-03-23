@@ -87,4 +87,21 @@ export type Content = {
     perStateFaqs: Record<string, FAQ[]>;
   }>;
   statePackages?: Record<string, Record<string, ServicePackage[]>>;
+  articles?: Article[];
+  articleCategories?: string[];
+};
+
+export type Article = {
+  id: string;
+  title: string;
+  slug: string;
+  category: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  date: string;
+  published: boolean;
+  tags: string[];
+  readingTime: string;
+  coverImage?: string;
 };
