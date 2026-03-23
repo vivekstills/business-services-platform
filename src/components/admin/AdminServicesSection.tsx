@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react';
-import { Save, Search, ChevronDown, ChevronUp, Heading2, Heading3, List, ListOrdered, Bold, Eye, EyeOff } from 'lucide-react';
+import { Save, Search, ChevronDown, ChevronUp, Heading2, Heading3, List, ListOrdered, Bold, Eye, EyeOff, Link2, X, Check } from 'lucide-react';
 import { SortableList } from './SortableList';
 import RichContent from '../RichContent';
 
@@ -23,6 +23,11 @@ type Props = {
 function ContentEditor({ value, onChange }: { value: string; onChange: (v: string) => void }) {
   const ref = useRef<HTMLTextAreaElement>(null);
   const [preview, setPreview] = useState(false);
+  const [linkPopover, setLinkPopover] = useState(false);
+  const [linkText, setLinkText] = useState('');
+  const [linkUrl, setLinkUrl] = useState('');
+  // Remember cursor position when link button is clicked
+  const savedSelection = useRef<{ start: number; end: number }>({ start: 0, end: 0 });
 
   const insert = useCallback((prefix: string, suffix = '') => {
     const ta = ref.current;
@@ -42,6 +47,38 @@ function ContentEditor({ value, onChange }: { value: string; onChange: (v: strin
     });
   }, [value, onChange]);
 
+  const openLinkPopover = () => {
+    const ta = ref.current;
+    if (ta) {
+      savedSelection.current = { start: ta.selectionStart, end: ta.selectionEnd };
+      const selected = value.slice(ta.selectionStart, ta.selectionEnd);
+      setLinkText(selected || '');
+    }
+    setLinkUrl('');
+    setLinkPopover(true);
+  };
+
+  const insertLink = () => {
+    const text = linkText.trim() || 'link';
+    const url = linkUrl.trim() || '#';
+    const markdown = `[${text}](${url})`;
+    const { start, end } = savedSelection.current;
+    const before = value.slice(0, start);
+    const after = value.slice(end);
+    onChange(before + markdown + after);
+    setLinkPopover(false);
+    setLinkText('');
+    setLinkUrl('');
+    requestAnimationFrame(() => {
+      const ta = ref.current;
+      if (ta) {
+        ta.focus();
+        const cursor = start + markdown.length;
+        ta.setSelectionRange(cursor, cursor);
+      }
+    });
+  };
+
   const toolbar = [
     { icon: Heading2, label: 'H2', action: () => insert('\n## ', '\n') },
     { icon: Heading3, label: 'H3', action: () => insert('\n### ', '\n') },
@@ -53,7 +90,7 @@ function ContentEditor({ value, onChange }: { value: string; onChange: (v: strin
   return (
     <div className="space-y-2">
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1">
+        <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1 flex-wrap">
           {toolbar.map((btn) => (
             <button
               key={btn.label}
@@ -65,7 +102,73 @@ function ContentEditor({ value, onChange }: { value: string; onChange: (v: strin
               <btn.icon className="w-4 h-4" />
             </button>
           ))}
+
+          {/* Divider */}
+          <div className="w-px h-5 bg-gray-300 mx-0.5" />
+
+          {/* Link button */}
+          <div className="relative">
+            <button
+              type="button"
+              onClick={openLinkPopover}
+              title="Insert link"
+              className={`p-1.5 rounded-md hover:bg-white hover:shadow-sm transition-all ${
+                linkPopover ? 'bg-blue-50 text-blue-600 shadow-sm' : 'text-gray-500 hover:text-blue-600'
+              }`}
+            >
+              <Link2 className="w-4 h-4" />
+            </button>
+
+            {/* Inline link popover */}
+            {linkPopover && (
+              <div className="absolute top-full left-0 mt-1.5 z-50 bg-white border border-gray-200 rounded-xl shadow-xl p-3 w-72">
+                <div className="flex items-center justify-between mb-2.5">
+                  <span className="text-xs font-semibold text-gray-600 flex items-center gap-1.5">
+                    <Link2 className="w-3.5 h-3.5 text-blue-500" /> Insert Hyperlink
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => setLinkPopover(false)}
+                    className="p-0.5 rounded text-gray-400 hover:text-gray-600"
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+                <div className="space-y-2">
+                  <div>
+                    <label className="block text-[11px] font-medium text-gray-500 mb-1">Display text</label>
+                    <input
+                      autoFocus
+                      value={linkText}
+                      onChange={(e) => setLinkText(e.target.value)}
+                      placeholder="e.g. Click here"
+                      className="w-full px-3 py-1.5 rounded-lg border border-gray-200 text-sm focus:border-blue-400 focus:ring-1 focus:ring-blue-100 outline-none"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[11px] font-medium text-gray-500 mb-1">URL</label>
+                    <input
+                      value={linkUrl}
+                      onChange={(e) => setLinkUrl(e.target.value)}
+                      onKeyDown={(e) => e.key === 'Enter' && insertLink()}
+                      placeholder="https://example.com"
+                      className="w-full px-3 py-1.5 rounded-lg border border-gray-200 text-sm focus:border-blue-400 focus:ring-1 focus:ring-blue-100 outline-none"
+                    />
+                  </div>
+                  <button
+                    type="button"
+                    onClick={insertLink}
+                    disabled={!linkUrl.trim()}
+                    className="w-full flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-600 text-white text-xs font-semibold hover:bg-blue-700 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+                  >
+                    <Check className="w-3.5 h-3.5" /> Insert Link
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
+
         <button
           type="button"
           onClick={() => setPreview(!preview)}
@@ -86,12 +189,12 @@ function ContentEditor({ value, onChange }: { value: string; onChange: (v: strin
           value={value}
           onChange={(e) => onChange(e.target.value)}
           rows={10}
-          placeholder="## Heading&#10;&#10;Paragraph text here.&#10;&#10;- Bullet point&#10;- Another point&#10;&#10;1. Numbered step&#10;2. Next step&#10;&#10;**Bold text**"
+          placeholder="## Heading&#10;&#10;Paragraph text here.&#10;&#10;- Bullet point&#10;- Another point&#10;&#10;1. Numbered step&#10;2. Next step&#10;&#10;**Bold text**&#10;&#10;[Link text](https://example.com)"
           className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-blue-400 focus:ring-1 focus:ring-blue-100 font-mono text-sm leading-relaxed"
         />
       )}
       <p className="text-[11px] text-gray-400">
-        Use ## for headings, ### for subheadings, - for bullets, 1. for numbered lists, **text** for bold
+        Use ## headings, ### subheadings, - bullets, 1. numbered, **bold**, [text](url) links
       </p>
     </div>
   );

@@ -13,11 +13,38 @@ type Block =
   | { type: 'ul'; items: string[] }
   | { type: 'ol'; items: string[] };
 
-function parseBold(text: string): React.ReactNode[] {
-  const parts = text.split(/\*\*(.*?)\*\*/g);
-  return parts.map((part, i) =>
-    i % 2 === 1 ? <strong key={i} className="font-semibold text-gray-800">{part}</strong> : part
-  );
+// Parses **bold** and [text](url) within a string into React nodes
+function parseInline(text: string): React.ReactNode[] {
+  // Split on both bold (**...**) and links ([text](url))
+  const parts = text.split(/(\*\*.*?\*\*|\[([^\]]+)\]\(([^)]+)\))/g);
+  const nodes: React.ReactNode[] = [];
+  let i = 0;
+  while (i < parts.length) {
+    const part = parts[i];
+    if (!part) { i++; continue; }
+    if (part.startsWith('**') && part.endsWith('**') && part.length > 4) {
+      nodes.push(<strong key={i} className="font-semibold text-gray-800">{part.slice(2, -2)}</strong>);
+      i += 1;
+    } else if (part.startsWith('[') && part.includes('](')) {
+      const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+      if (match) {
+        nodes.push(
+          <a key={i} href={match[2]} target="_blank" rel="noopener noreferrer"
+            className="text-blue-600 underline underline-offset-2 hover:text-blue-800 transition-colors">
+            {match[1]}
+          </a>
+        );
+        i += 3; // skip the captured groups too
+      } else {
+        nodes.push(part);
+        i++;
+      }
+    } else {
+      nodes.push(part);
+      i++;
+    }
+  }
+  return nodes;
 }
 
 function parseBlocks(raw: string): Block[] {
@@ -70,7 +97,7 @@ function parseBlocks(raw: string): Block[] {
 export default function RichContent({ content, className = '' }: Props) {
   if (!content?.trim()) return null;
 
-  const isPlainText = !content.includes('## ') && !content.includes('### ') && !content.includes('- ') && !content.includes('* ') && !content.includes('**');
+  const isPlainText = !content.includes('## ') && !content.includes('### ') && !content.includes('- ') && !content.includes('* ') && !content.includes('**') && !/\[.*?\]\(.*?\)/.test(content);
 
   if (isPlainText) {
     return (
@@ -89,19 +116,19 @@ export default function RichContent({ content, className = '' }: Props) {
           case 'h2':
             return (
               <h2 key={i} className="text-xl font-bold text-gray-900 mt-8 first:mt-0">
-                {parseBold(block.text)}
+                {parseInline(block.text)}
               </h2>
             );
           case 'h3':
             return (
               <h3 key={i} className="text-base font-semibold text-gray-800 mt-5">
-                {parseBold(block.text)}
+                {parseInline(block.text)}
               </h3>
             );
           case 'p':
             return (
               <p key={i} className="text-[14.5px] text-gray-500 leading-relaxed">
-                {parseBold(block.text)}
+                {parseInline(block.text)}
               </p>
             );
           case 'ul':
@@ -110,7 +137,7 @@ export default function RichContent({ content, className = '' }: Props) {
                 {block.items.map((item, j) => (
                   <li key={j} className="flex items-start gap-2.5 text-[14px] text-gray-600">
                     <CheckCircle2 className="w-4.5 h-4.5 text-emerald-500 mt-0.5 flex-shrink-0" />
-                    <span>{parseBold(item)}</span>
+                    <span>{parseInline(item)}</span>
                   </li>
                 ))}
               </ul>
@@ -123,7 +150,7 @@ export default function RichContent({ content, className = '' }: Props) {
                     <span className="w-6 h-6 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center text-[11px] font-bold text-blue-700 flex-shrink-0 mt-0.5">
                       {j + 1}
                     </span>
-                    <span>{parseBold(item)}</span>
+                    <span>{parseInline(item)}</span>
                   </li>
                 ))}
               </ol>
