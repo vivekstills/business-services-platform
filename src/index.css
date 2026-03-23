@@ -5,6 +5,13 @@
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
+/* Site-wide typography: +1.5pt from default (scales rem-based utilities) */
+@layer base {
+  html {
+    font-size: calc(1rem + 1.5pt);
+  }
+}
+
 @layer utilities {
   .animate-gradient {
     animation: gradient 8s linear infinite;

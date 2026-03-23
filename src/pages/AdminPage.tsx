@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Navigate, useSearchParams } from 'react-router-dom';
+import { Navigate, useSearchParams, type SetURLSearchParams } from 'react-router-dom';
 import { motion } from 'motion/react';
 import {
   LayoutDashboard,
@@ -31,8 +31,9 @@ import AdminLeadsSection from '../components/admin/AdminLeadsSection';
 import AdminOrdersSection from '../components/admin/AdminOrdersSection';
 import AdminStateFAQSection from '../components/admin/AdminStateFAQSection';
 import AdminStatePricingSection from '../components/admin/AdminStatePricingSection';
+import AdminStateHintsSection from '../components/admin/AdminStateHintsSection';
 import AdminArticlesSection from '../components/admin/AdminArticlesSection';
-import { Search, Code, Users, CreditCard as CreditCardIcon, MapPin, DollarSign, BookOpen } from 'lucide-react';
+import { Search, Code, Users, CreditCard as CreditCardIcon, MapPin, DollarSign, BookOpen, MessageSquare } from 'lucide-react';
 
 const TOKEN_KEY = 'admin_token';
 
@@ -61,6 +62,7 @@ const SECTION_GROUPS = [
       { id: 'pricing', label: 'Pricing', icon: CreditCard },
       { id: 'stateFaqs', label: 'State FAQs', icon: MapPin },
       { id: 'statePackages', label: 'State Pricing', icon: DollarSign },
+      { id: 'stateServiceHints', label: 'State hints (forms)', icon: MessageSquare },
     ],
   },
   {
@@ -84,6 +86,105 @@ const SECTION_GROUPS = [
 
 const ALL_SECTIONS = SECTION_GROUPS.flatMap((g) => g.sections);
 type SectionId = (typeof ALL_SECTIONS)[number]['id'];
+
+/** Must be defined outside AdminPage so React does not remount the sidebar every render (which resets sidebar scroll). */
+function AdminSidebar({
+  section,
+  setSearchParams,
+  sidebarOpen,
+  setSidebarOpen,
+  sectionSearch,
+  setSectionSearch,
+  onLogout,
+}: {
+  section: SectionId;
+  setSearchParams: SetURLSearchParams;
+  sidebarOpen: boolean;
+  setSidebarOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  sectionSearch: string;
+  setSectionSearch: React.Dispatch<React.SetStateAction<string>>;
+  onLogout: () => void;
+}) {
+  return (
+    <aside
+      className={`fixed inset-y-0 left-0 z-40 w-64 bg-slate-900 text-white border-r border-slate-700/50 transform transition-transform lg:translate-x-0 flex flex-col ${
+        sidebarOpen ? 'translate-x-0' : '-translate-x-full'
+      }`}
+    >
+      <div className="flex items-center justify-between p-4 border-b border-slate-700/50 flex-shrink-0">
+        <span className="font-semibold text-blue-400">Admin</span>
+        <button
+          type="button"
+          onClick={() => setSidebarOpen(false)}
+          className="lg:hidden p-2 rounded-lg hover:bg-slate-800"
+        >
+          <X className="w-5 h-5" />
+        </button>
+      </div>
+      <div className="p-3 border-b border-slate-700/50">
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+          <input
+            value={sectionSearch}
+            onChange={(e) => setSectionSearch(e.target.value)}
+            placeholder="Search sections…"
+            className="w-full pl-9 pr-3 py-2 rounded-lg bg-slate-800 border border-slate-600 text-sm text-white placeholder-slate-500 focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30"
+          />
+        </div>
+      </div>
+      <nav className="p-3 space-y-4 overflow-y-auto flex-1 min-h-0">
+        {SECTION_GROUPS.map((group) => {
+          const filtered = group.sections.filter(
+            (s) =>
+              !sectionSearch.trim() ||
+              s.label.toLowerCase().includes(sectionSearch.toLowerCase()) ||
+              s.id.toLowerCase().includes(sectionSearch.toLowerCase())
+          );
+          if (filtered.length === 0) return null;
+          return (
+            <div key={group.label}>
+              <div className="px-3 py-1.5 text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                {group.label}
+              </div>
+              <div className="space-y-1">
+                {filtered.map((s) => (
+                  <button
+                    key={s.id}
+                    type="button"
+                    onClick={() => {
+                      setSearchParams({ section: s.id }, { preventScrollReset: true });
+                      setSidebarOpen(false);
+                    }}
+                    className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-left transition-colors text-sm ${
+                      section === s.id ? 'bg-blue-600 text-white' : 'text-slate-300 hover:bg-slate-800 hover:text-white'
+                    }`}
+                  >
+                    <s.icon className="w-4 h-4 flex-shrink-0" />
+                    {s.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          );
+        })}
+      </nav>
+      <div className="flex-shrink-0 p-4 border-t border-slate-700/50">
+        <a
+          href="/"
+          className="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-white transition-colors">
+          <LayoutDashboard className="w-4 h-4" /> View site
+        </a>
+        <button
+          type="button"
+          onClick={onLogout}
+          className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-red-400 transition-colors"
+        >
+          <LogOut className="w-4 h-4" /> Logout
+        </button>
+      </div>
+    </aside>
+  );
+}
 
 export default function AdminPage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -191,86 +292,17 @@ export default function AdminPage() {
 
   const sectionLabel = ALL_SECTIONS.find((s) => s.id === section)?.label ?? section;
 
-  const Sidebar = () => (
-    <aside
-      className={`fixed inset-y-0 left-0 z-40 w-64 bg-slate-900 text-white border-r border-slate-700/50 transform transition-transform lg:translate-x-0 flex flex-col ${
-        sidebarOpen ? 'translate-x-0' : '-translate-x-full'
-      }`}
-    >
-      <div className="flex items-center justify-between p-4 border-b border-slate-700/50 flex-shrink-0">
-        <span className="font-semibold text-blue-400">Admin</span>
-        <button
-          onClick={() => setSidebarOpen(false)}
-          className="lg:hidden p-2 rounded-lg hover:bg-slate-800"
-        >
-          <X className="w-5 h-5" />
-        </button>
-      </div>
-      <div className="p-3 border-b border-slate-700/50">
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-          <input
-            value={sectionSearch}
-            onChange={(e) => setSectionSearch(e.target.value)}
-            placeholder="Search sections…"
-            className="w-full pl-9 pr-3 py-2 rounded-lg bg-slate-800 border border-slate-600 text-sm text-white placeholder-slate-500 focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30"
-          />
-        </div>
-      </div>
-      <nav className="p-3 space-y-4 overflow-y-auto flex-1">
-        {SECTION_GROUPS.map((group) => {
-          const filtered = group.sections.filter(
-            (s) =>
-              !sectionSearch.trim() ||
-              s.label.toLowerCase().includes(sectionSearch.toLowerCase()) ||
-              s.id.toLowerCase().includes(sectionSearch.toLowerCase())
-          );
-          if (filtered.length === 0) return null;
-          return (
-            <div key={group.label}>
-              <div className="px-3 py-1.5 text-xs font-semibold text-slate-500 uppercase tracking-wider">
-                {group.label}
-              </div>
-              <div className="space-y-1">
-                {filtered.map((s) => (
-                  <button
-                    key={s.id}
-                    onClick={() => {
-                      setSearchParams({ section: s.id });
-                      setSidebarOpen(false);
-                    }}
-                    className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-left transition-colors text-sm ${
-                      section === s.id ? 'bg-blue-600 text-white' : 'text-slate-300 hover:bg-slate-800 hover:text-white'
-                    }`}
-                  >
-                    <s.icon className="w-4 h-4 flex-shrink-0" />
-                    {s.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-          );
-        })}
-      </nav>
-      <div className="flex-shrink-0 p-4 border-t border-slate-700/50">
-        <a
-          href="/"
-          className="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-white transition-colors">
-          <LayoutDashboard className="w-4 h-4" /> View site
-        </a>
-        <button
-          onClick={handleLogout}
-          className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-red-400 transition-colors"
-        >
-          <LogOut className="w-4 h-4" /> Logout
-        </button>
-      </div>
-    </aside>
-  );
-
   return (
     <div className="min-h-screen bg-slate-50">
-      <Sidebar />
+      <AdminSidebar
+        section={section}
+        setSearchParams={setSearchParams}
+        sidebarOpen={sidebarOpen}
+        setSidebarOpen={setSidebarOpen}
+        sectionSearch={sectionSearch}
+        setSectionSearch={setSectionSearch}
+        onLogout={handleLogout}
+      />
       <div className="lg:pl-64">
         <header className="sticky top-0 z-30 bg-white/95 backdrop-blur border-b border-gray-200 px-6 py-4 flex items-center justify-between">
           <button
@@ -341,6 +373,7 @@ export default function AdminPage() {
           {section === 'pricing' && content?.pricing && (
             <AdminPricingSection
               data={content.pricing as Record<string, unknown>}
+              services={(content.services ?? []) as { id: string; name: string }[]}
               onSave={(d) => handleSave('pricing', d)}
               saving={saving}
             />
@@ -372,6 +405,14 @@ export default function AdminPage() {
               data={(content?.statePackages ?? {}) as Record<string, unknown>}
               services={(content?.services ?? []) as { id: string; name: string }[]}
               onSave={(d) => handleSave('statePackages', d)}
+              saving={saving}
+            />
+          )}
+          {section === 'stateServiceHints' && (
+            <AdminStateHintsSection
+              data={(content?.stateServiceHints ?? {}) as Record<string, unknown>}
+              services={(content?.services ?? []) as { id: string; name: string }[]}
+              onSave={(d) => handleSave('stateServiceHints', d)}
               saving={saving}
             />
           )}

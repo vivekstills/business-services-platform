@@ -31,14 +31,14 @@ export default function AboutUsPage() {
             <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0">{item.icon}</div>
             <div>
               <div className="font-semibold text-gray-900">{item.title}</div>
-              <div className="text-[14px] text-gray-500">{item.desc}</div>
+              <div className="text-[calc(14px+1.5pt)] text-gray-500">{item.desc}</div>
             </div>
           </div>
         ))}
       </div>
       <div className="mt-10 p-6 bg-blue-50 border border-blue-100 rounded-2xl">
         <p className="font-semibold text-gray-900 mb-2">Ready to get started?</p>
-        <p className="text-gray-600 text-[14px] mb-4">Explore our services or reach out for a personalised consultation.</p>
+        <p className="text-gray-600 text-[calc(14px+1.5pt)] mb-4">Explore our services or reach out for a personalised consultation.</p>
         <Link to="/contact-us" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700">
           Contact Us <ArrowRight className="w-4 h-4" />
         </Link>

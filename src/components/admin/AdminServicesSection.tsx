@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react';
-import { Save, Search, ChevronDown, ChevronUp, Heading2, Heading3, List, ListOrdered, Bold, Eye, EyeOff, Link2, X, Check } from 'lucide-react';
+import { Save, Search, ChevronDown, ChevronUp, Heading2, Heading3, List, ListOrdered, Bold, Eye, EyeOff, Link2, X, Check, Plus, Trash2 } from 'lucide-react';
 import { SortableList } from './SortableList';
 import RichContent from '../RichContent';
 
-type ServicePackage = { name: string; price: string; description: string };
+type ServicePackage = { name: string; price: string; description: string; features?: string[]; popular?: boolean };
 type Service = {
   id: string;
   name: string;
@@ -12,6 +12,7 @@ type Service = {
   shortDescription?: string;
   content: string;
   packages: ServicePackage[];
+  steps?: string[];
 };
 
 type Props = {
@@ -136,7 +137,7 @@ function ContentEditor({ value, onChange }: { value: string; onChange: (v: strin
                 </div>
                 <div className="space-y-2">
                   <div>
-                    <label className="block text-[11px] font-medium text-gray-500 mb-1">Display text</label>
+                    <label className="block text-[calc(11px+1.5pt)] font-medium text-gray-500 mb-1">Display text</label>
                     <input
                       autoFocus
                       value={linkText}
@@ -146,7 +147,7 @@ function ContentEditor({ value, onChange }: { value: string; onChange: (v: strin
                     />
                   </div>
                   <div>
-                    <label className="block text-[11px] font-medium text-gray-500 mb-1">URL</label>
+                    <label className="block text-[calc(11px+1.5pt)] font-medium text-gray-500 mb-1">URL</label>
                     <input
                       value={linkUrl}
                       onChange={(e) => setLinkUrl(e.target.value)}
@@ -193,9 +194,115 @@ function ContentEditor({ value, onChange }: { value: string; onChange: (v: strin
           className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-blue-400 focus:ring-1 focus:ring-blue-100 font-mono text-sm leading-relaxed"
         />
       )}
-      <p className="text-[11px] text-gray-400">
+      <p className="text-[calc(11px+1.5pt)] text-gray-400">
         Use ## headings, ### subheadings, - bullets, 1. numbered, **bold**, [text](url) links
       </p>
+    </div>
+  );
+}
+
+function StepsEditor({
+  steps,
+  onChange,
+}: {
+  steps: string[];
+  onChange: (steps: string[]) => void;
+}) {
+  const update = (i: number, val: string) => {
+    const next = [...steps];
+    next[i] = val;
+    onChange(next);
+  };
+  const remove = (i: number) => onChange(steps.filter((_, idx) => idx !== i));
+  const add = () => onChange([...steps, '']);
+
+  return (
+    <div className="space-y-2">
+      <div className="flex items-center justify-between">
+        <label className="text-[calc(11px+1.5pt)] font-bold uppercase tracking-wider text-gray-400">How It Works — Steps</label>
+        <button
+          onClick={add}
+          type="button"
+          className="flex items-center gap-1 text-[calc(11px+1.5pt)] text-blue-500 hover:text-blue-700 font-semibold"
+        >
+          <Plus className="w-3 h-3" /> Add step
+        </button>
+      </div>
+      {steps.length === 0 && (
+        <p className="text-[calc(11px+1.5pt)] text-gray-300 italic">No steps — default steps will be used. Click "Add step" to customise.</p>
+      )}
+      {steps.map((step, i) => (
+        <div key={i} className="flex items-center gap-2">
+          <span className="w-5 h-5 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center text-[calc(10px+1.5pt)] font-bold text-blue-700 flex-shrink-0">
+            {i + 1}
+          </span>
+          <input
+            value={step}
+            onChange={(e) => update(i, e.target.value)}
+            placeholder={`Step ${i + 1}…`}
+            className="flex-1 px-2.5 py-1.5 rounded border border-gray-200 text-[calc(12.5px+1.5pt)] focus:border-blue-400 focus:ring-1 focus:ring-blue-100"
+          />
+          <button
+            onClick={() => remove(i)}
+            type="button"
+            className="p-1 rounded text-red-400 hover:text-red-600 hover:bg-red-50 flex-shrink-0"
+          >
+            <Trash2 className="w-3 h-3" />
+          </button>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function PackageFeaturesEditor({
+  features,
+  onChange,
+}: {
+  features: string[];
+  onChange: (features: string[]) => void;
+}) {
+  const update = (i: number, val: string) => {
+    const next = [...features];
+    next[i] = val;
+    onChange(next);
+  };
+  const remove = (i: number) => onChange(features.filter((_, idx) => idx !== i));
+  const add = () => onChange([...features, '']);
+
+  return (
+    <div className="space-y-1.5">
+      <div className="flex items-center justify-between mb-1">
+        <label className="text-[calc(11px+1.5pt)] font-bold uppercase tracking-wider text-gray-400">What's Included</label>
+        <button
+          onClick={add}
+          type="button"
+          className="flex items-center gap-1 text-[calc(11px+1.5pt)] text-blue-500 hover:text-blue-700 font-semibold"
+        >
+          <Plus className="w-3 h-3" /> Add item
+        </button>
+      </div>
+      {features.length === 0 && (
+        <p className="text-[calc(11px+1.5pt)] text-gray-300 italic">No items yet. Click "Add item" to add bullet points.</p>
+      )}
+      {features.map((f, i) => (
+        <div key={i} className="flex items-center gap-1.5">
+          <Check className="w-3 h-3 text-emerald-500 flex-shrink-0" />
+          <input
+            value={f}
+            onChange={(e) => update(i, e.target.value)}
+            placeholder={`Feature ${i + 1}`}
+            className="flex-1 px-2.5 py-1 rounded border border-gray-200 text-[calc(12.5px+1.5pt)] focus:border-blue-400 focus:ring-1 focus:ring-blue-100"
+          />
+          <button
+            onClick={() => remove(i)}
+            type="button"
+            className="p-1 rounded text-red-400 hover:text-red-600 hover:bg-red-50 flex-shrink-0"
+          >
+            <Trash2 className="w-3 h-3" />
+          </button>
+        </div>
+      ))}
     </div>
   );
 }
@@ -222,8 +329,11 @@ export default function AdminServicesSection({ data, onSave, saving }: Props) {
                     name: String(p.name ?? ''),
                     price: String(p.price ?? ''),
                     description: String(p.description ?? ''),
+                    features: Array.isArray(p.features) ? p.features.map(String) : [],
+                    popular: Boolean(p.popular ?? false),
                   }))
                 : [],
+              steps: Array.isArray(x.steps) ? x.steps.map(String) : [],
             };
           })
         : []
@@ -263,6 +373,39 @@ export default function AdminServicesSection({ data, onSave, saving }: Props) {
       p.map((s) => (s.id === serviceId ? { ...s, packages } : s))
     );
   };
+
+  const addPackage = (serviceId: string) => {
+    setServices((p) =>
+      p.map((s) =>
+        s.id === serviceId
+          ? { ...s, packages: [...s.packages, { name: '', price: '', description: '', features: [], popular: false }] }
+          : s
+      )
+    );
+  };
+
+  const deletePackage = (serviceId: string, pkgIndex: number) => {
+    setServices((p) =>
+      p.map((s) =>
+        s.id === serviceId
+          ? { ...s, packages: s.packages.filter((_, i) => i !== pkgIndex) }
+          : s
+      )
+    );
+  };
+
+  const setPopular = (serviceId: string, pkgIndex: number) => {
+    setServices((p) =>
+      p.map((s) => {
+        if (s.id !== serviceId) return s;
+        const packages = s.packages.map((pkg, i) => ({ ...pkg, popular: i === pkgIndex ? !pkg.popular : false }));
+        return { ...s, packages };
+      })
+    );
+  };
+
+  const updateSteps = (serviceId: string, steps: string[]) =>
+    setServices((p) => p.map((s) => (s.id === serviceId ? { ...s, steps } : s)));
 
   return (
     <div className="space-y-6">
@@ -325,28 +468,64 @@ export default function AdminServicesSection({ data, onSave, saving }: Props) {
                   <ContentEditor value={s.content} onChange={(v) => update(s.id, { content: v })} />
                 </div>
 
+                <div className="bg-blue-50/60 border border-blue-100 rounded-xl p-4">
+                  <StepsEditor
+                    steps={s.steps ?? []}
+                    onChange={(steps) => updateSteps(s.id, steps)}
+                  />
+                </div>
+
                 <div>
-                  <label className="block text-xs font-medium text-gray-500 mb-2">Packages</label>
-                  <p className="text-xs text-gray-400 mb-2">Drag to reorder packages.</p>
+                  <div className="flex items-center justify-between mb-2">
+                    <label className="block text-xs font-medium text-gray-500">Packages</label>
+                    <button
+                      onClick={() => addPackage(s.id)}
+                      className="flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 font-semibold bg-blue-50 hover:bg-blue-100 px-2.5 py-1 rounded-lg border border-blue-200"
+                    >
+                      <Plus className="w-3.5 h-3.5" /> Add Package
+                    </button>
+                  </div>
+                  <p className="text-xs text-gray-400 mb-2">Drag to reorder. Only one plan can be Most Popular.</p>
                   <SortableList
                     items={s.packages}
                     onReorder={(pkgs) => reorderPackages(s.id, pkgs)}
                     getItemId={(pkg, j) => `pkg-${s.id}-${j}`}
                     renderItem={(pkg, i) => (
-                      <div className="p-3 rounded-lg bg-white border border-gray-100 space-y-2">
-                        <div className="grid grid-cols-2 gap-2">
-                          <input
-                            value={pkg.name}
-                            onChange={(e) => updatePackage(s.id, i, { name: e.target.value })}
-                            placeholder="Package name"
-                            className="px-3 py-1.5 rounded border border-gray-200 text-sm"
-                          />
-                          <input
-                            value={pkg.price}
-                            onChange={(e) => updatePackage(s.id, i, { price: e.target.value })}
-                            placeholder="Price"
-                            className="px-3 py-1.5 rounded border border-gray-200 text-sm"
-                          />
+                      <div className={`p-3 rounded-lg border space-y-2 ${pkg.popular ? 'bg-blue-50 border-blue-200' : 'bg-white border-gray-100'}`}>
+                        <div className="flex items-center justify-between gap-2">
+                          <div className="grid grid-cols-2 gap-2 flex-1">
+                            <input
+                              value={pkg.name}
+                              onChange={(e) => updatePackage(s.id, i, { name: e.target.value })}
+                              placeholder="Package name"
+                              className="px-3 py-1.5 rounded border border-gray-200 text-sm"
+                            />
+                            <input
+                              value={pkg.price}
+                              onChange={(e) => updatePackage(s.id, i, { price: e.target.value })}
+                              placeholder="Price"
+                              className="px-3 py-1.5 rounded border border-gray-200 text-sm"
+                            />
+                          </div>
+                          <div className="flex items-center gap-1.5 flex-shrink-0">
+                            <button
+                              onClick={() => setPopular(s.id, i)}
+                              title={pkg.popular ? 'Remove Most Popular' : 'Mark as Most Popular'}
+                              className={`text-[calc(10px+1.5pt)] font-bold px-2 py-1 rounded-full border transition-all ${
+                                pkg.popular
+                                  ? 'bg-amber-400 border-amber-400 text-amber-900'
+                                  : 'border-gray-200 text-gray-400 hover:border-amber-300 hover:text-amber-600'
+                              }`}
+                            >
+                              ★ Popular
+                            </button>
+                            <button
+                              onClick={() => deletePackage(s.id, i)}
+                              className="p-1 rounded text-red-400 hover:text-red-600 hover:bg-red-50"
+                            >
+                              <Trash2 className="w-3.5 h-3.5" />
+                            </button>
+                          </div>
                         </div>
                         <textarea
                           value={pkg.description}
@@ -354,6 +533,10 @@ export default function AdminServicesSection({ data, onSave, saving }: Props) {
                           placeholder="Description"
                           rows={2}
                           className="w-full px-3 py-1.5 rounded border border-gray-200 text-sm"
+                        />
+                        <PackageFeaturesEditor
+                          features={pkg.features ?? []}
+                          onChange={(features) => updatePackage(s.id, i, { features })}
                         />
                       </div>
                     )}
@@ -408,24 +591,61 @@ export default function AdminServicesSection({ data, onSave, saving }: Props) {
                   <ContentEditor value={s.content} onChange={(v) => update(s.id, { content: v })} />
                 </div>
 
+                <div className="bg-blue-50/60 border border-blue-100 rounded-xl p-4">
+                  <StepsEditor
+                    steps={s.steps ?? []}
+                    onChange={(steps) => updateSteps(s.id, steps)}
+                  />
+                </div>
+
                 <div>
-                  <label className="block text-xs font-medium text-gray-500 mb-2">Packages</label>
+                  <div className="flex items-center justify-between mb-2">
+                    <label className="block text-xs font-medium text-gray-500">Packages</label>
+                    <button
+                      onClick={() => addPackage(s.id)}
+                      className="flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 font-semibold bg-blue-50 hover:bg-blue-100 px-2.5 py-1 rounded-lg border border-blue-200"
+                    >
+                      <Plus className="w-3.5 h-3.5" /> Add Package
+                    </button>
+                  </div>
+                  <p className="text-xs text-gray-400 mb-2">Only one plan can be Most Popular.</p>
                   <div className="space-y-3">
                     {s.packages.map((pkg, i) => (
-                      <div key={i} className="p-3 rounded-lg bg-white border border-gray-100 space-y-2">
-                        <div className="grid grid-cols-2 gap-2">
-                          <input
-                            value={pkg.name}
-                            onChange={(e) => updatePackage(s.id, i, { name: e.target.value })}
-                            placeholder="Package name"
-                            className="px-3 py-1.5 rounded border border-gray-200 text-sm"
-                          />
-                          <input
-                            value={pkg.price}
-                            onChange={(e) => updatePackage(s.id, i, { price: e.target.value })}
-                            placeholder="Price"
-                            className="px-3 py-1.5 rounded border border-gray-200 text-sm"
-                          />
+                      <div key={i} className={`p-3 rounded-lg border space-y-2 ${pkg.popular ? 'bg-blue-50 border-blue-200' : 'bg-white border-gray-100'}`}>
+                        <div className="flex items-center justify-between gap-2">
+                          <div className="grid grid-cols-2 gap-2 flex-1">
+                            <input
+                              value={pkg.name}
+                              onChange={(e) => updatePackage(s.id, i, { name: e.target.value })}
+                              placeholder="Package name"
+                              className="px-3 py-1.5 rounded border border-gray-200 text-sm"
+                            />
+                            <input
+                              value={pkg.price}
+                              onChange={(e) => updatePackage(s.id, i, { price: e.target.value })}
+                              placeholder="Price"
+                              className="px-3 py-1.5 rounded border border-gray-200 text-sm"
+                            />
+                          </div>
+                          <div className="flex items-center gap-1.5 flex-shrink-0">
+                            <button
+                              onClick={() => setPopular(s.id, i)}
+                              title={pkg.popular ? 'Remove Most Popular' : 'Mark as Most Popular'}
+                              className={`text-[calc(10px+1.5pt)] font-bold px-2 py-1 rounded-full border transition-all ${
+                                pkg.popular
+                                  ? 'bg-amber-400 border-amber-400 text-amber-900'
+                                  : 'border-gray-200 text-gray-400 hover:border-amber-300 hover:text-amber-600'
+                              }`}
+                            >
+                              ★ Popular
+                            </button>
+                            <button
+                              onClick={() => deletePackage(s.id, i)}
+                              className="p-1 rounded text-red-400 hover:text-red-600 hover:bg-red-50"
+                            >
+                              <Trash2 className="w-3.5 h-3.5" />
+                            </button>
+                          </div>
                         </div>
                         <textarea
                           value={pkg.description}
@@ -433,6 +653,10 @@ export default function AdminServicesSection({ data, onSave, saving }: Props) {
                           placeholder="Description"
                           rows={2}
                           className="w-full px-3 py-1.5 rounded border border-gray-200 text-sm"
+                        />
+                        <PackageFeaturesEditor
+                          features={pkg.features ?? []}
+                          onChange={(features) => updatePackage(s.id, i, { features })}
                         />
                       </div>
                     ))}

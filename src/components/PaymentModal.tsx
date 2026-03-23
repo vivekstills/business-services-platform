@@ -204,8 +204,8 @@ export default function PaymentModal({
                   <CreditCard className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <div className="text-white font-bold text-[15px]">Pay securely</div>
-                  <div className="text-blue-200 text-[12px]">{serviceName}</div>
+                  <div className="text-white font-bold text-[calc(15px+1.5pt)]">Pay securely</div>
+                  <div className="text-blue-200 text-[calc(12px+1.5pt)]">{serviceName}</div>
                 </div>
               </div>
               <button
@@ -219,7 +219,7 @@ export default function PaymentModal({
             {/* Package info bar */}
             <div className="px-6 py-3 bg-blue-50 border-b border-blue-100 flex items-center justify-between">
               <div>
-                <span className="text-[12px] font-bold text-blue-600 uppercase tracking-wider">{packageName}</span>
+                <span className="text-[calc(12px+1.5pt)] font-bold text-blue-600 uppercase tracking-wider">{packageName}</span>
               </div>
               <div className="text-xl font-bold text-gray-900">{displayPrice}</div>
             </div>
@@ -233,7 +233,7 @@ export default function PaymentModal({
                     value={form.name}
                     onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
                     placeholder="Full name"
-                    className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[14px] focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
+                    className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[calc(14px+1.5pt)] focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
                   />
                 </div>
                 <div>
@@ -244,7 +244,7 @@ export default function PaymentModal({
                     onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
                     placeholder="+91 98765 43210"
                     type="tel"
-                    className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[14px] focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
+                    className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[calc(14px+1.5pt)] focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
                   />
                 </div>
                 <div>
@@ -254,25 +254,25 @@ export default function PaymentModal({
                     onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
                     placeholder="you@email.com"
                     type="email"
-                    className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[14px] focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
+                    className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[calc(14px+1.5pt)] focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
                   />
                 </div>
 
                 {error && (
-                  <div className="flex items-center gap-2 text-red-600 text-[13px]">
+                  <div className="flex items-center gap-2 text-red-600 text-[calc(13px+1.5pt)]">
                     <AlertCircle className="w-4 h-4 flex-shrink-0" /> {error}
                   </div>
                 )}
 
                 <button
                   type="submit"
-                  className="w-full py-3 rounded-xl bg-blue-600 text-white font-semibold text-[14px] hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 mt-2"
+                  className="w-full py-3 rounded-xl bg-blue-600 text-white font-semibold text-[calc(14px+1.5pt)] hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 mt-2"
                 >
                   <CreditCard className="w-4 h-4" />
                   Pay {displayPrice}
                 </button>
 
-                <div className="flex items-center justify-center gap-1.5 text-[11px] text-gray-400 pt-1">
+                <div className="flex items-center justify-center gap-1.5 text-[calc(11px+1.5pt)] text-gray-400 pt-1">
                   <Shield className="w-3 h-3" />
                   Secured by Razorpay. 256-bit encrypted.
                 </div>
@@ -283,8 +283,8 @@ export default function PaymentModal({
             {step === 'processing' && (
               <div className="p-10 text-center space-y-3">
                 <Loader2 className="w-10 h-10 text-blue-600 animate-spin mx-auto" />
-                <p className="text-[14px] text-gray-600">Preparing payment...</p>
-                <p className="text-[12px] text-gray-400">Razorpay checkout will open shortly.</p>
+                <p className="text-[calc(14px+1.5pt)] text-gray-600">Preparing payment...</p>
+                <p className="text-[calc(12px+1.5pt)] text-gray-400">Razorpay checkout will open shortly.</p>
               </div>
             )}
 
@@ -295,18 +295,18 @@ export default function PaymentModal({
                   <CheckCircle2 className="w-8 h-8 text-emerald-600" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900">Payment Successful!</h3>
-                <p className="text-[14px] text-gray-500 leading-relaxed">
+                <p className="text-[calc(14px+1.5pt)] text-gray-500 leading-relaxed">
                   Your payment for <strong>{packageName}</strong> ({displayPrice}) has been received.
                   Our team will begin processing shortly.
                 </p>
                 {paymentId && (
-                  <p className="text-[12px] text-gray-400">
+                  <p className="text-[calc(12px+1.5pt)] text-gray-400">
                     Payment ID: <span className="font-mono">{paymentId}</span>
                   </p>
                 )}
                 <button
                   onClick={resetAndClose}
-                  className="mt-3 px-6 py-2.5 rounded-xl bg-emerald-600 text-white font-semibold text-[14px] hover:bg-emerald-700 transition-colors"
+                  className="mt-3 px-6 py-2.5 rounded-xl bg-emerald-600 text-white font-semibold text-[calc(14px+1.5pt)] hover:bg-emerald-700 transition-colors"
                 >
                   Done
                 </button>
@@ -320,17 +320,17 @@ export default function PaymentModal({
                   <AlertCircle className="w-8 h-8 text-red-600" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900">Payment Failed</h3>
-                <p className="text-[14px] text-gray-500 leading-relaxed">{error || 'Something went wrong. Please try again.'}</p>
+                <p className="text-[calc(14px+1.5pt)] text-gray-500 leading-relaxed">{error || 'Something went wrong. Please try again.'}</p>
                 <div className="flex gap-2 justify-center mt-3">
                   <button
                     onClick={() => { setStep('form'); setError(''); }}
-                    className="px-5 py-2.5 rounded-xl bg-blue-600 text-white font-semibold text-[14px] hover:bg-blue-700 transition-colors"
+                    className="px-5 py-2.5 rounded-xl bg-blue-600 text-white font-semibold text-[calc(14px+1.5pt)] hover:bg-blue-700 transition-colors"
                   >
                     Try again
                   </button>
                   <button
                     onClick={resetAndClose}
-                    className="px-5 py-2.5 rounded-xl border border-gray-200 text-gray-600 text-[14px] hover:bg-gray-50 transition-colors"
+                    className="px-5 py-2.5 rounded-xl border border-gray-200 text-gray-600 text-[calc(14px+1.5pt)] hover:bg-gray-50 transition-colors"
                   >
                     Close
                   </button>

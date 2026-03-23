@@ -2,6 +2,11 @@ export type ServicePackage = {
   name: string;
   price: string;
   description: string;
+  features?: string[];
+  popular?: boolean;
+  recommended?: boolean;
+  /** Admin tabbed pricing: optional badge text on the card */
+  customBadge?: string | null;
 };
 
 export type Service = {
@@ -12,6 +17,7 @@ export type Service = {
   shortDescription?: string;
   content: string;
   packages: ServicePackage[];
+  steps?: string[];
 };
 
 export type ServiceCategory = {

@@ -28,7 +28,7 @@ export default function BusinessSearchPage() {
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-4">
             Search for Company / LLP
           </h1>
-          <p className="text-gray-500 text-[16px] max-w-xl mx-auto">
+          <p className="text-gray-500 text-[calc(16px+1.5pt)] max-w-xl mx-auto">
             Look up registered companies and LLPs on the Ministry of Corporate Affairs (MCA) portal. Enter a company name or CIN to find details.
           </p>
         </motion.div>
@@ -44,7 +44,7 @@ export default function BusinessSearchPage() {
             </div>
             <div>
               <h2 className="text-lg font-bold text-gray-900">MCA.gov.in — Company / LLP Name Search</h2>
-              <p className="text-[13px] text-gray-500">Search by company name or CIN on the official MCA portal</p>
+              <p className="text-[calc(13px+1.5pt)] text-gray-500">Search by company name or CIN on the official MCA portal</p>
             </div>
           </div>
 
@@ -54,7 +54,7 @@ export default function BusinessSearchPage() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Enter company name or CIN..."
-              className="flex-1 h-12 rounded-xl border border-gray-200 px-4 text-[15px] text-gray-800 placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
+              className="flex-1 h-12 rounded-xl border border-gray-200 px-4 text-[calc(15px+1.5pt)] text-gray-800 placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
             />
             <a
               href={MCA_SEARCH_URL}
@@ -66,7 +66,7 @@ export default function BusinessSearchPage() {
             </a>
           </div>
 
-          <p className="text-[12px] text-gray-400 mt-4">
+          <p className="text-[calc(12px+1.5pt)] text-gray-400 mt-4">
             You will be redirected to the official <strong>MCA.gov.in</strong> Company/LLP Name Search. Our team can also help you with company search, due diligence, or compliance verification — contact us at{' '}
             <a href="mailto:enquiry@mridhuvassociates.com" className="text-blue-600 font-medium">enquiry@mridhuvassociates.com</a>.
           </p>
@@ -79,7 +79,7 @@ export default function BusinessSearchPage() {
           className="mt-10 p-6 bg-blue-50 border border-blue-100 rounded-2xl"
         >
           <h3 className="font-semibold text-gray-900 mb-2">Need company registration instead?</h3>
-          <p className="text-[14px] text-gray-500 mb-4">We help you incorporate a new Private Limited Company, LLP, or other business structure.</p>
+          <p className="text-[calc(14px+1.5pt)] text-gray-500 mb-4">We help you incorporate a new Private Limited Company, LLP, or other business structure.</p>
           <Link to="/category/new-business" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700">
             View incorporation services <ChevronRight className="w-4 h-4" />
           </Link>

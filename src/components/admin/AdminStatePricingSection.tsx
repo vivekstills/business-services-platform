@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Save, Plus, Trash2, MapPin, DollarSign } from 'lucide-react';
+import { Save, Plus, Trash2, MapPin, DollarSign, Check } from 'lucide-react';
 import { SortableList } from './SortableList';
 import { INDIAN_STATES } from '../../data/stateData';
 
-type Pkg = { name: string; price: string; description: string };
+type Pkg = { name: string; price: string; description: string; features: string[]; recommended: boolean };
 type StatePackages = Record<string, Record<string, Pkg[]>>;
 
 type Props = {
@@ -24,12 +24,48 @@ function parseData(raw: Record<string, unknown>): StatePackages {
             name: String((p as Pkg).name ?? ''),
             price: String((p as Pkg).price ?? ''),
             description: String((p as Pkg).description ?? ''),
+            features: Array.isArray((p as Pkg).features) ? (p as Pkg).features.map(String) : [],
+            popular: Boolean((p as Pkg).popular ?? false),
           }));
         }
       }
     }
   }
   return out;
+}
+
+/* ── small inline features editor ── */
+function FeaturesEditor({ features, onChange }: { features: string[]; onChange: (f: string[]) => void }) {
+  const update = (i: number, val: string) => { const n = [...features]; n[i] = val; onChange(n); };
+  const remove = (i: number) => onChange(features.filter((_, j) => j !== i));
+  const add = () => onChange([...features, '']);
+  return (
+    <div className="space-y-1.5">
+      <div className="flex items-center justify-between">
+        <label className="text-[calc(11px+1.5pt)] font-bold uppercase tracking-wider text-gray-400">What's Included</label>
+        <button onClick={add} type="button" className="flex items-center gap-1 text-[calc(11px+1.5pt)] text-blue-500 hover:text-blue-700 font-semibold">
+          <Plus className="w-3 h-3" /> Add item
+        </button>
+      </div>
+      {features.length === 0 && (
+        <p className="text-[calc(11px+1.5pt)] text-gray-300 italic">No items yet.</p>
+      )}
+      {features.map((f, i) => (
+        <div key={i} className="flex items-center gap-1.5">
+          <Check className="w-3 h-3 text-emerald-500 flex-shrink-0" />
+          <input
+            value={f}
+            onChange={(e) => update(i, e.target.value)}
+            placeholder={`Feature ${i + 1}`}
+            className="flex-1 px-2.5 py-1 rounded border border-gray-200 text-[calc(12.5px+1.5pt)] focus:border-blue-400 focus:ring-1 focus:ring-blue-100"
+          />
+          <button onClick={() => remove(i)} type="button" className="p-1 rounded text-red-400 hover:bg-red-50">
+            <Trash2 className="w-3 h-3" />
+          </button>
+        </div>
+      ))}
+    </div>
+  );
 }
 
 export default function AdminStatePricingSection({ data, services, onSave, saving }: Props) {
@@ -62,7 +98,11 @@ export default function AdminStatePricingSection({ data, services, onSave, savin
     setCurrentPkgs(next);
   };
 
-  const addPkg = () => setCurrentPkgs([...currentPkgs, { name: '', price: '', description: '' }]);
+  const addPkg = () => setCurrentPkgs([...currentPkgs, { name: '', price: '', description: '', features: [], recommended: false }]);
+
+  const toggleRecommended = (i: number) => {
+    setCurrentPkgs(currentPkgs.map((p, idx) => ({ ...p, recommended: idx === i ? !p.recommended : false })));
+  };
   const removePkg = (i: number) => setCurrentPkgs(currentPkgs.filter((_, j) => j !== i));
 
   const addState = (state: string) => {
@@ -171,6 +211,10 @@ export default function AdminStatePricingSection({ data, services, onSave, savin
             </div>
           </div>
 
+          <p className="text-xs text-gray-500 -mt-2 mb-2">
+            Mark one plan as <strong>Recommended</strong> for this state — it appears highlighted on the service page when that state is selected. Only one recommended plan per state.
+          </p>
+
           {currentPkgs.length === 0 ? (
             <p className="text-sm text-gray-400">No packages yet. Click "Add Package" to create one.</p>
           ) : (
@@ -179,7 +223,7 @@ export default function AdminStatePricingSection({ data, services, onSave, savin
               onReorder={(items) => setCurrentPkgs(items)}
               getItemId={(_, i) => `spkg-${selectedService}-${selectedState}-${i}`}
               renderItem={(pkg, i) => (
-                <div className="p-4 rounded-xl bg-gray-50 border border-gray-100 space-y-3">
+                <div className={`p-4 rounded-xl border space-y-3 ${pkg.recommended ? 'bg-blue-50 border-blue-200' : 'bg-gray-50 border-gray-100'}`}>
                   <div className="flex justify-between items-start">
                     <div className="grid grid-cols-2 gap-3 flex-1">
                       <div>
@@ -201,9 +245,23 @@ export default function AdminStatePricingSection({ data, services, onSave, savin
                         />
                       </div>
                     </div>
-                    <button onClick={() => removePkg(i)} className="p-1.5 rounded-lg text-red-500 hover:bg-red-50 ml-2">
-                      <Trash2 className="w-4 h-4" />
-                    </button>
+                    <div className="flex items-center gap-1.5 ml-2 flex-shrink-0">
+                      <button
+                        type="button"
+                        onClick={() => toggleRecommended(i)}
+                        title={pkg.recommended ? 'Remove Recommended' : 'Mark as Recommended for this state'}
+                        className={`text-[calc(10px+1.5pt)] font-bold px-2 py-1 rounded-full border transition-all ${
+                          pkg.recommended
+                            ? 'bg-violet-500 border-violet-500 text-white'
+                            : 'border-gray-200 text-gray-400 hover:border-violet-300 hover:text-violet-600'
+                        }`}
+                      >
+                        ★ Recommended
+                      </button>
+                      <button onClick={() => removePkg(i)} className="p-1.5 rounded-lg text-red-500 hover:bg-red-50">
+                        <Trash2 className="w-4 h-4" />
+                      </button>
+                    </div>
                   </div>
                   <div>
                     <label className="block text-xs font-medium text-gray-500 mb-1">Description</label>
@@ -211,10 +269,14 @@ export default function AdminStatePricingSection({ data, services, onSave, savin
                       value={pkg.description}
                       onChange={(e) => updatePkg(i, { description: e.target.value })}
                       rows={2}
-                      placeholder="Package details…"
+                      placeholder="Short package summary…"
                       className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm focus:border-blue-400 focus:ring-1 focus:ring-blue-100"
                     />
                   </div>
+                  <FeaturesEditor
+                    features={pkg.features}
+                    onChange={(features) => updatePkg(i, { features })}
+                  />
                 </div>
               )}
             />

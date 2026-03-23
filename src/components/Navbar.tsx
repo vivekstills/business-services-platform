@@ -89,69 +89,74 @@ export default function Navbar() {
           : 'bg-white/90 backdrop-blur-lg border-b border-gray-100/50'
       }`}
     >
-      {/* Top bar */}
-      <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-
-          {/* Logo */}
-          <Link to="/" className="flex items-center flex-shrink-0">
+      {/* Top bar: logo | nav + Articles (single row; scroll if needed) | phone + CTA */}
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
+        <div className="flex h-16 items-center gap-2 lg:gap-3">
+          <Link to="/" className="flex items-center shrink-0 z-10">
             <img
               src="/assets/logo.png"
               alt="Mridhuv Associates"
-              className="h-10 w-auto object-contain"
+              className="h-8 lg:h-9 w-auto max-h-9 object-contain"
             />
           </Link>
 
-          {/* Desktop nav */}
-          <div className="hidden lg:flex items-center gap-0.5">
-            {NAV_GROUPS.map((group) => {
-              const isActive = activeGroupLabel === group.label;
-              const isOpen   = openGroup === group.label;
-              return (
-                <button
-                  key={group.label}
-                  onClick={(e) => { e.stopPropagation(); setOpenGroup(isOpen ? null : group.label); }}
-                  className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-[13px] font-medium transition-all duration-150 ${
-                    isActive || isOpen
-                      ? 'bg-blue-50 text-blue-700'
-                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                  }`}
-                >
-                  {group.label}
-                  <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isOpen ? 'rotate-180 text-blue-500' : 'text-gray-400'}`} />
-                </button>
-              );
-            })}
+          {/* min-w-0 + nowrap: never wrap "Articles" to a second row; subtle x-scroll only if viewport is tight */}
+          <div className="hidden lg:flex flex-1 min-w-0 items-center justify-center px-1">
+            <div
+              className="flex max-w-full flex-nowrap items-center justify-center gap-0 overflow-x-auto overscroll-x-contain py-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              role="navigation"
+              aria-label="Primary"
+            >
+              {NAV_GROUPS.map((group) => {
+                const isActive = activeGroupLabel === group.label;
+                const isOpen   = openGroup === group.label;
+                return (
+                  <button
+                    key={group.label}
+                    type="button"
+                    onClick={(e) => { e.stopPropagation(); setOpenGroup(isOpen ? null : group.label); }}
+                    className={`inline-flex shrink-0 items-center gap-0.5 px-2 py-1.5 rounded-md text-[12px] xl:text-[13px] font-medium leading-tight tracking-tight transition-all duration-150 whitespace-nowrap ${
+                      isActive || isOpen
+                        ? 'bg-blue-50 text-blue-700'
+                        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                    }`}
+                  >
+                    <span>{group.label}</span>
+                    <ChevronDown className={`w-3 h-3 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180 text-blue-500' : 'text-gray-400'}`} />
+                  </button>
+                );
+              })}
+              <Link
+                to="/articles"
+                className={`inline-flex shrink-0 items-center px-2 py-1.5 rounded-md text-[12px] xl:text-[13px] font-medium leading-tight transition-all duration-150 whitespace-nowrap ${
+                  location.pathname.startsWith('/articles')
+                    ? 'bg-blue-50 text-blue-700'
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                }`}
+              >
+                Articles
+              </Link>
+            </div>
           </div>
 
-          {/* Articles link */}
-          <Link
-            to="/articles"
-            className={`hidden lg:flex items-center gap-1.5 px-3 py-2 rounded-lg text-[13px] font-medium transition-all duration-150 ${
-              location.pathname.startsWith('/articles')
-                ? 'bg-blue-50 text-blue-700'
-                : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-            }`}
-          >
-            Articles
-          </Link>
-
-          {/* Right actions */}
-          <div className="hidden lg:flex items-center gap-2">
-            <a href={`tel:${content.contact.phone.replace(/\s/g, '')}`} className="text-[13px] font-medium text-gray-600 hover:text-gray-900 px-3 py-2 rounded-lg hover:bg-gray-50 transition-all">
+          <div className="hidden lg:flex items-center gap-1.5 shrink-0 z-10 pl-2 ml-0.5 border-l border-gray-200/70">
+            <a
+              href={`tel:${content.contact.phone.replace(/\s/g, '')}`}
+              className="inline-flex items-center text-[12px] xl:text-[13px] font-medium text-gray-600 hover:text-gray-900 px-2 py-1.5 rounded-md hover:bg-gray-50 transition-all whitespace-nowrap tabular-nums leading-tight"
+            >
               {content.contact.phone}
             </a>
             <Link
               to="/category/new-business"
-              className="h-9 px-5 rounded-lg bg-gradient-to-r from-blue-600 to-blue-600 text-white text-[13px] font-semibold hover:shadow-lg hover:shadow-blue-200 transition-all hover:-translate-y-px flex items-center"
+              className="inline-flex items-center justify-center h-9 px-3.5 xl:px-4 rounded-lg bg-gradient-to-r from-blue-600 to-blue-600 text-white text-[12px] xl:text-[13px] font-semibold hover:shadow-md hover:shadow-blue-200/50 transition-all shrink-0 leading-none"
             >
               Get Started
             </Link>
           </div>
 
-          {/* Mobile burger */}
           <button
-            className="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
+            type="button"
+            className="lg:hidden ml-auto p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors shrink-0"
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             aria-label="Toggle menu"
           >
@@ -171,36 +176,47 @@ export default function Navbar() {
             transition={{ duration: 0.16, ease: 'easeOut' }}
             className="hidden lg:block absolute left-0 right-0 top-16 bg-white border-b border-gray-200 shadow-xl shadow-gray-200/60"
           >
-            <div className="max-w-7xl mx-auto px-8 py-8">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-5 lg:py-6">
               {(() => {
                 const group = NAV_GROUPS.find((g) => g.label === openGroup)!;
                 const cats  = categoriesForGroup(group);
                 return (
-                  <div className={`grid gap-8 ${cats.length === 1 ? 'grid-cols-1' : cats.length === 2 ? 'grid-cols-2' : 'grid-cols-3'}`}>
+                  <div
+                    className={`flex flex-wrap items-start gap-x-6 lg:gap-x-8 xl:gap-x-10 gap-y-6 ${
+                      cats.length === 1 ? 'flex-col' : ''
+                    }`}
+                  >
                     {cats.map((cat) => {
                       const services = getServicesByCategory(content.services, cat.id);
                       return (
-                        <div key={cat.id}>
+                        <div
+                          key={cat.id}
+                          className={`flex-none w-full min-w-0 ${
+                            cats.length === 1
+                              ? 'max-w-xl'
+                              : 'sm:max-w-[min(100%,17.5rem)] lg:max-w-[15.5rem] xl:max-w-[17rem]'
+                          }`}
+                        >
                           <button
                             onClick={() => { navigate(`/category/${cat.id}`); setOpenGroup(null); }}
-                            className="group flex items-center gap-2 mb-3 w-full text-left"
+                            className="group flex items-center gap-2 mb-2.5 w-full text-left"
                           >
-                            <div className="w-6 h-6 rounded-md bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600">
+                            <div className="w-6 h-6 rounded-md bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 flex-shrink-0">
                               {CATEGORY_ICON[cat.id] ?? <FileText className="w-3.5 h-3.5" />}
                             </div>
-                            <span className="text-[11px] font-bold uppercase tracking-widest text-gray-400 group-hover:text-blue-600 transition-colors">
+                            <span className="text-[calc(11px+1.5pt)] font-bold uppercase tracking-widest text-gray-400 group-hover:text-blue-600 transition-colors leading-tight">
                               {cat.title}
                             </span>
-                            <ArrowRight className="w-3 h-3 text-gray-300 group-hover:text-blue-500 group-hover:translate-x-0.5 transition-all ml-auto" />
+                            <ArrowRight className="w-3 h-3 text-gray-300 group-hover:text-blue-500 group-hover:translate-x-0.5 transition-all flex-shrink-0 ml-auto" />
                           </button>
-                          <div className="space-y-0.5">
+                          <div className="space-y-0.5 pr-1">
                             {services.map((svc) => (
                               <button
                                 key={svc.id}
                                 onClick={() => { navigate(`/service/${svc.id}`); setOpenGroup(null); }}
-                                className="group w-full text-left px-3 py-2 rounded-lg hover:bg-blue-50 transition-colors"
+                                className="group w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-blue-50 transition-colors"
                               >
-                                <div className="text-[13px] font-medium text-gray-600 group-hover:text-blue-700 transition-colors leading-snug">
+                                <div className="text-[calc(13px+1.5pt)] font-medium text-gray-600 group-hover:text-blue-700 transition-colors leading-snug">
                                   {svc.name}
                                 </div>
                               </button>
@@ -243,7 +259,7 @@ export default function Navbar() {
                       >
                         <div className="flex items-center gap-2.5">
                           <span className="text-gray-400">{group.icon}</span>
-                          <span className="text-[14px] font-semibold text-gray-800">{group.label}</span>
+                          <span className="text-[calc(14px+1.5pt)] font-semibold text-gray-800">{group.label}</span>
                         </div>
                         <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
                       </button>
@@ -262,14 +278,14 @@ export default function Navbar() {
                                     onClick={() => { navigate(`/category/${cat.id}`); setIsMobileOpen(false); }}
                                     className="flex items-center gap-2 mb-1.5 mt-2 w-full text-left"
                                   >
-                                    <span className="text-[11px] font-bold uppercase tracking-wider text-blue-600">{cat.title}</span>
+                                    <span className="text-[calc(11px+1.5pt)] font-bold uppercase tracking-wider text-blue-600">{cat.title}</span>
                                   </button>
                                   <div className="space-y-0.5 pl-1">
                                     {services.map((svc) => (
                                       <button
                                         key={svc.id}
                                         onClick={() => { navigate(`/service/${svc.id}`); setIsMobileOpen(false); }}
-                                        className="w-full text-left px-2 py-1.5 rounded-md text-[13px] text-gray-500 hover:text-blue-700 hover:bg-blue-50 transition-colors block"
+                                        className="w-full text-left px-2 py-1.5 rounded-md text-[calc(13px+1.5pt)] text-gray-500 hover:text-blue-700 hover:bg-blue-50 transition-colors block"
                                       >
                                         {svc.name}
                                       </button>
@@ -288,17 +304,17 @@ export default function Navbar() {
                   <Link
                     to="/articles"
                     onClick={() => setIsMobileOpen(false)}
-                    className="w-full py-2.5 rounded-lg border border-gray-200 text-[14px] font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center"
+                    className="w-full py-2.5 rounded-lg border border-gray-200 text-[calc(14px+1.5pt)] font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center"
                   >
                     Articles
                   </Link>
-                  <a href={`tel:${content.contact.phone.replace(/\s/g, '')}`} className="w-full py-2.5 rounded-lg border border-gray-200 text-[14px] font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center">
+                  <a href={`tel:${content.contact.phone.replace(/\s/g, '')}`} className="w-full py-2.5 rounded-lg border border-gray-200 text-[calc(14px+1.5pt)] font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center">
                     {content.contact.phone}
                   </a>
                   <Link
                     to="/category/new-business"
                     onClick={() => setIsMobileOpen(false)}
-                    className="w-full py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-blue-600 text-[14px] font-semibold text-white hover:opacity-95 transition-opacity flex items-center justify-center"
+                    className="w-full py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-blue-600 text-[calc(14px+1.5pt)] font-semibold text-white hover:opacity-95 transition-opacity flex items-center justify-center"
                   >
                     Get Started
                   </Link>

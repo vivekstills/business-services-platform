@@ -65,7 +65,7 @@
   "contact": {
     "email": "enquiry@mridhuvassociates.com",
     "phone": "+91 98765 43210",
-    "address": "Mumbai, Maharashtra, India"
+    "address": "Om Chambers, 468/A, 4th Floor, Binnamangala, 1st Stage, Indiranagar, Bangalore North, Karnataka – 560038."
   },
   "footer": {
     "tagline": "India's trusted platform for business registrations, tax compliance and legal services.",
@@ -201,7 +201,24 @@
         "to": "/contact-us"
       }
     ],
-    "address": "Mumbai, Maharashtra, India"
+    "logoAlt": "Mridhuv Associates",
+    "quickToolsHeading": "Quick Tools",
+    "quickTools": [
+      {
+        "label": "Business Search",
+        "to": "/business-search"
+      },
+      {
+        "label": "Trademark Search",
+        "to": "/trademark-search"
+      }
+    ],
+    "paymentTitle": "Make a Payment",
+    "paymentFootnote": "Secured by Razorpay · 256-bit SSL encryption",
+    "paymentPayButtonLabel": "Pay Now",
+    "paymentSuccessTitle": "Payment successful!",
+    "paymentSuccessSub": "You'll receive a confirmation shortly.",
+    "copyrightLine": "© {{year}} Mridhuv Associates. All rights reserved."
   },
   "categories": [
     {
@@ -282,18 +299,45 @@
         {
           "name": "Standard",
           "price": "₹4,500",
-          "description": "Full expert support and guidance until receipt of GST Registration along with MSME Registration for Micro, Small & Medium Enterprises. All‑inclusive fees and applicable taxes."
+          "description": "Full expert support and guidance until receipt of GST Registration along with MSME Registration for Micro, Small & Medium Enterprises. All‑inclusive fees and applicable taxes.",
+          "features": [
+            "GST application preparation & filing",
+            "GSTIN (GST Number) delivery",
+            "ARN generation",
+            "GST certificate on approval",
+            "Email & phone support"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹7,500",
-          "description": "Everything in Standard plus filing of GST Returns for 3 months along with MSME Registration. All‑inclusive fees and applicable taxes."
+          "description": "Everything in Standard plus filing of GST Returns for 3 months along with MSME Registration. All‑inclusive fees and applicable taxes.",
+          "features": [
+            "Everything in Standard",
+            "TRN (Temporary Reference Number) assistance",
+            "Business activity & HSN/SAC code advisory",
+            "Government portal follow-up",
+            "Priority support"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹10,500",
-          "description": "Everything in Standard plus filing of GST Returns for 6 months along with MSME Registration. All‑inclusive fees and applicable taxes."
+          "description": "Everything in Standard plus filing of GST Returns for 6 months along with MSME Registration. All‑inclusive fees and applicable taxes.",
+          "features": [
+            "Everything in Deluxe",
+            "GST impact analysis for your business",
+            "GST filing advisory (3 months)",
+            "Dedicated CA support",
+            "Compliance calendar setup"
+          ]
         }
+      ],
+      "steps": [
+        "Complete application preparation",
+        "Instant TRN (Temporary Reference Number) generation",
+        "ARN (Application Reference Number) generation",
+        "GST Certificate delivery"
       ]
     },
     {
@@ -307,18 +351,42 @@
         {
           "name": "Standard",
           "price": "₹8,500",
-          "description": "Expert support until receipt of Professional Tax Registration Certificates for up to 3 additional places of business in the state and up to 4 directors."
+          "description": "Expert support until receipt of Professional Tax Registration Certificates for up to 3 additional places of business in the state and up to 4 directors.",
+          "features": [
+            "PT applicability check",
+            "Registration application filing",
+            "PT certificate delivery",
+            "Email support"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹11,500",
-          "description": "Everything in Standard for up to 10 additional places of business and up to 8 directors, plus filing of Professional Tax Returns for 3 months."
+          "description": "Everything in Standard for up to 10 additional places of business and up to 8 directors, plus filing of Professional Tax Returns for 3 months.",
+          "features": [
+            "Everything in Standard",
+            "State-specific rate advisory",
+            "Employee slab mapping",
+            "Priority email & phone support"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹15,500",
-          "description": "Everything in Standard for up to 20 additional places of business and up to 12 directors, plus filing of Professional Tax Returns for 6 months."
+          "description": "Everything in Standard for up to 20 additional places of business and up to 12 directors, plus filing of Professional Tax Returns for 6 months.",
+          "features": [
+            "Everything in Deluxe",
+            "Monthly PT return filing (3 months)",
+            "Payroll PT deduction advisory",
+            "Dedicated CA support"
+          ]
         }
+      ],
+      "steps": [
+        "PT applicability check for your state",
+        "PT registration application filing",
+        "Challan setup & payment guidance",
+        "PT certificate delivery"
       ]
     },
     {
@@ -332,18 +400,42 @@
         {
           "name": "Standard",
           "price": "₹2,500",
-          "description": "Full support and guidance until receipt of TAN Registration."
+          "description": "Full support and guidance until receipt of TAN Registration.",
+          "features": [
+            "TAN application preparation",
+            "NSDL portal filing",
+            "TAN number delivery",
+            "Email support"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹8,500",
-          "description": "Standard package plus filing of one year of TDS Returns for your TAN."
+          "description": "Standard package plus filing of one year of TDS Returns for your TAN.",
+          "features": [
+            "Everything in Standard",
+            "TDS applicability guidance",
+            "TAN activation & verification",
+            "Priority support"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹15,500",
-          "description": "Standard package plus one year of TDS Returns, PAN Registration and GST Registration."
+          "description": "Standard package plus one year of TDS Returns, PAN Registration and GST Registration.",
+          "features": [
+            "Everything in Deluxe",
+            "TDS rate advisory & calendar",
+            "First TDS return guidance",
+            "Dedicated CA support"
+          ]
         }
+      ],
+      "steps": [
+        "TAN application preparation (Form 49B)",
+        "NSDL portal submission",
+        "TAN allotment tracking",
+        "TAN number delivery with usage guide"
       ]
     },
     {
@@ -357,18 +449,42 @@
         {
           "name": "Standard",
           "price": "₹8,500",
-          "description": "PF Registration support for businesses having fewer than 25 employees."
+          "description": "PF Registration support for businesses having fewer than 25 employees.",
+          "features": [
+            "PF applicability check",
+            "EPFO registration filing",
+            "PF code delivery",
+            "Basic compliance guidance"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹16,500",
-          "description": "PF Registration support for businesses having fewer than 50 employees."
+          "description": "PF Registration support for businesses having fewer than 50 employees.",
+          "features": [
+            "Everything in Standard",
+            "UAN generation for employees (up to 10)",
+            "Monthly ECR filing (1 month)",
+            "Priority support"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹30,000",
-          "description": "PF Registration support for businesses having more than 50 employees."
+          "description": "PF Registration support for businesses having more than 50 employees.",
+          "features": [
+            "Everything in Deluxe",
+            "UAN generation (unlimited)",
+            "Monthly ECR filing (3 months)",
+            "Dedicated HR compliance expert"
+          ]
         }
+      ],
+      "steps": [
+        "PF applicability assessment",
+        "EPFO employer registration filing",
+        "Employee UAN generation & onboarding",
+        "PF code delivery with compliance guide"
       ]
     },
     {
@@ -382,18 +498,42 @@
         {
           "name": "Standard",
           "price": "₹8,500",
-          "description": "ESI Registration support for businesses having fewer than 25 employees."
+          "description": "ESI Registration support for businesses having fewer than 25 employees.",
+          "features": [
+            "ESI applicability check",
+            "ESIC registration filing",
+            "ESI code delivery",
+            "Basic compliance guidance"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹16,500",
-          "description": "ESI Registration support for businesses having fewer than 50 employees."
+          "description": "ESI Registration support for businesses having fewer than 50 employees.",
+          "features": [
+            "Everything in Standard",
+            "Employee mapping & IP generation (up to 10)",
+            "Monthly return filing (1 month)",
+            "Priority support"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹30,000",
-          "description": "ESI Registration support for businesses having more than 50 employees."
+          "description": "ESI Registration support for businesses having more than 50 employees.",
+          "features": [
+            "Everything in Deluxe",
+            "Employee mapping (unlimited)",
+            "Monthly returns (3 months)",
+            "Dedicated HR compliance expert"
+          ]
         }
+      ],
+      "steps": [
+        "ESI applicability check",
+        "ESIC employer registration filing",
+        "Employee IP (Insurance Number) generation",
+        "ESI code delivery with compliance calendar"
       ]
     },
     {
@@ -407,18 +547,42 @@
         {
           "name": "Standard",
           "price": "₹5,000",
-          "description": "Full support until receipt of IEC without Digital Signature."
+          "description": "Full support until receipt of IEC without Digital Signature.",
+          "features": [
+            "IEC application preparation",
+            "DGFT portal filing",
+            "IEC certificate delivery",
+            "Email support"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹7,500",
-          "description": "IEC with a 2‑year Class 2 Digital Signature for online filings."
+          "description": "IEC with a 2‑year Class 2 Digital Signature for online filings.",
+          "features": [
+            "Everything in Standard",
+            "Modification/update assistance",
+            "Import/export regime advisory",
+            "Priority support"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹10,000",
-          "description": "IEC with a 1‑year Class 3 Digital Signature for high‑security filings."
+          "description": "IEC with a 1‑year Class 3 Digital Signature for high‑security filings.",
+          "features": [
+            "Everything in Deluxe",
+            "AD code registration guidance",
+            "SEIS/FTP benefit advisory",
+            "Dedicated expert support"
+          ]
         }
+      ],
+      "steps": [
+        "Document checklist & preparation",
+        "DGFT portal IEC application filing",
+        "Application tracking & follow-up",
+        "IEC certificate delivery"
       ]
     },
     {
@@ -432,18 +596,42 @@
         {
           "name": "Standard",
           "price": "₹12,500",
-          "description": "Support until receipt of State FSSAI Registration for food manufacturers, hotels, restaurants, milk processing units and similar businesses."
+          "description": "Support until receipt of State FSSAI Registration for food manufacturers, hotels, restaurants, milk processing units and similar businesses.",
+          "features": [
+            "FSSAI application preparation",
+            "State/Central license determination",
+            "FSSAI certificate delivery",
+            "Basic compliance guide"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹16,500",
-          "description": "Support until receipt of Central FSSAI Registration for large food manufacturers, large units, export units and large food businesses."
+          "description": "Support until receipt of Central FSSAI Registration for large food manufacturers, large units, export units and large food businesses.",
+          "features": [
+            "Everything in Standard",
+            "Food category advisory",
+            "Government portal follow-up",
+            "Priority support"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹20,500",
-          "description": "Central FSSAI Registration plus Import Export Code for eligible food businesses."
+          "description": "Central FSSAI Registration plus Import Export Code for eligible food businesses.",
+          "features": [
+            "Everything in Deluxe",
+            "FSSAI renewal advisory",
+            "Annual return guidance",
+            "Dedicated food compliance expert"
+          ]
         }
+      ],
+      "steps": [
+        "License category determination (Basic/State/Central)",
+        "FSSAI application preparation & filing",
+        "Government portal follow-up",
+        "FSSAI certificate & FoSCoS ID delivery"
       ]
     },
     {
@@ -457,18 +645,42 @@
         {
           "name": "Standard",
           "price": "₹10,500",
-          "description": "Full support until receipt of Trade License for one business location."
+          "description": "Full support until receipt of Trade License for one business location.",
+          "features": [
+            "Trade license application preparation",
+            "Municipal/local body filing",
+            "License delivery on approval",
+            "Email support"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹15,500",
-          "description": "Trade License for one business location along with GST Registration."
+          "description": "Trade License for one business location along with GST Registration.",
+          "features": [
+            "Everything in Standard",
+            "Document checklist & verification",
+            "Government office follow-up",
+            "Priority support"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹18,500",
-          "description": "Trade License for one business location plus GST Registration and GST Return filing for 3 months."
+          "description": "Trade License for one business location plus GST Registration and GST Return filing for 3 months.",
+          "features": [
+            "Everything in Deluxe",
+            "Renewal reminder & assistance",
+            "Compliance calendar",
+            "Dedicated support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement check for your business type",
+        "Municipal/local body application preparation",
+        "Document submission & follow-up",
+        "Trade License delivery"
       ]
     },
     {
@@ -482,18 +694,42 @@
         {
           "name": "Standard",
           "price": "₹1,150",
-          "description": "Class II DSC valid for 2 years along with USB token and full support until issuance."
+          "description": "Class II DSC valid for 2 years along with USB token and full support until issuance.",
+          "features": [
+            "DSC application preparation",
+            "Video KYC assistance",
+            "Class 3 DSC token delivery (2-year validity)",
+            "Email support"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹2,000",
-          "description": "Class III DSC valid for 1 year along with USB token and end‑to‑end support."
+          "description": "Class III DSC valid for 1 year along with USB token and end‑to‑end support.",
+          "features": [
+            "Everything in Standard",
+            "USB token with DSC",
+            "Driver software installation guide",
+            "Priority support"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹2,400",
-          "description": "DSC for DGFT filing valid for 1 year along with USB token and support."
+          "description": "DSC for DGFT filing valid for 1 year along with USB token and support.",
+          "features": [
+            "Everything in Deluxe",
+            "Organisation DSC option",
+            "DGFT DSC (if required)",
+            "Dedicated support & renewal reminder"
+          ]
         }
+      ],
+      "steps": [
+        "DSC application & video KYC",
+        "Identity & address verification",
+        "USB token dispatch & tracking",
+        "DSC activation & installation guidance"
       ]
     },
     {
@@ -507,18 +743,42 @@
         {
           "name": "Standard",
           "price": "₹13,000",
-          "description": "Support until receipt of Health License for one business entity."
+          "description": "Support until receipt of Health License for one business entity.",
+          "features": [
+            "Health license application",
+            "Local authority filing",
+            "License certificate delivery",
+            "Email support"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹17,500",
-          "description": "Health License for one business plus GST Registration."
+          "description": "Health License for one business plus GST Registration.",
+          "features": [
+            "Everything in Standard",
+            "Document verification & checklist",
+            "Government follow-up",
+            "Priority support"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹19,000",
-          "description": "Health License for one business plus GST Registration and Class II DSC valid for 2 years."
+          "description": "Health License for one business plus GST Registration and Class II DSC valid for 2 years.",
+          "features": [
+            "Everything in Deluxe",
+            "Annual renewal assistance",
+            "Health & safety advisory",
+            "Dedicated expert support"
+          ]
         }
+      ],
+      "steps": [
+        "Health license applicability assessment",
+        "Application preparation & documentation",
+        "Filing with local health authority",
+        "License certificate delivery"
       ]
     },
     {
@@ -532,18 +792,42 @@
         {
           "name": "Standard",
           "price": "₹2,500",
-          "description": "Support until receipt of MSME and TAN Registration for the proprietorship."
+          "description": "Support until receipt of MSME and TAN Registration for the proprietorship.",
+          "features": [
+            "Udyam/MSME registration",
+            "GST registration (optional)",
+            "Current account opening guide",
+            "Email support"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹6,000",
-          "description": "Everything in Standard plus GST Registration for the proprietorship."
+          "description": "Everything in Standard plus GST Registration for the proprietorship.",
+          "features": [
+            "Everything in Standard",
+            "Trade name advisory",
+            "Basic compliance calendar",
+            "Priority support"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹12,000",
-          "description": "Everything in Deluxe plus GST Return filing for 6 months."
+          "description": "Everything in Deluxe plus GST Return filing for 6 months.",
+          "features": [
+            "Everything in Deluxe",
+            "GST registration included",
+            "Business PAN advisory",
+            "Dedicated CA support"
+          ]
         }
+      ],
+      "steps": [
+        "Business name & structure advisory",
+        "Udyam (MSME) registration",
+        "GST registration (if required)",
+        "Business setup & compliance guide"
       ]
     },
     {
@@ -557,18 +841,42 @@
         {
           "name": "Standard",
           "price": "₹6,000",
-          "description": "Expert support in drafting the Partnership Deed and registering your partnership business."
+          "description": "Expert support in drafting the Partnership Deed and registering your partnership business.",
+          "features": [
+            "Partnership deed drafting",
+            "Deed notarisation guidance",
+            "PAN application for firm",
+            "Email support"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹12,000",
-          "description": "Everything in Standard plus obtaining GST Registration for the partnership firm."
+          "description": "Everything in Standard plus obtaining GST Registration for the partnership firm.",
+          "features": [
+            "Everything in Standard",
+            "Firm registration with Registrar",
+            "GST registration (optional)",
+            "Priority support"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹18,000",
-          "description": "Everything in Deluxe plus GST Return filing for 6 months for the partnership firm."
+          "description": "Everything in Deluxe plus GST Return filing for 6 months for the partnership firm.",
+          "features": [
+            "Everything in Deluxe",
+            "GST registration included",
+            "Bank account opening support",
+            "Dedicated CA support"
+          ]
         }
+      ],
+      "steps": [
+        "Partnership deed drafting & review",
+        "Deed notarisation guidance",
+        "Firm PAN application",
+        "Firm registration & bank account guide"
       ]
     },
     {
@@ -582,18 +890,42 @@
         {
           "name": "Standard",
           "price": "₹12,000",
-          "description": "Formation of OPC with authorised capital up to ₹1 Lakh, 2 DSC, 1 DIN, 1 name approval, Certificate of Incorporation, PAN, TAN and GST Registration (government fees and stamp duty extra)."
+          "description": "Formation of OPC with authorised capital up to ₹1 Lakh, 2 DSC, 1 DIN, 1 name approval, Certificate of Incorporation, PAN, TAN and GST Registration (government fees and stamp duty extra).",
+          "features": [
+            "DSC & DIN for director",
+            "Name reservation on MCA",
+            "SPICe+ filing",
+            "Certificate of Incorporation + PAN/TAN"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹15,000",
-          "description": "Formation of OPC with authorised capital up to ₹10 Lakhs, 2 DSC, 1 DIN, 1 name approval, Incorporation Certificate, PAN, share certificates, TAN and GST Registration (government fees and stamp duty extra)."
+          "description": "Formation of OPC with authorised capital up to ₹10 Lakhs, 2 DSC, 1 DIN, 1 name approval, Incorporation Certificate, PAN, share certificates, TAN and GST Registration (government fees and stamp duty extra).",
+          "features": [
+            "Everything in Standard",
+            "Nominee agreement drafting",
+            "Bank account opening support",
+            "Priority CA support"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹18,000",
-          "description": "Everything in Deluxe plus MSME Registration and GST Return filing for 3 months (government fees and stamp duty extra)."
+          "description": "Everything in Deluxe plus MSME Registration and GST Return filing for 3 months (government fees and stamp duty extra).",
+          "features": [
+            "Everything in Deluxe",
+            "GST registration",
+            "Accounting software setup",
+            "Dedicated CA for 1 year"
+          ]
         }
+      ],
+      "steps": [
+        "DSC & DIN for director",
+        "Name reservation on MCA portal",
+        "SPICe+ filing & Certificate of Incorporation",
+        "PAN/TAN & bank account opening support"
       ]
     },
     {
@@ -607,18 +939,42 @@
         {
           "name": "Standard",
           "price": "₹8,000",
-          "description": "Formation of LLP with DSC, LLP Deed drafting, name approval, government incorporation fees, PAN and TAN Registration."
+          "description": "Formation of LLP with DSC, LLP Deed drafting, name approval, government incorporation fees, PAN and TAN Registration.",
+          "features": [
+            "DSC & DPIN for partners",
+            "LLP name reservation",
+            "FiLLiP filing",
+            "Certificate of Incorporation + PAN/TAN"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹14,000",
-          "description": "Everything in Standard plus TDS Return filing for 1 year."
+          "description": "Everything in Standard plus TDS Return filing for 1 year.",
+          "features": [
+            "Everything in Standard",
+            "LLP agreement drafting & filing (Form 3)",
+            "Bank account opening support",
+            "Priority support"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹18,000",
-          "description": "Standard package plus PAN, GST and TAN Registration along with TDS Return filing for 1 year."
+          "description": "Standard package plus PAN, GST and TAN Registration along with TDS Return filing for 1 year.",
+          "features": [
+            "Everything in Deluxe",
+            "GST registration",
+            "Annual return filing (1 year)",
+            "Dedicated CA support"
+          ]
         }
+      ],
+      "steps": [
+        "DSC & DPIN for partners",
+        "LLP name reservation on MCA",
+        "FiLLiP form filing & Certificate of Incorporation",
+        "LLP Agreement (Form 3) filing & PAN/TAN"
       ]
     },
     {
@@ -632,18 +988,42 @@
         {
           "name": "Standard",
           "price": "₹9,500",
-          "description": "Formation of a Private Limited Company with 3 Class II DSC, 2 DIN, 1 name approval, incorporation fees, PAN and TAN Registration with authorised capital up to ₹10 Lakhs (stamp duty extra; additional charges for foreign directors)."
+          "description": "Formation of a Private Limited Company with 3 Class II DSC, 2 DIN, 1 name approval, incorporation fees, PAN and TAN Registration with authorised capital up to ₹10 Lakhs (stamp duty extra; additional charges for foreign directors).",
+          "features": [
+            "DSC & DIN for 2 directors",
+            "Name approval via SPICe+",
+            "MOA & AOA drafting",
+            "Certificate of Incorporation + PAN/TAN"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹13,000",
-          "description": "Standard package plus GST Registration (stamp duty extra; additional charges for foreign directors)."
+          "description": "Standard package plus GST Registration (stamp duty extra; additional charges for foreign directors).",
+          "features": [
+            "Everything in Standard",
+            "Commencement of business (INC-20A)",
+            "Bank account opening support",
+            "Priority CA support"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹16,000",
-          "description": "Deluxe package plus MSME Registration and GST Return filing for 3 months (stamp duty extra; additional charges for foreign directors)."
+          "description": "Deluxe package plus MSME Registration and GST Return filing for 3 months (stamp duty extra; additional charges for foreign directors).",
+          "features": [
+            "Everything in Deluxe",
+            "GST registration",
+            "Accounting software setup",
+            "Dedicated CA for 1 year"
+          ]
         }
+      ],
+      "steps": [
+        "Name availability check on MCA",
+        "DSC & DIN for all directors",
+        "SPICe+ form filing & name approval",
+        "Certificate of Incorporation + PAN/TAN"
       ]
     },
     {
@@ -657,18 +1037,42 @@
         {
           "name": "Standard",
           "price": "₹29,500",
-          "description": "Formation of Public Limited Company with 10 Class II DSC, 3 DIN, 1 name approval, incorporation fees, PAN, GST and TAN Registration with authorised capital of ₹5 Lakhs (stamp duty extra)."
+          "description": "Formation of Public Limited Company with 10 Class II DSC, 3 DIN, 1 name approval, incorporation fees, PAN, GST and TAN Registration with authorised capital of ₹5 Lakhs (stamp duty extra).",
+          "features": [
+            "DSC & DIN for 3 directors",
+            "Name approval",
+            "MOA & AOA drafting",
+            "Certificate of Incorporation + PAN/TAN"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹35,000",
-          "description": "Standard package with authorised capital of ₹10 Lakhs (stamp duty extra)."
+          "description": "Standard package with authorised capital of ₹10 Lakhs (stamp duty extra).",
+          "features": [
+            "Everything in Standard",
+            "Commencement of business filing",
+            "SEBI compliance advisory",
+            "Priority CA support"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹45,000",
-          "description": "Deluxe package plus GST Return filing for 6 months (stamp duty extra)."
+          "description": "Deluxe package plus GST Return filing for 6 months (stamp duty extra).",
+          "features": [
+            "Everything in Deluxe",
+            "GST & other registrations",
+            "Secretarial compliance advisory",
+            "Dedicated CA & CS support"
+          ]
         }
+      ],
+      "steps": [
+        "DSC & DIN for directors",
+        "Name approval via SPICe+",
+        "MOA, AOA drafting & CIN allotment",
+        "Commencement of Business filing"
       ]
     },
     {
@@ -682,18 +1086,42 @@
         {
           "name": "Standard",
           "price": "₹36,500",
-          "description": "Formation of Nidhi Company with 10 Class II DSC, 3 DIN, 1 name approval, incorporation fees, PAN and TAN Registration plus company kit."
+          "description": "Formation of Nidhi Company with 10 Class II DSC, 3 DIN, 1 name approval, incorporation fees, PAN and TAN Registration plus company kit.",
+          "features": [
+            "DSC & DIN for directors",
+            "Name approval",
+            "MOA & AOA drafting",
+            "Certificate of Incorporation + PAN/TAN"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹50,000",
-          "description": "Standard package plus share certificates and share allotment for up to 200 shareholders."
+          "description": "Standard package plus share certificates and share allotment for up to 200 shareholders.",
+          "features": [
+            "Everything in Standard",
+            "Nidhi Company RBI compliances advisory",
+            "Bank account opening support",
+            "Priority support"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹60,000",
-          "description": "Deluxe package plus GST or Trademark Registration as required."
+          "description": "Deluxe package plus GST or Trademark Registration as required.",
+          "features": [
+            "Everything in Deluxe",
+            "NDH-1 annual return guidance",
+            "Compliance calendar",
+            "Dedicated CA support"
+          ]
         }
+      ],
+      "steps": [
+        "Structure & name advisory",
+        "Document preparation & DSC/DIN",
+        "MCA/ROC filing & name approval",
+        "Certificate of Incorporation + PAN/TAN"
       ]
     },
     {
@@ -707,18 +1135,45 @@
         {
           "name": "Standard",
           "price": "₹70,000",
-          "description": "Formation of Producer Company with 10 Class II DSC, 10 DIN, 1 name approval, incorporation fees, PAN and TAN Registration, company kit and share certificates."
+          "description": "Formation of Producer Company with 10 Class II DSC, 10 DIN, 1 name approval, incorporation fees, PAN and TAN Registration, company kit and share certificates.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹75,000",
-          "description": "Standard package plus one year of TDS Return filing."
+          "description": "Standard package plus one year of TDS Return filing.",
+          "features": [
+            "Everything in Standard",
+            "Dedicated account manager",
+            "Faster turnaround time",
+            "Priority phone & email support",
+            "Post-registration compliance guidance"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹80,000",
-          "description": "Deluxe package plus Trademark Registration."
+          "description": "Deluxe package plus Trademark Registration.",
+          "features": [
+            "Everything in Deluxe",
+            "End-to-end expert handling",
+            "Annual compliance advisory",
+            "Dedicated CA/CS support",
+            "On-call support for 90 days"
+          ]
         }
+      ],
+      "steps": [
+        "Structure & name advisory",
+        "Document preparation & DSC/DIN",
+        "MCA/ROC filing & name approval",
+        "Certificate of Incorporation + PAN/TAN"
       ]
     },
     {
@@ -732,18 +1187,42 @@
         {
           "name": "Standard",
           "price": "₹30,000",
-          "description": "Formation of Section 8 Company with 3 Class II DSC, 2 DIN, 1 name approval, MOA & AOA, RD License, PAN and TAN Registration plus company kit."
+          "description": "Formation of Section 8 Company with 3 Class II DSC, 2 DIN, 1 name approval, MOA & AOA, RD License, PAN and TAN Registration plus company kit.",
+          "features": [
+            "DSC & DIN for directors",
+            "Name approval",
+            "MOA & AOA drafting",
+            "Section 8 licence application"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹36,000",
-          "description": "Standard package plus GST Registration and GST Return filing for 3 months."
+          "description": "Standard package plus GST Registration and GST Return filing for 3 months.",
+          "features": [
+            "Everything in Standard",
+            "Certificate of Incorporation",
+            "12A/80G registration advisory",
+            "Priority support"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹45,000",
-          "description": "Deluxe package plus GST Return filing for 6 months and TDS Return filing for 1 year."
+          "description": "Deluxe package plus GST Return filing for 6 months and TDS Return filing for 1 year.",
+          "features": [
+            "Everything in Deluxe",
+            "12A & 80G registration filing",
+            "FCRA advisory",
+            "Dedicated CA support"
+          ]
         }
+      ],
+      "steps": [
+        "Structure & name advisory",
+        "Document preparation & DSC/DIN",
+        "MCA/ROC filing & name approval",
+        "Certificate of Incorporation + PAN/TAN"
       ]
     },
     {
@@ -757,18 +1236,45 @@
         {
           "name": "Standard",
           "price": "₹55,000",
-          "description": "Formation of Indian subsidiary with 2 Class II DSC, 2 DIN, 1 name approval, share certificates, incorporation fees, PAN and TAN Registration plus company kit."
+          "description": "Formation of Indian subsidiary with 2 Class II DSC, 2 DIN, 1 name approval, share certificates, incorporation fees, PAN and TAN Registration plus company kit.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹70,000",
-          "description": "Standard package plus one year of TDS Return filing and annual tax filing."
+          "description": "Standard package plus one year of TDS Return filing and annual tax filing.",
+          "features": [
+            "Everything in Standard",
+            "Dedicated account manager",
+            "Faster turnaround time",
+            "Priority phone & email support",
+            "Post-registration compliance guidance"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹1,00,000",
-          "description": "Deluxe package plus auditor appointment and full first‑year tax and TDS compliance."
+          "description": "Deluxe package plus auditor appointment and full first‑year tax and TDS compliance.",
+          "features": [
+            "Everything in Deluxe",
+            "End-to-end expert handling",
+            "Annual compliance advisory",
+            "Dedicated CA/CS support",
+            "On-call support for 90 days"
+          ]
         }
+      ],
+      "steps": [
+        "Structure & name advisory",
+        "Document preparation & DSC/DIN",
+        "MCA/ROC filing & name approval",
+        "Certificate of Incorporation + PAN/TAN"
       ]
     },
     {
@@ -782,18 +1288,45 @@
         {
           "name": "Standard",
           "price": "₹1,000",
-          "description": "Online filing of ITR‑1 for individuals with salary income up to ₹5 Lakhs."
+          "description": "Online filing of ITR‑1 for individuals with salary income up to ₹5 Lakhs.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹2,500",
-          "description": "Online filing of ITR‑1 for individuals with salary income up to ₹15 Lakhs."
+          "description": "Online filing of ITR‑1 for individuals with salary income up to ₹15 Lakhs.",
+          "features": [
+            "Everything in Standard",
+            "Dedicated account manager",
+            "Faster turnaround time",
+            "Priority phone & email support",
+            "Post-registration compliance guidance"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹4,000",
-          "description": "Online filing of ITR‑1 for individuals with salary income above ₹10 Lakhs."
+          "description": "Online filing of ITR‑1 for individuals with salary income above ₹10 Lakhs.",
+          "features": [
+            "Everything in Deluxe",
+            "End-to-end expert handling",
+            "Annual compliance advisory",
+            "Dedicated CA/CS support",
+            "On-call support for 90 days"
+          ]
         }
+      ],
+      "steps": [
+        "Document & data collection",
+        "Computation & verification",
+        "Filing on income tax / GST portal",
+        "Acknowledgement & ITR-V / ARN delivery"
       ]
     },
     {
@@ -807,18 +1340,45 @@
         {
           "name": "Standard",
           "price": "₹2,000",
-          "description": "Online filing of ITR‑2 for individuals with income from more than one house property."
+          "description": "Online filing of ITR‑2 for individuals with income from more than one house property.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹3,500",
-          "description": "Online filing of ITR‑2 for individuals with foreign income or assets."
+          "description": "Online filing of ITR‑2 for individuals with foreign income or assets.",
+          "features": [
+            "Everything in Standard",
+            "Dedicated account manager",
+            "Faster turnaround time",
+            "Priority phone & email support",
+            "Post-registration compliance guidance"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹5,000",
-          "description": "Online filing of ITR‑2 for individuals with capital gains income."
+          "description": "Online filing of ITR‑2 for individuals with capital gains income.",
+          "features": [
+            "Everything in Deluxe",
+            "End-to-end expert handling",
+            "Annual compliance advisory",
+            "Dedicated CA/CS support",
+            "On-call support for 90 days"
+          ]
         }
+      ],
+      "steps": [
+        "Document & data collection",
+        "Computation & verification",
+        "Filing on income tax / GST portal",
+        "Acknowledgement & ITR-V / ARN delivery"
       ]
     },
     {
@@ -832,18 +1392,45 @@
         {
           "name": "Standard",
           "price": "₹4,000",
-          "description": "Online filing of ITR‑3 for taxpayers with taxable income less than ₹10 Lakhs."
+          "description": "Online filing of ITR‑3 for taxpayers with taxable income less than ₹10 Lakhs.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹7,500",
-          "description": "Online filing of ITR‑3 for taxpayers with taxable income less than ₹20 Lakhs."
+          "description": "Online filing of ITR‑3 for taxpayers with taxable income less than ₹20 Lakhs.",
+          "features": [
+            "Everything in Standard",
+            "Dedicated account manager",
+            "Faster turnaround time",
+            "Priority phone & email support",
+            "Post-registration compliance guidance"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹11,500",
-          "description": "Online filing of ITR‑3 for taxpayers with taxable income between ₹20 Lakhs and ₹40 Lakhs."
+          "description": "Online filing of ITR‑3 for taxpayers with taxable income between ₹20 Lakhs and ₹40 Lakhs.",
+          "features": [
+            "Everything in Deluxe",
+            "End-to-end expert handling",
+            "Annual compliance advisory",
+            "Dedicated CA/CS support",
+            "On-call support for 90 days"
+          ]
         }
+      ],
+      "steps": [
+        "Document & data collection",
+        "Computation & verification",
+        "Filing on income tax / GST portal",
+        "Acknowledgement & ITR-V / ARN delivery"
       ]
     },
     {
@@ -857,18 +1444,45 @@
         {
           "name": "Standard",
           "price": "₹3,000",
-          "description": "Online filing of ITR‑4 for taxpayers with taxable income less than ₹10 Lakhs."
+          "description": "Online filing of ITR‑4 for taxpayers with taxable income less than ₹10 Lakhs.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹6,500",
-          "description": "Online filing of ITR‑4 for taxpayers with taxable income less than ₹20 Lakhs."
+          "description": "Online filing of ITR‑4 for taxpayers with taxable income less than ₹20 Lakhs.",
+          "features": [
+            "Everything in Standard",
+            "Dedicated account manager",
+            "Faster turnaround time",
+            "Priority phone & email support",
+            "Post-registration compliance guidance"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹10,000",
-          "description": "Online filing of ITR‑4 for taxpayers with taxable income more than ₹25 Lakhs."
+          "description": "Online filing of ITR‑4 for taxpayers with taxable income more than ₹25 Lakhs.",
+          "features": [
+            "Everything in Deluxe",
+            "End-to-end expert handling",
+            "Annual compliance advisory",
+            "Dedicated CA/CS support",
+            "On-call support for 90 days"
+          ]
         }
+      ],
+      "steps": [
+        "Document & data collection",
+        "Computation & verification",
+        "Filing on income tax / GST portal",
+        "Acknowledgement & ITR-V / ARN delivery"
       ]
     },
     {
@@ -882,18 +1496,45 @@
         {
           "name": "Standard",
           "price": "₹7,500",
-          "description": "Online filing of ITR‑5 for taxpayers with taxable income less than ₹15 Lakhs."
+          "description": "Online filing of ITR‑5 for taxpayers with taxable income less than ₹15 Lakhs.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹12,500",
-          "description": "Online filing of ITR‑5 for taxpayers with taxable income less than ₹30 Lakhs."
+          "description": "Online filing of ITR‑5 for taxpayers with taxable income less than ₹30 Lakhs.",
+          "features": [
+            "Everything in Standard",
+            "Dedicated account manager",
+            "Faster turnaround time",
+            "Priority phone & email support",
+            "Post-registration compliance guidance"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹15,000",
-          "description": "Online filing of ITR‑5 for taxpayers with taxable income exceeding ₹30 Lakhs."
+          "description": "Online filing of ITR‑5 for taxpayers with taxable income exceeding ₹30 Lakhs.",
+          "features": [
+            "Everything in Deluxe",
+            "End-to-end expert handling",
+            "Annual compliance advisory",
+            "Dedicated CA/CS support",
+            "On-call support for 90 days"
+          ]
         }
+      ],
+      "steps": [
+        "Document & data collection",
+        "Computation & verification",
+        "Filing on income tax / GST portal",
+        "Acknowledgement & ITR-V / ARN delivery"
       ]
     },
     {
@@ -907,18 +1548,45 @@
         {
           "name": "Standard",
           "price": "₹11,500",
-          "description": "Online filing of ITR‑6 for companies with taxable income less than ₹10 Lakhs."
+          "description": "Online filing of ITR‑6 for companies with taxable income less than ₹10 Lakhs.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹18,500",
-          "description": "Online filing of ITR‑6 for companies with taxable income less than ₹25 Lakhs."
+          "description": "Online filing of ITR‑6 for companies with taxable income less than ₹25 Lakhs.",
+          "features": [
+            "Everything in Standard",
+            "Dedicated account manager",
+            "Faster turnaround time",
+            "Priority phone & email support",
+            "Post-registration compliance guidance"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹25,000",
-          "description": "Online filing of ITR‑6 for companies with taxable income exceeding ₹25 Lakhs."
+          "description": "Online filing of ITR‑6 for companies with taxable income exceeding ₹25 Lakhs.",
+          "features": [
+            "Everything in Deluxe",
+            "End-to-end expert handling",
+            "Annual compliance advisory",
+            "Dedicated CA/CS support",
+            "On-call support for 90 days"
+          ]
         }
+      ],
+      "steps": [
+        "Document & data collection",
+        "Computation & verification",
+        "Filing on income tax / GST portal",
+        "Acknowledgement & ITR-V / ARN delivery"
       ]
     },
     {
@@ -932,8 +1600,21 @@
         {
           "name": "Standard",
           "price": "Custom",
-          "description": "Pricing based on the nature of trust/institution and reporting requirements. Contact us for a tailored quote."
+          "description": "Pricing based on the nature of trust/institution and reporting requirements. Contact us for a tailored quote.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Document & data collection",
+        "Computation & verification",
+        "Filing on income tax / GST portal",
+        "Acknowledgement & ITR-V / ARN delivery"
       ]
     },
     {
@@ -947,18 +1628,42 @@
         {
           "name": "Standard",
           "price": "₹1,800",
-          "description": "TDS Return filing for one quarter across applicable sections."
+          "description": "TDS Return filing for one quarter across applicable sections.",
+          "features": [
+            "TDS data compilation",
+            "Form 24Q/26Q filing",
+            "Challan reconciliation",
+            "Email support"
+          ]
         },
         {
           "name": "Deluxe",
           "price": "₹3,000",
-          "description": "TDS Return filing for two quarters in a financial year."
+          "description": "TDS Return filing for two quarters in a financial year.",
+          "features": [
+            "Everything in Standard",
+            "TDS certificate (Form 16/16A) generation",
+            "Lower deduction advisory",
+            "Priority support"
+          ]
         },
         {
           "name": "Premium",
           "price": "₹5,500",
-          "description": "TDS Return filing for all four quarters of a financial year."
+          "description": "TDS Return filing for all four quarters of a financial year.",
+          "features": [
+            "Everything in Deluxe",
+            "TDS audit support",
+            "Demand & notice handling",
+            "Dedicated CA support"
+          ]
         }
+      ],
+      "steps": [
+        "TDS data & challan compilation",
+        "FVU file preparation & validation",
+        "TRACES portal return filing",
+        "Form 16/16A generation & distribution"
       ]
     },
     {
@@ -972,8 +1677,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Pricing depends on partner count, capital and state requirements. Contact us for a tailored quote."
+          "description": "Pricing depends on partner count, capital and state requirements. Contact us for a tailored quote.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Structure & name advisory",
+        "Document preparation & DSC/DIN",
+        "MCA/ROC filing & name approval",
+        "Certificate of Incorporation + PAN/TAN"
       ]
     },
     {
@@ -987,8 +1705,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Price varies with partner count and capital contribution. Share your details for an exact quote."
+          "description": "Price varies with partner count and capital contribution. Share your details for an exact quote.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Structure & name advisory",
+        "Document preparation & DSC/DIN",
+        "MCA/ROC filing & name approval",
+        "Certificate of Incorporation + PAN/TAN"
       ]
     },
     {
@@ -1002,8 +1733,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Quotation based on capital structure, number of shareholders and foreign participation."
+          "description": "Quotation based on capital structure, number of shareholders and foreign participation.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Structure & name advisory",
+        "Document preparation & DSC/DIN",
+        "MCA/ROC filing & name approval",
+        "Certificate of Incorporation + PAN/TAN"
       ]
     },
     {
@@ -1017,8 +1761,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Fees depend on state, type of trust and level of advisory required."
+          "description": "Fees depend on state, type of trust and level of advisory required.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Trust deed / MOA drafting",
+        "Registration with Sub-Registrar / ROC",
+        "12A & 80G application filing",
+        "Registration certificate delivery"
       ]
     },
     {
@@ -1032,8 +1789,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Pricing based on state, promoter count and drafting complexity."
+          "description": "Pricing based on state, promoter count and drafting complexity.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Trust deed / MOA drafting",
+        "Registration with Sub-Registrar / ROC",
+        "12A & 80G application filing",
+        "Registration certificate delivery"
       ]
     },
     {
@@ -1047,8 +1817,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Includes preparation of application, collation of documents and responding to department queries."
+          "description": "Includes preparation of application, collation of documents and responding to department queries.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Trust deed / MOA drafting",
+        "Registration with Sub-Registrar / ROC",
+        "12A & 80G application filing",
+        "Registration certificate delivery"
       ]
     },
     {
@@ -1062,8 +1845,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Quote depends on the complexity of activities and years of operation."
+          "description": "Quote depends on the complexity of activities and years of operation.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Trust deed / MOA drafting",
+        "Registration with Sub-Registrar / ROC",
+        "12A & 80G application filing",
+        "Registration certificate delivery"
       ]
     },
     {
@@ -1077,8 +1873,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Pricing varies by state, entity type and add‑on services like EIN and bank account support."
+          "description": "Pricing varies by state, entity type and add‑on services like EIN and bank account support.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Structure & jurisdiction advisory",
+        "Name reservation & incorporation filing",
+        "Bank account / EIN / tax registrations",
+        "Compliance handover & post-setup guide"
       ]
     },
     {
@@ -1092,8 +1901,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Quotes are customised based on industry, location and capital structure."
+          "description": "Quotes are customised based on industry, location and capital structure.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Structure & jurisdiction advisory",
+        "Name reservation & incorporation filing",
+        "Bank account / EIN / tax registrations",
+        "Compliance handover & post-setup guide"
       ]
     },
     {
@@ -1107,8 +1929,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Fee depends on need for local director, office address and compliance add‑ons."
+          "description": "Fee depends on need for local director, office address and compliance add‑ons.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Structure & jurisdiction advisory",
+        "Name reservation & incorporation filing",
+        "Bank account / EIN / tax registrations",
+        "Compliance handover & post-setup guide"
       ]
     },
     {
@@ -1122,8 +1957,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Package is based on free‑zone choice, visa needs and activity type."
+          "description": "Package is based on free‑zone choice, visa needs and activity type.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Structure & jurisdiction advisory",
+        "Name reservation & incorporation filing",
+        "Bank account / EIN / tax registrations",
+        "Compliance handover & post-setup guide"
       ]
     },
     {
@@ -1137,8 +1985,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Fees depend on shareholding pattern and nature of business activity."
+          "description": "Fees depend on shareholding pattern and nature of business activity.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Structure & jurisdiction advisory",
+        "Name reservation & incorporation filing",
+        "Bank account / EIN / tax registrations",
+        "Compliance handover & post-setup guide"
       ]
     },
     {
@@ -1152,8 +2013,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Pricing depends on need for local address, nominee services and compliance support."
+          "description": "Pricing depends on need for local address, nominee services and compliance support.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Structure & jurisdiction advisory",
+        "Name reservation & incorporation filing",
+        "Bank account / EIN / tax registrations",
+        "Compliance handover & post-setup guide"
       ]
     },
     {
@@ -1167,8 +2041,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Quote tailored to state of registration and structure (Pty Ltd, etc.)."
+          "description": "Quote tailored to state of registration and structure (Pty Ltd, etc.).",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Structure & jurisdiction advisory",
+        "Name reservation & incorporation filing",
+        "Bank account / EIN / tax registrations",
+        "Compliance handover & post-setup guide"
       ]
     },
     {
@@ -1182,8 +2069,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Costs depend on secretary services, address and banking assistance required."
+          "description": "Costs depend on secretary services, address and banking assistance required.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Structure & jurisdiction advisory",
+        "Name reservation & incorporation filing",
+        "Bank account / EIN / tax registrations",
+        "Compliance handover & post-setup guide"
       ]
     },
     {
@@ -1197,8 +2097,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Pricing varies with federal state, capital and need for local directors."
+          "description": "Pricing varies with federal state, capital and need for local directors.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Structure & jurisdiction advisory",
+        "Name reservation & incorporation filing",
+        "Bank account / EIN / tax registrations",
+        "Compliance handover & post-setup guide"
       ]
     },
     {
@@ -1212,8 +2125,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Quote covers registration, return filing for the period and cancellation."
+          "description": "Quote covers registration, return filing for the period and cancellation.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Document checklist shared",
+        "Data validation & preparation",
+        "GST portal filing & submission",
+        "Acknowledgement & follow-up"
       ]
     },
     {
@@ -1227,8 +2153,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Pricing based on duration of registration and volume of transactions."
+          "description": "Pricing based on duration of registration and volume of transactions.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Document checklist shared",
+        "Data validation & preparation",
+        "GST portal filing & submission",
+        "Acknowledgement & follow-up"
       ]
     },
     {
@@ -1242,8 +2181,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Price depends on turnover and complexity of reconciliations required."
+          "description": "Price depends on turnover and complexity of reconciliations required.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Document checklist shared",
+        "Data validation & preparation",
+        "GST portal filing & submission",
+        "Acknowledgement & follow-up"
       ]
     },
     {
@@ -1257,8 +2209,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Ongoing support packages available for regular logistics‑heavy businesses."
+          "description": "Ongoing support packages available for regular logistics‑heavy businesses.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Document checklist shared",
+        "Data validation & preparation",
+        "GST portal filing & submission",
+        "Acknowledgement & follow-up"
       ]
     },
     {
@@ -1272,8 +2237,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Subscription‑style pricing based on number of invoices and states."
+          "description": "Subscription‑style pricing based on number of invoices and states.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Sales & purchase data compilation",
+        "GSTR-1 & GSTR-3B preparation",
+        "GST portal filing & tax payment",
+        "Acknowledgement & ITC reconciliation"
       ]
     },
     {
@@ -1287,8 +2265,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Fee is linked to number of vendors and years of reconciliation."
+          "description": "Fee is linked to number of vendors and years of reconciliation.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Document checklist shared",
+        "Data validation & preparation",
+        "GST portal filing & submission",
+        "Acknowledgement & follow-up"
       ]
     },
     {
@@ -1302,8 +2293,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Covers end‑to‑end cancellation and support till closure confirmation."
+          "description": "Covers end‑to‑end cancellation and support till closure confirmation.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Document checklist shared",
+        "Data validation & preparation",
+        "GST portal filing & submission",
+        "Acknowledgement & follow-up"
       ]
     },
     {
@@ -1317,8 +2321,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Fees may be a mix of fixed and success‑linked components."
+          "description": "Fees may be a mix of fixed and success‑linked components.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Document checklist shared",
+        "Data validation & preparation",
+        "GST portal filing & submission",
+        "Acknowledgement & follow-up"
       ]
     },
     {
@@ -1332,8 +2349,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Simple, quick service typically done once a year per GSTIN."
+          "description": "Simple, quick service typically done once a year per GSTIN.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Document checklist shared",
+        "Data validation & preparation",
+        "GST portal filing & submission",
+        "Acknowledgement & follow-up"
       ]
     },
     {
@@ -1347,8 +2377,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Hourly or mandate‑based pricing depending on the complexity of issues."
+          "description": "Hourly or mandate‑based pricing depending on the complexity of issues.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Document checklist shared",
+        "Data validation & preparation",
+        "GST portal filing & submission",
+        "Acknowledgement & follow-up"
       ]
     },
     {
@@ -1362,8 +2405,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Covers documentation, application and basic guidance only."
+          "description": "Covers documentation, application and basic guidance only.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Income & TDS data collection",
+        "Tax computation & form selection",
+        "Portal filing & payment",
+        "Acknowledgement & ITR-V"
       ]
     },
     {
@@ -1377,8 +2433,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Pricing tailored to whether the TAN is part of a larger compliance engagement."
+          "description": "Pricing tailored to whether the TAN is part of a larger compliance engagement.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Income & TDS data collection",
+        "Tax computation & form selection",
+        "Portal filing & payment",
+        "Acknowledgement & ITR-V"
       ]
     },
     {
@@ -1392,8 +2461,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Fee based on type of notice, years involved and complexity."
+          "description": "Fee based on type of notice, years involved and complexity.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Income & TDS data collection",
+        "Tax computation & form selection",
+        "Portal filing & payment",
+        "Acknowledgement & ITR-V"
       ]
     },
     {
@@ -1407,8 +2489,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Quote includes professional fee; government fees are extra as per class and applicant type."
+          "description": "Quote includes professional fee; government fees are extra as per class and applicant type.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Trademark search & class selection",
+        "Application filing with Trade Marks Registry",
+        "Objection / opposition response if needed",
+        "Registration certificate delivery"
       ]
     },
     {
@@ -1422,8 +2517,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Fees depend on grounds of rectification and complexity of history."
+          "description": "Fees depend on grounds of rectification and complexity of history.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Search & class selection",
+        "Application filing with registry",
+        "Objection handling (if any)",
+        "Registration tracking & certificate"
       ]
     },
     {
@@ -1437,8 +2545,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Typically billed in stages: filing, evidence and hearings."
+          "description": "Typically billed in stages: filing, evidence and hearings.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Search & class selection",
+        "Application filing with registry",
+        "Objection handling (if any)",
+        "Registration tracking & certificate"
       ]
     },
     {
@@ -1452,8 +2573,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Fixed fee per application, with add‑ons if hearing representation is required."
+          "description": "Fixed fee per application, with add‑ons if hearing representation is required.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Search & class selection",
+        "Application filing with registry",
+        "Objection handling (if any)",
+        "Registration tracking & certificate"
       ]
     },
     {
@@ -1467,8 +2601,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Simple, predictable pricing per mark per class; government fees extra."
+          "description": "Simple, predictable pricing per mark per class; government fees extra.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Search & class selection",
+        "Application filing with registry",
+        "Objection handling (if any)",
+        "Registration tracking & certificate"
       ]
     },
     {
@@ -1482,8 +2629,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Quote based on number of designs and complexity of drawings."
+          "description": "Quote based on number of designs and complexity of drawings.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Search & class selection",
+        "Application filing with registry",
+        "Objection handling (if any)",
+        "Registration tracking & certificate"
       ]
     },
     {
@@ -1497,8 +2657,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Pricing depends on category of work and number of filings."
+          "description": "Pricing depends on category of work and number of filings.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Work identification & category selection",
+        "Copyright application preparation",
+        "Filing on Copyright Office portal",
+        "Diary number & registration certificate"
       ]
     },
     {
@@ -1512,8 +2685,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Fees are tailored to technical area and number of claims."
+          "description": "Fees are tailored to technical area and number of claims.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Patentability search & prior art review",
+        "Provisional/complete application drafting",
+        "IPO portal filing & acknowledgement",
+        "Examination request & prosecution support"
       ]
     },
     {
@@ -1527,8 +2713,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Lower‑cost option compared to complete specification; quote on request."
+          "description": "Lower‑cost option compared to complete specification; quote on request.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Search & class selection",
+        "Application filing with registry",
+        "Objection handling (if any)",
+        "Registration tracking & certificate"
       ]
     },
     {
@@ -1542,8 +2741,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Pricing based on number of marks and complexity of transaction."
+          "description": "Pricing based on number of marks and complexity of transaction.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Search & class selection",
+        "Application filing with registry",
+        "Objection handling (if any)",
+        "Registration tracking & certificate"
       ]
     },
     {
@@ -1557,8 +2769,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Subscription‑based service with monthly or quarterly reporting."
+          "description": "Subscription‑based service with monthly or quarterly reporting.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Search & class selection",
+        "Application filing with registry",
+        "Objection handling (if any)",
+        "Registration tracking & certificate"
       ]
     },
     {
@@ -1572,8 +2797,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Quote includes associate fees; official fees are extra as per USPTO schedule."
+          "description": "Quote includes associate fees; official fees are extra as per USPTO schedule.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Search & class selection",
+        "Application filing with registry",
+        "Objection handling (if any)",
+        "Registration tracking & certificate"
       ]
     },
     {
@@ -1587,8 +2825,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Budget is tailored to number of countries and classes covered."
+          "description": "Budget is tailored to number of countries and classes covered.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Search & class selection",
+        "Application filing with registry",
+        "Objection handling (if any)",
+        "Registration tracking & certificate"
       ]
     },
     {
@@ -1602,8 +2853,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Bundled pricing based on turnover and number of registrations."
+          "description": "Bundled pricing based on turnover and number of registrations.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1617,8 +2881,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Fee linked to turnover, number of partners and complexity of operations."
+          "description": "Fee linked to turnover, number of partners and complexity of operations.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1632,8 +2909,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Quote based on turnover, partner count and audit requirements."
+          "description": "Quote based on turnover, partner count and audit requirements.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1647,8 +2937,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Retainer‑style packages available for small and mid‑size companies."
+          "description": "Retainer‑style packages available for small and mid‑size companies.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1662,8 +2965,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Tailored to group structure, related‑party transactions and size."
+          "description": "Tailored to group structure, related‑party transactions and size.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1677,8 +2993,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Pricing adapted to size of operations and donor reporting needs."
+          "description": "Pricing adapted to size of operations and donor reporting needs.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1692,8 +3021,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Based on number of years and quantum under dispute."
+          "description": "Based on number of years and quantum under dispute.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1707,8 +3049,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Quote based on number of locations and employees impacted."
+          "description": "Quote based on number of locations and employees impacted.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1722,8 +3077,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Pricing depends on jurisdiction and years involved."
+          "description": "Pricing depends on jurisdiction and years involved.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1737,8 +3105,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Quote includes registration and initial configuration support."
+          "description": "Quote includes registration and initial configuration support.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Applicability assessment",
+        "Registration application setup",
+        "Employee mapping & onboarding",
+        "Ongoing compliance support"
       ]
     },
     {
@@ -1752,8 +3133,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Pricing based on employee count and frequency of filings."
+          "description": "Pricing based on employee count and frequency of filings.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Applicability assessment",
+        "Registration application setup",
+        "Employee mapping & onboarding",
+        "Ongoing compliance support"
       ]
     },
     {
@@ -1767,8 +3161,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Subscription‑style pricing aligned to number of employees."
+          "description": "Subscription‑style pricing aligned to number of employees.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Applicability assessment",
+        "Registration application setup",
+        "Employee mapping & onboarding",
+        "Ongoing compliance support"
       ]
     },
     {
@@ -1782,8 +3189,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Price depends on state stamp duties and number of registrations updated."
+          "description": "Price depends on state stamp duties and number of registrations updated.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1797,8 +3217,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Costs vary with whether move is within the same ROC, state or to another state."
+          "description": "Costs vary with whether move is within the same ROC, state or to another state.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1812,8 +3245,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Quote based on number of directors and whether DINs are required."
+          "description": "Quote based on number of directors and whether DINs are required.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1827,8 +3273,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Based on whether shareholder approvals and hearings are required."
+          "description": "Based on whether shareholder approvals and hearings are required.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1842,8 +3301,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Government fees and stamp duties are extra as per state and amount."
+          "description": "Government fees and stamp duties are extra as per state and amount.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1857,8 +3329,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Based on nature and number of clauses to be amended."
+          "description": "Based on nature and number of clauses to be amended.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1872,8 +3357,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Quote depends on pending compliances and liabilities, if any."
+          "description": "Quote depends on pending compliances and liabilities, if any.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1887,8 +3385,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Costs depend on the financial position of the company and number of open registrations."
+          "description": "Costs depend on the financial position of the company and number of open registrations.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1902,8 +3413,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Fees based on number of partners added and deed amendments."
+          "description": "Fees based on number of partners added and deed amendments.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1917,8 +3441,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Pricing based on scope of changes and partner count."
+          "description": "Pricing based on scope of changes and partner count.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1932,8 +3469,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Quote depends on state registrations and tax IDs to be migrated."
+          "description": "Quote depends on state registrations and tax IDs to be migrated.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1947,8 +3497,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Fees based on partner count and asset/liability structure."
+          "description": "Fees based on partner count and asset/liability structure.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1962,8 +3525,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Tailored to size and regulatory footprint of the existing proprietorship."
+          "description": "Tailored to size and regulatory footprint of the existing proprietorship.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1977,8 +3553,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Pricing depends on shareholding structure and compliance status."
+          "description": "Pricing depends on shareholding structure and compliance status.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -1992,8 +3581,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Custom‑quoted based on capital markets and listing objectives."
+          "description": "Custom‑quoted based on capital markets and listing objectives.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -2007,8 +3609,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Quote depends on number of shareholders and outstanding compliances."
+          "description": "Quote depends on number of shareholders and outstanding compliances.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -2022,8 +3637,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Fees are aligned to transaction size and legal complexity."
+          "description": "Fees are aligned to transaction size and legal complexity.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -2037,8 +3665,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Custom‑quoted based on LLP size and regulatory requirements."
+          "description": "Custom‑quoted based on LLP size and regulatory requirements.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -2052,8 +3693,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Fees vary with shareholder base and capital structure."
+          "description": "Fees vary with shareholder base and capital structure.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -2067,8 +3721,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Quote based on listing status and shareholder dispersion."
+          "description": "Quote based on listing status and shareholder dispersion.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Requirement discussion & advisory",
+        "Document & form preparation",
+        "Filing with appropriate authority",
+        "Follow-up until completion"
       ]
     },
     {
@@ -2082,8 +3749,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Based on venue, city and expected guest count."
+          "description": "Based on venue, city and expected guest count.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "License type & eligibility check",
+        "Application & documents preparation",
+        "State excise authority submission",
+        "License certificate delivery"
       ]
     },
     {
@@ -2097,8 +3777,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Fees influenced by state excise fee schedule and event details."
+          "description": "Fees influenced by state excise fee schedule and event details.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "License type & eligibility check",
+        "Application & documents preparation",
+        "State excise authority submission",
+        "License certificate delivery"
       ]
     },
     {
@@ -2112,8 +3805,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Pricing tailored to licence type and category of establishment."
+          "description": "Pricing tailored to licence type and category of establishment.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "License type & eligibility check",
+        "Application & documents preparation",
+        "State excise authority submission",
+        "License certificate delivery"
       ]
     },
     {
@@ -2127,8 +3833,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Fees based on event, location and type of country liquor permitted."
+          "description": "Fees based on event, location and type of country liquor permitted.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "License type & eligibility check",
+        "Application & documents preparation",
+        "State excise authority submission",
+        "License certificate delivery"
       ]
     },
     {
@@ -2142,8 +3861,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Highly jurisdiction‑specific; pricing shared after initial assessment."
+          "description": "Highly jurisdiction‑specific; pricing shared after initial assessment.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "License type & eligibility check",
+        "Application & documents preparation",
+        "State excise authority submission",
+        "License certificate delivery"
       ]
     },
     {
@@ -2157,8 +3889,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Quote customised to state and volume of operations."
+          "description": "Quote customised to state and volume of operations.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "License type & eligibility check",
+        "Application & documents preparation",
+        "State excise authority submission",
+        "License certificate delivery"
       ]
     },
     {
@@ -2172,8 +3917,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Fees are jurisdiction‑specific and shared after a preliminary call."
+          "description": "Fees are jurisdiction‑specific and shared after a preliminary call.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "License type & eligibility check",
+        "Application & documents preparation",
+        "State excise authority submission",
+        "License certificate delivery"
       ]
     },
     {
@@ -2187,8 +3945,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Based on type of establishment and seating capacity."
+          "description": "Based on type of establishment and seating capacity.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "License type & eligibility check",
+        "Application & documents preparation",
+        "State excise authority submission",
+        "License certificate delivery"
       ]
     },
     {
@@ -2202,8 +3973,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Jurisdiction and club category impact the overall cost."
+          "description": "Jurisdiction and club category impact the overall cost.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "License type & eligibility check",
+        "Application & documents preparation",
+        "State excise authority submission",
+        "License certificate delivery"
       ]
     },
     {
@@ -2217,8 +4001,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Highly dependent on local excise policy and quotas."
+          "description": "Highly dependent on local excise policy and quotas.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "License type & eligibility check",
+        "Application & documents preparation",
+        "State excise authority submission",
+        "License certificate delivery"
       ]
     },
     {
@@ -2232,8 +4029,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Cost varies with city, category of licence and seating capacity."
+          "description": "Cost varies with city, category of licence and seating capacity.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "License type & eligibility check",
+        "Application & documents preparation",
+        "State excise authority submission",
+        "License certificate delivery"
       ]
     },
     {
@@ -2247,8 +4057,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Quote shared after understanding your location and proposed format."
+          "description": "Quote shared after understanding your location and proposed format.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "License type & eligibility check",
+        "Application & documents preparation",
+        "State excise authority submission",
+        "License certificate delivery"
       ]
     },
     {
@@ -2262,8 +4085,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Subject to state excise quota and policy; pricing on enquiry."
+          "description": "Subject to state excise quota and policy; pricing on enquiry.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "License type & eligibility check",
+        "Application & documents preparation",
+        "State excise authority submission",
+        "License certificate delivery"
       ]
     },
     {
@@ -2277,8 +4113,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Fees depend on nature of certificate and required amount."
+          "description": "Fees depend on nature of certificate and required amount.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Applicability & requirement assessment",
+        "Application preparation & filing",
+        "Government follow-up & tracking",
+        "License / certificate delivery"
       ]
     },
     {
@@ -2292,8 +4141,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Pricing aligned to state and number of contractor engagements."
+          "description": "Pricing aligned to state and number of contractor engagements.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Applicability & requirement assessment",
+        "Application preparation & filing",
+        "Government follow-up & tracking",
+        "License / certificate delivery"
       ]
     },
     {
@@ -2307,8 +4169,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Quote based on state, nature of work and number of workers."
+          "description": "Quote based on state, nature of work and number of workers.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Applicability & requirement assessment",
+        "Application preparation & filing",
+        "Government follow-up & tracking",
+        "License / certificate delivery"
       ]
     },
     {
@@ -2322,8 +4197,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Simple renewal‑focused pricing per licence per year."
+          "description": "Simple renewal‑focused pricing per licence per year.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Applicability & requirement assessment",
+        "Application preparation & filing",
+        "Government follow-up & tracking",
+        "License / certificate delivery"
       ]
     },
     {
@@ -2337,8 +4225,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Fees depend on size of plant and risk category."
+          "description": "Fees depend on size of plant and risk category.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Applicability & requirement assessment",
+        "Application preparation & filing",
+        "Government follow-up & tracking",
+        "License / certificate delivery"
       ]
     },
     {
@@ -2352,8 +4253,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Quote based on state rules and any amendments needed."
+          "description": "Quote based on state rules and any amendments needed.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Applicability & requirement assessment",
+        "Application preparation & filing",
+        "Government follow-up & tracking",
+        "License / certificate delivery"
       ]
     },
     {
@@ -2367,8 +4281,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Fees depend on red/orange/green category classification and size of unit."
+          "description": "Fees depend on red/orange/green category classification and size of unit.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Applicability & requirement assessment",
+        "Application preparation & filing",
+        "Government follow-up & tracking",
+        "License / certificate delivery"
       ]
     },
     {
@@ -2382,8 +4309,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Project‑specific pricing shared after preliminary scoping."
+          "description": "Project‑specific pricing shared after preliminary scoping.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Applicability & requirement assessment",
+        "Application preparation & filing",
+        "Government follow-up & tracking",
+        "License / certificate delivery"
       ]
     },
     {
@@ -2397,8 +4337,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Website pricing depends on number of pages, design complexity and integrations."
+          "description": "Website pricing depends on number of pages, design complexity and integrations.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Consultation & requirement capture",
+        "Document checklist & collection",
+        "Application filing with authority",
+        "Follow-ups until completion"
       ]
     },
     {
@@ -2412,8 +4365,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Packages vary with number of concepts, revisions and brand assets needed."
+          "description": "Packages vary with number of concepts, revisions and brand assets needed.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Consultation & requirement capture",
+        "Document checklist & collection",
+        "Application filing with authority",
+        "Follow-ups until completion"
       ]
     },
     {
@@ -2427,8 +4393,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Cost depends on features, platforms and integrations required."
+          "description": "Cost depends on features, platforms and integrations required.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Consultation & requirement capture",
+        "Document checklist & collection",
+        "Application filing with authority",
+        "Follow-ups until completion"
       ]
     },
     {
@@ -2442,8 +4421,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Retainer‑based SEO plans are customised to your industry and goals."
+          "description": "Retainer‑based SEO plans are customised to your industry and goals.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Consultation & requirement capture",
+        "Document checklist & collection",
+        "Application filing with authority",
+        "Follow-ups until completion"
       ]
     },
     {
@@ -2457,8 +4449,21 @@
         {
           "name": "Custom",
           "price": "On request",
-          "description": "Monthly/annual maintenance contracts sized to your traffic and update needs."
+          "description": "Monthly/annual maintenance contracts sized to your traffic and update needs.",
+          "features": [
+            "Expert consultation & requirement capture",
+            "Document checklist & preparation",
+            "Application filing with relevant authority",
+            "Status tracking & follow-up",
+            "Email support"
+          ]
         }
+      ],
+      "steps": [
+        "Consultation & requirement capture",
+        "Document checklist & collection",
+        "Application filing with authority",
+        "Follow-ups until completion"
       ]
     }
   ],
@@ -3710,6 +5715,18 @@
           }
         ]
       }
+    }
+  },
+  "stateServiceHints": {
+    "private-limited-company": {
+      "Maharashtra": "Maharashtra has higher stamp duty on MOA/AOA. State-specific pricing is reflected below.",
+      "Delhi (NCT)": "Delhi has low stamp duty and NO Professional Tax — one of the most cost-effective states to incorporate.",
+      "Karnataka": "Karnataka requires Shops Act + BBMP Trade Licence post-incorporation."
+    },
+    "llp": {
+      "Maharashtra": "Maharashtra has higher stamp duty on MOA/AOA. State-specific pricing is reflected below.",
+      "Delhi (NCT)": "Delhi has low stamp duty and NO Professional Tax — one of the most cost-effective states to incorporate.",
+      "Karnataka": "Karnataka requires Shops Act + BBMP Trade Licence post-incorporation."
     }
   },
   "statePackages": {

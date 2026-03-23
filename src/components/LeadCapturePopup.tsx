@@ -129,10 +129,10 @@ export default function LeadCapturePopup() {
                 <Sparkles className="w-5 h-5 text-white" />
               </div>
               <div className="flex-1">
-                <div className="text-white font-bold text-[15px] leading-tight">Need Help?</div>
+                <div className="text-white font-bold text-[calc(15px+1.5pt)] leading-tight">Need Help?</div>
                 <div className="flex items-center gap-1.5 mt-0.5">
                   <div className="w-1.5 h-1.5 rounded-full bg-emerald-300 animate-pulse" />
-                  <span className="text-emerald-100 text-[12px]">Expert available now</span>
+                  <span className="text-emerald-100 text-[calc(12px+1.5pt)]">Expert available now</span>
                 </div>
               </div>
               <button
@@ -150,7 +150,7 @@ export default function LeadCapturePopup() {
                   <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Bot className="w-4 h-4 text-emerald-600" />
                   </div>
-                  <div className="bg-gray-50 border border-gray-100 rounded-2xl rounded-bl-sm px-4 py-3 text-[14px] text-gray-700 leading-relaxed">
+                  <div className="bg-gray-50 border border-gray-100 rounded-2xl rounded-bl-sm px-4 py-3 text-[calc(14px+1.5pt)] text-gray-700 leading-relaxed">
                     {message}
                   </div>
                 </div>
@@ -158,13 +158,13 @@ export default function LeadCapturePopup() {
                 <div className="flex gap-2 pt-1">
                   <button
                     onClick={handleProceed}
-                    className="flex-1 py-2.5 rounded-xl bg-emerald-600 text-white font-semibold text-[14px] hover:bg-emerald-700 transition-colors"
+                    className="flex-1 py-2.5 rounded-xl bg-emerald-600 text-white font-semibold text-[calc(14px+1.5pt)] hover:bg-emerald-700 transition-colors"
                   >
                     Yes, I need help
                   </button>
                   <button
                     onClick={handleClose}
-                    className="px-4 py-2.5 rounded-xl border border-gray-200 text-gray-500 text-[14px] hover:bg-gray-50 transition-colors"
+                    className="px-4 py-2.5 rounded-xl border border-gray-200 text-gray-500 text-[calc(14px+1.5pt)] hover:bg-gray-50 transition-colors"
                   >
                     Later
                   </button>
@@ -179,7 +179,7 @@ export default function LeadCapturePopup() {
                   <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Bot className="w-4 h-4 text-emerald-600" />
                   </div>
-                  <div className="bg-gray-50 border border-gray-100 rounded-2xl rounded-bl-sm px-4 py-3 text-[13px] text-gray-600 leading-relaxed">
+                  <div className="bg-gray-50 border border-gray-100 rounded-2xl rounded-bl-sm px-4 py-3 text-[calc(13px+1.5pt)] text-gray-600 leading-relaxed">
                     Share your details and our expert will contact you shortly.
                   </div>
                 </div>
@@ -189,7 +189,7 @@ export default function LeadCapturePopup() {
                     value={form.name}
                     onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
                     placeholder="Your name *"
-                    className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[14px] focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition-all"
+                    className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[calc(14px+1.5pt)] focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition-all"
                   />
                 </div>
                 <div>
@@ -199,7 +199,7 @@ export default function LeadCapturePopup() {
                     onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
                     placeholder="Phone number *"
                     type="tel"
-                    className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[14px] focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition-all"
+                    className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[calc(14px+1.5pt)] focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition-all"
                   />
                 </div>
                 <div>
@@ -208,7 +208,7 @@ export default function LeadCapturePopup() {
                     onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
                     placeholder="Email (optional)"
                     type="email"
-                    className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[14px] focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition-all"
+                    className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[calc(14px+1.5pt)] focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition-all"
                   />
                 </div>
                 <div>
@@ -216,18 +216,18 @@ export default function LeadCapturePopup() {
                     value={form.service}
                     onChange={(e) => setForm((f) => ({ ...f, service: e.target.value }))}
                     placeholder="Service interested in"
-                    className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[14px] bg-gray-50 focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition-all"
+                    className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-[calc(14px+1.5pt)] bg-gray-50 focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition-all"
                   />
                 </div>
 
                 {error && (
-                  <p className="text-red-500 text-[13px]">{error}</p>
+                  <p className="text-red-500 text-[calc(13px+1.5pt)]">{error}</p>
                 )}
 
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full py-2.5 rounded-xl bg-emerald-600 text-white font-semibold text-[14px] hover:bg-emerald-700 transition-colors disabled:opacity-60 flex items-center justify-center gap-2"
+                  className="w-full py-2.5 rounded-xl bg-emerald-600 text-white font-semibold text-[calc(14px+1.5pt)] hover:bg-emerald-700 transition-colors disabled:opacity-60 flex items-center justify-center gap-2"
                 >
                   {submitting ? (
                     <Loader2 className="w-4 h-4 animate-spin" />
@@ -237,7 +237,7 @@ export default function LeadCapturePopup() {
                   {submitting ? 'Submitting…' : 'Get Expert Help'}
                 </button>
 
-                <p className="text-[11px] text-gray-400 text-center">
+                <p className="text-[calc(11px+1.5pt)] text-gray-400 text-center">
                   We'll contact you within 30 minutes during business hours.
                 </p>
               </form>
@@ -250,13 +250,13 @@ export default function LeadCapturePopup() {
                   <CheckCircle2 className="w-7 h-7 text-emerald-600" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900">Thank you!</h3>
-                <p className="text-[14px] text-gray-500 leading-relaxed">
+                <p className="text-[calc(14px+1.5pt)] text-gray-500 leading-relaxed">
                   Our expert will contact you shortly about{' '}
                   <strong>{form.service || 'your enquiry'}</strong>. We typically respond within 30 minutes.
                 </p>
                 <button
                   onClick={handleClose}
-                  className="mt-2 px-6 py-2 rounded-xl border border-gray-200 text-gray-600 text-[14px] hover:bg-gray-50 transition-colors"
+                  className="mt-2 px-6 py-2 rounded-xl border border-gray-200 text-gray-600 text-[calc(14px+1.5pt)] hover:bg-gray-50 transition-colors"
                 >
                   Close
                 </button>

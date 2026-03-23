@@ -167,7 +167,7 @@ export default function ChatBot() {
               initial={{ opacity: 0, scale: 0.6, y: 8 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.6, y: 8 }}
-              className="absolute -top-10 -left-28 bg-gray-900 text-white text-[12px] font-medium px-3 py-1.5 rounded-full whitespace-nowrap shadow-lg"
+              className="absolute -top-10 -left-28 bg-gray-900 text-white text-[calc(12px+1.5pt)] font-medium px-3 py-1.5 rounded-full whitespace-nowrap shadow-lg"
             >
               💬 Ask us anything!
               <div className="absolute bottom-0 right-6 translate-y-1/2 w-2 h-2 bg-gray-900 rotate-45" />
@@ -212,10 +212,10 @@ export default function ChatBot() {
                 <Bot className="w-5 h-5 text-white" />
               </div>
               <div className="flex-1">
-                <div className="text-white font-bold text-[14px] leading-tight">Mridhuv Assistant</div>
+                <div className="text-white font-bold text-[calc(14px+1.5pt)] leading-tight">Mridhuv Assistant</div>
                 <div className="flex items-center gap-1.5 mt-0.5">
                   <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="text-blue-200 text-[11px]">Online · Replies instantly</span>
+                  <span className="text-blue-200 text-[calc(11px+1.5pt)]">Online · Replies instantly</span>
                 </div>
               </div>
               <button onClick={() => setIsOpen(false)} className="text-white/70 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-colors">
@@ -239,7 +239,7 @@ export default function ChatBot() {
                     </div>
                   )}
                   <div
-                    className={`max-w-[78%] px-3.5 py-2.5 rounded-2xl text-[13.5px] leading-relaxed whitespace-pre-line ${
+                    className={`max-w-[78%] px-3.5 py-2.5 rounded-2xl text-[calc(13.5px+1.5pt)] leading-relaxed whitespace-pre-line ${
                       msg.from === 'user'
                         ? 'bg-blue-600 text-white rounded-br-sm'
                         : 'bg-white border border-gray-200 text-gray-700 rounded-bl-sm shadow-sm'
@@ -284,7 +284,7 @@ export default function ChatBot() {
                   <button
                     key={qr.value}
                     onClick={() => sendMessage(qr.value)}
-                    className="text-[11.5px] font-medium text-blue-700 bg-blue-50 hover:bg-blue-100 border border-blue-100 rounded-full px-3 py-1 transition-colors"
+                    className="text-[calc(11.5px+1.5pt)] font-medium text-blue-700 bg-blue-50 hover:bg-blue-100 border border-blue-100 rounded-full px-3 py-1 transition-colors"
                   >
                     {qr.label}
                   </button>
@@ -302,7 +302,7 @@ export default function ChatBot() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Type your question…"
-                className="flex-1 h-9 rounded-xl border border-gray-200 px-3.5 text-[13.5px] text-gray-700 placeholder-gray-300 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all bg-gray-50"
+                className="flex-1 h-9 rounded-xl border border-gray-200 px-3.5 text-[calc(13.5px+1.5pt)] text-gray-700 placeholder-gray-300 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all bg-gray-50"
               />
               <button
                 type="submit"

@@ -59,14 +59,14 @@ export default function ContentPage() {
               <h2 id="introduction" className="text-3xl font-semibold text-white mt-12 mb-6 tracking-tight">
                 Introduction
               </h2>
-              <p className="text-[17px] leading-[1.7] text-[#A0A0A0] mb-6">
+              <p className="text-[calc(17px+1.5pt)] leading-[1.7] text-[#A0A0A0] mb-6">
                 A Private Limited Company is the most popular legal structure for businesses in India. It offers limited liability protection to its shareholders, ability to raise equity funds, and separate legal entity status. This structure is ideal for startups and growing businesses looking to scale operations.
               </p>
               
               <h2 id="eligibility" className="text-3xl font-semibold text-white mt-12 mb-6 tracking-tight">
                 Eligibility Criteria
               </h2>
-              <p className="text-[17px] leading-[1.7] text-[#A0A0A0] mb-6">
+              <p className="text-[calc(17px+1.5pt)] leading-[1.7] text-[#A0A0A0] mb-6">
                 Before starting the registration process, ensure you meet the following requirements:
               </p>
               <ul className="space-y-3 mb-8 ml-1">
@@ -76,7 +76,7 @@ export default function ContentPage() {
                   "Registered Office Address in India",
                   "Digital Signature Certificate (DSC) for all directors"
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-[17px] leading-[1.7] text-[#A0A0A0]">
+                  <li key={i} className="flex items-start gap-3 text-[calc(17px+1.5pt)] leading-[1.7] text-[#A0A0A0]">
                     <span className="w-1.5 h-1.5 rounded-sm bg-[#444444] mt-2.5 flex-shrink-0" />
                     <span>{item}</span>
                   </li>
@@ -86,29 +86,29 @@ export default function ContentPage() {
               <h2 id="documents" className="text-3xl font-semibold text-white mt-12 mb-6 tracking-tight">
                 Required Documents
               </h2>
-              <p className="text-[17px] leading-[1.7] text-[#A0A0A0] mb-6">
+              <p className="text-[calc(17px+1.5pt)] leading-[1.7] text-[#A0A0A0] mb-6">
                 Documentation is a crucial part of the process. You will need to prepare the following:
               </p>
               <div className="bg-[#111111] border border-[#1A1A1A] rounded-lg p-6 mb-8">
                 <h3 className="text-lg font-medium text-white mb-4">For Directors & Shareholders</h3>
                 <ul className="space-y-2 mb-6">
-                  <li className="text-[#A0A0A0] text-[16px]">• PAN Card (Mandatory for Indians)</li>
-                  <li className="text-[#A0A0A0] text-[16px]">• Passport (Mandatory for Foreigners)</li>
-                  <li className="text-[#A0A0A0] text-[16px]">• Voter ID / Driving License / Passport</li>
-                  <li className="text-[#A0A0A0] text-[16px]">• Latest Bank Statement / Electricity Bill</li>
+                  <li className="text-[#A0A0A0] text-[calc(16px+1.5pt)]">• PAN Card (Mandatory for Indians)</li>
+                  <li className="text-[#A0A0A0] text-[calc(16px+1.5pt)]">• Passport (Mandatory for Foreigners)</li>
+                  <li className="text-[#A0A0A0] text-[calc(16px+1.5pt)]">• Voter ID / Driving License / Passport</li>
+                  <li className="text-[#A0A0A0] text-[calc(16px+1.5pt)]">• Latest Bank Statement / Electricity Bill</li>
                 </ul>
                 <h3 className="text-lg font-medium text-white mb-4">For Registered Office</h3>
                 <ul className="space-y-2">
-                  <li className="text-[#A0A0A0] text-[16px]">• Latest Electricity Bill / Gas Bill</li>
-                  <li className="text-[#A0A0A0] text-[16px]">• Notarized Rental Agreement (if rented)</li>
-                  <li className="text-[#A0A0A0] text-[16px]">• No Objection Certificate (NOC) from owner</li>
+                  <li className="text-[#A0A0A0] text-[calc(16px+1.5pt)]">• Latest Electricity Bill / Gas Bill</li>
+                  <li className="text-[#A0A0A0] text-[calc(16px+1.5pt)]">• Notarized Rental Agreement (if rented)</li>
+                  <li className="text-[#A0A0A0] text-[calc(16px+1.5pt)]">• No Objection Certificate (NOC) from owner</li>
                 </ul>
               </div>
 
               <h2 id="process" className="text-3xl font-semibold text-white mt-12 mb-6 tracking-tight">
                 Registration Process
               </h2>
-              <p className="text-[17px] leading-[1.7] text-[#A0A0A0] mb-6">
+              <p className="text-[calc(17px+1.5pt)] leading-[1.7] text-[#A0A0A0] mb-6">
                 The registration process is fully online and typically takes 10-15 days. It involves obtaining DSC, name approval, and filing the SPICe+ form with the Ministry of Corporate Affairs (MCA).
               </p>
               <ol className="space-y-6 mb-8 relative border-l border-[#1A1A1A] ml-3 pl-8">
@@ -119,7 +119,7 @@ export default function ContentPage() {
                   { title: "Step 4: PAN & TAN", desc: "Auto-generated with Certificate of Incorporation." }
                 ].map((step, i) => (
                   <li key={i} className="relative">
-                    <span className="absolute -left-[39px] top-1.5 w-5 h-5 rounded-full bg-[#1A1A1A] border border-[#333333] flex items-center justify-center text-[10px] text-white font-medium">
+                    <span className="absolute -left-[39px] top-1.5 w-5 h-5 rounded-full bg-[#1A1A1A] border border-[#333333] flex items-center justify-center text-[calc(10px+1.5pt)] text-white font-medium">
                       {i + 1}
                     </span>
                     <h3 className="text-lg font-medium text-white mb-1">{step.title}</h3>

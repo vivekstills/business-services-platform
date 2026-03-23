@@ -47,7 +47,7 @@ export default function ContactSection() {
   });
 
   const inputCls = (key: string) =>
-    `w-full h-[46px] bg-white border rounded-xl pl-10 pr-4 text-[14px] text-gray-800 placeholder-gray-300 focus:outline-none transition-all shadow-sm ${
+    `w-full h-[46px] bg-white border rounded-xl pl-10 pr-4 text-[calc(14px+1.5pt)] text-gray-800 placeholder-gray-300 focus:outline-none transition-all shadow-sm ${
       errors[key]
         ? 'border-red-300 focus:border-red-400 focus:ring-2 focus:ring-red-100'
         : 'border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100'
@@ -81,7 +81,7 @@ export default function ContactSection() {
             <motion.p
               initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-gray-500 text-[15px] leading-relaxed mb-10"
+              className="text-gray-500 text-[calc(15px+1.5pt)] leading-relaxed mb-10"
             >
               {cs.subheading}
             </motion.p>
@@ -95,8 +95,8 @@ export default function ContactSection() {
                     {icons[i] ?? icons[0]}
                   </div>
                   <div>
-                    <div className="text-[14px] font-semibold text-gray-800">{item.label}</div>
-                    <div className="text-[13px] text-gray-500 mt-0.5">{item.desc}</div>
+                    <div className="text-[calc(14px+1.5pt)] font-semibold text-gray-800">{item.label}</div>
+                    <div className="text-[calc(13px+1.5pt)] text-gray-500 mt-0.5">{item.desc}</div>
                   </div>
                 </div>
               );
@@ -113,59 +113,59 @@ export default function ContactSection() {
             <form onSubmit={handleSubmit} className="space-y-5">
               {/* Name */}
               <div>
-                <label className="block text-[12px] font-semibold text-gray-500 uppercase tracking-wider mb-2">Full Name *</label>
+                <label className="block text-[calc(12px+1.5pt)] font-semibold text-gray-500 uppercase tracking-wider mb-2">Full Name *</label>
                 <div className="relative">
                   <User className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 ${errors.name ? 'text-red-400' : 'text-gray-300'}`} />
                   <input {...field('name')} className={inputCls('name')} placeholder="Your full name" />
                   {errors.name && <AlertCircle className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-red-400" />}
                 </div>
-                {errors.name && <p className="text-[11px] text-red-500 mt-1">{errors.name}</p>}
+                {errors.name && <p className="text-[calc(11px+1.5pt)] text-red-500 mt-1">{errors.name}</p>}
               </div>
 
               {/* Email + Phone */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-[12px] font-semibold text-gray-500 uppercase tracking-wider mb-2">Email *</label>
+                  <label className="block text-[calc(12px+1.5pt)] font-semibold text-gray-500 uppercase tracking-wider mb-2">Email *</label>
                   <div className="relative">
                     <Mail className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 ${errors.email ? 'text-red-400' : 'text-gray-300'}`} />
                     <input {...field('email')} type="email" className={inputCls('email')} placeholder="you@email.com" />
                   </div>
-                  {errors.email && <p className="text-[11px] text-red-500 mt-1">{errors.email}</p>}
+                  {errors.email && <p className="text-[calc(11px+1.5pt)] text-red-500 mt-1">{errors.email}</p>}
                 </div>
                 <div>
-                  <label className="block text-[12px] font-semibold text-gray-500 uppercase tracking-wider mb-2">Phone *</label>
+                  <label className="block text-[calc(12px+1.5pt)] font-semibold text-gray-500 uppercase tracking-wider mb-2">Phone *</label>
                   <div className="relative">
                     <Phone className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 ${errors.phone ? 'text-red-400' : 'text-gray-300'}`} />
                     <input {...field('phone')} type="tel" className={inputCls('phone')} placeholder="+91 98765 43210" />
                   </div>
-                  {errors.phone && <p className="text-[11px] text-red-500 mt-1">{errors.phone}</p>}
+                  {errors.phone && <p className="text-[calc(11px+1.5pt)] text-red-500 mt-1">{errors.phone}</p>}
                 </div>
               </div>
 
               {/* Service */}
               <div>
-                <label className="block text-[12px] font-semibold text-gray-500 uppercase tracking-wider mb-2">Service Required *</label>
+                <label className="block text-[calc(12px+1.5pt)] font-semibold text-gray-500 uppercase tracking-wider mb-2">Service Required *</label>
                 <select
                   {...field('service')}
-                  className={`w-full h-[46px] bg-white border rounded-xl px-4 text-[14px] text-gray-700 focus:outline-none transition-all appearance-none cursor-pointer shadow-sm ${
+                  className={`w-full h-[46px] bg-white border rounded-xl px-4 text-[calc(14px+1.5pt)] text-gray-700 focus:outline-none transition-all appearance-none cursor-pointer shadow-sm ${
                     errors.service ? 'border-red-300 focus:ring-2 focus:ring-red-100' : 'border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100'
                   }`}
                 >
                   <option value="">Select a service…</option>
                   {SERVICES_LIST.map((s) => <option key={s} value={s}>{s}</option>)}
                 </select>
-                {errors.service && <p className="text-[11px] text-red-500 mt-1">{errors.service}</p>}
+                {errors.service && <p className="text-[calc(11px+1.5pt)] text-red-500 mt-1">{errors.service}</p>}
               </div>
 
               {/* Message */}
               <div>
-                <label className="block text-[12px] font-semibold text-gray-500 uppercase tracking-wider mb-2">Message (optional)</label>
+                <label className="block text-[calc(12px+1.5pt)] font-semibold text-gray-500 uppercase tracking-wider mb-2">Message (optional)</label>
                 <div className="relative">
                   <MessageSquare className="absolute left-3 top-3.5 w-4 h-4 text-gray-300" />
                   <textarea
                     {...field('message')}
                     rows={3}
-                    className="w-full bg-white border border-gray-200 rounded-xl pl-10 pr-4 py-3 text-[14px] text-gray-700 placeholder-gray-300 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all resize-none shadow-sm"
+                    className="w-full bg-white border border-gray-200 rounded-xl pl-10 pr-4 py-3 text-[calc(14px+1.5pt)] text-gray-700 placeholder-gray-300 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all resize-none shadow-sm"
                     placeholder="Tell us more about your requirements…"
                   />
                 </div>
@@ -175,7 +175,7 @@ export default function ContactSection() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full h-12 rounded-xl bg-gradient-to-r from-blue-600 to-blue-600 text-white text-[14px] font-semibold flex items-center justify-center gap-2 shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-0.5 transition-all disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                className="w-full h-12 rounded-xl bg-gradient-to-r from-blue-600 to-blue-600 text-white text-[calc(14px+1.5pt)] font-semibold flex items-center justify-center gap-2 shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-0.5 transition-all disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
               >
                 {isSubmitting ? (
                   <><svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" /></svg> Sending…</>
@@ -189,7 +189,7 @@ export default function ContactSection() {
               {isSubmitted && (
                 <div className="flex items-start gap-2 bg-emerald-50 border border-emerald-200 rounded-xl p-3">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-[12.5px] text-emerald-700">
+                  <span className="text-[calc(12.5px+1.5pt)] text-emerald-700">
                     Thank you! Our team will reach out within 24 business hours.
                   </span>
                 </div>

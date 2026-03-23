@@ -28,7 +28,7 @@ export default function TrademarkSearchPage() {
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-4">
             Search for Trademarks
           </h1>
-          <p className="text-gray-500 text-[16px] max-w-xl mx-auto">
+          <p className="text-gray-500 text-[calc(16px+1.5pt)] max-w-xl mx-auto">
             Check if a trademark is already registered or applied for on the IP India (Trade Marks Registry) portal. Use this before filing your own trademark application.
           </p>
         </motion.div>
@@ -45,7 +45,7 @@ export default function TrademarkSearchPage() {
             </div>
             <div>
               <h2 className="text-lg font-bold text-gray-900">tmsearch.ipindia.gov.in — Trademark Public Search</h2>
-              <p className="text-[13px] text-gray-500">Search by wordmark, device, or combination on the official IP India portal</p>
+              <p className="text-[calc(13px+1.5pt)] text-gray-500">Search by wordmark, device, or combination on the official IP India portal</p>
             </div>
           </div>
 
@@ -55,7 +55,7 @@ export default function TrademarkSearchPage() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Enter trademark / brand name..."
-              className="flex-1 h-12 rounded-xl border border-gray-200 px-4 text-[15px] text-gray-800 placeholder-gray-400 focus:outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100"
+              className="flex-1 h-12 rounded-xl border border-gray-200 px-4 text-[calc(15px+1.5pt)] text-gray-800 placeholder-gray-400 focus:outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100"
             />
             <a
               href={TM_SEARCH_URL}
@@ -67,7 +67,7 @@ export default function TrademarkSearchPage() {
             </a>
           </div>
 
-          <p className="text-[12px] text-gray-400 mt-4">
+          <p className="text-[calc(12px+1.5pt)] text-gray-400 mt-4">
             You will be redirected to the official <strong>tmsearch.ipindia.gov.in</strong> Trademark Public Search. Our team can help you with trademark search, class selection, and registration — contact us at{' '}
             <a href="mailto:enquiry@mridhuvassociates.com" className="text-emerald-600 font-medium">enquiry@mridhuvassociates.com</a>.
           </p>
@@ -80,7 +80,7 @@ export default function TrademarkSearchPage() {
           className="mt-10 p-6 bg-emerald-50 border border-emerald-100 rounded-2xl"
         >
           <h3 className="font-semibold text-gray-900 mb-2">Ready to register your trademark?</h3>
-          <p className="text-[14px] text-gray-500 mb-4">We handle the complete trademark registration process — from search to certificate.</p>
+          <p className="text-[calc(14px+1.5pt)] text-gray-500 mb-4">We handle the complete trademark registration process — from search to certificate.</p>
           <Link to="/service/trademark-registration" className="inline-flex items-center gap-2 text-emerald-600 font-semibold hover:text-emerald-700">
             Trademark Registration <ChevronRight className="w-4 h-4" />
           </Link>

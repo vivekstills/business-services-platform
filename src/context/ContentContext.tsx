@@ -40,7 +40,7 @@ const defaultContent: Content = {
   contact: {
     email: CONTACT_EMAIL,
     phone: CONTACT_PHONE,
-    address: 'Mumbai, Maharashtra, India',
+    address: 'Om Chambers, 468/A, 4th Floor, Binnamangala, 1st Stage, Indiranagar, Bangalore North, Karnataka – 560038.',
   },
   footer: {
     tagline: "India's trusted platform for business registrations, tax compliance and legal services.",
@@ -95,7 +95,18 @@ const defaultContent: Content = {
       { label: 'About Us', to: '/about-us' },
       { label: 'Contact Us', to: '/contact-us' },
     ],
-    address: 'Mumbai, Maharashtra, India',
+    logoAlt: 'Mridhuv Associates',
+    quickToolsHeading: 'Quick Tools',
+    quickTools: [
+      { label: 'Business Search', to: '/business-search' },
+      { label: 'Trademark Search', to: '/trademark-search' },
+    ],
+    paymentTitle: 'Make a Payment',
+    paymentFootnote: 'Secured by Razorpay · 256-bit SSL encryption',
+    paymentPayButtonLabel: 'Pay Now',
+    paymentSuccessTitle: 'Payment successful!',
+    paymentSuccessSub: "You'll receive a confirmation shortly.",
+    copyrightLine: '© {{year}} Mridhuv Associates. All rights reserved.',
   },
   categories: SERVICE_CATEGORIES,
   services: SERVICES,
@@ -184,6 +195,7 @@ const defaultContent: Content = {
     description:
       '120+ services across registrations, tax, IP, compliance and more — handled end‑to‑end by experts.',
   },
+  stateServiceHints: {},
 };
 
 function deepMerge<T>(target: T, source: Partial<T>): T {
