@@ -50,7 +50,7 @@ export default function CategoryPage() {
           <motion.p
             initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            className="text-gray-500 max-w-2xl text-[calc(15px+2pt)]"
+            className="text-gray-500 max-w-2xl text-[calc(15px+3pt)]"
           >
             {category.description}
           </motion.p>
@@ -81,17 +81,17 @@ export default function CategoryPage() {
                   className="group flex flex-col h-full p-6 rounded-xl border border-gray-200/60 bg-white/80 backdrop-blur-sm shadow-sm hover:shadow-xl hover:shadow-blue-100/40 hover:border-blue-200/60 hover:-translate-y-1 transition-all duration-300"
                 >
                   <div className="flex-1">
-                    <div className="text-[calc(11px+2pt)] font-bold text-blue-500 uppercase tracking-widest mb-2">
+                    <div className="text-[calc(11px+3pt)] font-bold text-blue-500 uppercase tracking-widest mb-2">
                       {s.mainHead}
                     </div>
-                    <h3 className="text-[calc(15px+2pt)] font-semibold text-gray-800 group-hover:text-blue-700 transition-colors leading-snug mb-2">
+                    <h3 className="text-[calc(15px+3pt)] font-semibold text-gray-800 group-hover:text-blue-700 transition-colors leading-snug mb-2">
                       {s.name}
                     </h3>
-                    <p className="text-[calc(13px+2pt)] text-gray-400 leading-relaxed line-clamp-2">
+                    <p className="text-[calc(13px+3pt)] text-gray-400 leading-relaxed line-clamp-2">
                       {s.shortDescription || 'Expert assistance for this service — view details to get started.'}
                     </p>
                   </div>
-                  <div className="mt-4 flex items-center gap-1.5 text-[calc(12px+2pt)] font-semibold text-gray-400 group-hover:text-blue-600 transition-colors">
+                  <div className="mt-4 flex items-center gap-1.5 text-[calc(12px+3pt)] font-semibold text-gray-400 group-hover:text-blue-600 transition-colors">
                     View & apply <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                   </div>
                 </Link>

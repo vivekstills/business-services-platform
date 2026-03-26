@@ -109,7 +109,7 @@ function ServiceEditorBody({
                     type="button"
                     onClick={() => setPopular(s.id, i)}
                     title={pkg.popular ? 'Remove Most Popular' : 'Mark as Most Popular'}
-                    className={`text-[calc(10px+2pt)] font-bold px-2 py-1 rounded-full border transition-all ${
+                    className={`text-[calc(10px+3pt)] font-bold px-2 py-1 rounded-full border transition-all ${
                       pkg.popular
                         ? 'bg-amber-400 border-amber-400 text-amber-900'
                         : 'border-gray-200 text-gray-400 hover:border-amber-300 hover:text-amber-600'
@@ -164,7 +164,7 @@ function ServiceEditorBody({
                     type="button"
                     onClick={() => setPopular(s.id, i)}
                     title={pkg.popular ? 'Remove Most Popular' : 'Mark as Most Popular'}
-                    className={`text-[calc(10px+2pt)] font-bold px-2 py-1 rounded-full border transition-all ${
+                    className={`text-[calc(10px+3pt)] font-bold px-2 py-1 rounded-full border transition-all ${
                       pkg.popular
                         ? 'bg-amber-400 border-amber-400 text-amber-900'
                         : 'border-gray-200 text-gray-400 hover:border-amber-300 hover:text-amber-600'
@@ -204,7 +204,7 @@ function ServiceEditorBody({
       <div className="flex flex-wrap items-start justify-between gap-3 pb-2 border-b border-gray-200">
         <div>
           <p className="text-xs font-semibold text-gray-700 uppercase tracking-wide">Placement & URL</p>
-          <p className="text-[calc(11px+2pt)] text-gray-400 mt-0.5">
+          <p className="text-[calc(11px+3pt)] text-gray-400 mt-0.5">
             Category controls mega-menu and category page. Slug is used in <code className="text-gray-600">/service/…</code>.
           </p>
         </div>
@@ -253,7 +253,7 @@ function ServiceEditorBody({
             }}
             className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-blue-400 focus:ring-1 focus:ring-blue-100 font-mono text-sm"
           />
-          <p className="text-[calc(10px+2pt)] text-amber-700 mt-1">
+          <p className="text-[calc(10px+3pt)] text-amber-700 mt-1">
             Changing the slug breaks old links. Use lowercase letters, numbers, and hyphens only.
           </p>
         </div>
@@ -405,7 +405,7 @@ function ContentEditor({ value, onChange }: { value: string; onChange: (v: strin
                 </div>
                 <div className="space-y-2">
                   <div>
-                    <label className="block text-[calc(11px+2pt)] font-medium text-gray-500 mb-1">Display text</label>
+                    <label className="block text-[calc(11px+3pt)] font-medium text-gray-500 mb-1">Display text</label>
                     <input
                       autoFocus
                       value={linkText}
@@ -415,7 +415,7 @@ function ContentEditor({ value, onChange }: { value: string; onChange: (v: strin
                     />
                   </div>
                   <div>
-                    <label className="block text-[calc(11px+2pt)] font-medium text-gray-500 mb-1">URL</label>
+                    <label className="block text-[calc(11px+3pt)] font-medium text-gray-500 mb-1">URL</label>
                     <input
                       value={linkUrl}
                       onChange={(e) => setLinkUrl(e.target.value)}
@@ -462,7 +462,7 @@ function ContentEditor({ value, onChange }: { value: string; onChange: (v: strin
           className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-blue-400 focus:ring-1 focus:ring-blue-100 font-mono text-sm leading-relaxed"
         />
       )}
-      <p className="text-[calc(11px+2pt)] text-gray-400">
+      <p className="text-[calc(11px+3pt)] text-gray-400">
         Use ## headings, ### subheadings, - bullets, 1. numbered, **bold**, [text](url) links
       </p>
     </div>
@@ -487,28 +487,28 @@ function StepsEditor({
   return (
     <div className="space-y-2">
       <div className="flex items-center justify-between">
-        <label className="text-[calc(11px+2pt)] font-bold uppercase tracking-wider text-gray-400">How It Works — Steps</label>
+        <label className="text-[calc(11px+3pt)] font-bold uppercase tracking-wider text-gray-400">How It Works — Steps</label>
         <button
           onClick={add}
           type="button"
-          className="flex items-center gap-1 text-[calc(11px+2pt)] text-blue-500 hover:text-blue-700 font-semibold"
+          className="flex items-center gap-1 text-[calc(11px+3pt)] text-blue-500 hover:text-blue-700 font-semibold"
         >
           <Plus className="w-3 h-3" /> Add step
         </button>
       </div>
       {steps.length === 0 && (
-        <p className="text-[calc(11px+2pt)] text-gray-300 italic">No steps — default steps will be used. Click "Add step" to customise.</p>
+        <p className="text-[calc(11px+3pt)] text-gray-300 italic">No steps — default steps will be used. Click "Add step" to customise.</p>
       )}
       {steps.map((step, i) => (
         <div key={i} className="flex items-center gap-2">
-          <span className="w-5 h-5 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center text-[calc(10px+2pt)] font-bold text-blue-700 flex-shrink-0">
+          <span className="w-5 h-5 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center text-[calc(10px+3pt)] font-bold text-blue-700 flex-shrink-0">
             {i + 1}
           </span>
           <input
             value={step}
             onChange={(e) => update(i, e.target.value)}
             placeholder={`Step ${i + 1}…`}
-            className="flex-1 px-2.5 py-1.5 rounded border border-gray-200 text-[calc(12.5px+2pt)] focus:border-blue-400 focus:ring-1 focus:ring-blue-100"
+            className="flex-1 px-2.5 py-1.5 rounded border border-gray-200 text-[calc(12.5px+3pt)] focus:border-blue-400 focus:ring-1 focus:ring-blue-100"
           />
           <button
             onClick={() => remove(i)}
@@ -541,17 +541,17 @@ function PackageFeaturesEditor({
   return (
     <div className="space-y-1.5">
       <div className="flex items-center justify-between mb-1">
-        <label className="text-[calc(11px+2pt)] font-bold uppercase tracking-wider text-gray-400">What's Included</label>
+        <label className="text-[calc(11px+3pt)] font-bold uppercase tracking-wider text-gray-400">What's Included</label>
         <button
           onClick={add}
           type="button"
-          className="flex items-center gap-1 text-[calc(11px+2pt)] text-blue-500 hover:text-blue-700 font-semibold"
+          className="flex items-center gap-1 text-[calc(11px+3pt)] text-blue-500 hover:text-blue-700 font-semibold"
         >
           <Plus className="w-3 h-3" /> Add item
         </button>
       </div>
       {features.length === 0 && (
-        <p className="text-[calc(11px+2pt)] text-gray-300 italic">No items yet. Click "Add item" to add bullet points.</p>
+        <p className="text-[calc(11px+3pt)] text-gray-300 italic">No items yet. Click "Add item" to add bullet points.</p>
       )}
       {features.map((f, i) => (
         <div key={i} className="flex items-center gap-1.5">
@@ -560,7 +560,7 @@ function PackageFeaturesEditor({
             value={f}
             onChange={(e) => update(i, e.target.value)}
             placeholder={`Feature ${i + 1}`}
-            className="flex-1 px-2.5 py-1 rounded border border-gray-200 text-[calc(12.5px+2pt)] focus:border-blue-400 focus:ring-1 focus:ring-blue-100"
+            className="flex-1 px-2.5 py-1 rounded border border-gray-200 text-[calc(12.5px+3pt)] focus:border-blue-400 focus:ring-1 focus:ring-blue-100"
           />
           <button
             onClick={() => remove(i)}

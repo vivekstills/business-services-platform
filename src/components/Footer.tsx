@@ -138,9 +138,9 @@ function PayWidget({
     return (
       <div className="flex flex-col items-center gap-3 py-6 text-center">
         <CheckCircle2 className="w-10 h-10 text-green-400" />
-        <p className="text-[calc(15px+2pt)] text-slate-200 font-semibold">{successTitle}</p>
-        <p className="text-[calc(13px+2pt)] text-slate-400">{successSub}</p>
-        <button type="button" onClick={() => setStatus('idle')} className="mt-2 text-[calc(13px+2pt)] text-blue-400 hover:text-blue-300 underline">Make another payment</button>
+        <p className="text-[calc(15px+3pt)] text-slate-200 font-semibold">{successTitle}</p>
+        <p className="text-[calc(13px+3pt)] text-slate-400">{successSub}</p>
+        <button type="button" onClick={() => setStatus('idle')} className="mt-2 text-[calc(13px+3pt)] text-blue-400 hover:text-blue-300 underline">Make another payment</button>
       </div>
     );
   }
@@ -155,7 +155,7 @@ function PayWidget({
           value={amount}
           onChange={(e) => { setAmount(e.target.value); setStatus('idle'); }}
           placeholder={placeholders.amount}
-          className="w-full pl-9 pr-4 py-2.5 rounded-lg bg-slate-800/70 border border-slate-600/50 text-white placeholder-slate-500 text-[calc(14px+2pt)] focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30"
+          className="w-full pl-9 pr-4 py-2.5 rounded-lg bg-slate-800/70 border border-slate-600/50 text-white placeholder-slate-500 text-[calc(14px+3pt)] focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30"
         />
       </div>
 
@@ -164,14 +164,14 @@ function PayWidget({
           value={name}
           onChange={(e) => { setName(e.target.value); setStatus('idle'); }}
           placeholder={placeholders.name}
-          className="px-3 py-2.5 rounded-lg bg-slate-800/70 border border-slate-600/50 text-white placeholder-slate-500 text-[calc(14px+2pt)] focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30"
+          className="px-3 py-2.5 rounded-lg bg-slate-800/70 border border-slate-600/50 text-white placeholder-slate-500 text-[calc(14px+3pt)] focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30"
         />
         <input
           type="tel"
           value={phone}
           onChange={(e) => { setPhone(e.target.value); setStatus('idle'); }}
           placeholder={placeholders.phone}
-          className="px-3 py-2.5 rounded-lg bg-slate-800/70 border border-slate-600/50 text-white placeholder-slate-500 text-[calc(14px+2pt)] focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30"
+          className="px-3 py-2.5 rounded-lg bg-slate-800/70 border border-slate-600/50 text-white placeholder-slate-500 text-[calc(14px+3pt)] focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30"
         />
       </div>
 
@@ -180,18 +180,18 @@ function PayWidget({
         value={email}
         onChange={(e) => { setEmail(e.target.value); setStatus('idle'); }}
         placeholder={placeholders.email}
-        className="w-full px-3 py-2.5 rounded-lg bg-slate-800/70 border border-slate-600/50 text-white placeholder-slate-500 text-[calc(14px+2pt)] focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30"
+        className="w-full px-3 py-2.5 rounded-lg bg-slate-800/70 border border-slate-600/50 text-white placeholder-slate-500 text-[calc(14px+3pt)] focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30"
       />
 
       <input
         value={note}
         onChange={(e) => { setNote(e.target.value); setStatus('idle'); }}
         placeholder={placeholders.note}
-        className="w-full px-3 py-2.5 rounded-lg bg-slate-800/70 border border-slate-600/50 text-white placeholder-slate-500 text-[calc(14px+2pt)] focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30"
+        className="w-full px-3 py-2.5 rounded-lg bg-slate-800/70 border border-slate-600/50 text-white placeholder-slate-500 text-[calc(14px+3pt)] focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30"
       />
 
       {status === 'error' && errMsg && (
-        <div className="flex items-center gap-2 text-red-400 text-[calc(13px+2pt)]">
+        <div className="flex items-center gap-2 text-red-400 text-[calc(13px+3pt)]">
           <AlertCircle className="w-4 h-4 flex-shrink-0" /> {errMsg}
         </div>
       )}
@@ -200,14 +200,14 @@ function PayWidget({
         type="button"
         onClick={handlePay}
         disabled={status === 'loading'}
-        className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-[calc(15px+2pt)] font-semibold transition-colors disabled:opacity-60"
+        className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-[calc(15px+3pt)] font-semibold transition-colors disabled:opacity-60"
       >
         {status === 'loading'
           ? <><Loader2 className="w-4 h-4 animate-spin" /> Processing…</>
           : <><CreditCard className="w-4 h-4" /> {payButtonLabel}</>}
       </button>
 
-      <p className="text-[calc(13px+2pt)] text-slate-500 text-center">{footnote}</p>
+      <p className="text-[calc(13px+3pt)] text-slate-500 text-center">{footnote}</p>
     </div>
   );
 }
@@ -217,9 +217,9 @@ function formatCopyright(line: string | undefined, year: number): string {
   return raw.replace(/\{\{year\}\}/gi, String(year));
 }
 
-const footText = 'text-[calc(14px+2pt)]';
-const footMuted = 'text-[calc(14px+2pt)] text-slate-400';
-const footHeading = 'text-[calc(12px+2pt)] font-bold uppercase tracking-widest text-slate-500';
+const footText = 'text-[calc(14px+3pt)]';
+const footMuted = 'text-[calc(14px+3pt)] text-slate-400';
+const footHeading = 'text-[calc(12px+3pt)] font-bold uppercase tracking-widest text-slate-500';
 
 /* ── Footer ───────────────────────────────────────── */
 export default function Footer() {
@@ -335,18 +335,18 @@ export default function Footer() {
 
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 py-6 border-t border-slate-700/50">
           {footer.policyLinks.map((item) => (
-            <Link key={item.to} to={item.to} className="text-[calc(13px+2pt)] text-slate-400 hover:text-white transition-colors">
+            <Link key={item.to} to={item.to} className="text-[calc(13px+3pt)] text-slate-400 hover:text-white transition-colors">
               {item.label}
             </Link>
           ))}
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-slate-700/50 pt-8">
-          <p className="text-[calc(13px+2pt)] text-slate-400 text-center sm:text-left">
+          <p className="text-[calc(13px+3pt)] text-slate-400 text-center sm:text-left">
             {copyrightText}
           </p>
           {showBottomContact && (
-            <div className="flex items-center gap-4 text-[calc(13px+2pt)] text-slate-400">
+            <div className="flex items-center gap-4 text-[calc(13px+3pt)] text-slate-400">
               <a href={`mailto:${contact.email}`} className="hover:text-white transition-colors">{contact.email}</a>
               <a href={`tel:${contact.phone.replace(/\s/g, '')}`} className="hover:text-white transition-colors">{contact.phone}</a>
             </div>

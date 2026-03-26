@@ -208,14 +208,14 @@ export default function ServiceLeadHero({ service }: Props) {
   };
 
   const inputCls = (key: string) =>
-    `w-full h-[44px] rounded-xl bg-white border px-3 pl-9 text-[calc(13.5px+2pt)] text-gray-800 placeholder-gray-300 focus:outline-none transition-all shadow-sm ${
+    `w-full h-[44px] rounded-xl bg-white border px-3 pl-9 text-[calc(13.5px+3pt)] text-gray-800 placeholder-gray-300 focus:outline-none transition-all shadow-sm ${
       errors[key]
         ? 'border-red-300 focus:border-red-400 focus:ring-2 focus:ring-red-100'
         : 'border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100'
     }`;
 
   const selectCls = (key: string) =>
-    `w-full h-[44px] rounded-xl bg-white border pl-9 pr-4 text-[calc(13.5px+2pt)] text-gray-700 focus:outline-none transition-all shadow-sm appearance-none cursor-pointer ${
+    `w-full h-[44px] rounded-xl bg-white border pl-9 pr-4 text-[calc(13.5px+3pt)] text-gray-700 focus:outline-none transition-all shadow-sm appearance-none cursor-pointer ${
       errors[key]
         ? 'border-red-300 focus:border-red-400 focus:ring-2 focus:ring-red-100'
         : 'border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100'
@@ -260,7 +260,7 @@ export default function ServiceLeadHero({ service }: Props) {
               <motion.p
                 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.05 }}
-                className="text-gray-500 text-[calc(15px+2pt)] leading-relaxed mb-8"
+                className="text-gray-500 text-[calc(15px+3pt)] leading-relaxed mb-8"
               >
                 {service.shortDescription || 'Get complete expert support. We handle documentation, filing and follow-ups — so you can focus on your business.'}
               </motion.p>
@@ -270,13 +270,13 @@ export default function ServiceLeadHero({ service }: Props) {
                 transition={{ delay: 0.1 }}
                 className="space-y-3"
               >
-                <p className="text-[calc(11px+2pt)] font-bold uppercase tracking-widest text-gray-400 mb-4">How it works</p>
+                <p className="text-[calc(11px+3pt)] font-bold uppercase tracking-widest text-gray-400 mb-4">How it works</p>
                 {steps.map((step, idx) => (
                   <div key={idx} className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center text-[calc(11px+2pt)] font-bold text-blue-700 flex-shrink-0 mt-0.5">
+                    <div className="w-6 h-6 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center text-[calc(11px+3pt)] font-bold text-blue-700 flex-shrink-0 mt-0.5">
                       {idx + 1}
                     </div>
-                    <span className="text-[calc(13.5px+2pt)] text-gray-600 leading-snug">{step}</span>
+                    <span className="text-[calc(13.5px+3pt)] text-gray-600 leading-snug">{step}</span>
                   </div>
                 ))}
               </motion.div>
@@ -288,13 +288,13 @@ export default function ServiceLeadHero({ service }: Props) {
               transition={{ delay: 0.08 }}
             >
               <div className="bg-white/90 backdrop-blur-xl border border-white/60 ring-1 ring-gray-200/50 rounded-2xl p-7 shadow-2xl shadow-blue-100/20">
-                <p className="text-[calc(11px+2pt)] font-bold uppercase tracking-widest text-gray-400 mb-1">Apply for</p>
+                <p className="text-[calc(11px+3pt)] font-bold uppercase tracking-widest text-gray-400 mb-1">Apply for</p>
                 <h2 className="text-xl font-bold text-gray-900 mb-6">{service.name}</h2>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                   {/* Name */}
                   <div>
-                    <label className="block text-[calc(12px+2pt)] font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
+                    <label className="block text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
                       Name
                     </label>
                     <div className="relative">
@@ -307,12 +307,12 @@ export default function ServiceLeadHero({ service }: Props) {
                       />
                       {errors.name && <AlertCircle className="absolute right-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-red-400" />}
                     </div>
-                    {errors.name && <p className="text-[calc(11px+2pt)] text-red-500 mt-1">{errors.name}</p>}
+                    {errors.name && <p className="text-[calc(11px+3pt)] text-red-500 mt-1">{errors.name}</p>}
                   </div>
 
                   {/* Email */}
                   <div>
-                    <label className="block text-[calc(12px+2pt)] font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
+                    <label className="block text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
                       Email
                     </label>
                     <div className="relative">
@@ -325,12 +325,12 @@ export default function ServiceLeadHero({ service }: Props) {
                         placeholder="you@company.com"
                       />
                     </div>
-                    {errors.email && <p className="text-[calc(11px+2pt)] text-red-500 mt-1">{errors.email}</p>}
+                    {errors.email && <p className="text-[calc(11px+3pt)] text-red-500 mt-1">{errors.email}</p>}
                   </div>
 
                   {/* Phone */}
                   <div>
-                    <label className="block text-[calc(12px+2pt)] font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
+                    <label className="block text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
                       Phone Number
                     </label>
                     <div className="relative">
@@ -343,12 +343,12 @@ export default function ServiceLeadHero({ service }: Props) {
                         placeholder="Your phone number"
                       />
                     </div>
-                    {errors.phone && <p className="text-[calc(11px+2pt)] text-red-500 mt-1">{errors.phone}</p>}
+                    {errors.phone && <p className="text-[calc(11px+3pt)] text-red-500 mt-1">{errors.phone}</p>}
                   </div>
 
                   {/* State */}
                   <div>
-                    <label className="block text-[calc(12px+2pt)] font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
+                    <label className="block text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
                       State / UT
                     </label>
                     <div className="relative">
@@ -365,7 +365,7 @@ export default function ServiceLeadHero({ service }: Props) {
                       </select>
                       {errors.state && <AlertCircle className="absolute right-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-red-400 pointer-events-none" />}
                     </div>
-                    {errors.state && <p className="text-[calc(11px+2pt)] text-red-500 mt-1">{errors.state}</p>}
+                    {errors.state && <p className="text-[calc(11px+3pt)] text-red-500 mt-1">{errors.state}</p>}
 
                     {/* Contextual state hint */}
                     <AnimatePresence>
@@ -379,7 +379,7 @@ export default function ServiceLeadHero({ service }: Props) {
                         >
                           <div className="mt-2 flex items-start gap-2 bg-blue-50 border border-blue-100 rounded-lg px-3 py-2">
                             <Info className="w-3.5 h-3.5 text-blue-500 flex-shrink-0 mt-0.5" />
-                            <p className="text-[calc(11.5px+2pt)] text-blue-700 leading-snug">{hint}</p>
+                            <p className="text-[calc(11.5px+3pt)] text-blue-700 leading-snug">{hint}</p>
                           </div>
                         </motion.div>
                       )}
@@ -389,7 +389,7 @@ export default function ServiceLeadHero({ service }: Props) {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full h-[46px] rounded-xl bg-gradient-to-r from-blue-600 to-blue-600 text-white text-[calc(14px+2pt)] font-semibold flex items-center justify-center gap-2 shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-0.5 transition-all disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                    className="w-full h-[46px] rounded-xl bg-gradient-to-r from-blue-600 to-blue-600 text-white text-[calc(14px+3pt)] font-semibold flex items-center justify-center gap-2 shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-0.5 transition-all disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                   >
                     {isSubmitting ? (
                       <><svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" /></svg> Submitting…</>
@@ -401,19 +401,19 @@ export default function ServiceLeadHero({ service }: Props) {
                   {submitError && (
                     <div className="flex items-start gap-2 bg-red-50 border border-red-200 rounded-xl p-3">
                       <AlertCircle className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-[calc(12px+2pt)] text-red-600">{submitError}</span>
+                      <span className="text-[calc(12px+3pt)] text-red-600">{submitError}</span>
                     </div>
                   )}
                   {isSubmitted && (
                     <div className="flex items-start gap-2 bg-emerald-50 border border-emerald-200 rounded-xl p-3">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-[calc(12px+2pt)] text-emerald-700">
+                      <span className="text-[calc(12px+3pt)] text-emerald-700">
                         Confirmation sent to your email & phone. Our team will contact you shortly.
                       </span>
                     </div>
                   )}
 
-                  <p className="text-[calc(11px+2pt)] text-gray-400 leading-relaxed">
+                  <p className="text-[calc(11px+3pt)] text-gray-400 leading-relaxed">
                     By continuing you agree to be contacted by our team regarding{' '}
                     <span className="text-gray-600">{service.name}</span>.
                   </p>
@@ -457,7 +457,7 @@ export default function ServiceLeadHero({ service }: Props) {
                   ? servicePricingPage?.sectionTitle?.trim() || `Choose the right plan for ${service.name}`
                   : `Choose the right plan for ${service.name}`}
               </h2>
-              <p className="text-gray-500 text-[calc(15px+2pt)]">
+              <p className="text-gray-500 text-[calc(15px+3pt)]">
                 {hasCustomTabbedPricing
                   ? servicePricingPage?.sectionSubtitle?.trim() ||
                     'All plans include expert support, document handling and follow-up until completion.'
@@ -487,7 +487,7 @@ export default function ServiceLeadHero({ service }: Props) {
             )}
 
             {hasCustomTabbedPricing && customPricingTabs[Math.min(serviceTabIdx, customPricingTabs.length - 1)]?.description?.trim() && (
-              <p className="text-gray-600 text-[calc(14px+2pt)] mb-8 max-w-3xl">
+              <p className="text-gray-600 text-[calc(14px+3pt)] mb-8 max-w-3xl">
                 {customPricingTabs[Math.min(serviceTabIdx, customPricingTabs.length - 1)].description!.trim()}
               </p>
             )}
@@ -503,7 +503,7 @@ export default function ServiceLeadHero({ service }: Props) {
                   className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 rounded-xl px-4 py-2.5 mb-8"
                 >
                   <MapPin className="w-3.5 h-3.5 text-blue-500 flex-shrink-0" />
-                  <p className="text-[calc(12.5px+2pt)] text-blue-700 font-medium">
+                  <p className="text-[calc(12.5px+3pt)] text-blue-700 font-medium">
                     Pricing updated for <strong>{selectedState}</strong> — includes state-specific government fees & compliance.
                   </p>
                 </motion.div>
@@ -538,7 +538,7 @@ export default function ServiceLeadHero({ service }: Props) {
                       >
                         {showBadgePill && (
                           <div className="absolute -top-3.5 left-6">
-                            <span className={`px-3 py-1 rounded-full text-[calc(11px+2pt)] font-bold shadow ${badgeClass}`}>
+                            <span className={`px-3 py-1 rounded-full text-[calc(11px+3pt)] font-bold shadow ${badgeClass}`}>
                               {badgeLabel}
                             </span>
                           </div>
@@ -553,19 +553,19 @@ export default function ServiceLeadHero({ service }: Props) {
                               {pkg.price}
                             </span>
                           </div>
-                          <p className={`text-[calc(13px+2pt)] ${isGradient ? 'text-blue-200' : 'text-gray-400'}`}>
+                          <p className={`text-[calc(13px+3pt)] ${isGradient ? 'text-blue-200' : 'text-gray-400'}`}>
                             {pkg.description}
                           </p>
                         </div>
 
                         {pkg.features && pkg.features.length > 0 && (
                           <div className="flex-1 mb-8">
-                            <p className={`text-[calc(10.5px+2pt)] font-bold uppercase tracking-[0.15em] mb-3 ${isGradient ? 'text-blue-300' : 'text-gray-400'}`}>
+                            <p className={`text-[calc(10.5px+3pt)] font-bold uppercase tracking-[0.15em] mb-3 ${isGradient ? 'text-blue-300' : 'text-gray-400'}`}>
                               What's included:
                             </p>
                             <ul className="space-y-3">
                               {pkg.features.map((f, fi) => (
-                                <li key={fi} className={`flex items-start gap-2.5 text-[calc(13.5px+2pt)] ${isGradient ? 'text-blue-100' : 'text-gray-600'}`}>
+                                <li key={fi} className={`flex items-start gap-2.5 text-[calc(13.5px+3pt)] ${isGradient ? 'text-blue-100' : 'text-gray-600'}`}>
                                   <div className={`mt-0.5 w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 ${isGradient ? 'bg-white/20' : 'bg-emerald-50'}`}>
                                     <Check className={`w-2.5 h-2.5 ${isGradient ? 'text-white' : 'text-emerald-600'}`} />
                                   </div>
@@ -583,7 +583,7 @@ export default function ServiceLeadHero({ service }: Props) {
                                 setPaymentPkg({ name: pkg.name, price: pkg.price, amount: amountPaise });
                                 setPaymentOpen(true);
                               }}
-                              className={`w-full flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-[calc(13.5px+2pt)] font-semibold transition-all ${
+                              className={`w-full flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-[calc(13.5px+3pt)] font-semibold transition-all ${
                                 isGradient
                                   ? 'bg-white text-blue-700 hover:bg-blue-50 shadow-lg'
                                   : 'bg-blue-600 text-white hover:bg-blue-700 shadow-sm shadow-blue-200'
@@ -594,7 +594,7 @@ export default function ServiceLeadHero({ service }: Props) {
                           )}
                           <button
                             onClick={() => document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' })}
-                            className={`w-full flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-[calc(13.5px+2pt)] font-semibold transition-all ${
+                            className={`w-full flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-[calc(13.5px+3pt)] font-semibold transition-all ${
                               isGradient
                                 ? 'border border-white/30 text-white/80 hover:bg-white/10'
                                 : 'border border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300'
@@ -631,7 +631,7 @@ export default function ServiceLeadHero({ service }: Props) {
                           >
                             {showBadgePill && (
                               <div className="absolute -top-3 left-5">
-                                <span className={`px-2.5 py-0.5 rounded-full text-[calc(10px+2pt)] font-bold shadow ${badgeClass}`}>
+                                <span className={`px-2.5 py-0.5 rounded-full text-[calc(10px+3pt)] font-bold shadow ${badgeClass}`}>
                                   {badgeLabel}
                                 </span>
                               </div>
@@ -645,7 +645,7 @@ export default function ServiceLeadHero({ service }: Props) {
                                   {pkg.price}
                                 </div>
                                 {pkg.description && (
-                                  <p className={`text-[calc(12px+2pt)] mt-1 ${isGradient ? 'text-blue-200' : 'text-gray-400'}`}>
+                                  <p className={`text-[calc(12px+3pt)] mt-1 ${isGradient ? 'text-blue-200' : 'text-gray-400'}`}>
                                     {pkg.description}
                                   </p>
                                 )}
@@ -655,7 +655,7 @@ export default function ServiceLeadHero({ service }: Props) {
                             {pkg.features && pkg.features.length > 0 && (
                               <ul className="space-y-2 mb-4 flex-1">
                                 {pkg.features.map((f, fi) => (
-                                  <li key={fi} className={`flex items-start gap-2 text-[calc(12.5px+2pt)] ${isGradient ? 'text-blue-100' : 'text-gray-600'}`}>
+                                  <li key={fi} className={`flex items-start gap-2 text-[calc(12.5px+3pt)] ${isGradient ? 'text-blue-100' : 'text-gray-600'}`}>
                                     <div className={`mt-0.5 w-3.5 h-3.5 rounded-full flex items-center justify-center flex-shrink-0 ${isGradient ? 'bg-white/20' : 'bg-emerald-50'}`}>
                                       <Check className={`w-2 h-2 ${isGradient ? 'text-white' : 'text-emerald-600'}`} />
                                     </div>
@@ -672,7 +672,7 @@ export default function ServiceLeadHero({ service }: Props) {
                                     setPaymentPkg({ name: pkg.name, price: pkg.price, amount: amountPaise });
                                     setPaymentOpen(true);
                                   }}
-                                  className={`w-full flex items-center justify-center gap-1.5 rounded-xl px-4 py-2.5 text-[calc(13px+2pt)] font-semibold transition-all ${
+                                  className={`w-full flex items-center justify-center gap-1.5 rounded-xl px-4 py-2.5 text-[calc(13px+3pt)] font-semibold transition-all ${
                                     isGradient
                                       ? 'bg-white text-blue-700 hover:bg-blue-50 shadow-md'
                                       : 'bg-blue-600 text-white hover:bg-blue-700 shadow-sm shadow-blue-200'
@@ -683,7 +683,7 @@ export default function ServiceLeadHero({ service }: Props) {
                               )}
                               <button
                                 onClick={() => document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' })}
-                                className={`w-full flex items-center justify-center gap-1.5 rounded-xl px-4 py-2.5 text-[calc(13px+2pt)] font-semibold transition-all ${
+                                className={`w-full flex items-center justify-center gap-1.5 rounded-xl px-4 py-2.5 text-[calc(13px+3pt)] font-semibold transition-all ${
                                   isGradient
                                     ? 'border border-white/30 text-white/80 hover:bg-white/10'
                                     : 'border border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300'

@@ -50,17 +50,17 @@ export default function ReviewsPage() {
                 <Star key={j} className="w-4 h-4 text-amber-400 fill-amber-400" />
               ))}
             </div>
-            <p className="text-gray-600 text-[calc(15px+2pt)] leading-relaxed mb-4">&ldquo;{r.text}&rdquo;</p>
+            <p className="text-gray-600 text-[calc(15px+3pt)] leading-relaxed mb-4">&ldquo;{r.text}&rdquo;</p>
             <div>
               <div className="font-semibold text-gray-900">{r.name}</div>
-              <div className="text-[calc(13px+2pt)] text-gray-500">{r.role}</div>
+              <div className="text-[calc(13px+3pt)] text-gray-500">{r.role}</div>
             </div>
           </motion.div>
         ))}
       </div>
       <div className="mt-12 p-6 bg-blue-50 border border-blue-100 rounded-2xl text-center">
         <p className="text-gray-700 font-medium mb-2">Share your experience with us</p>
-        <p className="text-[calc(14px+2pt)] text-gray-500 mb-4">We'd love to hear from you. Email your review to <a href="mailto:enquiry@mridhuvassociates.com" className="text-blue-600 font-semibold">enquiry@mridhuvassociates.com</a></p>
+        <p className="text-[calc(14px+3pt)] text-gray-500 mb-4">We'd love to hear from you. Email your review to <a href="mailto:enquiry@mridhuvassociates.com" className="text-blue-600 font-semibold">enquiry@mridhuvassociates.com</a></p>
         <Link to="/contact-us" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700">
           Contact Us <ChevronRight className="w-4 h-4" />
         </Link>

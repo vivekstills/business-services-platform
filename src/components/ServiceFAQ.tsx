@@ -31,7 +31,7 @@ function FAQItem({ faq, index, openIndex, setOpenIndex }: {
         onClick={() => setOpenIndex(isOpen ? null : index)}
         className="w-full flex items-start justify-between gap-4 px-5 py-4 text-left"
       >
-        <span className={`text-[calc(14px+2pt)] font-medium leading-snug transition-colors ${isOpen ? 'text-blue-800' : 'text-gray-700'}`}>
+        <span className={`text-[calc(14px+3pt)] font-medium leading-snug transition-colors ${isOpen ? 'text-blue-800' : 'text-gray-700'}`}>
           {faq.q}
         </span>
         <ChevronDown
@@ -51,7 +51,7 @@ function FAQItem({ faq, index, openIndex, setOpenIndex }: {
           >
             <div className="px-5 pb-5 pt-0">
               <div className="h-px bg-blue-100 mb-4" />
-              <p className="text-[calc(13.5px+2pt)] text-gray-500 leading-relaxed">{faq.a}</p>
+              <p className="text-[calc(13.5px+3pt)] text-gray-500 leading-relaxed">{faq.a}</p>
             </div>
           </motion.div>
         )}
@@ -111,9 +111,9 @@ export default function ServiceFAQ({ faqs, stateFAQs = [], serviceName, selected
             <div className="flex items-center gap-2.5 mb-5">
               <div className="flex items-center gap-2 bg-blue-600 text-white px-3.5 py-1.5 rounded-full">
                 <MapPin className="w-3.5 h-3.5" />
-                <span className="text-[calc(12px+2pt)] font-bold">{selectedState}</span>
+                <span className="text-[calc(12px+3pt)] font-bold">{selectedState}</span>
               </div>
-              <h3 className="text-[calc(16px+2pt)] font-bold text-gray-800">
+              <h3 className="text-[calc(16px+3pt)] font-bold text-gray-800">
                 State-specific FAQs
               </h3>
             </div>
@@ -132,7 +132,7 @@ export default function ServiceFAQ({ faqs, stateFAQs = [], serviceName, selected
                     onClick={() => setStateOpen(stateOpen === idx ? null : idx)}
                     className="w-full flex items-start justify-between gap-4 px-5 py-4 text-left"
                   >
-                    <span className={`text-[calc(14px+2pt)] font-medium leading-snug transition-colors ${stateOpen === idx ? 'text-blue-800' : 'text-gray-700'}`}>
+                    <span className={`text-[calc(14px+3pt)] font-medium leading-snug transition-colors ${stateOpen === idx ? 'text-blue-800' : 'text-gray-700'}`}>
                       {faq.q}
                     </span>
                     <ChevronDown
@@ -152,7 +152,7 @@ export default function ServiceFAQ({ faqs, stateFAQs = [], serviceName, selected
                       >
                         <div className="px-5 pb-5 pt-0">
                           <div className="h-px bg-blue-100 mb-4" />
-                          <p className="text-[calc(13.5px+2pt)] text-gray-500 leading-relaxed">{faq.a}</p>
+                          <p className="text-[calc(13.5px+3pt)] text-gray-500 leading-relaxed">{faq.a}</p>
                         </div>
                       </motion.div>
                     )}
@@ -175,7 +175,7 @@ export default function ServiceFAQ({ faqs, stateFAQs = [], serviceName, selected
             className="mt-8 flex items-center gap-2.5 bg-gray-50 border border-gray-200 rounded-xl px-4 py-3"
           >
             <MapPin className="w-4 h-4 text-gray-400 flex-shrink-0" />
-            <p className="text-[calc(12.5px+2pt)] text-gray-500">
+            <p className="text-[calc(12.5px+3pt)] text-gray-500">
               The FAQs above apply to <strong>{selectedState}</strong>. For state-specific queries, call us at{' '}
               <a href={`tel:${phone.replace(/\s/g, '')}`} className="text-blue-600 font-semibold">{phone}</a>.
             </p>

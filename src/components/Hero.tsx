@@ -47,7 +47,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.05 }}
-              className="text-4xl sm:text-5xl lg:text-[calc(58px+2pt)] font-bold text-gray-900 tracking-tight leading-[1.1] mb-6"
+              className="text-4xl sm:text-5xl lg:text-[calc(58px+3pt)] font-bold text-gray-900 tracking-tight leading-[1.1] mb-6"
             >
               {hero.headline.includes(' with ') ? (
                 <>
@@ -68,7 +68,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-[calc(17px+2pt)] text-gray-500 leading-relaxed max-w-xl mb-10"
+              className="text-[calc(17px+3pt)] text-gray-500 leading-relaxed max-w-xl mb-10"
             >
               {hero.subheadline}
             </motion.p>
@@ -82,13 +82,13 @@ export default function Hero() {
             >
               <Link
                 to="/category/new-business"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-sky-600 text-white text-[calc(14px+2pt)] font-semibold shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-0.5 transition-all"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-sky-600 text-white text-[calc(14px+3pt)] font-semibold shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-0.5 transition-all"
               >
                 Get Started <ArrowRight className="w-4 h-4" />
               </Link>
               <a
                 href={`tel:${contact.phone.replace(/\s/g, '')}`}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border border-gray-200 text-gray-700 text-[calc(14px+2pt)] font-semibold hover:bg-gray-50 hover:border-gray-300 transition-all"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border border-gray-200 text-gray-700 text-[calc(14px+3pt)] font-semibold hover:bg-gray-50 hover:border-gray-300 transition-all"
               >
                 <Phone className="w-4 h-4 text-blue-500" /> Talk to an expert
               </a>
@@ -128,14 +128,14 @@ export default function Hero() {
                   <img src="/assets/logo.png" alt="Mridhuv Associates" className="h-12 sm:h-14 w-auto object-contain" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-1">{hero.trustCard.title}</h3>
-                <p className="text-gray-500 text-[calc(14px+2pt)] mb-6">{hero.trustCard.subtitle}</p>
+                <p className="text-gray-500 text-[calc(14px+3pt)] mb-6">{hero.trustCard.subtitle}</p>
                 <div className="space-y-3 mb-6">
                   {hero.trustCard.items.map((item, idx) => {
                     const colors = ['bg-green-50 text-green-700 border-green-200', 'bg-blue-50 text-blue-700 border-blue-200', 'bg-sky-50 text-sky-700 border-sky-200'];
                     return (
                     <div key={idx} className="flex items-center justify-between py-2.5 px-4 rounded-xl bg-gray-50 border border-gray-100">
-                      <span className="text-[calc(13.5px+2pt)] font-semibold text-gray-700">{item.label}</span>
-                      <span className={`text-[calc(11px+2pt)] font-bold px-2.5 py-1 rounded-full border ${colors[idx] ?? colors[0]}`}>{item.time}</span>
+                      <span className="text-[calc(13.5px+3pt)] font-semibold text-gray-700">{item.label}</span>
+                      <span className={`text-[calc(11px+3pt)] font-bold px-2.5 py-1 rounded-full border ${colors[idx] ?? colors[0]}`}>{item.time}</span>
                     </div>
                   );
                   })}
@@ -145,14 +145,14 @@ export default function Hero() {
                   {[1,2,3,4,5].map((s) => (
                     <Star key={s} className="w-4 h-4 text-amber-400 fill-amber-400" />
                   ))}
-                  <span className="text-[calc(13px+2pt)] font-semibold text-gray-700 ml-1">{hero.trustCard.rating}</span>
-                  <span className="text-[calc(12px+2pt)] text-gray-400">· {hero.trustCard.reviews}</span>
+                  <span className="text-[calc(13px+3pt)] font-semibold text-gray-700 ml-1">{hero.trustCard.rating}</span>
+                  <span className="text-[calc(12px+3pt)] text-gray-400">· {hero.trustCard.reviews}</span>
                 </div>
               </div>
               {/* Floating badge */}
               <div className="absolute -top-4 -right-4 bg-blue-600 text-white rounded-2xl px-4 py-2.5 shadow-lg shadow-blue-200">
-                <div className="text-[calc(22px+2pt)] font-black leading-none">{hero.trustCard.badgeValue}</div>
-                <div className="text-[calc(10px+2pt)] font-semibold opacity-80">{hero.trustCard.badgeLabel}</div>
+                <div className="text-[calc(22px+3pt)] font-black leading-none">{hero.trustCard.badgeValue}</div>
+                <div className="text-[calc(10px+3pt)] font-semibold opacity-80">{hero.trustCard.badgeLabel}</div>
               </div>
             </div>
           </motion.div>

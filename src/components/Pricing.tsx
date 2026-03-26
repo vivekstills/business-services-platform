@@ -30,7 +30,7 @@ function PlanGrid({ plans }: { plans: PricingPlan[] }) {
         >
           {plan.badge && (
             <div className="absolute -top-3.5 left-6">
-              <span className="px-3 py-1 rounded-full bg-amber-400 text-amber-900 text-[calc(11px+2pt)] font-bold shadow">
+              <span className="px-3 py-1 rounded-full bg-amber-400 text-amber-900 text-[calc(11px+3pt)] font-bold shadow">
                 {plan.badge}
               </span>
             </div>
@@ -45,13 +45,13 @@ function PlanGrid({ plans }: { plans: PricingPlan[] }) {
                 {plan.price}
               </span>
             </div>
-            <p className={`text-[calc(13px+2pt)] ${plan.highlight ? 'text-blue-200' : 'text-gray-400'}`}>{plan.tagline}</p>
+            <p className={`text-[calc(13px+3pt)] ${plan.highlight ? 'text-blue-200' : 'text-gray-400'}`}>{plan.tagline}</p>
           </div>
 
           <div className="flex-1 mb-8">
             <ul className="space-y-3">
               {plan.features.map((f) => (
-                <li key={f} className={`flex items-start gap-2.5 text-[calc(13.5px+2pt)] ${plan.highlight ? 'text-blue-100' : 'text-gray-600'}`}>
+                <li key={f} className={`flex items-start gap-2.5 text-[calc(13.5px+3pt)] ${plan.highlight ? 'text-blue-100' : 'text-gray-600'}`}>
                   <div className={`mt-0.5 w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 ${plan.highlight ? 'bg-white/20' : 'bg-emerald-50'}`}>
                     <Check className={`w-2.5 h-2.5 ${plan.highlight ? 'text-white' : 'text-emerald-600'}`} />
                   </div>
@@ -63,7 +63,7 @@ function PlanGrid({ plans }: { plans: PricingPlan[] }) {
 
           <Link
             to={plan.ctaTo || '/contact-us'}
-            className={`flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-[calc(13.5px+2pt)] font-semibold transition-all ${
+            className={`flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-[calc(13.5px+3pt)] font-semibold transition-all ${
               plan.highlight
                 ? 'bg-white text-blue-700 hover:bg-blue-50 shadow-lg'
                 : 'border border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300'
@@ -119,7 +119,7 @@ export default function Pricing() {
           <motion.p
             initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-gray-500 text-[calc(15px+2pt)]"
+            className="text-gray-500 text-[calc(15px+3pt)]"
           >
             {sectionSubtitle}
           </motion.p>
@@ -147,7 +147,7 @@ export default function Pricing() {
         )}
 
         {active?.description?.trim() && (
-          <p className="text-gray-600 text-[calc(14px+2pt)] mb-8 max-w-3xl">{active.description.trim()}</p>
+          <p className="text-gray-600 text-[calc(14px+3pt)] mb-8 max-w-3xl">{active.description.trim()}</p>
         )}
 
         <AnimatePresence mode="wait">

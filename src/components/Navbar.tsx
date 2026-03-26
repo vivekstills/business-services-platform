@@ -46,6 +46,7 @@ export default function Navbar() {
   const [isMobileOpen, setIsMobileOpen]       = useState(false);
   const [mobileOpenGroup, setMobileOpenGroup] = useState<string | null>(null);
   const navRef  = useRef<HTMLElement>(null);
+  const hoverCloseTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -75,6 +76,25 @@ export default function Navbar() {
     return () => document.removeEventListener('mousedown', onOutside);
   }, [openGroup]);
 
+  useEffect(() => {
+    return () => {
+      if (hoverCloseTimerRef.current) clearTimeout(hoverCloseTimerRef.current);
+    };
+  }, []);
+
+  const cancelHoverClose = () => {
+    if (hoverCloseTimerRef.current) {
+      clearTimeout(hoverCloseTimerRef.current);
+      hoverCloseTimerRef.current = null;
+    }
+  };
+
+  /** Delay closing so the pointer can move from a trigger to the mega-menu without a gap flicker */
+  const scheduleHoverClose = () => {
+    cancelHoverClose();
+    hoverCloseTimerRef.current = setTimeout(() => setOpenGroup(null), 220);
+  };
+
   useEffect(() => { setOpenGroup(null); setIsMobileOpen(false); }, [location.pathname]);
 
   const categoriesForGroup = (group: NavGroup): ServiceCategory[] =>
@@ -100,55 +120,154 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* min-w-0 + nowrap: never wrap "Articles" to a second row; subtle x-scroll only if viewport is tight */}
-          <div className="hidden lg:flex flex-1 min-w-0 items-center justify-center px-1">
+          {/* Desktop: hover opens mega-menu; delayed close bridges gap to panel. Articles stays a plain link. */}
+          <div className="hidden lg:flex flex-1 min-w-0 items-stretch justify-center px-1 min-h-0">
             <div
-              className="flex max-w-full flex-nowrap items-center justify-center gap-0 overflow-x-auto overscroll-x-contain py-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-              role="navigation"
-              aria-label="Primary"
+              className="relative flex flex-1 min-w-0 flex-col items-center justify-center"
+              onMouseEnter={cancelHoverClose}
+              onMouseLeave={scheduleHoverClose}
             >
-              {NAV_GROUPS.map((group) => {
-                const isActive = activeGroupLabel === group.label;
-                const isOpen   = openGroup === group.label;
-                return (
-                  <button
-                    key={group.label}
-                    type="button"
-                    onClick={(e) => { e.stopPropagation(); setOpenGroup(isOpen ? null : group.label); }}
-                    className={`inline-flex shrink-0 items-center gap-0.5 px-2 py-1.5 rounded-md text-[12px] xl:text-[13px] font-medium leading-tight tracking-tight transition-all duration-150 whitespace-nowrap ${
-                      isActive || isOpen
-                        ? 'bg-blue-50 text-blue-700'
-                        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                    }`}
-                  >
-                    <span>{group.label}</span>
-                    <ChevronDown className={`w-3 h-3 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180 text-blue-500' : 'text-gray-400'}`} />
-                  </button>
-                );
-              })}
-              <Link
-                to="/articles"
-                className={`inline-flex shrink-0 items-center px-2 py-1.5 rounded-md text-[12px] xl:text-[13px] font-medium leading-tight transition-all duration-150 whitespace-nowrap ${
-                  location.pathname.startsWith('/articles')
-                    ? 'bg-blue-50 text-blue-700'
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                }`}
+              <div
+                className="flex max-w-full flex-nowrap items-center justify-center gap-0 overflow-x-auto overscroll-x-contain py-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                role="navigation"
+                aria-label="Primary"
+                onMouseEnter={cancelHoverClose}
               >
-                Articles
-              </Link>
+                {NAV_GROUPS.map((group) => {
+                  const isActive = activeGroupLabel === group.label;
+                  const isOpen   = openGroup === group.label;
+                  return (
+                    <div
+                      key={group.label}
+                      className="shrink-0"
+                      onMouseEnter={() => {
+                        cancelHoverClose();
+                        setOpenGroup(group.label);
+                      }}
+                    >
+                      <button
+                        type="button"
+                        aria-expanded={isOpen}
+                        aria-haspopup="true"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setOpenGroup(isOpen ? null : group.label);
+                        }}
+                        className={`inline-flex items-center gap-0.5 px-2 py-1.5 rounded-md text-[calc(12px+1pt)] xl:text-[calc(13px+1pt)] font-medium leading-tight tracking-tight transition-all duration-150 whitespace-nowrap ${
+                          isActive || isOpen
+                            ? 'bg-blue-50 text-blue-700'
+                            : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                        }`}
+                      >
+                        <span>{group.label}</span>
+                        <ChevronDown className={`w-3 h-3 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180 text-blue-500' : 'text-gray-400'}`} />
+                      </button>
+                    </div>
+                  );
+                })}
+                <Link
+                  to="/articles"
+                  className={`inline-flex shrink-0 items-center px-2 py-1.5 rounded-md text-[calc(12px+1pt)] xl:text-[calc(13px+1pt)] font-medium leading-tight transition-all duration-150 whitespace-nowrap ${
+                    location.pathname.startsWith('/articles')
+                      ? 'bg-blue-50 text-blue-700'
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                  }`}
+                >
+                  Articles
+                </Link>
+              </div>
+
+              {/* Mega-menu: inside hover region (absolute below triggers) */}
+              <AnimatePresence>
+                {openGroup && (
+                  <motion.div
+                    key={openGroup}
+                    initial={{ opacity: 0, y: -6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -6 }}
+                    transition={{ duration: 0.16, ease: 'easeOut' }}
+                    className="absolute left-1/2 top-full z-40 w-[min(100vw-1rem,72rem)] max-w-[calc(100vw-1rem)] -translate-x-1/2 pointer-events-none"
+                  >
+                    {/* Negative margin + padding bridges any subpixel gap between triggers and panel */}
+                    <div className="pointer-events-auto flex justify-center px-3 sm:px-4 lg:px-6 -mt-2 pt-2">
+                      {(() => {
+                        const group = NAV_GROUPS.find((g) => g.label === openGroup)!;
+                        const cats  = categoriesForGroup(group);
+                        return (
+                          <div className="bg-white border border-gray-200 rounded-xl shadow-xl shadow-gray-200/50 py-4 px-4 lg:py-5 lg:px-5 w-max max-w-[min(100vw-1.5rem,56rem)]">
+                            <div
+                              className={`flex flex-wrap items-start justify-start gap-x-5 lg:gap-x-6 gap-y-5 ${
+                                cats.length === 1 ? 'flex-col' : ''
+                              }`}
+                            >
+                              {cats.map((cat) => {
+                                const services = getServicesByCategory(content.services, cat.id);
+                                return (
+                                  <div
+                                    key={cat.id}
+                                    className={`flex-none min-w-0 ${
+                                      cats.length === 1
+                                        ? 'w-full max-w-md'
+                                        : 'w-[13.75rem] sm:w-[14.5rem] lg:w-[15rem]'
+                                    }`}
+                                  >
+                                    <button
+                                      type="button"
+                                      onClick={() => {
+                                        navigate(`/category/${cat.id}`);
+                                        setOpenGroup(null);
+                                      }}
+                                      className="group flex items-center gap-2 mb-2.5 w-full text-left"
+                                    >
+                                      <div className="w-6 h-6 rounded-md bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 flex-shrink-0">
+                                        {CATEGORY_ICON[cat.id] ?? <FileText className="w-3.5 h-3.5" />}
+                                      </div>
+                                      <span className="text-[calc(11px+3pt)] font-bold uppercase tracking-widest text-gray-400 group-hover:text-blue-600 transition-colors leading-tight">
+                                        {cat.title}
+                                      </span>
+                                      <ArrowRight className="w-3 h-3 text-gray-300 group-hover:text-blue-500 group-hover:translate-x-0.5 transition-all flex-shrink-0 ml-auto" />
+                                    </button>
+                                    <div className="space-y-0.5 pr-1">
+                                      {services.map((svc) => (
+                                        <button
+                                          key={svc.id}
+                                          type="button"
+                                          onClick={() => {
+                                            navigate(`/service/${svc.id}`);
+                                            setOpenGroup(null);
+                                          }}
+                                          className="group w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-blue-50 transition-colors"
+                                        >
+                                          <div className="text-[calc(13px+3pt)] font-medium text-gray-600 group-hover:text-blue-700 transition-colors leading-snug">
+                                            {svc.name}
+                                          </div>
+                                        </button>
+                                      ))}
+                                    </div>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        );
+                      })()}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </div>
 
           <div className="hidden lg:flex items-center gap-1.5 shrink-0 z-10 pl-2 ml-0.5 border-l border-gray-200/70">
             <a
               href={`tel:${content.contact.phone.replace(/\s/g, '')}`}
-              className="inline-flex items-center text-[12px] xl:text-[13px] font-medium text-gray-600 hover:text-gray-900 px-2 py-1.5 rounded-md hover:bg-gray-50 transition-all whitespace-nowrap tabular-nums leading-tight"
+              className="inline-flex items-center text-[calc(12px+1pt)] xl:text-[calc(13px+1pt)] font-medium text-gray-600 hover:text-gray-900 px-2 py-1.5 rounded-md hover:bg-gray-50 transition-all whitespace-nowrap tabular-nums leading-tight"
             >
               {content.contact.phone}
             </a>
             <Link
               to="/category/new-business"
-              className="inline-flex items-center justify-center h-9 px-3.5 xl:px-4 rounded-lg bg-gradient-to-r from-blue-600 to-blue-600 text-white text-[12px] xl:text-[13px] font-semibold hover:shadow-md hover:shadow-blue-200/50 transition-all shrink-0 leading-none"
+              className="inline-flex items-center justify-center h-9 px-3.5 xl:px-4 rounded-lg bg-gradient-to-r from-blue-600 to-blue-600 text-white text-[calc(12px+1pt)] xl:text-[calc(13px+1pt)] font-semibold hover:shadow-md hover:shadow-blue-200/50 transition-all shrink-0 leading-none"
             >
               Get Started
             </Link>
@@ -164,76 +283,6 @@ export default function Navbar() {
           </button>
         </div>
       </div>
-
-      {/* Desktop mega-dropdown — compact panel (content-width), not full-viewport strip */}
-      <AnimatePresence>
-        {openGroup && (
-          <motion.div
-            key={openGroup}
-            initial={{ opacity: 0, y: -6 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -6 }}
-            transition={{ duration: 0.16, ease: 'easeOut' }}
-            className="hidden lg:block absolute left-0 right-0 top-16 z-40 pointer-events-none"
-          >
-            <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 flex justify-start pointer-events-auto">
-              {(() => {
-                const group = NAV_GROUPS.find((g) => g.label === openGroup)!;
-                const cats  = categoriesForGroup(group);
-                return (
-                  <div className="bg-white border border-gray-200 border-t-0 rounded-b-xl shadow-xl shadow-gray-200/50 py-4 px-4 lg:py-5 lg:px-5 w-max max-w-[min(100vw-1.5rem,56rem)]">
-                  <div
-                    className={`flex flex-wrap items-start justify-start gap-x-5 lg:gap-x-6 gap-y-5 ${
-                      cats.length === 1 ? 'flex-col' : ''
-                    }`}
-                  >
-                    {cats.map((cat) => {
-                      const services = getServicesByCategory(content.services, cat.id);
-                      return (
-                        <div
-                          key={cat.id}
-                          className={`flex-none min-w-0 ${
-                            cats.length === 1
-                              ? 'w-full max-w-md'
-                              : 'w-[13.75rem] sm:w-[14.5rem] lg:w-[15rem]'
-                          }`}
-                        >
-                          <button
-                            onClick={() => { navigate(`/category/${cat.id}`); setOpenGroup(null); }}
-                            className="group flex items-center gap-2 mb-2.5 w-full text-left"
-                          >
-                            <div className="w-6 h-6 rounded-md bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 flex-shrink-0">
-                              {CATEGORY_ICON[cat.id] ?? <FileText className="w-3.5 h-3.5" />}
-                            </div>
-                            <span className="text-[calc(11px+2pt)] font-bold uppercase tracking-widest text-gray-400 group-hover:text-blue-600 transition-colors leading-tight">
-                              {cat.title}
-                            </span>
-                            <ArrowRight className="w-3 h-3 text-gray-300 group-hover:text-blue-500 group-hover:translate-x-0.5 transition-all flex-shrink-0 ml-auto" />
-                          </button>
-                          <div className="space-y-0.5 pr-1">
-                            {services.map((svc) => (
-                              <button
-                                key={svc.id}
-                                onClick={() => { navigate(`/service/${svc.id}`); setOpenGroup(null); }}
-                                className="group w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-blue-50 transition-colors"
-                              >
-                                <div className="text-[calc(13px+2pt)] font-medium text-gray-600 group-hover:text-blue-700 transition-colors leading-snug">
-                                  {svc.name}
-                                </div>
-                              </button>
-                            ))}
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                  </div>
-                );
-              })()}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       {/* Mobile drawer */}
       <AnimatePresence>
@@ -261,7 +310,7 @@ export default function Navbar() {
                       >
                         <div className="flex items-center gap-2.5">
                           <span className="text-gray-400">{group.icon}</span>
-                          <span className="text-[calc(14px+2pt)] font-semibold text-gray-800">{group.label}</span>
+                          <span className="text-[calc(14px+3pt)] font-semibold text-gray-800">{group.label}</span>
                         </div>
                         <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
                       </button>
@@ -280,14 +329,14 @@ export default function Navbar() {
                                     onClick={() => { navigate(`/category/${cat.id}`); setIsMobileOpen(false); }}
                                     className="flex items-center gap-2 mb-1.5 mt-2 w-full text-left"
                                   >
-                                    <span className="text-[calc(11px+2pt)] font-bold uppercase tracking-wider text-blue-600">{cat.title}</span>
+                                    <span className="text-[calc(11px+3pt)] font-bold uppercase tracking-wider text-blue-600">{cat.title}</span>
                                   </button>
                                   <div className="space-y-0.5 pl-1">
                                     {services.map((svc) => (
                                       <button
                                         key={svc.id}
                                         onClick={() => { navigate(`/service/${svc.id}`); setIsMobileOpen(false); }}
-                                        className="w-full text-left px-2 py-1.5 rounded-md text-[calc(13px+2pt)] text-gray-500 hover:text-blue-700 hover:bg-blue-50 transition-colors block"
+                                        className="w-full text-left px-2 py-1.5 rounded-md text-[calc(13px+3pt)] text-gray-500 hover:text-blue-700 hover:bg-blue-50 transition-colors block"
                                       >
                                         {svc.name}
                                       </button>
@@ -306,17 +355,17 @@ export default function Navbar() {
                   <Link
                     to="/articles"
                     onClick={() => setIsMobileOpen(false)}
-                    className="w-full py-2.5 rounded-lg border border-gray-200 text-[calc(14px+2pt)] font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center"
+                    className="w-full py-2.5 rounded-lg border border-gray-200 text-[calc(14px+3pt)] font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center"
                   >
                     Articles
                   </Link>
-                  <a href={`tel:${content.contact.phone.replace(/\s/g, '')}`} className="w-full py-2.5 rounded-lg border border-gray-200 text-[calc(14px+2pt)] font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center">
+                  <a href={`tel:${content.contact.phone.replace(/\s/g, '')}`} className="w-full py-2.5 rounded-lg border border-gray-200 text-[calc(14px+3pt)] font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center">
                     {content.contact.phone}
                   </a>
                   <Link
                     to="/category/new-business"
                     onClick={() => setIsMobileOpen(false)}
-                    className="w-full py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-blue-600 text-[calc(14px+2pt)] font-semibold text-white hover:opacity-95 transition-opacity flex items-center justify-center"
+                    className="w-full py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-blue-600 text-[calc(14px+3pt)] font-semibold text-white hover:opacity-95 transition-opacity flex items-center justify-center"
                   >
                     Get Started
                   </Link>

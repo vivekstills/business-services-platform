@@ -42,13 +42,13 @@ function FeaturesEditor({ features, onChange }: { features: string[]; onChange: 
   return (
     <div className="space-y-1.5">
       <div className="flex items-center justify-between">
-        <label className="text-[calc(11px+2pt)] font-bold uppercase tracking-wider text-gray-400">What's Included</label>
-        <button onClick={add} type="button" className="flex items-center gap-1 text-[calc(11px+2pt)] text-blue-500 hover:text-blue-700 font-semibold">
+        <label className="text-[calc(11px+3pt)] font-bold uppercase tracking-wider text-gray-400">What's Included</label>
+        <button onClick={add} type="button" className="flex items-center gap-1 text-[calc(11px+3pt)] text-blue-500 hover:text-blue-700 font-semibold">
           <Plus className="w-3 h-3" /> Add item
         </button>
       </div>
       {features.length === 0 && (
-        <p className="text-[calc(11px+2pt)] text-gray-300 italic">No items yet.</p>
+        <p className="text-[calc(11px+3pt)] text-gray-300 italic">No items yet.</p>
       )}
       {features.map((f, i) => (
         <div key={i} className="flex items-center gap-1.5">
@@ -57,7 +57,7 @@ function FeaturesEditor({ features, onChange }: { features: string[]; onChange: 
             value={f}
             onChange={(e) => update(i, e.target.value)}
             placeholder={`Feature ${i + 1}`}
-            className="flex-1 px-2.5 py-1 rounded border border-gray-200 text-[calc(12.5px+2pt)] focus:border-blue-400 focus:ring-1 focus:ring-blue-100"
+            className="flex-1 px-2.5 py-1 rounded border border-gray-200 text-[calc(12.5px+3pt)] focus:border-blue-400 focus:ring-1 focus:ring-blue-100"
           />
           <button onClick={() => remove(i)} type="button" className="p-1 rounded text-red-400 hover:bg-red-50">
             <Trash2 className="w-3 h-3" />
@@ -250,7 +250,7 @@ export default function AdminStatePricingSection({ data, services, onSave, savin
                         type="button"
                         onClick={() => toggleRecommended(i)}
                         title={pkg.recommended ? 'Remove Recommended' : 'Mark as Recommended for this state'}
-                        className={`text-[calc(10px+2pt)] font-bold px-2 py-1 rounded-full border transition-all ${
+                        className={`text-[calc(10px+3pt)] font-bold px-2 py-1 rounded-full border transition-all ${
                           pkg.recommended
                             ? 'bg-violet-500 border-violet-500 text-white'
                             : 'border-gray-200 text-gray-400 hover:border-violet-300 hover:text-violet-600'

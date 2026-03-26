@@ -5,10 +5,10 @@
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
-/* Site-wide typography: slightly above browser default for readability */
+/* Site-wide typography: rem-based Tailwind scales from this root (+~1pt vs prior) */
 @layer base {
   html {
-    font-size: calc(1rem + 2.25pt);
+    font-size: calc(1rem + 3.5pt);
   }
 }
 
