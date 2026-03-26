@@ -5,10 +5,10 @@
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
-/* Site-wide typography: +1.5pt from default (scales rem-based utilities) */
+/* Site-wide typography: slightly above browser default for readability */
 @layer base {
   html {
-    font-size: calc(1rem + 1.5pt);
+    font-size: calc(1rem + 2.25pt);
   }
 }
 

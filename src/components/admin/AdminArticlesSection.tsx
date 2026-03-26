@@ -95,11 +95,11 @@ function ContentEditor({ value, onChange }: { value: string; onChange: (v: strin
                 </div>
                 <div className="space-y-2">
                   <div>
-                    <label className="block text-[calc(11px+1.5pt)] font-medium text-gray-500 mb-1">Display text</label>
+                    <label className="block text-[calc(11px+2pt)] font-medium text-gray-500 mb-1">Display text</label>
                     <input autoFocus value={linkText} onChange={(e) => setLinkText(e.target.value)} placeholder="e.g. Click here" className="w-full px-3 py-1.5 rounded-lg border border-gray-200 text-sm focus:border-blue-400 focus:ring-1 focus:ring-blue-100 outline-none" />
                   </div>
                   <div>
-                    <label className="block text-[calc(11px+1.5pt)] font-medium text-gray-500 mb-1">URL</label>
+                    <label className="block text-[calc(11px+2pt)] font-medium text-gray-500 mb-1">URL</label>
                     <input value={linkUrl} onChange={(e) => setLinkUrl(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && insertLink()} placeholder="https://example.com" className="w-full px-3 py-1.5 rounded-lg border border-gray-200 text-sm focus:border-blue-400 focus:ring-1 focus:ring-blue-100 outline-none" />
                   </div>
                   <button type="button" onClick={insertLink} disabled={!linkUrl.trim()} className="w-full flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-600 text-white text-xs font-semibold hover:bg-blue-700 disabled:opacity-40 disabled:cursor-not-allowed">
@@ -125,7 +125,7 @@ function ContentEditor({ value, onChange }: { value: string; onChange: (v: strin
           placeholder="## Section Heading&#10;&#10;Paragraph text here.&#10;&#10;- Bullet point&#10;- Another point&#10;&#10;**Bold text** and [link text](https://url.com)"
           className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-blue-400 focus:ring-1 focus:ring-blue-100 font-mono text-sm leading-relaxed" />
       )}
-      <p className="text-[calc(11px+1.5pt)] text-gray-400">
+      <p className="text-[calc(11px+2pt)] text-gray-400">
         ## headings · - bullets · 1. numbered · **bold** · [text](url) links
       </p>
     </div>
@@ -167,7 +167,7 @@ const CATEGORY_COLORS: Record<string, string> = {
 
 function CategoryBadge({ cat }: { cat: string }) {
   const cls = CATEGORY_COLORS[cat] ?? 'bg-gray-50 text-gray-600 border-gray-200';
-  return <span className={`inline-flex items-center px-2 py-0.5 rounded-md text-[calc(11px+1.5pt)] font-semibold border ${cls}`}>{cat}</span>;
+  return <span className={`inline-flex items-center px-2 py-0.5 rounded-md text-[calc(11px+2pt)] font-semibold border ${cls}`}>{cat}</span>;
 }
 
 // ─── Main component ───────────────────────────────────────────────────────────
@@ -286,7 +286,7 @@ export default function AdminArticlesSection({ data, categories, onSave, saving 
               <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Slug (URL)</label>
               <input value={draft.slug} onChange={(e) => updateDraft('slug', e.target.value)} placeholder="auto-generated-from-title"
                 className="w-full px-4 py-2 rounded-lg border border-gray-200 text-sm font-mono focus:border-blue-400 focus:ring-1 focus:ring-blue-100" />
-              <p className="text-[calc(11px+1.5pt)] text-gray-400 mt-1">URL: /articles/{draft.slug || 'slug'}</p>
+              <p className="text-[calc(11px+2pt)] text-gray-400 mt-1">URL: /articles/{draft.slug || 'slug'}</p>
             </div>
             <div>
               <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Category</label>
@@ -455,13 +455,13 @@ export default function AdminArticlesSection({ data, categories, onSave, saving 
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1.5">
                     {article.category && <CategoryBadge cat={article.category} />}
-                    <span className={`text-[calc(11px+1.5pt)] font-semibold ${article.published ? 'text-green-600' : 'text-yellow-600'}`}>
+                    <span className={`text-[calc(11px+2pt)] font-semibold ${article.published ? 'text-green-600' : 'text-yellow-600'}`}>
                       {article.published ? '● Published' : '○ Draft'}
                     </span>
                   </div>
                   <h3 className="font-semibold text-gray-900 truncate pr-2">{article.title || <span className="text-gray-400 italic">Untitled</span>}</h3>
                   <p className="text-sm text-gray-500 mt-1 line-clamp-1">{article.excerpt}</p>
-                  <div className="flex items-center gap-3 mt-2 text-[calc(11px+1.5pt)] text-gray-400">
+                  <div className="flex items-center gap-3 mt-2 text-[calc(11px+2pt)] text-gray-400">
                     <span className="flex items-center gap-1"><User className="w-3 h-3" /> {article.author}</span>
                     <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {article.date}</span>
                     <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> {article.readingTime}</span>

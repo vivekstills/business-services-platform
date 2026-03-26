@@ -96,7 +96,7 @@ export default function Navbar() {
             <img
               src="/assets/logo.png"
               alt="Mridhuv Associates"
-              className="h-8 lg:h-9 w-auto max-h-9 object-contain"
+              className="h-12 lg:h-14 w-auto max-h-14 object-contain"
             />
           </Link>
 
@@ -165,7 +165,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Desktop mega-dropdown */}
+      {/* Desktop mega-dropdown — compact panel (content-width), not full-viewport strip */}
       <AnimatePresence>
         {openGroup && (
           <motion.div
@@ -174,15 +174,16 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.16, ease: 'easeOut' }}
-            className="hidden lg:block absolute left-0 right-0 top-16 bg-white border-b border-gray-200 shadow-xl shadow-gray-200/60"
+            className="hidden lg:block absolute left-0 right-0 top-16 z-40 pointer-events-none"
           >
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-5 lg:py-6">
+            <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 flex justify-start pointer-events-auto">
               {(() => {
                 const group = NAV_GROUPS.find((g) => g.label === openGroup)!;
                 const cats  = categoriesForGroup(group);
                 return (
+                  <div className="bg-white border border-gray-200 border-t-0 rounded-b-xl shadow-xl shadow-gray-200/50 py-4 px-4 lg:py-5 lg:px-5 w-max max-w-[min(100vw-1.5rem,56rem)]">
                   <div
-                    className={`flex flex-wrap items-start gap-x-6 lg:gap-x-8 xl:gap-x-10 gap-y-6 ${
+                    className={`flex flex-wrap items-start justify-start gap-x-5 lg:gap-x-6 gap-y-5 ${
                       cats.length === 1 ? 'flex-col' : ''
                     }`}
                   >
@@ -191,10 +192,10 @@ export default function Navbar() {
                       return (
                         <div
                           key={cat.id}
-                          className={`flex-none w-full min-w-0 ${
+                          className={`flex-none min-w-0 ${
                             cats.length === 1
-                              ? 'max-w-xl'
-                              : 'sm:max-w-[min(100%,17.5rem)] lg:max-w-[15.5rem] xl:max-w-[17rem]'
+                              ? 'w-full max-w-md'
+                              : 'w-[13.75rem] sm:w-[14.5rem] lg:w-[15rem]'
                           }`}
                         >
                           <button
@@ -204,7 +205,7 @@ export default function Navbar() {
                             <div className="w-6 h-6 rounded-md bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 flex-shrink-0">
                               {CATEGORY_ICON[cat.id] ?? <FileText className="w-3.5 h-3.5" />}
                             </div>
-                            <span className="text-[calc(11px+1.5pt)] font-bold uppercase tracking-widest text-gray-400 group-hover:text-blue-600 transition-colors leading-tight">
+                            <span className="text-[calc(11px+2pt)] font-bold uppercase tracking-widest text-gray-400 group-hover:text-blue-600 transition-colors leading-tight">
                               {cat.title}
                             </span>
                             <ArrowRight className="w-3 h-3 text-gray-300 group-hover:text-blue-500 group-hover:translate-x-0.5 transition-all flex-shrink-0 ml-auto" />
@@ -216,7 +217,7 @@ export default function Navbar() {
                                 onClick={() => { navigate(`/service/${svc.id}`); setOpenGroup(null); }}
                                 className="group w-full text-left px-2.5 py-1.5 rounded-lg hover:bg-blue-50 transition-colors"
                               >
-                                <div className="text-[calc(13px+1.5pt)] font-medium text-gray-600 group-hover:text-blue-700 transition-colors leading-snug">
+                                <div className="text-[calc(13px+2pt)] font-medium text-gray-600 group-hover:text-blue-700 transition-colors leading-snug">
                                   {svc.name}
                                 </div>
                               </button>
@@ -225,6 +226,7 @@ export default function Navbar() {
                         </div>
                       );
                     })}
+                  </div>
                   </div>
                 );
               })()}
@@ -259,7 +261,7 @@ export default function Navbar() {
                       >
                         <div className="flex items-center gap-2.5">
                           <span className="text-gray-400">{group.icon}</span>
-                          <span className="text-[calc(14px+1.5pt)] font-semibold text-gray-800">{group.label}</span>
+                          <span className="text-[calc(14px+2pt)] font-semibold text-gray-800">{group.label}</span>
                         </div>
                         <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
                       </button>
@@ -278,14 +280,14 @@ export default function Navbar() {
                                     onClick={() => { navigate(`/category/${cat.id}`); setIsMobileOpen(false); }}
                                     className="flex items-center gap-2 mb-1.5 mt-2 w-full text-left"
                                   >
-                                    <span className="text-[calc(11px+1.5pt)] font-bold uppercase tracking-wider text-blue-600">{cat.title}</span>
+                                    <span className="text-[calc(11px+2pt)] font-bold uppercase tracking-wider text-blue-600">{cat.title}</span>
                                   </button>
                                   <div className="space-y-0.5 pl-1">
                                     {services.map((svc) => (
                                       <button
                                         key={svc.id}
                                         onClick={() => { navigate(`/service/${svc.id}`); setIsMobileOpen(false); }}
-                                        className="w-full text-left px-2 py-1.5 rounded-md text-[calc(13px+1.5pt)] text-gray-500 hover:text-blue-700 hover:bg-blue-50 transition-colors block"
+                                        className="w-full text-left px-2 py-1.5 rounded-md text-[calc(13px+2pt)] text-gray-500 hover:text-blue-700 hover:bg-blue-50 transition-colors block"
                                       >
                                         {svc.name}
                                       </button>
@@ -304,17 +306,17 @@ export default function Navbar() {
                   <Link
                     to="/articles"
                     onClick={() => setIsMobileOpen(false)}
-                    className="w-full py-2.5 rounded-lg border border-gray-200 text-[calc(14px+1.5pt)] font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center"
+                    className="w-full py-2.5 rounded-lg border border-gray-200 text-[calc(14px+2pt)] font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center"
                   >
                     Articles
                   </Link>
-                  <a href={`tel:${content.contact.phone.replace(/\s/g, '')}`} className="w-full py-2.5 rounded-lg border border-gray-200 text-[calc(14px+1.5pt)] font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center">
+                  <a href={`tel:${content.contact.phone.replace(/\s/g, '')}`} className="w-full py-2.5 rounded-lg border border-gray-200 text-[calc(14px+2pt)] font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center">
                     {content.contact.phone}
                   </a>
                   <Link
                     to="/category/new-business"
                     onClick={() => setIsMobileOpen(false)}
-                    className="w-full py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-blue-600 text-[calc(14px+1.5pt)] font-semibold text-white hover:opacity-95 transition-opacity flex items-center justify-center"
+                    className="w-full py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-blue-600 text-[calc(14px+2pt)] font-semibold text-white hover:opacity-95 transition-opacity flex items-center justify-center"
                   >
                     Get Started
                   </Link>

@@ -81,7 +81,7 @@ export default function AdminStateHintsSection({ data, services, onSave, saving 
         <p className="font-semibold mb-1 flex items-center gap-2">
           <MessageSquare className="w-4 h-4" /> State dropdown info box
         </p>
-        <p className="text-[calc(13px+1.5pt)] text-blue-800/90 leading-relaxed">
+        <p className="text-[calc(13px+2pt)] text-blue-800/90 leading-relaxed">
           On each service page, when a visitor selects a state, a blue information message can appear under the dropdown (e.g. stamp duty notes for Maharashtra).
           Set a custom message per <strong>service</strong> and <strong>state</strong> here. If you leave no custom text for a combination, the site uses built-in defaults where they exist (GST special states, Professional Tax, etc.).
         </p>

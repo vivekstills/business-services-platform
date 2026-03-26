@@ -102,6 +102,17 @@ export type Content = {
     paymentSuccessSub?: string;
     /** Bottom bar; use {{year}} for current year */
     copyrightLine?: string;
+    /** Shown above phone/email in footer; values still come from Contact info, not here */
+    contactBlockHeading?: string;
+    /** Duplicate email/phone in bottom strip (still from Contact info) */
+    showBottomContactRow?: boolean;
+    /** Name shown in Razorpay checkout */
+    paymentCheckoutBrandName?: string;
+    paymentPlaceholderAmount?: string;
+    paymentPlaceholderName?: string;
+    paymentPlaceholderPhone?: string;
+    paymentPlaceholderEmail?: string;
+    paymentPlaceholderNote?: string;
   };
   categories: ServiceCategory[];
   services: Service[];
@@ -141,6 +152,10 @@ export type Content = {
   stateServiceHints?: Record<string, Record<string, string>>;
   articles?: Article[];
   articleCategories?: string[];
+  /** Legal pages: key = route id (e.g. privacy-policy). Editable in Admin → Legal & policy pages */
+  policyPages?: Partial<
+    Record<string, { title?: string; lastUpdated?: string; bodyMarkdown?: string }>
+  >;
 };
 
 export type Article = {

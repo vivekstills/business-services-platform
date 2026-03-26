@@ -4,6 +4,7 @@ import { SERVICES, SERVICE_CATEGORIES } from '../data/services';
 import FAQS from '../data/faqs';
 import { CONTACT_EMAIL, CONTACT_PHONE } from '../data/constants';
 import type { Service } from '../data/services';
+import { defaultPolicyPages } from '../data/policyPageDefaults';
 
 const defaultContent: Content = {
   hero: {
@@ -107,6 +108,14 @@ const defaultContent: Content = {
     paymentSuccessTitle: 'Payment successful!',
     paymentSuccessSub: "You'll receive a confirmation shortly.",
     copyrightLine: '© {{year}} Mridhuv Associates. All rights reserved.',
+    contactBlockHeading: 'Contact Us',
+    showBottomContactRow: true,
+    paymentCheckoutBrandName: 'Mridhuv Associates',
+    paymentPlaceholderAmount: 'Amount (₹)',
+    paymentPlaceholderName: 'Your name',
+    paymentPlaceholderPhone: 'Phone number',
+    paymentPlaceholderEmail: 'Email (optional, for receipt)',
+    paymentPlaceholderNote: 'Payment note / reference (optional)',
   },
   categories: SERVICE_CATEGORIES,
   services: SERVICES,
@@ -196,6 +205,7 @@ const defaultContent: Content = {
       '120+ services across registrations, tax, IP, compliance and more — handled end‑to‑end by experts.',
   },
   stateServiceHints: {},
+  policyPages: defaultPolicyPages as Content['policyPages'],
 };
 
 function deepMerge<T>(target: T, source: Partial<T>): T {

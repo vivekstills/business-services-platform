@@ -101,7 +101,7 @@ export default function RichContent({ content, className = '' }: Props) {
 
   if (isPlainText) {
     return (
-      <div className={`text-[calc(14.5px+1.5pt)] text-gray-500 leading-relaxed whitespace-pre-line ${className}`}>
+      <div className={`text-[calc(14.5px+2pt)] text-gray-500 leading-relaxed whitespace-pre-line ${className}`}>
         {content}
       </div>
     );
@@ -127,7 +127,7 @@ export default function RichContent({ content, className = '' }: Props) {
             );
           case 'p':
             return (
-              <p key={i} className="text-[calc(14.5px+1.5pt)] text-gray-500 leading-relaxed">
+              <p key={i} className="text-[calc(14.5px+2pt)] text-gray-500 leading-relaxed">
                 {parseInline(block.text)}
               </p>
             );
@@ -135,7 +135,7 @@ export default function RichContent({ content, className = '' }: Props) {
             return (
               <ul key={i} className="space-y-2.5 my-3">
                 {block.items.map((item, j) => (
-                  <li key={j} className="flex items-start gap-2.5 text-[calc(14px+1.5pt)] text-gray-600">
+                  <li key={j} className="flex items-start gap-2.5 text-[calc(14px+2pt)] text-gray-600">
                     <CheckCircle2 className="w-4.5 h-4.5 text-emerald-500 mt-0.5 flex-shrink-0" />
                     <span>{parseInline(item)}</span>
                   </li>
@@ -146,8 +146,8 @@ export default function RichContent({ content, className = '' }: Props) {
             return (
               <ol key={i} className="space-y-2.5 my-3">
                 {block.items.map((item, j) => (
-                  <li key={j} className="flex items-start gap-3 text-[calc(14px+1.5pt)] text-gray-600">
-                    <span className="w-6 h-6 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center text-[calc(11px+1.5pt)] font-bold text-blue-700 flex-shrink-0 mt-0.5">
+                  <li key={j} className="flex items-start gap-3 text-[calc(14px+2pt)] text-gray-600">
+                    <span className="w-6 h-6 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center text-[calc(11px+2pt)] font-bold text-blue-700 flex-shrink-0 mt-0.5">
                       {j + 1}
                     </span>
                     <span>{parseInline(item)}</span>

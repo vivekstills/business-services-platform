@@ -25,6 +25,14 @@ export default function AdminFooterSection({ data, onSave, saving }: Props) {
   const [paymentSuccessTitle, setPaymentSuccessTitle] = useState('');
   const [paymentSuccessSub, setPaymentSuccessSub] = useState('');
   const [copyrightLine, setCopyrightLine] = useState('');
+  const [contactBlockHeading, setContactBlockHeading] = useState('');
+  const [showBottomContactRow, setShowBottomContactRow] = useState(true);
+  const [paymentCheckoutBrandName, setPaymentCheckoutBrandName] = useState('');
+  const [paymentPlaceholderAmount, setPaymentPlaceholderAmount] = useState('');
+  const [paymentPlaceholderName, setPaymentPlaceholderName] = useState('');
+  const [paymentPlaceholderPhone, setPaymentPlaceholderPhone] = useState('');
+  const [paymentPlaceholderEmail, setPaymentPlaceholderEmail] = useState('');
+  const [paymentPlaceholderNote, setPaymentPlaceholderNote] = useState('');
   const [serviceLinks, setServiceLinks] = useState<ServiceLinkGroup[]>([]);
   const [policyLinks, setPolicyLinks] = useState<FooterLink[]>([]);
   const [collapsed, setCollapsed] = useState<Record<number, boolean>>({});
@@ -58,6 +66,14 @@ export default function AdminFooterSection({ data, onSave, saving }: Props) {
     setPaymentSuccessTitle(String(d.paymentSuccessTitle ?? ''));
     setPaymentSuccessSub(String(d.paymentSuccessSub ?? ''));
     setCopyrightLine(String(d.copyrightLine ?? ''));
+    setContactBlockHeading(String(d.contactBlockHeading ?? ''));
+    setShowBottomContactRow(d.showBottomContactRow !== false);
+    setPaymentCheckoutBrandName(String(d.paymentCheckoutBrandName ?? ''));
+    setPaymentPlaceholderAmount(String(d.paymentPlaceholderAmount ?? ''));
+    setPaymentPlaceholderName(String(d.paymentPlaceholderName ?? ''));
+    setPaymentPlaceholderPhone(String(d.paymentPlaceholderPhone ?? ''));
+    setPaymentPlaceholderEmail(String(d.paymentPlaceholderEmail ?? ''));
+    setPaymentPlaceholderNote(String(d.paymentPlaceholderNote ?? ''));
     setServiceLinks(
       Array.isArray(d.serviceLinks)
         ? d.serviceLinks.map((g) => ({
@@ -133,6 +149,8 @@ export default function AdminFooterSection({ data, onSave, saving }: Props) {
     onSave({
       tagline,
       logoAlt,
+      contactBlockHeading: contactBlockHeading.trim(),
+      showBottomContactRow,
       quickToolsHeading,
       quickTools,
       paymentTitle,
@@ -140,6 +158,12 @@ export default function AdminFooterSection({ data, onSave, saving }: Props) {
       paymentPayButtonLabel,
       paymentSuccessTitle,
       paymentSuccessSub,
+      paymentCheckoutBrandName: paymentCheckoutBrandName.trim() || undefined,
+      paymentPlaceholderAmount: paymentPlaceholderAmount.trim() || undefined,
+      paymentPlaceholderName: paymentPlaceholderName.trim() || undefined,
+      paymentPlaceholderPhone: paymentPlaceholderPhone.trim() || undefined,
+      paymentPlaceholderEmail: paymentPlaceholderEmail.trim() || undefined,
+      paymentPlaceholderNote: paymentPlaceholderNote.trim() || undefined,
       copyrightLine,
       serviceLinks,
       policyLinks,
@@ -148,20 +172,36 @@ export default function AdminFooterSection({ data, onSave, saving }: Props) {
 
   return (
     <div className="space-y-8">
+      <div className="rounded-xl border border-blue-200 bg-blue-50/90 p-5 space-y-3">
+        <div className="flex gap-3">
+          <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+          <div>
+            <p className="font-semibold text-blue-950 mb-1">Manage the whole footer here — except live contact data</p>
+            <p className="text-sm text-blue-900/90 leading-relaxed">
+              <strong>Phone, email, and address</strong> always come from <strong>Site-wide → Contact info</strong> (not this screen).
+              You can still set an optional <strong>heading</strong> above those lines (e.g. “Contact Us”) below.
+            </p>
+          </div>
+        </div>
+        <ul className="text-sm text-blue-900/85 list-disc pl-9 space-y-1">
+          <li>Brand: tagline, logo alt, optional contact heading</li>
+          <li>Service columns: headings + links (mega-menu style blocks)</li>
+          <li>Quick tools: heading + shortcut links</li>
+          <li>Payment widget: titles, button, success text, form placeholders, checkout name</li>
+          <li>Policy &amp; legal row + copyright + optional bottom contact repeat</li>
+        </ul>
+      </div>
+
       <div className="rounded-xl border border-amber-200 bg-amber-50/80 p-4 flex gap-3">
         <Info className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
-        <div className="text-sm text-amber-900">
-          <p className="font-semibold mb-1">Contact details are not edited here</p>
-          <p className="text-amber-800/90 text-[calc(13px+1.5pt)] leading-relaxed">
-            Phone number, email and office address shown in the footer come from{' '}
-            <strong>Site-wide → Contact info</strong>. Edit them there so they stay consistent across the site and footer.
-            Everything else on this page (tagline, logo alt, quick tools, service columns, payment copy, policies, copyright) is managed below.
-          </p>
-        </div>
+        <p className="text-sm text-amber-900">
+          To change <strong>phone, email, or address</strong>, open <strong>Contact info</strong> in the sidebar. Values update everywhere, including the footer.
+        </p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-        <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider">Brand column</h2>
+        <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider">1 · Brand column</h2>
+        <p className="text-xs text-gray-400">Logo file is <code className="bg-gray-100 px-1 rounded">/public/assets/logo.png</code> — replace on the server to change the image.</p>
         <div>
           <label className="block text-xs font-medium text-gray-500 mb-1">Tagline</label>
           <textarea
@@ -180,103 +220,32 @@ export default function AdminFooterSection({ data, onSave, saving }: Props) {
             className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-blue-400 focus:ring-1 focus:ring-blue-100 text-sm"
           />
         </div>
-      </div>
-
-      <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-        <div className="flex items-center justify-between">
-          <div>
-            <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider">Quick tools</h2>
-            <p className="text-xs text-gray-400 mt-0.5">Shortcut links under the contact block (e.g. Business Search).</p>
-          </div>
-          <button
-            onClick={addQuickTool}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-50 text-blue-600 hover:bg-blue-100 text-xs font-semibold border border-blue-200"
-          >
-            <Plus className="w-3.5 h-3.5" /> Add link
-          </button>
-        </div>
         <div>
-          <label className="block text-xs font-medium text-gray-500 mb-1">Section heading</label>
+          <label className="block text-xs font-medium text-gray-500 mb-1">Heading above phone &amp; email (optional)</label>
           <input
-            value={quickToolsHeading}
-            onChange={(e) => setQuickToolsHeading(e.target.value)}
-            placeholder="Quick Tools"
+            value={contactBlockHeading}
+            onChange={(e) => setContactBlockHeading(e.target.value)}
+            placeholder="e.g. Contact Us"
             className="w-full px-4 py-2 rounded-lg border border-gray-200 text-sm"
           />
+          <p className="text-xs text-gray-400 mt-1">Leave empty to hide. Phone, email, and address still come from Contact info.</p>
         </div>
-        <SortableList
-          items={quickTools}
-          onReorder={setQuickTools}
-          getItemId={(item, i) => `qt-${i}-${item.to}`}
-          renderItem={(item, i) => (
-            <div className="flex items-center gap-2">
-              <GripVertical className="w-3.5 h-3.5 text-gray-300 flex-shrink-0 cursor-grab" />
-              <input
-                value={item.label}
-                onChange={(e) => updateQuickTool(i, 'label', e.target.value)}
-                placeholder="Label"
-                className="flex-1 px-3 py-1.5 rounded border border-gray-200 text-sm"
-              />
-              <input
-                value={item.to}
-                onChange={(e) => updateQuickTool(i, 'to', e.target.value)}
-                placeholder="/path"
-                className="flex-1 px-3 py-1.5 rounded border border-gray-200 text-sm text-gray-500"
-              />
-              <button onClick={() => deleteQuickTool(i)} className="p-1.5 rounded text-red-400 hover:bg-red-50">
-                <Trash2 className="w-3.5 h-3.5" />
-              </button>
-            </div>
-          )}
-        />
-      </div>
-
-      <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-        <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider">Make a payment column</h2>
-        <p className="text-xs text-gray-400">Labels and messages for the custom payment widget (Razorpay).</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <div>
-            <label className="block text-xs font-medium text-gray-500 mb-1">Column title</label>
-            <input value={paymentTitle} onChange={(e) => setPaymentTitle(e.target.value)} placeholder="Make a Payment" className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm" />
-          </div>
-          <div>
-            <label className="block text-xs font-medium text-gray-500 mb-1">Pay button label</label>
-            <input value={paymentPayButtonLabel} onChange={(e) => setPaymentPayButtonLabel(e.target.value)} placeholder="Pay Now" className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm" />
-          </div>
-        </div>
-        <div>
-          <label className="block text-xs font-medium text-gray-500 mb-1">Trust line (below button)</label>
-          <input value={paymentFootnote} onChange={(e) => setPaymentFootnote(e.target.value)} placeholder="Secured by Razorpay…" className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm" />
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <div>
-            <label className="block text-xs font-medium text-gray-500 mb-1">Success — title</label>
-            <input value={paymentSuccessTitle} onChange={(e) => setPaymentSuccessTitle(e.target.value)} placeholder="Payment successful!" className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm" />
-          </div>
-          <div>
-            <label className="block text-xs font-medium text-gray-500 mb-1">Success — subtitle</label>
-            <input value={paymentSuccessSub} onChange={(e) => setPaymentSuccessSub(e.target.value)} placeholder="You'll receive a confirmation…" className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm" />
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-        <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider">Bottom copyright line</h2>
-        <p className="text-xs text-gray-400">Use <code className="bg-gray-100 px-1 rounded">{'{{year}}'}</code> for the current year automatically.</p>
-        <input
-          value={copyrightLine}
-          onChange={(e) => setCopyrightLine(e.target.value)}
-          placeholder="© {{year}} Mridhuv Associates. All rights reserved."
-          className="w-full px-4 py-2 rounded-lg border border-gray-200 text-sm"
-        />
-        <p className="text-[calc(11px+1.5pt)] text-gray-400">Email and phone in the bottom-right still come from Contact info.</p>
+        <label className="flex items-center gap-2 text-sm text-gray-700">
+          <input
+            type="checkbox"
+            checked={showBottomContactRow}
+            onChange={(e) => setShowBottomContactRow(e.target.checked)}
+            className="rounded border-gray-300"
+          />
+          Show email &amp; phone again in the bottom bar (same values as Contact info)
+        </label>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider">Service link sections</h2>
-            <p className="text-xs text-gray-400 mt-0.5">Column headings and links (e.g. Registrations, GST &amp; Tax).</p>
+            <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider">2 · Service link columns</h2>
+            <p className="text-xs text-gray-400 mt-0.5">Headings and links in the middle of the footer (e.g. Form New Business, Registrations).</p>
           </div>
           <button
             onClick={addGroup}
@@ -363,7 +332,117 @@ export default function AdminFooterSection({ data, onSave, saving }: Props) {
       <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider">Policy &amp; legal links</h2>
+            <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider">3 · Quick tools</h2>
+            <p className="text-xs text-gray-400 mt-0.5">Shortcut links under the contact block (e.g. Business Search).</p>
+          </div>
+          <button
+            onClick={addQuickTool}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-50 text-blue-600 hover:bg-blue-100 text-xs font-semibold border border-blue-200"
+          >
+            <Plus className="w-3.5 h-3.5" /> Add link
+          </button>
+        </div>
+        <div>
+          <label className="block text-xs font-medium text-gray-500 mb-1">Section heading</label>
+          <input
+            value={quickToolsHeading}
+            onChange={(e) => setQuickToolsHeading(e.target.value)}
+            placeholder="Quick Tools"
+            className="w-full px-4 py-2 rounded-lg border border-gray-200 text-sm"
+          />
+        </div>
+        <SortableList
+          items={quickTools}
+          onReorder={setQuickTools}
+          getItemId={(item, i) => `qt-${i}-${item.to}`}
+          renderItem={(item, i) => (
+            <div className="flex items-center gap-2">
+              <GripVertical className="w-3.5 h-3.5 text-gray-300 flex-shrink-0 cursor-grab" />
+              <input
+                value={item.label}
+                onChange={(e) => updateQuickTool(i, 'label', e.target.value)}
+                placeholder="Label"
+                className="flex-1 px-3 py-1.5 rounded border border-gray-200 text-sm"
+              />
+              <input
+                value={item.to}
+                onChange={(e) => updateQuickTool(i, 'to', e.target.value)}
+                placeholder="/path"
+                className="flex-1 px-3 py-1.5 rounded border border-gray-200 text-sm text-gray-500"
+              />
+              <button onClick={() => deleteQuickTool(i)} className="p-1.5 rounded text-red-400 hover:bg-red-50">
+                <Trash2 className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          )}
+        />
+      </div>
+
+      <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
+        <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider">4 · Make a payment column</h2>
+        <p className="text-xs text-gray-400">Titles, Razorpay checkout name, form placeholders, and success messages.</p>
+        <div>
+          <label className="block text-xs font-medium text-gray-500 mb-1">Checkout / modal business name</label>
+          <input
+            value={paymentCheckoutBrandName}
+            onChange={(e) => setPaymentCheckoutBrandName(e.target.value)}
+            placeholder="Mridhuv Associates"
+            className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm"
+          />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div>
+            <label className="block text-xs font-medium text-gray-500 mb-1">Column title</label>
+            <input value={paymentTitle} onChange={(e) => setPaymentTitle(e.target.value)} placeholder="Make a Payment" className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm" />
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-gray-500 mb-1">Pay button label</label>
+            <input value={paymentPayButtonLabel} onChange={(e) => setPaymentPayButtonLabel(e.target.value)} placeholder="Pay Now" className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm" />
+          </div>
+        </div>
+        <div>
+          <label className="block text-xs font-medium text-gray-500 mb-1">Trust line (below button)</label>
+          <input value={paymentFootnote} onChange={(e) => setPaymentFootnote(e.target.value)} placeholder="Secured by Razorpay…" className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm" />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div>
+            <label className="block text-xs font-medium text-gray-500 mb-1">Success — title</label>
+            <input value={paymentSuccessTitle} onChange={(e) => setPaymentSuccessTitle(e.target.value)} placeholder="Payment successful!" className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm" />
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-gray-500 mb-1">Success — subtitle</label>
+            <input value={paymentSuccessSub} onChange={(e) => setPaymentSuccessSub(e.target.value)} placeholder="You'll receive a confirmation…" className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm" />
+          </div>
+        </div>
+        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide pt-2">Form placeholders</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div>
+            <label className="block text-xs font-medium text-gray-500 mb-1">Amount field</label>
+            <input value={paymentPlaceholderAmount} onChange={(e) => setPaymentPlaceholderAmount(e.target.value)} placeholder="Amount (₹)" className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm" />
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-gray-500 mb-1">Name field</label>
+            <input value={paymentPlaceholderName} onChange={(e) => setPaymentPlaceholderName(e.target.value)} placeholder="Your name" className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm" />
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-gray-500 mb-1">Phone field</label>
+            <input value={paymentPlaceholderPhone} onChange={(e) => setPaymentPlaceholderPhone(e.target.value)} placeholder="Phone number" className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm" />
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-gray-500 mb-1">Email field</label>
+            <input value={paymentPlaceholderEmail} onChange={(e) => setPaymentPlaceholderEmail(e.target.value)} placeholder="Email (optional…)" className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm" />
+          </div>
+          <div className="md:col-span-2">
+            <label className="block text-xs font-medium text-gray-500 mb-1">Note / reference field</label>
+            <input value={paymentPlaceholderNote} onChange={(e) => setPaymentPlaceholderNote(e.target.value)} placeholder="Payment note…" className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm" />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
+        <div className="flex items-center justify-between">
+          <div>
+            <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider">5 · Policy &amp; legal links</h2>
             <p className="text-xs text-gray-400 mt-0.5">Privacy, Terms, Refund, About, Contact link, etc. Drag to reorder.</p>
           </div>
           <button
@@ -403,7 +482,21 @@ export default function AdminFooterSection({ data, onSave, saving }: Props) {
         />
       </div>
 
+      <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
+        <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider">6 · Copyright row</h2>
+        <p className="text-xs text-gray-400">
+          Use <code className="bg-gray-100 px-1 rounded">{'{{year}}'}</code> for the current year. Toggle “bottom contact row” in section 1 if you want to hide the duplicate email/phone on the right.
+        </p>
+        <input
+          value={copyrightLine}
+          onChange={(e) => setCopyrightLine(e.target.value)}
+          placeholder="© {{year}} Mridhuv Associates. All rights reserved."
+          className="w-full px-4 py-2 rounded-lg border border-gray-200 text-sm"
+        />
+      </div>
+
       <button
+        type="button"
         onClick={handleSave}
         disabled={saving}
         className="flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 disabled:opacity-60"

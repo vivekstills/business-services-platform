@@ -193,7 +193,7 @@ export default function AdminOrdersSection({ token }: Props) {
                       </div>
                     </td>
                     <td className="px-4 py-3">
-                      <div className="text-gray-900 text-[calc(13px+1.5pt)]">{order.service_name}</div>
+                      <div className="text-gray-900 text-[calc(13px+2pt)]">{order.service_name}</div>
                       <div className="text-xs text-gray-400">{order.package_name}</div>
                     </td>
                     <td className="px-4 py-3 font-semibold text-gray-900">

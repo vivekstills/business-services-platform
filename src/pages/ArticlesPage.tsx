@@ -18,7 +18,7 @@ const CATEGORY_COLORS: Record<string, string> = {
 function CategoryBadge({ cat }: { cat: string }) {
   const cls = CATEGORY_COLORS[cat] ?? 'bg-gray-100 text-gray-600 border-gray-200';
   return (
-    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-[calc(11px+1.5pt)] font-semibold border ${cls}`}>
+    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-[calc(11px+2pt)] font-semibold border ${cls}`}>
       {cat}
     </span>
   );
@@ -47,13 +47,13 @@ function ArticleCard({ article, index }: { article: Article; index: number }) {
         {/* Category + reading time */}
         <div className="flex items-center justify-between mb-3">
           {article.category && <CategoryBadge cat={article.category} />}
-          <span className="flex items-center gap-1 text-[calc(11px+1.5pt)] text-gray-400">
+          <span className="flex items-center gap-1 text-[calc(11px+2pt)] text-gray-400">
             <Clock className="w-3 h-3" /> {article.readingTime}
           </span>
         </div>
 
         {/* Title */}
-        <h2 className="text-[calc(15px+1.5pt)] font-bold text-gray-900 leading-snug mb-2 group-hover:text-blue-700 transition-colors line-clamp-2">
+        <h2 className="text-[calc(15px+2pt)] font-bold text-gray-900 leading-snug mb-2 group-hover:text-blue-700 transition-colors line-clamp-2">
           {article.title}
         </h2>
 
@@ -64,11 +64,11 @@ function ArticleCard({ article, index }: { article: Article; index: number }) {
 
         {/* Footer */}
         <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-          <div className="flex items-center gap-3 text-[calc(11px+1.5pt)] text-gray-400">
+          <div className="flex items-center gap-3 text-[calc(11px+2pt)] text-gray-400">
             <span className="flex items-center gap-1"><User className="w-3 h-3" /> {article.author}</span>
             <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {new Date(article.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
           </div>
-          <Link to={`/articles/${article.slug}`} className="flex items-center gap-1 text-[calc(12px+1.5pt)] font-semibold text-blue-600 hover:text-blue-800 transition-colors">
+          <Link to={`/articles/${article.slug}`} className="flex items-center gap-1 text-[calc(12px+2pt)] font-semibold text-blue-600 hover:text-blue-800 transition-colors">
             Read <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
@@ -132,7 +132,7 @@ export default function ArticlesPage() {
                 Articles & Guides
               </motion.h1>
               <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
-                className="text-gray-500 max-w-xl mt-2 text-[calc(15px+1.5pt)]">
+                className="text-gray-500 max-w-xl mt-2 text-[calc(15px+2pt)]">
                 Expert articles on GST, company registration, trademark, tax filing, and business compliance — written by our specialists.
               </motion.p>
             </div>
@@ -201,13 +201,13 @@ export default function ArticlesPage() {
                     </div>
                     <div className="p-8 flex flex-col justify-center">
                       <div className="flex items-center gap-2 mb-4">
-                        <span className="text-[calc(11px+1.5pt)] font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100">Featured</span>
+                        <span className="text-[calc(11px+2pt)] font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100">Featured</span>
                         {featured.category && <CategoryBadge cat={featured.category} />}
                       </div>
                       <h2 className="text-2xl font-bold text-gray-900 leading-snug mb-3 group-hover:text-blue-700 transition-colors">{featured.title}</h2>
                       <p className="text-gray-500 leading-relaxed mb-6">{featured.excerpt}</p>
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-3 text-[calc(12px+1.5pt)] text-gray-400">
+                        <div className="flex items-center gap-3 text-[calc(12px+2pt)] text-gray-400">
                           <span className="flex items-center gap-1"><User className="w-3.5 h-3.5" /> {featured.author}</span>
                           <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> {featured.readingTime}</span>
                         </div>

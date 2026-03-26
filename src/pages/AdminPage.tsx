@@ -16,6 +16,7 @@ import {
   Menu,
   X,
   FileText,
+  Shield,
 } from 'lucide-react';
 import AdminHeroSection from '../components/admin/AdminHeroSection';
 import AdminContactSection from '../components/admin/AdminContactSection';
@@ -33,6 +34,7 @@ import AdminStateFAQSection from '../components/admin/AdminStateFAQSection';
 import AdminStatePricingSection from '../components/admin/AdminStatePricingSection';
 import AdminStateHintsSection from '../components/admin/AdminStateHintsSection';
 import AdminArticlesSection from '../components/admin/AdminArticlesSection';
+import AdminPolicyPagesSection from '../components/admin/AdminPolicyPagesSection';
 import { Search, Code, Users, CreditCard as CreditCardIcon, MapPin, DollarSign, BookOpen, MessageSquare } from 'lucide-react';
 
 const TOKEN_KEY = 'admin_token';
@@ -50,7 +52,8 @@ const SECTION_GROUPS = [
     label: 'Site-wide',
     sections: [
       { id: 'contact', label: 'Contact info', icon: Mail },
-      { id: 'footer', label: 'Footer', icon: FileText },
+      { id: 'footer', label: 'Footer & legal', icon: FileText },
+      { id: 'policyPages', label: 'Legal & policy pages', icon: Shield },
     ],
   },
   {
@@ -348,6 +351,13 @@ export default function AdminPage() {
               saving={saving}
             />
           )}
+          {section === 'policyPages' && content && (
+            <AdminPolicyPagesSection
+              data={content.policyPages as Record<string, unknown> | undefined}
+              onSave={(d) => handleSave('policyPages', d as unknown as Record<string, unknown>)}
+              saving={saving}
+            />
+          )}
           {section === 'categories' && content?.categories && (
             <AdminCategoriesSection
               data={content.categories as unknown[]}
@@ -358,6 +368,7 @@ export default function AdminPage() {
           {section === 'services' && content?.services && (
             <AdminServicesSection
               data={content.services as unknown[]}
+              categories={(content.categories ?? []) as { id: string; title: string }[]}
               onSave={(d) => handleSave('services', d)}
               saving={saving}
             />

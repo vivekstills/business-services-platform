@@ -10,9 +10,9 @@ const DEFAULT_QUICK_TOOLS = [
 
 function quickToolIcon(to: string) {
   const t = to.toLowerCase();
-  if (t.includes('business-search')) return <Search className="w-3.5 h-3.5" />;
-  if (t.includes('trademark')) return <FileText className="w-3.5 h-3.5" />;
-  return <Link2 className="w-3.5 h-3.5" />;
+  if (t.includes('business-search')) return <Search className="w-4 h-4" />;
+  if (t.includes('trademark')) return <FileText className="w-4 h-4" />;
+  return <Link2 className="w-4 h-4" />;
 }
 
 /* ── Razorpay helpers ─────────────────────────────── */
@@ -35,15 +35,32 @@ function loadRzp(): Promise<void> {
   });
 }
 
+type PayPlaceholders = {
+  amount: string;
+  name: string;
+  phone: string;
+  email: string;
+  note: string;
+};
+
 type PayWidgetProps = {
   footnote: string;
   payButtonLabel: string;
   successTitle: string;
   successSub: string;
+  checkoutBrandName: string;
+  placeholders: PayPlaceholders;
 };
 
 /* ── Custom Payment Widget ────────────────────────── */
-function PayWidget({ footnote, payButtonLabel, successTitle, successSub }: PayWidgetProps) {
+function PayWidget({
+  footnote,
+  payButtonLabel,
+  successTitle,
+  successSub,
+  checkoutBrandName,
+  placeholders,
+}: PayWidgetProps) {
   const [amount, setAmount] = useState('');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -87,7 +104,7 @@ function PayWidget({ footnote, payButtonLabel, successTitle, successSub }: PayWi
         amount: Math.round(amt * 100),
         currency: 'INR',
         order_id: razorpayOrderId,
-        name: 'Mridhuv Associates',
+        name: checkoutBrandName,
         description: note.trim() || 'Custom Payment',
         prefill: { name: name.trim(), email: email.trim(), contact: phone.trim() },
         theme: { color: '#2563EB' },
@@ -115,15 +132,15 @@ function PayWidget({ footnote, payButtonLabel, successTitle, successSub }: PayWi
       setErrMsg(e instanceof Error ? e.message : 'Payment failed. Please try again.');
       setStatus('error');
     }
-  }, [amount, name, phone, email, note]);
+  }, [amount, name, phone, email, note, checkoutBrandName]);
 
   if (status === 'success') {
     return (
       <div className="flex flex-col items-center gap-3 py-6 text-center">
         <CheckCircle2 className="w-10 h-10 text-green-400" />
-        <p className="text-sm text-slate-200 font-semibold">{successTitle}</p>
-        <p className="text-xs text-slate-400">{successSub}</p>
-        <button onClick={() => setStatus('idle')} className="mt-2 text-xs text-blue-400 hover:text-blue-300 underline">Make another payment</button>
+        <p className="text-[calc(15px+2pt)] text-slate-200 font-semibold">{successTitle}</p>
+        <p className="text-[calc(13px+2pt)] text-slate-400">{successSub}</p>
+        <button type="button" onClick={() => setStatus('idle')} className="mt-2 text-[calc(13px+2pt)] text-blue-400 hover:text-blue-300 underline">Make another payment</button>
       </div>
     );
   }
@@ -137,8 +154,8 @@ function PayWidget({ footnote, payButtonLabel, successTitle, successSub }: PayWi
           min="1"
           value={amount}
           onChange={(e) => { setAmount(e.target.value); setStatus('idle'); }}
-          placeholder="Amount (₹)"
-          className="w-full pl-9 pr-4 py-2 rounded-lg bg-slate-800/70 border border-slate-600/50 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30"
+          placeholder={placeholders.amount}
+          className="w-full pl-9 pr-4 py-2.5 rounded-lg bg-slate-800/70 border border-slate-600/50 text-white placeholder-slate-500 text-[calc(14px+2pt)] focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30"
         />
       </div>
 
@@ -146,15 +163,15 @@ function PayWidget({ footnote, payButtonLabel, successTitle, successSub }: PayWi
         <input
           value={name}
           onChange={(e) => { setName(e.target.value); setStatus('idle'); }}
-          placeholder="Your name"
-          className="px-3 py-2 rounded-lg bg-slate-800/70 border border-slate-600/50 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30"
+          placeholder={placeholders.name}
+          className="px-3 py-2.5 rounded-lg bg-slate-800/70 border border-slate-600/50 text-white placeholder-slate-500 text-[calc(14px+2pt)] focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30"
         />
         <input
           type="tel"
           value={phone}
           onChange={(e) => { setPhone(e.target.value); setStatus('idle'); }}
-          placeholder="Phone number"
-          className="px-3 py-2 rounded-lg bg-slate-800/70 border border-slate-600/50 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30"
+          placeholder={placeholders.phone}
+          className="px-3 py-2.5 rounded-lg bg-slate-800/70 border border-slate-600/50 text-white placeholder-slate-500 text-[calc(14px+2pt)] focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30"
         />
       </div>
 
@@ -162,34 +179,35 @@ function PayWidget({ footnote, payButtonLabel, successTitle, successSub }: PayWi
         type="email"
         value={email}
         onChange={(e) => { setEmail(e.target.value); setStatus('idle'); }}
-        placeholder="Email (optional, for receipt)"
-        className="w-full px-3 py-2 rounded-lg bg-slate-800/70 border border-slate-600/50 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30"
+        placeholder={placeholders.email}
+        className="w-full px-3 py-2.5 rounded-lg bg-slate-800/70 border border-slate-600/50 text-white placeholder-slate-500 text-[calc(14px+2pt)] focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30"
       />
 
       <input
         value={note}
         onChange={(e) => { setNote(e.target.value); setStatus('idle'); }}
-        placeholder="Payment note / reference (optional)"
-        className="w-full px-3 py-2 rounded-lg bg-slate-800/70 border border-slate-600/50 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30"
+        placeholder={placeholders.note}
+        className="w-full px-3 py-2.5 rounded-lg bg-slate-800/70 border border-slate-600/50 text-white placeholder-slate-500 text-[calc(14px+2pt)] focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30"
       />
 
       {status === 'error' && errMsg && (
-        <div className="flex items-center gap-2 text-red-400 text-xs">
-          <AlertCircle className="w-3.5 h-3.5 flex-shrink-0" /> {errMsg}
+        <div className="flex items-center gap-2 text-red-400 text-[calc(13px+2pt)]">
+          <AlertCircle className="w-4 h-4 flex-shrink-0" /> {errMsg}
         </div>
       )}
 
       <button
+        type="button"
         onClick={handlePay}
         disabled={status === 'loading'}
-        className="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold transition-colors disabled:opacity-60"
+        className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-[calc(15px+2pt)] font-semibold transition-colors disabled:opacity-60"
       >
         {status === 'loading'
           ? <><Loader2 className="w-4 h-4 animate-spin" /> Processing…</>
           : <><CreditCard className="w-4 h-4" /> {payButtonLabel}</>}
       </button>
 
-      <p className="text-[calc(11px+1.5pt)] text-slate-500 text-center">{footnote}</p>
+      <p className="text-[calc(13px+2pt)] text-slate-500 text-center">{footnote}</p>
     </div>
   );
 }
@@ -198,6 +216,10 @@ function formatCopyright(line: string | undefined, year: number): string {
   const raw = (line && line.trim()) || '© {{year}} Mridhuv Associates. All rights reserved.';
   return raw.replace(/\{\{year\}\}/gi, String(year));
 }
+
+const footText = 'text-[calc(14px+2pt)]';
+const footMuted = 'text-[calc(14px+2pt)] text-slate-400';
+const footHeading = 'text-[calc(12px+2pt)] font-bold uppercase tracking-widest text-slate-500';
 
 /* ── Footer ───────────────────────────────────────── */
 export default function Footer() {
@@ -214,6 +236,16 @@ export default function Footer() {
   const successSub = footer.paymentSuccessSub?.trim() || "You'll receive a confirmation shortly.";
   const logoAlt = footer.logoAlt?.trim() || 'Mridhuv Associates';
   const displayAddress = contact.address || footer.address || '';
+  const contactHeading = (footer.contactBlockHeading ?? '').trim();
+  const showBottomContact = footer.showBottomContactRow !== false;
+  const checkoutBrand = footer.paymentCheckoutBrandName?.trim() || 'Mridhuv Associates';
+  const payPh = {
+    amount: footer.paymentPlaceholderAmount?.trim() || 'Amount (₹)',
+    name: footer.paymentPlaceholderName?.trim() || 'Your name',
+    phone: footer.paymentPlaceholderPhone?.trim() || 'Phone number',
+    email: footer.paymentPlaceholderEmail?.trim() || 'Email (optional, for receipt)',
+    note: footer.paymentPlaceholderNote?.trim() || 'Payment note / reference (optional)',
+  };
 
   const year = new Date().getFullYear();
   const copyrightText = formatCopyright(footer.copyrightLine, year);
@@ -229,36 +261,40 @@ export default function Footer() {
       <div className="relative z-[2] max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-10">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-10 mb-14">
 
-          {/* Brand + contact block (values from Contact — not editable in Footer admin) */}
+          {/* Brand + contact block — phone/email/address always from Contact info */}
           <div className="col-span-2 md:col-span-1 lg:col-span-2">
             <Link to="/" className="inline-flex items-center mb-5 group">
-              <span className="inline-flex items-center justify-center rounded-xl bg-slate-800/60 ring-1 ring-slate-600/50 p-3 transition-all group-hover:bg-slate-700/60 group-hover:ring-slate-500/50">
-                <img src="/assets/logo.png" alt={logoAlt} className="h-9 w-auto max-w-[160px] object-contain" />
+              <span className="inline-flex items-center justify-center rounded-xl bg-slate-800/60 ring-1 ring-slate-600/50 p-4 transition-all group-hover:bg-slate-700/60 group-hover:ring-slate-500/50">
+                <img src="/assets/logo.png" alt={logoAlt} className="h-14 sm:h-16 w-auto max-w-[220px] object-contain" />
               </span>
             </Link>
-            <p className="text-[calc(13px+1.5pt)] text-slate-400 leading-relaxed mb-6">{footer.tagline}</p>
+            <p className={`${footMuted} leading-relaxed mb-6`}>{footer.tagline}</p>
+
+            {contactHeading && (
+              <h3 className={`${footHeading} mb-3 text-slate-400`}>{contactHeading}</h3>
+            )}
             <div className="space-y-2.5">
-              <a href={`tel:${contact.phone.replace(/\s/g, '')}`} className="flex items-center gap-2.5 text-[calc(13px+1.5pt)] text-slate-400 hover:text-white transition-colors">
-                <Phone className="w-3.5 h-3.5 text-blue-400 flex-shrink-0" /> {contact.phone}
+              <a href={`tel:${contact.phone.replace(/\s/g, '')}`} className={`flex items-center gap-2.5 ${footMuted} hover:text-white transition-colors`}>
+                <Phone className="w-4 h-4 text-blue-400 flex-shrink-0" /> {contact.phone}
               </a>
-              <a href={`mailto:${contact.email}`} className="flex items-center gap-2.5 text-[calc(13px+1.5pt)] text-slate-400 hover:text-white transition-colors break-all">
-                <Mail className="w-3.5 h-3.5 text-blue-400 flex-shrink-0" /> {contact.email}
+              <a href={`mailto:${contact.email}`} className={`flex items-center gap-2.5 ${footMuted} hover:text-white transition-colors break-all`}>
+                <Mail className="w-4 h-4 text-blue-400 flex-shrink-0" /> {contact.email}
               </a>
               {displayAddress && (
-                <div className="flex items-start gap-2.5 text-[calc(13px+1.5pt)] text-slate-400">
-                  <MapPin className="w-3.5 h-3.5 text-blue-400 mt-0.5 flex-shrink-0" /> {displayAddress}
+                <div className={`flex items-start gap-2.5 ${footMuted}`}>
+                  <MapPin className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" /> {displayAddress}
                 </div>
               )}
             </div>
 
             <div className="mt-6 pt-6 border-t border-slate-700/50">
-              <h4 className="text-[calc(11px+1.5pt)] font-bold uppercase tracking-widest text-slate-500 mb-3">{quickHeading}</h4>
+              <h4 className={`${footHeading} mb-3`}>{quickHeading}</h4>
               <div className="flex flex-wrap gap-2">
                 {quickItems.map((item) => (
                   <Link
                     key={item.to}
                     to={item.to}
-                    className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-700/60 text-slate-300 hover:bg-blue-600 hover:text-white text-[calc(12px+1.5pt)] font-medium transition-colors"
+                    className={`inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-700/60 text-slate-300 hover:bg-blue-600 hover:text-white ${footText} font-medium transition-colors`}
                   >
                     {quickToolIcon(item.to)} {item.label}
                   </Link>
@@ -269,11 +305,11 @@ export default function Footer() {
 
           {footer.serviceLinks.map((col) => (
             <div key={col.heading}>
-              <h4 className="text-[calc(11px+1.5pt)] font-bold uppercase tracking-widest text-slate-500 mb-4">{col.heading}</h4>
+              <h4 className={`${footHeading} mb-4`}>{col.heading}</h4>
               <ul className="space-y-2.5">
                 {col.items.map((item) => (
                   <li key={item.to}>
-                    <Link to={item.to} className="text-[calc(13px+1.5pt)] text-slate-400 hover:text-white transition-colors">
+                    <Link to={item.to} className={`${footMuted} hover:text-white transition-colors`}>
                       {item.label}
                     </Link>
                   </li>
@@ -283,34 +319,38 @@ export default function Footer() {
           ))}
 
           <div className="col-span-2 md:col-span-1 lg:col-span-2">
-            <h4 className="text-[calc(11px+1.5pt)] font-bold uppercase tracking-widest text-slate-500 mb-4 flex items-center gap-1.5">
-              <CreditCard className="w-3.5 h-3.5 text-blue-400" /> {paymentTitle}
+            <h4 className={`${footHeading} mb-4 flex items-center gap-1.5`}>
+              <CreditCard className="w-4 h-4 text-blue-400" /> {paymentTitle}
             </h4>
             <PayWidget
               footnote={paymentFootnote}
               payButtonLabel={payBtn}
               successTitle={successTitle}
               successSub={successSub}
+              checkoutBrandName={checkoutBrand}
+              placeholders={payPh}
             />
           </div>
         </div>
 
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 py-6 border-t border-slate-700/50">
           {footer.policyLinks.map((item) => (
-            <Link key={item.to} to={item.to} className="text-[calc(12px+1.5pt)] text-slate-400 hover:text-white transition-colors">
+            <Link key={item.to} to={item.to} className="text-[calc(13px+2pt)] text-slate-400 hover:text-white transition-colors">
               {item.label}
             </Link>
           ))}
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-slate-700/50 pt-8">
-          <p className="text-[calc(12px+1.5pt)] text-slate-400 text-center sm:text-left">
+          <p className="text-[calc(13px+2pt)] text-slate-400 text-center sm:text-left">
             {copyrightText}
           </p>
-          <div className="flex items-center gap-4 text-[calc(12px+1.5pt)] text-slate-400">
-            <a href={`mailto:${contact.email}`} className="hover:text-white transition-colors">{contact.email}</a>
-            <a href={`tel:${contact.phone.replace(/\s/g, '')}`} className="hover:text-white transition-colors">{contact.phone}</a>
-          </div>
+          {showBottomContact && (
+            <div className="flex items-center gap-4 text-[calc(13px+2pt)] text-slate-400">
+              <a href={`mailto:${contact.email}`} className="hover:text-white transition-colors">{contact.email}</a>
+              <a href={`tel:${contact.phone.replace(/\s/g, '')}`} className="hover:text-white transition-colors">{contact.phone}</a>
+            </div>
+          )}
         </div>
       </div>
     </footer>

@@ -49,7 +49,7 @@ export default function Services() {
           <motion.p
             initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-gray-500 text-[calc(15px+1.5pt)] leading-relaxed"
+            className="text-gray-500 text-[calc(15px+2pt)] leading-relaxed"
           >
             {ss.description}
           </motion.p>
@@ -73,16 +73,16 @@ export default function Services() {
                 </div>
                 <div className="flex-1">
                   <div className="flex items-start justify-between mb-2">
-                    <h3 className="text-[calc(15px+1.5pt)] font-bold text-gray-800 group-hover:text-blue-700 transition-colors leading-snug">
+                    <h3 className="text-[calc(15px+2pt)] font-bold text-gray-800 group-hover:text-blue-700 transition-colors leading-snug">
                       {cat.label}
                     </h3>
-                    <span className="text-[calc(11px+1.5pt)] text-gray-400 font-medium ml-3 flex-shrink-0 mt-0.5">
+                    <span className="text-[calc(11px+2pt)] text-gray-400 font-medium ml-3 flex-shrink-0 mt-0.5">
                       {cat.count} services
                     </span>
                   </div>
-                  <p className="text-[calc(13px+1.5pt)] text-gray-500 leading-relaxed">{cat.description}</p>
+                  <p className="text-[calc(13px+2pt)] text-gray-500 leading-relaxed">{cat.description}</p>
                 </div>
-                <div className="mt-5 flex items-center gap-1.5 text-[calc(12px+1.5pt)] font-semibold text-gray-400 group-hover:text-blue-600 transition-colors">
+                <div className="mt-5 flex items-center gap-1.5 text-[calc(12px+2pt)] font-semibold text-gray-400 group-hover:text-blue-600 transition-colors">
                   View all <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                 </div>
               </Link>

@@ -95,7 +95,7 @@ export default function ServiceDetail({ service }: Props) {
               transition={{ duration: 0.6, delay: 0.15 }}
               className="space-y-8"
             >
-              <div className="text-[calc(16px+1.5pt)] leading-[1.7] text-[#A0A0A0] whitespace-pre-line">
+              <div className="text-[calc(16px+2pt)] leading-[1.7] text-[#A0A0A0] whitespace-pre-line">
                 {service.content}
               </div>
 
@@ -146,7 +146,7 @@ export default function ServiceDetail({ service }: Props) {
               >
                 {/* Name */}
                 <div className="space-y-1.5">
-                  <label className="block text-[calc(13px+1.5pt)] font-medium text-[#E5E7EB]">
+                  <label className="block text-[calc(13px+2pt)] font-medium text-[#E5E7EB]">
                     Full Name
                   </label>
                   <div className="relative group">
@@ -161,7 +161,7 @@ export default function ServiceDetail({ service }: Props) {
                       type="text"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className={`w-full h-[44px] bg-[#030712] border rounded-md pl-9 pr-3 text-[calc(14px+1.5pt)] text-white placeholder-[#6B7280] focus:outline-none transition-all duration-200 ${
+                      className={`w-full h-[44px] bg-[#030712] border rounded-md pl-9 pr-3 text-[calc(14px+2pt)] text-white placeholder-[#6B7280] focus:outline-none transition-all duration-200 ${
                         errors.name
                           ? 'border-[#FCA5A5] focus:border-[#FCA5A5]'
                           : 'border-[#1F2937] focus:border-[#60A5FA] focus:ring-1 focus:ring-[#60A5FA]/40'
@@ -175,13 +175,13 @@ export default function ServiceDetail({ service }: Props) {
                     )}
                   </div>
                   {errors.name && (
-                    <p className="text-[calc(11px+1.5pt)] text-[#FCA5A5] mt-0.5">{errors.name}</p>
+                    <p className="text-[calc(11px+2pt)] text-[#FCA5A5] mt-0.5">{errors.name}</p>
                   )}
                 </div>
 
                 {/* Email */}
                 <div className="space-y-1.5">
-                  <label className="block text-[calc(13px+1.5pt)] font-medium text-[#E5E7EB]">
+                  <label className="block text-[calc(13px+2pt)] font-medium text-[#E5E7EB]">
                     Email Address
                   </label>
                   <div className="relative group">
@@ -196,7 +196,7 @@ export default function ServiceDetail({ service }: Props) {
                       type="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className={`w-full h-[44px] bg-[#030712] border rounded-md pl-9 pr-3 text-[calc(14px+1.5pt)] text-white placeholder-[#6B7280] focus:outline-none transition-all duration-200 ${
+                      className={`w-full h-[44px] bg-[#030712] border rounded-md pl-9 pr-3 text-[calc(14px+2pt)] text-white placeholder-[#6B7280] focus:outline-none transition-all duration-200 ${
                         errors.email
                           ? 'border-[#FCA5A5] focus:border-[#FCA5A5]'
                           : 'border-[#1F2937] focus:border-[#60A5FA] focus:ring-1 focus:ring-[#60A5FA]/40'
@@ -205,13 +205,13 @@ export default function ServiceDetail({ service }: Props) {
                     />
                   </div>
                   {errors.email && (
-                    <p className="text-[calc(11px+1.5pt)] text-[#FCA5A5] mt-0.5">{errors.email}</p>
+                    <p className="text-[calc(11px+2pt)] text-[#FCA5A5] mt-0.5">{errors.email}</p>
                   )}
                 </div>
 
                 {/* Phone */}
                 <div className="space-y-1.5">
-                  <label className="block text-[calc(13px+1.5pt)] font-medium text-[#E5E7EB]">
+                  <label className="block text-[calc(13px+2pt)] font-medium text-[#E5E7EB]">
                     Phone Number
                   </label>
                   <div className="relative group">
@@ -226,7 +226,7 @@ export default function ServiceDetail({ service }: Props) {
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className={`w-full h-[44px] bg-[#030712] border rounded-md pl-9 pr-3 text-[calc(14px+1.5pt)] text-white placeholder-[#6B7280] focus:outline-none transition-all duration-200 ${
+                      className={`w-full h-[44px] bg-[#030712] border rounded-md pl-9 pr-3 text-[calc(14px+2pt)] text-white placeholder-[#6B7280] focus:outline-none transition-all duration-200 ${
                         errors.phone
                           ? 'border-[#FCA5A5] focus:border-[#FCA5A5]'
                           : 'border-[#1F2937] focus:border-[#60A5FA] focus:ring-1 focus:ring-[#60A5FA]/40'
@@ -235,13 +235,13 @@ export default function ServiceDetail({ service }: Props) {
                     />
                   </div>
                   {errors.phone && (
-                    <p className="text-[calc(11px+1.5pt)] text-[#FCA5A5] mt-0.5">{errors.phone}</p>
+                    <p className="text-[calc(11px+2pt)] text-[#FCA5A5] mt-0.5">{errors.phone}</p>
                   )}
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full h-[44px] mt-2 bg-white text-black text-[calc(14px+1.5pt)] font-semibold rounded-md hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
+                  className="w-full h-[44px] mt-2 bg-white text-black text-[calc(14px+2pt)] font-semibold rounded-md hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
                 >
                   {isSubmitted ? (
                     <>
@@ -253,7 +253,7 @@ export default function ServiceDetail({ service }: Props) {
                   )}
                 </button>
 
-                <p className="text-[calc(11px+1.5pt)] text-[#6B7280] mt-1">
+                <p className="text-[calc(11px+2pt)] text-[#6B7280] mt-1">
                   By submitting, you agree to be contacted by our team regarding{' '}
                   <span className="text-[#E5E7EB]">{service.name}</span>.
                 </p>
