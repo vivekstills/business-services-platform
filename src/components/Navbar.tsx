@@ -89,11 +89,19 @@ export default function Navbar() {
     }
   };
 
-  /** Delay closing so the pointer can move from a trigger to the mega-menu without a gap flicker */
+  /** Short delay only for edge cases; mega-menu uses pointer-events-auto so leave is reliable */
   const scheduleHoverClose = () => {
     cancelHoverClose();
-    hoverCloseTimerRef.current = setTimeout(() => setOpenGroup(null), 220);
+    hoverCloseTimerRef.current = setTimeout(() => setOpenGroup(null), 80);
   };
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpenGroup(null);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
 
   useEffect(() => { setOpenGroup(null); setIsMobileOpen(false); }, [location.pathname]);
 
@@ -151,7 +159,8 @@ export default function Navbar() {
                         aria-haspopup="true"
                         onClick={(e) => {
                           e.stopPropagation();
-                          setOpenGroup(isOpen ? null : group.label);
+                          /* Hover opens / mouse leave closes; click only ensures open (keyboard / touch) */
+                          setOpenGroup(group.label);
                         }}
                         className={`inline-flex items-center gap-0.5 px-2 py-1.5 rounded-md text-[calc(12px+1pt)] xl:text-[calc(13px+1pt)] font-medium leading-tight tracking-tight transition-all duration-150 whitespace-nowrap ${
                           isActive || isOpen
@@ -186,10 +195,12 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -6 }}
                     transition={{ duration: 0.16, ease: 'easeOut' }}
-                    className="absolute left-1/2 top-full z-40 w-[min(100vw-1rem,72rem)] max-w-[calc(100vw-1rem)] -translate-x-1/2 pointer-events-none"
+                    className="absolute left-1/2 top-full z-40 w-[min(100vw-1rem,72rem)] max-w-[calc(100vw-1rem)] -translate-x-1/2 pointer-events-auto pb-6"
+                    onMouseEnter={cancelHoverClose}
+                    onMouseLeave={scheduleHoverClose}
                   >
-                    {/* Negative margin + padding bridges any subpixel gap between triggers and panel */}
-                    <div className="pointer-events-auto flex justify-center px-3 sm:px-4 lg:px-6 -mt-2 pt-2">
+                    {/* Full layer captures hover (no pointer fall-through); overlap bridges the bar→panel gap */}
+                    <div className="flex justify-center px-3 sm:px-4 lg:px-6 -mt-2 pt-2">
                       {(() => {
                         const group = NAV_GROUPS.find((g) => g.label === openGroup)!;
                         const cats  = categoriesForGroup(group);
