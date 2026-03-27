@@ -109,6 +109,7 @@ export default function Navbar() {
     group.categoryIds.map((id) => content.categories.find((c) => c.id === id)).filter(Boolean) as ServiceCategory[];
 
   return (
+    <>
     <nav
       ref={navRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -294,98 +295,115 @@ export default function Navbar() {
           </button>
         </div>
       </div>
-
-      {/* Mobile drawer */}
-      <AnimatePresence>
-        {isMobileOpen && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-              className="fixed inset-0 top-16 bg-black/30 backdrop-blur-sm z-30 lg:hidden"
-              onClick={() => setIsMobileOpen(false)}
-            />
-            <motion.div
-              initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }}
-              transition={{ type: 'spring', damping: 28, stiffness: 240 }}
-              className="fixed top-16 right-0 bottom-0 w-[min(300px,85vw)] bg-white border-l border-gray-200 z-40 overflow-y-auto lg:hidden shadow-2xl overscroll-contain"
-            >
-              <div className="py-4">
-                {NAV_GROUPS.map((group) => {
-                  const cats   = categoriesForGroup(group);
-                  const isOpen = mobileOpenGroup === group.label;
-                  return (
-                    <div key={group.label} className="border-b border-gray-100 last:border-none">
-                      <button
-                        onClick={() => setMobileOpenGroup(isOpen ? null : group.label)}
-                        className="flex items-center justify-between w-full px-5 py-3.5 text-left"
-                      >
-                        <div className="flex items-center gap-2.5">
-                          <span className="text-gray-400">{group.icon}</span>
-                          <span className="text-[calc(14px+3pt)] font-semibold text-gray-800">{group.label}</span>
-                        </div>
-                        <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
-                      </button>
-                      <AnimatePresence>
-                        {isOpen && (
-                          <motion.div
-                            initial={{ height: 0 }} animate={{ height: 'auto' }} exit={{ height: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="overflow-hidden"
-                          >
-                            {cats.map((cat) => {
-                              const services = getServicesByCategory(content.services, cat.id);
-                              return (
-                                <div key={cat.id} className="px-5 pb-3">
-                                  <button
-                                    onClick={() => { navigate(`/category/${cat.id}`); setIsMobileOpen(false); }}
-                                    className="flex items-center gap-2 mb-1.5 mt-2 w-full text-left"
-                                  >
-                                    <span className="text-[calc(11px+3pt)] font-bold uppercase tracking-wider text-blue-600">{cat.title}</span>
-                                  </button>
-                                  <div className="space-y-0.5 pl-1">
-                                    {services.map((svc) => (
-                                      <button
-                                        key={svc.id}
-                                        onClick={() => { navigate(`/service/${svc.id}`); setIsMobileOpen(false); }}
-                                        className="w-full text-left px-2 py-2 rounded-md text-[calc(13px+3pt)] text-gray-500 hover:text-blue-700 hover:bg-blue-50 transition-colors block min-h-[40px] flex items-center"
-                                      >
-                                        {svc.name}
-                                      </button>
-                                    ))}
-                                  </div>
-                                </div>
-                              );
-                            })}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  );
-                })}
-                <div className="px-5 pt-5 pb-6 space-y-3">
-                  <Link
-                    to="/articles"
-                    onClick={() => setIsMobileOpen(false)}
-                    className="w-full py-2.5 rounded-lg border border-gray-200 text-[calc(14px+3pt)] font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center"
-                  >
-                    Articles
-                  </Link>
-                  <a href={`tel:${content.contact.phone.replace(/\s/g, '')}`} className="w-full py-2.5 rounded-lg border border-gray-200 text-[calc(14px+3pt)] font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center">
-                    {content.contact.phone}
-                  </a>
-                  <Link
-                    to="/category/new-business"
-                    onClick={() => setIsMobileOpen(false)}
-                    className="w-full py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-blue-600 text-[calc(14px+3pt)] font-semibold text-white hover:opacity-95 transition-opacity flex items-center justify-center"
-                  >
-                    Get Started
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
     </nav>
+
+    {/* ── Mobile drawer — rendered OUTSIDE <nav> so backdrop-filter doesn't trap it ── */}
+    <AnimatePresence>
+      {isMobileOpen && (
+        <>
+          {/* Backdrop */}
+          <motion.div
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 top-16 bg-black/40 z-[90] lg:hidden"
+            onClick={() => setIsMobileOpen(false)}
+          />
+
+          {/* Drawer */}
+          <motion.div
+            initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }}
+            transition={{ type: 'spring', damping: 28, stiffness: 240 }}
+            className="fixed top-16 right-0 bottom-0 w-[min(300px,85vw)] bg-white border-l border-gray-200 z-[91] overflow-y-auto lg:hidden shadow-2xl overscroll-contain"
+          >
+            <div className="py-4">
+              {NAV_GROUPS.map((group) => {
+                const cats   = categoriesForGroup(group);
+                const isOpen = mobileOpenGroup === group.label;
+                return (
+                  <div key={group.label} className="border-b border-gray-100 last:border-none">
+                    <button
+                      type="button"
+                      onClick={() => setMobileOpenGroup(isOpen ? null : group.label)}
+                      className="flex items-center justify-between w-full px-5 py-4 text-left min-h-[52px]"
+                    >
+                      <div className="flex items-center gap-2.5">
+                        <span className="text-blue-500">{group.icon}</span>
+                        <span className="text-[calc(14px+3pt)] font-semibold text-gray-800">{group.label}</span>
+                      </div>
+                      <ChevronDown className={`w-5 h-5 text-gray-400 transition-transform duration-200 flex-shrink-0 ${isOpen ? 'rotate-180 text-blue-500' : ''}`} />
+                    </button>
+
+                    <AnimatePresence>
+                      {isOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.22 }}
+                          className="overflow-hidden bg-gray-50/60"
+                        >
+                          {cats.map((cat) => {
+                            const services = getServicesByCategory(content.services, cat.id);
+                            return (
+                              <div key={cat.id} className="px-5 pb-3 pt-1">
+                                <button
+                                  type="button"
+                                  onClick={() => { navigate(`/category/${cat.id}`); setIsMobileOpen(false); setMobileOpenGroup(null); }}
+                                  className="flex items-center gap-2 py-2 w-full text-left"
+                                >
+                                  <span className="text-[calc(11px+3pt)] font-bold uppercase tracking-wider text-blue-600">{cat.title}</span>
+                                  <ArrowRight className="w-3 h-3 text-blue-400 ml-auto flex-shrink-0" />
+                                </button>
+                                <div className="space-y-0.5 pl-1">
+                                  {services.map((svc) => (
+                                    <button
+                                      key={svc.id}
+                                      type="button"
+                                      onClick={() => { navigate(`/service/${svc.id}`); setIsMobileOpen(false); setMobileOpenGroup(null); }}
+                                      className="w-full text-left px-3 py-2.5 rounded-lg text-[calc(13px+3pt)] text-gray-600 hover:text-blue-700 hover:bg-blue-50 active:bg-blue-100 transition-colors min-h-[44px] flex items-center"
+                                    >
+                                      {svc.name}
+                                    </button>
+                                  ))}
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              })}
+
+              {/* Bottom action links */}
+              <div className="px-5 pt-5 pb-8 space-y-3">
+                <Link
+                  to="/articles"
+                  onClick={() => setIsMobileOpen(false)}
+                  className="w-full py-3 rounded-xl border border-gray-200 text-[calc(14px+3pt)] font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center min-h-[48px]"
+                >
+                  Articles
+                </Link>
+                <a
+                  href={`tel:${content.contact.phone.replace(/\s/g, '')}`}
+                  className="w-full py-3 rounded-xl border border-gray-200 text-[calc(14px+3pt)] font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center min-h-[48px]"
+                >
+                  {content.contact.phone}
+                </a>
+                <Link
+                  to="/category/new-business"
+                  onClick={() => setIsMobileOpen(false)}
+                  className="w-full py-3 rounded-xl bg-blue-600 text-[calc(14px+3pt)] font-semibold text-white hover:bg-blue-700 transition-colors flex items-center justify-center min-h-[48px]"
+                >
+                  Get Started
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
+    </>
   );
 }
