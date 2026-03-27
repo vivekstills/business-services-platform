@@ -232,9 +232,9 @@ export default function ServiceLeadHero({ service }: Props) {
           <div className="absolute inset-0 dot-grid" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-10">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-xs text-gray-400 mb-8 flex-wrap">
+          <div className="flex items-center gap-2 text-xs text-gray-400 mb-6 sm:mb-8 flex-wrap">
             <Link to="/" className="hover:text-gray-600 transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
             {category && (
@@ -248,7 +248,7 @@ export default function ServiceLeadHero({ service }: Props) {
             <span className="text-gray-600 font-medium">{service.name}</span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Left — info */}
             <div>
               <motion.h1
@@ -287,7 +287,7 @@ export default function ServiceLeadHero({ service }: Props) {
               initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.08 }}
             >
-              <div className="bg-white/90 backdrop-blur-xl border border-white/60 ring-1 ring-gray-200/50 rounded-2xl p-7 shadow-2xl shadow-blue-100/20">
+              <div className="bg-white/90 backdrop-blur-xl border border-white/60 ring-1 ring-gray-200/50 rounded-2xl p-5 sm:p-7 shadow-2xl shadow-blue-100/20">
                 <p className="text-[calc(11px+3pt)] font-bold uppercase tracking-widest text-gray-400 mb-1">Apply for</p>
                 <h2 className="text-xl font-bold text-gray-900 mb-6">{service.name}</h2>
 
@@ -425,7 +425,7 @@ export default function ServiceLeadHero({ service }: Props) {
       </div>
 
       {/* About + FAQ — full width */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
         <h2 className="text-xl font-bold text-gray-900 mb-4">About {service.name}</h2>
         <RichContent content={service.content} />
         <ServiceFAQ
@@ -444,7 +444,7 @@ export default function ServiceLeadHero({ service }: Props) {
             <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-gradient-to-bl from-sky-100/20 to-transparent rounded-full blur-[80px]" />
           </div>
 
-          <div className="relative z-[2] max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="relative z-[2] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Section header */}
             <div className="max-w-2xl mb-12">
               <p className="text-xs font-bold text-blue-600 uppercase tracking-[0.2em] mb-3">
@@ -519,7 +519,7 @@ export default function ServiceLeadHero({ service }: Props) {
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.22 }}
               >
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 items-stretch">
                   {displayPackages.slice(0, 3).map((pkg, i) => {
                     const { isGradient, badgeLabel, showBadgePill, badgeClass } = packageVisuals(pkg);
                     const amountPaise = parsePriceToAmount(pkg.price);
@@ -530,9 +530,9 @@ export default function ServiceLeadHero({ service }: Props) {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: i * 0.07 }}
-                        className={`relative flex flex-col rounded-2xl border p-8 transition-all ${
+                        className={`relative flex flex-col rounded-2xl border p-5 sm:p-8 transition-all ${
                           isGradient
-                            ? 'bg-gradient-to-b from-blue-600 to-blue-700 border-blue-500/50 shadow-2xl shadow-blue-200/40 -translate-y-2 ring-2 ring-blue-100'
+                            ? 'bg-gradient-to-b from-blue-600 to-blue-700 border-blue-500/50 shadow-2xl shadow-blue-200/40 sm:-translate-y-2 ring-2 ring-blue-100'
                             : 'bg-white border-gray-200/80 hover:shadow-xl hover:shadow-gray-200/50 hover:border-blue-100 hover:-translate-y-1'
                         }`}
                       >

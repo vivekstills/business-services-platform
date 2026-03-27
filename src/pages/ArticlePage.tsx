@@ -67,7 +67,7 @@ export default function ArticlePage() {
           <div className="absolute -top-20 right-0 w-[500px] h-[400px] bg-gradient-to-bl from-blue-100/20 to-sky-50/10 rounded-full blur-[100px]" />
           <div className="absolute inset-0 dot-grid" />
         </div>
-        <div className="relative max-w-4xl mx-auto px-6 lg:px-8 py-10">
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-xs text-gray-400 mb-6">
             <Link to="/" className="hover:text-gray-600 transition-colors">Home</Link>
@@ -111,7 +111,7 @@ export default function ArticlePage() {
 
       {/* Cover image */}
       {article.coverImage && (
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 pt-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
           <div className="rounded-2xl overflow-hidden h-64 md:h-80 shadow-lg">
             <img src={article.coverImage} alt={article.title} className="w-full h-full object-cover" />
           </div>
@@ -119,7 +119,7 @@ export default function ArticlePage() {
       )}
 
       {/* Main content + sidebar */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-10">
           {/* Article body */}
           <div>

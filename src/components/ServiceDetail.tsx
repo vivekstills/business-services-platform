@@ -54,7 +54,7 @@ export default function ServiceDetail({ service }: Props) {
 
   return (
     <section className="bg-[#0A0B0D] pt-32 pb-20 border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-16">
           {/* Main Content */}
           <div className="flex-1 max-w-[680px]">

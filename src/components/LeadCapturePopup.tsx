@@ -121,7 +121,7 @@ export default function LeadCapturePopup() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.92, y: 24 }}
             transition={{ type: 'spring', damping: 26, stiffness: 300 }}
-            className="fixed bottom-24 right-6 z-[61] w-[380px] max-w-[calc(100vw-24px)] bg-white rounded-2xl shadow-2xl shadow-gray-400/30 border border-gray-200 overflow-hidden"
+            className="fixed bottom-4 right-4 sm:bottom-24 sm:right-6 z-[61] w-[380px] max-w-[calc(100vw-16px)] sm:max-w-[calc(100vw-24px)] bg-white rounded-2xl shadow-2xl shadow-gray-400/30 border border-gray-200 overflow-hidden max-h-[calc(100dvh-80px)] overflow-y-auto"
           >
             {/* Header */}
             <div className="flex items-center gap-3 px-5 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 relative">

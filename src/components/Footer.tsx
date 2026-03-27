@@ -258,11 +258,11 @@ export default function Footer() {
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-500/30 to-transparent" />
       </div>
 
-      <div className="relative z-[2] max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-10">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-10 mb-14">
+      <div className="relative z-[2] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 pb-8 sm:pb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8 sm:gap-10 mb-10 sm:mb-14">
 
           {/* Brand + contact block — phone/email/address always from Contact info */}
-          <div className="col-span-2 md:col-span-1 lg:col-span-2">
+          <div className="col-span-1 sm:col-span-2 md:col-span-1 lg:col-span-2">
             <Link to="/" className="inline-flex items-center mb-5 group">
               <span className="inline-flex items-center justify-center rounded-xl bg-slate-800/60 ring-1 ring-slate-600/50 p-4 transition-all group-hover:bg-slate-700/60 group-hover:ring-slate-500/50">
                 <img src="/assets/logo.png" alt={logoAlt} className="h-14 sm:h-16 w-auto max-w-[220px] object-contain" />
@@ -318,7 +318,7 @@ export default function Footer() {
             </div>
           ))}
 
-          <div className="col-span-2 md:col-span-1 lg:col-span-2">
+          <div className="col-span-1 sm:col-span-2 md:col-span-1 lg:col-span-2">
             <h4 className={`${footHeading} mb-4 flex items-center gap-1.5`}>
               <CreditCard className="w-4 h-4 text-blue-400" /> {paymentTitle}
             </h4>
@@ -341,7 +341,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-slate-700/50 pt-8">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-slate-700/50 pt-6 sm:pt-8">
           <p className="text-[calc(13px+3pt)] text-slate-400 text-center sm:text-left">
             {copyrightText}
           </p>

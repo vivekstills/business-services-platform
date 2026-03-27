@@ -24,13 +24,13 @@ export default function Services() {
       return { ...c, label: c.title, ...cfg, count };
     });
   return (
-    <section className="relative bg-gradient-to-b from-slate-50 via-gray-50/80 to-white py-24 lg:py-32 overflow-hidden noise-overlay">
+    <section className="relative bg-gradient-to-b from-slate-50 via-gray-50/80 to-white py-16 sm:py-24 lg:py-32 overflow-hidden noise-overlay">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-blue-100/30 to-sky-100/20 rounded-full blur-[120px] animate-float-glow-slow" />
         <div className="absolute -bottom-20 -right-20 w-[400px] h-[400px] bg-gradient-to-tl from-indigo-100/25 to-transparent rounded-full blur-[100px] animate-float-glow" />
         <div className="absolute inset-0 crosshatch" />
       </div>
-      <div className="relative z-[2] max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="relative z-[2] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="max-w-2xl mb-16">
           <motion.p
@@ -55,7 +55,7 @@ export default function Services() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {categories.map((cat, i) => (
             <motion.div
               key={cat.id}

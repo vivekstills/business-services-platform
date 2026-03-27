@@ -5,10 +5,20 @@
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
-/* Site-wide typography: rem-based Tailwind scales from this root (+~1pt vs prior) */
+/* Site-wide typography: scaled root for readability; smaller on mobile to avoid overflow */
 @layer base {
   html {
-    font-size: calc(1rem + 3.5pt);
+    font-size: calc(1rem + 1.5pt);
+    -webkit-text-size-adjust: 100%;
+  }
+  @media (min-width: 640px) {
+    html { font-size: calc(1rem + 2.5pt); }
+  }
+  @media (min-width: 1024px) {
+    html { font-size: calc(1rem + 3.5pt); }
+  }
+  body {
+    overflow-x: hidden;
   }
 }
 

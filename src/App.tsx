@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { ContentProvider } from './context/ContentContext';
 import Navbar from './components/Navbar';
@@ -23,12 +23,21 @@ import Footer from './components/Footer';
 import ChatBot from './components/ChatBot';
 import LeadCapturePopup from './components/LeadCapturePopup';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
 function AppContent() {
   const loc = useLocation();
   const isAdmin = loc.pathname.startsWith('/admin');
 
   return (
     <div className="min-h-screen bg-white font-sans antialiased">
+      <ScrollToTop />
       {!isAdmin && <Navbar />}
       <Routes>
         <Route path="/"                       element={<HomePage />} />

@@ -307,7 +307,7 @@ export default function Navbar() {
             <motion.div
               initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 28, stiffness: 240 }}
-              className="fixed top-16 right-0 bottom-0 w-[300px] bg-white border-l border-gray-200 z-40 overflow-y-auto lg:hidden shadow-2xl"
+              className="fixed top-16 right-0 bottom-0 w-[min(300px,85vw)] bg-white border-l border-gray-200 z-40 overflow-y-auto lg:hidden shadow-2xl overscroll-contain"
             >
               <div className="py-4">
                 {NAV_GROUPS.map((group) => {
@@ -347,7 +347,7 @@ export default function Navbar() {
                                       <button
                                         key={svc.id}
                                         onClick={() => { navigate(`/service/${svc.id}`); setIsMobileOpen(false); }}
-                                        className="w-full text-left px-2 py-1.5 rounded-md text-[calc(13px+3pt)] text-gray-500 hover:text-blue-700 hover:bg-blue-50 transition-colors block"
+                                        className="w-full text-left px-2 py-2 rounded-md text-[calc(13px+3pt)] text-gray-500 hover:text-blue-700 hover:bg-blue-50 transition-colors block min-h-[40px] flex items-center"
                                       >
                                         {svc.name}
                                       </button>

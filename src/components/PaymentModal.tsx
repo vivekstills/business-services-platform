@@ -195,7 +195,7 @@ export default function PaymentModal({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: 'spring', damping: 28, stiffness: 300 }}
-            className="fixed inset-x-4 top-[10vh] sm:inset-auto sm:left-1/2 sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 z-[71] w-auto sm:w-[420px] bg-white rounded-2xl shadow-2xl overflow-hidden"
+            className="fixed inset-x-4 top-[10vh] sm:inset-auto sm:left-1/2 sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 z-[71] w-auto max-w-[calc(100vw-16px)] sm:max-w-md sm:w-[420px] bg-white rounded-2xl shadow-2xl overflow-hidden"
           >
             {/* Header */}
             <div className="flex items-center justify-between px-6 py-4 bg-gradient-to-r from-blue-600 to-blue-700">
@@ -226,7 +226,7 @@ export default function PaymentModal({
 
             {/* Form step */}
             {step === 'form' && (
-              <form onSubmit={handleSubmit} className="p-6 space-y-3">
+              <form onSubmit={handleSubmit} className="p-4 sm:p-6 space-y-3">
                 <div>
                   <label className="block text-xs font-medium text-gray-500 mb-1">Your name *</label>
                   <input

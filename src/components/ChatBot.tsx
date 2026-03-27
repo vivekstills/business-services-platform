@@ -160,7 +160,7 @@ export default function ChatBot() {
   return (
     <>
       {/* Floating button */}
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
         <AnimatePresence>
           {!isOpen && showBadge && (
             <motion.div
@@ -203,8 +203,8 @@ export default function ChatBot() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.94, y: 16 }}
             transition={{ type: 'spring', damping: 26, stiffness: 300 }}
-            className="fixed bottom-24 right-6 z-50 w-[360px] max-w-[calc(100vw-24px)] bg-white rounded-2xl shadow-2xl shadow-gray-300/60 border border-gray-200 flex flex-col overflow-hidden"
-            style={{ height: '520px' }}
+            className="fixed bottom-20 right-4 sm:bottom-24 sm:right-6 z-50 w-[360px] max-w-[calc(100vw-16px)] sm:max-w-[calc(100vw-24px)] bg-white rounded-2xl shadow-2xl shadow-gray-300/60 border border-gray-200 flex flex-col overflow-hidden"
+            style={{ height: 'min(520px, calc(100dvh - 100px))' }}
           >
             {/* Header */}
             <div className="flex items-center gap-3 px-4 py-3.5 bg-gradient-to-r from-blue-600 to-blue-700 flex-shrink-0">

@@ -26,8 +26,8 @@ export default function Hero() {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/80 to-transparent" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 sm:py-16 lg:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
           {/* Left content */}
           <div>
@@ -47,7 +47,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.05 }}
-              className="text-4xl sm:text-5xl lg:text-[calc(58px+3pt)] font-bold text-gray-900 tracking-tight leading-[1.1] mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[calc(58px+3pt)] font-bold text-gray-900 tracking-tight leading-[1.1] mb-5 sm:mb-6"
             >
               {hero.headline.includes(' with ') ? (
                 <>
@@ -68,7 +68,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-[calc(17px+3pt)] text-gray-500 leading-relaxed max-w-xl mb-10"
+              className="text-[calc(15px+3pt)] sm:text-[calc(17px+3pt)] text-gray-500 leading-relaxed max-w-xl mb-8 sm:mb-10"
             >
               {hero.subheadline}
             </motion.p>
@@ -78,17 +78,17 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="flex flex-wrap items-center gap-3 mb-12"
+              className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 mb-10 sm:mb-12"
             >
               <Link
                 to="/category/new-business"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-sky-600 text-white text-[calc(14px+3pt)] font-semibold shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-0.5 transition-all"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-sky-600 text-white text-[calc(14px+3pt)] font-semibold shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-0.5 transition-all min-h-[48px]"
               >
                 Get Started <ArrowRight className="w-4 h-4" />
               </Link>
               <a
                 href={`tel:${contact.phone.replace(/\s/g, '')}`}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border border-gray-200 text-gray-700 text-[calc(14px+3pt)] font-semibold hover:bg-gray-50 hover:border-gray-300 transition-all"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 rounded-xl border border-gray-200 text-gray-700 text-[calc(14px+3pt)] font-semibold hover:bg-gray-50 hover:border-gray-300 transition-all min-h-[48px]"
               >
                 <Phone className="w-4 h-4 text-blue-500" /> Talk to an expert
               </a>
@@ -163,14 +163,14 @@ export default function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.35 }}
-          className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-px border border-gray-200/60 rounded-2xl overflow-hidden max-w-2xl bg-gray-200/50 shadow-sm backdrop-blur-sm"
+          className="mt-12 sm:mt-16 lg:mt-20 grid grid-cols-3 gap-px border border-gray-200/60 rounded-2xl overflow-hidden max-w-2xl bg-gray-200/50 shadow-sm backdrop-blur-sm"
         >
           {STATS.map((s) => (
-            <div key={s.label} className="flex items-center gap-3 bg-white px-6 py-5">
-              <div className="text-blue-600">{s.icon}</div>
+            <div key={s.label} className="flex flex-col sm:flex-row items-center sm:items-center gap-1.5 sm:gap-3 bg-white px-3 sm:px-6 py-4 sm:py-5 text-center sm:text-left">
+              <div className="text-blue-600 hidden sm:block">{s.icon}</div>
               <div>
-                <div className="text-gray-900 font-bold text-lg leading-tight">{s.value}</div>
-                <div className="text-gray-400 text-xs">{s.label}</div>
+                <div className="text-gray-900 font-bold text-base sm:text-lg leading-tight">{s.value}</div>
+                <div className="text-gray-400 text-[10px] sm:text-xs">{s.label}</div>
               </div>
             </div>
           ))}

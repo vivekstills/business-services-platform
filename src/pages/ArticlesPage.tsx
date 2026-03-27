@@ -112,7 +112,7 @@ export default function ArticlesPage() {
           <div className="absolute bottom-0 left-0 w-[300px] h-[200px] bg-gradient-to-tr from-indigo-100/20 to-transparent rounded-full blur-[80px]" />
           <div className="absolute inset-0 dot-grid" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-12">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-xs text-gray-400 mb-6">
             <Link to="/" className="hover:text-gray-600 transition-colors">Home</Link>
@@ -178,9 +178,9 @@ export default function ArticlesPage() {
       </div>
 
       {/* Articles grid */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {filtered.length === 0 ? (
-          <div className="text-center py-24">
+          <div className="text-center py-16 sm:py-24">
             <BookOpen className="w-12 h-12 text-gray-300 mx-auto mb-4" />
             <h3 className="text-lg font-semibold text-gray-500">No articles found</h3>
             <p className="text-sm text-gray-400 mt-1">Try a different search or category filter.</p>

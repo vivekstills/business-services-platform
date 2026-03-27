@@ -54,14 +54,14 @@ export default function ContactSection() {
     }`;
 
   return (
-    <section className="relative bg-gradient-to-b from-gray-50/80 via-slate-50 to-gray-50/60 py-24 lg:py-32 overflow-hidden noise-overlay">
+    <section className="relative bg-gradient-to-b from-gray-50/80 via-slate-50 to-gray-50/60 py-16 sm:py-24 lg:py-32 overflow-hidden noise-overlay">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute -bottom-40 left-1/4 w-[600px] h-[600px] bg-gradient-to-t from-blue-100/25 to-transparent rounded-full blur-[130px] animate-float-glow-slow" />
         <div className="absolute top-0 right-0 w-[350px] h-[350px] bg-gradient-to-bl from-indigo-100/20 to-transparent rounded-full blur-[100px] animate-float-glow" />
         <div className="absolute inset-0 dot-grid" />
       </div>
-      <div className="relative z-[2] max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div className="relative z-[2] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
 
           {/* Left */}
           <div>
@@ -108,7 +108,7 @@ export default function ContactSection() {
           <motion.div
             initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="bg-white/90 backdrop-blur-xl border border-white/60 ring-1 ring-gray-200/50 rounded-2xl p-8 shadow-2xl shadow-blue-100/20"
+            className="bg-white/90 backdrop-blur-xl border border-white/60 ring-1 ring-gray-200/50 rounded-2xl p-5 sm:p-8 shadow-2xl shadow-blue-100/20"
           >
             <form onSubmit={handleSubmit} className="space-y-5">
               {/* Name */}
