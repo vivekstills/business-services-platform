@@ -7,8 +7,8 @@
     "dev": "concurrently \"npm run server\" \"vite --port=5173 --host=0.0.0.0\"",
     "server": "tsx watch server.ts",
     "seed": "tsx scripts/seed-content.ts",
-    "build": "vite build && tsx scripts/generate-sitemap.ts",
-    "build:prerender": "vite build && tsx scripts/generate-sitemap.ts && tsx scripts/prerender.ts",
+    "build": "tsx scripts/generate-sitemap.ts && vite build",
+    "build:prerender": "tsx scripts/generate-sitemap.ts && vite build && tsx scripts/prerender.ts",
     "preview": "vite preview",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit"
