@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { User, Mail, Phone, MessageSquare, MapPin, CheckCircle2, ArrowRight } from 'lucide-react';
 import PolicyLayout from '../components/PolicyLayout';
 import { useContent } from '../context/ContentContext';
+import SEOHead from '../components/SEOHead';
 
 export default function ContactUsPage() {
   const { content } = useContent();
@@ -47,6 +48,12 @@ export default function ContactUsPage() {
 
   return (
     <PolicyLayout title="Contact Us">
+      <SEOHead
+        title="Contact Us"
+        description="Contact Mridhuv Associates for GST, company registration, trademark, tax filing and 120+ business compliance services. Email: enquiry@mridhuvassociates.com, Phone: +91 98765 43210."
+        canonical="/contact-us"
+        keywords="contact Mridhuv Associates, Mridu Associates contact, business registration enquiry, CA firm Bangalore contact, compliance services enquiry"
+      />
       <p className="text-gray-500 text-sm mb-10">We're here to help. Reach out anytime.</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

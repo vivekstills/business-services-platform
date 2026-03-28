@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Star, Quote, ChevronRight } from 'lucide-react';
 import PolicyLayout from '../components/PolicyLayout';
+import SEOHead from '../components/SEOHead';
 
 const REVIEWS = [
   {
@@ -34,6 +35,18 @@ const REVIEWS = [
 export default function ReviewsPage() {
   return (
     <PolicyLayout title="Client Reviews">
+      <SEOHead
+        title="Client Reviews — Trusted by 50,000+ Businesses"
+        description="Read reviews from 50,000+ businesses who trust Mridhuv Associates for GST, company registration, trademark, and compliance services. 4.9/5 average rating."
+        canonical="/reviews"
+        keywords="Mridhuv Associates reviews, Mridu Associates reviews, business compliance reviews, CA firm reviews Bangalore"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'LocalBusiness',
+          name: 'Mridhuv Associates',
+          aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '12000', bestRating: '5' },
+        }}
+      />
       <p className="text-gray-500 text-sm mb-10">What our clients say about us</p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {REVIEWS.map((r, i) => (

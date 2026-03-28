@@ -5,6 +5,7 @@ import { BookOpen, ChevronRight, Clock, Calendar, User, Tag, ArrowLeft, ArrowRig
 import { useContent } from '../context/ContentContext';
 import RichContent from '../components/RichContent';
 import type { Article } from '../types/content';
+import SEOHead, { SITE_URL } from '../components/SEOHead';
 
 const CATEGORY_COLORS: Record<string, string> = {
   'GST & Tax': 'bg-orange-50 text-orange-700 border-orange-200',
@@ -61,6 +62,33 @@ export default function ArticlePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50/80 via-white to-white pt-16 noise-overlay">
+      <SEOHead
+        title={article.title}
+        description={article.excerpt}
+        canonical={`/articles/${article.slug}`}
+        ogType="article"
+        ogImage={article.coverImage || undefined}
+        keywords={article.tags.join(', ') + ', Mridhuv Associates'}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: article.title,
+          description: article.excerpt,
+          author: { '@type': 'Person', name: article.author },
+          datePublished: article.date,
+          publisher: { '@type': 'Organization', name: 'Mridhuv Associates', url: SITE_URL },
+          url: `${SITE_URL}/articles/${article.slug}`,
+          ...(article.coverImage && { image: article.coverImage }),
+          breadcrumb: {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+              { '@type': 'ListItem', position: 2, name: 'Articles', item: `${SITE_URL}/articles` },
+              { '@type': 'ListItem', position: 3, name: article.title, item: `${SITE_URL}/articles/${article.slug}` },
+            ],
+          },
+        }}
+      />
       {/* Article header */}
       <div className="relative bg-gradient-to-br from-white via-white to-blue-50/30 border-b border-gray-200/60 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Search, FileText, ExternalLink, ChevronRight } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 const TM_SEARCH_URL = 'https://tmsearch.ipindia.gov.in/tmrpublicsearch/frmmain.aspx';
 
@@ -10,6 +11,12 @@ export default function TrademarkSearchPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50/80 via-gray-50 to-white pt-16 noise-overlay">
+      <SEOHead
+        title="Trademark Search — IP India Public Search"
+        description="Search for registered trademarks on the IP India portal. Mridhuv Associates provides complete trademark registration, objection, opposition, and renewal services."
+        canonical="/trademark-search"
+        keywords="trademark search India, IP India search, trademark registration check, trademark public search, Mridhuv Associates trademark"
+      />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="flex items-center gap-2 text-xs text-gray-400 mb-6">
           <Link to="/" className="hover:text-gray-600 transition-colors">Home</Link>

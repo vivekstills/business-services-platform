@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { BookOpen, ChevronRight, Search, Clock, Calendar, User, Tag, ArrowRight } from 'lucide-react';
 import { useContent } from '../context/ContentContext';
 import type { Article } from '../types/content';
+import SEOHead from '../components/SEOHead';
 
 const CATEGORY_COLORS: Record<string, string> = {
   'GST & Tax': 'bg-orange-50 text-orange-700 border-orange-200',
@@ -105,6 +106,12 @@ export default function ArticlesPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50/80 via-gray-50 to-white pt-16 noise-overlay">
+      <SEOHead
+        title="Articles & Guides — Business Compliance Knowledge Base"
+        description="Expert articles on GST, company registration, trademark, tax filing, and business compliance in India. Written by Mridhuv Associates specialists."
+        canonical="/articles"
+        keywords="business compliance articles, GST guide, company registration guide, trademark guide India, tax filing tips, Mridhuv Associates blog"
+      />
       {/* Hero */}
       <div className="relative bg-gradient-to-br from-white via-white to-blue-50/30 border-b border-gray-200/60 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">

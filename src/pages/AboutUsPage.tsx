@@ -3,10 +3,17 @@ import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { ArrowRight, Shield, Users, Award, Target } from 'lucide-react';
 import PolicyLayout from '../components/PolicyLayout';
+import SEOHead from '../components/SEOHead';
 
 export default function AboutUsPage() {
   return (
     <PolicyLayout title="About Us">
+      <SEOHead
+        title="About Us — Who We Are"
+        description="Mridhuv Associates is India's leading business compliance and legal services platform. 50,000+ businesses served, 4.9/5 rating, 120+ services across registrations, tax, IP, and compliance."
+        canonical="/about-us"
+        keywords="about Mridhuv Associates, Mridu Associates, business compliance company India, CA firm Bangalore, company registration experts"
+      />
       <p className="text-gray-500 text-sm mb-8">Your trusted partner in business compliance</p>
       <h2>Who We Are</h2>
       <p>Mridhuv Associates is a leading business compliance and legal services platform in India. We help entrepreneurs, startups, and established businesses navigate the complexities of registrations, tax filings, trademark protection, and ongoing compliance.</p>

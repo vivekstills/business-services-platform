@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Search, Building2, ExternalLink, ChevronRight } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 const MCA_SEARCH_URL = 'https://www.mca.gov.in/content/mca/global/en/mca/fo-llp-services/company-llp-name-search.html';
 
@@ -10,6 +11,12 @@ export default function BusinessSearchPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50/80 via-gray-50 to-white pt-16 noise-overlay">
+      <SEOHead
+        title="Company / LLP Name Search — MCA Portal"
+        description="Search for registered companies and LLPs on the MCA portal. Mridhuv Associates also provides company registration, due diligence, and compliance verification services."
+        canonical="/business-search"
+        keywords="MCA company search, LLP search, company name search India, CIN search, company registration check, Mridhuv Associates"
+      />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="flex items-center gap-2 text-xs text-gray-400 mb-6">
           <Link to="/" className="hover:text-gray-600 transition-colors">Home</Link>

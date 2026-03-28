@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { useContent, getServicesByCategory } from '../context/ContentContext';
 import { ArrowRight, ChevronRight } from 'lucide-react';
+import SEOHead, { SITE_URL } from '../components/SEOHead';
 
 export default function CategoryPage() {
   const { categoryId } = useParams();
@@ -26,6 +27,26 @@ export default function CategoryPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50/80 via-gray-50 to-white pt-16 noise-overlay">
+      <SEOHead
+        title={`${category.title} Services`}
+        description={`${category.description} — ${services.length} expert services by Mridhuv Associates. Transparent pricing, fast turnaround.`}
+        canonical={`/category/${categoryId}`}
+        keywords={`${category.title}, ${category.title} services, ${category.title} India, Mridhuv Associates ${category.title}`}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: `${category.title} Services`,
+          description: category.description,
+          url: `${SITE_URL}/category/${categoryId}`,
+          breadcrumb: {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+              { '@type': 'ListItem', position: 2, name: category.title, item: `${SITE_URL}/category/${categoryId}` },
+            ],
+          },
+        }}
+      />
       {/* Hero header */}
       <div className="relative bg-gradient-to-br from-white via-white to-blue-50/30 border-b border-gray-200/60 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
