@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import QuickToolsSection from '../components/QuickToolsSection';
 import Services from '../components/Services';
 import Pricing from '../components/Pricing';
 import ContactSection from '../components/ContactSection';
@@ -7,7 +8,7 @@ import SEOHead from '../components/SEOHead';
 
 export default function HomePage() {
   return (
-    <div className="bg-white text-gray-900">
+    <div className="bg-transparent text-gray-900">
       <SEOHead
         canonical="/"
         keywords="Mridhuv Associates, Mridu Associates, GST registration, company registration India, private limited company, LLP registration, trademark registration, income tax filing, FSSAI registration, business compliance Bangalore, CA services, tax filing India"
@@ -28,6 +29,7 @@ export default function HomePage() {
         }}
       />
       <Hero />
+      <QuickToolsSection />
       <Services />
       <Pricing />
       <ContactSection />

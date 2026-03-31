@@ -10,7 +10,7 @@ export default function BusinessSearchPage() {
   const [query, setQuery] = useState('');
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50/80 via-gray-50 to-white pt-16 noise-overlay">
+    <div className="min-h-screen bg-transparent pt-16 noise-overlay">
       <SEOHead
         title="Company / LLP Name Search — MCA Portal"
         description="Search for registered companies and LLPs on the MCA portal. Mridhuv Associates also provides company registration, due diligence, and compliance verification services."
@@ -44,7 +44,7 @@ export default function BusinessSearchPage() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="bg-white rounded-2xl border border-gray-200 shadow-lg shadow-gray-100 p-8">
+          className="card-hover-warm bg-white rounded-2xl border border-gray-200 shadow-lg shadow-gray-100 p-8">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center">
               <Search className="w-6 h-6 text-blue-600" />

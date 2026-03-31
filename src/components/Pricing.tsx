@@ -14,7 +14,7 @@ function gridColsClass(n: number): string {
 
 function PlanGrid({ plans }: { plans: PricingPlan[] }) {
   return (
-    <div className={`grid ${gridColsClass(plans.length)} gap-5 items-stretch`}>
+    <div className={`grid ${gridColsClass(plans.length)} gap-5`}>
       {plans.map((plan, i) => (
         <motion.div
           key={`${plan.name}-${i}`}
@@ -25,7 +25,7 @@ function PlanGrid({ plans }: { plans: PricingPlan[] }) {
           className={`relative flex flex-col rounded-2xl border p-5 sm:p-8 transition-all ${
             plan.highlight
               ? 'bg-gradient-to-b from-blue-600 to-blue-700 border-blue-500/50 shadow-2xl shadow-blue-200/40 -translate-y-2 ring-2 ring-blue-100'
-              : 'bg-white border-gray-200/80 hover:shadow-xl hover:shadow-gray-200/50 hover:border-blue-100 hover:-translate-y-1'
+              : 'card-hover-warm bg-white border-gray-200/80 hover:shadow-xl hover:shadow-gray-200/50'
           }`}
         >
           {plan.badge && (
@@ -95,12 +95,12 @@ export default function Pricing() {
     'Choose the package that fits your business. All plans include government fees where applicable.';
 
   return (
-    <section className="relative bg-gradient-to-b from-white via-slate-50/50 to-white py-16 sm:py-24 lg:py-32 overflow-hidden noise-overlay">
+    <section id="pricing-section" className="relative bg-transparent py-10 sm:py-12 overflow-hidden noise-overlay">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-br from-blue-100/20 via-transparent to-indigo-100/15 rounded-full blur-[130px] animate-float-glow" />
         <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-gradient-to-bl from-sky-100/20 to-transparent rounded-full blur-[80px]" />
       </div>
-      <div className="relative z-[2] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-[2] max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="max-w-2xl mb-10">
           <motion.p

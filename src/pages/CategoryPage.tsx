@@ -26,7 +26,7 @@ export default function CategoryPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50/80 via-gray-50 to-white pt-16 noise-overlay">
+    <div className="min-h-screen bg-transparent pt-16 noise-overlay">
       <SEOHead
         title={`${category.title} Services`}
         description={`${category.description} — ${services.length} expert services by Mridhuv Associates. Transparent pricing, fast turnaround.`}
@@ -48,13 +48,13 @@ export default function CategoryPage() {
         }}
       />
       {/* Hero header */}
-      <div className="relative bg-gradient-to-br from-white via-white to-blue-50/30 border-b border-gray-200/60 overflow-hidden">
+      <div className="relative bg-transparent border-b border-gray-200/60 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute -top-20 right-0 w-[500px] h-[400px] bg-gradient-to-bl from-blue-100/30 to-sky-50/20 rounded-full blur-[100px] animate-float-glow" />
           <div className="absolute bottom-0 left-0 w-[300px] h-[200px] bg-gradient-to-tr from-indigo-100/20 to-transparent rounded-full blur-[80px]" />
           <div className="absolute inset-0 dot-grid" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+        <div className="relative max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-xs text-gray-400 mb-6">
             <Link to="/" className="hover:text-gray-600 transition-colors">Home</Link>
@@ -85,11 +85,11 @@ export default function CategoryPage() {
       </div>
 
       {/* Services grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
         {services.length === 0 ? (
           <div className="text-gray-400 text-sm">No services available in this category yet.</div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
             {services.map((s, i) => (
               <motion.div
                 key={s.id}
@@ -99,7 +99,7 @@ export default function CategoryPage() {
               >
                 <Link
                   to={`/service/${s.id}`}
-                  className="group flex flex-col h-full p-6 rounded-xl border border-gray-200/60 bg-white/80 backdrop-blur-sm shadow-sm hover:shadow-xl hover:shadow-blue-100/40 hover:border-blue-200/60 hover:-translate-y-1 transition-all duration-300"
+                  className="card-hover-warm group flex flex-col p-6 rounded-2xl border border-gray-200/60 bg-white/90 backdrop-blur-sm shadow-md hover:shadow-xl hover:shadow-blue-100/40 transition-all duration-300"
                 >
                   <div className="flex-1">
                     <div className="text-[calc(11px+3pt)] font-bold text-blue-500 uppercase tracking-widest mb-2">

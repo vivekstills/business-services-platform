@@ -1,23 +1,16 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, Star, ShieldCheck, Users, Phone } from 'lucide-react';
+import { ArrowRight, Phone } from 'lucide-react';
 import { useContent } from '../context/ContentContext';
 import { Link } from 'react-router-dom';
-
-const STAT_ICONS = [
-  <Users className="w-4 h-4" key="users" />,
-  <Star className="w-4 h-4" key="star" />,
-  <ShieldCheck className="w-4 h-4" key="shield" />,
-];
 
 export default function Hero() {
   const { content } = useContent();
   const hero = content.hero;
   const contact = content.contact;
   const POPULAR = hero.popular;
-  const STATS = hero.stats.map((s, i) => ({ ...s, icon: STAT_ICONS[i] ?? STAT_ICONS[0] }));
   return (
-    <section className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50/40 flex items-center overflow-hidden pt-16 min-h-screen noise-overlay">
+    <section className="relative bg-transparent flex items-center overflow-hidden pt-16 min-h-screen noise-overlay">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute -top-32 right-0 w-[800px] h-[800px] bg-gradient-to-br from-blue-200/40 to-sky-100/30 rounded-full blur-[140px] translate-x-1/4 animate-float-glow" />
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-indigo-100/40 to-blue-100/30 rounded-full blur-[120px] -translate-x-1/4 translate-y-1/4 animate-float-glow-slow" />
@@ -26,8 +19,8 @@ export default function Hero() {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/80 to-transparent" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 sm:py-16 lg:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 w-full py-8 sm:py-10 lg:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 xl:gap-16 items-center">
 
           {/* Left content */}
           <div>
@@ -114,67 +107,24 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right — Trust card panel */}
+          {/* Right — Illustration */}
           <motion.div
             initial={{ opacity: 0, x: 24 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="hidden lg:block"
+            className="flex items-center justify-center lg:-mt-8"
           >
-            <div className="relative">
-              {/* Main card */}
-              <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl shadow-blue-100/30 border border-white/60 ring-1 ring-gray-100/50 p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <img src="/assets/logo.png" alt="Mridhuv Associates" className="h-12 sm:h-14 w-auto object-contain" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-1">{hero.trustCard.title}</h3>
-                <p className="text-gray-500 text-[calc(14px+3pt)] mb-6">{hero.trustCard.subtitle}</p>
-                <div className="space-y-3 mb-6">
-                  {hero.trustCard.items.map((item, idx) => {
-                    const colors = ['bg-green-50 text-green-700 border-green-200', 'bg-blue-50 text-blue-700 border-blue-200', 'bg-sky-50 text-sky-700 border-sky-200'];
-                    return (
-                    <div key={idx} className="flex items-center justify-between py-2.5 px-4 rounded-xl bg-gray-50 border border-gray-100">
-                      <span className="text-[calc(13.5px+3pt)] font-semibold text-gray-700">{item.label}</span>
-                      <span className={`text-[calc(11px+3pt)] font-bold px-2.5 py-1 rounded-full border ${colors[idx] ?? colors[0]}`}>{item.time}</span>
-                    </div>
-                  );
-                  })}
-                </div>
-                {/* Rating */}
-                <div className="flex items-center gap-2 pt-4 border-t border-gray-100">
-                  {[1,2,3,4,5].map((s) => (
-                    <Star key={s} className="w-4 h-4 text-amber-400 fill-amber-400" />
-                  ))}
-                  <span className="text-[calc(13px+3pt)] font-semibold text-gray-700 ml-1">{hero.trustCard.rating}</span>
-                  <span className="text-[calc(12px+3pt)] text-gray-400">· {hero.trustCard.reviews}</span>
-                </div>
-              </div>
-              {/* Floating badge */}
-              <div className="absolute -top-4 -right-4 bg-blue-600 text-white rounded-2xl px-4 py-2.5 shadow-lg shadow-blue-200">
-                <div className="text-[calc(22px+3pt)] font-black leading-none">{hero.trustCard.badgeValue}</div>
-                <div className="text-[calc(10px+3pt)] font-semibold opacity-80">{hero.trustCard.badgeLabel}</div>
-              </div>
-            </div>
+            <motion.img
+              src="/assets/hero-illustration-transparent.png"
+              alt="Business services illustration"
+              initial={{ y: 0 }}
+              animate={{ y: [0, -6, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+              className="w-full max-w-[520px] lg:max-w-[620px] h-auto object-contain bg-transparent"
+            />
           </motion.div>
         </div>
 
-        {/* Stats row */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.35 }}
-          className="mt-12 sm:mt-16 lg:mt-20 grid grid-cols-3 gap-px border border-gray-200/60 rounded-2xl overflow-hidden max-w-2xl bg-gray-200/50 shadow-sm backdrop-blur-sm"
-        >
-          {STATS.map((s) => (
-            <div key={s.label} className="flex flex-col sm:flex-row items-center sm:items-center gap-1.5 sm:gap-3 bg-white px-3 sm:px-6 py-4 sm:py-5 text-center sm:text-left">
-              <div className="text-blue-600 hidden sm:block">{s.icon}</div>
-              <div>
-                <div className="text-gray-900 font-bold text-base sm:text-lg leading-tight">{s.value}</div>
-                <div className="text-gray-400 text-[10px] sm:text-xs">{s.label}</div>
-              </div>
-            </div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );

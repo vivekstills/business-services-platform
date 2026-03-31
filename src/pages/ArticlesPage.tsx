@@ -31,7 +31,7 @@ function ArticleCard({ article, index }: { article: Article; index: number }) {
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05 }}
-      className="group bg-white/90 backdrop-blur-sm border border-gray-200/60 rounded-2xl overflow-hidden hover:shadow-lg hover:shadow-gray-200/60 hover:border-blue-200/60 transition-all duration-300 flex flex-col"
+      className="card-hover-warm group bg-white/90 backdrop-blur-sm border border-gray-200/60 rounded-2xl overflow-hidden hover:shadow-lg hover:shadow-gray-200/60 transition-all duration-300 flex flex-col"
     >
       {/* Cover image */}
       {article.coverImage ? (
@@ -105,7 +105,7 @@ export default function ArticlesPage() {
   const rest = filtered.slice(1);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50/80 via-gray-50 to-white pt-16 noise-overlay">
+    <div className="min-h-screen bg-transparent pt-16 noise-overlay">
       <SEOHead
         title="Articles & Guides — Business Compliance Knowledge Base"
         description="Expert articles on GST, company registration, trademark, tax filing, and business compliance in India. Written by Mridhuv Associates specialists."
@@ -113,7 +113,7 @@ export default function ArticlesPage() {
         keywords="business compliance articles, GST guide, company registration guide, trademark guide India, tax filing tips, Mridhuv Associates blog"
       />
       {/* Hero */}
-      <div className="relative bg-gradient-to-br from-white via-white to-blue-50/30 border-b border-gray-200/60 overflow-hidden">
+      <div className="relative bg-transparent border-b border-gray-200/60 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute -top-20 right-0 w-[500px] h-[400px] bg-gradient-to-bl from-blue-100/30 to-sky-50/20 rounded-full blur-[100px] animate-float-glow" />
           <div className="absolute bottom-0 left-0 w-[300px] h-[200px] bg-gradient-to-tr from-indigo-100/20 to-transparent rounded-full blur-[80px]" />
@@ -198,7 +198,7 @@ export default function ArticlesPage() {
             {featured && !search && !activeCat && (
               <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
                 className="mb-10 group">
-                <Link to={`/articles/${featured.slug}`} className="block bg-white/90 backdrop-blur-sm border border-gray-200/60 rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-gray-200/60 hover:border-blue-200/60 transition-all duration-300">
+                <Link to={`/articles/${featured.slug}`} className="card-hover-warm block bg-white/90 backdrop-blur-sm border border-gray-200/60 rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-gray-200/60 transition-all duration-300">
                   <div className="grid grid-cols-1 lg:grid-cols-2">
                     <div className={`h-64 lg:h-auto min-h-[280px] ${featured.coverImage ? '' : 'bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-700'} overflow-hidden`}>
                       {featured.coverImage

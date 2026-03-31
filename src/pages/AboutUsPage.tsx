@@ -34,7 +34,7 @@ export default function AboutUsPage() {
           { icon: <Award className="w-5 h-5" />, title: '4.9/5 Rating', desc: 'Consistently high client satisfaction.' },
           { icon: <Target className="w-5 h-5" />, title: 'Fast Turnaround', desc: 'Most services completed in 7–10 working days.' },
         ].map((item) => (
-          <div key={item.title} className="flex gap-4 p-4 rounded-xl bg-white border border-gray-200">
+          <div key={item.title} className="card-hover-warm flex gap-4 p-4 rounded-xl bg-white border border-gray-200">
             <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0">{item.icon}</div>
             <div>
               <div className="font-semibold text-gray-900">{item.title}</div>

@@ -11,6 +11,7 @@ export default function ContactSection() {
   const [errors, setErrors]         = useState<Record<string, string>>({});
   const [isSubmitted, setIsSubmitted]   = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const validate = () => {
     const e: Record<string, string> = {};
@@ -27,17 +28,32 @@ export default function ContactSection() {
     e.preventDefault();
     if (!validate()) return;
     setIsSubmitting(true);
+    setSubmitError('');
     try {
-      await fetch('/api/enquiry', {
+      const payload = { ...formData, serviceId: 'general', serviceName: formData.service };
+      console.log('[ContactSection] submitting enquiry', payload);
+      const response = await fetch('/api/enquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...formData, serviceId: 'general', serviceName: formData.service }),
+        body: JSON.stringify(payload),
       });
-    } catch { /* best-effort */ }
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormData({ name: '', email: '', phone: '', service: '', message: '' });
-    setTimeout(() => setIsSubmitted(false), 5000);
+      console.log('[ContactSection] enquiry response', { ok: response.ok, status: response.status });
+      if (response.ok) {
+        alert('Form submitted successfully');
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+        setTimeout(() => setIsSubmitted(false), 5000);
+      } else {
+        setSubmitError('Submission failed. Please try again.');
+        alert('Submission failed');
+      }
+    } catch (error) {
+      console.error('[ContactSection] enquiry submission failed', error);
+      setSubmitError('Submission failed. Please try again.');
+      alert('Submission failed');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const field = (id: keyof typeof formData) => ({
@@ -54,13 +70,13 @@ export default function ContactSection() {
     }`;
 
   return (
-    <section className="relative bg-gradient-to-b from-gray-50/80 via-slate-50 to-gray-50/60 py-16 sm:py-24 lg:py-32 overflow-hidden noise-overlay">
+    <section className="relative bg-transparent py-10 sm:py-12 overflow-hidden noise-overlay">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute -bottom-40 left-1/4 w-[600px] h-[600px] bg-gradient-to-t from-blue-100/25 to-transparent rounded-full blur-[130px] animate-float-glow-slow" />
         <div className="absolute top-0 right-0 w-[350px] h-[350px] bg-gradient-to-bl from-indigo-100/20 to-transparent rounded-full blur-[100px] animate-float-glow" />
         <div className="absolute inset-0 dot-grid" />
       </div>
-      <div className="relative z-[2] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-[2] max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
 
           {/* Left */}
@@ -90,7 +106,7 @@ export default function ContactSection() {
               {cs.features.map((item, i) => {
                 const icons = [<BadgeCheck className="w-4 h-4 text-blue-600" key="b" />, <Clock className="w-4 h-4 text-blue-600" key="c" />, <Wallet className="w-4 h-4 text-blue-600" key="w" />];
                 return (
-                <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-white/70 backdrop-blur-sm border border-gray-100/80 shadow-sm">
+                <div key={i} className="card-hover-warm flex items-start gap-4 p-4 rounded-2xl bg-white/70 backdrop-blur-sm border border-gray-100/80 shadow-sm">
                   <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0">
                     {icons[i] ?? icons[0]}
                   </div>
@@ -192,6 +208,12 @@ export default function ContactSection() {
                   <span className="text-[calc(12.5px+3pt)] text-emerald-700">
                     Thank you! Our team will reach out within 24 business hours.
                   </span>
+                </div>
+              )}
+              {submitError && (
+                <div className="flex items-start gap-2 bg-red-50 border border-red-200 rounded-xl p-3">
+                  <AlertCircle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-[calc(12.5px+3pt)] text-red-700">{submitError}</span>
                 </div>
               )}
             </form>

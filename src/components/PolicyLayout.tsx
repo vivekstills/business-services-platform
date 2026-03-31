@@ -9,8 +9,8 @@ type Props = {
 
 export default function PolicyLayout({ title, children }: Props) {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50/80 via-gray-50 to-white pt-16 noise-overlay">
-      <div className="relative bg-gradient-to-br from-white via-white to-blue-50/20 border-b border-gray-200/60">
+    <div className="min-h-screen bg-transparent pt-16 noise-overlay">
+      <div className="relative bg-transparent border-b border-gray-200/60">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="flex items-center gap-2 text-xs text-gray-400 mb-4">
             <Link to="/" className="hover:text-gray-600 transition-colors">Home</Link>

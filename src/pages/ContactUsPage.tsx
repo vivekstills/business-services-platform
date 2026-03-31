@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { User, Mail, Phone, MessageSquare, MapPin, CheckCircle2, ArrowRight } from 'lucide-react';
+import { User, Mail, Phone, MessageSquare, MapPin, CheckCircle2, ArrowRight, AlertCircle } from 'lucide-react';
 import PolicyLayout from '../components/PolicyLayout';
 import { useContent } from '../context/ContentContext';
 import SEOHead from '../components/SEOHead';
@@ -14,6 +14,7 @@ export default function ContactUsPage() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const validate = () => {
     const e: Record<string, string> = {};
@@ -29,16 +30,31 @@ export default function ContactUsPage() {
     e.preventDefault();
     if (!validate()) return;
     setIsSubmitting(true);
+    setSubmitError('');
     try {
-      await fetch('/api/enquiry', {
+      const payload = { ...formData, serviceId: 'contact', serviceName: 'Contact Us' };
+      console.log('[ContactUsPage] submitting enquiry', payload);
+      const response = await fetch('/api/enquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...formData, serviceId: 'contact', serviceName: 'Contact Us' }),
+        body: JSON.stringify(payload),
       });
-    } catch { /* best-effort */ }
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormData({ name: '', email: '', phone: '', message: '' });
+      console.log('[ContactUsPage] enquiry response', { ok: response.ok, status: response.status });
+      if (response.ok) {
+        alert('Form submitted successfully');
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        setSubmitError('Submission failed. Please try again.');
+        alert('Submission failed');
+      }
+    } catch (error) {
+      console.error('[ContactUsPage] enquiry submission failed', error);
+      setSubmitError('Submission failed. Please try again.');
+      alert('Submission failed');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const inputCls = (key: string) =>
@@ -61,21 +77,21 @@ export default function ContactUsPage() {
         <div>
           <h2 className="text-xl font-bold text-gray-900 mb-6">Get in Touch</h2>
           <div className="space-y-4">
-            <a href={`mailto:${EMAIL}`} className="flex items-center gap-3 p-4 rounded-xl bg-white border border-gray-200 hover:border-blue-200 hover:shadow-md transition-all">
+            <a href={`mailto:${EMAIL}`} className="card-hover-warm flex items-center gap-3 p-4 rounded-xl bg-white border border-gray-200 hover:shadow-md transition-all">
               <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center"><Mail className="w-5 h-5 text-blue-600" /></div>
               <div>
                 <div className="text-[calc(11px+3pt)] font-bold uppercase tracking-wider text-gray-400">Email</div>
                 <div className="font-semibold text-gray-900">{EMAIL}</div>
               </div>
             </a>
-            <a href={`tel:${PHONE.replace(/\s/g, '')}`} className="flex items-center gap-3 p-4 rounded-xl bg-white border border-gray-200 hover:border-blue-200 hover:shadow-md transition-all">
+            <a href={`tel:${PHONE.replace(/\s/g, '')}`} className="card-hover-warm flex items-center gap-3 p-4 rounded-xl bg-white border border-gray-200 hover:shadow-md transition-all">
               <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center"><Phone className="w-5 h-5 text-blue-600" /></div>
               <div>
                 <div className="text-[calc(11px+3pt)] font-bold uppercase tracking-wider text-gray-400">Phone</div>
                 <div className="font-semibold text-gray-900">{PHONE}</div>
               </div>
             </a>
-            <div className="flex items-start gap-3 p-4 rounded-xl bg-white border border-gray-200">
+            <div className="card-hover-warm flex items-start gap-3 p-4 rounded-xl bg-white border border-gray-200">
               <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0"><MapPin className="w-5 h-5 text-blue-600" /></div>
               <div>
                 <div className="text-[calc(11px+3pt)] font-bold uppercase tracking-wider text-gray-400">Address</div>
@@ -86,7 +102,7 @@ export default function ContactUsPage() {
         </div>
 
         {/* Form */}
-        <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+        <div className="card-hover-warm bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
           <h3 className="text-lg font-bold text-gray-900 mb-6">Send a Message</h3>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
@@ -124,6 +140,12 @@ export default function ContactUsPage() {
               {isSubmitting ? 'Sending…' : isSubmitted ? <><CheckCircle2 className="w-4 h-4" /> Sent!</> : <>Send Message <ArrowRight className="w-4 h-4" /></>}
             </button>
             {isSubmitted && <p className="text-[calc(13px+3pt)] text-emerald-600">Thank you! We'll get back to you within 24 hours.</p>}
+            {submitError && (
+              <div className="flex items-center gap-2 rounded-xl border border-red-200 bg-red-50 p-3">
+                <AlertCircle className="w-4 h-4 text-red-600" />
+                <p className="text-[calc(12px+3pt)] text-red-700">{submitError}</p>
+              </div>
+            )}
           </form>
         </div>
       </div>

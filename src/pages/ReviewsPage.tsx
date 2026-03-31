@@ -55,7 +55,7 @@ export default function ReviewsPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.08 }}
-            className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+            className="card-hover-warm bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
           >
             <Quote className="w-8 h-8 text-blue-100 mb-4" />
             <div className="flex gap-1 mb-3">

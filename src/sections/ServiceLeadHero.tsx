@@ -18,9 +18,24 @@ import {
 import {
   AlertCircle, CheckCircle2, Mail, Phone, User, ChevronRight, Check, MapPin, Info, CreditCard,
 } from 'lucide-react';
-import RichContent from '../components/RichContent';
 
 type Props = { service: Service };
+
+function cleanText(value: string): string {
+  return value
+    .replace(/\*\*/g, '')
+    .replace(/[#*_`>-]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function getAboutParagraphs(content: string): string[] {
+  return content
+    .split(/\n{2,}/)
+    .map((p) => cleanText(p))
+    .filter((p) => p.length > 0)
+    .slice(0, 3);
+}
 
 function stepsFor(service: Service): string[] {
   // Admin-configured steps take priority
@@ -148,6 +163,7 @@ export default function ServiceLeadHero({ service }: Props) {
   }, [hasCustomTabbedPricing, customPricingTabs, serviceTabIdx]);
 
   const displayPackages: ServicePackage[] = packagesFromAdminTabs ?? activePackages;
+  const aboutParagraphs = useMemo(() => getAboutParagraphs(service.content), [service.content]);
 
   const packageVisuals = (pkg: ServicePackage) => {
     const isRecommended = usingStatePackages && Boolean(pkg.recommended);
@@ -222,19 +238,16 @@ export default function ServiceLeadHero({ service }: Props) {
     }`;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50/80 via-gray-50 to-white pt-16 noise-overlay">
-
-      {/* Hero section */}
-      <div className="relative bg-gradient-to-br from-white via-white to-blue-50/30 border-b border-gray-200/60 overflow-hidden">
+    <div className="min-h-screen bg-transparent pt-16 noise-overlay">
+      <section className="relative bg-transparent border-b border-gray-200/60 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute -top-20 right-0 w-[600px] h-[500px] bg-gradient-to-bl from-blue-100/30 to-sky-50/20 rounded-full blur-[120px] animate-float-glow" />
           <div className="absolute bottom-0 left-[10%] w-[350px] h-[250px] bg-gradient-to-tr from-indigo-100/20 to-transparent rounded-full blur-[90px] animate-float-glow-slow" />
           <div className="absolute inset-0 dot-grid" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
-          {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-xs text-gray-400 mb-6 sm:mb-8 flex-wrap">
+        <div className="relative max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+          <div className="flex items-center gap-2 text-xs text-gray-400 mb-6 flex-wrap">
             <Link to="/" className="hover:text-gray-600 transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
             {category && (
@@ -249,49 +262,46 @@ export default function ServiceLeadHero({ service }: Props) {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-            {/* Left — info */}
             <div>
               <motion.h1
                 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
-                className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight leading-tight mb-4"
+                className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight leading-tight mb-4"
               >
                 {service.name}
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.05 }}
-                className="text-gray-500 text-[calc(15px+3pt)] leading-relaxed mb-8"
+                className="text-gray-600 text-[calc(15px+3pt)] leading-relaxed mb-8 max-w-2xl"
               >
-                {service.shortDescription || 'Get complete expert support. We handle documentation, filing and follow-ups — so you can focus on your business.'}
+                {service.shortDescription || 'Get complete expert support from documentation to filing and follow-ups, all handled by specialists.'}
               </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="space-y-3"
-              >
-                <p className="text-[calc(11px+3pt)] font-bold uppercase tracking-widest text-gray-400 mb-4">How it works</p>
-                {steps.map((step, idx) => (
-                  <div key={idx} className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center text-[calc(11px+3pt)] font-bold text-blue-700 flex-shrink-0 mt-0.5">
-                      {idx + 1}
-                    </div>
-                    <span className="text-[calc(13.5px+3pt)] text-gray-600 leading-snug">{step}</span>
-                  </div>
-                ))}
-              </motion.div>
+              <div className="flex flex-wrap gap-3">
+                <button
+                  type="button"
+                  onClick={() => document.getElementById('enquiry-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold shadow-md hover:shadow-lg hover:bg-blue-700 transition-all duration-200"
+                >
+                  Get Started
+                </button>
+                <a
+                  href="tel:+919876543210"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-gray-200 text-gray-700 font-semibold hover:bg-gray-50 transition-all duration-200"
+                >
+                  Talk to Expert
+                </a>
+              </div>
             </div>
 
-            {/* Right — form */}
             <motion.div
+              id="enquiry-form"
               initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.08 }}
+              className="card-hover-warm bg-white/95 backdrop-blur-xl border border-gray-200/70 rounded-2xl p-5 sm:p-7 shadow-xl"
             >
-              <div className="bg-white/90 backdrop-blur-xl border border-white/60 ring-1 ring-gray-200/50 rounded-2xl p-5 sm:p-7 shadow-2xl shadow-blue-100/20">
-                <p className="text-[calc(11px+3pt)] font-bold uppercase tracking-widest text-gray-400 mb-1">Apply for</p>
-                <h2 className="text-xl font-bold text-gray-900 mb-6">{service.name}</h2>
-
-                <form onSubmit={handleSubmit} className="space-y-4">
+              <p className="text-[calc(11px+3pt)] font-bold uppercase tracking-widest text-gray-400 mb-1">Quick Enquiry</p>
+              <h2 className="text-xl font-bold text-gray-900 mb-6">{service.name}</h2>
+              <form onSubmit={handleSubmit} className="space-y-4">
                   {/* Name */}
                   <div>
                     <label className="block text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
@@ -417,51 +427,49 @@ export default function ServiceLeadHero({ service }: Props) {
                     By continuing you agree to be contacted by our team regarding{' '}
                     <span className="text-gray-600">{service.name}</span>.
                   </p>
-                </form>
-              </div>
+              </form>
             </motion.div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* About + FAQ — full width */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">About {service.name}</h2>
-        <RichContent content={service.content} />
-        <ServiceFAQ
-          faqs={faqs}
-          stateFAQs={stateFAQs}
-          serviceName={service.name}
-          selectedState={selectedState}
-        />
-      </div>
+      <section className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">About this service</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start">
+          <div className="space-y-4">
+            {aboutParagraphs.map((paragraph, idx) => (
+              <p key={idx} className="text-gray-600 leading-relaxed">{paragraph}</p>
+            ))}
+          </div>
+          <div className="flex justify-center lg:justify-start">
+            <img
+              src="/assets/service-about-illustration.png"
+              alt="Service process illustration"
+              className="w-full max-w-[520px] h-auto object-contain drop-shadow-[0_14px_26px_rgba(67,56,202,0.16)]"
+            />
+          </div>
+        </div>
+      </section>
 
-      {/* Pricing section — homepage-identical style; optional admin tabbed plans per service */}
       {displayPackages.length > 0 && (
-        <section className="relative bg-gradient-to-b from-white via-slate-50/50 to-white py-16 lg:py-20 overflow-hidden noise-overlay">
+        <section className="relative bg-transparent py-10 sm:py-12 overflow-hidden noise-overlay">
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-br from-blue-100/20 via-transparent to-indigo-100/15 rounded-full blur-[130px] animate-float-glow" />
             <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-gradient-to-bl from-sky-100/20 to-transparent rounded-full blur-[80px]" />
           </div>
 
-          <div className="relative z-[2] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Section header */}
+          <div className="relative z-[2] max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl mb-12">
               <p className="text-xs font-bold text-blue-600 uppercase tracking-[0.2em] mb-3">
-                {hasCustomTabbedPricing
-                  ? servicePricingPage?.sectionLabel?.trim() || 'Pricing'
-                  : 'Pricing'}
+                {hasCustomTabbedPricing ? servicePricingPage?.sectionLabel?.trim() || 'Pricing' : 'Pricing'}
               </p>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight leading-tight mb-3">
-                {hasCustomTabbedPricing
-                  ? servicePricingPage?.sectionTitle?.trim() || `Choose the right plan for ${service.name}`
-                  : `Choose the right plan for ${service.name}`}
+                {hasCustomTabbedPricing ? servicePricingPage?.sectionTitle?.trim() || `Choose the right package` : 'Choose the right package'}
               </h2>
               <p className="text-gray-500 text-[calc(15px+3pt)]">
                 {hasCustomTabbedPricing
-                  ? servicePricingPage?.sectionSubtitle?.trim() ||
-                    'All plans include expert support, document handling and follow-up until completion.'
-                  : 'All plans include expert support, document handling and follow-up until completion.'}
+                  ? servicePricingPage?.sectionSubtitle?.trim() || 'Standard, Deluxe and Premium plans with transparent pricing.'
+                  : 'Standard, Deluxe and Premium plans with transparent pricing.'}
               </p>
             </div>
 
@@ -519,7 +527,7 @@ export default function ServiceLeadHero({ service }: Props) {
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.22 }}
               >
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 items-stretch">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
                   {displayPackages.slice(0, 3).map((pkg, i) => {
                     const { isGradient, badgeLabel, showBadgePill, badgeClass } = packageVisuals(pkg);
                     const amountPaise = parsePriceToAmount(pkg.price);
@@ -532,8 +540,8 @@ export default function ServiceLeadHero({ service }: Props) {
                         transition={{ delay: i * 0.07 }}
                         className={`relative flex flex-col rounded-2xl border p-5 sm:p-8 transition-all ${
                           isGradient
-                            ? 'bg-gradient-to-b from-blue-600 to-blue-700 border-blue-500/50 shadow-2xl shadow-blue-200/40 sm:-translate-y-2 ring-2 ring-blue-100'
-                            : 'bg-white border-gray-200/80 hover:shadow-xl hover:shadow-gray-200/50 hover:border-blue-100 hover:-translate-y-1'
+                            ? 'bg-gradient-to-b from-blue-600 to-blue-700 border-blue-500/50 shadow-2xl shadow-blue-200/40 ring-2 ring-blue-100'
+                            : 'card-hover-warm bg-white border-gray-200/80 hover:shadow-xl hover:shadow-gray-200/50'
                         }`}
                       >
                         {showBadgePill && (
@@ -608,7 +616,6 @@ export default function ServiceLeadHero({ service }: Props) {
                   })}
                 </div>
 
-                {/* Extra plans (4th+) — compact grid below */}
                 {displayPackages.length > 3 && (
                   <div className="mt-8">
                     <p className="text-xs font-bold text-gray-400 uppercase tracking-[0.18em] mb-4">More options</p>
@@ -626,7 +633,7 @@ export default function ServiceLeadHero({ service }: Props) {
                             className={`relative flex flex-col rounded-2xl border p-6 transition-all ${
                               isGradient
                                 ? 'bg-gradient-to-b from-blue-600 to-blue-700 border-blue-500/50 shadow-xl shadow-blue-200/30 ring-2 ring-blue-100'
-                                : 'bg-white border-gray-200/80 hover:shadow-lg hover:border-blue-100'
+                                : 'card-hover-warm bg-white border-gray-200/80 hover:shadow-lg'
                             }`}
                           >
                             {showBadgePill && (
@@ -716,6 +723,15 @@ export default function ServiceLeadHero({ service }: Props) {
           </div>
         </section>
       )}
+
+      <section className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+        <ServiceFAQ
+          faqs={faqs}
+          stateFAQs={stateFAQs}
+          serviceName={service.name}
+          selectedState={selectedState}
+        />
+      </section>
 
       {paymentPkg && (
         <PaymentModal

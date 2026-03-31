@@ -25,7 +25,7 @@ function CategoryBadge({ cat }: { cat: string }) {
 function RelatedCard({ article }: { article: Article }) {
   return (
     <Link to={`/articles/${article.slug}`}
-      className="group flex gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors">
+      className="card-hover-warm group flex gap-3 p-3 rounded-xl transition-colors">
       <div className={`w-16 h-16 rounded-lg flex-shrink-0 overflow-hidden ${article.coverImage ? '' : 'bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center'}`}>
         {article.coverImage
           ? <img src={article.coverImage} alt={article.title} className="w-full h-full object-cover" />
@@ -61,7 +61,7 @@ export default function ArticlePage() {
   const next = articles[articleIndex + 1];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50/80 via-white to-white pt-16 noise-overlay">
+    <div className="min-h-screen bg-transparent pt-16 noise-overlay">
       <SEOHead
         title={article.title}
         description={article.excerpt}
@@ -90,7 +90,7 @@ export default function ArticlePage() {
         }}
       />
       {/* Article header */}
-      <div className="relative bg-gradient-to-br from-white via-white to-blue-50/30 border-b border-gray-200/60 overflow-hidden">
+      <div className="relative bg-transparent border-b border-gray-200/60 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-20 right-0 w-[500px] h-[400px] bg-gradient-to-bl from-blue-100/20 to-sky-50/10 rounded-full blur-[100px]" />
           <div className="absolute inset-0 dot-grid" />
@@ -151,7 +151,7 @@ export default function ArticlePage() {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-10">
           {/* Article body */}
           <div>
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200/60 p-8 shadow-sm">
+            <div className="card-hover-warm bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200/60 p-8 shadow-sm">
               <RichContent content={article.content} />
             </div>
 
@@ -160,7 +160,7 @@ export default function ArticlePage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
                 {prev ? (
                   <Link to={`/articles/${prev.slug}`}
-                    className="group flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-200 hover:shadow-sm transition-all">
+                    className="card-hover-warm group flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:shadow-sm transition-all">
                     <ArrowLeft className="w-4 h-4 text-gray-400 group-hover:text-blue-600 mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="text-[calc(11px+3pt)] text-gray-400 font-medium uppercase tracking-wider mb-1">Previous</p>
@@ -170,7 +170,7 @@ export default function ArticlePage() {
                 ) : <div />}
                 {next && (
                   <Link to={`/articles/${next.slug}`}
-                    className="group flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-200 hover:shadow-sm transition-all text-right sm:flex-row-reverse">
+                    className="card-hover-warm group flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:shadow-sm transition-all text-right sm:flex-row-reverse">
                     <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="text-[calc(11px+3pt)] text-gray-400 font-medium uppercase tracking-wider mb-1">Next</p>
@@ -196,7 +196,7 @@ export default function ArticlePage() {
 
             {/* Related articles */}
             {sidebar.length > 0 && (
-              <div className="bg-white rounded-2xl border border-gray-200/60 p-5">
+              <div className="card-hover-warm bg-white rounded-2xl border border-gray-200/60 p-5">
                 <h3 className="text-sm font-bold text-gray-700 mb-3">More Articles</h3>
                 <div className="divide-y divide-gray-100">
                   {sidebar.map((a) => <RelatedCard key={a.id} article={a} />)}
