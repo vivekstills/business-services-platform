@@ -48,13 +48,13 @@ export default function CategoryPage() {
         }}
       />
       {/* Hero header */}
-      <div className="relative bg-transparent border-b border-gray-200/60 overflow-hidden">
+      <div className="relative bg-transparent overflow-hidden">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute -top-20 right-0 w-[500px] h-[400px] bg-gradient-to-bl from-blue-100/30 to-sky-50/20 rounded-full blur-[100px] animate-float-glow" />
           <div className="absolute bottom-0 left-0 w-[300px] h-[200px] bg-gradient-to-tr from-indigo-100/20 to-transparent rounded-full blur-[80px]" />
           <div className="absolute inset-0 dot-grid" />
         </div>
-        <div className="relative max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+        <div className="relative max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-xs text-gray-400 mb-6">
             <Link to="/" className="hover:text-gray-600 transition-colors">Home</Link>
@@ -64,14 +64,14 @@ export default function CategoryPage() {
 
           <motion.h1
             initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
-            className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-3"
+            className="text-[22px] sm:text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-2.5"
           >
             {category.title}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            className="text-gray-500 max-w-2xl text-[calc(15px+3pt)]"
+            className="text-gray-500 max-w-2xl text-[13px] sm:text-[calc(15px+3pt)]"
           >
             {category.description}
           </motion.p>
@@ -85,11 +85,11 @@ export default function CategoryPage() {
       </div>
 
       {/* Services grid */}
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {services.length === 0 ? (
           <div className="text-gray-400 text-sm">No services available in this category yet.</div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+          <div className="grid grid-cols-3 [@media(max-width:379px)]:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-2.5 sm:gap-5">
             {services.map((s, i) => (
               <motion.div
                 key={s.id}
@@ -99,20 +99,20 @@ export default function CategoryPage() {
               >
                 <Link
                   to={`/service/${s.id}`}
-                  className="card-hover-warm group flex flex-col p-6 rounded-2xl border border-gray-200/60 bg-white/90 backdrop-blur-sm shadow-md hover:shadow-xl hover:shadow-blue-100/40 transition-all duration-300"
+                  className="card-hover-warm group flex flex-col h-full min-w-0 p-2.5 sm:p-6 rounded-[10px] sm:rounded-2xl border border-gray-200/60 bg-white/90 backdrop-blur-sm shadow-sm hover:shadow-md sm:hover:shadow-xl sm:hover:shadow-blue-100/40 transition-all duration-300 overflow-hidden text-center"
                 >
                   <div className="flex-1">
-                    <div className="text-[calc(11px+3pt)] font-bold text-blue-500 uppercase tracking-widest mb-2">
+                    <div className="text-[10px] sm:text-[calc(11px+3pt)] font-bold text-blue-500 uppercase tracking-widest mb-1.5 sm:mb-2">
                       {s.mainHead}
                     </div>
-                    <h3 className="text-[calc(15px+3pt)] font-semibold text-gray-800 group-hover:text-blue-700 transition-colors leading-snug mb-2">
+                    <h3 className="text-[12px] sm:text-[calc(15px+3pt)] font-semibold text-gray-800 group-hover:text-blue-700 transition-colors leading-snug mb-1 sm:mb-2 line-clamp-2 break-words">
                       {s.name}
                     </h3>
-                    <p className="text-[calc(13px+3pt)] text-gray-400 leading-relaxed line-clamp-2">
+                    <p className="hidden sm:block text-[12px] sm:text-[calc(13px+3pt)] text-gray-400 leading-[1.3] line-clamp-2 break-words">
                       {s.shortDescription || 'Expert assistance for this service — view details to get started.'}
                     </p>
                   </div>
-                  <div className="mt-4 flex items-center gap-1.5 text-[calc(12px+3pt)] font-semibold text-gray-400 group-hover:text-blue-600 transition-colors">
+                  <div className="mt-auto pt-1.5 flex items-center justify-center gap-1 text-[11px] sm:text-[calc(12px+3pt)] font-semibold text-gray-400 group-hover:text-blue-600 transition-colors">
                     View & apply <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                   </div>
                 </Link>

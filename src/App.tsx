@@ -40,43 +40,41 @@ function ScrollToTop() {
 function AppContent() {
   const loc = useLocation();
   const isAdmin = loc.pathname.startsWith('/admin');
-  const hideFloatingActions =
-    loc.pathname.startsWith('/service/') ||
-    loc.pathname.startsWith('/services/') ||
-    loc.pathname.startsWith('/category/');
 
   return (
     <div className="min-h-screen app-soft-bg font-sans antialiased">
       <ScrollToTop />
       {!isAdmin && <Navbar />}
-      <Routes>
-        <Route path="/"                       element={<HomePage />} />
-        <Route path="/category/:categoryId"   element={<CategoryPage />} />
-        <Route path="/service/:serviceId"     element={<ServicePage />} />
-        <Route path="/privacy-policy"         element={<PrivacyPolicyPage />} />
-        <Route path="/refund-policy"          element={<RefundPolicyPage />} />
-        <Route path="/confidentiality-policy" element={<ConfidentialityPolicyPage />} />
-        <Route path="/disclaimer-policy"      element={<DisclaimerPolicyPage />} />
-        <Route path="/terms-conditions"       element={<TermsConditionsPage />} />
-        <Route path="/reviews"                element={<ReviewsPage />} />
-        <Route path="/about-us"               element={<AboutUsPage />} />
-        <Route path="/contact-us"             element={<ContactUsPage />} />
-        <Route path="/business-search"        element={<BusinessSearchPage />} />
-        <Route path="/trademark-search"       element={<TrademarkSearchPage />} />
-        <Route path="/payment"                element={<PaymentPage />} />
-        <Route path="/services"               element={<ServicesLandingPage />} />
-        <Route path="/services/:category"     element={<ServicesCategoryPage />} />
-        <Route path="/services/:category/:service" element={<ServicesDetailPage />} />
-        <Route path="/services/:category/:service/form" element={<ServiceFormPage />} />
-        <Route path="/articles"               element={<ArticlesPage />} />
-        <Route path="/articles/:slug"         element={<ArticlePage />} />
-        <Route path="/admin"                  element={<AdminPage />} />
-        <Route path="/admin/login"            element={<AdminLoginPage />} />
-        <Route path="*"                       element={<Navigate to="/" replace />} />
-      </Routes>
+      <main className="pb-[70px] md:pb-0">
+        <Routes>
+          <Route path="/"                       element={<HomePage />} />
+          <Route path="/category/:categoryId"   element={<CategoryPage />} />
+          <Route path="/service/:serviceId"     element={<ServicePage />} />
+          <Route path="/privacy-policy"         element={<PrivacyPolicyPage />} />
+          <Route path="/refund-policy"          element={<RefundPolicyPage />} />
+          <Route path="/confidentiality-policy" element={<ConfidentialityPolicyPage />} />
+          <Route path="/disclaimer-policy"      element={<DisclaimerPolicyPage />} />
+          <Route path="/terms-conditions"       element={<TermsConditionsPage />} />
+          <Route path="/reviews"                element={<ReviewsPage />} />
+          <Route path="/about-us"               element={<AboutUsPage />} />
+          <Route path="/contact-us"             element={<ContactUsPage />} />
+          <Route path="/business-search"        element={<BusinessSearchPage />} />
+          <Route path="/trademark-search"       element={<TrademarkSearchPage />} />
+          <Route path="/payment"                element={<PaymentPage />} />
+          <Route path="/services"               element={<ServicesLandingPage />} />
+          <Route path="/services/:category"     element={<ServicesCategoryPage />} />
+          <Route path="/services/:category/:service" element={<ServicesDetailPage />} />
+          <Route path="/services/:category/:service/form" element={<ServiceFormPage />} />
+          <Route path="/articles"               element={<ArticlesPage />} />
+          <Route path="/articles/:slug"         element={<ArticlePage />} />
+          <Route path="/admin"                  element={<AdminPage />} />
+          <Route path="/admin/login"            element={<AdminLoginPage />} />
+          <Route path="*"                       element={<Navigate to="/" replace />} />
+        </Routes>
+      </main>
       {!isAdmin && <Footer />}
-      {!isAdmin && !hideFloatingActions && <FloatingPaymentButton />}
-      {!isAdmin && !hideFloatingActions && <ChatBot />}
+      {!isAdmin && <FloatingPaymentButton />}
+      {!isAdmin && <ChatBot />}
       {!isAdmin && <LeadCapturePopup />}
     </div>
   );

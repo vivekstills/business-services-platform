@@ -22,14 +22,14 @@ export default function ServicesCategoryPage() {
             <Link
               key={service.id}
               to={getServiceDetailRoute(navCategory.slug, service.id)}
-              className="group flex h-full min-w-0 w-full flex-col justify-between rounded-[14px] sm:rounded-2xl border border-gray-200 bg-white p-3 sm:p-6 shadow-sm hover:shadow-md transition-all overflow-hidden"
+              className="group flex h-full min-w-0 w-full flex-col justify-between rounded-xl sm:rounded-2xl border border-gray-200 bg-white p-3 sm:p-6 shadow-sm hover:shadow-md transition-all overflow-hidden"
             >
               <div>
                 <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-2 sm:mb-4">
                   <FileText className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
-                <h3 className="text-sm sm:text-lg font-semibold text-gray-900 mb-1.5 sm:mb-2 leading-[1.3] line-clamp-1 break-words">{service.name}</h3>
-                <p className="text-gray-500 text-xs sm:text-sm leading-[1.4] line-clamp-2 min-h-[34px] sm:min-h-[44px] break-words">
+                <h3 className="text-[14px] sm:text-lg font-semibold text-gray-900 mb-1.5 sm:mb-2 leading-[1.3] line-clamp-1 break-words">{service.name}</h3>
+                <p className="text-gray-500 text-[12px] sm:text-sm leading-[1.3] line-clamp-2 min-h-[34px] sm:min-h-[44px] break-words">
                   {service.shortDescription || 'Expert assistance for this service with fast turnaround.'}
                 </p>
               </div>

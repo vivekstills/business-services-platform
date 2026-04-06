@@ -10,26 +10,25 @@ export default function Hero() {
   const contact = content.contact;
   const POPULAR = hero.popular;
   return (
-    <section className="relative bg-transparent flex items-center overflow-hidden pt-5 sm:pt-16 min-h-0 sm:min-h-screen noise-overlay">
+    <section className="hero-section-mobile relative bg-transparent flex items-center overflow-hidden pt-16 sm:pt-16 min-h-0 sm:min-h-screen noise-overlay">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute -top-32 right-0 w-[800px] h-[800px] bg-gradient-to-br from-blue-200/40 to-sky-100/30 rounded-full blur-[140px] translate-x-1/4 animate-float-glow" />
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-indigo-100/40 to-blue-100/30 rounded-full blur-[120px] -translate-x-1/4 translate-y-1/4 animate-float-glow-slow" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-to-r from-sky-100/20 via-transparent to-blue-100/20 rounded-full blur-[100px]" />
         <div className="absolute inset-0 dot-grid" />
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/80 to-transparent" />
       </div>
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-3 sm:px-6 lg:px-8 xl:px-10 w-full py-5 sm:py-10 lg:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 xl:gap-16 items-center">
 
           {/* Left content */}
-          <div>
+          <div className="mt-2 sm:mt-0">
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-amber-200/70 bg-amber-50/50 text-amber-700 text-xs font-semibold mb-8"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-amber-200/70 bg-amber-50/50 text-amber-700 text-xs font-semibold mb-8 relative z-10"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
               {hero.badge}
@@ -92,14 +91,14 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex flex-wrap items-center gap-2"
+              className="flex flex-wrap items-center gap-2 max-w-full"
             >
               <span className="text-xs text-gray-400 font-medium mr-1">Popular:</span>
               {POPULAR.map((p) => (
                 <Link
                   key={p.to}
                   to={p.to}
-                  className="text-xs text-gray-600 hover:text-amber-700 border border-gray-200 hover:border-amber-300 bg-white hover:bg-amber-50 rounded-full px-3.5 py-1.5 transition-all shadow-sm"
+                  className="text-[11px] text-gray-600 hover:text-amber-700 active:text-amber-700 border border-gray-200 hover:border-amber-300 active:border-amber-300 focus-visible:border-amber-300 bg-white hover:bg-amber-50 active:bg-amber-50/70 rounded-full px-2.5 py-1.5 transition-all shadow-sm whitespace-normal max-w-[48%] text-center line-clamp-2 leading-tight"
                 >
                   {p.label}
                 </Link>
@@ -112,7 +111,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 24 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="flex items-center justify-center bg-transparent -mt-6 p-2 sm:p-4 overflow-hidden"
+            className="hidden sm:flex items-center justify-center bg-transparent -mt-6 p-2 sm:p-4 overflow-hidden"
           >
             <motion.img
               src="/assets/hero-illustration-v2.png"
@@ -125,7 +124,7 @@ export default function Hero() {
                 filter: 'contrast(1.06) brightness(1.03)',
                 WebkitFontSmoothing: 'antialiased',
               }}
-              className="w-full max-w-[320px] sm:max-w-[550px] lg:max-w-[620px] max-h-[160px] sm:max-h-none h-auto object-contain bg-white border border-white rounded-2xl sm:rounded-3xl p-2 sm:p-3 mt-3 sm:mt-0"
+              className="w-full max-w-[320px] sm:max-w-[550px] lg:max-w-[620px] max-h-[160px] sm:max-h-none h-auto object-contain bg-transparent border border-transparent rounded-2xl sm:rounded-3xl p-2 sm:p-3 mt-3 sm:mt-0"
             />
           </motion.div>
         </div>

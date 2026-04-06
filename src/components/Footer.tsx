@@ -30,24 +30,24 @@ export default function Footer() {
   const copyrightText = formatCopyright(footer.copyrightLine, year);
 
   return (
-    <footer className="relative bg-[#0f172a]/96 text-white overflow-hidden">
+    <footer className="relative bg-[#0f172a]/96 text-white overflow-hidden mb-0">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-0 left-1/4 w-[600px] h-[300px] bg-gradient-to-b from-blue-500/[0.06] to-transparent rounded-full blur-[100px]" />
         <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tl from-indigo-500/[0.05] to-transparent rounded-full blur-[120px]" />
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-500/30 to-transparent" />
       </div>
 
-      <div className="relative z-[2] max-w-[1280px] mx-auto px-3 sm:px-6 lg:px-8 pt-6 sm:pt-16 pb-5 sm:pb-10">
-        <div className="md:hidden space-y-2.5 mb-5">
+      <div className="relative z-[2] max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 pt-5 sm:pt-16 pb-5 sm:pb-10">
+        <div className="md:hidden space-y-3 mb-5 text-center">
           <details className="rounded-xl border border-slate-700/60 bg-slate-900/40 p-3">
             <summary className="cursor-pointer text-sm font-semibold text-slate-200">Services</summary>
-            <div className="mt-3 space-y-3">
+            <div className="mt-3 grid grid-cols-3 gap-2 text-left">
               {footer.serviceLinks.map((col) => (
                 <div key={col.heading}>
-                  <p className="text-xs uppercase tracking-widest text-slate-400 mb-1.5">{col.heading}</p>
+                  <p className="text-[11px] uppercase tracking-[0.08em] text-slate-400 mb-1">{col.heading}</p>
                   <div className="space-y-1.5">
                     {col.items.map((item) => (
-                      <Link key={item.to} to={item.to} className="block text-[12px] text-slate-300">
+                      <Link key={item.to} to={item.to} className="block text-[11px] leading-tight text-slate-300">
                         {item.label}
                       </Link>
                     ))}
@@ -133,12 +133,12 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-slate-700/50 pt-4 sm:pt-8">
-          <p className="text-[calc(13px+3pt)] text-slate-400 text-center sm:text-left">
+        <div className="flex flex-col items-center justify-center gap-3 border-t border-slate-700/50 pt-4 sm:pt-8">
+          <p className="text-[calc(13px+3pt)] text-slate-400 text-center">
             {copyrightText}
           </p>
           {showBottomContact && (
-            <div className="flex items-center gap-4 text-[calc(13px+3pt)] text-slate-400">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-[calc(13px+3pt)] text-slate-400">
               <a href={`mailto:${contact.email}`} className="hover:text-white transition-colors">{contact.email}</a>
               <a href={`tel:${contact.phone.replace(/\s/g, '')}`} className="hover:text-white transition-colors">{contact.phone}</a>
             </div>

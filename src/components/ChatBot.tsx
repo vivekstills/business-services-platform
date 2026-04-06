@@ -158,11 +158,11 @@ export default function ChatBot() {
   return (
     <>
       {/* Floating button */}
-      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
+      <div className="fixed bottom-6 right-3 sm:bottom-6 sm:right-6 z-50">
         <motion.button
           onClick={() => setIsOpen((v) => !v)}
           whileTap={{ scale: 0.92 }}
-          className="h-12 w-12 sm:w-[126px] px-3 sm:px-4 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 text-white inline-flex items-center justify-center gap-2 shadow-lg hover:shadow-[0_16px_30px_rgba(245,158,11,0.22)] hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap"
+          className="h-[46px] w-[46px] sm:h-12 sm:w-[126px] px-2.5 sm:px-4 rounded-xl sm:rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 text-white inline-flex items-center justify-center gap-2 shadow-[0_4px_10px_rgba(0,0,0,0.15)] sm:shadow-lg hover:shadow-[0_16px_30px_rgba(245,158,11,0.22)] hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap"
           aria-label="Open chat"
         >
           <AnimatePresence mode="wait">

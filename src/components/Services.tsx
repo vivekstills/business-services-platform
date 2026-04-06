@@ -55,7 +55,7 @@ export default function Services() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-2 [@media(max-width:379px)]:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2.5 sm:gap-6 items-stretch w-full max-w-full">
+        <div className="grid grid-cols-3 [@media(max-width:379px)]:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-2.5 sm:gap-6 items-stretch w-full max-w-full">
           {categories.map((cat, i) => (
             <motion.div
               key={cat.id}
@@ -67,24 +67,24 @@ export default function Services() {
             >
               <Link
                 to={`/category/${cat.id}`}
-                className="card-hover-warm group flex h-[116px] sm:h-full w-full min-w-0 max-w-full text-left flex-col justify-between p-3 sm:p-6 rounded-xl sm:rounded-2xl border border-gray-200/60 bg-white/90 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer"
+                className="card-hover-warm group flex h-full w-full min-w-0 max-w-full text-center flex-col justify-between p-2.5 sm:p-6 rounded-[10px] sm:rounded-2xl border border-gray-200/60 bg-white/90 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer overflow-hidden"
               >
                 <div className="flex flex-col h-full justify-between">
                   <div>
-                    <div className={`w-9 h-9 sm:w-11 sm:h-11 rounded-xl ${cat.bg} border ${cat.border} flex items-center justify-center mb-3 sm:mb-5 ${cat.iconColor}`}>
+                    <div className={`w-7 h-7 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl ${cat.bg} border ${cat.border} flex items-center justify-center mb-1.5 sm:mb-5 mx-auto ${cat.iconColor}`}>
                       {cat.icon}
                     </div>
-                    <div className="flex items-start justify-between mb-2">
-                      <h3 className="text-[13px] sm:text-[calc(15px+3pt)] font-bold text-gray-800 group-hover:text-blue-700 transition-colors leading-snug line-clamp-1 break-words">
+                    <div className="mb-1.5 sm:mb-2">
+                      <h3 className="text-[12px] sm:text-[calc(15px+3pt)] font-semibold text-gray-800 group-hover:text-blue-700 transition-colors leading-snug line-clamp-2 break-words">
                         {cat.label}
                       </h3>
-                      <span className="text-[11px] sm:text-[calc(11px+3pt)] text-gray-400 font-medium ml-2 sm:ml-3 flex-shrink-0 mt-0.5">
+                      <span className="hidden sm:inline text-[11px] sm:text-[calc(11px+3pt)] text-gray-400 font-medium ml-2 sm:ml-3 flex-shrink-0 mt-0.5">
                         {cat.count} services
                       </span>
                     </div>
-                    <p className="min-h-[20px] sm:min-h-[60px] text-[11px] sm:text-[calc(13px+3pt)] text-gray-500 leading-relaxed line-clamp-2 sm:line-clamp-2 break-words">{cat.description}</p>
+                    <p className="hidden sm:block min-h-[20px] sm:min-h-[60px] text-[12px] sm:text-[calc(13px+3pt)] text-gray-500 leading-[1.3] line-clamp-2 sm:line-clamp-2 break-words">{cat.description}</p>
                   </div>
-                  <div className="mt-3 sm:mt-5 flex items-center gap-1.5 text-xs sm:text-[calc(12px+3pt)] font-semibold text-gray-500 group-hover:text-blue-600 transition-colors">
+                  <div className="mt-1 sm:mt-5 flex items-center justify-center gap-1 text-[11px] sm:text-[calc(12px+3pt)] font-semibold text-gray-500 group-hover:text-blue-600 transition-colors">
                     Explore <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                   </div>
                 </div>

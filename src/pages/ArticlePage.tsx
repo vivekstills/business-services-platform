@@ -90,7 +90,7 @@ export default function ArticlePage() {
         }}
       />
       {/* Article header */}
-      <div className="relative bg-transparent border-b border-gray-200/60 overflow-hidden">
+      <div className="relative bg-transparent overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-20 right-0 w-[500px] h-[400px] bg-gradient-to-bl from-blue-100/20 to-sky-50/10 rounded-full blur-[100px]" />
           <div className="absolute inset-0 dot-grid" />

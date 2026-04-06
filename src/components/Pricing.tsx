@@ -22,30 +22,30 @@ function PlanGrid({ plans }: { plans: PricingPlan[] }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: i * 0.07 }}
-          className={`relative snap-start shrink-0 basis-[78%] [@media(max-width:379px)]:basis-[88%] sm:basis-auto sm:shrink flex min-h-[180px] sm:min-h-0 flex-col rounded-[14px] sm:rounded-2xl border p-3 sm:p-8 transition-all ${
+          className={`relative snap-start shrink-0 min-w-[220px] max-w-[240px] sm:min-w-0 sm:max-w-none basis-[78%] [@media(max-width:379px)]:basis-[88%] sm:basis-auto sm:shrink flex min-h-[180px] sm:min-h-0 flex-col rounded-[16px] sm:rounded-2xl border p-4 sm:p-8 overflow-hidden transition-all ${
             plan.highlight
               ? 'bg-gradient-to-b from-blue-600 to-blue-700 border-blue-500/50 shadow-lg sm:shadow-2xl sm:shadow-blue-200/40 -translate-y-1 sm:-translate-y-2 ring-2 ring-blue-100'
               : 'card-hover-warm bg-white border-gray-200/80 hover:shadow-md sm:hover:shadow-xl sm:hover:shadow-gray-200/50'
           }`}
         >
           {plan.badge && (
-            <div className="absolute -top-3.5 left-6">
-              <span className="px-3 py-1 rounded-full bg-amber-400 text-amber-900 text-[calc(11px+3pt)] font-bold shadow">
+            <div className="absolute top-2 left-2 sm:-top-3.5 sm:left-6 z-10 max-w-[80%]">
+              <span className="px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-amber-400 text-amber-900 text-[10px] sm:text-[calc(11px+3pt)] font-bold shadow whitespace-nowrap overflow-hidden text-ellipsis">
                 {plan.badge}
               </span>
             </div>
           )}
 
           <div className="mb-3 sm:mb-6">
-            <h3 className={`text-[13px] sm:text-sm font-bold uppercase tracking-widest mb-2 sm:mb-3 ${plan.highlight ? 'text-blue-200' : 'text-gray-400'}`}>
+            <h3 className={`text-[13px] sm:text-sm font-bold uppercase tracking-widest mb-2 sm:mb-3 break-words ${plan.highlight ? 'text-blue-200' : 'text-gray-400'}`}>
               {plan.name}
             </h3>
             <div className="flex items-baseline gap-1 mb-1">
-              <span className={`text-[16px] sm:text-4xl font-bold tracking-tight ${plan.highlight ? 'text-white' : 'text-gray-900'}`}>
+              <span className={`text-[20px] sm:text-4xl font-semibold tracking-tight break-words ${plan.highlight ? 'text-white' : 'text-gray-900'}`}>
                 {plan.price}
               </span>
             </div>
-            <p className={`text-xs sm:text-[calc(13px+3pt)] line-clamp-2 ${plan.highlight ? 'text-blue-200' : 'text-gray-400'}`}>{plan.tagline}</p>
+            <p className={`text-[13px] sm:text-[calc(13px+3pt)] leading-[1.4] line-clamp-2 break-words max-w-full ${plan.highlight ? 'text-blue-200' : 'text-gray-400'}`}>{plan.tagline}</p>
           </div>
 
           <div className="flex-1 mb-2 sm:mb-8">
@@ -63,7 +63,7 @@ function PlanGrid({ plans }: { plans: PricingPlan[] }) {
 
           <Link
             to={plan.ctaTo || '/contact-us'}
-            className={`flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-[calc(13.5px+3pt)] font-semibold transition-all ${
+            className={`w-full h-11 mt-3 flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm sm:text-[calc(13.5px+3pt)] font-semibold transition-all ${
               plan.highlight
                 ? 'bg-white text-blue-700 hover:bg-blue-50 shadow-lg'
                 : 'border border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300'

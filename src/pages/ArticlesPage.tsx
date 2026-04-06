@@ -113,7 +113,7 @@ export default function ArticlesPage() {
         keywords="business compliance articles, GST guide, company registration guide, trademark guide India, tax filing tips, Mridhuv Associates blog"
       />
       {/* Hero */}
-      <div className="relative bg-transparent border-b border-gray-200/60 overflow-hidden">
+      <div className="relative bg-transparent overflow-hidden">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute -top-20 right-0 w-[500px] h-[400px] bg-gradient-to-bl from-blue-100/30 to-sky-50/20 rounded-full blur-[100px] animate-float-glow" />
           <div className="absolute bottom-0 left-0 w-[300px] h-[200px] bg-gradient-to-tr from-indigo-100/20 to-transparent rounded-full blur-[80px]" />
