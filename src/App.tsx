@@ -18,6 +18,10 @@ import ContactUsPage from './pages/ContactUsPage';
 import BusinessSearchPage from './pages/BusinessSearchPage';
 import TrademarkSearchPage from './pages/TrademarkSearchPage';
 import PaymentPage from './pages/PaymentPage';
+import ServicesLandingPage from './pages/ServicesLandingPage';
+import ServicesCategoryPage from './pages/ServicesCategoryPage';
+import ServicesDetailPage from './pages/ServicesDetailPage';
+import ServiceFormPage from './pages/ServiceFormPage';
 import ArticlesPage from './pages/ArticlesPage';
 import ArticlePage from './pages/ArticlePage';
 import Footer from './components/Footer';
@@ -36,6 +40,10 @@ function ScrollToTop() {
 function AppContent() {
   const loc = useLocation();
   const isAdmin = loc.pathname.startsWith('/admin');
+  const hideFloatingActions =
+    loc.pathname.startsWith('/service/') ||
+    loc.pathname.startsWith('/services/') ||
+    loc.pathname.startsWith('/category/');
 
   return (
     <div className="min-h-screen app-soft-bg font-sans antialiased">
@@ -56,6 +64,10 @@ function AppContent() {
         <Route path="/business-search"        element={<BusinessSearchPage />} />
         <Route path="/trademark-search"       element={<TrademarkSearchPage />} />
         <Route path="/payment"                element={<PaymentPage />} />
+        <Route path="/services"               element={<ServicesLandingPage />} />
+        <Route path="/services/:category"     element={<ServicesCategoryPage />} />
+        <Route path="/services/:category/:service" element={<ServicesDetailPage />} />
+        <Route path="/services/:category/:service/form" element={<ServiceFormPage />} />
         <Route path="/articles"               element={<ArticlesPage />} />
         <Route path="/articles/:slug"         element={<ArticlePage />} />
         <Route path="/admin"                  element={<AdminPage />} />
@@ -63,8 +75,8 @@ function AppContent() {
         <Route path="*"                       element={<Navigate to="/" replace />} />
       </Routes>
       {!isAdmin && <Footer />}
-      {!isAdmin && <FloatingPaymentButton />}
-      {!isAdmin && <ChatBot />}
+      {!isAdmin && !hideFloatingActions && <FloatingPaymentButton />}
+      {!isAdmin && !hideFloatingActions && <ChatBot />}
       {!isAdmin && <LeadCapturePopup />}
     </div>
   );

@@ -69,6 +69,26 @@
   },
   "footer": {
     "tagline": "India's trusted platform for business registrations, tax compliance and legal services.",
+    "logoAlt": "Mridhuv Associates",
+    "contactBlockHeading": "",
+    "showBottomContactRow": true,
+    "quickToolsHeading": "Quick Tools",
+    "quickTools": [
+      {
+        "label": "Business Search",
+        "to": "/business-search"
+      },
+      {
+        "label": "Trademark Search",
+        "to": "/trademark-search"
+      }
+    ],
+    "paymentTitle": "Make a Payment",
+    "paymentFootnote": "Secured by Razorpay · 256-bit SSL encryption",
+    "paymentPayButtonLabel": "Pay Now",
+    "paymentSuccessTitle": "Payment successful!",
+    "paymentSuccessSub": "You'll receive a confirmation shortly.",
+    "copyrightLine": "© {{year}} Mridhuv Associates. All rights reserved.",
     "serviceLinks": [
       {
         "heading": "Form New Business",
@@ -144,27 +164,6 @@
             "to": "/service/tds-return-filing"
           }
         ]
-      },
-      {
-        "heading": "Trademark & IP",
-        "items": [
-          {
-            "label": "Trademark Registration",
-            "to": "/service/trademark-registration"
-          },
-          {
-            "label": "Trademark Renewal",
-            "to": "/service/trademark-renewal"
-          },
-          {
-            "label": "Copyright Registration",
-            "to": "/service/copyright-registration"
-          },
-          {
-            "label": "Patent Registration",
-            "to": "/service/patent-registration"
-          }
-        ]
       }
     ],
     "policyLinks": [
@@ -200,25 +199,7 @@
         "label": "Contact Us",
         "to": "/contact-us"
       }
-    ],
-    "logoAlt": "Mridhuv Associates",
-    "quickToolsHeading": "Quick Tools",
-    "quickTools": [
-      {
-        "label": "Business Search",
-        "to": "/business-search"
-      },
-      {
-        "label": "Trademark Search",
-        "to": "/trademark-search"
-      }
-    ],
-    "paymentTitle": "Make a Payment",
-    "paymentFootnote": "Secured by Razorpay · 256-bit SSL encryption",
-    "paymentPayButtonLabel": "Pay Now",
-    "paymentSuccessTitle": "Payment successful!",
-    "paymentSuccessSub": "You'll receive a confirmation shortly.",
-    "copyrightLine": "© {{year}} Mridhuv Associates. All rights reserved."
+    ]
   },
   "categories": [
     {
@@ -5277,7 +5258,7 @@
   "servicesSection": {
     "label": "Our Services",
     "heading": "Everything you need to start & run your business",
-    "description": "120+ services across registrations, tax, IP, compliance and more — handled end‑to‑end by experts."
+    "description": "150+ services across registrations, tax, IP, compliance and more — handled end‑to‑end by experts."
   },
   "stateFaqConfig": {
     "gst-registration": {

@@ -126,13 +126,11 @@ export default function ChatBot() {
   ]);
   const [input, setInput]         = useState('');
   const [isTyping, setIsTyping]   = useState(false);
-  const [showBadge, setShowBadge] = useState(true);
   const bottomRef = useRef<HTMLDivElement>(null);
   const inputRef  = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (isOpen) {
-      setShowBadge(false);
       setTimeout(() => inputRef.current?.focus(), 300);
     }
   }, [isOpen]);
@@ -161,24 +159,10 @@ export default function ChatBot() {
     <>
       {/* Floating button */}
       <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
-        <AnimatePresence>
-          {!isOpen && showBadge && (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.6, y: 8 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.6, y: 8 }}
-              className="absolute -top-10 -left-28 bg-gray-900 text-white text-[calc(12px+3pt)] font-medium px-3 py-1.5 rounded-full whitespace-nowrap shadow-lg"
-            >
-              💬 Ask us anything!
-              <div className="absolute bottom-0 right-6 translate-y-1/2 w-2 h-2 bg-gray-900 rotate-45" />
-            </motion.div>
-          )}
-        </AnimatePresence>
-
         <motion.button
           onClick={() => setIsOpen((v) => !v)}
           whileTap={{ scale: 0.92 }}
-          className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 text-white flex items-center justify-center shadow-2xl shadow-blue-300 hover:shadow-[0_16px_30px_rgba(245,158,11,0.22)] hover:-translate-y-0.5 transition-all duration-300"
+          className="h-12 w-12 sm:w-[126px] px-3 sm:px-4 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 text-white inline-flex items-center justify-center gap-2 shadow-lg hover:shadow-[0_16px_30px_rgba(245,158,11,0.22)] hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap"
           aria-label="Open chat"
         >
           <AnimatePresence mode="wait">
@@ -192,6 +176,7 @@ export default function ChatBot() {
               </motion.span>
             )}
           </AnimatePresence>
+          <span className="hidden sm:inline font-semibold text-sm">Chat</span>
         </motion.button>
       </div>
 

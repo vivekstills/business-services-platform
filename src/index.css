@@ -7,9 +7,16 @@
 
 /* Site-wide typography: scaled root for readability; smaller on mobile to avoid overflow */
 @layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    min-width: 0;
+  }
   html {
     font-size: calc(1rem + 1.5pt);
     -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
   }
   @media (min-width: 640px) {
     html { font-size: calc(1rem + 2.5pt); }
@@ -20,6 +27,35 @@
   body {
     overflow-x: hidden;
     background: linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
+  }
+
+  @media (max-width: 768px) {
+    html,
+    body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    img,
+    div,
+    section {
+      max-width: 100%;
+    }
+
+    section {
+      padding-left: 16px;
+      padding-right: 16px;
+      margin-bottom: 28px;
+    }
+
+    h1,
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
   }
 }
 
@@ -45,6 +81,12 @@
     background-color: rgba(245, 158, 11, 0.035);
     box-shadow: 0 14px 28px rgba(245, 158, 11, 0.12);
     transform: translateY(-4px);
+  }
+
+  @media (max-width: 768px) {
+    .card-hover-warm:hover {
+      transform: none;
+    }
   }
 
   .pulse-soft {
@@ -108,4 +150,13 @@
 .crosshatch {
   background-image: none;
   background-size: auto;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }

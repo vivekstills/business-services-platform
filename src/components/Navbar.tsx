@@ -2,58 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { SERVICES } from '../data/services';
-
-type ServiceItem = { label: string; to: string; slug?: string; isService: boolean };
-type ServiceGroup = { label: string; items: ServiceItem[] };
-const SERVICE_LOOKUP = new Map(SERVICES.map((s) => [s.id, s]));
-
-const NAV_GROUP_CONFIG: Array<{
-  label: string;
-  serviceIds: string[];
-  extraLinks?: Array<{ label: string; to: string }>;
-}> = [
-  {
-    label: 'Registration',
-    serviceIds: ['gst-registration', 'fssai-registration', 'trade-license', 'digital-signature'],
-  },
-  {
-    label: 'Start Business',
-    serviceIds: ['proprietorship', 'partnership', 'llp', 'private-limited-company', 'one-person-company'],
-  },
-  {
-    label: 'Tax & Filing',
-    serviceIds: ['itr-1-filing', 'tds-return-filing', 'gst-return-filing'],
-  },
-  {
-    label: 'Trademark & IP',
-    serviceIds: ['trademark-registration'],
-    extraLinks: [{ label: 'Trademark Search', to: '/trademark-search' }],
-  },
-  {
-    label: 'Compliance',
-    serviceIds: ['annual-compliance-private-limited', 'roc-filing'],
-  },
-  {
-    label: 'Licenses & More',
-    serviceIds: ['import-export-code', 'pf-registration', 'esi-registration'],
-  },
-];
-
-const SERVICE_GROUPS: ServiceGroup[] = NAV_GROUP_CONFIG.map((group) => {
-  const serviceItems: ServiceItem[] = group.serviceIds
-    .filter((id) => SERVICE_LOOKUP.has(id))
-    .map((id) => {
-      const service = SERVICE_LOOKUP.get(id)!;
-      return { label: service.name, to: `/service/${service.id}`, slug: service.id, isService: true };
-    });
-  const extraItems: ServiceItem[] = (group.extraLinks ?? []).map((x) => ({
-    label: x.label,
-    to: x.to,
-    isService: false,
-  }));
-  return { label: group.label, items: [...serviceItems, ...extraItems] };
-}).filter((g) => g.items.length > 0);
+import { SERVICES_NAV_CATEGORIES, getServiceBySlug, getServiceDetailRoute } from '../data/servicesData';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -63,13 +12,9 @@ export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const handleServiceItemClick = (item: ServiceItem) => {
-    if (item.isService) {
-      console.log('[Navbar] clicked service slug:', item.slug);
-      if (!item.slug || !SERVICE_LOOKUP.has(item.slug)) {
-        navigate('/category/new-business');
-      }
-    }
+  const handleServiceItemClick = (serviceSlug: string) => {
+    console.log('[Navbar] clicked service slug:', serviceSlug);
+    if (!getServiceBySlug(serviceSlug)) navigate('/services');
   };
 
   useEffect(() => {
@@ -99,8 +44,8 @@ export default function Navbar() {
             : 'bg-white/90 backdrop-blur-lg border-b border-gray-100/50'
         }`}
       >
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center gap-2 lg:gap-3">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="flex h-14 sm:h-16 items-center gap-2 lg:gap-3">
           <Link to="/" className="flex items-center shrink-0 z-10">
             <img
               src="/assets/logo.png"
@@ -152,25 +97,35 @@ export default function Navbar() {
                     className="absolute z-[120] left-1/2 -translate-x-1/2 top-full mt-4 w-[min(96vw,980px)] bg-white rounded-2xl shadow-lg p-6 xl:p-7"
                   >
                     <div className="grid grid-cols-3 gap-x-10 xl:gap-x-12 gap-y-7">
-                      {SERVICE_GROUPS.map((group) => (
-                        <div key={group.label}>
+                      {SERVICES_NAV_CATEGORIES.map((group) => (
+                        <div key={group.slug}>
                           <p className="text-[calc(11px+2pt)] font-semibold uppercase tracking-wider text-gray-400 mb-2.5">
-                            {group.label}
+                            {group.title}
                           </p>
                           <div className="space-y-2">
-                            {group.items.map((item) => (
+                            {group.featuredServiceIds.slice(0, 5).map((serviceSlug) => {
+                              const service = getServiceBySlug(serviceSlug);
+                              if (!service) return null;
+                              return (
                               <Link
-                                key={item.to}
-                                to={item.to}
+                                key={serviceSlug}
+                                to={getServiceDetailRoute(group.slug, serviceSlug)}
                                 onClick={() => {
-                                  handleServiceItemClick(item);
+                                  handleServiceItemClick(serviceSlug);
                                   setServicesOpen(false);
                                 }}
                                 className="block px-2 py-1.5 rounded-md text-[calc(13px+2pt)] font-normal text-gray-700 hover:text-blue-700 hover:bg-blue-50/70 transition-colors"
                               >
-                                {item.label}
+                                {service.name}
                               </Link>
-                            ))}
+                            );})}
+                            <Link
+                              to={`/services/${group.slug}`}
+                              onClick={() => setServicesOpen(false)}
+                              className="block px-2 pt-2 text-[calc(12px+2pt)] font-semibold text-blue-700 hover:text-blue-800"
+                            >
+                              View All →
+                            </Link>
                           </div>
                         </div>
                       ))}
@@ -215,7 +170,7 @@ export default function Navbar() {
           <motion.div
             initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 28, stiffness: 240 }}
-            className="fixed top-16 right-0 bottom-0 w-[min(300px,85vw)] bg-white border-l border-gray-200 z-[91] overflow-y-auto lg:hidden shadow-2xl overscroll-contain"
+            className="fixed top-16 right-0 bottom-0 w-[85vw] max-w-full bg-white border-l border-gray-200 z-[91] overflow-y-auto lg:hidden shadow-2xl overscroll-contain"
           >
             <div className="py-4">
               <Link to="/" onClick={() => setIsMobileOpen(false)} className="block px-5 py-3 text-gray-700">Home</Link>
@@ -230,22 +185,32 @@ export default function Navbar() {
               <AnimatePresence>
                 {mobileServicesOpen && (
                   <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden px-4 pb-3 space-y-2">
-                    {SERVICE_GROUPS.map((group) => (
-                      <div key={group.label} className="rounded-xl border border-gray-100 bg-gray-50/60 p-3">
-                        <p className="text-xs uppercase tracking-wider text-gray-400 font-bold mb-1.5">{group.label}</p>
-                        {group.items.map((item) => (
+                    {SERVICES_NAV_CATEGORIES.map((group) => (
+                      <div key={group.slug} className="rounded-xl border border-gray-100 bg-gray-50/60 p-3">
+                        <p className="text-xs uppercase tracking-wider text-gray-400 font-bold mb-1.5">{group.title}</p>
+                        {group.featuredServiceIds.slice(0, 5).map((serviceSlug) => {
+                          const service = getServiceBySlug(serviceSlug);
+                          if (!service) return null;
+                          return (
                           <Link
-                            key={item.to}
-                            to={item.to}
+                            key={serviceSlug}
+                            to={getServiceDetailRoute(group.slug, serviceSlug)}
                             onClick={() => {
-                              handleServiceItemClick(item);
+                              handleServiceItemClick(serviceSlug);
                               setIsMobileOpen(false);
                             }}
                             className="block py-1.5 px-1 text-gray-700 text-sm"
                           >
-                            {item.label}
+                            {service.name}
                           </Link>
-                        ))}
+                        );})}
+                        <Link
+                          to={`/services/${group.slug}`}
+                          onClick={() => setIsMobileOpen(false)}
+                          className="block pt-2 text-xs font-semibold text-blue-700"
+                        >
+                          View All →
+                        </Link>
                       </div>
                     ))}
                   </motion.div>

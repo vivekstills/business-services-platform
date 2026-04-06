@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { User, Mail, Phone, MessageSquare, AlertCircle, CheckCircle2, ArrowRight, Clock, BadgeCheck, Wallet } from 'lucide-react';
+import { User, Phone, MessageSquare, AlertCircle, CheckCircle2, ArrowRight, Clock, BadgeCheck, Wallet, MapPin } from 'lucide-react';
 import { useContent } from '../context/ContentContext';
 
 export default function ContactSection() {
   const { content } = useContent();
   const cs = content.contactSection;
   const SERVICES_LIST = cs.servicesList;
-  const [formData, setFormData]     = useState({ name: '', email: '', phone: '', service: '', message: '' });
+  const [formData, setFormData]     = useState({ name: '', phone: '', service: '', city: '', message: '', email: '' });
   const [errors, setErrors]         = useState<Record<string, string>>({});
   const [isSubmitted, setIsSubmitted]   = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -16,8 +16,6 @@ export default function ContactSection() {
   const validate = () => {
     const e: Record<string, string> = {};
     if (!formData.name.trim())  e.name  = 'Name is required';
-    if (!formData.email.trim()) e.email = 'Email is required';
-    else if (!/\S+@\S+\.\S+/.test(formData.email)) e.email = 'Invalid email address';
     if (!formData.phone.trim()) e.phone = 'Phone number is required';
     if (!formData.service)      e.service = 'Please select a service';
     setErrors(e);
@@ -41,7 +39,7 @@ export default function ContactSection() {
       if (response.ok) {
         alert('Form submitted successfully');
         setIsSubmitted(true);
-        setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+        setFormData({ name: '', phone: '', service: '', city: '', message: '', email: '' });
         setTimeout(() => setIsSubmitted(false), 5000);
       } else {
         setSubmitError('Submission failed. Please try again.');
@@ -63,21 +61,21 @@ export default function ContactSection() {
   });
 
   const inputCls = (key: string) =>
-    `w-full h-[46px] bg-white border rounded-xl pl-10 pr-4 text-[calc(14px+3pt)] text-gray-800 placeholder-gray-300 focus:outline-none transition-all shadow-sm ${
+    `w-full h-[42px] bg-white border rounded-xl pl-10 pr-4 text-xs sm:text-[calc(14px+3pt)] text-gray-800 placeholder-gray-300 focus:outline-none transition-all shadow-sm ${
       errors[key]
         ? 'border-red-300 focus:border-red-400 focus:ring-2 focus:ring-red-100'
         : 'border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100'
     }`;
 
   return (
-    <section className="relative bg-transparent py-10 sm:py-12 overflow-hidden noise-overlay">
+    <section className="relative bg-transparent py-5 sm:py-12 overflow-hidden noise-overlay">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute -bottom-40 left-1/4 w-[600px] h-[600px] bg-gradient-to-t from-blue-100/25 to-transparent rounded-full blur-[130px] animate-float-glow-slow" />
         <div className="absolute top-0 right-0 w-[350px] h-[350px] bg-gradient-to-bl from-indigo-100/20 to-transparent rounded-full blur-[100px] animate-float-glow" />
         <div className="absolute inset-0 dot-grid" />
       </div>
-      <div className="relative z-[2] max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+      <div className="relative z-[2] max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-10 lg:gap-16 items-start">
 
           {/* Left */}
           <div>
@@ -90,29 +88,29 @@ export default function ContactSection() {
             <motion.h2
               initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ delay: 0.05 }}
-              className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight leading-tight mb-4"
+              className="text-xl sm:text-3xl md:text-4xl font-bold text-gray-900 tracking-tight leading-tight mb-3 sm:mb-4"
             >
               {cs.heading}
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-gray-500 text-[calc(15px+3pt)] leading-relaxed mb-10"
+              className="text-gray-500 text-xs sm:text-[calc(15px+3pt)] leading-relaxed mb-5 sm:mb-10"
             >
               {cs.subheading}
             </motion.p>
 
-            <div className="space-y-5">
+            <div className="flex overflow-x-auto hide-scrollbar gap-2.5 pb-2 snap-x snap-mandatory lg:grid lg:grid-cols-1 lg:overflow-visible lg:pb-0 lg:space-y-5">
               {cs.features.map((item, i) => {
                 const icons = [<BadgeCheck className="w-4 h-4 text-blue-600" key="b" />, <Clock className="w-4 h-4 text-blue-600" key="c" />, <Wallet className="w-4 h-4 text-blue-600" key="w" />];
                 return (
-                <div key={i} className="card-hover-warm flex items-start gap-4 p-4 rounded-2xl bg-white/70 backdrop-blur-sm border border-gray-100/80 shadow-sm">
+                <div key={i} className="card-hover-warm snap-start shrink-0 basis-[75%] [@media(max-width:379px)]:basis-[88%] lg:basis-auto lg:shrink h-[92px] flex items-start gap-2 p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-white/70 backdrop-blur-sm border border-gray-100/80 shadow-sm">
                   <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0">
                     {icons[i] ?? icons[0]}
                   </div>
                   <div>
-                    <div className="text-[calc(14px+3pt)] font-semibold text-gray-800">{item.label}</div>
-                    <div className="text-[calc(13px+3pt)] text-gray-500 mt-0.5">{item.desc}</div>
+                    <div className="text-xs sm:text-[calc(14px+3pt)] font-semibold text-gray-800 line-clamp-1 break-words">{item.label}</div>
+                    <div className="text-[11px] sm:text-[calc(13px+3pt)] text-gray-500 mt-0.5 line-clamp-2 break-words">{item.desc}</div>
                   </div>
                 </div>
               );
@@ -124,9 +122,9 @@ export default function ContactSection() {
           <motion.div
             initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="bg-white/90 backdrop-blur-xl border border-white/60 ring-1 ring-gray-200/50 rounded-2xl p-5 sm:p-8 shadow-2xl shadow-blue-100/20"
+            className="bg-white/90 backdrop-blur-xl border border-white/60 ring-1 ring-gray-200/50 rounded-xl sm:rounded-2xl p-3 sm:p-8 shadow-sm sm:shadow-2xl sm:shadow-blue-100/20"
           >
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-2.5 sm:space-y-5">
               {/* Name */}
               <div>
                 <label className="block text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-2">Full Name *</label>
@@ -138,24 +136,14 @@ export default function ContactSection() {
                 {errors.name && <p className="text-[calc(11px+3pt)] text-red-500 mt-1">{errors.name}</p>}
               </div>
 
-              {/* Email + Phone */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-2">Email *</label>
-                  <div className="relative">
-                    <Mail className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 ${errors.email ? 'text-red-400' : 'text-gray-300'}`} />
-                    <input {...field('email')} type="email" className={inputCls('email')} placeholder="you@email.com" />
-                  </div>
-                  {errors.email && <p className="text-[calc(11px+3pt)] text-red-500 mt-1">{errors.email}</p>}
+              {/* Phone */}
+              <div>
+                <label className="block text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-2">Phone *</label>
+                <div className="relative">
+                  <Phone className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 ${errors.phone ? 'text-red-400' : 'text-gray-300'}`} />
+                  <input {...field('phone')} type="tel" className={inputCls('phone')} placeholder="+91 98765 43210" />
                 </div>
-                <div>
-                  <label className="block text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-2">Phone *</label>
-                  <div className="relative">
-                    <Phone className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 ${errors.phone ? 'text-red-400' : 'text-gray-300'}`} />
-                    <input {...field('phone')} type="tel" className={inputCls('phone')} placeholder="+91 98765 43210" />
-                  </div>
-                  {errors.phone && <p className="text-[calc(11px+3pt)] text-red-500 mt-1">{errors.phone}</p>}
-                </div>
+                {errors.phone && <p className="text-[calc(11px+3pt)] text-red-500 mt-1">{errors.phone}</p>}
               </div>
 
               {/* Service */}
@@ -163,7 +151,7 @@ export default function ContactSection() {
                 <label className="block text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-2">Service Required *</label>
                 <select
                   {...field('service')}
-                  className={`w-full h-[46px] bg-white border rounded-xl px-4 text-[calc(14px+3pt)] text-gray-700 focus:outline-none transition-all appearance-none cursor-pointer shadow-sm ${
+                  className={`w-full h-[42px] bg-white border rounded-xl px-4 text-xs sm:text-[calc(14px+3pt)] text-gray-700 focus:outline-none transition-all appearance-none cursor-pointer shadow-sm ${
                     errors.service ? 'border-red-300 focus:ring-2 focus:ring-red-100' : 'border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100'
                   }`}
                 >
@@ -171,6 +159,14 @@ export default function ContactSection() {
                   {SERVICES_LIST.map((s) => <option key={s} value={s}>{s}</option>)}
                 </select>
                 {errors.service && <p className="text-[calc(11px+3pt)] text-red-500 mt-1">{errors.service}</p>}
+              </div>
+
+              <div>
+                <label className="block text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-2">City</label>
+                <div className="relative">
+                  <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
+                  <input {...field('city')} className={inputCls('city')} placeholder="Your city" />
+                </div>
               </div>
 
               {/* Message */}
@@ -181,7 +177,7 @@ export default function ContactSection() {
                   <textarea
                     {...field('message')}
                     rows={3}
-                    className="w-full bg-white border border-gray-200 rounded-xl pl-10 pr-4 py-3 text-[calc(14px+3pt)] text-gray-700 placeholder-gray-300 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all resize-none shadow-sm"
+                    className="w-full h-[80px] bg-white border border-gray-200 rounded-xl pl-10 pr-4 py-2.5 text-xs sm:text-[calc(14px+3pt)] text-gray-700 placeholder-gray-300 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all resize-none shadow-sm"
                     placeholder="Tell us more about your requirements…"
                   />
                 </div>

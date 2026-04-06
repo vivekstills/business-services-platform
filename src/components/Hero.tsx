@@ -10,7 +10,7 @@ export default function Hero() {
   const contact = content.contact;
   const POPULAR = hero.popular;
   return (
-    <section className="relative bg-transparent flex items-center overflow-hidden pt-16 min-h-screen noise-overlay">
+    <section className="relative bg-transparent flex items-center overflow-hidden pt-5 sm:pt-16 min-h-0 sm:min-h-screen noise-overlay">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute -top-32 right-0 w-[800px] h-[800px] bg-gradient-to-br from-blue-200/40 to-sky-100/30 rounded-full blur-[140px] translate-x-1/4 animate-float-glow" />
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-indigo-100/40 to-blue-100/30 rounded-full blur-[120px] -translate-x-1/4 translate-y-1/4 animate-float-glow-slow" />
@@ -19,7 +19,7 @@ export default function Hero() {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/80 to-transparent" />
       </div>
 
-      <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 w-full py-8 sm:py-10 lg:py-12">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-3 sm:px-6 lg:px-8 xl:px-10 w-full py-5 sm:py-10 lg:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 xl:gap-16 items-center">
 
           {/* Left content */}
@@ -29,9 +29,9 @@ export default function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-blue-200 bg-blue-50 text-blue-700 text-xs font-semibold mb-8"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-amber-200/70 bg-amber-50/50 text-amber-700 text-xs font-semibold mb-8"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
               {hero.badge}
             </motion.div>
 
@@ -40,7 +40,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.05 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[calc(58px+3pt)] font-bold text-gray-900 tracking-tight leading-[1.1] mb-5 sm:mb-6"
+              className="text-[22px] sm:text-4xl md:text-5xl lg:text-[calc(58px+3pt)] font-bold text-gray-900 tracking-tight leading-[1.15] mb-4 sm:mb-6"
             >
               {hero.headline.includes(' with ') ? (
                 <>
@@ -61,7 +61,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-[calc(15px+3pt)] sm:text-[calc(17px+3pt)] text-gray-500 leading-relaxed max-w-xl mb-8 sm:mb-10"
+              className="text-[13px] sm:text-[calc(17px+3pt)] text-gray-500 leading-relaxed max-w-xl mb-5 sm:mb-10"
             >
               {hero.subheadline}
             </motion.p>
@@ -71,17 +71,17 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 mb-10 sm:mb-12"
+              className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-2.5 mb-5 sm:mb-12"
             >
               <Link
                 to="/category/new-business"
-                className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-sky-600 text-white text-[calc(14px+3pt)] font-semibold shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-0.5 transition-all min-h-[48px]"
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-6 sm:px-7 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-sky-600 text-white text-[13px] sm:text-[calc(14px+3pt)] font-semibold shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-0.5 transition-all min-h-[44px]"
               >
                 Get Started <ArrowRight className="w-4 h-4" />
               </Link>
               <a
                 href={`tel:${contact.phone.replace(/\s/g, '')}`}
-                className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 rounded-xl border border-gray-200 text-gray-700 text-[calc(14px+3pt)] font-semibold hover:bg-gray-50 hover:border-gray-300 transition-all min-h-[48px]"
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-6 sm:px-7 py-3 rounded-xl border border-gray-200 text-gray-700 text-[13px] sm:text-[calc(14px+3pt)] font-semibold hover:bg-gray-50 hover:border-gray-300 transition-all min-h-[44px]"
               >
                 <Phone className="w-4 h-4 text-blue-500" /> Talk to an expert
               </a>
@@ -99,7 +99,7 @@ export default function Hero() {
                 <Link
                   key={p.to}
                   to={p.to}
-                  className="text-xs text-gray-600 hover:text-blue-700 border border-gray-200 hover:border-blue-300 bg-white hover:bg-blue-50 rounded-full px-3.5 py-1.5 transition-all shadow-sm"
+                  className="text-xs text-gray-600 hover:text-amber-700 border border-gray-200 hover:border-amber-300 bg-white hover:bg-amber-50 rounded-full px-3.5 py-1.5 transition-all shadow-sm"
                 >
                   {p.label}
                 </Link>
@@ -112,15 +112,20 @@ export default function Hero() {
             initial={{ opacity: 0, x: 24 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="flex items-center justify-center lg:-mt-8"
+            className="flex items-center justify-center bg-transparent -mt-6 p-2 sm:p-4 overflow-hidden"
           >
             <motion.img
-              src="/assets/hero-illustration-transparent.png"
+              src="/assets/hero-illustration-v2.png"
               alt="Business services illustration"
               initial={{ y: 0 }}
               animate={{ y: [0, -6, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-              className="w-full max-w-[520px] lg:max-w-[620px] h-auto object-contain bg-transparent"
+              transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
+              style={{
+                imageRendering: 'auto',
+                filter: 'contrast(1.06) brightness(1.03)',
+                WebkitFontSmoothing: 'antialiased',
+              }}
+              className="w-full max-w-[320px] sm:max-w-[550px] lg:max-w-[620px] max-h-[160px] sm:max-h-none h-auto object-contain bg-white border border-white rounded-2xl sm:rounded-3xl p-2 sm:p-3 mt-3 sm:mt-0"
             />
           </motion.div>
         </div>

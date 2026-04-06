@@ -21,6 +21,10 @@ export default function Footer() {
   const displayAddress = contact.address || footer.address || '';
   const contactHeading = (footer.contactBlockHeading ?? '').trim();
   const showBottomContact = footer.showBottomContactRow !== false;
+  const legalPolicyLinks = footer.policyLinks.filter((item) =>
+    /privacy|refund|confidentiality|disclaimer|terms/i.test(item.label)
+  );
+  const companyLinks = footer.policyLinks.filter((item) => !legalPolicyLinks.some((x) => x.to === item.to));
 
   const year = new Date().getFullYear();
   const copyrightText = formatCopyright(footer.copyrightLine, year);
@@ -33,8 +37,48 @@ export default function Footer() {
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-500/30 to-transparent" />
       </div>
 
-      <div className="relative z-[2] max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 pb-8 sm:pb-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-10 mb-10 sm:mb-14">
+      <div className="relative z-[2] max-w-[1280px] mx-auto px-3 sm:px-6 lg:px-8 pt-6 sm:pt-16 pb-5 sm:pb-10">
+        <div className="md:hidden space-y-2.5 mb-5">
+          <details className="rounded-xl border border-slate-700/60 bg-slate-900/40 p-3">
+            <summary className="cursor-pointer text-sm font-semibold text-slate-200">Services</summary>
+            <div className="mt-3 space-y-3">
+              {footer.serviceLinks.map((col) => (
+                <div key={col.heading}>
+                  <p className="text-xs uppercase tracking-widest text-slate-400 mb-1.5">{col.heading}</p>
+                  <div className="space-y-1.5">
+                    {col.items.map((item) => (
+                      <Link key={item.to} to={item.to} className="block text-[12px] text-slate-300">
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </details>
+          <details className="rounded-xl border border-slate-700/60 bg-slate-900/40 p-3">
+            <summary className="cursor-pointer text-sm font-semibold text-slate-200">Company</summary>
+            <div className="mt-3 space-y-1.5">
+              {companyLinks.map((item) => (
+                <Link key={item.to} to={item.to} className="block text-[12px] text-slate-300">
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </details>
+          <details className="rounded-xl border border-slate-700/60 bg-slate-900/40 p-3">
+            <summary className="cursor-pointer text-sm font-semibold text-slate-200">Legal</summary>
+            <div className="mt-3 space-y-1.5">
+              {legalPolicyLinks.map((item) => (
+                <Link key={item.to} to={item.to} className="block text-[12px] text-slate-300">
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </details>
+        </div>
+
+        <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-10 mb-10 sm:mb-14">
 
           {/* Brand + contact block — phone/email/address always from Contact info */}
           <div className="col-span-1 sm:col-span-2 md:col-span-1 lg:col-span-2">
@@ -81,7 +125,7 @@ export default function Footer() {
 
         </div>
 
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 py-6 border-t border-slate-700/50">
+        <div className="hidden md:flex flex-wrap items-center gap-x-6 gap-y-2 py-6 border-t border-slate-700/50">
           {footer.policyLinks.map((item) => (
             <Link key={item.to} to={item.to} className="text-[calc(13px+3pt)] text-slate-400 hover:text-white transition-colors">
               {item.label}
@@ -89,7 +133,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-slate-700/50 pt-6 sm:pt-8">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-slate-700/50 pt-4 sm:pt-8">
           <p className="text-[calc(13px+3pt)] text-slate-400 text-center sm:text-left">
             {copyrightText}
           </p>

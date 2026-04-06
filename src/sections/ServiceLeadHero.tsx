@@ -164,6 +164,7 @@ export default function ServiceLeadHero({ service }: Props) {
 
   const displayPackages: ServicePackage[] = packagesFromAdminTabs ?? activePackages;
   const aboutParagraphs = useMemo(() => getAboutParagraphs(service.content), [service.content]);
+  const keyPoints = useMemo(() => steps.slice(0, 3), [steps]);
 
   const packageVisuals = (pkg: ServicePackage) => {
     const isRecommended = usingStatePackages && Boolean(pkg.recommended);
@@ -224,14 +225,14 @@ export default function ServiceLeadHero({ service }: Props) {
   };
 
   const inputCls = (key: string) =>
-    `w-full h-[44px] rounded-xl bg-white border px-3 pl-9 text-[calc(13.5px+3pt)] text-gray-800 placeholder-gray-300 focus:outline-none transition-all shadow-sm ${
+    `w-full h-[38px] sm:h-[44px] rounded-[10px] sm:rounded-xl bg-white border px-3 pl-9 text-[13px] sm:text-[calc(13.5px+3pt)] text-gray-800 placeholder-gray-300 focus:outline-none transition-all shadow-sm ${
       errors[key]
         ? 'border-red-300 focus:border-red-400 focus:ring-2 focus:ring-red-100'
         : 'border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100'
     }`;
 
   const selectCls = (key: string) =>
-    `w-full h-[44px] rounded-xl bg-white border pl-9 pr-4 text-[calc(13.5px+3pt)] text-gray-700 focus:outline-none transition-all shadow-sm appearance-none cursor-pointer ${
+    `w-full h-[38px] sm:h-[44px] rounded-[10px] sm:rounded-xl bg-white border pl-9 pr-4 text-[13px] sm:text-[calc(13.5px+3pt)] text-gray-700 focus:outline-none transition-all shadow-sm appearance-none cursor-pointer ${
       errors[key]
         ? 'border-red-300 focus:border-red-400 focus:ring-2 focus:ring-red-100'
         : 'border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100'
@@ -246,7 +247,7 @@ export default function ServiceLeadHero({ service }: Props) {
           <div className="absolute inset-0 dot-grid" />
         </div>
 
-        <div className="relative max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+        <div className="relative max-w-[1200px] mx-auto px-3 sm:px-6 lg:px-8 py-5 sm:py-10 lg:pt-[60px] lg:pb-[40px]">
           <div className="flex items-center gap-2 text-xs text-gray-400 mb-6 flex-wrap">
             <Link to="/" className="hover:text-gray-600 transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
@@ -261,32 +262,32 @@ export default function ServiceLeadHero({ service }: Props) {
             <span className="text-gray-600 font-medium">{service.name}</span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-5 sm:gap-8 lg:gap-10 items-start lg:items-center">
+            <div className="lg:max-w-[520px]">
               <motion.h1
                 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
-                className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight leading-tight mb-4"
+                className="text-[22px] sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-gray-900 tracking-tight leading-[1.2] mb-3"
               >
                 {service.name}
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.05 }}
-                className="text-gray-600 text-[calc(15px+3pt)] leading-relaxed mb-8 max-w-2xl"
+                className="text-gray-600 text-[13px] sm:text-[calc(15px+3pt)] leading-relaxed mb-5 max-w-2xl line-clamp-3 sm:line-clamp-none"
               >
                 {service.shortDescription || 'Get complete expert support from documentation to filing and follow-ups, all handled by specialists.'}
               </motion.p>
-              <div className="flex flex-wrap gap-3">
+              <div className="hidden sm:flex flex-col sm:flex-row flex-wrap gap-3 mt-4">
                 <button
                   type="button"
                   onClick={() => document.getElementById('enquiry-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold shadow-md hover:shadow-lg hover:bg-blue-700 transition-all duration-200"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-5 py-3 rounded-xl bg-blue-600 text-white font-semibold shadow-md hover:shadow-lg hover:bg-blue-700 transition-all duration-200 min-h-[44px]"
                 >
                   Get Started
                 </button>
                 <a
                   href="tel:+919876543210"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-gray-200 text-gray-700 font-semibold hover:bg-gray-50 transition-all duration-200"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-5 py-3 rounded-xl border border-gray-200 text-gray-700 font-semibold hover:bg-gray-50 transition-all duration-200 min-h-[44px]"
                 >
                   Talk to Expert
                 </a>
@@ -297,14 +298,14 @@ export default function ServiceLeadHero({ service }: Props) {
               id="enquiry-form"
               initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.08 }}
-              className="card-hover-warm bg-white/95 backdrop-blur-xl border border-gray-200/70 rounded-2xl p-5 sm:p-7 shadow-xl"
+              className="quick-enquiry-form card-hover-warm bg-white/95 backdrop-blur-xl border border-gray-200/70 rounded-[14px] sm:rounded-2xl p-3 sm:p-6 lg:p-5 shadow-sm sm:shadow-xl lg:shadow-[0_10px_30px_rgba(0,0,0,0.08)]"
             >
               <p className="text-[calc(11px+3pt)] font-bold uppercase tracking-widest text-gray-400 mb-1">Quick Enquiry</p>
-              <h2 className="text-xl font-bold text-gray-900 mb-6">{service.name}</h2>
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <h2 className="text-xl font-bold text-gray-900 mb-3 sm:mb-6">{service.name}</h2>
+              <form onSubmit={handleSubmit} className="space-y-2.5 sm:space-y-4">
                   {/* Name */}
-                  <div>
-                    <label className="block text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
+                  <div className="form-group">
+                    <label className="block text-xs sm:text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-1">
                       Name
                     </label>
                     <div className="relative">
@@ -321,8 +322,8 @@ export default function ServiceLeadHero({ service }: Props) {
                   </div>
 
                   {/* Email */}
-                  <div>
-                    <label className="block text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
+                  <div className="form-group">
+                    <label className="block text-xs sm:text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-1">
                       Email
                     </label>
                     <div className="relative">
@@ -339,8 +340,8 @@ export default function ServiceLeadHero({ service }: Props) {
                   </div>
 
                   {/* Phone */}
-                  <div>
-                    <label className="block text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
+                  <div className="form-group">
+                    <label className="block text-xs sm:text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-1">
                       Phone Number
                     </label>
                     <div className="relative">
@@ -357,8 +358,8 @@ export default function ServiceLeadHero({ service }: Props) {
                   </div>
 
                   {/* State */}
-                  <div>
-                    <label className="block text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-1.5">
+                  <div className="form-group">
+                    <label className="block text-xs sm:text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-1">
                       State / UT
                     </label>
                     <div className="relative">
@@ -399,7 +400,7 @@ export default function ServiceLeadHero({ service }: Props) {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full h-[46px] rounded-xl bg-gradient-to-r from-blue-600 to-blue-600 text-white text-[calc(14px+3pt)] font-semibold flex items-center justify-center gap-2 shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-0.5 transition-all disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                    className="form-submit-btn w-full h-[42px] sm:h-[46px] rounded-[10px] sm:rounded-xl bg-gradient-to-r from-blue-600 to-blue-600 text-white text-sm sm:text-[calc(14px+3pt)] font-semibold flex items-center justify-center gap-2 shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-0.5 transition-all disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                   >
                     {isSubmitting ? (
                       <><svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" /></svg> Submitting…</>
@@ -429,44 +430,68 @@ export default function ServiceLeadHero({ service }: Props) {
                   </p>
               </form>
             </motion.div>
+
+            <div className="flex sm:hidden flex-col gap-2.5 mt-2">
+              <button
+                type="button"
+                onClick={() => document.getElementById('enquiry-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                className="inline-flex w-full items-center justify-center gap-2 px-5 py-3 rounded-xl bg-blue-600 text-white font-semibold shadow-md hover:shadow-lg hover:bg-blue-700 transition-all duration-200 min-h-[44px]"
+              >
+                Get Started
+              </button>
+              <a
+                href="tel:+919876543210"
+                className="secondary-cta inline-flex w-full items-center justify-center gap-2 px-5 py-3 rounded-xl border border-gray-200 text-gray-700 font-semibold hover:bg-gray-50 transition-all duration-200 min-h-[44px]"
+              >
+                Talk to Expert
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">About this service</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start">
-          <div className="space-y-4">
-            {aboutParagraphs.map((paragraph, idx) => (
-              <p key={idx} className="text-gray-600 leading-relaxed">{paragraph}</p>
+      <section className="max-w-[1200px] mx-auto px-3 sm:px-6 lg:px-8 py-5 sm:py-12 lg:mt-10">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">About this service</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-10 lg:gap-10 items-start lg:items-center">
+          <div className="space-y-4 lg:max-w-[500px]">
+            {aboutParagraphs.slice(0, 1).map((paragraph, idx) => (
+              <p key={idx} className="text-gray-600 text-[13px] sm:text-base leading-relaxed line-clamp-3 sm:line-clamp-none">{paragraph}</p>
             ))}
+            <ul className="space-y-2">
+              {keyPoints.map((point, idx) => (
+                <li key={idx} className="flex items-start gap-2 text-[12px] sm:text-sm text-gray-700">
+                  <Check className="w-3.5 h-3.5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
           </div>
           <div className="flex justify-center lg:justify-start">
             <img
               src="/assets/service-about-illustration.png"
               alt="Service process illustration"
-              className="w-full max-w-[520px] h-auto object-contain drop-shadow-[0_14px_26px_rgba(67,56,202,0.16)]"
+              className="w-full max-w-[520px] h-auto object-contain bg-transparent"
             />
           </div>
         </div>
       </section>
 
       {displayPackages.length > 0 && (
-        <section className="relative bg-transparent py-10 sm:py-12 overflow-hidden noise-overlay">
+        <section className="relative bg-transparent py-5 sm:py-12 lg:mt-[60px] overflow-hidden noise-overlay">
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-br from-blue-100/20 via-transparent to-indigo-100/15 rounded-full blur-[130px] animate-float-glow" />
             <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-gradient-to-bl from-sky-100/20 to-transparent rounded-full blur-[80px]" />
           </div>
 
-          <div className="relative z-[2] max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-2xl mb-12">
+          <div className="relative z-[2] max-w-[1200px] mx-auto px-3 sm:px-6 lg:px-8">
+            <div className="max-w-2xl mb-5 sm:mb-12">
               <p className="text-xs font-bold text-blue-600 uppercase tracking-[0.2em] mb-3">
                 {hasCustomTabbedPricing ? servicePricingPage?.sectionLabel?.trim() || 'Pricing' : 'Pricing'}
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight leading-tight mb-3">
+              <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-gray-900 tracking-tight leading-tight mb-2 sm:mb-3">
                 {hasCustomTabbedPricing ? servicePricingPage?.sectionTitle?.trim() || `Choose the right package` : 'Choose the right package'}
               </h2>
-              <p className="text-gray-500 text-[calc(15px+3pt)]">
+              <p className="text-gray-500 text-xs sm:text-[calc(15px+3pt)]">
                 {hasCustomTabbedPricing
                   ? servicePricingPage?.sectionSubtitle?.trim() || 'Standard, Deluxe and Premium plans with transparent pricing.'
                   : 'Standard, Deluxe and Premium plans with transparent pricing.'}
@@ -527,7 +552,7 @@ export default function ServiceLeadHero({ service }: Props) {
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.22 }}
               >
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+                <div className="flex overflow-x-auto hide-scrollbar gap-3 pb-2 snap-x snap-mandatory sm:grid sm:overflow-visible sm:pb-0 sm:grid-cols-2 xl:grid-cols-3 sm:gap-5 lg:gap-6">
                   {displayPackages.slice(0, 3).map((pkg, i) => {
                     const { isGradient, badgeLabel, showBadgePill, badgeClass } = packageVisuals(pkg);
                     const amountPaise = parsePriceToAmount(pkg.price);
@@ -538,7 +563,7 @@ export default function ServiceLeadHero({ service }: Props) {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: i * 0.07 }}
-                        className={`relative flex flex-col rounded-2xl border p-5 sm:p-8 transition-all ${
+                        className={`relative snap-start shrink-0 basis-[75%] [@media(max-width:379px)]:basis-[88%] sm:basis-auto sm:shrink flex flex-col rounded-2xl border p-[14px] sm:p-8 transition-all ${i === 1 ? 'lg:scale-[1.05] lg:z-[2]' : ''} ${
                           isGradient
                             ? 'bg-gradient-to-b from-blue-600 to-blue-700 border-blue-500/50 shadow-2xl shadow-blue-200/40 ring-2 ring-blue-100'
                             : 'card-hover-warm bg-white border-gray-200/80 hover:shadow-xl hover:shadow-gray-200/50'
@@ -552,28 +577,28 @@ export default function ServiceLeadHero({ service }: Props) {
                           </div>
                         )}
 
-                        <div className="mb-6">
-                          <h3 className={`text-sm font-bold uppercase tracking-widest mb-3 ${isGradient ? 'text-blue-200' : 'text-gray-400'}`}>
+                          <div className="mb-3 sm:mb-6">
+                          <h3 className={`text-[14px] sm:text-sm font-bold uppercase tracking-widest mb-2 sm:mb-3 ${isGradient ? 'text-blue-200' : 'text-gray-400'}`}>
                             {pkg.name}
                           </h3>
                           <div className="flex items-baseline gap-1 mb-1">
-                            <span className={`text-4xl font-bold tracking-tight ${isGradient ? 'text-white' : 'text-gray-900'}`}>
+                            <span className={`text-[18px] sm:text-4xl font-bold tracking-tight ${isGradient ? 'text-white' : 'text-gray-900'}`}>
                               {pkg.price}
                             </span>
                           </div>
-                          <p className={`text-[calc(13px+3pt)] ${isGradient ? 'text-blue-200' : 'text-gray-400'}`}>
+                          <p className={`text-[12px] sm:text-[calc(13px+3pt)] line-clamp-3 ${isGradient ? 'text-blue-200' : 'text-gray-400'}`}>
                             {pkg.description}
                           </p>
                         </div>
 
                         {pkg.features && pkg.features.length > 0 && (
-                          <div className="flex-1 mb-8">
+                          <div className="hidden sm:block flex-1 mb-8">
                             <p className={`text-[calc(10.5px+3pt)] font-bold uppercase tracking-[0.15em] mb-3 ${isGradient ? 'text-blue-300' : 'text-gray-400'}`}>
                               What's included:
                             </p>
-                            <ul className="space-y-3">
-                              {pkg.features.map((f, fi) => (
-                                <li key={fi} className={`flex items-start gap-2.5 text-[calc(13.5px+3pt)] ${isGradient ? 'text-blue-100' : 'text-gray-600'}`}>
+                            <ul className="space-y-2">
+                              {pkg.features.slice(0, 4).map((f, fi) => (
+                                <li key={fi} className={`flex items-start gap-2 text-[12px] sm:text-[calc(13.5px+3pt)] ${isGradient ? 'text-blue-100' : 'text-gray-600'}`}>
                                   <div className={`mt-0.5 w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 ${isGradient ? 'bg-white/20' : 'bg-emerald-50'}`}>
                                     <Check className={`w-2.5 h-2.5 ${isGradient ? 'text-white' : 'text-emerald-600'}`} />
                                   </div>
@@ -591,7 +616,7 @@ export default function ServiceLeadHero({ service }: Props) {
                                 setPaymentPkg({ name: pkg.name, price: pkg.price, amount: amountPaise });
                                 setPaymentOpen(true);
                               }}
-                              className={`w-full flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-[calc(13.5px+3pt)] font-semibold transition-all ${
+                              className={`w-full h-11 flex items-center justify-center gap-2 rounded-xl px-4 sm:px-5 py-2.5 sm:py-3 text-[13px] sm:text-[calc(13.5px+3pt)] font-semibold transition-all ${
                                 isGradient
                                   ? 'bg-white text-blue-700 hover:bg-blue-50 shadow-lg'
                                   : 'bg-blue-600 text-white hover:bg-blue-700 shadow-sm shadow-blue-200'
@@ -602,7 +627,7 @@ export default function ServiceLeadHero({ service }: Props) {
                           )}
                           <button
                             onClick={() => document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' })}
-                            className={`w-full flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-[calc(13.5px+3pt)] font-semibold transition-all ${
+                            className={`w-full h-11 flex items-center justify-center gap-2 rounded-xl px-4 sm:px-5 py-2.5 sm:py-3 text-[13px] sm:text-[calc(13.5px+3pt)] font-semibold transition-all ${
                               isGradient
                                 ? 'border border-white/30 text-white/80 hover:bg-white/10'
                                 : 'border border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300'
@@ -724,7 +749,7 @@ export default function ServiceLeadHero({ service }: Props) {
         </section>
       )}
 
-      <section className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+      <section className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:mt-[60px]">
         <ServiceFAQ
           faqs={faqs}
           stateFAQs={stateFAQs}

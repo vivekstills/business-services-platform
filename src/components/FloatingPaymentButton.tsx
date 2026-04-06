@@ -19,11 +19,12 @@ export default function FloatingPaymentButton() {
       <button
         type="button"
         onClick={() => navigate('/payment')}
-        className="pulse-soft w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 text-white flex items-center justify-center shadow-2xl shadow-blue-300 hover:shadow-[0_16px_30px_rgba(245,158,11,0.22)] hover:-translate-y-0.5 transition-all duration-300"
+        className="pulse-soft h-12 w-12 sm:w-[126px] px-3 sm:px-4 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 text-white inline-flex items-center justify-center gap-2 shadow-lg hover:shadow-[0_16px_30px_rgba(245,158,11,0.22)] hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap"
         aria-label="Make a Payment"
         title="Make a Payment"
       >
         <IndianRupee className="w-5 h-5" />
+        <span className="hidden sm:inline font-semibold text-sm">Pay</span>
       </button>
     </motion.div>
   );
