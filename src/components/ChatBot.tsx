@@ -158,11 +158,11 @@ export default function ChatBot() {
   return (
     <>
       {/* Floating button */}
-      <div className="fixed bottom-6 right-3 sm:bottom-6 sm:right-6 z-50">
+      <div className="fixed bottom-5 right-3 sm:bottom-6 sm:right-6 z-50">
         <motion.button
           onClick={() => setIsOpen((v) => !v)}
           whileTap={{ scale: 0.92 }}
-          className="h-[46px] w-[46px] sm:h-12 sm:w-[126px] px-2.5 sm:px-4 rounded-xl sm:rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 text-white inline-flex items-center justify-center gap-2 shadow-[0_4px_10px_rgba(0,0,0,0.15)] sm:shadow-lg hover:shadow-[0_16px_30px_rgba(245,158,11,0.22)] hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap"
+          className="h-11 w-11 sm:h-12 sm:w-[126px] px-2 sm:px-4 rounded-xl sm:rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 text-white inline-flex items-center justify-center gap-2 shadow-[0_4px_10px_rgba(0,0,0,0.15)] sm:shadow-lg hover:shadow-[0_16px_30px_rgba(245,158,11,0.22)] hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap"
           aria-label="Open chat"
         >
           <AnimatePresence mode="wait">
@@ -188,8 +188,8 @@ export default function ChatBot() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.94, y: 16 }}
             transition={{ type: 'spring', damping: 26, stiffness: 300 }}
-            className="fixed bottom-20 right-4 sm:bottom-24 sm:right-6 z-50 w-[360px] max-w-[calc(100vw-16px)] sm:max-w-[calc(100vw-24px)] bg-white rounded-2xl shadow-2xl shadow-gray-300/60 border border-gray-200 flex flex-col overflow-hidden"
-            style={{ height: 'min(520px, calc(100dvh - 100px))' }}
+            className="fixed bottom-[70px] right-[10px] sm:bottom-24 sm:right-6 z-50 w-[90vw] max-w-[320px] sm:w-[360px] sm:max-w-[calc(100vw-24px)] bg-white rounded-xl sm:rounded-2xl shadow-2xl shadow-gray-300/60 border border-gray-200 flex flex-col overflow-hidden"
+            style={{ height: 'min(60vh, 520px)' }}
           >
             {/* Header */}
             <div className="flex items-center gap-3 px-4 py-3.5 bg-gradient-to-r from-blue-600 to-blue-700 flex-shrink-0">

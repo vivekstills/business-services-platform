@@ -40,8 +40,8 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-white/95 backdrop-blur-2xl border-b border-gray-200/50 shadow-[0_1px_3px_rgba(0,0,0,0.04)]'
-            : 'bg-white/90 backdrop-blur-lg border-b border-gray-100/50'
+            ? 'bg-white/95 backdrop-blur-2xl border-b-0 lg:border-b lg:border-gray-200/50 shadow-[0_1px_6px_rgba(0,0,0,0.05)]'
+            : 'bg-white/90 backdrop-blur-lg border-b-0 lg:border-b lg:border-gray-100/50 shadow-[0_1px_6px_rgba(0,0,0,0.05)] lg:shadow-none'
         }`}
       >
         <div className="max-w-[1400px] mx-auto px-3 sm:px-6 lg:px-8">
@@ -138,10 +138,10 @@ export default function Navbar() {
 
           <div className="hidden lg:flex items-center gap-2 shrink-0">
             <Link
-              to="/category/new-business"
+              to="/payment"
               className="inline-flex items-center justify-center h-9 px-3.5 xl:px-4 rounded-lg bg-gradient-to-r from-blue-600 to-blue-600 text-white text-[calc(12px+1pt)] xl:text-[calc(13px+1pt)] font-semibold hover:shadow-md hover:shadow-blue-200/50 transition-all shrink-0 leading-none"
             >
-              Get Started
+              ₹ Pay Now
             </Link>
           </div>
 
@@ -163,14 +163,14 @@ export default function Navbar() {
           <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 top-16 bg-black/40 z-[90] lg:hidden"
+            className="fixed inset-0 top-14 sm:top-16 bg-black/40 z-[90] lg:hidden"
             onClick={() => setIsMobileOpen(false)}
           />
 
           <motion.div
             initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 28, stiffness: 240 }}
-            className="fixed top-16 right-0 bottom-0 w-[85vw] max-w-full bg-white border-l border-gray-200 z-[91] overflow-y-auto lg:hidden shadow-2xl overscroll-contain"
+            className="fixed top-14 sm:top-16 right-0 bottom-0 w-[85vw] max-w-full bg-white z-[91] overflow-y-auto lg:hidden shadow-2xl overscroll-contain"
           >
             <div className="py-4">
               <Link to="/" onClick={() => setIsMobileOpen(false)} className="block px-5 py-3 text-gray-700">Home</Link>
@@ -239,11 +239,11 @@ export default function Navbar() {
 
               <div className="px-5 pt-5 pb-8 space-y-3">
                 <Link
-                  to="/category/new-business"
+                  to="/payment"
                   onClick={() => setIsMobileOpen(false)}
                   className="w-full py-3 rounded-xl bg-blue-600 text-[calc(14px+3pt)] font-semibold text-white hover:bg-blue-700 transition-colors flex items-center justify-center min-h-[48px]"
                 >
-                  Get Started
+                  ₹ Pay Now
                 </Link>
               </div>
             </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import PopularTagsSection from '../components/PopularTagsSection';
 import QuickToolsSection from '../components/QuickToolsSection';
 import Services from '../components/Services';
 import Pricing from '../components/Pricing';
@@ -29,10 +30,21 @@ export default function HomePage() {
         }}
       />
       <Hero />
-      <QuickToolsSection />
-      <Services />
-      <Pricing />
-      <ContactSection />
+      <div className="mt-6 sm:mt-0">
+        <PopularTagsSection />
+      </div>
+      <div className="mt-6 sm:mt-0">
+        <QuickToolsSection />
+      </div>
+      <div className="mt-6 sm:mt-0">
+        <Services />
+      </div>
+      <div className="mt-6 sm:mt-0">
+        <Pricing />
+      </div>
+      <div className="mt-6 sm:mt-0">
+        <ContactSection />
+      </div>
     </div>
   );
 }

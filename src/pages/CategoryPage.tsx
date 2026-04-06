@@ -102,9 +102,6 @@ export default function CategoryPage() {
                   className="card-hover-warm group flex flex-col h-full min-w-0 p-2.5 sm:p-6 rounded-[10px] sm:rounded-2xl border border-gray-200/60 bg-white/90 backdrop-blur-sm shadow-sm hover:shadow-md sm:hover:shadow-xl sm:hover:shadow-blue-100/40 transition-all duration-300 overflow-hidden text-center"
                 >
                   <div className="flex-1">
-                    <div className="text-[10px] sm:text-[calc(11px+3pt)] font-bold text-blue-500 uppercase tracking-widest mb-1.5 sm:mb-2">
-                      {s.mainHead}
-                    </div>
                     <h3 className="text-[12px] sm:text-[calc(15px+3pt)] font-semibold text-gray-800 group-hover:text-blue-700 transition-colors leading-snug mb-1 sm:mb-2 line-clamp-2 break-words">
                       {s.name}
                     </h3>

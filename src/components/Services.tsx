@@ -24,7 +24,7 @@ export default function Services() {
     });
 
   return (
-    <section className="relative bg-transparent py-5 sm:py-12 overflow-hidden noise-overlay">
+    <section id="services" className="relative bg-transparent py-5 sm:py-12 overflow-hidden noise-overlay scroll-mt-20">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-blue-100/30 to-sky-100/20 rounded-full blur-[120px] animate-float-glow-slow" />
         <div className="absolute -bottom-20 -right-20 w-[400px] h-[400px] bg-gradient-to-tl from-indigo-100/25 to-transparent rounded-full blur-[100px] animate-float-glow" />

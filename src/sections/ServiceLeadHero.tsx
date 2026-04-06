@@ -470,7 +470,7 @@ export default function ServiceLeadHero({ service }: Props) {
             <img
               src="/assets/service-about-illustration.png"
               alt="Service process illustration"
-              className="w-full max-w-[520px] h-auto object-contain bg-transparent"
+              className="service-image w-[70%] max-w-[220px] sm:w-full sm:max-w-[520px] h-auto object-contain bg-transparent mt-4 sm:mt-0 mx-auto"
             />
           </div>
         </div>
@@ -552,7 +552,7 @@ export default function ServiceLeadHero({ service }: Props) {
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.22 }}
               >
-                <div className="flex overflow-x-auto hide-scrollbar gap-3 pb-2 snap-x snap-mandatory sm:grid sm:overflow-visible sm:pb-0 sm:grid-cols-2 xl:grid-cols-3 sm:gap-5 lg:gap-6">
+                <div className="flex overflow-x-auto hide-scrollbar gap-3 pb-2 snap-x snap-mandatory sm:grid sm:overflow-visible sm:pb-0 sm:grid-cols-2 xl:grid-cols-3 sm:items-stretch sm:gap-5 lg:gap-6">
                   {displayPackages.slice(0, 3).map((pkg, i) => {
                     const { isGradient, badgeLabel, showBadgePill, badgeClass } = packageVisuals(pkg);
                     const amountPaise = parsePriceToAmount(pkg.price);
@@ -563,21 +563,21 @@ export default function ServiceLeadHero({ service }: Props) {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: i * 0.07 }}
-                        className={`relative snap-start shrink-0 min-w-[220px] max-w-[240px] sm:min-w-0 sm:max-w-none basis-[75%] [@media(max-width:379px)]:basis-[88%] sm:basis-auto sm:shrink flex flex-col rounded-[16px] border p-4 sm:p-8 overflow-hidden transition-all ${i === 1 ? 'lg:scale-[1.05] lg:z-[2]' : ''} ${
+                        className={`relative snap-start shrink-0 min-w-[220px] max-w-[240px] sm:min-w-0 sm:max-w-none basis-[75%] [@media(max-width:379px)]:basis-[88%] sm:basis-auto sm:shrink flex sm:h-full flex-col rounded-[16px] border p-4 sm:p-8 overflow-hidden transition-all ${i === 1 ? 'lg:scale-[1.03] lg:z-[2]' : ''} ${
                           isGradient
                             ? 'bg-gradient-to-b from-blue-600 to-blue-700 border-blue-500/50 shadow-2xl shadow-blue-200/40 ring-2 ring-blue-100'
                             : 'card-hover-warm bg-white border-gray-200/80 hover:shadow-xl hover:shadow-gray-200/50'
                         }`}
                       >
                         {showBadgePill && (
-                          <div className="absolute top-2 left-2 sm:-top-3.5 sm:left-6 z-10 max-w-[80%]">
-                            <span className={`px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[10px] sm:text-[calc(11px+3pt)] font-bold shadow whitespace-nowrap overflow-hidden text-ellipsis ${badgeClass}`}>
+                          <div className="absolute top-2 left-2 sm:top-3 sm:left-1/2 sm:-translate-x-1/2 z-10 max-w-[80%] sm:max-w-none">
+                            <span className={`px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[10px] sm:text-[12px] font-bold shadow whitespace-nowrap overflow-hidden text-ellipsis ${badgeClass}`}>
                               {badgeLabel}
                             </span>
                           </div>
                         )}
 
-                          <div className="mb-3 sm:mb-6">
+                          <div className={`mb-3 sm:mb-6 ${isGradient ? 'sm:pt-6' : ''}`}>
                           <h3 className={`text-[14px] sm:text-sm font-bold uppercase tracking-widest mb-2 sm:mb-3 break-words ${isGradient ? 'text-blue-200' : 'text-gray-400'}`}>
                             {pkg.name}
                           </h3>
@@ -592,7 +592,7 @@ export default function ServiceLeadHero({ service }: Props) {
                         </div>
 
                         {pkg.features && pkg.features.length > 0 && (
-                          <div className="hidden sm:block flex-1 mb-8">
+                          <div className="hidden sm:block flex-1 mb-5">
                             <p className={`text-[calc(10.5px+3pt)] font-bold uppercase tracking-[0.15em] mb-3 ${isGradient ? 'text-blue-300' : 'text-gray-400'}`}>
                               What's included:
                             </p>
@@ -616,7 +616,7 @@ export default function ServiceLeadHero({ service }: Props) {
                                 setPaymentPkg({ name: pkg.name, price: pkg.price, amount: amountPaise });
                                 setPaymentOpen(true);
                               }}
-                              className={`w-full h-11 mt-3 flex items-center justify-center gap-2 rounded-xl px-4 sm:px-5 py-2.5 sm:py-3 text-[13px] sm:text-[calc(13.5px+3pt)] font-semibold transition-all ${
+                              className={`w-full h-11 sm:h-12 mt-3 sm:mt-auto flex items-center justify-center gap-2 rounded-xl px-4 sm:px-5 py-2.5 sm:py-3 text-[13px] sm:text-[calc(13.5px+3pt)] font-semibold transition-all ${
                                 isGradient
                                   ? 'bg-white text-blue-700 hover:bg-blue-50 shadow-lg'
                                   : 'bg-blue-600 text-white hover:bg-blue-700 shadow-sm shadow-blue-200'
@@ -627,7 +627,7 @@ export default function ServiceLeadHero({ service }: Props) {
                           )}
                           <button
                             onClick={() => document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' })}
-                            className={`w-full h-11 mt-3 flex items-center justify-center gap-2 rounded-xl px-4 sm:px-5 py-2.5 sm:py-3 text-[13px] sm:text-[calc(13.5px+3pt)] font-semibold transition-all ${
+                            className={`w-full h-11 sm:h-12 mt-3 flex items-center justify-center gap-2 rounded-xl px-4 sm:px-5 py-2.5 sm:py-3 text-[13px] sm:text-[calc(13.5px+3pt)] font-semibold transition-all ${
                               isGradient
                                 ? 'border border-white/30 text-white/80 hover:bg-white/10'
                                 : 'border border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300'

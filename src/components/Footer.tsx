@@ -20,7 +20,6 @@ export default function Footer() {
   const logoAlt = footer.logoAlt?.trim() || 'Mridhuv Associates';
   const displayAddress = contact.address || footer.address || '';
   const contactHeading = (footer.contactBlockHeading ?? '').trim();
-  const showBottomContact = footer.showBottomContactRow !== false;
   const legalPolicyLinks = footer.policyLinks.filter((item) =>
     /privacy|refund|confidentiality|disclaimer|terms/i.test(item.label)
   );
@@ -137,12 +136,6 @@ export default function Footer() {
           <p className="text-[calc(13px+3pt)] text-slate-400 text-center">
             {copyrightText}
           </p>
-          {showBottomContact && (
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-[calc(13px+3pt)] text-slate-400">
-              <a href={`mailto:${contact.email}`} className="hover:text-white transition-colors">{contact.email}</a>
-              <a href={`tel:${contact.phone.replace(/\s/g, '')}`} className="hover:text-white transition-colors">{contact.phone}</a>
-            </div>
-          )}
         </div>
       </div>
     </footer>

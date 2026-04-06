@@ -27,7 +27,6 @@ import ArticlePage from './pages/ArticlePage';
 import Footer from './components/Footer';
 import ChatBot from './components/ChatBot';
 import LeadCapturePopup from './components/LeadCapturePopup';
-import FloatingPaymentButton from './components/FloatingPaymentButton';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -73,7 +72,6 @@ function AppContent() {
         </Routes>
       </main>
       {!isAdmin && <Footer />}
-      {!isAdmin && <FloatingPaymentButton />}
       {!isAdmin && <ChatBot />}
       {!isAdmin && <LeadCapturePopup />}
     </div>

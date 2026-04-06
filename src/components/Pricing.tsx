@@ -14,7 +14,7 @@ function desktopGridColsClass(n: number): string {
 
 function PlanGrid({ plans }: { plans: PricingPlan[] }) {
   return (
-    <div className={`flex overflow-x-auto hide-scrollbar gap-2.5 pb-2 snap-x snap-mandatory sm:grid sm:overflow-visible sm:pb-0 ${desktopGridColsClass(plans.length)} sm:gap-5`}>
+    <div className={`flex overflow-x-auto hide-scrollbar gap-2.5 pb-2 snap-x snap-mandatory sm:grid sm:overflow-visible sm:pb-0 sm:items-stretch ${desktopGridColsClass(plans.length)} sm:gap-5`}>
       {plans.map((plan, i) => (
         <motion.div
           key={`${plan.name}-${i}`}
@@ -22,21 +22,21 @@ function PlanGrid({ plans }: { plans: PricingPlan[] }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: i * 0.07 }}
-          className={`relative snap-start shrink-0 min-w-[220px] max-w-[240px] sm:min-w-0 sm:max-w-none basis-[78%] [@media(max-width:379px)]:basis-[88%] sm:basis-auto sm:shrink flex min-h-[180px] sm:min-h-0 flex-col rounded-[16px] sm:rounded-2xl border p-4 sm:p-8 overflow-hidden transition-all ${
+          className={`relative snap-start shrink-0 min-w-[220px] max-w-[240px] sm:min-w-0 sm:max-w-none basis-[78%] [@media(max-width:379px)]:basis-[88%] sm:basis-auto sm:shrink flex min-h-[180px] sm:min-h-0 sm:h-full flex-col rounded-[16px] sm:rounded-2xl border p-4 sm:p-8 overflow-hidden transition-all ${
             plan.highlight
-              ? 'bg-gradient-to-b from-blue-600 to-blue-700 border-blue-500/50 shadow-lg sm:shadow-2xl sm:shadow-blue-200/40 -translate-y-1 sm:-translate-y-2 ring-2 ring-blue-100'
+              ? 'bg-gradient-to-b from-blue-600 to-blue-700 border-blue-500/50 shadow-lg sm:shadow-2xl sm:shadow-blue-200/40 ring-2 ring-blue-100 lg:scale-[1.03] lg:z-[2]'
               : 'card-hover-warm bg-white border-gray-200/80 hover:shadow-md sm:hover:shadow-xl sm:hover:shadow-gray-200/50'
           }`}
         >
           {plan.badge && (
-            <div className="absolute top-2 left-2 sm:-top-3.5 sm:left-6 z-10 max-w-[80%]">
-              <span className="px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-amber-400 text-amber-900 text-[10px] sm:text-[calc(11px+3pt)] font-bold shadow whitespace-nowrap overflow-hidden text-ellipsis">
+            <div className="absolute top-2 left-2 sm:top-3 sm:left-1/2 sm:-translate-x-1/2 z-10 max-w-[80%] sm:max-w-none">
+              <span className="px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-amber-400 text-amber-900 text-[10px] sm:text-[12px] font-bold shadow whitespace-nowrap overflow-hidden text-ellipsis">
                 {plan.badge}
               </span>
             </div>
           )}
 
-          <div className="mb-3 sm:mb-6">
+          <div className={`mb-3 sm:mb-6 ${plan.highlight ? 'sm:pt-6' : ''}`}>
             <h3 className={`text-[13px] sm:text-sm font-bold uppercase tracking-widest mb-2 sm:mb-3 break-words ${plan.highlight ? 'text-blue-200' : 'text-gray-400'}`}>
               {plan.name}
             </h3>
@@ -48,7 +48,7 @@ function PlanGrid({ plans }: { plans: PricingPlan[] }) {
             <p className={`text-[13px] sm:text-[calc(13px+3pt)] leading-[1.4] line-clamp-2 break-words max-w-full ${plan.highlight ? 'text-blue-200' : 'text-gray-400'}`}>{plan.tagline}</p>
           </div>
 
-          <div className="flex-1 mb-2 sm:mb-8">
+          <div className="flex-1 mb-2 sm:mb-5">
             <ul className="hidden sm:block sm:space-y-3">
               {plan.features.slice(0, 4).map((f) => (
                 <li key={f} className={`flex items-start gap-2 text-xs sm:text-[calc(13.5px+3pt)] ${plan.highlight ? 'text-blue-100' : 'text-gray-600'}`}>
@@ -63,7 +63,7 @@ function PlanGrid({ plans }: { plans: PricingPlan[] }) {
 
           <Link
             to={plan.ctaTo || '/contact-us'}
-            className={`w-full h-11 mt-3 flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm sm:text-[calc(13.5px+3pt)] font-semibold transition-all ${
+            className={`w-full h-11 sm:h-12 mt-3 sm:mt-auto flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm sm:text-[calc(13.5px+3pt)] font-semibold transition-all ${
               plan.highlight
                 ? 'bg-white text-blue-700 hover:bg-blue-50 shadow-lg'
                 : 'border border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300'
