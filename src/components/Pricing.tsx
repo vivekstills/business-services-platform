@@ -22,21 +22,13 @@ function PlanGrid({ plans }: { plans: PricingPlan[] }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: i * 0.07 }}
-          className={`relative snap-start shrink-0 min-w-[220px] max-w-[240px] sm:min-w-0 sm:max-w-none basis-[78%] [@media(max-width:379px)]:basis-[88%] sm:basis-auto sm:shrink flex min-h-[180px] sm:min-h-0 sm:h-full flex-col rounded-[16px] sm:rounded-2xl border p-4 sm:p-8 overflow-hidden transition-all ${
+          className={`relative snap-start shrink-0 min-w-[220px] max-w-[240px] sm:min-w-0 sm:max-w-none basis-[78%] [@media(max-width:379px)]:basis-[88%] sm:basis-auto sm:shrink flex min-h-[180px] sm:min-h-0 sm:h-full flex-col rounded-[16px] sm:rounded-2xl border p-4 sm:p-8 overflow-hidden transition-all ${plan.highlight ? 'sm:pt-7' : ''} ${
             plan.highlight
               ? 'bg-gradient-to-b from-blue-600 to-blue-700 border-blue-500/50 shadow-lg sm:shadow-2xl sm:shadow-blue-200/40 ring-2 ring-blue-100 lg:scale-[1.03] lg:z-[2]'
               : 'card-hover-warm bg-white border-gray-200/80 hover:shadow-md sm:hover:shadow-xl sm:hover:shadow-gray-200/50'
           }`}
         >
-          {plan.badge && (
-            <div className="absolute top-2 left-2 sm:top-3 sm:left-1/2 sm:-translate-x-1/2 z-10 max-w-[80%] sm:max-w-none">
-              <span className="px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-amber-400 text-amber-900 text-[10px] sm:text-[12px] font-bold shadow whitespace-nowrap overflow-hidden text-ellipsis">
-                {plan.badge}
-              </span>
-            </div>
-          )}
-
-          <div className={`mb-3 sm:mb-6 ${plan.highlight ? 'sm:pt-6' : ''}`}>
+          <div className="mb-3 sm:mb-6">
             <h3 className={`text-[13px] sm:text-sm font-bold uppercase tracking-widest mb-2 sm:mb-3 break-words ${plan.highlight ? 'text-blue-200' : 'text-gray-400'}`}>
               {plan.name}
             </h3>

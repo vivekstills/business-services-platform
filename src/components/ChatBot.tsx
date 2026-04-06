@@ -188,11 +188,10 @@ export default function ChatBot() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.94, y: 16 }}
             transition={{ type: 'spring', damping: 26, stiffness: 300 }}
-            className="fixed bottom-[70px] right-[10px] sm:bottom-24 sm:right-6 z-50 w-[90vw] max-w-[320px] sm:w-[360px] sm:max-w-[calc(100vw-24px)] bg-white rounded-xl sm:rounded-2xl shadow-2xl shadow-gray-300/60 border border-gray-200 flex flex-col overflow-hidden"
-            style={{ height: 'min(60vh, 520px)' }}
+            className="fixed bottom-[70px] right-[10px] [@media(max-width:400px)]:right-2 sm:bottom-24 sm:right-6 z-50 w-[92vw] max-w-[320px] [@media(max-width:400px)]:w-[95vw] sm:w-[360px] sm:max-w-[calc(100vw-24px)] h-[60vh] max-h-[65vh] [@media(max-width:400px)]:h-[55vh] sm:h-[min(520px,calc(100dvh-100px))] sm:max-h-none bg-white rounded-[14px] sm:rounded-2xl shadow-2xl shadow-gray-300/60 border border-gray-200 flex flex-col overflow-hidden"
           >
             {/* Header */}
-            <div className="flex items-center gap-3 px-4 py-3.5 bg-gradient-to-r from-blue-600 to-blue-700 flex-shrink-0">
+            <div className="flex items-center gap-3 h-12 px-4 bg-gradient-to-r from-blue-600 to-blue-700 flex-shrink-0">
               <div className="w-9 h-9 rounded-xl bg-white/20 flex items-center justify-center">
                 <Bot className="w-5 h-5 text-white" />
               </div>
@@ -209,7 +208,7 @@ export default function ChatBot() {
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto px-4 py-4 space-y-3 bg-gray-50/50">
+            <div className="flex-1 overflow-y-auto overflow-x-hidden hide-scrollbar px-3 sm:px-4 py-3 sm:py-4 space-y-3 bg-gray-50/50">
               {messages.map((msg) => (
                 <motion.div
                   key={msg.id}
@@ -264,12 +263,12 @@ export default function ChatBot() {
 
             {/* Quick replies */}
             {messages.length <= 2 && !isTyping && (
-              <div className="px-4 py-2 flex gap-2 flex-wrap border-t border-gray-100 bg-white flex-shrink-0">
+              <div className="px-3 sm:px-4 py-2 flex gap-2 flex-wrap content-start overflow-hidden border-t border-gray-100 bg-white flex-shrink-0">
                 {QUICK_REPLIES.map((qr) => (
                   <button
                     key={qr.value}
                     onClick={() => sendMessage(qr.value)}
-                    className="text-[calc(11.5px+3pt)] font-medium text-blue-700 bg-blue-50 hover:bg-blue-100 border border-blue-100 rounded-full px-3 py-1 transition-colors"
+                    className="max-w-full whitespace-normal break-words text-xs sm:text-[calc(11.5px+3pt)] leading-tight font-medium text-blue-700 bg-blue-50 hover:bg-blue-100 border border-blue-100 rounded-full px-2.5 sm:px-3 py-1.5 sm:py-1 transition-colors"
                   >
                     {qr.label}
                   </button>
@@ -280,19 +279,19 @@ export default function ChatBot() {
             {/* Input */}
             <form
               onSubmit={handleSubmit}
-              className="flex items-center gap-2 px-4 py-3 border-t border-gray-200 bg-white flex-shrink-0"
+              className="flex items-center gap-2 px-2.5 sm:px-4 py-2.5 sm:py-3 border-t border-gray-200 bg-white flex-shrink-0"
             >
               <input
                 ref={inputRef}
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Type your question…"
-                className="flex-1 h-9 rounded-xl border border-gray-200 px-3.5 text-[calc(13.5px+3pt)] text-gray-700 placeholder-gray-300 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all bg-gray-50"
+                className="flex-1 h-10 rounded-[10px] border border-gray-200 px-3 text-[13px] sm:text-[calc(13.5px+3pt)] text-gray-700 placeholder-gray-300 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all bg-gray-50"
               />
               <button
                 type="submit"
                 disabled={!input.trim() || isTyping}
-                className="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed flex-shrink-0"
+                className="w-10 h-10 sm:w-9 sm:h-9 rounded-[10px] sm:rounded-xl bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed flex-shrink-0"
               >
                 <Send className="w-3.5 h-3.5" />
               </button>

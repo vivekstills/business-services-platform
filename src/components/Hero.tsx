@@ -2,11 +2,13 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Phone } from 'lucide-react';
 import { useContent } from '../context/ContentContext';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   const { content } = useContent();
   const hero = content.hero;
   const contact = content.contact;
+  const POPULAR = hero.popular;
   const handleGetStartedClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
     const servicesSection = document.getElementById('services');
@@ -90,6 +92,25 @@ export default function Hero() {
               >
                 <Phone className="w-4 h-4 text-blue-500" /> Talk to an expert
               </a>
+            </motion.div>
+
+            {/* Popular service chips (desktop/tablet only) */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="hidden sm:flex flex-wrap items-center gap-2 max-w-full"
+            >
+              <span className="text-xs text-gray-400 font-medium mr-1">Popular:</span>
+              {POPULAR.map((p) => (
+                <Link
+                  key={p.to}
+                  to={p.to}
+                  className="text-[11px] text-gray-600 hover:text-amber-700 active:text-amber-700 border border-gray-200 hover:border-amber-300 active:border-amber-300 focus-visible:border-amber-300 bg-white hover:bg-amber-50 active:bg-amber-50/70 rounded-full px-2.5 py-1.5 transition-all shadow-sm whitespace-normal max-w-[48%] text-center line-clamp-2 leading-tight"
+                >
+                  {p.label}
+                </Link>
+              ))}
             </motion.div>
           </div>
 
