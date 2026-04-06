@@ -19,7 +19,7 @@ const TOOLS = [
 
 export default function QuickToolsSection() {
   return (
-    <section className="quick-tools bg-[#edf4ff] py-4 sm:py-12 lg:py-[60px] border-b-0 shadow-none">
+    <section className="quick-tools bg-transparent py-4 sm:py-12 lg:py-[60px] border-b-0 shadow-none">
       <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-5">
         <div className="text-center mb-4 sm:mb-6 lg:mb-8">
           <h2 className="text-[18px] sm:text-2xl md:text-3xl font-bold text-gray-900">Quick Tools</h2>

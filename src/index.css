@@ -28,7 +28,7 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background: #edf4ff;
+    background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
   }
 
   @media (max-width: 768px) {
@@ -38,7 +38,7 @@
       width: 100%;
       height: auto;
       min-height: 100%;
-      background-color: #edf4ff;
+      background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
       padding-bottom: 70px;
     }
 
@@ -83,7 +83,15 @@
   }
 
   .app-soft-bg {
-    background: #edf4ff;
+    background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+  }
+
+  .home-seamless > section,
+  .home-seamless > div > section {
+    background: transparent !important;
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    box-shadow: none !important;
   }
 
   .card-hover-warm {

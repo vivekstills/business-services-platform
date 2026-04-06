@@ -9,7 +9,7 @@ export default function PopularTagsSection() {
   if (popular.length === 0) return null;
 
   return (
-    <section className="sm:hidden bg-[#edf4ff] px-4 py-4 border-b-0 shadow-none">
+    <section className="sm:hidden bg-transparent px-4 py-4 border-b-0 shadow-none">
       <div className="max-w-[1280px] mx-auto">
         <p className="text-xs text-gray-400 font-medium mb-2">Popular services</p>
         <div className="flex flex-wrap gap-2">

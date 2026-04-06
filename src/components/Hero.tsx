@@ -17,8 +17,8 @@ export default function Hero() {
     }
   };
   return (
-    <section className="hero-section-mobile relative bg-[#edf4ff] flex items-center overflow-hidden pt-16 sm:pt-16 min-h-0 sm:min-h-screen noise-overlay border-b-0 shadow-none">
-      <div className="hidden sm:block absolute inset-0 pointer-events-none overflow-hidden">
+    <section className="hero-section-mobile relative bg-transparent flex items-center overflow-hidden pt-16 sm:pt-16 min-h-0 sm:min-h-screen noise-overlay border-b-0 shadow-none">
+      <div className="hidden absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute -top-32 right-0 w-[800px] h-[800px] bg-gradient-to-br from-blue-200/40 to-sky-100/30 rounded-full blur-[140px] translate-x-1/4 animate-float-glow" />
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-indigo-100/40 to-blue-100/30 rounded-full blur-[120px] -translate-x-1/4 translate-y-1/4 animate-float-glow-slow" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-to-r from-sky-100/20 via-transparent to-blue-100/20 rounded-full blur-[100px]" />

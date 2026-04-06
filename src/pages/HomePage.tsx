@@ -9,7 +9,7 @@ import SEOHead from '../components/SEOHead';
 
 export default function HomePage() {
   return (
-    <div className="bg-transparent text-gray-900">
+    <div className="home-seamless bg-transparent text-gray-900">
       <SEOHead
         canonical="/"
         keywords="Mridhuv Associates, Mridu Associates, GST registration, company registration India, private limited company, LLP registration, trademark registration, income tax filing, FSSAI registration, business compliance Bangalore, CA services, tax filing India"
@@ -30,21 +30,11 @@ export default function HomePage() {
         }}
       />
       <Hero />
-      <div className="mt-6 sm:mt-0">
-        <PopularTagsSection />
-      </div>
-      <div className="mt-6 sm:mt-0">
-        <QuickToolsSection />
-      </div>
-      <div className="mt-6 sm:mt-0">
-        <Services />
-      </div>
-      <div className="mt-6 sm:mt-0">
-        <Pricing />
-      </div>
-      <div className="mt-6 sm:mt-0">
-        <ContactSection />
-      </div>
+      <PopularTagsSection />
+      <QuickToolsSection />
+      <Services />
+      <Pricing />
+      <ContactSection />
     </div>
   );
 }
