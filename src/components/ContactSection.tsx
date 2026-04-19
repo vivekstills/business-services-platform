@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { motion } from 'motion/react';
 import { User, Phone, MessageSquare, AlertCircle, CheckCircle2, ArrowRight, Clock, BadgeCheck, Wallet, MapPin } from 'lucide-react';
 import { useContent } from '../context/ContentContext';
@@ -6,7 +6,11 @@ import { useContent } from '../context/ContentContext';
 export default function ContactSection() {
   const { content } = useContent();
   const cs = content.contactSection;
-  const SERVICES_LIST = cs.servicesList;
+  const SERVICES_LIST = useMemo(() => {
+    const names = content.services.map((service) => service.name?.trim()).filter(Boolean) as string[];
+    const uniqueOrdered = Array.from(new Set(names));
+    return uniqueOrdered.length > 0 ? uniqueOrdered : cs.servicesList;
+  }, [content.services, cs.servicesList]);
   const [formData, setFormData]     = useState({ name: '', phone: '', service: '', city: '', message: '', email: '' });
   const [errors, setErrors]         = useState<Record<string, string>>({});
   const [isSubmitted, setIsSubmitted]   = useState(false);

@@ -3,7 +3,6 @@ import Hero from '../components/Hero';
 import PopularTagsSection from '../components/PopularTagsSection';
 import QuickToolsSection from '../components/QuickToolsSection';
 import Services from '../components/Services';
-import Pricing from '../components/Pricing';
 import ContactSection from '../components/ContactSection';
 import SEOHead from '../components/SEOHead';
 
@@ -33,7 +32,6 @@ export default function HomePage() {
       <PopularTagsSection />
       <QuickToolsSection />
       <Services />
-      <Pricing />
       <ContactSection />
     </div>
   );

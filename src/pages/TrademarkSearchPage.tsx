@@ -4,10 +4,15 @@ import { motion } from 'motion/react';
 import { Search, FileText, ExternalLink, ChevronRight } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
-const TM_SEARCH_URL = 'https://tmsearch.ipindia.gov.in/tmrpublicsearch/frmmain.aspx';
+const TM_SEARCH_URL = 'https://tmrsearch.ipindia.gov.in/tmrpublicsearch/';
 
 export default function TrademarkSearchPage() {
   const [query, setQuery] = useState('');
+  const handleSearchSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    if (!query.trim()) return;
+    window.location.href = TM_SEARCH_URL;
+  };
 
   return (
     <div className="min-h-screen bg-transparent pt-16 noise-overlay">
@@ -56,7 +61,7 @@ export default function TrademarkSearchPage() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3">
+          <form onSubmit={handleSearchSubmit} className="flex flex-col sm:flex-row gap-3">
             <input
               type="text"
               value={query}
@@ -64,15 +69,14 @@ export default function TrademarkSearchPage() {
               placeholder="Enter trademark / brand name..."
               className="flex-1 h-12 rounded-xl border border-gray-200 px-4 text-[calc(15px+3pt)] text-gray-800 placeholder-gray-400 focus:outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100"
             />
-            <a
-              href={TM_SEARCH_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="h-12 px-6 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-emerald-200 transition-all hover:-translate-y-0.5"
+            <button
+              type="submit"
+              disabled={!query.trim()}
+              className="h-12 px-6 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-emerald-200 transition-all hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
             >
-              Search on tmsearch.ipindia.gov.in <ExternalLink className="w-4 h-4" />
-            </a>
-          </div>
+              Search on tmrsearch.ipindia.gov.in <ExternalLink className="w-4 h-4" />
+            </button>
+          </form>
 
           <p className="text-[calc(12px+3pt)] text-gray-400 mt-4">
             You will be redirected to the official <strong>tmsearch.ipindia.gov.in</strong> Trademark Public Search. Our team can help you with trademark search, class selection, and registration — contact us at{' '}

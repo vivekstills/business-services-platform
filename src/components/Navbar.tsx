@@ -1,16 +1,42 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Briefcase, FileText, Calculator, Shield, Scale, Landmark } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { SERVICES_NAV_CATEGORIES, getServiceBySlug, getServiceDetailRoute } from '../data/servicesData';
+import { SERVICES, SERVICE_CATEGORIES } from '../data/services';
+import { getServiceBySlug, getServiceDetailRoute } from '../data/servicesData';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileExpandedCategory, setMobileExpandedCategory] = useState<string | null>(null);
+  const [activeCategoryId, setActiveCategoryId] = useState<string>('');
   const location = useLocation();
   const navigate = useNavigate();
+  const categoryIcons: Record<string, React.ReactNode> = {
+    'new-business': <Briefcase className="w-5 h-5" />,
+    registration: <FileText className="w-5 h-5" />,
+    'return-filing': <Calculator className="w-5 h-5" />,
+    'trademark-ip': <Shield className="w-5 h-5" />,
+    'legal-compliance': <Scale className="w-5 h-5" />,
+    'mandatory-licenses': <Landmark className="w-5 h-5" />,
+  };
+  const allServiceGroups = useMemo(
+    () =>
+      SERVICE_CATEGORIES
+        .map((category) => ({
+          id: category.id,
+          title: category.title,
+          services: SERVICES.filter((service) => service.categoryId === category.id),
+        }))
+        .filter((group) => group.services.length > 0),
+    []
+  );
+  const activeGroup =
+    allServiceGroups.find((group) => group.id === activeCategoryId) ??
+    allServiceGroups[0] ??
+    null;
 
   const handleServiceItemClick = (serviceSlug: string) => {
     console.log('[Navbar] clicked service slug:', serviceSlug);
@@ -25,15 +51,11 @@ export default function Navbar() {
 
   useEffect(() => { setServicesOpen(false); setIsMobileOpen(false); }, [location.pathname]);
   useEffect(() => {
-    if (location.hash === '#pricing-section') {
-      setTimeout(() => {
-        const section = document.getElementById('pricing-section');
-        if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 0);
+    if (allServiceGroups.length === 0) return;
+    if (!activeCategoryId || !allServiceGroups.some((group) => group.id === activeCategoryId)) {
+      setActiveCategoryId(allServiceGroups[0].id);
     }
-  }, [location.hash, location.pathname]);
+  }, [allServiceGroups, activeCategoryId]);
 
   return (
     <>
@@ -66,23 +88,6 @@ export default function Navbar() {
               >
                 Services <ChevronDown className={`w-3.5 h-3.5 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              <a
-                href="/#pricing-section"
-                onClick={(e) => {
-                  e.preventDefault();
-                  if (location.pathname !== '/') {
-                    navigate('/#pricing-section');
-                    return;
-                  }
-                  const section = document.getElementById('pricing-section');
-                  if (section) {
-                    section.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                className="text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                Pricing
-              </a>
               <Link to="/about-us" className="text-gray-600 hover:text-gray-900 transition-colors">About</Link>
               <Link to="/contact-us" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</Link>
 
@@ -94,41 +99,75 @@ export default function Navbar() {
                     exit={{ opacity: 0, y: 8 }}
                     transition={{ duration: 0.18 }}
                     onMouseLeave={() => setServicesOpen(false)}
-                    className="absolute z-[120] left-1/2 -translate-x-1/2 top-full mt-4 w-[min(96vw,980px)] bg-white rounded-2xl shadow-lg p-6 xl:p-7"
+                    className="absolute z-[120] left-1/2 -translate-x-1/2 top-full mt-4 w-[min(96vw,1080px)] bg-white rounded-2xl shadow-lg p-0 overflow-hidden"
                   >
-                    <div className="grid grid-cols-3 gap-x-10 xl:gap-x-12 gap-y-7">
-                      {SERVICES_NAV_CATEGORIES.map((group) => (
-                        <div key={group.slug}>
-                          <p className="text-[calc(11px+2pt)] font-semibold uppercase tracking-wider text-gray-400 mb-2.5">
-                            {group.title}
-                          </p>
-                          <div className="space-y-2">
-                            {group.featuredServiceIds.slice(0, 5).map((serviceSlug) => {
-                              const service = getServiceBySlug(serviceSlug);
-                              if (!service) return null;
-                              return (
-                              <Link
-                                key={serviceSlug}
-                                to={getServiceDetailRoute(group.slug, serviceSlug)}
-                                onClick={() => {
-                                  handleServiceItemClick(serviceSlug);
-                                  setServicesOpen(false);
-                                }}
-                                className="block px-2 py-1.5 rounded-md text-[calc(13px+2pt)] font-normal text-gray-700 hover:text-blue-700 hover:bg-blue-50/70 transition-colors"
-                              >
-                                {service.name}
-                              </Link>
-                            );})}
-                            <Link
-                              to={`/services/${group.slug}`}
-                              onClick={() => setServicesOpen(false)}
-                              className="block px-2 pt-2 text-[calc(12px+2pt)] font-semibold text-blue-700 hover:text-blue-800"
-                            >
-                              View All →
-                            </Link>
-                          </div>
+                    <div className="flex min-h-[460px] max-h-[72vh]">
+                      <div className="w-[280px] border-r border-gray-100 bg-gray-50/50 overflow-y-auto">
+                        <div className="px-4 py-3 border-b border-gray-100">
+                          <p className="text-[11px] uppercase tracking-[0.12em] font-semibold text-gray-400">Service Categories</p>
                         </div>
-                      ))}
+                        <div className="py-2">
+                          {allServiceGroups.map((group) => {
+                            const isActive = activeGroup?.id === group.id;
+                            return (
+                              <button
+                                key={group.id}
+                                type="button"
+                                onMouseEnter={() => setActiveCategoryId(group.id)}
+                                onFocus={() => setActiveCategoryId(group.id)}
+                                onClick={() => setActiveCategoryId(group.id)}
+                                className={`w-full text-left px-4 py-3 transition-colors border-l-2 ${
+                                  isActive
+                                    ? 'border-l-blue-600 bg-blue-50/70 text-gray-900'
+                                    : 'border-l-transparent text-gray-600 hover:bg-gray-100/80 hover:text-gray-900'
+                                }`}
+                                aria-current={isActive ? 'true' : undefined}
+                              >
+                                <div className="flex items-center justify-between gap-2">
+                                  <span className="inline-flex items-center gap-2">
+                                    <span className={`w-6 h-6 rounded-md inline-flex items-center justify-center ${isActive ? 'bg-blue-100 text-blue-600' : 'bg-gray-100 text-gray-500'}`}>
+                                      {categoryIcons[group.id] ?? <FileText className="w-4 h-4" />}
+                                    </span>
+                                    <span className="text-[calc(12px+2pt)] font-medium leading-tight">{group.title}</span>
+                                  </span>
+                                  <span className="text-[10px] font-semibold text-gray-400">{group.services.length}</span>
+                                </div>
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </div>
+
+                      <div className="flex-1 bg-white overflow-y-auto">
+                        {activeGroup && (
+                          <div className="px-6 py-5">
+                            <div className="mb-4">
+                              <p className="text-[calc(15px+2pt)] font-semibold text-gray-900">{activeGroup.title}</p>
+                              <p className="text-[12px] text-gray-500 mt-1">
+                                {activeGroup.services.length} services available
+                              </p>
+                            </div>
+                            <div className="grid grid-cols-2 gap-x-5 gap-y-1">
+                              {activeGroup.services.map((service) => {
+                                const serviceSlug = service.id;
+                                return (
+                                  <Link
+                                    key={serviceSlug}
+                                    to={getServiceDetailRoute(activeGroup.id, serviceSlug)}
+                                    onClick={() => {
+                                      handleServiceItemClick(serviceSlug);
+                                      setServicesOpen(false);
+                                    }}
+                                    className="px-2.5 py-2 rounded-md text-[calc(12px+2pt)] text-gray-700 hover:text-blue-700 hover:bg-blue-50/70 transition-colors"
+                                  >
+                                    {service.name}
+                                  </Link>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </motion.div>
                 )}
@@ -185,55 +224,66 @@ export default function Navbar() {
               <AnimatePresence>
                 {mobileServicesOpen && (
                   <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden px-4 pb-3 space-y-2">
-                    {SERVICES_NAV_CATEGORIES.map((group) => (
-                      <div key={group.slug} className="rounded-xl border border-gray-100 bg-gray-50/60 p-3">
-                        <p className="text-xs uppercase tracking-wider text-gray-400 font-bold mb-1.5">{group.title}</p>
-                        {group.featuredServiceIds.slice(0, 5).map((serviceSlug) => {
-                          const service = getServiceBySlug(serviceSlug);
-                          if (!service) return null;
-                          return (
-                          <Link
-                            key={serviceSlug}
-                            to={getServiceDetailRoute(group.slug, serviceSlug)}
-                            onClick={() => {
-                              handleServiceItemClick(serviceSlug);
-                              setIsMobileOpen(false);
-                            }}
-                            className="block py-1.5 px-1 text-gray-700 text-sm"
-                          >
-                            {service.name}
-                          </Link>
-                        );})}
-                        <Link
-                          to={`/services/${group.slug}`}
-                          onClick={() => setIsMobileOpen(false)}
-                          className="block pt-2 text-xs font-semibold text-blue-700"
+                    {allServiceGroups.map((group) => (
+                      <div key={group.id} className="border-b border-gray-100 pb-2">
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setMobileExpandedCategory((prev) => (prev === group.id ? null : group.id))
+                          }
+                          className="w-full flex items-center justify-between px-1 py-2.5 text-left"
                         >
-                          View All →
-                        </Link>
+                          <div className="flex items-center gap-2">
+                            <span className="w-6 h-6 rounded-md bg-blue-50 text-blue-600 inline-flex items-center justify-center">
+                              {categoryIcons[group.id] ?? <FileText className="w-4 h-4" />}
+                            </span>
+                            <span className="text-[12px] uppercase tracking-wider text-gray-500 font-semibold">{group.title}</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span className="text-[10px] font-semibold text-gray-400">
+                              {group.services.length}
+                            </span>
+                            <ChevronDown
+                              className={`w-4 h-4 text-gray-500 transition-transform ${
+                                mobileExpandedCategory === group.id ? 'rotate-180' : ''
+                              }`}
+                            />
+                          </div>
+                        </button>
+                        <AnimatePresence initial={false}>
+                          {mobileExpandedCategory === group.id && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: 'auto', opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              className="overflow-hidden px-1 pb-2"
+                            >
+                              <div className="max-h-[40vh] overflow-y-auto space-y-1">
+                                {group.services.map((service) => {
+                                  const serviceSlug = service.id;
+                                  return (
+                                    <Link
+                                      key={serviceSlug}
+                                      to={getServiceDetailRoute(group.id, serviceSlug)}
+                                      onClick={() => {
+                                        handleServiceItemClick(serviceSlug);
+                                        setIsMobileOpen(false);
+                                      }}
+                                      className="block py-1.5 px-2 rounded-md text-gray-700 text-sm hover:bg-blue-50/60"
+                                    >
+                                      {service.name}
+                                    </Link>
+                                  );
+                                })}
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
                       </div>
                     ))}
                   </motion.div>
                 )}
               </AnimatePresence>
-              <a
-                href="/#pricing-section"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setIsMobileOpen(false);
-                  if (location.pathname !== '/') {
-                    navigate('/#pricing-section');
-                    return;
-                  }
-                  const section = document.getElementById('pricing-section');
-                  if (section) {
-                    section.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                className="block px-5 py-3 text-gray-700"
-              >
-                Pricing
-              </a>
               <Link to="/about-us" onClick={() => setIsMobileOpen(false)} className="block px-5 py-3 text-gray-700">About</Link>
               <Link to="/contact-us" onClick={() => setIsMobileOpen(false)} className="block px-5 py-3 text-gray-700">Contact</Link>
 
