@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 
 type Props = {
   content: string;
   className?: string;
+  /** Show Table of Contents when >= 3 H2 sections. Default: true */
+  showToc?: boolean;
 };
 
 type Block =
-  | { type: 'h2'; text: string }
+  | { type: 'h2'; text: string; id: string }
   | { type: 'h3'; text: string }
   | { type: 'h4'; text: string }
   | { type: 'p'; text: string }
@@ -40,6 +42,16 @@ function parseInline(text: string): React.ReactNode[] {
   return nodes;
 }
 
+function sectionIdOf(rest: string): string {
+  return `section-${rest.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40)}`;
+}
+
+function extractSectionNum(text: string): { num: string | null; rest: string } {
+  const m = text.match(/^(\d+)[\).:]\s+(.+)$/);
+  if (m) return { num: m[1], rest: m[2] };
+  return { num: null, rest: text };
+}
+
 function parseBlocks(raw: string): Block[] {
   const lines = raw.split('\n');
   const blocks: Block[] = [];
@@ -48,7 +60,9 @@ function parseBlocks(raw: string): Block[] {
     const trimmed = lines[i].trim();
     if (!trimmed) { i++; continue; }
     if (trimmed.startsWith('## ')) {
-      blocks.push({ type: 'h2', text: trimmed.slice(3).trim() });
+      const text = trimmed.slice(3).trim();
+      const { rest } = extractSectionNum(text);
+      blocks.push({ type: 'h2', text, id: sectionIdOf(rest) });
       i++;
     } else if (trimmed.startsWith('### ')) {
       blocks.push({ type: 'h3', text: trimmed.slice(4).trim() });
@@ -93,19 +107,131 @@ function parseBlocks(raw: string): Block[] {
   return blocks;
 }
 
-function extractSectionNum(text: string): { num: string | null; rest: string } {
-  const m = text.match(/^(\d+)[\).:]\s+(.+)$/);
-  if (m) return { num: m[1], rest: m[2] };
-  return { num: null, rest: text };
+type TocItem = { id: string; num: string | null; label: string };
+
+function buildToc(blocks: Block[]): TocItem[] {
+  return blocks
+    .filter((b): b is Extract<Block, { type: 'h2' }> => b.type === 'h2')
+    .map((b) => {
+      const { num, rest } = extractSectionNum(b.text);
+      return { id: b.id, num, label: rest };
+    });
 }
 
-export default function RichContent({ content, className = '' }: Props) {
-  if (!content?.trim()) return null;
+/**
+ * Short label used on TOC chips — keeps the chip compact regardless of how
+ * verbose the section heading is.
+ */
+function shortChipLabel(label: string): string {
+  const cleaned = label
+    .replace(/\s*\([^)]*\)\s*/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  // Take the first half up to the first ' / ' or ' - ' or ' — '
+  const cut = cleaned.split(/\s+[-/—]\s+/)[0];
+  return cut.length > 26 ? cut.slice(0, 24).trim() + '…' : cut;
+}
 
+/**
+ * Interactive Table of Contents. Sticky horizontal chip strip that highlights
+ * the section currently in the viewport. Clicking a chip smooth-scrolls to
+ * the matching H2 block.
+ */
+function TableOfContents({ items }: { items: TocItem[] }) {
+  const [activeId, setActiveId] = useState<string | null>(items[0]?.id ?? null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (items.length === 0) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible.length > 0) {
+          const id = visible[0].target.id;
+          if (id) setActiveId(id);
+        }
+      },
+      { rootMargin: '-20% 0px -65% 0px', threshold: [0, 0.5, 1] }
+    );
+    for (const it of items) {
+      const el = document.getElementById(it.id);
+      if (el) observer.observe(el);
+    }
+    return () => observer.disconnect();
+  }, [items]);
+
+  // Keep the active chip visible in the horizontal scroller
+  useEffect(() => {
+    if (!activeId || !containerRef.current) return;
+    const btn = containerRef.current.querySelector<HTMLButtonElement>(
+      `[data-toc-target="${activeId}"]`
+    );
+    if (btn) btn.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
+  }, [activeId]);
+
+  const onJump = (id: string) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY - 90;
+    window.scrollTo({ top, behavior: 'smooth' });
+    setActiveId(id);
+  };
+
+  return (
+    <div className="sticky top-16 z-10 -mx-5 sm:-mx-8 mb-5 sm:mb-6 bg-white/95 backdrop-blur-md border-b border-gray-100">
+      <div
+        ref={containerRef}
+        className="flex items-center gap-1.5 overflow-x-auto px-5 sm:px-8 py-2.5 hide-scrollbar"
+        role="tablist"
+        aria-label="Section navigation"
+      >
+        {items.map((it) => {
+          const isActive = activeId === it.id;
+          return (
+            <button
+              key={it.id}
+              data-toc-target={it.id}
+              type="button"
+              role="tab"
+              aria-selected={isActive}
+              onClick={() => onJump(it.id)}
+              className={`inline-flex items-center gap-1.5 shrink-0 rounded-full border px-3 py-1.5 text-[12.5px] font-medium transition-all whitespace-nowrap ${
+                isActive
+                  ? 'border-gray-900 bg-gray-900 text-white'
+                  : 'border-gray-200 bg-white text-gray-600 hover:border-gray-400 hover:text-gray-900'
+              }`}
+            >
+              {it.num && (
+                <span
+                  className={`inline-flex items-center justify-center w-[18px] h-[18px] rounded-full text-[10px] font-bold tabular-nums ${
+                    isActive ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-500'
+                  }`}
+                >
+                  {it.num}
+                </span>
+              )}
+              <span>{shortChipLabel(it.label)}</span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+export default function RichContent({ content, className = '', showToc = true }: Props) {
+  const safe = content ?? '';
   const isPlainText =
-    !content.includes('## ') && !content.includes('### ') && !content.includes('#### ') &&
-    !content.includes('- ') && !content.includes('* ') && !content.includes('**') &&
-    !/\[.*?\]\(.*?\)/.test(content) && !content.includes('\n> ');
+    !safe.includes('## ') && !safe.includes('### ') && !safe.includes('#### ') &&
+    !safe.includes('- ') && !safe.includes('* ') && !safe.includes('**') &&
+    !/\[.*?\]\(.*?\)/.test(safe) && !safe.includes('\n> ');
+
+  const blocks = useMemo(() => (safe.trim() && !isPlainText ? parseBlocks(safe) : []), [safe, isPlainText]);
+  const toc = useMemo(() => buildToc(blocks), [blocks]);
+
+  if (!safe.trim()) return null;
 
   if (isPlainText) {
     return (
@@ -115,18 +241,18 @@ export default function RichContent({ content, className = '' }: Props) {
     );
   }
 
-  const blocks = parseBlocks(content);
+  const displayToc = showToc && toc.length >= 3;
 
   return (
     <div className={className}>
+      {displayToc && <TableOfContents items={toc} />}
       {blocks.map((block, i) => {
         switch (block.type) {
 
           case 'h2': {
             const { rest } = extractSectionNum(block.text);
-            const sectionId = `section-${rest.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 40)}`;
             return (
-              <div key={i} id={sectionId} className="mt-8 mb-3 first:mt-0">
+              <div key={i} id={block.id} className="mt-8 mb-3 first:mt-0 scroll-mt-28">
                 <h2 className="text-[26px] font-bold text-gray-900 leading-snug pb-2.5 border-b border-gray-200">
                   {parseInline(rest)}
                 </h2>
