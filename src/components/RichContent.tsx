@@ -193,12 +193,13 @@ function TableOfContents({ items }: { items: TocItem[] }) {
   };
 
   return (
-    <div className="sticky top-20 z-10 mb-6 flex justify-center pointer-events-none">
-      <div
-        className="pointer-events-auto inline-flex items-center gap-1.5 max-w-full overflow-x-auto rounded-full border border-gray-200/80 bg-white/90 backdrop-blur-md shadow-lg shadow-gray-900/5 ring-1 ring-black/[0.02] px-2 py-1.5 hide-scrollbar"
-        role="tablist"
-        aria-label="Section navigation"
-      >
+    <div className="sticky top-20 z-20 mb-6 flex justify-center pointer-events-none">
+      <div className="pointer-events-auto inline-flex max-w-full rounded-full border border-gray-200 bg-white/85 backdrop-blur-xl shadow-[0_10px_30px_-12px_rgba(17,24,39,0.18)] ring-1 ring-black/5">
+        <div
+          className="flex items-center gap-1.5 max-w-full overflow-x-auto px-2 py-1.5 rounded-full hide-scrollbar toc-fade-mask"
+          role="tablist"
+          aria-label="Section navigation"
+        >
         {items.map((it) => {
           const isActive = activeId === it.id;
           return (
@@ -228,6 +229,7 @@ function TableOfContents({ items }: { items: TocItem[] }) {
             </button>
           );
         })}
+        </div>
       </div>
     </div>
   );
