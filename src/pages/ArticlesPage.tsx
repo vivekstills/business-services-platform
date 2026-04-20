@@ -25,58 +25,60 @@ function CategoryBadge({ cat }: { cat: string }) {
   );
 }
 
-function ArticleCard({ article, index }: { article: Article; index: number }) {
+const ArticleCard: React.FC<{ article: Article; index: number }> = ({ article, index }) => {
   return (
-    <motion.article
-      initial={{ opacity: 0, y: 16 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.05 }}
-      className="card-hover-warm group bg-white/90 backdrop-blur-sm border border-gray-200/60 rounded-2xl overflow-hidden hover:shadow-lg hover:shadow-gray-200/60 transition-all duration-300 flex flex-col"
-    >
-      {/* Cover image */}
-      {article.coverImage ? (
-        <div className="h-44 overflow-hidden">
-          <img src={article.coverImage} alt={article.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-        </div>
-      ) : (
-        <div className="h-44 bg-gradient-to-br from-blue-50 via-indigo-50 to-slate-100 flex items-center justify-center">
-          <BookOpen className="w-10 h-10 text-blue-200" />
-        </div>
-      )}
-
-      <div className="p-6 flex flex-col flex-1">
-        {/* Category + reading time */}
-        <div className="flex items-center justify-between mb-3">
-          {article.category && <CategoryBadge cat={article.category} />}
-          <span className="flex items-center gap-1 text-[calc(11px+3pt)] text-gray-400">
-            <Clock className="w-3 h-3" /> {article.readingTime}
-          </span>
-        </div>
-
-        {/* Title */}
-        <h2 className="text-[calc(15px+3pt)] font-bold text-gray-900 leading-snug mb-2 group-hover:text-blue-700 transition-colors line-clamp-2">
-          {article.title}
-        </h2>
-
-        {/* Excerpt */}
-        <p className="text-sm text-gray-500 leading-relaxed line-clamp-2 flex-1 mb-4">
-          {article.excerpt}
-        </p>
-
-        {/* Footer */}
-        <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-          <div className="flex items-center gap-3 text-[calc(11px+3pt)] text-gray-400">
-            <span className="flex items-center gap-1"><User className="w-3 h-3" /> {article.author}</span>
-            <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {new Date(article.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
+    <Link to={`/articles/${article.slug}`} className="block">
+      <motion.article
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: index * 0.05 }}
+        className="group bg-white/90 backdrop-blur-sm border border-gray-200/60 rounded-2xl overflow-hidden hover:border-gray-300 hover:shadow-lg hover:shadow-gray-200/60 transition-all duration-300 flex flex-col"
+      >
+        {/* Cover image */}
+        {article.coverImage ? (
+          <div className="h-44 overflow-hidden">
+            <img src={article.coverImage} alt={article.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
-          <Link to={`/articles/${article.slug}`} className="flex items-center gap-1 text-[calc(12px+3pt)] font-semibold text-blue-600 hover:text-blue-800 transition-colors">
-            Read <ArrowRight className="w-3.5 h-3.5" />
-          </Link>
+        ) : (
+          <div className="h-44 bg-gradient-to-br from-blue-50 via-indigo-50 to-slate-100 flex items-center justify-center">
+            <BookOpen className="w-10 h-10 text-blue-200" />
+          </div>
+        )}
+
+        <div className="p-6 flex flex-col flex-1">
+          {/* Category + reading time */}
+          <div className="flex items-center justify-between mb-3">
+            {article.category && <CategoryBadge cat={article.category} />}
+            <span className="flex items-center gap-1 text-[calc(11px+3pt)] text-gray-400">
+              <Clock className="w-3 h-3" /> {article.readingTime}
+            </span>
+          </div>
+
+          {/* Title */}
+          <h2 className="text-[calc(15px+3pt)] font-bold text-gray-900 leading-snug mb-2 group-hover:text-blue-700 transition-colors line-clamp-2">
+            {article.title}
+          </h2>
+
+          {/* Excerpt */}
+          <p className="text-sm text-gray-500 leading-relaxed line-clamp-2 flex-1 mb-4">
+            {article.excerpt}
+          </p>
+
+          {/* Footer */}
+          <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+            <div className="flex items-center gap-3 text-[calc(11px+3pt)] text-gray-400">
+              <span className="flex items-center gap-1"><User className="w-3 h-3" /> {article.author}</span>
+              <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {new Date(article.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
+            </div>
+            <span className="flex items-center gap-1 text-[calc(12px+3pt)] font-semibold text-blue-600 group-hover:text-blue-800 transition-colors">
+              Read <ArrowRight className="w-3.5 h-3.5" />
+            </span>
+          </div>
         </div>
-      </div>
-    </motion.article>
+      </motion.article>
+    </Link>
   );
-}
+};
 
 export default function ArticlesPage() {
   const { content } = useContent();
@@ -204,7 +206,7 @@ export default function ArticlesPage() {
             {featured && !search && !activeCat && (
               <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
                 className="mb-10 group">
-                <Link to={`/articles/${featured.slug}`} className="card-hover-warm block bg-white/90 backdrop-blur-sm border border-gray-200/60 rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-gray-200/60 transition-all duration-300">
+                <Link to={`/articles/${featured.slug}`} className="block bg-white/90 backdrop-blur-sm border border-gray-200/60 rounded-2xl overflow-hidden hover:border-gray-300 hover:shadow-xl hover:shadow-gray-200/60 transition-all duration-300">
                   <div className="grid grid-cols-1 lg:grid-cols-2">
                     <div className={`h-64 lg:h-auto min-h-[280px] ${featured.coverImage ? '' : 'bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-700'} overflow-hidden`}>
                       {featured.coverImage
@@ -224,7 +226,9 @@ export default function ArticlesPage() {
                           <span className="flex items-center gap-1"><User className="w-3.5 h-3.5" /> {featured.author}</span>
                           <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> {featured.readingTime}</span>
                         </div>
-                        <span className="flex items-center gap-1.5 text-sm font-semibold text-blue-600">Read article <ArrowRight className="w-4 h-4" /></span>
+                        <span className="flex items-center gap-1.5 text-sm font-semibold text-blue-600 group-hover:text-blue-800 transition-colors">
+                          Read article <ArrowRight className="w-4 h-4" />
+                        </span>
                       </div>
                     </div>
                   </div>
