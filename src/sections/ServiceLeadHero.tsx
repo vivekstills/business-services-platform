@@ -225,17 +225,17 @@ export default function ServiceLeadHero({ service }: Props) {
   };
 
   const inputCls = (key: string) =>
-    `w-full h-9 rounded-lg bg-white border px-2.5 pl-8 text-xs sm:text-[13px] text-gray-800 placeholder-gray-400 focus:outline-none transition-all shadow-sm ${
+    `w-full h-10 rounded-[10px] bg-white border border-gray-200 px-2.5 pl-9 text-[13px] text-gray-800 placeholder-gray-400/90 focus:outline-none transition-[box-shadow,border-color] ${
       errors[key]
         ? 'border-red-300 focus:border-red-400 focus:ring-2 focus:ring-red-100'
-        : 'border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100'
+        : 'focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20'
     }`;
 
   const selectCls = (key: string) =>
-    `w-full h-9 rounded-lg bg-white border pl-8 pr-3 text-xs sm:text-[13px] text-gray-700 focus:outline-none transition-all shadow-sm appearance-none cursor-pointer ${
+    `w-full h-10 rounded-[10px] bg-white border border-gray-200 pl-9 pr-3 text-[13px] text-gray-700 focus:outline-none transition-[box-shadow,border-color] appearance-none cursor-pointer ${
       errors[key]
         ? 'border-red-300 focus:border-red-400 focus:ring-2 focus:ring-red-100'
-        : 'border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100'
+        : 'focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20'
     }`;
 
   const scrollToEnquiry = () =>
@@ -265,8 +265,8 @@ export default function ServiceLeadHero({ service }: Props) {
             <span className="text-gray-600 font-medium">{service.name}</span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-6 sm:gap-8 lg:gap-10 items-start">
-            <div className="lg:max-w-[520px]">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_minmax(0,400px)] gap-8 sm:gap-9 lg:gap-10 items-start lg:items-start">
+            <div className="lg:max-w-[520px] min-w-0">
               <motion.h1
                 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
                 className="text-[22px] sm:text-3xl md:text-4xl lg:text-[38px] font-bold text-gray-900 tracking-tight leading-[1.2] mb-2"
@@ -324,18 +324,17 @@ export default function ServiceLeadHero({ service }: Props) {
               id="enquiry-form"
               initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.08 }}
-              className="quick-enquiry-form w-full max-w-[min(100%,360px)] mx-auto lg:mx-0 lg:max-w-[320px] lg:ml-auto bg-white/95 backdrop-blur-xl border border-gray-200/70 rounded-xl p-3 sm:p-4 shadow-md sm:shadow-lg lg:shadow-[0_8px_24px_rgba(0,0,0,0.07)]"
+              className="quick-enquiry-form w-full max-w-[min(100%,400px)] mx-auto max-lg:mt-10 lg:mx-0 lg:ml-auto bg-white/95 backdrop-blur-xl border border-gray-200 rounded-2xl px-4 py-4 sm:px-5 sm:py-5 shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
             >
-              <p className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-0.5">Quick Enquiry</p>
-              <h2 className="text-base sm:text-lg font-bold text-gray-900 mb-2.5 sm:mb-3 leading-snug">{service.name}</h2>
-              <form id="service-enquiry-form" onSubmit={handleSubmit} className="space-y-1.5 sm:space-y-2">
+              <p className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4 leading-snug tracking-tight">Quick Enquiry</p>
+              <form id="service-enquiry-form" onSubmit={handleSubmit} className="flex flex-col gap-3">
                   {/* Name */}
                   <div className="form-group">
-                    <label className="block text-[10px] sm:text-[11px] font-semibold text-gray-500 uppercase tracking-wider mb-0.5">
+                    <label className="block text-[10px] font-medium text-gray-400 uppercase tracking-wide mb-1">
                       Name
                     </label>
                     <div className="relative">
-                      <User className={`absolute left-2.5 top-1/2 -translate-y-1/2 w-3 h-3 ${errors.name ? 'text-red-400' : 'text-gray-300'}`} />
+                      <User className={`pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 w-[14px] h-[14px] opacity-40 ${errors.name ? 'text-red-400 opacity-100' : 'text-gray-500'}`} />
                       <input
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -344,16 +343,16 @@ export default function ServiceLeadHero({ service }: Props) {
                       />
                       {errors.name && <AlertCircle className="absolute right-2.5 top-1/2 -translate-y-1/2 w-3 h-3 text-red-400" />}
                     </div>
-                    {errors.name && <p className="text-[10px] sm:text-[11px] text-red-500 mt-0.5">{errors.name}</p>}
+                    {errors.name && <p className="text-[10px] text-red-500 mt-0.5">{errors.name}</p>}
                   </div>
 
                   {/* Email */}
                   <div className="form-group">
-                    <label className="block text-[10px] sm:text-[11px] font-semibold text-gray-500 uppercase tracking-wider mb-0.5">
+                    <label className="block text-[10px] font-medium text-gray-400 uppercase tracking-wide mb-1">
                       Email
                     </label>
                     <div className="relative">
-                      <Mail className={`absolute left-2.5 top-1/2 -translate-y-1/2 w-3 h-3 ${errors.email ? 'text-red-400' : 'text-gray-300'}`} />
+                      <Mail className={`pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 w-[14px] h-[14px] opacity-40 ${errors.email ? 'text-red-400 opacity-100' : 'text-gray-500'}`} />
                       <input
                         type="email"
                         value={formData.email}
@@ -362,16 +361,16 @@ export default function ServiceLeadHero({ service }: Props) {
                         placeholder="you@company.com"
                       />
                     </div>
-                    {errors.email && <p className="text-[10px] sm:text-[11px] text-red-500 mt-0.5">{errors.email}</p>}
+                    {errors.email && <p className="text-[10px] text-red-500 mt-0.5">{errors.email}</p>}
                   </div>
 
                   {/* Phone */}
                   <div className="form-group">
-                    <label className="block text-[10px] sm:text-[11px] font-semibold text-gray-500 uppercase tracking-wider mb-0.5">
+                    <label className="block text-[10px] font-medium text-gray-400 uppercase tracking-wide mb-1">
                       Phone Number
                     </label>
                     <div className="relative">
-                      <Phone className={`absolute left-2.5 top-1/2 -translate-y-1/2 w-3 h-3 ${errors.phone ? 'text-red-400' : 'text-gray-300'}`} />
+                      <Phone className={`pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 w-[14px] h-[14px] opacity-40 ${errors.phone ? 'text-red-400 opacity-100' : 'text-gray-500'}`} />
                       <input
                         type="tel"
                         value={formData.phone}
@@ -380,16 +379,16 @@ export default function ServiceLeadHero({ service }: Props) {
                         placeholder="Your phone number"
                       />
                     </div>
-                    {errors.phone && <p className="text-[10px] sm:text-[11px] text-red-500 mt-0.5">{errors.phone}</p>}
+                    {errors.phone && <p className="text-[10px] text-red-500 mt-0.5">{errors.phone}</p>}
                   </div>
 
                   {/* State */}
                   <div className="form-group">
-                    <label className="block text-[10px] sm:text-[11px] font-semibold text-gray-500 uppercase tracking-wider mb-0.5">
+                    <label className="block text-[10px] font-medium text-gray-400 uppercase tracking-wide mb-1">
                       State / UT
                     </label>
                     <div className="relative">
-                      <MapPin className={`absolute left-2.5 top-1/2 -translate-y-1/2 w-3 h-3 z-10 pointer-events-none ${errors.state ? 'text-red-400' : 'text-gray-300'}`} />
+                      <MapPin className={`absolute left-3 top-1/2 -translate-y-1/2 w-[14px] h-[14px] z-10 pointer-events-none opacity-40 ${errors.state ? 'text-red-400 opacity-100' : 'text-gray-500'}`} />
                       <select
                         value={formData.state}
                         onChange={(e) => setFormData({ ...formData, state: e.target.value as IndianState | '' })}
@@ -402,7 +401,7 @@ export default function ServiceLeadHero({ service }: Props) {
                       </select>
                       {errors.state && <AlertCircle className="absolute right-2.5 top-1/2 -translate-y-1/2 w-3 h-3 text-red-400 pointer-events-none" />}
                     </div>
-                    {errors.state && <p className="text-[10px] sm:text-[11px] text-red-500 mt-0.5">{errors.state}</p>}
+                    {errors.state && <p className="text-[10px] text-red-500 mt-0.5">{errors.state}</p>}
 
                     {/* Contextual state hint */}
                     <AnimatePresence>
@@ -414,9 +413,9 @@ export default function ServiceLeadHero({ service }: Props) {
                           transition={{ duration: 0.2 }}
                           className="overflow-hidden"
                         >
-                          <div className="mt-1.5 flex items-start gap-1.5 bg-blue-50 border border-blue-100 rounded-lg px-2.5 py-1.5">
-                            <Info className="w-3 h-3 text-blue-500 flex-shrink-0 mt-0.5" />
-                            <p className="text-[11px] sm:text-xs text-blue-700 leading-snug">{hint}</p>
+                          <div className="mt-2 flex items-start gap-1.5 bg-blue-50/90 border border-blue-100 rounded-[10px] px-2 py-1.5">
+                            <Info className="w-3 h-3 text-blue-500/80 flex-shrink-0 mt-0.5" />
+                            <p className="text-[10px] sm:text-[11px] text-blue-800/90 leading-snug">{hint}</p>
                           </div>
                         </motion.div>
                       )}
@@ -426,33 +425,32 @@ export default function ServiceLeadHero({ service }: Props) {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="form-submit-btn w-full h-9 rounded-lg bg-gradient-to-r from-blue-600 to-blue-600 text-white text-xs sm:text-[13px] font-semibold flex items-center justify-center gap-1.5 shadow-md shadow-blue-200/80 hover:shadow-lg hover:shadow-blue-300/90 hover:-translate-y-0.5 transition-all disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0 mt-0.5"
+                    className="form-submit-btn w-full h-10 rounded-xl bg-blue-600 text-white text-[13px] font-semibold flex items-center justify-center gap-1.5 shadow-sm shadow-blue-900/5 hover:bg-blue-500 hover:brightness-[1.03] active:brightness-[0.98] transition-all disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:brightness-100 mt-0.5"
                   >
                     {isSubmitting ? (
                       <><svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" /></svg> Submitting…</>
                     ) : isSubmitted ? (
-                      <><CheckCircle2 className="w-4 h-4" /> Submitted — we'll be in touch!</>
+                      <><CheckCircle2 className="w-4 h-4" /> Submitted</>
                     ) : 'Continue'}
                   </button>
 
                   {submitError && (
-                    <div className="flex items-start gap-1.5 bg-red-50 border border-red-200 rounded-lg p-2">
-                      <AlertCircle className="w-3.5 h-3.5 text-red-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-[11px] sm:text-xs text-red-600 leading-snug">{submitError}</span>
+                    <div className="flex items-start gap-1.5 bg-red-50 border border-red-100 rounded-[10px] px-2 py-1.5">
+                      <AlertCircle className="w-3 h-3 text-red-500 flex-shrink-0 mt-0.5" />
+                      <span className="text-[10px] sm:text-[11px] text-red-600/95 leading-snug">{submitError}</span>
                     </div>
                   )}
                   {isSubmitted && (
-                    <div className="flex items-start gap-1.5 bg-emerald-50 border border-emerald-200 rounded-lg p-2">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-[11px] sm:text-xs text-emerald-700 leading-snug">
-                        Confirmation sent to your email & phone. Our team will contact you shortly.
+                    <div className="flex items-start gap-1.5 bg-emerald-50/80 border border-emerald-100 rounded-[10px] px-2 py-1.5">
+                      <CheckCircle2 className="w-3 h-3 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span className="text-[10px] sm:text-[11px] text-emerald-800/90 leading-snug">
+                        We will contact you shortly.
                       </span>
                     </div>
                   )}
 
-                  <p className="text-[10px] sm:text-[11px] text-gray-400 leading-relaxed pt-0.5">
-                    By continuing you agree to be contacted by our team regarding{' '}
-                    <span className="text-gray-600">{service.name}</span>.
+                  <p className="text-[9px] sm:text-[10px] text-gray-400/90 leading-snug pt-0.5">
+                    By continuing you agree to be contacted about <span className="text-gray-500">{service.name}</span>.
                   </p>
               </form>
             </motion.div>
