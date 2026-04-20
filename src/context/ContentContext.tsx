@@ -233,6 +233,31 @@ type ContentContextValue = {
   refetch: () => void;
 };
 
+/**
+ * deepMerge replaces arrays wholesale, which means an older saved
+ * `content.services` array from /api/content (or the static snapshot)
+ * can hide code-defined services that were added later — making those
+ * service pages redirect to /services.
+ *
+ * Union any code-defined service whose id isn't present in the merged
+ * result, preserving admin-edited versions when they exist. Same pattern
+ * applies to categories so new categories shipping in code also show up.
+ */
+function unionCodeDefinedServices(merged: Content): Content {
+  const mergedSvcIds = new Set((merged.services ?? []).map((s) => s.id));
+  const extraSvcs = defaultContent.services.filter((s) => !mergedSvcIds.has(s.id));
+
+  const mergedCatIds = new Set((merged.categories ?? []).map((c) => c.id));
+  const extraCats = defaultContent.categories.filter((c) => !mergedCatIds.has(c.id));
+
+  if (!extraSvcs.length && !extraCats.length) return merged;
+  return {
+    ...merged,
+    services: extraSvcs.length ? [...(merged.services ?? []), ...extraSvcs] : merged.services,
+    categories: extraCats.length ? [...(merged.categories ?? []), ...extraCats] : merged.categories,
+  };
+}
+
 const ContentContext = createContext<ContentContextValue | null>(null);
 
 export function ContentProvider({ children }: { children: React.ReactNode }) {
@@ -250,7 +275,7 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
         if (apiRes.ok) {
           const apiData = await apiRes.json();
           if (apiData && typeof apiData === 'object' && Object.keys(apiData).length > 0) {
-            setContent(deepMerge(defaultContent, apiData) as Content);
+            setContent(unionCodeDefinedServices(deepMerge(defaultContent, apiData) as Content));
             return;
           }
         }
@@ -264,7 +289,7 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
       if (staticRes.ok) {
         const staticData = await staticRes.json();
         if (staticData && typeof staticData === 'object' && Object.keys(staticData).length > 0) {
-          setContent(deepMerge(defaultContent, staticData) as Content);
+          setContent(unionCodeDefinedServices(deepMerge(defaultContent, staticData) as Content));
           return;
         }
       }
