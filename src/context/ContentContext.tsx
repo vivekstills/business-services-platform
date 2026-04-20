@@ -239,18 +239,38 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchContent = () => {
+  const fetchContent = async () => {
     setLoading(true);
     setError(null);
-    fetch('/api/content')
-      .then((r) => (r.ok ? r.json() : Promise.reject(new Error('Failed to load content'))))
-      .then((data) => {
-        if (data && typeof data === 'object' && Object.keys(data).length > 0) {
-          setContent(deepMerge(defaultContent, data) as Content);
+    try {
+      // Primary source: API-backed content (used by admin panel saves)
+      const apiRes = await fetch('/api/content');
+      if (apiRes.ok) {
+        const apiData = await apiRes.json();
+        if (apiData && typeof apiData === 'object' && Object.keys(apiData).length > 0) {
+          setContent(deepMerge(defaultContent, apiData) as Content);
+          setLoading(false);
+          return;
         }
-      })
-      .catch((err) => setError(err?.message ?? 'Failed to load content'))
-      .finally(() => setLoading(false));
+      }
+
+      // Fallback source: static snapshot for environments without API connectivity.
+      const staticRes = await fetch('/content.json');
+      if (staticRes.ok) {
+        const staticData = await staticRes.json();
+        if (staticData && typeof staticData === 'object' && Object.keys(staticData).length > 0) {
+          setContent(deepMerge(defaultContent, staticData) as Content);
+          setLoading(false);
+          return;
+        }
+      }
+
+      setError('Content source is empty');
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to load content');
+    } finally {
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
