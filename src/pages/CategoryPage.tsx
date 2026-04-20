@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { getServiceDetailRoute } from '../data/servicesData';
 import { motion } from 'motion/react';
 import { useContent, getServicesByCategory } from '../context/ContentContext';
 import { ArrowRight, ChevronRight } from 'lucide-react';
@@ -98,7 +99,7 @@ export default function CategoryPage() {
                 transition={{ delay: i * 0.04 }}
               >
                 <Link
-                  to={`/service/${s.id}`}
+                  to={getServiceDetailRoute(undefined, s.id)}
                   className="card-hover-warm group flex flex-col h-full min-w-0 p-2.5 sm:p-6 rounded-[10px] sm:rounded-2xl border border-gray-200/60 bg-white/90 backdrop-blur-sm shadow-sm hover:shadow-md sm:hover:shadow-xl sm:hover:shadow-blue-100/40 transition-all duration-300 overflow-hidden text-center"
                 >
                   <div className="flex-1">

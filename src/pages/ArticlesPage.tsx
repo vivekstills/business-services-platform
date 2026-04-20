@@ -82,13 +82,7 @@ const ArticleCard: React.FC<{ article: Article; index: number }> = ({ article, i
 
 export default function ArticlesPage() {
   const { content } = useContent();
-  const allArticles: Article[] = useMemo(
-    () =>
-      [...(content.articles ?? [])]
-        .filter((a) => a.published)
-        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()),
-    [content.articles]
-  );
+  const allArticles: Article[] = (content.articles ?? []).filter((a) => a.published);
   const categories: string[] = content.articleCategories ?? [];
 
   const [search, setSearch] = useState('');

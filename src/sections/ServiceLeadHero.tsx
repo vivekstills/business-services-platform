@@ -225,18 +225,21 @@ export default function ServiceLeadHero({ service }: Props) {
   };
 
   const inputCls = (key: string) =>
-    `w-full h-[42px] sm:h-[44px] rounded-lg sm:rounded-xl bg-white border px-3 pl-9 text-sm sm:text-[calc(13.5px+3pt)] text-gray-800 placeholder-gray-300 focus:outline-none transition-all shadow-sm ${
+    `w-full h-9 rounded-lg bg-white border px-2.5 pl-8 text-xs sm:text-[13px] text-gray-800 placeholder-gray-400 focus:outline-none transition-all shadow-sm ${
       errors[key]
         ? 'border-red-300 focus:border-red-400 focus:ring-2 focus:ring-red-100'
         : 'border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100'
     }`;
 
   const selectCls = (key: string) =>
-    `w-full h-[42px] sm:h-[44px] rounded-lg sm:rounded-xl bg-white border pl-9 pr-4 text-sm sm:text-[calc(13.5px+3pt)] text-gray-700 focus:outline-none transition-all shadow-sm appearance-none cursor-pointer ${
+    `w-full h-9 rounded-lg bg-white border pl-8 pr-3 text-xs sm:text-[13px] text-gray-700 focus:outline-none transition-all shadow-sm appearance-none cursor-pointer ${
       errors[key]
         ? 'border-red-300 focus:border-red-400 focus:ring-2 focus:ring-red-100'
         : 'border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100'
     }`;
+
+  const scrollToEnquiry = () =>
+    document.getElementById('enquiry-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
   return (
     <div className="min-h-screen bg-transparent pt-16 noise-overlay">
@@ -247,7 +250,7 @@ export default function ServiceLeadHero({ service }: Props) {
           <div className="absolute inset-0 dot-grid" />
         </div>
 
-        <div className="relative max-w-[1200px] mx-auto px-3 sm:px-6 lg:px-8 py-5 sm:py-10 lg:pt-[60px] lg:pb-[40px]">
+        <div className="relative max-w-[1200px] mx-auto px-3 sm:px-6 lg:px-8 py-3 sm:py-6 lg:pt-8 lg:pb-6">
           <div className="flex items-center gap-2 text-xs text-gray-400 mb-6 flex-wrap">
             <Link to="/" className="hover:text-gray-600 transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
@@ -262,35 +265,58 @@ export default function ServiceLeadHero({ service }: Props) {
             <span className="text-gray-600 font-medium">{service.name}</span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-5 sm:gap-8 lg:gap-10 items-start lg:items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-6 sm:gap-8 lg:gap-10 items-start">
             <div className="lg:max-w-[520px]">
               <motion.h1
                 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
-                className="text-[22px] sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-gray-900 tracking-tight leading-[1.2] mb-3"
+                className="text-[22px] sm:text-3xl md:text-4xl lg:text-[38px] font-bold text-gray-900 tracking-tight leading-[1.2] mb-2"
               >
                 {service.name}
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.05 }}
-                className="text-gray-600 text-[13px] sm:text-[calc(15px+3pt)] leading-relaxed mb-5 max-w-2xl line-clamp-3 sm:line-clamp-none"
+                className="text-gray-600 text-[13px] sm:text-[calc(14px+3pt)] leading-relaxed mb-5 sm:mb-6 max-w-2xl line-clamp-3 sm:line-clamp-none"
               >
                 {service.shortDescription || 'Get complete expert support from documentation to filing and follow-ups, all handled by specialists.'}
               </motion.p>
-              <div className="hidden sm:flex flex-col sm:flex-row flex-wrap gap-3 mt-4">
+
+              <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2.5 mb-8 sm:mb-10">
                 <button
                   type="button"
-                  onClick={() => document.getElementById('enquiry-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
-                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-5 py-3 rounded-xl bg-blue-600 text-white font-semibold shadow-md hover:shadow-lg hover:bg-blue-700 transition-all duration-200 min-h-[44px]"
+                  onClick={scrollToEnquiry}
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 text-white text-[13px] font-semibold shadow-md hover:shadow-lg hover:bg-blue-700 transition-all duration-200 min-h-[40px]"
                 >
                   Get Started
                 </button>
                 <a
                   href="tel:+919876543210"
-                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-5 py-3 rounded-xl border border-gray-200 text-gray-700 font-semibold hover:bg-gray-50 transition-all duration-200 min-h-[44px]"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-gray-200 text-gray-700 text-[13px] font-semibold hover:bg-gray-50 transition-all duration-200 min-h-[40px]"
                 >
                   Talk to Expert
                 </a>
+              </div>
+
+              <div>
+                <h2 className="text-[15px] sm:text-[calc(18px+3pt)] font-semibold text-gray-900 mb-3 sm:mb-3.5">How it works</h2>
+                <ol className="space-y-2 sm:space-y-2.5">
+                  {steps.map((step, idx) => (
+                    <li key={`${service.id}-hero-step-${idx}`} className="flex items-stretch gap-2.5">
+                      <div className="relative flex w-5 flex-shrink-0 flex-col items-center self-stretch">
+                        <span className="relative z-[1] mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-blue-50 text-blue-700 text-[11px] font-bold ring-2 ring-white shadow-sm">
+                          {idx + 1}
+                        </span>
+                        {idx < steps.length - 1 && (
+                          <div
+                            aria-hidden
+                            className="absolute left-1/2 top-[22px] -bottom-2.5 w-px -translate-x-1/2 bg-blue-200 sm:bg-blue-200/95"
+                          />
+                        )}
+                      </div>
+                      <span className="text-[13px] sm:text-[calc(13px+3pt)] text-gray-700 leading-relaxed pt-0.5">{step}</span>
+                    </li>
+                  ))}
+                </ol>
               </div>
             </div>
 
@@ -298,36 +324,36 @@ export default function ServiceLeadHero({ service }: Props) {
               id="enquiry-form"
               initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.08 }}
-              className="quick-enquiry-form card-hover-warm bg-white/95 backdrop-blur-xl border border-gray-200/70 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-5 shadow-sm sm:shadow-xl lg:shadow-[0_10px_30px_rgba(0,0,0,0.08)]"
+              className="quick-enquiry-form w-full max-w-[min(100%,360px)] mx-auto lg:mx-0 lg:max-w-[320px] lg:ml-auto bg-white/95 backdrop-blur-xl border border-gray-200/70 rounded-xl p-3 sm:p-4 shadow-md sm:shadow-lg lg:shadow-[0_8px_24px_rgba(0,0,0,0.07)]"
             >
-              <p className="text-[calc(11px+3pt)] font-bold uppercase tracking-widest text-gray-400 mb-1">Quick Enquiry</p>
-              <h2 className="text-xl font-bold text-gray-900 mb-3 sm:mb-6">{service.name}</h2>
-              <form onSubmit={handleSubmit} className="space-y-2.5 sm:space-y-4">
+              <p className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-0.5">Quick Enquiry</p>
+              <h2 className="text-base sm:text-lg font-bold text-gray-900 mb-2.5 sm:mb-3 leading-snug">{service.name}</h2>
+              <form id="service-enquiry-form" onSubmit={handleSubmit} className="space-y-1.5 sm:space-y-2">
                   {/* Name */}
                   <div className="form-group">
-                    <label className="block text-[13px] sm:text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-1">
+                    <label className="block text-[10px] sm:text-[11px] font-semibold text-gray-500 uppercase tracking-wider mb-0.5">
                       Name
                     </label>
                     <div className="relative">
-                      <User className={`absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 ${errors.name ? 'text-red-400' : 'text-gray-300'}`} />
+                      <User className={`absolute left-2.5 top-1/2 -translate-y-1/2 w-3 h-3 ${errors.name ? 'text-red-400' : 'text-gray-300'}`} />
                       <input
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         className={inputCls('name')}
                         placeholder="Your full name"
                       />
-                      {errors.name && <AlertCircle className="absolute right-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-red-400" />}
+                      {errors.name && <AlertCircle className="absolute right-2.5 top-1/2 -translate-y-1/2 w-3 h-3 text-red-400" />}
                     </div>
-                    {errors.name && <p className="text-[calc(11px+3pt)] text-red-500 mt-1">{errors.name}</p>}
+                    {errors.name && <p className="text-[10px] sm:text-[11px] text-red-500 mt-0.5">{errors.name}</p>}
                   </div>
 
                   {/* Email */}
                   <div className="form-group">
-                    <label className="block text-[13px] sm:text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-1">
+                    <label className="block text-[10px] sm:text-[11px] font-semibold text-gray-500 uppercase tracking-wider mb-0.5">
                       Email
                     </label>
                     <div className="relative">
-                      <Mail className={`absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 ${errors.email ? 'text-red-400' : 'text-gray-300'}`} />
+                      <Mail className={`absolute left-2.5 top-1/2 -translate-y-1/2 w-3 h-3 ${errors.email ? 'text-red-400' : 'text-gray-300'}`} />
                       <input
                         type="email"
                         value={formData.email}
@@ -336,16 +362,16 @@ export default function ServiceLeadHero({ service }: Props) {
                         placeholder="you@company.com"
                       />
                     </div>
-                    {errors.email && <p className="text-[calc(11px+3pt)] text-red-500 mt-1">{errors.email}</p>}
+                    {errors.email && <p className="text-[10px] sm:text-[11px] text-red-500 mt-0.5">{errors.email}</p>}
                   </div>
 
                   {/* Phone */}
                   <div className="form-group">
-                    <label className="block text-[13px] sm:text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-1">
+                    <label className="block text-[10px] sm:text-[11px] font-semibold text-gray-500 uppercase tracking-wider mb-0.5">
                       Phone Number
                     </label>
                     <div className="relative">
-                      <Phone className={`absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 ${errors.phone ? 'text-red-400' : 'text-gray-300'}`} />
+                      <Phone className={`absolute left-2.5 top-1/2 -translate-y-1/2 w-3 h-3 ${errors.phone ? 'text-red-400' : 'text-gray-300'}`} />
                       <input
                         type="tel"
                         value={formData.phone}
@@ -354,16 +380,16 @@ export default function ServiceLeadHero({ service }: Props) {
                         placeholder="Your phone number"
                       />
                     </div>
-                    {errors.phone && <p className="text-[calc(11px+3pt)] text-red-500 mt-1">{errors.phone}</p>}
+                    {errors.phone && <p className="text-[10px] sm:text-[11px] text-red-500 mt-0.5">{errors.phone}</p>}
                   </div>
 
                   {/* State */}
                   <div className="form-group">
-                    <label className="block text-[13px] sm:text-[calc(12px+3pt)] font-semibold text-gray-500 uppercase tracking-wider mb-1">
+                    <label className="block text-[10px] sm:text-[11px] font-semibold text-gray-500 uppercase tracking-wider mb-0.5">
                       State / UT
                     </label>
                     <div className="relative">
-                      <MapPin className={`absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 z-10 pointer-events-none ${errors.state ? 'text-red-400' : 'text-gray-300'}`} />
+                      <MapPin className={`absolute left-2.5 top-1/2 -translate-y-1/2 w-3 h-3 z-10 pointer-events-none ${errors.state ? 'text-red-400' : 'text-gray-300'}`} />
                       <select
                         value={formData.state}
                         onChange={(e) => setFormData({ ...formData, state: e.target.value as IndianState | '' })}
@@ -374,9 +400,9 @@ export default function ServiceLeadHero({ service }: Props) {
                           <option key={s} value={s}>{s}</option>
                         ))}
                       </select>
-                      {errors.state && <AlertCircle className="absolute right-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-red-400 pointer-events-none" />}
+                      {errors.state && <AlertCircle className="absolute right-2.5 top-1/2 -translate-y-1/2 w-3 h-3 text-red-400 pointer-events-none" />}
                     </div>
-                    {errors.state && <p className="text-[calc(11px+3pt)] text-red-500 mt-1">{errors.state}</p>}
+                    {errors.state && <p className="text-[10px] sm:text-[11px] text-red-500 mt-0.5">{errors.state}</p>}
 
                     {/* Contextual state hint */}
                     <AnimatePresence>
@@ -388,9 +414,9 @@ export default function ServiceLeadHero({ service }: Props) {
                           transition={{ duration: 0.2 }}
                           className="overflow-hidden"
                         >
-                          <div className="mt-2 flex items-start gap-2 bg-blue-50 border border-blue-100 rounded-lg px-3 py-2">
-                            <Info className="w-3.5 h-3.5 text-blue-500 flex-shrink-0 mt-0.5" />
-                            <p className="text-[calc(11.5px+3pt)] text-blue-700 leading-snug">{hint}</p>
+                          <div className="mt-1.5 flex items-start gap-1.5 bg-blue-50 border border-blue-100 rounded-lg px-2.5 py-1.5">
+                            <Info className="w-3 h-3 text-blue-500 flex-shrink-0 mt-0.5" />
+                            <p className="text-[11px] sm:text-xs text-blue-700 leading-snug">{hint}</p>
                           </div>
                         </motion.div>
                       )}
@@ -400,7 +426,7 @@ export default function ServiceLeadHero({ service }: Props) {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="form-submit-btn w-full h-[42px] sm:h-[46px] rounded-[10px] sm:rounded-xl bg-gradient-to-r from-blue-600 to-blue-600 text-white text-sm sm:text-[calc(14px+3pt)] font-semibold flex items-center justify-center gap-2 shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-0.5 transition-all disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                    className="form-submit-btn w-full h-9 rounded-lg bg-gradient-to-r from-blue-600 to-blue-600 text-white text-xs sm:text-[13px] font-semibold flex items-center justify-center gap-1.5 shadow-md shadow-blue-200/80 hover:shadow-lg hover:shadow-blue-300/90 hover:-translate-y-0.5 transition-all disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0 mt-0.5"
                   >
                     {isSubmitting ? (
                       <><svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" /></svg> Submitting…</>
@@ -410,42 +436,26 @@ export default function ServiceLeadHero({ service }: Props) {
                   </button>
 
                   {submitError && (
-                    <div className="flex items-start gap-2 bg-red-50 border border-red-200 rounded-xl p-3">
-                      <AlertCircle className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-[calc(12px+3pt)] text-red-600">{submitError}</span>
+                    <div className="flex items-start gap-1.5 bg-red-50 border border-red-200 rounded-lg p-2">
+                      <AlertCircle className="w-3.5 h-3.5 text-red-500 flex-shrink-0 mt-0.5" />
+                      <span className="text-[11px] sm:text-xs text-red-600 leading-snug">{submitError}</span>
                     </div>
                   )}
                   {isSubmitted && (
-                    <div className="flex items-start gap-2 bg-emerald-50 border border-emerald-200 rounded-xl p-3">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-[calc(12px+3pt)] text-emerald-700">
+                    <div className="flex items-start gap-1.5 bg-emerald-50 border border-emerald-200 rounded-lg p-2">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span className="text-[11px] sm:text-xs text-emerald-700 leading-snug">
                         Confirmation sent to your email & phone. Our team will contact you shortly.
                       </span>
                     </div>
                   )}
 
-                  <p className="text-[calc(11px+3pt)] text-gray-400 leading-relaxed">
+                  <p className="text-[10px] sm:text-[11px] text-gray-400 leading-relaxed pt-0.5">
                     By continuing you agree to be contacted by our team regarding{' '}
                     <span className="text-gray-600">{service.name}</span>.
                   </p>
               </form>
             </motion.div>
-
-            <div className="flex sm:hidden flex-col gap-2.5 mt-2">
-              <button
-                type="button"
-                onClick={() => document.getElementById('enquiry-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
-                className="inline-flex w-full items-center justify-center gap-2 px-5 py-3 rounded-xl bg-blue-600 text-white font-semibold shadow-md hover:shadow-lg hover:bg-blue-700 transition-all duration-200 min-h-[44px]"
-              >
-                Get Started
-              </button>
-              <a
-                href="tel:+919876543210"
-                className="secondary-cta inline-flex w-full items-center justify-center gap-2 px-5 py-3 rounded-xl border border-gray-200 text-gray-700 font-semibold hover:bg-gray-50 transition-all duration-200 min-h-[44px]"
-              >
-                Talk to Expert
-              </a>
-            </div>
           </div>
         </div>
       </section>
@@ -617,7 +627,8 @@ export default function ServiceLeadHero({ service }: Props) {
                             </button>
                           )}
                           <button
-                            onClick={() => document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' })}
+                            type="button"
+                            onClick={scrollToEnquiry}
                             className={`w-full h-11 sm:h-12 mt-3 flex items-center justify-center gap-2 rounded-xl px-4 sm:px-5 py-2.5 sm:py-3 text-[13px] sm:text-[calc(13.5px+3pt)] font-semibold transition-all ${
                               isGradient
                                 ? 'border border-white/30 text-white/80 hover:bg-white/10'
@@ -705,7 +716,8 @@ export default function ServiceLeadHero({ service }: Props) {
                                 </button>
                               )}
                               <button
-                                onClick={() => document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' })}
+                                type="button"
+                                onClick={scrollToEnquiry}
                                 className={`w-full flex items-center justify-center gap-1.5 rounded-xl px-4 py-2.5 text-[calc(13px+3pt)] font-semibold transition-all ${
                                   isGradient
                                     ? 'border border-white/30 text-white/80 hover:bg-white/10'

@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useState, useMemo } from 'react';
 import type { Content } from '../types/content';
 import { SERVICES, SERVICE_CATEGORIES } from '../data/services';
+import { getServiceDetailRoute } from '../data/servicesData';
 import FAQS from '../data/faqs';
 import { CONTACT_EMAIL, CONTACT_PHONE } from '../data/constants';
 import type { Service } from '../data/services';
@@ -13,11 +14,11 @@ const defaultContent: Content = {
     subheadline:
       "GST Registration, Company Formation, Trademark, Tax Filing and 120+ more services — handled end‑to‑end by our expert team.",
     popular: [
-      { label: 'GST Registration', to: '/service/gst-registration' },
-      { label: 'Private Limited Co.', to: '/service/private-limited-company' },
-      { label: 'Trademark', to: '/service/trademark-registration' },
-      { label: 'ITR Filing', to: '/service/itr-1-filing' },
-      { label: 'Import Export Code', to: '/service/import-export-code' },
+      { label: 'GST Registration', to: getServiceDetailRoute(undefined, 'gst-registration') },
+      { label: 'Private Limited Co.', to: getServiceDetailRoute(undefined, 'private-limited-company') },
+      { label: 'Trademark', to: getServiceDetailRoute(undefined, 'trademark-registration') },
+      { label: 'ITR Filing', to: getServiceDetailRoute(undefined, 'itr-1-filing') },
+      { label: 'Import Export Code', to: getServiceDetailRoute(undefined, 'import-export-code') },
     ],
     stats: [
       { value: '50,000+', label: 'Businesses served' },
@@ -49,40 +50,40 @@ const defaultContent: Content = {
       {
         heading: 'Form New Business',
         items: [
-          { label: 'Private Limited Company', to: '/service/private-limited-company' },
-          { label: 'LLP', to: '/service/llp' },
-          { label: 'One Person Company', to: '/service/one-person-company' },
-          { label: 'Partnership', to: '/service/partnership' },
-          { label: 'Nidhi Company', to: '/service/nidhi-company' },
+          { label: 'Private Limited Company', to: getServiceDetailRoute(undefined, 'private-limited-company') },
+          { label: 'LLP', to: getServiceDetailRoute(undefined, 'llp') },
+          { label: 'One Person Company', to: getServiceDetailRoute(undefined, 'one-person-company') },
+          { label: 'Partnership', to: getServiceDetailRoute(undefined, 'partnership') },
+          { label: 'Nidhi Company', to: getServiceDetailRoute(undefined, 'nidhi-company') },
         ],
       },
       {
         heading: 'Registrations',
         items: [
-          { label: 'GST Registration', to: '/service/gst-registration' },
-          { label: 'FSSAI Registration', to: '/service/fssai-registration' },
-          { label: 'Trade License', to: '/service/trade-license' },
-          { label: 'Import Export Code', to: '/service/import-export-code' },
-          { label: 'Digital Signature', to: '/service/digital-signature' },
+          { label: 'GST Registration', to: getServiceDetailRoute(undefined, 'gst-registration') },
+          { label: 'FSSAI Registration', to: getServiceDetailRoute(undefined, 'fssai-registration') },
+          { label: 'Trade License', to: getServiceDetailRoute(undefined, 'trade-license') },
+          { label: 'Import Export Code', to: getServiceDetailRoute(undefined, 'import-export-code') },
+          { label: 'Digital Signature', to: getServiceDetailRoute(undefined, 'digital-signature') },
         ],
       },
       {
         heading: 'GST & Tax',
         items: [
-          { label: 'GST Return Filing', to: '/service/gst-return-filing' },
-          { label: 'GST Refund', to: '/service/gst-refund' },
-          { label: 'ITR-1 Filing', to: '/service/itr-1-filing' },
-          { label: 'ITR-3 Filing', to: '/service/itr-3-filing' },
-          { label: 'TDS Return Filing', to: '/service/tds-return-filing' },
+          { label: 'GST Return Filing', to: getServiceDetailRoute(undefined, 'gst-return-filing') },
+          { label: 'GST Refund', to: getServiceDetailRoute(undefined, 'gst-refund') },
+          { label: 'ITR-1 Filing', to: getServiceDetailRoute(undefined, 'itr-1-filing') },
+          { label: 'ITR-3 Filing', to: getServiceDetailRoute(undefined, 'itr-3-filing') },
+          { label: 'TDS Return Filing', to: getServiceDetailRoute(undefined, 'tds-return-filing') },
         ],
       },
       {
         heading: 'Trademark & IP',
         items: [
-          { label: 'Trademark Registration', to: '/service/trademark-registration' },
-          { label: 'Trademark Renewal', to: '/service/trademark-renewal' },
-          { label: 'Copyright Registration', to: '/service/copyright-registration' },
-          { label: 'Patent Registration', to: '/service/patent-registration' },
+          { label: 'Trademark Registration', to: getServiceDetailRoute(undefined, 'trademark-registration') },
+          { label: 'Trademark Renewal', to: getServiceDetailRoute(undefined, 'trademark-renewal') },
+          { label: 'Copyright Registration', to: getServiceDetailRoute(undefined, 'copyright-registration') },
+          { label: 'Patent Registration', to: getServiceDetailRoute(undefined, 'patent-registration') },
         ],
       },
     ],
@@ -239,38 +240,18 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchContent = async () => {
+  const fetchContent = () => {
     setLoading(true);
     setError(null);
-    try {
-      // Primary source: API-backed content (used by admin panel saves)
-      const apiRes = await fetch('/api/content');
-      if (apiRes.ok) {
-        const apiData = await apiRes.json();
-        if (apiData && typeof apiData === 'object' && Object.keys(apiData).length > 0) {
-          setContent(deepMerge(defaultContent, apiData) as Content);
-          setLoading(false);
-          return;
+    fetch('/api/content')
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error('Failed to load content'))))
+      .then((data) => {
+        if (data && typeof data === 'object' && Object.keys(data).length > 0) {
+          setContent(deepMerge(defaultContent, data) as Content);
         }
-      }
-
-      // Fallback source: static snapshot for environments without API connectivity.
-      const staticRes = await fetch('/content.json');
-      if (staticRes.ok) {
-        const staticData = await staticRes.json();
-        if (staticData && typeof staticData === 'object' && Object.keys(staticData).length > 0) {
-          setContent(deepMerge(defaultContent, staticData) as Content);
-          setLoading(false);
-          return;
-        }
-      }
-
-      setError('Content source is empty');
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to load content');
-    } finally {
-      setLoading(false);
-    }
+      })
+      .catch((err) => setError(err?.message ?? 'Failed to load content'))
+      .finally(() => setLoading(false));
   };
 
   useEffect(() => {

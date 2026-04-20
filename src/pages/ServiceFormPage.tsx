@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
-import { getNavCategoryBySlug, getServiceBySlug } from '../data/servicesData';
+import { getServiceBySlug } from '../data/servicesData';
+import { getRouteMainCategorySlug } from '../data/serviceExcelRouting';
 
 export default function ServiceFormPage() {
   const { category, service } = useParams();
-  const navCategory = getNavCategoryBySlug(category);
   const data = getServiceBySlug(service);
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
@@ -18,8 +18,13 @@ export default function ServiceFormPage() {
     file: null as File | null,
   });
 
-  if (!navCategory || !data || data.categoryId !== navCategory.categoryId) {
-    return <Navigate to="/services/registration" replace />;
+  if (!data || !category) {
+    return <Navigate to="/services" replace />;
+  }
+
+  const expectedCategory = getRouteMainCategorySlug(data);
+  if (category !== expectedCategory) {
+    return <Navigate to={`/services/${expectedCategory}/${data.id}/form`} replace />;
   }
 
   const submit = async (e: React.FormEvent) => {

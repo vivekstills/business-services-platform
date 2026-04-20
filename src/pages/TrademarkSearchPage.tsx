@@ -92,7 +92,7 @@ export default function TrademarkSearchPage() {
         >
           <h3 className="font-semibold text-gray-900 mb-2">Ready to register your trademark?</h3>
           <p className="text-[calc(14px+3pt)] text-gray-500 mb-4">We handle the complete trademark registration process — from search to certificate.</p>
-          <Link to="/service/trademark-registration" className="inline-flex items-center gap-2 text-emerald-600 font-semibold hover:text-emerald-700">
+          <Link to="/services/trademark-ip/trademark-registration" className="inline-flex items-center gap-2 text-emerald-600 font-semibold hover:text-emerald-700">
             Trademark Registration <ChevronRight className="w-4 h-4" />
           </Link>
         </motion.div>

@@ -6,6 +6,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { SERVICES, SERVICE_CATEGORIES } from '../src/data/services';
+import { getRouteMainCategorySlug } from '../src/data/serviceExcelRouting';
 import type { Content } from '../src/types/content';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -50,7 +51,9 @@ function buildSitemap(): string {
   }
 
   for (const svc of SERVICES) {
-    addUrl(`/service/${svc.id}`, '0.7', 'weekly');
+    const main = getRouteMainCategorySlug(svc);
+    addUrl(`/services/${main}/${svc.id}`, '0.7', 'weekly');
+    addUrl(`/service/${svc.id}`, '0.5', 'weekly');
   }
 
   const contentPath = path.resolve(__dirname, '..', 'data', 'content.json');

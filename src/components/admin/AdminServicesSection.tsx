@@ -205,7 +205,8 @@ function ServiceEditorBody({
         <div>
           <p className="text-xs font-semibold text-gray-700 uppercase tracking-wide">Placement & URL</p>
           <p className="text-[calc(11px+3pt)] text-gray-400 mt-0.5">
-            Category controls mega-menu and category page. Slug is used in <code className="text-gray-600">/service/…</code>.
+            Category controls mega-menu and category page. Public URLs use{' '}
+            <code className="text-gray-600">/services/main-category/service-id</code>.
           </p>
         </div>
         <button

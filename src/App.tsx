@@ -20,7 +20,6 @@ import TrademarkSearchPage from './pages/TrademarkSearchPage';
 import PaymentPage from './pages/PaymentPage';
 import ServicesLandingPage from './pages/ServicesLandingPage';
 import ServicesCategoryPage from './pages/ServicesCategoryPage';
-import ServicesDetailPage from './pages/ServicesDetailPage';
 import ServiceFormPage from './pages/ServiceFormPage';
 import ArticlesPage from './pages/ArticlesPage';
 import ArticlePage from './pages/ArticlePage';
@@ -62,7 +61,7 @@ function AppContent() {
           <Route path="/payment"                element={<PaymentPage />} />
           <Route path="/services"               element={<ServicesLandingPage />} />
           <Route path="/services/:category"     element={<ServicesCategoryPage />} />
-          <Route path="/services/:category/:service" element={<ServicesDetailPage />} />
+          <Route path="/services/:mainCategory/:service" element={<ServicePage />} />
           <Route path="/services/:category/:service/form" element={<ServiceFormPage />} />
           <Route path="/articles"               element={<ArticlesPage />} />
           <Route path="/articles/:slug"         element={<ArticlePage />} />

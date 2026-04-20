@@ -1,4 +1,5 @@
 import { SERVICES, SERVICE_CATEGORIES, type Service } from './services';
+import { getRouteMainCategorySlug } from './serviceExcelRouting';
 
 export type ServicesNavCategory = {
   slug: string;
@@ -24,7 +25,7 @@ export const SERVICES_NAV_CATEGORIES: ServicesNavCategory[] = [
       'fssai-registration',
       'trade-license',
       'digital-signature',
-      'health-trade-licence',
+      'health-license',
     ],
   },
   {
@@ -64,9 +65,10 @@ export function getServiceBySlug(serviceSlug: string | undefined) {
   return serviceMap.get(serviceSlug) ?? null;
 }
 
-export function getServiceDetailRoute(categorySlug: string, serviceSlug: string) {
-  void categorySlug;
-  return `/service/${serviceSlug}`;
+export function getServiceDetailRoute(_categorySlug: string | undefined, serviceSlug: string) {
+  const svc = getServiceBySlug(serviceSlug);
+  if (!svc) return '/services';
+  return `/services/${getRouteMainCategorySlug(svc)}/${serviceSlug}`;
 }
 
 export function getCategoryTitleById(categoryId: string) {

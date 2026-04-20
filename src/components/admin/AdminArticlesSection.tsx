@@ -15,6 +15,21 @@ type Props = {
   saving: boolean;
 };
 
+const RECOMMENDED_ARTICLE_CATEGORIES: string[] = [
+  'GST & Returns',
+  'Income Tax',
+  'ITR Forms & Filing',
+  'TDS & TCS',
+  'Tax Deductions & Exemptions',
+  'Capital Gains',
+  'Advance Tax & Self Assessment',
+  'Tax Notices & Compliance',
+  'Business Compliance',
+  'Payroll & Salary Taxation',
+  'Accounting & Audit',
+  'Others / Miscellaneous',
+];
+
 // ─── Inline ContentEditor (mirrors AdminServicesSection version) ──────────────
 function ContentEditor({ value, onChange }: { value: string; onChange: (v: string) => void }) {
   const ref = useRef<HTMLTextAreaElement>(null);
@@ -183,7 +198,14 @@ export default function AdminArticlesSection({ data, categories, onSave, saving 
 
   useEffect(() => {
     setArticles(Array.isArray(data) ? data : []);
-    setCats(Array.isArray(categories) ? categories : []);
+    const articleDerived = (Array.isArray(data) ? data : [])
+      .map((a) => (a.category || '').trim())
+      .filter(Boolean);
+    const incoming = (Array.isArray(categories) ? categories : [])
+      .map((c) => (c || '').trim())
+      .filter(Boolean);
+    const normalized = Array.from(new Set([...RECOMMENDED_ARTICLE_CATEGORIES, ...incoming, ...articleDerived]));
+    setCats(normalized);
   }, [data, categories]);
 
   const filtered = [...articles]

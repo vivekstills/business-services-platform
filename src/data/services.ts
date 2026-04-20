@@ -1,3 +1,5 @@
+import { EXCEL_STUB_SERVICES } from './excelServiceStubs';
+
 export type ServicePackage = {
   name: string;
   price: string;
@@ -14,6 +16,8 @@ export type Service = {
   name: string;
   mainHead: string; // e.g. REGISTRATION, FORM NEW BUSINESS, RETURN FILING
   categoryId: string; // used for top navigation grouping
+  /** When set, forces `/services/{slug}/{serviceId}` main segment (Excel workbook menu). */
+  routeMainCategorySlug?: string;
   shortDescription?: string;
   content: string;
   packages: ServicePackage[];
@@ -91,6 +95,31 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     id: 'web-digital',
     title: 'Web & Digital',
     description: 'Website, app development, SEO and ongoing maintenance services.'
+  },
+  {
+    id: 'fema-compliance',
+    title: 'FEMA Compliance',
+    description: 'Foreign investment reporting, FLA returns, ODI and FC-GPR filings.'
+  },
+  {
+    id: 'food-business-compliance',
+    title: 'Food Business Compliance',
+    description: 'FSSAI registration, renewal, returns and modifications for food businesses.'
+  },
+  {
+    id: 'import-export-business',
+    title: 'Import & Export Business',
+    description: 'IEC, ICEGATE, RCMC and related cross-border trade registrations.'
+  },
+  {
+    id: 'roc-compliance',
+    title: 'ROC Compliance',
+    description: 'MCA forms, company secretarial filings and corporate actions.'
+  },
+  {
+    id: 'professional-tax-compliance',
+    title: 'Professional Tax Compliance',
+    description: 'PTRC/PTEC returns, payments and notice responses.'
   }
 ];
 
@@ -100,7 +129,7 @@ export const SERVICES: Service[] = [
     id: 'gst-registration',
     name: 'GST Registration',
     mainHead: 'REGISTRATION',
-    categoryId: 'registration',
+    categoryId: 'gst-services',
     shortDescription:
       'Mandatory and voluntary GST registration support with ongoing compliance options.',
     content:
@@ -291,7 +320,7 @@ export const SERVICES: Service[] = [
     id: 'fssai-registration',
     name: 'FSSAI Registration',
     mainHead: 'REGISTRATION',
-    categoryId: 'registration',
+    categoryId: 'food-business-compliance',
     shortDescription:
       'Food business registration and licensing (Registration, State and Central License).',
     content:
@@ -2800,7 +2829,8 @@ export const SERVICES: Service[] = [
           'Monthly/annual maintenance contracts sized to your traffic and update needs.'
       }
     ]
-  }
+  },
+  ...EXCEL_STUB_SERVICES,
 ];
 
 export function getServicesByCategory(categoryId: string): Service[] {
