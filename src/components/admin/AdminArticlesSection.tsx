@@ -186,11 +186,13 @@ export default function AdminArticlesSection({ data, categories, onSave, saving 
     setCats(Array.isArray(categories) ? categories : []);
   }, [data, categories]);
 
-  const filtered = articles.filter((a) => {
-    if (filterCat && a.category !== filterCat) return false;
-    if (search && !a.title.toLowerCase().includes(search.toLowerCase()) && !a.excerpt.toLowerCase().includes(search.toLowerCase())) return false;
-    return true;
-  });
+  const filtered = [...articles]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .filter((a) => {
+      if (filterCat && a.category !== filterCat) return false;
+      if (search && !a.title.toLowerCase().includes(search.toLowerCase()) && !a.excerpt.toLowerCase().includes(search.toLowerCase())) return false;
+      return true;
+    });
 
   const startEdit = (article: Article) => {
     setDraft({ ...article });

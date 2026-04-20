@@ -80,7 +80,13 @@ function ArticleCard({ article, index }: { article: Article; index: number }) {
 
 export default function ArticlesPage() {
   const { content } = useContent();
-  const allArticles: Article[] = (content.articles ?? []).filter((a) => a.published);
+  const allArticles: Article[] = useMemo(
+    () =>
+      [...(content.articles ?? [])]
+        .filter((a) => a.published)
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()),
+    [content.articles]
+  );
   const categories: string[] = content.articleCategories ?? [];
 
   const [search, setSearch] = useState('');
