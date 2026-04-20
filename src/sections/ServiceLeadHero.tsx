@@ -452,8 +452,7 @@ export default function ServiceLeadHero({ service }: Props) {
 
       <section className="max-w-[1200px] mx-auto px-3 sm:px-6 lg:px-8 py-5 sm:py-12 lg:mt-10">
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">About this service</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-10 lg:gap-10 items-start lg:items-center">
-          <div className="space-y-4 lg:max-w-[500px]">
+        <div className="space-y-4 max-w-none">
             {aboutParagraphs.slice(0, 1).map((paragraph, idx) => (
               <p key={idx} className="text-gray-600 text-[13px] sm:text-base leading-relaxed line-clamp-3 sm:line-clamp-none">{paragraph}</p>
             ))}
@@ -465,14 +464,6 @@ export default function ServiceLeadHero({ service }: Props) {
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="flex justify-center lg:justify-start">
-            <img
-              src="/assets/service-about-illustration.png"
-              alt="Service process illustration"
-              className="service-image w-[70%] max-w-[220px] sm:w-full sm:max-w-[520px] h-auto object-contain bg-transparent mt-4 sm:mt-0 mx-auto"
-            />
-          </div>
         </div>
       </section>
 

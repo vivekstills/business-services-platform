@@ -88,6 +88,7 @@ export default function Navbar() {
               >
                 Services <ChevronDown className={`w-3.5 h-3.5 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
+              <Link to="/articles" className="text-gray-600 hover:text-gray-900 transition-colors">Articles</Link>
               <Link to="/about-us" className="text-gray-600 hover:text-gray-900 transition-colors">About</Link>
               <Link to="/contact-us" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</Link>
 
@@ -284,6 +285,7 @@ export default function Navbar() {
                   </motion.div>
                 )}
               </AnimatePresence>
+              <Link to="/articles" onClick={() => setIsMobileOpen(false)} className="block px-5 py-3 text-gray-700">Articles</Link>
               <Link to="/about-us" onClick={() => setIsMobileOpen(false)} className="block px-5 py-3 text-gray-700">About</Link>
               <Link to="/contact-us" onClick={() => setIsMobileOpen(false)} className="block px-5 py-3 text-gray-700">Contact</Link>
 
