@@ -193,9 +193,9 @@ function TableOfContents({ items }: { items: TocItem[] }) {
   };
 
   return (
-    <div className="sticky top-16 z-10 -mx-5 sm:-mx-8 mb-5 sm:mb-6 bg-white/95 backdrop-blur-md border-b border-gray-100">
+    <div className="sticky top-20 z-10 mb-6 flex justify-center pointer-events-none">
       <div
-        className="flex items-center gap-1.5 overflow-x-auto px-5 sm:px-8 py-2.5 hide-scrollbar"
+        className="pointer-events-auto inline-flex items-center gap-1.5 max-w-full overflow-x-auto rounded-full border border-gray-200/80 bg-white/90 backdrop-blur-md shadow-lg shadow-gray-900/5 ring-1 ring-black/[0.02] px-2 py-1.5 hide-scrollbar"
         role="tablist"
         aria-label="Section navigation"
       >
