@@ -6,6 +6,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { SERVICES, SERVICE_CATEGORIES } from '../src/data/services';
+import type { Content } from '../src/types/content';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -52,15 +53,14 @@ function buildSitemap(): string {
     addUrl(`/service/${svc.id}`, '0.7', 'weekly');
   }
 
-  // Articles are loaded from content.json; add known slugs
-  const knownArticleSlugs = [
-    'gst-registration-guide-2024',
-    'private-limited-company-registration',
-    'trademark-registration-india',
-    'itr-filing-which-form',
-    'fssai-registration-vs-license',
-  ];
-  for (const slug of knownArticleSlugs) {
+  const contentPath = path.resolve(__dirname, '..', 'data', 'content.json');
+  const rawContent = fs.readFileSync(contentPath, 'utf-8');
+  const content = JSON.parse(rawContent) as Content;
+  const articleSlugs = (content.articles ?? [])
+    .filter((article) => article.published && article.slug)
+    .map((article) => article.slug);
+
+  for (const slug of articleSlugs) {
     addUrl(`/articles/${slug}`, '0.6', 'monthly');
   }
 
@@ -73,4 +73,4 @@ ${urls.join('\n')}
 const sitemap = buildSitemap();
 const outPath = path.resolve(__dirname, '..', 'public', 'sitemap.xml');
 fs.writeFileSync(outPath, sitemap, 'utf-8');
-console.log(`Sitemap generated: ${outPath} (${staticPages.length + SERVICE_CATEGORIES.length + SERVICES.length + 5} URLs)`);
+console.log(`Sitemap generated: ${outPath}`);
