@@ -491,4 +491,102 @@ export const EXCEL_STUB_SERVICES: Service[] = [
     categoryId: 'trademark-ip',
     routeMainCategorySlug: 'trademark-ip',
   }),
+
+  // Mandatory licenses — additional catalogue entries
+  stub({
+    id: 'psara-registration',
+    name: 'PSARA Registration',
+    mainHead: 'MANDATORY LICENSES',
+    categoryId: 'mandatory-licenses',
+    routeMainCategorySlug: 'mandatory-licenses',
+  }),
+  stub({
+    id: 'fire-license',
+    name: 'Fire License (Fire NOC)',
+    mainHead: 'MANDATORY LICENSES',
+    categoryId: 'mandatory-licenses',
+    routeMainCategorySlug: 'mandatory-licenses',
+  }),
+
+  // Start new business — additional catalogue entries
+  stub({
+    id: 'dpiit-registration',
+    name: 'DPIIT Registration (Startup Recognition)',
+    mainHead: 'START NEW BUSINESS',
+    categoryId: 'new-business',
+    routeMainCategorySlug: 'starts-new-business',
+  }),
+  stub({
+    id: 'ccfs-scheme',
+    name: 'CCFS (Credit Guarantee & Support Schemes)',
+    mainHead: 'START NEW BUSINESS',
+    categoryId: 'new-business',
+    routeMainCategorySlug: 'starts-new-business',
+  }),
+
+  // Legal compliance — additional catalogue entries
+  stub({
+    id: 'certificate-of-incumbency',
+    name: 'Certificate of Incumbency',
+    mainHead: 'LEGAL COMPLIANCE',
+    categoryId: 'legal-compliance',
+    routeMainCategorySlug: 'legal-compliance',
+  }),
+
+  // FEMA — additional catalogue entries
+  stub({
+    id: 'fdi-filing',
+    name: 'FDI Filing (Foreign Direct Investment Reporting)',
+    mainHead: 'FEMA COMPLIANCE',
+    categoryId: 'fema-compliance',
+    routeMainCategorySlug: 'fema-compliance',
+  }),
+
+  // ROC compliance — additional catalogue entries
+  stub({
+    id: 'aoa-amendment',
+    name: 'AOA Amendment (Articles of Association)',
+    mainHead: 'ROC COMPLIANCE',
+    categoryId: 'roc-compliance',
+    routeMainCategorySlug: 'roc-compliance',
+  }),
+  stub({
+    id: 'xbrl-filing',
+    name: 'XBRL Filing',
+    mainHead: 'ROC COMPLIANCE',
+    categoryId: 'roc-compliance',
+    routeMainCategorySlug: 'roc-compliance',
+  }),
+  stub({
+    id: 'mgt-7-filing',
+    name: 'MGT-7 Filing',
+    mainHead: 'ROC COMPLIANCE',
+    categoryId: 'roc-compliance',
+    routeMainCategorySlug: 'roc-compliance',
+  }),
+
+  // GST — additional catalogue entries
+  stub({
+    id: 'virtual-office-gstin',
+    name: 'Virtual Office + GSTIN Registration',
+    mainHead: 'GST SERVICES',
+    categoryId: 'gst-services',
+    routeMainCategorySlug: 'goods-services-tax',
+  }),
+
+  // Income tax — additional catalogue entries
+  stub({
+    id: 'form-15ca-15cb',
+    name: 'Form 15CA & 15CB Filing',
+    mainHead: 'INCOME TAX',
+    categoryId: 'income-tax',
+    routeMainCategorySlug: 'income-tax',
+  }),
+  stub({
+    id: 'itr-u-filing',
+    name: 'ITR-U Filing (Updated Return)',
+    mainHead: 'INCOME TAX',
+    categoryId: 'income-tax',
+    routeMainCategorySlug: 'income-tax',
+  }),
 ];

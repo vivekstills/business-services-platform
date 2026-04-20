@@ -134,17 +134,23 @@ function shortChipLabel(label: string): string {
 
 /**
  * Interactive Table of Contents. Sticky horizontal chip strip that highlights
- * the section currently in the viewport. Clicking a chip smooth-scrolls to
+ * the section currently in the viewport. Clicking a chip scrolls the page to
  * the matching H2 block.
+ *
+ * Deliberately kept minimal:
+ *   - Observer only drives chip highlight state; never touches page scroll.
+ *   - No smooth browser scroll. Programmatic scroll is a direct scrollTop
+ *     assignment, which eliminates any possibility of the observer racing
+ *     with an in-flight `behavior: 'smooth'` animation (the "endless
+ *     scrolling" symptom previously seen on long service pages).
+ *   - The strip itself is not auto-scrolled horizontally; the active chip
+ *     updates in place. On mobile the user can swipe the strip freely.
  */
 function TableOfContents({ items }: { items: TocItem[] }) {
   const [activeId, setActiveId] = useState<string | null>(items[0]?.id ?? null);
-  const stripRef = useRef<HTMLDivElement>(null);
   /**
-   * While the user clicks a chip, we programmatically scroll the page. The
-   * IntersectionObserver will fire during that animation and flip activeId
-   * multiple times, which looks jumpy. We suppress observer updates briefly
-   * so the clicked chip stays highlighted.
+   * Short window after a click during which observer callbacks are ignored.
+   * Prevents a visible flicker on the clicked chip while the page jumps.
    */
   const suppressObserverUntil = useRef(0);
 
@@ -153,12 +159,15 @@ function TableOfContents({ items }: { items: TocItem[] }) {
     const observer = new IntersectionObserver(
       (entries) => {
         if (performance.now() < suppressObserverUntil.current) return;
+        // Pick the top-most entry that is currently intersecting the
+        // "active band" (viewport middle 10%). Updating state here must
+        // NEVER cause a scroll side effect elsewhere.
         const visible = entries
           .filter((e) => e.isIntersecting)
           .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
         if (visible.length > 0) {
           const id = visible[0].target.id;
-          if (id) setActiveId(id);
+          if (id) setActiveId((prev) => (prev === id ? prev : id));
         }
       },
       { rootMargin: '-30% 0px -60% 0px', threshold: 0 }
@@ -170,40 +179,22 @@ function TableOfContents({ items }: { items: TocItem[] }) {
     return () => observer.disconnect();
   }, [items]);
 
-  /**
-   * Keep the active chip visible in the horizontal scroller. We scroll only
-   * the strip container's scrollLeft (horizontal) — never scrollIntoView,
-   * which can drag the page vertically and trigger a scroll loop with the
-   * IntersectionObserver above.
-   */
-  useEffect(() => {
-    if (!activeId) return;
-    const strip = stripRef.current;
-    if (!strip) return;
-    const btn = strip.querySelector<HTMLButtonElement>(`[data-toc-target="${activeId}"]`);
-    if (!btn) return;
-    const target = btn.offsetLeft - (strip.clientWidth - btn.offsetWidth) / 2;
-    const maxLeft = Math.max(0, strip.scrollWidth - strip.clientWidth);
-    strip.scrollTo({ left: Math.max(0, Math.min(target, maxLeft)), behavior: 'smooth' });
-  }, [activeId]);
-
   const onJump = (id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
-    // Scroll offset must clear the fixed site header (~64px) AND the sticky
-    // TOC strip itself so the H2 heading lands comfortably below both. The
-    // matching `scroll-mt-[120px]` on H2 blocks handles native # anchors.
+    // Offset clears the fixed site header (~64px) + sticky TOC strip (~55px).
+    // Using plain `window.scrollTo(top)` with the default "auto" behavior so
+    // the browser can't interleave a smooth animation with observer updates.
     const offset = 120;
     const top = el.getBoundingClientRect().top + window.scrollY - offset;
-    suppressObserverUntil.current = performance.now() + 700;
+    suppressObserverUntil.current = performance.now() + 600;
     setActiveId(id);
-    window.scrollTo({ top, behavior: 'smooth' });
+    window.scrollTo(0, Math.max(0, top));
   };
 
   return (
     <div className="sticky top-16 z-10 -mx-5 sm:-mx-8 mb-5 sm:mb-6 bg-white/95 backdrop-blur-md border-b border-gray-100">
       <div
-        ref={stripRef}
         className="flex items-center gap-1.5 overflow-x-auto px-5 sm:px-8 py-2.5 hide-scrollbar"
         role="tablist"
         aria-label="Section navigation"
