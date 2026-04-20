@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import {
   Save, Plus, Trash2, ArrowLeft, Eye, EyeOff, Search,
-  Heading2, Heading3, List, ListOrdered, Bold, Link2, X, Check,
+  Heading2, Heading3, Heading4, List, ListOrdered, Bold, Link2, X, Check,
   BookOpen, Globe, EyeOff as Draft, Calendar, Tag, User, Clock,
-  ChevronRight, Image,
+  ChevronRight, Image, Quote, FileText, HelpCircle,
 } from 'lucide-react';
 import RichContent from '../RichContent';
 import type { Article } from '../../types/content';
@@ -35,6 +35,7 @@ function ContentEditor({ value, onChange }: { value: string; onChange: (v: strin
   const ref = useRef<HTMLTextAreaElement>(null);
   const [preview, setPreview] = useState(false);
   const [linkPopover, setLinkPopover] = useState(false);
+  const [helpOpen, setHelpOpen] = useState(false);
   const [linkText, setLinkText] = useState('');
   const [linkUrl, setLinkUrl] = useState('');
   const savedSel = useRef<{ start: number; end: number }>({ start: 0, end: 0 });
@@ -76,18 +77,27 @@ function ContentEditor({ value, onChange }: { value: string; onChange: (v: strin
     });
   };
 
+  const useTemplate = () => {
+    if (value.trim() && !confirm('Replace current content with the structured template?')) return;
+    onChange(STRUCTURED_TEMPLATE);
+    setPreview(false);
+  };
+
   const toolbar = [
-    { icon: Heading2, label: 'H2', action: () => insert('\n## ', '\n') },
-    { icon: Heading3, label: 'H3', action: () => insert('\n### ', '\n') },
+    { icon: Heading2, label: 'H2 — Main section', action: () => insert('\n## ', '\n') },
+    { icon: Heading3, label: 'H3 — Sub-section', action: () => insert('\n### ', '\n') },
+    { icon: Heading4, label: 'H4 — Label badge', action: () => insert('\n#### ', '\n') },
     { icon: Bold, label: 'Bold', action: () => insert('**', '**') },
-    { icon: List, label: 'Bullets', action: () => insert('\n- ') },
-    { icon: ListOrdered, label: 'Numbered', action: () => insert('\n1. ') },
+    { icon: List, label: 'Bullet list', action: () => insert('\n- ') },
+    { icon: ListOrdered, label: 'Numbered list', action: () => insert('\n1. ') },
+    { icon: Quote, label: 'Callout / Info box (> )', action: () => insert('\n> ') },
   ];
 
   return (
     <div className="space-y-2">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1">
+      {/* Top row: toolbar + actions */}
+      <div className="flex items-center justify-between gap-2 flex-wrap">
+        <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1 flex-wrap">
           {toolbar.map((btn) => (
             <button key={btn.label} type="button" onClick={btn.action} title={btn.label}
               className="p-1.5 rounded-md hover:bg-white hover:shadow-sm text-gray-500 hover:text-blue-600 transition-all">
@@ -125,27 +135,156 @@ function ContentEditor({ value, onChange }: { value: string; onChange: (v: strin
             )}
           </div>
         </div>
-        <button type="button" onClick={() => setPreview(!preview)}
-          className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium text-gray-500 hover:bg-gray-100 transition-all">
-          {preview ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
-          {preview ? 'Edit' : 'Preview'}
-        </button>
+
+        <div className="flex items-center gap-1.5">
+          {/* Structured template button */}
+          <button type="button" onClick={useTemplate} title="Load structured article template"
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold text-purple-700 bg-purple-50 hover:bg-purple-100 border border-purple-200 transition-all">
+            <FileText className="w-3.5 h-3.5" /> Use Template
+          </button>
+          {/* Format guide */}
+          <div className="relative">
+            <button type="button" onClick={() => setHelpOpen(!helpOpen)} title="Formatting guide"
+              className={`p-1.5 rounded-lg text-xs font-medium transition-all ${helpOpen ? 'bg-gray-200 text-gray-700' : 'text-gray-400 hover:bg-gray-100 hover:text-gray-600'}`}>
+              <HelpCircle className="w-4 h-4" />
+            </button>
+            {helpOpen && (
+              <div className="absolute top-full right-0 mt-1.5 z-50 bg-white border border-gray-200 rounded-xl shadow-xl p-4 w-72 text-xs">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="font-bold text-gray-700">Formatting Guide</span>
+                  <button type="button" onClick={() => setHelpOpen(false)} className="text-gray-400 hover:text-gray-600"><X className="w-3.5 h-3.5" /></button>
+                </div>
+                <div className="space-y-2 font-mono text-gray-600">
+                  {[
+                    ['## Heading', '→ Large section title'],
+                    ['### Sub-heading', '→ Sub-section title'],
+                    ['#### Label', '→ Blue label badge (a), b)…)'],
+                    ['**bold text**', '→ Bold / highlighted'],
+                    ['- item', '→ Bullet list'],
+                    ['1. item', '→ Numbered step list'],
+                    ['> note text', '→ Amber callout / info box'],
+                    ['[text](url)', '→ Hyperlink'],
+                  ].map(([syntax, desc]) => (
+                    <div key={syntax} className="flex gap-2 items-start">
+                      <code className="bg-gray-100 px-1.5 py-0.5 rounded text-[10px] text-blue-700 flex-shrink-0">{syntax}</code>
+                      <span className="text-gray-500 text-[10px] pt-0.5">{desc}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+          {/* Preview toggle */}
+          <button type="button" onClick={() => setPreview(!preview)}
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium text-gray-500 hover:bg-gray-100 transition-all">
+            {preview ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
+            {preview ? 'Edit' : 'Preview'}
+          </button>
+        </div>
       </div>
+
       {preview ? (
         <div className="px-4 py-3 rounded-lg border border-gray-200 bg-white min-h-[260px]">
           <RichContent content={value} />
         </div>
       ) : (
-        <textarea ref={ref} value={value} onChange={(e) => onChange(e.target.value)} rows={14}
-          placeholder="## Section Heading&#10;&#10;Paragraph text here.&#10;&#10;- Bullet point&#10;- Another point&#10;&#10;**Bold text** and [link text](https://url.com)"
+        <textarea ref={ref} value={value} onChange={(e) => onChange(e.target.value)} rows={16}
+          placeholder="Click 'Use Template' above to load a pre-built structured article template, or type freely using the toolbar."
           className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-blue-400 focus:ring-1 focus:ring-blue-100 font-mono text-sm leading-relaxed" />
       )}
       <p className="text-[calc(11px+3pt)] text-gray-400">
-        ## headings · - bullets · 1. numbered · **bold** · [text](url) links
+        ## sections · ### sub-sections · #### labels · - bullets · 1. steps · **bold** · &gt; callout box
       </p>
     </div>
   );
 }
+
+// ─── Structured article template ─────────────────────────────────────────────
+const STRUCTURED_TEMPLATE = `## 1) Detailed Brief / Overview
+
+Write a comprehensive overview here. Explain what this topic is about, why it matters, and who it applies to.
+
+- Key point one
+- Key point two
+- Key point three
+
+## 2) Advantages / Benefits
+
+### a) First Benefit
+
+Describe the first benefit here.
+
+### b) Second Benefit
+
+Describe the second benefit here.
+
+### c) Third Benefit
+
+Describe the third benefit here.
+
+## 3) Disadvantages / Limitations
+
+### a) First Limitation
+
+Describe the first limitation here.
+
+### b) Second Limitation
+
+Describe the second limitation here.
+
+## 4) Applicability
+
+Who does this apply to and where?
+
+- **Category One** — Details here
+- **Category Two** — Details here
+
+## 5) Key Features
+
+### a) Feature One
+
+**Value or detail** here.
+
+### b) Feature Two
+
+**Value or detail** here.
+
+## 6) Documents Required
+
+### Primary Documents
+
+- Document one
+- Document two
+- Document three
+
+### Supporting Documents
+
+- Supporting doc one
+- Supporting doc two
+
+## 7) Process / Procedure
+
+1. **Step One** — Describe what to do in this step.
+2. **Step Two** — Describe what to do in this step.
+3. **Step Three** — Describe what to do in this step.
+4. **Step Four** — Describe what to do in this step.
+
+## 8) Fees / Costs Payable
+
+### a) Government Fee
+
+**Amount** — Description
+
+### b) Penalties
+
+**Percentage or amount** for non-compliance
+
+> **Key Calculation Example** — Replace this with a real example. Input: ₹X | Tax: ₹Y | **Total: ₹Z**
+
+## Conclusion
+
+Summarise the topic, key takeaways, and what readers should do next.
+`;
 
 // ─── Slug generator ───────────────────────────────────────────────────────────
 function toSlug(title: string) {
@@ -171,13 +310,16 @@ function emptyArticle(): Article {
 
 // ─── Category badge ───────────────────────────────────────────────────────────
 const CATEGORY_COLORS: Record<string, string> = {
-  'GST & Tax': 'bg-orange-50 text-orange-700 border-orange-200',
-  'Company Registration': 'bg-blue-50 text-blue-700 border-blue-200',
-  'Trademark & IP': 'bg-purple-50 text-purple-700 border-purple-200',
-  'Compliance': 'bg-red-50 text-red-700 border-red-200',
-  'Registrations': 'bg-teal-50 text-teal-700 border-teal-200',
+  'FSSAI Compliance': 'bg-yellow-50 text-yellow-700 border-yellow-200',
+  'Firm / New Business': 'bg-blue-50 text-blue-700 border-blue-200',
+  'Goods & Service Tax': 'bg-orange-50 text-orange-700 border-orange-200',
+  'Import-Export Business': 'bg-cyan-50 text-cyan-700 border-cyan-200',
   'Income Tax': 'bg-green-50 text-green-700 border-green-200',
-  'Licensing': 'bg-yellow-50 text-yellow-700 border-yellow-200',
+  'Legal Compliance': 'bg-red-50 text-red-700 border-red-200',
+  'MCA Compliance': 'bg-indigo-50 text-indigo-700 border-indigo-200',
+  'Miscellaneous': 'bg-slate-50 text-slate-700 border-slate-200',
+  'Professional / Sector-Wise Compliance': 'bg-rose-50 text-rose-700 border-rose-200',
+  'Trademark & IP': 'bg-purple-50 text-purple-700 border-purple-200',
 };
 
 function CategoryBadge({ cat }: { cat: string }) {

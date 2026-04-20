@@ -1,4 +1,5 @@
 import { EXCEL_STUB_SERVICES } from './excelServiceStubs';
+import { SERVICE_ABOUT_CONTENT } from './serviceAboutContent';
 
 export type ServicePackage = {
   name: string;
@@ -2831,7 +2832,12 @@ export const SERVICES: Service[] = [
     ]
   },
   ...EXCEL_STUB_SERVICES,
-];
+].map((s) =>
+  // Promote long-form SEO markdown over the default short/stub content
+  // when available. Admin edits saved to content.json still override this
+  // via ContentContext's deep merge at runtime.
+  SERVICE_ABOUT_CONTENT[s.id] ? { ...s, content: SERVICE_ABOUT_CONTENT[s.id] } : s
+);
 
 export function getServicesByCategory(categoryId: string): Service[] {
   return SERVICES.filter((service) => service.categoryId === categoryId);
