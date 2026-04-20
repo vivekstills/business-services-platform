@@ -139,12 +139,20 @@ function shortChipLabel(label: string): string {
  */
 function TableOfContents({ items }: { items: TocItem[] }) {
   const [activeId, setActiveId] = useState<string | null>(items[0]?.id ?? null);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const stripRef = useRef<HTMLDivElement>(null);
+  /**
+   * While the user clicks a chip, we programmatically scroll the page. The
+   * IntersectionObserver will fire during that animation and flip activeId
+   * multiple times, which looks jumpy. We suppress observer updates briefly
+   * so the clicked chip stays highlighted.
+   */
+  const suppressObserverUntil = useRef(0);
 
   useEffect(() => {
     if (items.length === 0) return;
     const observer = new IntersectionObserver(
       (entries) => {
+        if (performance.now() < suppressObserverUntil.current) return;
         const visible = entries
           .filter((e) => e.isIntersecting)
           .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
@@ -153,7 +161,7 @@ function TableOfContents({ items }: { items: TocItem[] }) {
           if (id) setActiveId(id);
         }
       },
-      { rootMargin: '-20% 0px -65% 0px', threshold: [0, 0.5, 1] }
+      { rootMargin: '-30% 0px -60% 0px', threshold: 0 }
     );
     for (const it of items) {
       const el = document.getElementById(it.id);
@@ -162,27 +170,40 @@ function TableOfContents({ items }: { items: TocItem[] }) {
     return () => observer.disconnect();
   }, [items]);
 
-  // Keep the active chip visible in the horizontal scroller
+  /**
+   * Keep the active chip visible in the horizontal scroller. We scroll only
+   * the strip container's scrollLeft (horizontal) — never scrollIntoView,
+   * which can drag the page vertically and trigger a scroll loop with the
+   * IntersectionObserver above.
+   */
   useEffect(() => {
-    if (!activeId || !containerRef.current) return;
-    const btn = containerRef.current.querySelector<HTMLButtonElement>(
-      `[data-toc-target="${activeId}"]`
-    );
-    if (btn) btn.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
+    if (!activeId) return;
+    const strip = stripRef.current;
+    if (!strip) return;
+    const btn = strip.querySelector<HTMLButtonElement>(`[data-toc-target="${activeId}"]`);
+    if (!btn) return;
+    const target = btn.offsetLeft - (strip.clientWidth - btn.offsetWidth) / 2;
+    const maxLeft = Math.max(0, strip.scrollWidth - strip.clientWidth);
+    strip.scrollTo({ left: Math.max(0, Math.min(target, maxLeft)), behavior: 'smooth' });
   }, [activeId]);
 
   const onJump = (id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
-    const top = el.getBoundingClientRect().top + window.scrollY - 90;
-    window.scrollTo({ top, behavior: 'smooth' });
+    // Scroll offset must clear the fixed site header (~64px) AND the sticky
+    // TOC strip itself so the H2 heading lands comfortably below both. The
+    // matching `scroll-mt-[120px]` on H2 blocks handles native # anchors.
+    const offset = 120;
+    const top = el.getBoundingClientRect().top + window.scrollY - offset;
+    suppressObserverUntil.current = performance.now() + 700;
     setActiveId(id);
+    window.scrollTo({ top, behavior: 'smooth' });
   };
 
   return (
     <div className="sticky top-16 z-10 -mx-5 sm:-mx-8 mb-5 sm:mb-6 bg-white/95 backdrop-blur-md border-b border-gray-100">
       <div
-        ref={containerRef}
+        ref={stripRef}
         className="flex items-center gap-1.5 overflow-x-auto px-5 sm:px-8 py-2.5 hide-scrollbar"
         role="tablist"
         aria-label="Section navigation"
@@ -252,7 +273,7 @@ export default function RichContent({ content, className = '', showToc = true }:
           case 'h2': {
             const { rest } = extractSectionNum(block.text);
             return (
-              <div key={i} id={block.id} className="mt-8 mb-3 first:mt-0 scroll-mt-28">
+              <div key={i} id={block.id} className="mt-8 mb-3 first:mt-0 scroll-mt-[120px]">
                 <h2 className="text-[26px] font-bold text-gray-900 leading-snug pb-2.5 border-b border-gray-200">
                   {parseInline(rest)}
                 </h2>
