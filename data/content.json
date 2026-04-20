@@ -4628,6 +4628,1894 @@
         "Application filing with authority",
         "Follow-ups until completion"
       ]
+    },
+    {
+      "id": "fc-gpr-filing",
+      "name": "FC-GPR Filing",
+      "mainHead": "FEMA COMPLIANCE",
+      "categoryId": "fema-compliance",
+      "routeMainCategorySlug": "fema-compliance",
+      "shortDescription": "Expert assistance for FC-GPR Filing — documentation, filings and follow-ups.",
+      "content": "FC-GPR Filing — Overview\n\nOur consultants support FC-GPR Filing under FEMA COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "odi-filing",
+      "name": "ODI Filing",
+      "mainHead": "FEMA COMPLIANCE",
+      "categoryId": "fema-compliance",
+      "routeMainCategorySlug": "fema-compliance",
+      "shortDescription": "Expert assistance for ODI Filing — documentation, filings and follow-ups.",
+      "content": "## 1) Detailed Brief / Overview\n\nOverseas Direct Investment (ODI) Filing refers to the regulatory compliance process that Indian individuals and companies must follow when they invest in or establish businesses outside India. It is governed under **FEMA regulations** and monitored by the **Reserve Bank of India**.\n\nFrom a consulting perspective, ODI is not just an investment — it is a strategic move toward global expansion. Businesses use ODI when they want to establish subsidiaries, acquire foreign companies, or build an international presence.\n\nIn real-world scenarios, ODI is commonly used when:\n\n- An Indian company sets up a subsidiary in another country\n- A business acquires shares in a foreign company\n- Entrepreneurs expand operations internationally\n- Companies establish global holding structures\n\nFor example, an Indian startup expanding into Dubai or Singapore may set up a foreign entity. This is not just a business decision — it requires ODI compliance including reporting, valuation, and regulatory approvals.\n\nOne important insight is that ODI is highly structured and regulated. It involves:\n\n- Limits on investment based on net worth\n- Reporting of financial performance of the overseas entity\n- Compliance with RBI guidelines\n\nUnlike domestic investments, ODI requires ongoing monitoring. Businesses must:\n\n- File annual performance reports\n- Track financials of the foreign entity\n- Ensure proper repatriation rules\n\nAnother key point is that ODI is not freely allowed in all forms. There are restrictions on:\n\n- Certain sectors\n- Layered structures\n- Round-tripping investments\n\nFrom a strategic standpoint, ODI helps businesses:\n\n- Expand globally\n- Diversify markets\n- Build international brand presence\n\nHowever, it also comes with responsibilities. Improper structuring can lead to compliance issues, especially when dealing with tax and regulatory frameworks across multiple countries.\n\nIn summary, ODI Filing is a critical compliance for global expansion, ensuring that Indian investments abroad are structured, transparent, and legally compliant.\n\n## 2) Advantages / Benefits\n\n- **Global Expansion** — allows Indian businesses to expand internationally\n- **Diversification** — helps investors spread business risk across countries\n- **Strategic Growth** — enables acquisition of foreign companies or partnerships\n- **Regulatory Compliance** — ensures adherence to FEMA and RBI norms\n- **Access to New Markets** — opens doors to international customers and opportunities\n- **Tax Planning Opportunities** — in some cases, helps in better structuring\n\n## 3) Disadvantages / Limits\n\n- **Regulatory Complexity** — ODI rules can be technical and require expert handling\n- **Strict Reporting Requirements** — continuous compliance, like APR filing, is mandatory\n- **Currency Risk** — investments are subject to foreign exchange fluctuations\n- **Approval Requirements** — some investments may require RBI / government approval\n- **Penalties for Non-Compliance** — delay or incorrect filing can attract penalties\n\n## 4) Applicability in India\n\nODI Filing is applicable uniformly across all states and union territories of India. Since ODI is centrally governed by the Reserve Bank of India and FEMA regulations, there are no state-wise differences in compliance or procedures. However, the overseas entity's business activity must comply with sectoral guidelines.\n\n## 5) Features\n\n- Governed under **FEMA (Overseas Investment) Rules & Regulations, 2022**\n- Applicable for investment in foreign subsidiaries or joint ventures\n- Reporting done through the **Authorized Dealer (AD) Bank**\n- Mandatory **Unique Identification Number (UIN)** for each investment\n- **Annual Performance Report (APR)** filing required\n- Covers equity, debt, guarantees, and financial commitments\n- Applicable to individuals, companies, and LLPs\n\n## 6) Documents List\n\n- PAN Card of Investor (Individual / Company / LLP)\n- Certificate of Incorporation (for companies / LLPs)\n- Board Resolution approving the investment\n- Net Worth Certificate from a Chartered Accountant\n- Valuation Report (if applicable)\n- Details of the Foreign Entity (MOA, registration, etc.)\n- Shareholding Pattern\n- Banker's Report / KYC\n- Form FC and other RBI forms\n- ODI Declaration and Undertaking\n\n## 7) Process / Procedure\n\n1. Plan Overseas Investment — decide on subsidiary, joint venture or acquisition\n2. Check Eligibility & Limits — verify your case under ODI rules\n3. Approach Authorized Dealer (AD) Bank — route the transaction through your bank\n4. Submit Required Documents & Forms — provide complete paperwork\n5. Obtain UIN (Unique Identification Number) — issued by RBI for the investment\n6. Remit Funds Abroad — transfer investment through the bank\n7. File ODI Form (Form FC) — formal filing with RBI\n8. Comply with Ongoing Requirements — annual APR filing and monitoring\n\n## 8) Government Cost / Fees Payable\n\n- **RBI Fees** — no direct government fee is charged for ODI filing itself\n- **Bank Charges** — AD Bank may charge processing / remittance fees\n- **Late Fees / Penalty** — applicable for non-compliance or delayed filings\n- **Professional Fees** — CA / CS fees typically range from ₹10,000 to ₹50,000 depending on complexity\n",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "fla-return-filing",
+      "name": "FLA Return Filing",
+      "mainHead": "FEMA COMPLIANCE",
+      "categoryId": "fema-compliance",
+      "routeMainCategorySlug": "fema-compliance",
+      "shortDescription": "Expert assistance for FLA Return Filing — documentation, filings and follow-ups.",
+      "content": "FLA Return Filing — Overview\n\nOur consultants support FLA Return Filing under FEMA COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "fema-advisory",
+      "name": "FEMA Advisory",
+      "mainHead": "FEMA COMPLIANCE",
+      "categoryId": "fema-compliance",
+      "routeMainCategorySlug": "fema-compliance",
+      "shortDescription": "Expert assistance for FEMA Advisory — documentation, filings and follow-ups.",
+      "content": "FEMA Advisory — Overview\n\nOur consultants support FEMA Advisory under FEMA COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "fssai-renewal",
+      "name": "FSSAI Renewal",
+      "mainHead": "FOOD BUSINESS COMPLIANCE",
+      "categoryId": "food-business-compliance",
+      "routeMainCategorySlug": "food-business-compliance",
+      "shortDescription": "Expert assistance for FSSAI Renewal — documentation, filings and follow-ups.",
+      "content": "FSSAI Renewal — Overview\n\nOur consultants support FSSAI Renewal under FOOD BUSINESS COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "fssai-return-filing",
+      "name": "FSSAI Return Filing",
+      "mainHead": "FOOD BUSINESS COMPLIANCE",
+      "categoryId": "food-business-compliance",
+      "routeMainCategorySlug": "food-business-compliance",
+      "shortDescription": "Expert assistance for FSSAI Return Filing — documentation, filings and follow-ups.",
+      "content": "FSSAI Return Filing — Overview\n\nOur consultants support FSSAI Return Filing under FOOD BUSINESS COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "fssai-modification",
+      "name": "FSSAI Modification",
+      "mainHead": "FOOD BUSINESS COMPLIANCE",
+      "categoryId": "food-business-compliance",
+      "routeMainCategorySlug": "food-business-compliance",
+      "shortDescription": "Expert assistance for FSSAI Modification — documentation, filings and follow-ups.",
+      "content": "FSSAI Modification — Overview\n\nOur consultants support FSSAI Modification under FOOD BUSINESS COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "composition-gst-registration",
+      "name": "Composition GST Registration",
+      "mainHead": "GST SERVICES",
+      "categoryId": "gst-services",
+      "routeMainCategorySlug": "goods-services-tax",
+      "shortDescription": "Expert assistance for Composition GST Registration — documentation, filings and follow-ups.",
+      "content": "Composition GST Registration — Overview\n\nOur consultants support Composition GST Registration under GST SERVICES, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "gst-nil-return-filing",
+      "name": "GST Nil Return Filing",
+      "mainHead": "GST SERVICES",
+      "categoryId": "gst-services",
+      "routeMainCategorySlug": "goods-services-tax",
+      "shortDescription": "Expert assistance for GST Nil Return Filing — documentation, filings and follow-ups.",
+      "content": "GST Nil Return Filing — Overview\n\nOur consultants support GST Nil Return Filing under GST SERVICES, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "gstr-10-final-return",
+      "name": "GSTR 10 (Final Return)",
+      "mainHead": "GST SERVICES",
+      "categoryId": "gst-services",
+      "routeMainCategorySlug": "goods-services-tax",
+      "shortDescription": "Expert assistance for GSTR 10 (Final Return) — documentation, filings and follow-ups.",
+      "content": "GSTR 10 (Final Return) — Overview\n\nOur consultants support GSTR 10 (Final Return) under GST SERVICES, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "tax-audit",
+      "name": "Tax Audit",
+      "mainHead": "INCOME TAX",
+      "categoryId": "income-tax",
+      "routeMainCategorySlug": "income-tax",
+      "shortDescription": "Expert assistance for Tax Audit — documentation, filings and follow-ups.",
+      "content": "Tax Audit — Overview\n\nOur consultants support Tax Audit under INCOME TAX, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "icegate-registration",
+      "name": "ICEGATE Registration",
+      "mainHead": "IMPORT EXPORT",
+      "categoryId": "import-export-business",
+      "routeMainCategorySlug": "import-export-business",
+      "shortDescription": "Expert assistance for ICEGATE Registration — documentation, filings and follow-ups.",
+      "content": "ICEGATE Registration — Overview\n\nOur consultants support ICEGATE Registration under IMPORT EXPORT, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "iec-modification",
+      "name": "IEC Modification",
+      "mainHead": "IMPORT EXPORT",
+      "categoryId": "import-export-business",
+      "routeMainCategorySlug": "import-export-business",
+      "shortDescription": "Expert assistance for IEC Modification — documentation, filings and follow-ups.",
+      "content": "IEC Modification — Overview\n\nOur consultants support IEC Modification under IMPORT EXPORT, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "rcmc-registration",
+      "name": "RCMC Registration",
+      "mainHead": "IMPORT EXPORT",
+      "categoryId": "import-export-business",
+      "routeMainCategorySlug": "import-export-business",
+      "shortDescription": "Expert assistance for RCMC Registration — documentation, filings and follow-ups.",
+      "content": "RCMC Registration — Overview\n\nOur consultants support RCMC Registration under IMPORT EXPORT, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "opc-annual-compliance",
+      "name": "One Person Company Annual Compliance",
+      "mainHead": "LEGAL COMPLIANCE",
+      "categoryId": "legal-compliance",
+      "routeMainCategorySlug": "legal-compliance",
+      "shortDescription": "Expert assistance for One Person Company Annual Compliance — documentation, filings and follow-ups.",
+      "content": "One Person Company Annual Compliance — Overview\n\nOur consultants support One Person Company Annual Compliance under LEGAL COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "roc-notice-reply",
+      "name": "ROC Notice Reply",
+      "mainHead": "LEGAL COMPLIANCE",
+      "categoryId": "legal-compliance",
+      "routeMainCategorySlug": "legal-compliance",
+      "shortDescription": "Expert assistance for ROC Notice Reply — documentation, filings and follow-ups.",
+      "content": "ROC Notice Reply — Overview\n\nOur consultants support ROC Notice Reply under LEGAL COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "dir-3-kyc-registration",
+      "name": "DIR-3 KYC Registration",
+      "mainHead": "LEGAL COMPLIANCE",
+      "categoryId": "legal-compliance",
+      "routeMainCategorySlug": "legal-compliance",
+      "shortDescription": "Expert assistance for DIR-3 KYC Registration — documentation, filings and follow-ups.",
+      "content": "DIR-3 KYC Registration — Overview\n\nOur consultants support DIR-3 KYC Registration under LEGAL COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "private-limited-to-section-8-conversion",
+      "name": "Private Limited to Section 8 Company Conversion",
+      "mainHead": "LEGAL COMPLIANCE",
+      "categoryId": "legal-compliance",
+      "routeMainCategorySlug": "legal-compliance",
+      "shortDescription": "Expert assistance for Private Limited to Section 8 Company Conversion — documentation, filings and follow-ups.",
+      "content": "Private Limited to Section 8 Company Conversion — Overview\n\nOur consultants support Private Limited to Section 8 Company Conversion under LEGAL COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "section-8-to-private-limited-conversion",
+      "name": "Section 8 to Private Limited Company Conversion",
+      "mainHead": "LEGAL COMPLIANCE",
+      "categoryId": "legal-compliance",
+      "routeMainCategorySlug": "legal-compliance",
+      "shortDescription": "Expert assistance for Section 8 to Private Limited Company Conversion — documentation, filings and follow-ups.",
+      "content": "Section 8 to Private Limited Company Conversion — Overview\n\nOur consultants support Section 8 to Private Limited Company Conversion under LEGAL COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "add-remove-partner",
+      "name": "Add/Remove Partner",
+      "mainHead": "ROC COMPLIANCE",
+      "categoryId": "roc-compliance",
+      "routeMainCategorySlug": "roc-compliance",
+      "shortDescription": "Expert assistance for Add/Remove Partner — documentation, filings and follow-ups.",
+      "content": "Add/Remove Partner — Overview\n\nOur consultants support Add/Remove Partner under ROC COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "adt-1-filing",
+      "name": "Auditor Appointment (Form ADT-1 Filing)",
+      "mainHead": "ROC COMPLIANCE",
+      "categoryId": "roc-compliance",
+      "routeMainCategorySlug": "roc-compliance",
+      "shortDescription": "Expert assistance for Auditor Appointment (Form ADT-1 Filing) — documentation, filings and follow-ups.",
+      "content": "Auditor Appointment (Form ADT-1 Filing) — Overview\n\nOur consultants support Auditor Appointment (Form ADT-1 Filing) under ROC COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "demat-of-shares",
+      "name": "Demat of Shares",
+      "mainHead": "ROC COMPLIANCE",
+      "categoryId": "roc-compliance",
+      "routeMainCategorySlug": "roc-compliance",
+      "shortDescription": "Expert assistance for Demat of Shares — documentation, filings and follow-ups.",
+      "content": "Demat of Shares — Overview\n\nOur consultants support Demat of Shares under ROC COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "share-transfer",
+      "name": "Share Transfer",
+      "mainHead": "ROC COMPLIANCE",
+      "categoryId": "roc-compliance",
+      "routeMainCategorySlug": "roc-compliance",
+      "shortDescription": "Expert assistance for Share Transfer — documentation, filings and follow-ups.",
+      "content": "Share Transfer — Overview\n\nOur consultants support Share Transfer under ROC COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "dir-12-filing",
+      "name": "Appointment/Resignation (Form DIR-12)",
+      "mainHead": "ROC COMPLIANCE",
+      "categoryId": "roc-compliance",
+      "routeMainCategorySlug": "roc-compliance",
+      "shortDescription": "Expert assistance for Appointment/Resignation (Form DIR-12) — documentation, filings and follow-ups.",
+      "content": "Appointment/Resignation (Form DIR-12) — Overview\n\nOur consultants support Appointment/Resignation (Form DIR-12) under ROC COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "dpt-3-filing",
+      "name": "DPT-3 Form Filing",
+      "mainHead": "ROC COMPLIANCE",
+      "categoryId": "roc-compliance",
+      "routeMainCategorySlug": "roc-compliance",
+      "shortDescription": "Expert assistance for DPT-3 Form Filing — documentation, filings and follow-ups.",
+      "content": "DPT-3 Form Filing — Overview\n\nOur consultants support DPT-3 Form Filing under ROC COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "company-strike-off-filing",
+      "name": "Company Strike Filing",
+      "mainHead": "ROC COMPLIANCE",
+      "categoryId": "roc-compliance",
+      "routeMainCategorySlug": "roc-compliance",
+      "shortDescription": "Expert assistance for Company Strike Filing — documentation, filings and follow-ups.",
+      "content": "Company Strike Filing — Overview\n\nOur consultants support Company Strike Filing under ROC COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "llp-form-11-filing",
+      "name": "LLP Form 11 Filing",
+      "mainHead": "ROC COMPLIANCE",
+      "categoryId": "roc-compliance",
+      "routeMainCategorySlug": "roc-compliance",
+      "shortDescription": "Expert assistance for LLP Form 11 Filing — documentation, filings and follow-ups.",
+      "content": "LLP Form 11 Filing — Overview\n\nOur consultants support LLP Form 11 Filing under ROC COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "pas-3-filing",
+      "name": "PAS-3 Filing",
+      "mainHead": "ROC COMPLIANCE",
+      "categoryId": "roc-compliance",
+      "routeMainCategorySlug": "roc-compliance",
+      "shortDescription": "Expert assistance for PAS-3 Filing — documentation, filings and follow-ups.",
+      "content": "PAS-3 Filing — Overview\n\nOur consultants support PAS-3 Filing under ROC COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "aoc-4-filing",
+      "name": "AOC-4 Filing",
+      "mainHead": "ROC COMPLIANCE",
+      "categoryId": "roc-compliance",
+      "routeMainCategorySlug": "roc-compliance",
+      "shortDescription": "Expert assistance for AOC-4 Filing — documentation, filings and follow-ups.",
+      "content": "AOC-4 Filing — Overview\n\nOur consultants support AOC-4 Filing under ROC COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "mgt-7a-filing",
+      "name": "MGT-7A Filing",
+      "mainHead": "ROC COMPLIANCE",
+      "categoryId": "roc-compliance",
+      "routeMainCategorySlug": "roc-compliance",
+      "shortDescription": "Expert assistance for MGT-7A Filing — documentation, filings and follow-ups.",
+      "content": "MGT-7A Filing — Overview\n\nOur consultants support MGT-7A Filing under ROC COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "mgt-14-filing",
+      "name": "MGT-14 Filing",
+      "mainHead": "ROC COMPLIANCE",
+      "categoryId": "roc-compliance",
+      "routeMainCategorySlug": "roc-compliance",
+      "shortDescription": "Expert assistance for MGT-14 Filing — documentation, filings and follow-ups.",
+      "content": "MGT-14 Filing — Overview\n\nOur consultants support MGT-14 Filing under ROC COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "msme-1-form-filing",
+      "name": "MSME-1 Form Filing",
+      "mainHead": "ROC COMPLIANCE",
+      "categoryId": "roc-compliance",
+      "routeMainCategorySlug": "roc-compliance",
+      "shortDescription": "Expert assistance for MSME-1 Form Filing — documentation, filings and follow-ups.",
+      "content": "MSME-1 Form Filing — Overview\n\nOur consultants support MSME-1 Form Filing under ROC COMPLIANCE, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "one-day-liquor-permission-private-event",
+      "name": "One Day & Liquor Permission for Private Event",
+      "mainHead": "MISCELLANEOUS",
+      "categoryId": "liquor-licenses",
+      "routeMainCategorySlug": "miscellaneous",
+      "shortDescription": "Expert assistance for One Day & Liquor Permission for Private Event — documentation, filings and follow-ups.",
+      "content": "One Day & Liquor Permission for Private Event — Overview\n\nOur consultants support One Day & Liquor Permission for Private Event under MISCELLANEOUS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "cl-3-license",
+      "name": "CL-3 License",
+      "mainHead": "MISCELLANEOUS",
+      "categoryId": "liquor-licenses",
+      "routeMainCategorySlug": "miscellaneous",
+      "shortDescription": "Expert assistance for CL-3 License — documentation, filings and follow-ups.",
+      "content": "CL-3 License — Overview\n\nOur consultants support CL-3 License under MISCELLANEOUS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "fl-3-wine-bar-license",
+      "name": "FL-3 License & Wine Bar License",
+      "mainHead": "MISCELLANEOUS",
+      "categoryId": "liquor-licenses",
+      "routeMainCategorySlug": "miscellaneous",
+      "shortDescription": "Expert assistance for FL-3 License & Wine Bar License — documentation, filings and follow-ups.",
+      "content": "FL-3 License & Wine Bar License — Overview\n\nOur consultants support FL-3 License & Wine Bar License under MISCELLANEOUS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "frro-registration",
+      "name": "Registration of Foreigner (FRRO)",
+      "mainHead": "MISCELLANEOUS",
+      "categoryId": "mandatory-licenses",
+      "routeMainCategorySlug": "miscellaneous",
+      "shortDescription": "Expert assistance for Registration of Foreigner (FRRO) — documentation, filings and follow-ups.",
+      "content": "Registration of Foreigner (FRRO) — Overview\n\nOur consultants support Registration of Foreigner (FRRO) under MISCELLANEOUS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "aadhar-pan-linking",
+      "name": "Aadhar PAN Linking",
+      "mainHead": "MISCELLANEOUS",
+      "categoryId": "mandatory-licenses",
+      "routeMainCategorySlug": "miscellaneous",
+      "shortDescription": "Expert assistance for Aadhar PAN Linking — documentation, filings and follow-ups.",
+      "content": "Aadhar PAN Linking — Overview\n\nOur consultants support Aadhar PAN Linking under MISCELLANEOUS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "aadhar-address-update",
+      "name": "Aadhar Address Update",
+      "mainHead": "MISCELLANEOUS",
+      "categoryId": "mandatory-licenses",
+      "routeMainCategorySlug": "miscellaneous",
+      "shortDescription": "Expert assistance for Aadhar Address Update — documentation, filings and follow-ups.",
+      "content": "Aadhar Address Update — Overview\n\nOur consultants support Aadhar Address Update under MISCELLANEOUS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "msme-registration",
+      "name": "MSME Registration",
+      "mainHead": "START NEW BUSINESS",
+      "categoryId": "new-business",
+      "routeMainCategorySlug": "starts-new-business",
+      "shortDescription": "Expert assistance for MSME Registration — documentation, filings and follow-ups.",
+      "content": "MSME Registration — Overview\n\nOur consultants support MSME Registration under START NEW BUSINESS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "rera-registration-for-projects",
+      "name": "RERA Registration for Projects",
+      "mainHead": "START NEW BUSINESS",
+      "categoryId": "new-business",
+      "routeMainCategorySlug": "starts-new-business",
+      "shortDescription": "Expert assistance for RERA Registration for Projects — documentation, filings and follow-ups.",
+      "content": "RERA Registration for Projects — Overview\n\nOur consultants support RERA Registration for Projects under START NEW BUSINESS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "rera-registration-for-agents",
+      "name": "RERA Registration for Agents",
+      "mainHead": "START NEW BUSINESS",
+      "categoryId": "new-business",
+      "routeMainCategorySlug": "starts-new-business",
+      "shortDescription": "Expert assistance for RERA Registration for Agents — documentation, filings and follow-ups.",
+      "content": "RERA Registration for Agents — Overview\n\nOur consultants support RERA Registration for Agents under START NEW BUSINESS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "vat-registration",
+      "name": "VAT Registration",
+      "mainHead": "START NEW BUSINESS",
+      "categoryId": "registration",
+      "routeMainCategorySlug": "starts-new-business",
+      "shortDescription": "Expert assistance for VAT Registration — documentation, filings and follow-ups.",
+      "content": "VAT Registration — Overview\n\nOur consultants support VAT Registration under START NEW BUSINESS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "darpan-registration",
+      "name": "DARPAN Registration",
+      "mainHead": "START NEW BUSINESS",
+      "categoryId": "ngo-registrations",
+      "routeMainCategorySlug": "starts-new-business",
+      "shortDescription": "Expert assistance for DARPAN Registration — documentation, filings and follow-ups.",
+      "content": "DARPAN Registration — Overview\n\nOur consultants support DARPAN Registration under START NEW BUSINESS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "barcode-registration",
+      "name": "BARCODE Registration",
+      "mainHead": "START NEW BUSINESS",
+      "categoryId": "mandatory-licenses",
+      "routeMainCategorySlug": "starts-new-business",
+      "shortDescription": "Expert assistance for BARCODE Registration — documentation, filings and follow-ups.",
+      "content": "BARCODE Registration — Overview\n\nOur consultants support BARCODE Registration under START NEW BUSINESS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "halal-license",
+      "name": "HALAL License",
+      "mainHead": "START NEW BUSINESS",
+      "categoryId": "mandatory-licenses",
+      "routeMainCategorySlug": "starts-new-business",
+      "shortDescription": "Expert assistance for HALAL License — documentation, filings and follow-ups.",
+      "content": "HALAL License — Overview\n\nOur consultants support HALAL License under START NEW BUSINESS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "drug-license-registration",
+      "name": "DRUG LICENSE REGISTRATION",
+      "mainHead": "START NEW BUSINESS",
+      "categoryId": "mandatory-licenses",
+      "routeMainCategorySlug": "starts-new-business",
+      "shortDescription": "Expert assistance for DRUG LICENSE REGISTRATION — documentation, filings and follow-ups.",
+      "content": "DRUG LICENSE REGISTRATION — Overview\n\nOur consultants support DRUG LICENSE REGISTRATION under START NEW BUSINESS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "legal-entity-identifier-lei",
+      "name": "Legal Entity Identifier (LEI)",
+      "mainHead": "START NEW BUSINESS",
+      "categoryId": "mandatory-licenses",
+      "routeMainCategorySlug": "starts-new-business",
+      "shortDescription": "Expert assistance for Legal Entity Identifier (LEI) — documentation, filings and follow-ups.",
+      "content": "Legal Entity Identifier (LEI) — Overview\n\nOur consultants support Legal Entity Identifier (LEI) under START NEW BUSINESS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "bis-registration",
+      "name": "BIS Registration",
+      "mainHead": "START NEW BUSINESS",
+      "categoryId": "mandatory-licenses",
+      "routeMainCategorySlug": "starts-new-business",
+      "shortDescription": "Expert assistance for BIS Registration — documentation, filings and follow-ups.",
+      "content": "BIS Registration — Overview\n\nOur consultants support BIS Registration under START NEW BUSINESS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "certificate-of-origin-coo",
+      "name": "Certificate of Origin (COO)",
+      "mainHead": "START NEW BUSINESS",
+      "categoryId": "import-export-business",
+      "routeMainCategorySlug": "starts-new-business",
+      "shortDescription": "Expert assistance for Certificate of Origin (COO) — documentation, filings and follow-ups.",
+      "content": "Certificate of Origin (COO) — Overview\n\nOur consultants support Certificate of Origin (COO) under START NEW BUSINESS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "startup-india-registration",
+      "name": "STARTUP INDIA REGISTRATION",
+      "mainHead": "START NEW BUSINESS",
+      "categoryId": "new-business",
+      "routeMainCategorySlug": "starts-new-business",
+      "shortDescription": "Expert assistance for STARTUP INDIA REGISTRATION — documentation, filings and follow-ups.",
+      "content": "STARTUP INDIA REGISTRATION — Overview\n\nOur consultants support STARTUP INDIA REGISTRATION under START NEW BUSINESS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "dpit-registration",
+      "name": "DPIT Registration",
+      "mainHead": "START NEW BUSINESS",
+      "categoryId": "new-business",
+      "routeMainCategorySlug": "starts-new-business",
+      "shortDescription": "Expert assistance for DPIT Registration — documentation, filings and follow-ups.",
+      "content": "DPIT Registration — Overview\n\nOur consultants support DPIT Registration under START NEW BUSINESS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "psic-license",
+      "name": "PSIC License",
+      "mainHead": "START NEW BUSINESS",
+      "categoryId": "mandatory-licenses",
+      "routeMainCategorySlug": "starts-new-business",
+      "shortDescription": "Expert assistance for PSIC License — documentation, filings and follow-ups.",
+      "content": "PSIC License — Overview\n\nOur consultants support PSIC License under START NEW BUSINESS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "iso-registration",
+      "name": "ISO Registration",
+      "mainHead": "START NEW BUSINESS",
+      "categoryId": "mandatory-licenses",
+      "routeMainCategorySlug": "starts-new-business",
+      "shortDescription": "Expert assistance for ISO Registration — documentation, filings and follow-ups.",
+      "content": "ISO Registration — Overview\n\nOur consultants support ISO Registration under START NEW BUSINESS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "dot-osp-license",
+      "name": "DOT OSP License",
+      "mainHead": "START NEW BUSINESS",
+      "categoryId": "mandatory-licenses",
+      "routeMainCategorySlug": "starts-new-business",
+      "shortDescription": "Expert assistance for DOT OSP License — documentation, filings and follow-ups.",
+      "content": "DOT OSP License — Overview\n\nOur consultants support DOT OSP License under START NEW BUSINESS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "isi-registration",
+      "name": "ISI Registration",
+      "mainHead": "START NEW BUSINESS",
+      "categoryId": "mandatory-licenses",
+      "routeMainCategorySlug": "starts-new-business",
+      "shortDescription": "Expert assistance for ISI Registration — documentation, filings and follow-ups.",
+      "content": "ISI Registration — Overview\n\nOur consultants support ISI Registration under START NEW BUSINESS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "startup-india-tax-exemption",
+      "name": "STARTUP INDIA TAX EXEMPTION",
+      "mainHead": "START NEW BUSINESS",
+      "categoryId": "income-tax",
+      "routeMainCategorySlug": "starts-new-business",
+      "shortDescription": "Expert assistance for STARTUP INDIA TAX EXEMPTION — documentation, filings and follow-ups.",
+      "content": "STARTUP INDIA TAX EXEMPTION — Overview\n\nOur consultants support STARTUP INDIA TAX EXEMPTION under START NEW BUSINESS, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "professional-tax-return-filing",
+      "name": "Professional Tax Return Filing",
+      "mainHead": "PROFESSIONAL TAX",
+      "categoryId": "professional-tax-compliance",
+      "routeMainCategorySlug": "professional-tax-compliance",
+      "shortDescription": "Expert assistance for Professional Tax Return Filing — documentation, filings and follow-ups.",
+      "content": "Professional Tax Return Filing — Overview\n\nOur consultants support Professional Tax Return Filing under PROFESSIONAL TAX, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "professional-tax-payment",
+      "name": "Professional Tax Payment",
+      "mainHead": "PROFESSIONAL TAX",
+      "categoryId": "professional-tax-compliance",
+      "routeMainCategorySlug": "professional-tax-compliance",
+      "shortDescription": "Expert assistance for Professional Tax Payment — documentation, filings and follow-ups.",
+      "content": "Professional Tax Payment — Overview\n\nOur consultants support Professional Tax Payment under PROFESSIONAL TAX, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
+    },
+    {
+      "id": "expedite-trademark-registration",
+      "name": "Expedite Trademark Registration",
+      "mainHead": "TRADEMARK & IP",
+      "categoryId": "trademark-ip",
+      "routeMainCategorySlug": "trademark-ip",
+      "shortDescription": "Expert assistance for Expedite Trademark Registration — documentation, filings and follow-ups.",
+      "content": "Expedite Trademark Registration — Overview\n\nOur consultants support Expedite Trademark Registration under TRADEMARK & IP, from applicability review through filings, department queries and final acknowledgement.\n\nApplicability\n\nThis service is intended for clients who need structured, compliant handling with clear documentation and realistic timelines.\n\nBenefits\n\nFewer rejections from incomplete paperwork, coordinated submissions, and a single point of contact for follow-ups.\n\nProcess\n\nRequirement capture → document checklist → preparation and validation → submission to authority → tracking and query handling → closure.\n\nDocuments required\n\nEntity KYC, address proof, category-specific forms and annexures. A tailored checklist is shared after the first consultation.",
+      "packages": [
+        {
+          "name": "Standard",
+          "price": "On request",
+          "description": "Consultation, checklist and filing support sized to a typical case."
+        },
+        {
+          "name": "Priority",
+          "price": "On request",
+          "description": "Tighter timelines with daily status checkpoints."
+        },
+        {
+          "name": "Retainer",
+          "price": "On request",
+          "description": "Ongoing coordination for multi-step or recurring filings."
+        }
+      ],
+      "steps": [
+        "Consultation & checklist",
+        "Document preparation",
+        "Filing / submission",
+        "Follow-up & closure"
+      ]
     }
   ],
   "faqs": {
