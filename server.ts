@@ -150,13 +150,8 @@ app.get('/api/content', (_req, res) => {
 });
 
 // ─── /api/admin/login ──────────────────────────────────────────────────────────
-app.post('/api/admin/login', (req, res) => {
-  const { password } = req.body as { password?: string };
-  const expected = process.env.ADMIN_PASSWORD;
-  if (expected && password !== expected) {
-    res.status(401).json({ error: 'Invalid password' });
-    return;
-  }
+// Password gate removed — admin panel is open access.
+app.post('/api/admin/login', (_req, res) => {
   const token = `admin_${Date.now()}_${Math.random().toString(36).slice(2)}`;
   adminTokens.add(token);
   res.json({ token });
