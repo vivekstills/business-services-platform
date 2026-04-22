@@ -9,6 +9,7 @@ import PaymentModal from '../components/PaymentModal';
 import RichContent from '../components/RichContent';
 import { isRichMarkdown } from '../data/serviceAboutContent';
 import { parsePriceToAmount } from '../utils/price';
+import { isDeveloperView } from '../utils/visibility';
 import {
   INDIAN_STATES,
   type IndianState,
@@ -460,28 +461,34 @@ export default function ServiceLeadHero({ service }: Props) {
         </div>
       </section>
 
-      <section className="max-w-[1200px] mx-auto px-3 sm:px-6 lg:px-8 py-5 sm:py-12 lg:mt-10">
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">About this page</h2>
-        {isRichMarkdown(service.content) ? (
-          <div className="bg-white rounded-xl border border-gray-200/80 px-5 sm:px-8 py-6 sm:py-8">
-            <RichContent content={service.content} />
+      {isDeveloperView() && (
+        <section className="max-w-[1200px] mx-auto px-3 sm:px-6 lg:px-8 py-5 sm:py-12 lg:mt-10">
+          <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-[11px] font-medium uppercase tracking-wider text-amber-700">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-amber-500" />
+            Developer preview — hidden in production
           </div>
-        ) : (
-          <div className="space-y-4 max-w-none">
-            {aboutParagraphs.slice(0, 1).map((paragraph, idx) => (
-              <p key={idx} className="text-gray-600 text-[13px] sm:text-base leading-relaxed line-clamp-3 sm:line-clamp-none">{paragraph}</p>
-            ))}
-            <ul className="space-y-2">
-              {keyPoints.map((point, idx) => (
-                <li key={idx} className="flex items-start gap-2 text-[12px] sm:text-sm text-gray-700">
-                  <Check className="w-3.5 h-3.5 text-emerald-600 mt-0.5 flex-shrink-0" />
-                  <span>{point}</span>
-                </li>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">About this page</h2>
+          {isRichMarkdown(service.content) ? (
+            <div className="bg-white rounded-xl border border-gray-200/80 px-5 sm:px-8 py-6 sm:py-8">
+              <RichContent content={service.content} />
+            </div>
+          ) : (
+            <div className="space-y-4 max-w-none">
+              {aboutParagraphs.slice(0, 1).map((paragraph, idx) => (
+                <p key={idx} className="text-gray-600 text-[13px] sm:text-base leading-relaxed line-clamp-3 sm:line-clamp-none">{paragraph}</p>
               ))}
-            </ul>
-          </div>
-        )}
-      </section>
+              <ul className="space-y-2">
+                {keyPoints.map((point, idx) => (
+                  <li key={idx} className="flex items-start gap-2 text-[12px] sm:text-sm text-gray-700">
+                    <Check className="w-3.5 h-3.5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </section>
+      )}
 
       {displayPackages.length > 0 && (
         <section className="relative bg-transparent py-5 sm:py-12 lg:mt-[60px] overflow-hidden noise-overlay">

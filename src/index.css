@@ -16,7 +16,10 @@
   html {
     font-size: calc(1rem + 1.5pt);
     -webkit-text-size-adjust: 100%;
-    overflow-x: hidden;
+    /* `overflow-x: clip` (not `hidden`) prevents horizontal overflow
+       WITHOUT creating a new scroll/stacking context that would break
+       `position: sticky` for descendants (e.g. the floating TOC). */
+    overflow-x: clip;
   }
   @media (min-width: 640px) {
     html { font-size: calc(1rem + 2.5pt); }
@@ -27,14 +30,14 @@
   body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: clip;
     background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
   }
 
   @media (max-width: 768px) {
     html,
     body {
-      overflow-x: hidden;
+      overflow-x: clip;
       width: 100%;
       height: auto;
       min-height: 100%;
@@ -51,7 +54,7 @@
     .container,
     .section-container {
       max-width: 100%;
-      overflow-x: hidden;
+      overflow-x: clip;
     }
 
     section:not(.hero-section-mobile) {
