@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { Info, AlertTriangle, Lightbulb, Sparkles } from 'lucide-react';
 
 type Props = {
   content: string;
@@ -7,6 +8,8 @@ type Props = {
   showToc?: boolean;
 };
 
+type CalloutVariant = 'default' | 'note' | 'tip' | 'warn' | 'important';
+
 type Block =
   | { type: 'h2'; text: string; id: string }
   | { type: 'h3'; text: string }
@@ -14,7 +17,8 @@ type Block =
   | { type: 'p'; text: string }
   | { type: 'ul'; items: string[] }
   | { type: 'ol'; items: string[] }
-  | { type: 'blockquote'; lines: string[] };
+  | { type: 'blockquote'; lines: string[]; variant: CalloutVariant; title: string | null }
+  | { type: 'table'; headers: string[]; rows: string[][] };
 
 function parseInline(text: string): React.ReactNode[] {
   const parts = text.split(/(\*\*.*?\*\*|\[([^\]]+)\]\(([^)]+)\))/g);
@@ -52,6 +56,21 @@ function extractSectionNum(text: string): { num: string | null; rest: string } {
   return { num: null, rest: text };
 }
 
+/** Pipe-split a GFM table row. Trims cells and drops leading/trailing empties
+ *  created by the outer `|` delimiters. */
+function splitTableRow(line: string): string[] {
+  const trimmed = line.trim().replace(/^\|/, '').replace(/\|$/, '');
+  return trimmed.split('|').map((c) => c.trim());
+}
+
+function isTableSeparator(line: string): boolean {
+  const t = line.trim();
+  if (!t.startsWith('|') || !t.endsWith('|')) return false;
+  const cells = splitTableRow(t);
+  if (cells.length === 0) return false;
+  return cells.every((c) => /^:?-{2,}:?$/.test(c));
+}
+
 function parseBlocks(raw: string): Block[] {
   const lines = raw.split('\n');
   const blocks: Block[] = [];
@@ -70,13 +89,49 @@ function parseBlocks(raw: string): Block[] {
     } else if (trimmed.startsWith('#### ')) {
       blocks.push({ type: 'h4', text: trimmed.slice(5).trim() });
       i++;
+    } else if (
+      trimmed.startsWith('|') &&
+      trimmed.endsWith('|') &&
+      i + 1 < lines.length &&
+      isTableSeparator(lines[i + 1])
+    ) {
+      // GFM pipe table: header row, separator row, then data rows until a
+      // non-pipe line.
+      const headers = splitTableRow(trimmed);
+      i += 2; // skip header + separator
+      const rows: string[][] = [];
+      while (i < lines.length) {
+        const next = lines[i].trim();
+        if (!next.startsWith('|') || !next.endsWith('|')) break;
+        rows.push(splitTableRow(next));
+        i++;
+      }
+      blocks.push({ type: 'table', headers, rows });
     } else if (trimmed.startsWith('> ')) {
       const bqLines: string[] = [];
       while (i < lines.length && lines[i].trim().startsWith('> ')) {
         bqLines.push(lines[i].trim().slice(2).trim());
         i++;
       }
-      blocks.push({ type: 'blockquote', lines: bqLines });
+      // GitHub-style callout marker on the first line, e.g.
+      //   > [!IMPORTANT] Optional title
+      //   > body line 1
+      let variant: CalloutVariant = 'default';
+      let title: string | null = null;
+      if (bqLines.length > 0) {
+        const m = bqLines[0].match(/^\[!(NOTE|TIP|WARN|WARNING|IMPORTANT)\]\s*(.*)$/);
+        if (m) {
+          const tag = m[1].toUpperCase();
+          variant =
+            tag === 'NOTE' ? 'note'
+            : tag === 'TIP' ? 'tip'
+            : tag === 'IMPORTANT' ? 'important'
+            : 'warn';
+          title = m[2].trim() ? m[2].trim() : null;
+          bqLines.shift();
+        }
+      }
+      blocks.push({ type: 'blockquote', lines: bqLines, variant, title });
     } else if (/^[-*] /.test(trimmed)) {
       const items: string[] = [];
       while (i < lines.length && /^[-*] /.test(lines[i].trim())) {
@@ -97,7 +152,8 @@ function parseBlocks(raw: string): Block[] {
       while (i < lines.length) {
         const next = lines[i].trim();
         if (!next || next.startsWith('## ') || next.startsWith('### ') || next.startsWith('#### ') ||
-          /^[-*] /.test(next) || /^\d+\.\s/.test(next) || next.startsWith('> ')) break;
+          /^[-*] /.test(next) || /^\d+\.\s/.test(next) || next.startsWith('> ') ||
+          (next.startsWith('|') && next.endsWith('|'))) break;
         para += ' ' + next;
         i++;
       }
@@ -133,35 +189,53 @@ function shortChipLabel(label: string): string {
 }
 
 /**
- * Interactive Table of Contents. Sticky horizontal chip strip that highlights
- * the section currently in the viewport. Clicking a chip scrolls the page to
- * the matching H2 block.
+ * Interactive Table of Contents — a horizontally-scrollable chip strip that
+ * floats at the top of the viewport while the user is reading an article,
+ * and settles back into the document flow when scrolled past.
  *
- * Deliberately kept minimal:
- *   - Observer only drives chip highlight state; never touches page scroll.
- *   - No smooth browser scroll. Programmatic scroll is a direct scrollTop
- *     assignment, which eliminates any possibility of the observer racing
- *     with an in-flight `behavior: 'smooth'` animation (the "endless
- *     scrolling" symptom previously seen on long service pages).
- *   - The strip itself is not auto-scrolled horizontally; the active chip
- *     updates in place. On mobile the user can swipe the strip freely.
+ * Why `position: fixed` instead of `position: sticky`?
+ *   Many ancestors in this app set `overflow: hidden` / `overflow-x: hidden`
+ *   which silently breaks `position: sticky` on descendants (sticky scopes
+ *   itself to the nearest scroll container). Rather than fight that, we use
+ *   a rock-solid `position: fixed` pattern:
+ *     1. Render a zero-height sentinel at the pill's natural position.
+ *     2. Observe when the sentinel leaves the top of the viewport AND when
+ *        the outer article wrapper is still partially in view.
+ *     3. While those conditions hold, render the pill as `fixed` so it
+ *        visibly floats over the page; otherwise render it inline so it
+ *        occupies its normal spot in the flow (no layout jump).
+ *
+ * Other design notes:
+ *   - Observer on H2 blocks only drives chip highlight state; it never
+ *     triggers a page scroll, so there is no risk of the observer racing
+ *     with a smooth-scroll animation (the "endless scrolling" symptom
+ *     previously seen on long service pages).
+ *   - Programmatic jumps use `window.scrollTo(0, top)` with default auto
+ *     behavior — no smooth animation, no race window.
+ *   - The chip strip itself never auto-scrolls horizontally; on mobile the
+ *     user can swipe freely.
  */
 function TableOfContents({ items }: { items: TocItem[] }) {
   const [activeId, setActiveId] = useState<string | null>(items[0]?.id ?? null);
+  const [isFloating, setIsFloating] = useState(false);
+  /** Sentinel placed at the pill's natural (in-flow) position. */
+  const sentinelRef = useRef<HTMLDivElement | null>(null);
   /**
-   * Short window after a click during which observer callbacks are ignored.
-   * Prevents a visible flicker on the clicked chip while the page jumps.
+   * Short window after a click during which the H2 observer is ignored, so
+   * the clicked chip's "active" state doesn't flicker mid-jump.
    */
   const suppressObserverUntil = useRef(0);
+  /** Height of the pill — used both to reserve space in flow and to decide
+   *  when the article bottom has scrolled past the floating pill. */
+  const PILL_RESERVED_HEIGHT = 56;
+  const FLOATING_TOP = 80;
 
+  // H2-in-viewport observer — drives chip highlight only.
   useEffect(() => {
     if (items.length === 0) return;
     const observer = new IntersectionObserver(
       (entries) => {
         if (performance.now() < suppressObserverUntil.current) return;
-        // Pick the top-most entry that is currently intersecting the
-        // "active band" (viewport middle 10%). Updating state here must
-        // NEVER cause a scroll side effect elsewhere.
         const visible = entries
           .filter((e) => e.isIntersecting)
           .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
@@ -179,12 +253,48 @@ function TableOfContents({ items }: { items: TocItem[] }) {
     return () => observer.disconnect();
   }, [items]);
 
+  // Scroll-driven float state. Float the pill when (a) the sentinel has
+  // scrolled above the pinned top, AND (b) the article content below the
+  // sentinel is still visible — i.e. the last H2 section hasn't fully
+  // scrolled past the pinned top. Using scroll + rAF keeps this cheap.
+  useEffect(() => {
+    const sentinel = sentinelRef.current;
+    if (!sentinel) return;
+
+    let raf = 0;
+    const evaluate = () => {
+      raf = 0;
+      const sentinelRect = sentinel.getBoundingClientRect();
+      // Find the containing article wrapper by walking up; fall back to the
+      // sentinel's parent. We use the parent wrapper's bottom to know when
+      // the reader has moved past the article entirely.
+      const wrapper = sentinel.parentElement;
+      const wrapperRect = wrapper ? wrapper.getBoundingClientRect() : sentinelRect;
+
+      const pastTop = sentinelRect.top <= FLOATING_TOP;
+      const stillInArticle = wrapperRect.bottom > FLOATING_TOP + PILL_RESERVED_HEIGHT;
+      setIsFloating(pastTop && stillInArticle);
+    };
+
+    const onScrollOrResize = () => {
+      if (raf) return;
+      raf = window.requestAnimationFrame(evaluate);
+    };
+
+    evaluate();
+    window.addEventListener('scroll', onScrollOrResize, { passive: true });
+    window.addEventListener('resize', onScrollOrResize);
+    return () => {
+      if (raf) window.cancelAnimationFrame(raf);
+      window.removeEventListener('scroll', onScrollOrResize);
+      window.removeEventListener('resize', onScrollOrResize);
+    };
+  }, []);
+
   const onJump = (id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
-    // Offset clears the fixed site header (~64px) + sticky TOC strip (~55px).
-    // Using plain `window.scrollTo(top)` with the default "auto" behavior so
-    // the browser can't interleave a smooth animation with observer updates.
+    // Offset clears the fixed site header (~64px) + floating TOC pill (~55px).
     const offset = 120;
     const top = el.getBoundingClientRect().top + window.scrollY - offset;
     suppressObserverUntil.current = performance.now() + 600;
@@ -192,55 +302,157 @@ function TableOfContents({ items }: { items: TocItem[] }) {
     window.scrollTo(0, Math.max(0, top));
   };
 
+  // When floating, the pill is rendered as `position: fixed` so the chrome
+  // (border, shadow, blur) is anchored to the viewport. When not floating,
+  // the pill sits in normal flow at its sentinel. We reserve vertical space
+  // via the sentinel wrapper so the page doesn't jump when state flips.
+  const pillPositionStyle: React.CSSProperties = isFloating
+    ? { position: 'fixed', top: FLOATING_TOP, left: '50%', transform: 'translateX(-50%)', zIndex: 30 }
+    : { position: 'relative' };
+
   return (
-    <div className="sticky top-20 z-20 mb-6 flex justify-center pointer-events-none">
-      <div className="pointer-events-auto inline-flex max-w-full rounded-full border border-gray-200 bg-white/85 backdrop-blur-xl shadow-[0_10px_30px_-12px_rgba(17,24,39,0.18)] ring-1 ring-black/5">
+    // Outer sentinel wrapper reserves a constant height (~56px) regardless
+    // of floating state, which prevents a layout shift when the pill lifts.
+    <div
+      ref={sentinelRef}
+      className="relative mb-6 flex justify-center"
+      style={{ minHeight: PILL_RESERVED_HEIGHT }}
+    >
+      <div
+        style={pillPositionStyle}
+        className="pointer-events-auto inline-flex max-w-[calc(100vw-24px)] rounded-full border border-gray-200 bg-white/85 backdrop-blur-xl shadow-[0_10px_30px_-12px_rgba(17,24,39,0.18)] ring-1 ring-black/5"
+      >
         <div
           className="flex items-center gap-1.5 max-w-full overflow-x-auto px-2 py-1.5 rounded-full hide-scrollbar toc-fade-mask"
           role="tablist"
           aria-label="Section navigation"
         >
-        {items.map((it) => {
-          const isActive = activeId === it.id;
-          return (
-            <button
-              key={it.id}
-              data-toc-target={it.id}
-              type="button"
-              role="tab"
-              aria-selected={isActive}
-              onClick={() => onJump(it.id)}
-              className={`inline-flex items-center gap-1.5 shrink-0 rounded-full border px-3 py-1.5 text-[12.5px] font-medium transition-all whitespace-nowrap ${
-                isActive
-                  ? 'border-gray-900 bg-gray-900 text-white'
-                  : 'border-gray-200 bg-white text-gray-600 hover:border-gray-400 hover:text-gray-900'
-              }`}
-            >
-              {it.num && (
-                <span
-                  className={`inline-flex items-center justify-center w-[18px] h-[18px] rounded-full text-[10px] font-bold tabular-nums ${
-                    isActive ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-500'
-                  }`}
-                >
-                  {it.num}
-                </span>
-              )}
-              <span>{shortChipLabel(it.label)}</span>
-            </button>
-          );
-        })}
+          {items.map((it) => {
+            const isActive = activeId === it.id;
+            return (
+              <button
+                key={it.id}
+                data-toc-target={it.id}
+                type="button"
+                role="tab"
+                aria-selected={isActive}
+                onClick={() => onJump(it.id)}
+                className={`inline-flex items-center gap-1.5 shrink-0 rounded-full border px-3 py-1.5 text-[12.5px] font-medium transition-all whitespace-nowrap ${
+                  isActive
+                    ? 'border-gray-900 bg-gray-900 text-white'
+                    : 'border-gray-200 bg-white text-gray-600 hover:border-gray-400 hover:text-gray-900'
+                }`}
+              >
+                {it.num && (
+                  <span
+                    className={`inline-flex items-center justify-center w-[18px] h-[18px] rounded-full text-[10px] font-bold tabular-nums ${
+                      isActive ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-500'
+                    }`}
+                  >
+                    {it.num}
+                  </span>
+                )}
+                <span>{shortChipLabel(it.label)}</span>
+              </button>
+            );
+          })}
         </div>
       </div>
     </div>
   );
 }
 
+/** Styling config for callout blockquotes — keeps the render body compact. */
+const CALLOUT_STYLES: Record<
+  CalloutVariant,
+  { wrap: string; iconWrap: string; Icon: React.ComponentType<{ className?: string }>; label: string }
+> = {
+  default:   { wrap: 'border-gray-200 bg-gray-50',        iconWrap: 'bg-gray-200 text-gray-700',   Icon: Info,           label: 'Note' },
+  note:      { wrap: 'border-blue-200 bg-blue-50/70',      iconWrap: 'bg-blue-100 text-blue-700',    Icon: Info,           label: 'Note' },
+  tip:       { wrap: 'border-emerald-200 bg-emerald-50/70',iconWrap: 'bg-emerald-100 text-emerald-700', Icon: Lightbulb,   label: 'Tip' },
+  warn:      { wrap: 'border-amber-200 bg-amber-50/80',    iconWrap: 'bg-amber-100 text-amber-700',  Icon: AlertTriangle,  label: 'Heads up' },
+  important: { wrap: 'border-violet-200 bg-violet-50/70',  iconWrap: 'bg-violet-100 text-violet-700',Icon: Sparkles,       label: 'Important' },
+};
+
+type CalloutProps = { variant: CalloutVariant; title: string | null; lines: string[] };
+
+const Callout: React.FC<CalloutProps> = ({ variant, title, lines }) => {
+  const cfg = CALLOUT_STYLES[variant];
+  const Icon = cfg.Icon;
+  const heading = title ?? (variant === 'default' ? null : cfg.label);
+  return (
+    <div className={`my-5 rounded-2xl border ${cfg.wrap} p-4 sm:p-5 shadow-sm`}>
+      <div className="flex items-start gap-3">
+        <span className={`inline-flex items-center justify-center w-9 h-9 rounded-xl ${cfg.iconWrap} flex-shrink-0`}>
+          <Icon className="w-4.5 h-4.5" />
+        </span>
+        <div className="min-w-0 flex-1">
+          {heading && (
+            <div className="text-[15px] font-semibold text-gray-900 mb-1">
+              {parseInline(heading)}
+            </div>
+          )}
+          <div className="space-y-1.5">
+            {lines.map((line, j) => (
+              <p key={j} className="text-[16px] text-gray-700 leading-relaxed">
+                {parseInline(line)}
+              </p>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+type DataTableProps = { headers: string[]; rows: string[][] };
+
+const DataTable: React.FC<DataTableProps> = ({ headers, rows }) => {
+  return (
+    <div className="my-5 rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+      <div className="overflow-x-auto">
+        <table className="w-full border-collapse text-[15px]">
+          <thead>
+            <tr className="bg-gradient-to-r from-slate-50 to-gray-50 border-b border-gray-200">
+              {headers.map((h, i) => (
+                <th
+                  key={i}
+                  className="text-left font-semibold text-gray-800 px-4 py-3 whitespace-nowrap"
+                >
+                  {parseInline(h)}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row, rIdx) => (
+              <tr
+                key={rIdx}
+                className={`border-b border-gray-100 last:border-b-0 ${rIdx % 2 === 1 ? 'bg-gray-50/40' : 'bg-white'} hover:bg-blue-50/40 transition-colors`}
+              >
+                {row.map((cell, cIdx) => (
+                  <td
+                    key={cIdx}
+                    className="align-top px-4 py-3 text-gray-700 leading-relaxed"
+                  >
+                    {parseInline(cell)}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
+
 export default function RichContent({ content, className = '', showToc = true }: Props) {
   const safe = content ?? '';
   const isPlainText =
     !safe.includes('## ') && !safe.includes('### ') && !safe.includes('#### ') &&
     !safe.includes('- ') && !safe.includes('* ') && !safe.includes('**') &&
-    !/\[.*?\]\(.*?\)/.test(safe) && !safe.includes('\n> ');
+    !/\[.*?\]\(.*?\)/.test(safe) && !safe.includes('\n> ') && !safe.includes('|');
 
   const blocks = useMemo(() => (safe.trim() && !isPlainText ? parseBlocks(safe) : []), [safe, isPlainText]);
   const toc = useMemo(() => buildToc(blocks), [blocks]);
@@ -290,14 +502,16 @@ export default function RichContent({ content, className = '', showToc = true }:
 
           case 'blockquote':
             return (
-              <div key={i} className="my-4 pl-4 border-l-2 border-gray-300 py-1">
-                {block.lines.map((line, j) => (
-                  <p key={j} className="text-[17px] text-gray-600 leading-relaxed italic">
-                    {parseInline(line)}
-                  </p>
-                ))}
-              </div>
+              <Callout
+                key={i}
+                variant={block.variant}
+                title={block.title}
+                lines={block.lines}
+              />
             );
+
+          case 'table':
+            return <DataTable key={i} headers={block.headers} rows={block.rows} />;
 
           case 'p':
             return (
