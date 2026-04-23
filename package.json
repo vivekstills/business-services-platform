@@ -8,8 +8,8 @@
     "server": "tsx watch server.ts",
     "seed": "tsx scripts/seed-content.ts",
     "generate:route-slugs": "tsx scripts/generate-route-slugs.ts",
-    "build": "cp data/content.json public/content.json && tsx scripts/generate-sitemap.ts && vite build",
-    "build:prerender": "cp data/content.json public/content.json && tsx scripts/generate-sitemap.ts && vite build && tsx scripts/prerender.ts",
+    "build": "cp data/content.json public/content.json && node scripts/run-sitemap-if-present.mjs && vite build",
+    "build:prerender": "cp data/content.json public/content.json && node scripts/run-sitemap-if-present.mjs && vite build && tsx scripts/prerender.ts",
     "preview": "vite preview",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit"
