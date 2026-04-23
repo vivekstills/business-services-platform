@@ -7,9 +7,9 @@ import { useContent } from '../context/ContentContext';
 import ServiceFAQ from '../components/ServiceFAQ';
 import PaymentModal from '../components/PaymentModal';
 import RichContent from '../components/RichContent';
+import PricingFeatureText from '../components/PricingFeatureText';
 import { isRichMarkdown } from '../data/serviceAboutContent';
 import { parsePriceToAmount } from '../utils/price';
-import { isDeveloperView } from '../utils/visibility';
 import {
   INDIAN_STATES,
   type IndianState,
@@ -470,34 +470,28 @@ export default function ServiceLeadHero({ service }: Props) {
         </div>
       </section>
 
-      {isDeveloperView() && (
-        <section className="max-w-[1200px] mx-auto px-3 sm:px-6 lg:px-8 py-5 sm:py-12 lg:mt-10">
-          <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-[11px] font-medium uppercase tracking-wider text-amber-700">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-amber-500" />
-            Developer preview — hidden in production
+      <section className="max-w-[1200px] mx-auto px-3 sm:px-6 lg:px-8 py-5 sm:py-12 lg:mt-10">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">About this page</h2>
+        {isRichMarkdown(service.content) ? (
+          <div className="bg-white rounded-xl border border-gray-200/80 px-5 sm:px-8 py-6 sm:py-8">
+            <RichContent content={service.content} />
           </div>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">About this page</h2>
-          {isRichMarkdown(service.content) ? (
-            <div className="bg-white rounded-xl border border-gray-200/80 px-5 sm:px-8 py-6 sm:py-8">
-              <RichContent content={service.content} />
-            </div>
-          ) : (
-            <div className="space-y-4 max-w-none">
-              {aboutParagraphs.slice(0, 1).map((paragraph, idx) => (
-                <p key={idx} className="text-gray-600 text-[13px] sm:text-base leading-relaxed line-clamp-3 sm:line-clamp-none">{paragraph}</p>
+        ) : (
+          <div className="space-y-4 max-w-none">
+            {aboutParagraphs.slice(0, 1).map((paragraph, idx) => (
+              <p key={idx} className="text-gray-600 text-[13px] sm:text-base leading-relaxed line-clamp-3 sm:line-clamp-none">{paragraph}</p>
+            ))}
+            <ul className="space-y-2">
+              {keyPoints.map((point, idx) => (
+                <li key={idx} className="flex items-start gap-2 text-[12px] sm:text-sm text-gray-700">
+                  <Check className="w-3.5 h-3.5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                  <span>{point}</span>
+                </li>
               ))}
-              <ul className="space-y-2">
-                {keyPoints.map((point, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-[12px] sm:text-sm text-gray-700">
-                    <Check className="w-3.5 h-3.5 text-emerald-600 mt-0.5 flex-shrink-0" />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </section>
-      )}
+            </ul>
+          </div>
+        )}
+      </section>
 
       {packagesToRender.length > 0 && (
         <section className="relative bg-transparent py-5 sm:py-12 lg:mt-[60px] overflow-hidden noise-overlay">
@@ -615,17 +609,17 @@ export default function ServiceLeadHero({ service }: Props) {
                         </div>
 
                         {pkg.features && pkg.features.length > 0 && (
-                          <div className="hidden sm:block flex-1 mb-5">
-                            <p className={`text-[calc(10.5px+3pt)] font-bold uppercase tracking-[0.15em] mb-3 ${isGradient ? 'text-blue-300' : 'text-gray-400'}`}>
+                          <div className="flex-1 mb-5">
+                            <p className={`text-[calc(10.5px+3pt)] font-bold uppercase tracking-[0.15em] mb-2 sm:mb-3 ${isGradient ? 'text-blue-300' : 'text-gray-400'}`}>
                               What's included:
                             </p>
-                            <ul className="space-y-2">
-                              {pkg.features.slice(0, 4).map((f, fi) => (
+                            <ul className="space-y-2 sm:space-y-2.5">
+                              {pkg.features.map((f, fi) => (
                                 <li key={fi} className={`flex items-start gap-2 text-[12px] sm:text-[calc(13.5px+3pt)] ${isGradient ? 'text-blue-100' : 'text-gray-600'}`}>
                                   <div className={`mt-0.5 w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 ${isGradient ? 'bg-white/20' : 'bg-emerald-50'}`}>
                                     <Check className={`w-2.5 h-2.5 ${isGradient ? 'text-white' : 'text-emerald-600'}`} />
                                   </div>
-                                  {f}
+                                  <PricingFeatureText text={f} className="min-w-0" />
                                 </li>
                               ))}
                             </ul>
@@ -715,7 +709,7 @@ export default function ServiceLeadHero({ service }: Props) {
                                     <div className={`mt-0.5 w-3.5 h-3.5 rounded-full flex items-center justify-center flex-shrink-0 ${isGradient ? 'bg-white/20' : 'bg-emerald-50'}`}>
                                       <Check className={`w-2 h-2 ${isGradient ? 'text-white' : 'text-emerald-600'}`} />
                                     </div>
-                                    {f}
+                                    <PricingFeatureText text={f} className="min-w-0" />
                                   </li>
                                 ))}
                               </ul>

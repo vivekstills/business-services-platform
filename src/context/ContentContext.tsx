@@ -6,6 +6,7 @@ import FAQS from '../data/faqs';
 import { CONTACT_EMAIL, CONTACT_PHONE } from '../data/constants';
 import type { Service } from '../data/services';
 import { defaultPolicyPages } from '../data/policyPageDefaults';
+import { isRichMarkdown } from '../data/serviceAboutContent';
 
 const defaultContent: Content = {
   hero: {
@@ -258,6 +259,36 @@ function unionCodeDefinedServices(merged: Content): Content {
   };
 }
 
+/** Prefer structured About copy from the shipped `public/content.json` over API short blurbs. */
+function applyRichAboutFromPublicSnapshot(merged: Content, snapshot: unknown): Content {
+  if (!snapshot || typeof snapshot !== 'object') return merged;
+  const list = (snapshot as { services?: Service[] }).services;
+  if (!Array.isArray(list) || list.length === 0) return merged;
+  const byId = new Map(list.map((s) => [s.id, s] as const));
+  let changed = false;
+  const next = (merged.services ?? []).map((s) => {
+    const pub = byId.get(s.id);
+    const c = pub?.content;
+    if (typeof c !== 'string' || !c.trim() || !isRichMarkdown(c)) return s;
+    if (s.content && isRichMarkdown(s.content)) return s;
+    if (c === s.content) return s;
+    changed = true;
+    return { ...s, content: c };
+  });
+  if (!changed) return merged;
+  return { ...merged, services: next };
+}
+
+async function fetchPublicContentJson(): Promise<unknown | null> {
+  try {
+    const r = await fetch('/content.json');
+    if (!r.ok) return null;
+    return await r.json();
+  } catch {
+    return null;
+  }
+}
+
 const ContentContext = createContext<ContentContextValue | null>(null);
 
 export function ContentProvider({ children }: { children: React.ReactNode }) {
@@ -275,7 +306,9 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
         if (apiRes.ok) {
           const apiData = await apiRes.json();
           if (apiData && typeof apiData === 'object' && Object.keys(apiData).length > 0) {
-            setContent(unionCodeDefinedServices(deepMerge(defaultContent, apiData) as Content));
+            const publicSnap = await fetchPublicContentJson();
+            const base = unionCodeDefinedServices(deepMerge(defaultContent, apiData) as Content);
+            setContent(applyRichAboutFromPublicSnapshot(base, publicSnap));
             return;
           }
         }
