@@ -7,6 +7,11 @@ import {
 } from 'lucide-react';
 import RichContent from '../RichContent';
 import type { Article } from '../../types/content';
+import {
+  ARTICLE_CATEGORIES,
+  getArticleCategoryBadgeClasses,
+  normalizeArticleCategory,
+} from '../../data/articleCategories';
 
 type Props = {
   data: Article[];
@@ -14,21 +19,6 @@ type Props = {
   onSave: (articles: Article[], categories: string[]) => void;
   saving: boolean;
 };
-
-const RECOMMENDED_ARTICLE_CATEGORIES: string[] = [
-  'GST & Returns',
-  'Income Tax',
-  'ITR Forms & Filing',
-  'TDS & TCS',
-  'Tax Deductions & Exemptions',
-  'Capital Gains',
-  'Advance Tax & Self Assessment',
-  'Tax Notices & Compliance',
-  'Business Compliance',
-  'Payroll & Salary Taxation',
-  'Accounting & Audit',
-  'Others / Miscellaneous',
-];
 
 // ─── Inline ContentEditor (mirrors AdminServicesSection version) ──────────────
 function ContentEditor({ value, onChange }: { value: string; onChange: (v: string) => void }) {
@@ -309,21 +299,8 @@ function emptyArticle(): Article {
 }
 
 // ─── Category badge ───────────────────────────────────────────────────────────
-const CATEGORY_COLORS: Record<string, string> = {
-  'FSSAI Compliance': 'bg-yellow-50 text-yellow-700 border-yellow-200',
-  'Firm / New Business': 'bg-blue-50 text-blue-700 border-blue-200',
-  'Goods & Service Tax': 'bg-orange-50 text-orange-700 border-orange-200',
-  'Import-Export Business': 'bg-cyan-50 text-cyan-700 border-cyan-200',
-  'Income Tax': 'bg-green-50 text-green-700 border-green-200',
-  'Legal Compliance': 'bg-red-50 text-red-700 border-red-200',
-  'MCA Compliance': 'bg-indigo-50 text-indigo-700 border-indigo-200',
-  'Miscellaneous': 'bg-slate-50 text-slate-700 border-slate-200',
-  'Professional / Sector-Wise Compliance': 'bg-rose-50 text-rose-700 border-rose-200',
-  'Trademark & IP': 'bg-purple-50 text-purple-700 border-purple-200',
-};
-
 function CategoryBadge({ cat }: { cat: string }) {
-  const cls = CATEGORY_COLORS[cat] ?? 'bg-gray-50 text-gray-600 border-gray-200';
+  const cls = getArticleCategoryBadgeClasses(cat);
   return <span className={`inline-flex items-center px-2 py-0.5 rounded-md text-[calc(11px+3pt)] font-semibold border ${cls}`}>{cat}</span>;
 }
 
@@ -339,14 +316,18 @@ export default function AdminArticlesSection({ data, categories, onSave, saving 
   const [showCatMgr, setShowCatMgr] = useState(false);
 
   useEffect(() => {
-    setArticles(Array.isArray(data) ? data : []);
+    const normalizedArticles = (Array.isArray(data) ? data : []).map((a) => ({
+      ...a,
+      category: normalizeArticleCategory(a.category || ''),
+    }));
+    setArticles(normalizedArticles);
     const articleDerived = (Array.isArray(data) ? data : [])
-      .map((a) => (a.category || '').trim())
+      .map((a) => normalizeArticleCategory((a.category || '').trim()))
       .filter(Boolean);
     const incoming = (Array.isArray(categories) ? categories : [])
-      .map((c) => (c || '').trim())
+      .map((c) => normalizeArticleCategory((c || '').trim()))
       .filter(Boolean);
-    const normalized = Array.from(new Set([...RECOMMENDED_ARTICLE_CATEGORIES, ...incoming, ...articleDerived]));
+    const normalized = Array.from(new Set([...ARTICLE_CATEGORIES, ...incoming, ...articleDerived]));
     setCats(normalized);
   }, [data, categories]);
 
@@ -458,7 +439,7 @@ export default function AdminArticlesSection({ data, categories, onSave, saving 
               <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Category</label>
               <select value={draft.category} onChange={(e) => updateDraft('category', e.target.value)}
                 className="w-full px-4 py-2 rounded-lg border border-gray-200 text-sm focus:border-blue-400 focus:ring-1 focus:ring-blue-100">
-                <option value="">Select category…</option>
+                <option value="">Select a category…</option>
                 {cats.map((c) => <option key={c} value={c}>{c}</option>)}
               </select>
             </div>

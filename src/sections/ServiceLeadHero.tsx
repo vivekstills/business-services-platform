@@ -40,6 +40,10 @@ function getAboutParagraphs(content: string): string[] {
     .slice(0, 3);
 }
 
+function isOnRequestPrice(price: string): boolean {
+  return /\bon\s*request\b/i.test((price || '').trim());
+}
+
 function stepsFor(service: Service): string[] {
   // Admin-configured steps take priority
   if (service.steps && service.steps.length > 0) return service.steps;
@@ -166,6 +170,11 @@ export default function ServiceLeadHero({ service }: Props) {
   }, [hasCustomTabbedPricing, customPricingTabs, serviceTabIdx]);
 
   const displayPackages: ServicePackage[] = packagesFromAdminTabs ?? activePackages;
+  const onRequestPackages = useMemo(
+    () => displayPackages.filter((pkg) => isOnRequestPrice(pkg.price)),
+    [displayPackages]
+  );
+  const packagesToRender: ServicePackage[] = onRequestPackages.length > 0 ? [onRequestPackages[0]] : displayPackages;
   const aboutParagraphs = useMemo(() => getAboutParagraphs(service.content), [service.content]);
   const keyPoints = useMemo(() => steps.slice(0, 3), [steps]);
 
@@ -490,7 +499,7 @@ export default function ServiceLeadHero({ service }: Props) {
         </section>
       )}
 
-      {displayPackages.length > 0 && (
+      {packagesToRender.length > 0 && (
         <section className="relative bg-transparent py-5 sm:py-12 lg:mt-[60px] overflow-hidden noise-overlay">
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-br from-blue-100/20 via-transparent to-indigo-100/15 rounded-full blur-[130px] animate-float-glow" />
@@ -567,7 +576,7 @@ export default function ServiceLeadHero({ service }: Props) {
                 transition={{ duration: 0.22 }}
               >
                 <div className="flex overflow-x-auto hide-scrollbar gap-3 pb-2 snap-x snap-mandatory sm:grid sm:overflow-visible sm:pb-0 sm:grid-cols-2 xl:grid-cols-3 sm:items-stretch sm:gap-5 lg:gap-6">
-                  {displayPackages.slice(0, 3).map((pkg, i) => {
+                  {packagesToRender.slice(0, 3).map((pkg, i) => {
                     const { isGradient, badgeLabel, showBadgePill, badgeClass } = packageVisuals(pkg);
                     const amountPaise = parsePriceToAmount(pkg.price);
                     return (
@@ -656,11 +665,11 @@ export default function ServiceLeadHero({ service }: Props) {
                   })}
                 </div>
 
-                {displayPackages.length > 3 && (
+                {packagesToRender.length > 3 && (
                   <div className="mt-8">
                     <p className="text-xs font-bold text-gray-400 uppercase tracking-[0.18em] mb-4">More options</p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                      {displayPackages.slice(3).map((pkg, i) => {
+                      {packagesToRender.slice(3).map((pkg, i) => {
                         const { isGradient, badgeLabel, showBadgePill, badgeClass } = packageVisuals(pkg);
                         const amountPaise = parsePriceToAmount(pkg.price);
                         return (

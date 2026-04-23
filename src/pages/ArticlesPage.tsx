@@ -5,21 +5,19 @@ import { BookOpen, ChevronRight, Search, Clock, Calendar, User, Tag, ArrowRight 
 import { useContent } from '../context/ContentContext';
 import type { Article } from '../types/content';
 import SEOHead from '../components/SEOHead';
-
-const CATEGORY_COLORS: Record<string, string> = {
-  'GST & Tax': 'bg-orange-50 text-orange-700 border-orange-200',
-  'Company Registration': 'bg-blue-50 text-blue-700 border-blue-200',
-  'Trademark & IP': 'bg-purple-50 text-purple-700 border-purple-200',
-  'Compliance': 'bg-red-50 text-red-700 border-red-200',
-  'Registrations': 'bg-teal-50 text-teal-700 border-teal-200',
-  'Income Tax': 'bg-green-50 text-green-700 border-green-200',
-  'Licensing': 'bg-yellow-50 text-yellow-700 border-yellow-200',
-};
+import {
+  getArticleCategoryBadgeClasses,
+  getArticleCategoryPillClasses,
+  normalizeArticleCategory,
+} from '../data/articleCategories';
 
 function CategoryBadge({ cat }: { cat: string }) {
-  const cls = CATEGORY_COLORS[cat] ?? 'bg-gray-100 text-gray-600 border-gray-200';
+  const cls = getArticleCategoryBadgeClasses(cat);
   return (
-    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-[calc(11px+3pt)] font-semibold border ${cls}`}>
+    <span
+      className={`inline-flex max-w-full items-center truncate whitespace-nowrap px-2 py-0.5 rounded-full text-[11px] font-semibold border ${cls}`}
+      title={cat}
+    >
       {cat}
     </span>
   );
@@ -47,9 +45,9 @@ const ArticleCard: React.FC<{ article: Article; index: number }> = ({ article, i
 
         <div className="p-6 flex flex-col flex-1">
           {/* Category + reading time */}
-          <div className="flex items-center justify-between mb-3">
+          <div className="flex min-w-0 items-center justify-between gap-2 mb-3">
             {article.category && <CategoryBadge cat={article.category} />}
-            <span className="flex items-center gap-1 text-[calc(11px+3pt)] text-gray-400">
+            <span className="flex shrink-0 items-center gap-1 text-[11px] text-gray-400">
               <Clock className="w-3 h-3" /> {article.readingTime}
             </span>
           </div>
@@ -82,8 +80,10 @@ const ArticleCard: React.FC<{ article: Article; index: number }> = ({ article, i
 
 export default function ArticlesPage() {
   const { content } = useContent();
-  const allArticles: Article[] = (content.articles ?? []).filter((a) => a.published);
-  const categories: string[] = content.articleCategories ?? [];
+  const allArticles: Article[] = (content.articles ?? [])
+    .filter((a) => a.published)
+    .map((a) => ({ ...a, category: normalizeArticleCategory(a.category || '') }));
+  const categories: string[] = (content.articleCategories ?? []).map((c) => normalizeArticleCategory(c));
 
   const [search, setSearch] = useState('');
   const [activeCat, setActiveCat] = useState('');
@@ -175,7 +175,7 @@ export default function ArticlesPage() {
               return (
                 <button key={cat} onClick={() => setActiveCat(cat === activeCat ? '' : cat)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                    activeCat === cat ? 'bg-blue-600 text-white shadow-md shadow-blue-200' : 'bg-white border border-gray-200 text-gray-600 hover:border-blue-200 hover:text-blue-700'
+                    getArticleCategoryPillClasses(cat, activeCat === cat)
                   }`}
                 >
                   {cat} ({count})

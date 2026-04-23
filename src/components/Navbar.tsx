@@ -23,12 +23,12 @@ export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
   const categoryIcons: Record<string, React.ReactNode> = {
-    'new-business': <Briefcase className="w-5 h-5" />,
-    registration: <FileText className="w-5 h-5" />,
-    'return-filing': <Calculator className="w-5 h-5" />,
-    'trademark-ip': <Shield className="w-5 h-5" />,
-    'legal-compliance': <Scale className="w-5 h-5" />,
-    'mandatory-licenses': <Landmark className="w-5 h-5" />,
+    'new-business': <Briefcase className="h-3.5 w-3.5" strokeWidth={1.75} />,
+    registration: <FileText className="h-3.5 w-3.5" strokeWidth={1.75} />,
+    'return-filing': <Calculator className="h-3.5 w-3.5" strokeWidth={1.75} />,
+    'trademark-ip': <Shield className="h-3.5 w-3.5" strokeWidth={1.75} />,
+    'legal-compliance': <Scale className="h-3.5 w-3.5" strokeWidth={1.75} />,
+    'mandatory-licenses': <Landmark className="h-3.5 w-3.5" strokeWidth={1.75} />,
   };
   const allServiceGroups = useMemo(
     () =>
@@ -212,11 +212,13 @@ export default function Navbar() {
                                   <div className="flex items-center justify-between gap-1.5">
                                     <span className="inline-flex min-w-0 items-center gap-1.5">
                                       <span
-                                        className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-md ${
+                                        className={`flex h-4 w-4 shrink-0 items-center justify-center rounded ${
                                           isActive ? 'bg-blue-100 text-blue-600' : 'bg-gray-100 text-gray-500'
                                         }`}
                                       >
-                                        {categoryIcons[group.id] ?? <FileText className="h-3.5 w-3.5" />}
+                                        {categoryIcons[group.id] ?? (
+                                          <FileText className="h-3 w-3" strokeWidth={1.75} />
+                                        )}
                                       </span>
                                       <span className="min-w-0 break-words">{group.title}</span>
                                     </span>
@@ -521,8 +523,10 @@ export default function Navbar() {
                             className="flex w-full items-center justify-between gap-2 px-3 py-3 text-left transition-colors hover:bg-white"
                           >
                             <div className="flex min-w-0 items-center gap-2">
-                              <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-blue-50 text-blue-600">
-                                {categoryIcons[group.id] ?? <FileText className="h-4 w-4" />}
+                              <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-blue-50 text-blue-600">
+                                {categoryIcons[group.id] ?? (
+                                  <FileText className="h-3 w-3" strokeWidth={1.75} />
+                                )}
                               </span>
                               <span className="min-w-0 text-sm font-semibold leading-snug text-gray-800">
                                 {group.title}
