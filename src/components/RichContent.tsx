@@ -1,16 +1,24 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Info, AlertTriangle, Lightbulb, Sparkles } from 'lucide-react';
+import { Info, AlertTriangle, Lightbulb, Sparkles, ChevronDown } from 'lucide-react';
 
 type Props = {
   content: string;
   className?: string;
   /** Show Table of Contents when >= 3 H2 sections. Default: true */
   showToc?: boolean;
+  /**
+   * Remove the first markdown H1 line (`# Document title …`). Service and article
+   * pages already show the name in the UI, so the duplicate H1 is hidden and
+   * future batch content can keep a leading H1 in source for exports without
+   * showing raw `#` in the browser. Default false (admin preview shows full text).
+   */
+  stripLeadingH1?: boolean;
 };
 
 type CalloutVariant = 'default' | 'note' | 'tip' | 'warn' | 'important';
 
 type Block =
+  | { type: 'h1'; text: string }
   | { type: 'h2'; text: string; id: string }
   | { type: 'h3'; text: string }
   | { type: 'h4'; text: string }
@@ -18,7 +26,8 @@ type Block =
   | { type: 'ul'; items: string[] }
   | { type: 'ol'; items: string[] }
   | { type: 'blockquote'; lines: string[]; variant: CalloutVariant; title: string | null }
-  | { type: 'table'; headers: string[]; rows: string[][] };
+  | { type: 'table'; headers: string[]; rows: string[][] }
+  | { type: 'faq'; items: { q: string; a: string }[] };
 
 function parseInline(text: string): React.ReactNode[] {
   const parts = text.split(/(\*\*.*?\*\*|\[([^\]]+)\]\(([^)]+)\))/g);
@@ -78,6 +87,10 @@ function parseBlocks(raw: string): Block[] {
   while (i < lines.length) {
     const trimmed = lines[i].trim();
     if (!trimmed) { i++; continue; }
+    if (trimmed === '---' || trimmed === '***' || trimmed === '___') {
+      i++;
+      continue;
+    }
     if (trimmed.startsWith('## ')) {
       const text = trimmed.slice(3).trim();
       const { rest } = extractSectionNum(text);
@@ -88,6 +101,9 @@ function parseBlocks(raw: string): Block[] {
       i++;
     } else if (trimmed.startsWith('#### ')) {
       blocks.push({ type: 'h4', text: trimmed.slice(5).trim() });
+      i++;
+    } else if (trimmed.startsWith('# ')) {
+      blocks.push({ type: 'h1', text: trimmed.slice(2).trim() });
       i++;
     } else if (
       trimmed.startsWith('|') &&
@@ -152,6 +168,7 @@ function parseBlocks(raw: string): Block[] {
       while (i < lines.length) {
         const next = lines[i].trim();
         if (!next || next.startsWith('## ') || next.startsWith('### ') || next.startsWith('#### ') ||
+          next.startsWith('# ') ||
           /^[-*] /.test(next) || /^\d+\.\s/.test(next) || next.startsWith('> ') ||
           (next.startsWith('|') && next.endsWith('|'))) break;
         para += ' ' + next;
@@ -161,6 +178,54 @@ function parseBlocks(raw: string): Block[] {
     }
   }
   return blocks;
+}
+
+const FAQ_H2 = /frequently asked questions/i;
+
+/**
+ * After `## Frequently asked questions`, turn consecutive paragraphs of the form
+ * `**Question?**` Answer… into a single interactive FAQ block. Stops at the next
+ * H2, a non-matching paragraph (e.g. disclaimer), or other block type.
+ */
+function extractFaqAccordion(blocks: Block[]): Block[] {
+  const out: Block[] = [];
+  let i = 0;
+  while (i < blocks.length) {
+    const b = blocks[i];
+    if (b.type === 'h2' && FAQ_H2.test(b.text)) {
+      out.push(b);
+      i++;
+      const items: { q: string; a: string }[] = [];
+      while (i < blocks.length) {
+        const n = blocks[i];
+        if (n.type === 'h2' || n.type === 'h1') break;
+        if (n.type === 'p') {
+          const t = n.text.trim();
+          if (t === '---' || t === '***' || t === '___') {
+            i++;
+            continue;
+          }
+          const m = t.match(/^\*\*(.+?)\*\*\s*([\s\S]*)$/);
+          if (m) {
+            items.push({ q: m[1].trim(), a: m[2].trim() });
+            i++;
+            continue;
+          }
+          break;
+        }
+        break;
+      }
+      if (items.length) out.push({ type: 'faq', items });
+      continue;
+    }
+    out.push(b);
+    i++;
+  }
+  return out;
+}
+
+function stripLeadingH1Line(raw: string): string {
+  return raw.replace(/^#[ \t]([^\n]*)\n*/m, '').trimStart();
 }
 
 type TocItem = { id: string; num: string | null; label: string };
@@ -407,6 +472,30 @@ const Callout: React.FC<CalloutProps> = ({ variant, title, lines }) => {
 
 type DataTableProps = { headers: string[]; rows: string[][] };
 
+const FaqAccordion: React.FC<{ items: { q: string; a: string }[] }> = ({ items }) => (
+  <div className="my-2 space-y-2" role="list">
+    {items.map((item, i) => (
+      <details
+        key={i}
+        className="group border border-gray-200/90 rounded-xl bg-slate-50/40 open:bg-white open:shadow-sm transition-shadow"
+        role="listitem"
+      >
+        <summary className="flex cursor-pointer list-none items-center gap-3 px-4 py-3.5 text-left [&::-webkit-details-marker]:hidden min-h-[3.5rem]">
+          <span className="inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-white border border-gray-200 text-gray-500 group-open:text-blue-600 group-open:border-blue-200 group-open:bg-blue-50/80 transition-colors">
+            <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" aria-hidden />
+          </span>
+          <span className="text-[17px] sm:text-[18px] font-semibold text-gray-900 leading-snug pr-2">
+            {parseInline(item.q)}
+          </span>
+        </summary>
+        <div className="px-4 pb-4 pl-[3.25rem] sm:pl-14 text-[16px] sm:text-[18px] text-gray-700 leading-relaxed border-t border-gray-100/80 pt-3 -mt-0.5">
+          {item.a ? <p>{parseInline(item.a)}</p> : null}
+        </div>
+      </details>
+    ))}
+  </div>
+);
+
 const DataTable: React.FC<DataTableProps> = ({ headers, rows }) => {
   return (
     <div className="my-5 rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
@@ -447,22 +536,45 @@ const DataTable: React.FC<DataTableProps> = ({ headers, rows }) => {
   );
 };
 
-export default function RichContent({ content, className = '', showToc = true }: Props) {
-  const safe = content ?? '';
-  const isPlainText =
-    !safe.includes('## ') && !safe.includes('### ') && !safe.includes('#### ') &&
-    !safe.includes('- ') && !safe.includes('* ') && !safe.includes('**') &&
-    !/\[.*?\]\(.*?\)/.test(safe) && !safe.includes('\n> ') && !safe.includes('|');
+export default function RichContent({
+  content,
+  className = '',
+  showToc = true,
+  stripLeadingH1 = false,
+}: Props) {
+  const processed = useMemo(() => {
+    const safe = (content ?? '').replace(/\r\n/g, '\n');
+    if (!stripLeadingH1) return safe;
+    return stripLeadingH1Line(safe);
+  }, [content, stripLeadingH1]);
 
-  const blocks = useMemo(() => (safe.trim() && !isPlainText ? parseBlocks(safe) : []), [safe, isPlainText]);
+  const isPlainText = useMemo(
+    () =>
+      !processed.includes('## ') &&
+      !processed.includes('### ') &&
+      !processed.includes('#### ') &&
+      !/(^|\n)#[ \t]/m.test(processed) &&
+      !processed.includes('- ') &&
+      !processed.includes('* ') &&
+      !processed.includes('**') &&
+      !/\[.*?\]\(.*?\)/.test(processed) &&
+      !processed.includes('\n> ') &&
+      !processed.includes('|'),
+    [processed]
+  );
+
+  const blocks = useMemo(
+    () => (processed.trim() && !isPlainText ? extractFaqAccordion(parseBlocks(processed)) : []),
+    [processed, isPlainText]
+  );
   const toc = useMemo(() => buildToc(blocks), [blocks]);
 
-  if (!safe.trim()) return null;
+  if (!processed.trim()) return null;
 
   if (isPlainText) {
     return (
       <div className={`text-[18px] text-gray-700 leading-[1.75] whitespace-pre-line ${className}`}>
-        {content}
+        {processed}
       </div>
     );
   }
@@ -474,6 +586,15 @@ export default function RichContent({ content, className = '', showToc = true }:
       {displayToc && <TableOfContents items={toc} />}
       {blocks.map((block, i) => {
         switch (block.type) {
+          case 'h1':
+            return (
+              <h1 key={i} className="text-[1.75rem] sm:text-[2rem] font-bold text-gray-900 leading-tight tracking-tight mt-2 mb-4">
+                {parseInline(block.text)}
+              </h1>
+            );
+
+          case 'faq':
+            return <FaqAccordion key={i} items={block.items} />;
 
           case 'h2': {
             const { rest } = extractSectionNum(block.text);

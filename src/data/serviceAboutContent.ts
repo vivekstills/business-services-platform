@@ -3,12 +3,16 @@
  * service id. Rendered via <RichContent /> on the service page when present.
  *
  * Markdown conventions (matched to RichContent parser):
+ *   #   → H1 (optional first line; service/article pages set stripLeadingH1 so
+ *         a duplicate top title is not shown next to the page name).
  *   ##  → section heading (H2). Leading "N)" is stripped automatically.
  *   ### → subsection heading (H3)
  *   -   → bullet list
  *   1.  → numbered/ordered list ("Title — description" renders as bold + desc)
  *   **x**  → inline bold
  *   > x  → blockquote
+ *   ## Frequently asked questions  → the following **Question?** answer paragraphs
+ *         become an interactive accordion (one paragraph per Q, bold lead).
  *
  * Keys are `Service.id`. Content here overrides the default `content` on the
  * matching service in `SERVICES` at module load time (see services.ts).
