@@ -1448,6 +1448,24 @@ export const SERVICES: Service[] = [
     ]
   },
   {
+    id: 'gst-registration-revocation',
+    name: 'GST Registration Revocation',
+    mainHead: 'GOODS & SERVICES TAX',
+    categoryId: 'gst-services',
+    shortDescription:
+      'Revocation of compulsory GST registration cancellation, REG-21 and follow-ups.',
+    content:
+      'We help you file pending returns, pay dues, and file Form GST REG-21 to restore a GSTIN that was cancelled by the department, and follow the officer to REG-22.',
+    packages: [
+      {
+        name: 'Custom',
+        price: 'On request',
+        description:
+          'Covers return catch-up, fee computation, REG-21 and post-revocation compliance.'
+      }
+    ]
+  },
+  {
     id: 'gst-refund',
     name: 'GST Refund',
     mainHead: 'GOODS & SERVICES TAX',
