@@ -94,16 +94,18 @@ ODI Filing is applicable uniformly across all states and union territories of In
 
 ## 6) Documents List
 
-- PAN Card of Investor (Individual / Company / LLP)
-- Certificate of Incorporation (for companies / LLPs)
-- Board Resolution approving the investment
-- Net Worth Certificate from a Chartered Accountant
-- Valuation Report (if applicable)
-- Details of the Foreign Entity (MOA, registration, etc.)
-- Shareholding Pattern
-- Banker's Report / KYC
-- Form FC and other RBI forms
-- ODI Declaration and Undertaking
+| # | Document |
+|---|----------|
+| 1 | PAN Card of Investor (Individual / Company / LLP) |
+| 2 | Certificate of Incorporation (for companies / LLPs) |
+| 3 | Board Resolution approving the investment |
+| 4 | Net Worth Certificate from a Chartered Accountant |
+| 5 | Valuation Report (if applicable) |
+| 6 | Details of the Foreign Entity (MOA, registration, etc.) |
+| 7 | Shareholding Pattern |
+| 8 | Banker's Report / KYC |
+| 9 | Form FC and other RBI forms |
+| 10 | ODI Declaration and Undertaking |
 
 ## 7) Process / Procedure
 
@@ -118,10 +120,12 @@ ODI Filing is applicable uniformly across all states and union territories of In
 
 ## 8) Government Cost / Fees Payable
 
-- **RBI Fees** — no direct government fee is charged for ODI filing itself
-- **Bank Charges** — AD Bank may charge processing / remittance fees
-- **Late Fees / Penalty** — applicable for non-compliance or delayed filings
-- **Professional Fees** — CA / CS fees typically range from ₹10,000 to ₹50,000 depending on complexity
+| # | Item |
+|---|------|
+| 1 | **RBI Fees** — no direct government fee is charged for ODI filing itself |
+| 2 | **Bank Charges** — AD Bank may charge processing / remittance fees |
+| 3 | **Late Fees / Penalty** — applicable for non-compliance or delayed filings |
+| 4 | **Professional Fees** — CA / CS fees typically range from ₹10,000 to ₹50,000 depending on complexity |
 `,
 
   // FSSAI Registration
@@ -556,13 +560,15 @@ Important Notes:
 
 For FC-GPR Filing:
 
-- Certificate of Incorporation
-- MOA & AOA of company
-- Board Resolution for allotment
-- FIRC (Foreign Inward Remittance Certificate)
-- KYC of foreign investor
-- Valuation Certificate (from CA/SEBI Merchant Banker)
-- Declaration by authorized representative
+| # | Document |
+|---|----------|
+| 1 | Certificate of Incorporation |
+| 2 | MOA & AOA of company |
+| 3 | Board Resolution for allotment |
+| 4 | FIRC (Foreign Inward Remittance Certificate) |
+| 5 | KYC of foreign investor |
+| 6 | Valuation Certificate (from CA/SEBI Merchant Banker) |
+| 7 | Declaration by authorized representative |
 
 For FC-TRS Filing:
 
@@ -623,11 +629,13 @@ Yes, startups can receive FDI under the automatic route in many sectors. Q5. Is 
 
 ## 9) Government Cost / Fees Payable
 
-- FDI Filing Fees: No direct government fee
-- Late Submission Fee (LSF):
-- ₹7,500 to ₹5,00,000+ (depending on delay and amount)
-- Professional Fees (CA/CS):
-- ₹5,000 – ₹25,000 (approx.)
+| # | Item |
+|---|------|
+| 1 | FDI Filing Fees: No direct government fee |
+| 2 | Late Submission Fee (LSF): |
+| 3 | ₹7,500 to ₹5,00,000+ (depending on delay and amount) |
+| 4 | Professional Fees (CA/CS): |
+| 5 | ₹5,000 – ₹25,000 (approx.) |
 `,
 
   // Trademark Renewal
@@ -876,14 +884,16 @@ Important Notes:
 
 Maintenance From the Business / Client:
 
-- Website login credentials (CMS admin, cPanel/hosting panel)
-- Domain registrar login details
-- Hosting provider details and control panel access
-- Current website backup (if available)
-- Google Analytics and Google Search Console access
-- List of active plugins, themes, and third-party integrations
-- Business contact details for "Contact Us" and footer updates
-- Brand assets (updated logo, images, service descriptions)
+| # | Document |
+|---|----------|
+| 1 | Website login credentials (CMS admin, cPanel/hosting panel) |
+| 2 | Domain registrar login details |
+| 3 | Hosting provider details and control panel access |
+| 4 | Current website backup (if available) |
+| 5 | Google Analytics and Google Search Console access |
+| 6 | List of active plugins, themes, and third-party integrations |
+| 7 | Business contact details for "Contact Us" and footer updates |
+| 8 | Brand assets (updated logo, images, service descriptions) |
 
 For SEO Maintenance:
 
@@ -1168,14 +1178,16 @@ ranking movements, organic traffic growth, click-through rates, conversion data,
 
 The following information is required by an SEO agency or professional to begin work on a project:
 
-- Business website URL and access to Google Analytics and Google Search Console accounts
-- Google Business Profile login credentials (for local SEO projects)
-- Business registration details — name, GST number, address, and contact information
-- Details of all products and services offered, including target geography and customer profile
-- List of competitor websites identified by the business
-- Existing keyword or content strategy documents (if any)
-- Access to website CMS or backend (WordPress, custom CMS, or developer contact) for technical implementation
-- Brand guidelines and any existing content assets — blogs, articles, case studies, or
+| # | Document |
+|---|----------|
+| 1 | Business website URL and access to Google Analytics and Google Search Console accounts |
+| 2 | Google Business Profile login credentials (for local SEO projects) |
+| 3 | Business registration details — name, GST number, address, and contact information |
+| 4 | Details of all products and services offered, including target geography and customer profile |
+| 5 | List of competitor websites identified by the business |
+| 6 | Existing keyword or content strategy documents (if any) |
+| 7 | Access to website CMS or backend (WordPress, custom CMS, or developer contact) for technical implementation |
+| 8 | Brand guidelines and any existing content assets — blogs, articles, case studies, or |
 
 ### PR coverage
 
@@ -1194,13 +1206,15 @@ SEO is a private professional service. There are no direct government fees for S
 
 Professional SEO service market rates in India — private, not government-regulated — are as follows:
 
-- Monthly SEO Retainer (Small Business / Local SEO) — ₹8,000 to ₹25,000 per month
-- Monthly SEO Retainer (Mid-Size Corporate) — ₹25,000 to ₹80,000 per month
-- Monthly SEO Retainer (Enterprise / E-Commerce) — ₹80,000 to ₹3,00,000 per month
-- One-Time SEO Audit — ₹5,000 to ₹50,000 depending on website size and depth
-- One-Time On-Page Optimisation Project — ₹15,000 to ₹75,000
-- Content Writing (SEO-Optimised, per article) — ₹500 to ₹5,000 depending on length and research depth
-- Google Business Profile Setup and Optimisation — ₹3,000 to ₹15,000 one-time
+| # | Item |
+|---|------|
+| 1 | Monthly SEO Retainer (Small Business / Local SEO) — ₹8,000 to ₹25,000 per month |
+| 2 | Monthly SEO Retainer (Mid-Size Corporate) — ₹25,000 to ₹80,000 per month |
+| 3 | Monthly SEO Retainer (Enterprise / E-Commerce) — ₹80,000 to ₹3,00,000 per month |
+| 4 | One-Time SEO Audit — ₹5,000 to ₹50,000 depending on website size and depth |
+| 5 | One-Time On-Page Optimisation Project — ₹15,000 to ₹75,000 |
+| 6 | Content Writing (SEO-Optimised, per article) — ₹500 to ₹5,000 depending on length and research depth |
+| 7 | Google Business Profile Setup and Optimisation — ₹3,000 to ₹15,000 one-time |
 
 Note: All prices are indicative market rates for India as of 2025. GST at 18% is applicable additionally on all professional SEO service fees. GST-registered businesses can claim Input Tax Credit on all eligible SEO-related expenses, effectively reducing the net cost of the engagement.
 `,
@@ -1368,16 +1382,18 @@ Opposition Deadline Tracking — Automated tracking of the four-month opposition
 
 ## 6) Documents / Information Required
 
-- Certificate of trademark registration or trademark application number (TM number)
-- Representation of the mark — word mark, logo, device mark, or combined mark in digital format
-- Trademark class or classes under which the mark is registered or applied for
-- Specification of goods or services associated with the mark
-- Business registration documents — GST certificate, incorporation certificate, or proprietorship proof
-- Authorisation letter or Power of Attorney appointing the trademark attorney or Watch service provider
-- Details of any prior opposition, dispute, or infringement notice related to the mark
-- List of known infringing or similar marks already on the brand owner's radar (for exclusion from false-positive alerts)
-- International registration details under the Madrid Protocol (if applicable)
-- Contact details of the designated legal point of contact for Watch alerts and opposition coordination
+| # | Document |
+|---|----------|
+| 1 | Certificate of trademark registration or trademark application number (TM number) |
+| 2 | Representation of the mark — word mark, logo, device mark, or combined mark in digital format |
+| 3 | Trademark class or classes under which the mark is registered or applied for |
+| 4 | Specification of goods or services associated with the mark |
+| 5 | Business registration documents — GST certificate, incorporation certificate, or proprietorship proof |
+| 6 | Authorisation letter or Power of Attorney appointing the trademark attorney or Watch service provider |
+| 7 | Details of any prior opposition, dispute, or infringement notice related to the mark |
+| 8 | List of known infringing or similar marks already on the brand owner's radar (for exclusion from false-positive alerts) |
+| 9 | International registration details under the Madrid Protocol (if applicable) |
+| 10 | Contact details of the designated legal point of contact for Watch alerts and opposition coordination |
 
 ## 7) Process / Procedure
 
@@ -1389,9 +1405,11 @@ Step 2 — Registry Integration and Monitoring Activation The Watch system is co
 
 Trademark Watch Service Fee (Professional) — This is a private professional service charged by trademark attorneys or IP firms. Market rates in India are as follows:
 
-- Basic Trademark Watch (single mark, single class) — ₹3,000 to ₹8,000 per quarter
-- Standard Watch (single mark, all classes) — ₹8,000 to ₹20,000 per quarter
-- Comprehensive Watch (multiple marks, all classes, digital monitoring) — ₹20,000 to
+| # | Item |
+|---|------|
+| 1 | Basic Trademark Watch (single mark, single class) — ₹3,000 to ₹8,000 per quarter |
+| 2 | Standard Watch (single mark, all classes) — ₹8,000 to ₹20,000 per quarter |
+| 3 | Comprehensive Watch (multiple marks, all classes, digital monitoring) — ₹20,000 to |
 
 ₹60,000 per quarter
 
@@ -16779,19 +16797,20 @@ Return Filing — Complete Suite — Monthly GSTR-1 (outward supply reporting), 
 
 ## 6) Documents / Information Required
 
-- PAN card of the business entity and all promoters / partners / directors
-- Aadhaar card of the authorised signatory
-- Certificate of Incorporation / Partnership Deed / Sole Proprietorship proof
-- Business address proof — electricity bill, rent agreement, or NOC from property owner
-- Bank account details — cancelled cheque or bank statement with IFSC and account number
-- Digital Signature Certificate (DSC) of the authorised signatory (Class 3, mandatory for companies and LLPs)
-- Complete purchase and sales registers for the relevant compliance period
-- Prior GST returns filed (GSTR-1, GSTR-3B) — for advisory on existing registrations
-- Import-export documentation (for businesses engaged in cross-border trade)
-- E-way bill generation credentials and movement records (for goods-supplying businesses)
-
-- Existing demand notices, audit reports, or departmental correspondence (for litigation and audit support engagements)
-- Financial statements — P&L account and balance sheet — for annual return and audit reconciliation
+| # | Document |
+|---|----------|
+| 1 | PAN card of the business entity and all promoters / partners / directors |
+| 2 | Aadhaar card of the authorised signatory |
+| 3 | Certificate of Incorporation / Partnership Deed / Sole Proprietorship proof |
+| 4 | Business address proof — electricity bill, rent agreement, or NOC from property owner |
+| 5 | Bank account details — cancelled cheque or bank statement with IFSC and account number |
+| 6 | Digital Signature Certificate (DSC) of the authorised signatory (Class 3, mandatory for companies and LLPs) |
+| 7 | Complete purchase and sales registers for the relevant compliance period |
+| 8 | Prior GST returns filed (GSTR-1, GSTR-3B) — for advisory on existing registrations |
+| 9 | Import-export documentation (for businesses engaged in cross-border trade) |
+| 10 | E-way bill generation credentials and movement records (for goods-supplying businesses) |
+| 11 | Existing demand notices, audit reports, or departmental correspondence (for litigation and audit support engagements) |
+| 12 | Financial statements — P&L account and balance sheet — for annual return and audit reconciliation |
 
 ## 7) Process / Procedure
 
@@ -16875,13 +16894,15 @@ Multi-GSTIN Consolidation — Businesses operating across multiple states file a
 
 ## 6) Documents / Information Required
 
-- GSTIN and login credentials for the GST portal
-- All monthly GSTR-1 and GSTR-3B returns filed during the financial year
-- GSTR-2A and GSTR-2B auto-populated data for the full financial year
-- Complete sales register — invoice-wise outward supply data with HSN/SAC classification, tax rates, and supply type (B2B, B2C, export, exempt)
-- Complete purchase register — vendor-wise inward supply data with GSTIN, invoice details, and ITC eligibility status
-- ITC reconciliation workings — matching of purchase register against GSTR-2B with mismatch analysis
-- Audited financial statements — Profit and Loss account and Balance Sheet
+| # | Document |
+|---|----------|
+| 1 | GSTIN and login credentials for the GST portal |
+| 2 | All monthly GSTR-1 and GSTR-3B returns filed during the financial year |
+| 3 | GSTR-2A and GSTR-2B auto-populated data for the full financial year |
+| 4 | Complete sales register — invoice-wise outward supply data with HSN/SAC classification, tax rates, and supply type (B2B, B2C, export, exempt) |
+| 5 | Complete purchase register — vendor-wise inward supply data with GSTIN, invoice details, and ITC eligibility status |
+| 6 | ITC reconciliation workings — matching of purchase register against GSTR-2B with mismatch analysis |
+| 7 | Audited financial statements — Profit and Loss account and Balance Sheet |
 
 (mandatory for GSTR-9C filers)
 
@@ -17053,14 +17074,16 @@ Enables tax authorities to monitor movement.
 
 ## 6) Documents / Information Required
 
-- GSTIN of supplier and recipient
-- Invoice, bill of supply, or delivery challan
-- Value and HSN code of goods
-- Transporter ID or vehicle number
-- Place of dispatch and delivery
-- Mode of transport (road/rail/air/ship)
-- Reason for movement (supply, job work, etc.)
-- Approximate distance of transportation
+| # | Document |
+|---|----------|
+| 1 | GSTIN of supplier and recipient |
+| 2 | Invoice, bill of supply, or delivery challan |
+| 3 | Value and HSN code of goods |
+| 4 | Transporter ID or vehicle number |
+| 5 | Place of dispatch and delivery |
+| 6 | Mode of transport (road/rail/air/ship) |
+| 7 | Reason for movement (supply, job work, etc.) |
+| 8 | Approximate distance of transportation |
 
 ## 7) Process / Procedure
 
@@ -17236,14 +17259,16 @@ Prevents tax blockage on export transactions.
 
 ## 6) Documents / Information Required
 
-- GSTIN of exporter
-- PAN of business entity
-- Details of export turnover
-- Export invoices or service agreements
-- Authorized signatory details
-- Previous LUT copy (for renewal cases)
-- Declaration of compliance under GST rules
-- Digital Signature Certificate (DSC) or EVC login
+| # | Document |
+|---|----------|
+| 1 | GSTIN of exporter |
+| 2 | PAN of business entity |
+| 3 | Details of export turnover |
+| 4 | Export invoices or service agreements |
+| 5 | Authorized signatory details |
+| 6 | Previous LUT copy (for renewal cases) |
+| 7 | Declaration of compliance under GST rules |
+| 8 | Digital Signature Certificate (DSC) or EVC login |
 
 ## 7) Process / Procedure
 
@@ -17418,16 +17443,18 @@ Refund processed from electronic cash or credit ledger.
 
 ## 6) Documents / Information Required
 
-- GSTIN and login credentials
-- Form GST RFD-01 application
-- Tax invoices and debit/credit notes
-- Statement of ITC ledger (electronic credit ledger)
-- GSTR-1 and GSTR-3B filed returns
-- Bank account details with cancelled cheque
-- Export documents (shipping bill, invoice, LUT if applicable)
-- CA certificate (for higher value refunds in some cases)
-- Reconciliation statement of ITC and turnover
-- E-way bill details (if applicable)
+| # | Document |
+|---|----------|
+| 1 | GSTIN and login credentials |
+| 2 | Form GST RFD-01 application |
+| 3 | Tax invoices and debit/credit notes |
+| 4 | Statement of ITC ledger (electronic credit ledger) |
+| 5 | GSTR-1 and GSTR-3B filed returns |
+| 6 | Bank account details with cancelled cheque |
+| 7 | Export documents (shipping bill, invoice, LUT if applicable) |
+| 8 | CA certificate (for higher value refunds in some cases) |
+| 9 | Reconciliation statement of ITC and turnover |
+| 10 | E-way bill details (if applicable) |
 
 ## 7) Process / Procedure
 
@@ -17621,17 +17648,18 @@ Ends all GST obligations for that registration.
 
 ## 6) Documents / Information Required
 
-- GSTIN and login credentials
-- Reason for cancellation
-- Date of business closure or discontinuation
-- Stock details of inputs, semi-finished, and finished goods
-- Details of ITC availed and to be reversed
-- Bank account details
-- Last filed GST returns (GSTR-1, GSTR-3B)
-
-- Board resolution (for companies/LLPs)
-- Identity and address proof of authorized signatory
-- Digital Signature Certificate (DSC) if applicable
+| # | Document |
+|---|----------|
+| 1 | GSTIN and login credentials |
+| 2 | Reason for cancellation |
+| 3 | Date of business closure or discontinuation |
+| 4 | Stock details of inputs, semi-finished, and finished goods |
+| 5 | Details of ITC availed and to be reversed |
+| 6 | Bank account details |
+| 7 | Last filed GST returns (GSTR-1, GSTR-3B) |
+| 8 | Board resolution (for companies/LLPs) |
+| 9 | Identity and address proof of authorized signatory |
+| 10 | Digital Signature Certificate (DSC) if applicable |
 
 ## 7) Process / Procedure
 
@@ -17816,16 +17844,18 @@ Restricted to declared taxable activities.
 
 ## 6) Documents / Information Required
 
-- Valid passport of foreign applicant
-- Visa details (business/entry visa)
-- Proof of business incorporation in home country
-- Authorized signatory details
-- Indian address for communication (temporary/local)
-- Tax identification number from home country
-- Bank account details (Indian or foreign, as applicable)
-- Estimated details of taxable supplies in India
-- Advance tax deposit proof
-- Authorization letter for GST representation
+| # | Document |
+|---|----------|
+| 1 | Valid passport of foreign applicant |
+| 2 | Visa details (business/entry visa) |
+| 3 | Proof of business incorporation in home country |
+| 4 | Authorized signatory details |
+| 5 | Indian address for communication (temporary/local) |
+| 6 | Tax identification number from home country |
+| 7 | Bank account details (Indian or foreign, as applicable) |
+| 8 | Estimated details of taxable supplies in India |
+| 9 | Advance tax deposit proof |
+| 10 | Authorization letter for GST representation |
 
 ## 7) Process / Procedure
 
@@ -18009,16 +18039,18 @@ Year-end financial summary of GST activity.
 
 ## 6) Documents / Information Required
 
-- GSTIN login credentials
-- Sales register (invoice-wise outward supplies)
-- Purchase register (inward supplies)
-- GSTR-2B data for ITC reconciliation
-- Tax invoices and credit/debit notes
-- E-way bill details (if applicable)
-- Bank payment challan details (GST payments)
-- HSN/SAC classification of goods/services
-- Previous return filings (GSTR-1, GSTR-3B)
-- Accountant or ERP-generated reports
+| # | Document |
+|---|----------|
+| 1 | GSTIN login credentials |
+| 2 | Sales register (invoice-wise outward supplies) |
+| 3 | Purchase register (inward supplies) |
+| 4 | GSTR-2B data for ITC reconciliation |
+| 5 | Tax invoices and credit/debit notes |
+| 6 | E-way bill details (if applicable) |
+| 7 | Bank payment challan details (GST payments) |
+| 8 | HSN/SAC classification of goods/services |
+| 9 | Previous return filings (GSTR-1, GSTR-3B) |
+| 10 | Accountant or ERP-generated reports |
 
 ## 7) Process / Procedure
 
@@ -18214,15 +18246,17 @@ Completes legal deregistration process.
 
 ## 6) Documents / Information Required
 
-- GSTIN and cancellation order reference
-- Details of inputs, semi-finished, and finished goods in stock
-- ITC claimed and to be reversed
-- Tax invoices related to remaining stock
-- GST returns filed before cancellation (GSTR-1, GSTR-3B)
-- Tax payment challans (if any pending liability exists)
-- Bank account details for reference
-- Reason for cancellation of GST registration
-- Authorized signatory details
+| # | Document |
+|---|----------|
+| 1 | GSTIN and cancellation order reference |
+| 2 | Details of inputs, semi-finished, and finished goods in stock |
+| 3 | ITC claimed and to be reversed |
+| 4 | Tax invoices related to remaining stock |
+| 5 | GST returns filed before cancellation (GSTR-1, GSTR-3B) |
+| 6 | Tax payment challans (if any pending liability exists) |
+| 7 | Bank account details for reference |
+| 8 | Reason for cancellation of GST registration |
+| 9 | Authorized signatory details |
 
 ## 7) Process / Procedure
 
@@ -18409,15 +18443,17 @@ Unlocks GST credit mechanism for businesses.
 
 ## 6) Documents / Information Required
 
-- PAN card of business/entity
-- Aadhaar of proprietor/partners/directors
-- Business registration certificate (if applicable)
-- Address proof of principal place of business
-- Bank account details (cancelled cheque or statement)
-- Photograph of promoters/authorized signatory
-- Digital Signature Certificate (for companies/LLPs)
-- Rent agreement or ownership proof (for premises)
-- Authorization letter or board resolution
+| # | Document |
+|---|----------|
+| 1 | PAN card of business/entity |
+| 2 | Aadhaar of proprietor/partners/directors |
+| 3 | Business registration certificate (if applicable) |
+| 4 | Address proof of principal place of business |
+| 5 | Bank account details (cancelled cheque or statement) |
+| 6 | Photograph of promoters/authorized signatory |
+| 7 | Digital Signature Certificate (for companies/LLPs) |
+| 8 | Rent agreement or ownership proof (for premises) |
+| 9 | Authorization letter or board resolution |
 
 ## 7) Process / Procedure
 
@@ -18600,17 +18636,18 @@ Creates defensible GST compliance records.
 
 ## 6) Documents / Information Required
 
-- GSTIN login credentials
-- Purchase register (invoice-wise details)
-- GSTR-2B data for relevant tax periods
-- GSTR-3B filed return summaries
-- Tax invoices from suppliers
-- Debit/credit notes issued or received
-- Vendor GSTIN details
-- Expense and ledger reports from accounting system
-- ITC reversal calculations (Rule 42/43 where applicable)
-
-- Previous reconciliation working sheets
+| # | Document |
+|---|----------|
+| 1 | GSTIN login credentials |
+| 2 | Purchase register (invoice-wise details) |
+| 3 | GSTR-2B data for relevant tax periods |
+| 4 | GSTR-3B filed return summaries |
+| 5 | Tax invoices from suppliers |
+| 6 | Debit/credit notes issued or received |
+| 7 | Vendor GSTIN details |
+| 8 | Expense and ledger reports from accounting system |
+| 9 | ITC reversal calculations (Rule 42/43 where applicable) |
+| 10 | Previous reconciliation working sheets |
 
 ## 7) Process / Procedure
 
@@ -18795,17 +18832,18 @@ No ongoing GST filings after closure.
 
 ## 6) Documents / Information Required
 
-- PAN (for Indian entities) or passport (for foreign entities)
-- Business details and nature of activity
-- Estimated duration of business in India
-- Estimated turnover and tax liability
-- Address of temporary business location in India
-- Bank account details (Indian or foreign, if applicable)
-- Authorization letter for GST registration
-
-- Advance tax payment proof
-- Identity proof of authorized signatory
-- Visa details (for foreign applicants)
+| # | Document |
+|---|----------|
+| 1 | PAN (for Indian entities) or passport (for foreign entities) |
+| 2 | Business details and nature of activity |
+| 3 | Estimated duration of business in India |
+| 4 | Estimated turnover and tax liability |
+| 5 | Address of temporary business location in India |
+| 6 | Bank account details (Indian or foreign, if applicable) |
+| 7 | Authorization letter for GST registration |
+| 8 | Advance tax payment proof |
+| 9 | Identity proof of authorized signatory |
+| 10 | Visa details (for foreign applicants) |
 
 ## 7) Process / Procedure
 
@@ -19002,17 +19040,18 @@ Ideal for growing digital businesses.
 
 ## 6) Documents / Information Required
 
-- PAN of business entity
-- Certificate of incorporation (for companies/LLPs)
-- Aadhaar of authorized signatory
-- Rent agreement or virtual office agreement
-- NOC from property owner
-
-- Latest utility bill of premises
-- Passport-size photographs
-- GST registration application (REG-01)
-- Board resolution or authorization letter
-- Bank account details
+| # | Document |
+|---|----------|
+| 1 | PAN of business entity |
+| 2 | Certificate of incorporation (for companies/LLPs) |
+| 3 | Aadhaar of authorized signatory |
+| 4 | Rent agreement or virtual office agreement |
+| 5 | NOC from property owner |
+| 6 | Latest utility bill of premises |
+| 7 | Passport-size photographs |
+| 8 | GST registration application (REG-01) |
+| 9 | Board resolution or authorization letter |
+| 10 | Bank account details |
 
 ## 7) Process / Procedure
 
@@ -19205,16 +19244,17 @@ Encrypted communication with customs systems.
 
 ## 6) Documents / Information Required
 
-- Import Export Code (IEC)
-- PAN of business entity
-- GST registration details (if applicable)
-- Company incorporation certificate
-- Authorized signatory details
-- Email ID and mobile number for OTP verification
-- Digital Signature Certificate (DSC)
-- Bank account details (for refund/duty transactions)
-
-- Address proof of business establishment
+| # | Document |
+|---|----------|
+| 1 | Import Export Code (IEC) |
+| 2 | PAN of business entity |
+| 3 | GST registration details (if applicable) |
+| 4 | Company incorporation certificate |
+| 5 | Authorized signatory details |
+| 6 | Email ID and mobile number for OTP verification |
+| 7 | Digital Signature Certificate (DSC) |
+| 8 | Bank account details (for refund/duty transactions) |
+| 9 | Address proof of business establishment |
 
 ## 7) Process / Procedure
 
@@ -19400,17 +19440,18 @@ Existing IEC remains valid after modification.
 
 ## 6) Documents / Information Required
 
-- Existing IEC certificate number
-- PAN of business/entity
-- Aadhaar of authorized signatory (if applicable)
-- Updated business address proof
-- Board resolution (for companies/LLPs)
-- Updated bank account details with proof
-
-- Identity proof of directors/partners
-- GST registration details (if applicable)
-- Digital Signature Certificate (for companies/LLPs)
-- Supporting documents for change request
+| # | Document |
+|---|----------|
+| 1 | Existing IEC certificate number |
+| 2 | PAN of business/entity |
+| 3 | Aadhaar of authorized signatory (if applicable) |
+| 4 | Updated business address proof |
+| 5 | Board resolution (for companies/LLPs) |
+| 6 | Updated bank account details with proof |
+| 7 | Identity proof of directors/partners |
+| 8 | GST registration details (if applicable) |
+| 9 | Digital Signature Certificate (for companies/LLPs) |
+| 10 | Supporting documents for change request |
 
 ## 7) Process / Procedure
 
@@ -19598,16 +19639,17 @@ Enables seamless trade and forex operations.
 
 ## 6) Documents / Information Required
 
-- PAN card of entity
-- Aadhaar of proprietor/partners/directors
-- Business registration certificate (if applicable)
-- Address proof of business premises
-- Bank account details (cancelled cheque or statement)
-- Digital Signature Certificate (for companies/LLPs)
-
-- Passport-size photograph
-- Email ID and mobile number
-- Authorization letter or board resolution (if applicable)
+| # | Document |
+|---|----------|
+| 1 | PAN card of entity |
+| 2 | Aadhaar of proprietor/partners/directors |
+| 3 | Business registration certificate (if applicable) |
+| 4 | Address proof of business premises |
+| 5 | Bank account details (cancelled cheque or statement) |
+| 6 | Digital Signature Certificate (for companies/LLPs) |
+| 7 | Passport-size photograph |
+| 8 | Email ID and mobile number |
+| 9 | Authorization letter or board resolution (if applicable) |
 
 ## 7) Process / Procedure
 
@@ -19796,17 +19838,18 @@ Each remittance requires separate filing.
 
 ## 6) Documents / Information Required
 
-- PAN of remitter (Indian entity/person)
-- Details of foreign recipient (name, address, country)
-- Purpose of remittance
-- Invoice or agreement copy
-- Tax residency certificate (if DTAA benefit claimed)
-- Form 10F (if applicable)
-- Chartered Accountant certificate (Form 15CB)
-
-- Bank details and SWIFT information
-- TDS computation working
-- Foreign exchange amount and currency details
+| # | Document |
+|---|----------|
+| 1 | PAN of remitter (Indian entity/person) |
+| 2 | Details of foreign recipient (name, address, country) |
+| 3 | Purpose of remittance |
+| 4 | Invoice or agreement copy |
+| 5 | Tax residency certificate (if DTAA benefit claimed) |
+| 6 | Form 10F (if applicable) |
+| 7 | Chartered Accountant certificate (Form 15CB) |
+| 8 | Bank details and SWIFT information |
+| 9 | TDS computation working |
+| 10 | Foreign exchange amount and currency details |
 
 ## 7) Process / Procedure
 
@@ -19993,16 +20036,17 @@ Brings tax records into legal conformity.
 
 ## 6) Documents / Information Required
 
-- PAN and Aadhaar details
-- Original ITR (if filed earlier)
-- Income proof (salary slips, business records, etc.)
-- Bank statements
-- Form 16 / 16A (if applicable)
-- Investment and deduction proofs
-- Capital gains statements (if applicable)
-- Tax payment challans (advance/self-assessment tax)
-
-- Audit report (if applicable for business)
+| # | Document |
+|---|----------|
+| 1 | PAN and Aadhaar details |
+| 2 | Original ITR (if filed earlier) |
+| 3 | Income proof (salary slips, business records, etc.) |
+| 4 | Bank statements |
+| 5 | Form 16 / 16A (if applicable) |
+| 6 | Investment and deduction proofs |
+| 7 | Capital gains statements (if applicable) |
+| 8 | Tax payment challans (advance/self-assessment tax) |
+| 9 | Audit report (if applicable for business) |
 
 ## 7) Process / Procedure
 
@@ -20193,14 +20237,16 @@ Few annexures compared to other ITR forms.
 
 ## 6) Documents / Information Required
 
-- PAN and Aadhaar details
-- Form 16 (from employer)
-- Bank statements or interest certificates
-- Form 26AS / AIS (Annual Information Statement)
-- Investment proofs (for deductions under Chapter VI-A)
-- Bank account details for refund
-- Aadhaar-linked mobile number for OTP verification
-- Salary breakup details (if required)
+| # | Document |
+|---|----------|
+| 1 | PAN and Aadhaar details |
+| 2 | Form 16 (from employer) |
+| 3 | Bank statements or interest certificates |
+| 4 | Form 26AS / AIS (Annual Information Statement) |
+| 5 | Investment proofs (for deductions under Chapter VI-A) |
+| 6 | Bank account details for refund |
+| 7 | Aadhaar-linked mobile number for OTP verification |
+| 8 | Salary breakup details (if required) |
 
 ## 7) Process / Procedure
 
@@ -20390,17 +20436,18 @@ Filed digitally via Income Tax portal.
 
 ## 6) Documents / Information Required
 
-- PAN and Aadhaar details
-- Form 16 (salary certificate)
-- Form 26AS / AIS statement
-- Capital gains statements (stocks, mutual funds, property)
-- Bank statements and interest certificates
-- Property sale/purchase documents
-- Foreign income/asset details (if applicable)
-- Investment proof for deductions
-- Dividend income statements
-
-- Bank account details for refund
+| # | Document |
+|---|----------|
+| 1 | PAN and Aadhaar details |
+| 2 | Form 16 (salary certificate) |
+| 3 | Form 26AS / AIS statement |
+| 4 | Capital gains statements (stocks, mutual funds, property) |
+| 5 | Bank statements and interest certificates |
+| 6 | Property sale/purchase documents |
+| 7 | Foreign income/asset details (if applicable) |
+| 8 | Investment proof for deductions |
+| 9 | Dividend income statements |
+| 10 | Bank account details for refund |
 
 ## 7) Process / Procedure
 
@@ -20590,18 +20637,19 @@ Filed digitally via Income Tax e-filing portal.
 
 ## 6) Documents / Information Required
 
-- PAN and Aadhaar details
-- Business financial statements (P&L and Balance Sheet)
-- Bank statements (business & personal)
-- Sales and purchase records
-- Expense ledgers and invoices
-- Form 26AS / AIS statement
-- Capital gains statements (if applicable)
-- GST returns (if registered)
-
-- Loan and asset details
-- Investment proofs for deductions
-- Bank account details for refund
+| # | Document |
+|---|----------|
+| 1 | PAN and Aadhaar details |
+| 2 | Business financial statements (P&L and Balance Sheet) |
+| 3 | Bank statements (business & personal) |
+| 4 | Sales and purchase records |
+| 5 | Expense ledgers and invoices |
+| 6 | Form 26AS / AIS statement |
+| 7 | Capital gains statements (if applicable) |
+| 8 | GST returns (if registered) |
+| 9 | Loan and asset details |
+| 10 | Investment proofs for deductions |
+| 11 | Bank account details for refund |
 
 ## 7) Process / Procedure
 
@@ -20791,17 +20839,18 @@ Reduces audit and accounting burden.
 
 ## 6) Documents / Information Required
 
-- PAN and Aadhaar details
-- Bank statements
-- Form 26AS / AIS statement
-- Business turnover details
-- Income declaration under presumptive scheme
-- Investment proofs (for deductions under Chapter VI-A)
-- Rent receipts (if applicable)
-- Interest income certificates
-- Bank account details for refund
-
-- GST details (if registered)
+| # | Document |
+|---|----------|
+| 1 | PAN and Aadhaar details |
+| 2 | Bank statements |
+| 3 | Form 26AS / AIS statement |
+| 4 | Business turnover details |
+| 5 | Income declaration under presumptive scheme |
+| 6 | Investment proofs (for deductions under Chapter VI-A) |
+| 7 | Rent receipts (if applicable) |
+| 8 | Interest income certificates |
+| 9 | Bank account details for refund |
+| 10 | GST details (if registered) |
 
 ## 7) Process / Procedure
 
@@ -20990,17 +21039,19 @@ Filed electronically via Income Tax portal.
 
 ## 6) Documents / Information Required
 
-- PAN of firm/LLP/AOP/BOI
-- Partnership deed or LLP agreement
-- Financial statements (P&L and Balance Sheet)
-- Bank statements of entity
-- Form 26AS / AIS statement
-- Capital account details of partners
-- GST returns (if registered)
-- Audit report (if applicable)
-- Investment and deduction proofs
-- Loan and liability details
-- Bank account details for refund
+| # | Document |
+|---|----------|
+| 1 | PAN of firm/LLP/AOP/BOI |
+| 2 | Partnership deed or LLP agreement |
+| 3 | Financial statements (P&L and Balance Sheet) |
+| 4 | Bank statements of entity |
+| 5 | Form 26AS / AIS statement |
+| 6 | Capital account details of partners |
+| 7 | GST returns (if registered) |
+| 8 | Audit report (if applicable) |
+| 9 | Investment and deduction proofs |
+| 10 | Loan and liability details |
+| 11 | Bank account details for refund |
 
 ## 7) Process / Procedure
 
@@ -21197,18 +21248,19 @@ Filed electronically through income tax portal.
 
 ## 6) Documents / Information Required
 
-- Company PAN and incorporation certificate
-- Audited financial statements (P&L and Balance Sheet)
-- Director details and DIN information
-- Form 26AS / AIS statement
-- Tax audit report (if applicable)
-
-- Bank statements of company accounts
-- Depreciation chart and fixed asset register
-- GST returns (if registered)
-- Shareholding structure details
-- Loan and liability statements
-- Bank account details for refund
+| # | Document |
+|---|----------|
+| 1 | Company PAN and incorporation certificate |
+| 2 | Audited financial statements (P&L and Balance Sheet) |
+| 3 | Director details and DIN information |
+| 4 | Form 26AS / AIS statement |
+| 5 | Tax audit report (if applicable) |
+| 6 | Bank statements of company accounts |
+| 7 | Depreciation chart and fixed asset register |
+| 8 | GST returns (if registered) |
+| 9 | Shareholding structure details |
+| 10 | Loan and liability statements |
+| 11 | Bank account details for refund |
 
 ## 7) Process / Procedure
 
@@ -21408,18 +21460,19 @@ Filed online via Income Tax portal.
 
 ## 6) Documents / Information Required
 
-- PAN of trust/institution
-- Registration certificate (12A/80G/other applicable approvals)
-- Trust deed or governing document
-
-- Audited financial statements
-- Donation and grant records
-- Bank statements
-- Form 10B / 10BB (audit report if applicable)
-- Income and expenditure statement
-- Investment details of trust funds
-- Utilization certificates
-- Form 26AS / AIS statement
+| # | Document |
+|---|----------|
+| 1 | PAN of trust/institution |
+| 2 | Registration certificate (12A/80G/other applicable approvals) |
+| 3 | Trust deed or governing document |
+| 4 | Audited financial statements |
+| 5 | Donation and grant records |
+| 6 | Bank statements |
+| 7 | Form 10B / 10BB (audit report if applicable) |
+| 8 | Income and expenditure statement |
+| 9 | Investment details of trust funds |
+| 10 | Utilization certificates |
+| 11 | Form 26AS / AIS statement |
 
 ## 7) Process / Procedure
 
@@ -21825,16 +21878,17 @@ Filed via Income Tax e-filing portal.
 
 ## 6) Documents / Information Required
 
-- TAN of deductor
-- PAN of deductor and deductees
-- Challan details (Challan Identification Number)
-- Salary or payment details
-- TDS deduction registers
-
-- Bank statements for tax deposit
-- Form 16 / 16A details (for issuance)
-- GST details (if applicable)
-- Employee/vendor master data
+| # | Document |
+|---|----------|
+| 1 | TAN of deductor |
+| 2 | PAN of deductor and deductees |
+| 3 | Challan details (Challan Identification Number) |
+| 4 | Salary or payment details |
+| 5 | TDS deduction registers |
+| 6 | Bank statements for tax deposit |
+| 7 | Form 16 / 16A details (for issuance) |
+| 8 | GST details (if applicable) |
+| 9 | Employee/vendor master data |
 
 ## 7) Process / Procedure
 
@@ -22012,14 +22066,16 @@ Includes financial reporting and renewal obligations.
 
 ## 6) Documents / Information Required
 
-- Company name selection and availability check
-- Director and shareholder details
-- Passport and identity proof
-- Australian residential address (for at least one director)
-- Registered office address in Australia
-- Share structure details (capital allocation)
-- Business activity description
-- Contact details (email & phone)
+| # | Document |
+|---|----------|
+| 1 | Company name selection and availability check |
+| 2 | Director and shareholder details |
+| 3 | Passport and identity proof |
+| 4 | Australian residential address (for at least one director) |
+| 5 | Registered office address in Australia |
+| 6 | Share structure details (capital allocation) |
+| 7 | Business activity description |
+| 8 | Contact details (email & phone) |
 
 ## 7) Process / Procedure
 
@@ -22198,15 +22254,17 @@ Mandatory registration with tax authorities after incorporation.
 
 ## 6) Documents / Information Required
 
-- Passport copies of shareholders/directors
-- Company name in Chinese and English
-- Business scope description (very important in China)
-- Registered office lease agreement in China
-- Articles of Association
-- Investment structure and shareholding details
-- Bank reference letters (in some cases)
-- Legal representative appointment details
-- Industry-specific licenses (if applicable)
+| # | Document |
+|---|----------|
+| 1 | Passport copies of shareholders/directors |
+| 2 | Company name in Chinese and English |
+| 3 | Business scope description (very important in China) |
+| 4 | Registered office lease agreement in China |
+| 5 | Articles of Association |
+| 6 | Investment structure and shareholding details |
+| 7 | Bank reference letters (in some cases) |
+| 8 | Legal representative appointment details |
+| 9 | Industry-specific licenses (if applicable) |
 
 ## 7) Process / Procedure
 
@@ -22394,15 +22452,17 @@ Ideal for import/export and global operations.
 
 ## 6) Documents / Information Required
 
-- Passport copies of shareholders/directors
-- Passport-size photographs
-- Proposed company name (3 options typically)
-- Business activity description
-- Visa copy (if already in UAE, if applicable)
-- Entry stamp (for UAE-based applicants)
-- Proof of address (home country)
-- Shareholding structure details
-- Office lease agreement (for mainland companies)
+| # | Document |
+|---|----------|
+| 1 | Passport copies of shareholders/directors |
+| 2 | Passport-size photographs |
+| 3 | Proposed company name (3 options typically) |
+| 4 | Business activity description |
+| 5 | Visa copy (if already in UAE, if applicable) |
+| 6 | Entry stamp (for UAE-based applicants) |
+| 7 | Proof of address (home country) |
+| 8 | Shareholding structure details |
+| 9 | Office lease agreement (for mainland companies) |
 
 ## 7) Process / Procedure
 
@@ -22587,15 +22647,17 @@ Allows trade across all EU countries.
 
 ## 6) Documents / Information Required
 
-- Passport copies of shareholders/directors
-- Company name (German language compliance check)
-- Articles of Association (Gesellschaftsvertrag)
-- Registered office address in Germany
-- Business activity description
-- Share capital proof (€25,000 for GmbH)
-- Notarized incorporation documents
-- Tax registration forms
-- Identity verification documents
+| # | Document |
+|---|----------|
+| 1 | Passport copies of shareholders/directors |
+| 2 | Company name (German language compliance check) |
+| 3 | Articles of Association (Gesellschaftsvertrag) |
+| 4 | Registered office address in Germany |
+| 5 | Business activity description |
+| 6 | Share capital proof (€25,000 for GmbH) |
+| 7 | Notarized incorporation documents |
+| 8 | Tax registration forms |
+| 9 | Identity verification documents |
 
 ## 7) Process / Procedure
 
@@ -22772,14 +22834,16 @@ Access to global financial institutions.
 
 ## 6) Documents / Information Required
 
-- Passport copies of directors and shareholders
-- Residential address proof
-- Company name (English and optional Chinese name)
-- Business nature and activity description
-- Share capital structure details
-- Registered Hong Kong office address
-- Company secretary details (mandatory requirement)
-- Identification documents (KYC compliance)
+| # | Document |
+|---|----------|
+| 1 | Passport copies of directors and shareholders |
+| 2 | Residential address proof |
+| 3 | Company name (English and optional Chinese name) |
+| 4 | Business nature and activity description |
+| 5 | Share capital structure details |
+| 6 | Registered Hong Kong office address |
+| 7 | Company secretary details (mandatory requirement) |
+| 8 | Identification documents (KYC compliance) |
 
 ## 7) Process / Procedure
 
@@ -22956,14 +23020,16 @@ Documents and compliance widely in English.
 
 ## 6) Documents / Information Required
 
-- Passport copies of directors and shareholders
-- Proposed company name (SSM name search approval)
-- Residential address of directors
-- Registered office address in Malaysia
-- Business activity description
-- Shareholding structure details
-- Company constitution (if applicable)
-- Contact details (email & phone)
+| # | Document |
+|---|----------|
+| 1 | Passport copies of directors and shareholders |
+| 2 | Proposed company name (SSM name search approval) |
+| 3 | Residential address of directors |
+| 4 | Registered office address in Malaysia |
+| 5 | Business activity description |
+| 6 | Shareholding structure details |
+| 7 | Company constitution (if applicable) |
+| 8 | Contact details (email & phone) |
 
 ## 7) Process / Procedure
 
@@ -23139,15 +23205,17 @@ Highly secure legal environment for businesses.
 
 ## 6) Documents / Information Required
 
-- Passport copies of directors and shareholders
-- Residential address proof
-- Company name (approved by ACRA)
-- Business activity description
-- Local resident director details
-- Registered office address in Singapore
-- Shareholding structure details
-- Company constitution (optional but recommended)
-- Contact details (email & phone number)
+| # | Document |
+|---|----------|
+| 1 | Passport copies of directors and shareholders |
+| 2 | Residential address proof |
+| 3 | Company name (approved by ACRA) |
+| 4 | Business activity description |
+| 5 | Local resident director details |
+| 6 | Registered office address in Singapore |
+| 7 | Shareholding structure details |
+| 8 | Company constitution (optional but recommended) |
+| 9 | Contact details (email & phone number) |
 
 ## 7) Process / Procedure
 
@@ -23324,15 +23392,17 @@ Suitable for individuals, partnerships, and foreign investors.
 
 ## 6) Documents / Information Required
 
-- Passport or ID of directors and shareholders
-- Residential address proof
-- Proposed company name (approved by Companies House)
-- Registered UK office address
-- Business activity description
-- Shareholding structure details
-- Director details
-- Company constitution (optional model articles or custom)
-- Contact details (email & phone number)
+| # | Document |
+|---|----------|
+| 1 | Passport or ID of directors and shareholders |
+| 2 | Residential address proof |
+| 3 | Proposed company name (approved by Companies House) |
+| 4 | Registered UK office address |
+| 5 | Business activity description |
+| 6 | Shareholding structure details |
+| 7 | Director details |
+| 8 | Company constitution (optional model articles or custom) |
+| 9 | Contact details (email & phone number) |
 
 ## 7) Process / Procedure
 
@@ -23515,14 +23585,16 @@ Strong financial infrastructure for businesses.
 
 ## 6) Documents / Information Required
 
-- Passport or government ID of owners
-- Proposed company name
-- Registered agent details (US-based mandatory)
-- Business address (US address required in most cases)
-- Ownership structure (members/shareholders)
-- Business activity description
-- EIN application details
-- Operating Agreement (for LLC) or Bylaws (for Corporation)
+| # | Document |
+|---|----------|
+| 1 | Passport or government ID of owners |
+| 2 | Proposed company name |
+| 3 | Registered agent details (US-based mandatory) |
+| 4 | Business address (US address required in most cases) |
+| 5 | Ownership structure (members/shareholders) |
+| 6 | Business activity description |
+| 7 | EIN application details |
+| 8 | Operating Agreement (for LLC) or Bylaws (for Corporation) |
 
 ## 7) Process / Procedure
 
@@ -23714,16 +23786,18 @@ Strict deadlines for submission.
 
 ## 6) Documents / Information Required
 
-- Copy of Income Tax Notice
-- PAN details of taxpayer
-- Filed Income Tax Return (ITR copy)
-- AIS (Annual Information Statement)
-- Form 26AS
-- Bank statements
-- Income proofs (salary, business, capital gains, etc.)
-- Investment documents (if applicable)
-- TDS certificates (Form 16/16A)
-- Supporting explanation documents
+| # | Document |
+|---|----------|
+| 1 | Copy of Income Tax Notice |
+| 2 | PAN details of taxpayer |
+| 3 | Filed Income Tax Return (ITR copy) |
+| 4 | AIS (Annual Information Statement) |
+| 5 | Form 26AS |
+| 6 | Bank statements |
+| 7 | Income proofs (salary, business, capital gains, etc.) |
+| 8 | Investment documents (if applicable) |
+| 9 | TDS certificates (Form 16/16A) |
+| 10 | Supporting explanation documents |
 
 ## 7) Process / Procedure
 
@@ -23908,16 +23982,18 @@ Unresolved cases can move to appellate authorities.
 
 ## 6) Documents / Information Required
 
-- Copy of Sales Tax / VAT notice
-- VAT/CST registration certificate (if applicable)
-- Historical VAT returns filed
-- Purchase and sales invoices (relevant period)
-- Ledger and accounting records
-- CST declaration forms (C, F, H forms if applicable)
-- Bank statements (supporting transactions)
-- Stock registers (if required)
-- Assessment orders (if previously issued)
-- GST transition records (for migration-related issues)
+| # | Document |
+|---|----------|
+| 1 | Copy of Sales Tax / VAT notice |
+| 2 | VAT/CST registration certificate (if applicable) |
+| 3 | Historical VAT returns filed |
+| 4 | Purchase and sales invoices (relevant period) |
+| 5 | Ledger and accounting records |
+| 6 | CST declaration forms (C, F, H forms if applicable) |
+| 7 | Bank statements (supporting transactions) |
+| 8 | Stock registers (if required) |
+| 9 | Assessment orders (if previously issued) |
+| 10 | GST transition records (for migration-related issues) |
 
 ## 7) Process / Procedure
 
@@ -24086,15 +24162,17 @@ Shop must comply with zoning and distance rules.
 
 ## 6) Documents / Information Required
 
-- Identity proof of applicant (Aadhaar, PAN, etc.)
-- Address proof of business premises
-- Shop ownership or rental agreement
-- GST registration (if applicable in state policy)
-- Police verification certificate
-- Financial statements / solvency proof (in some states)
-- Passport-size photographs
-- Application form prescribed by Excise Department
-- NOC from local municipal authority (if required)
+| # | Document |
+|---|----------|
+| 1 | Identity proof of applicant (Aadhaar, PAN, etc.) |
+| 2 | Address proof of business premises |
+| 3 | Shop ownership or rental agreement |
+| 4 | GST registration (if applicable in state policy) |
+| 5 | Police verification certificate |
+| 6 | Financial statements / solvency proof (in some states) |
+| 7 | Passport-size photographs |
+| 8 | Application form prescribed by Excise Department |
+| 9 | NOC from local municipal authority (if required) |
 
 ## 7) Process / Procedure
 
@@ -24266,16 +24344,18 @@ Subject to regular inspections by authorities.
 
 ## 6) Documents / Information Required
 
-- Club registration certificate (Society / Trust / Company)
-- Memorandum & Articles of Association (if applicable)
-- List of club members
-- Identity and address proof of managing committee
-- Property ownership or lease documents
-- Layout plan of premises
-- GST registration (if applicable)
-- Police verification certificate
-- Application form under State Excise Rules
-- Financial statements (in some states)
+| # | Document |
+|---|----------|
+| 1 | Club registration certificate (Society / Trust / Company) |
+| 2 | Memorandum & Articles of Association (if applicable) |
+| 3 | List of club members |
+| 4 | Identity and address proof of managing committee |
+| 5 | Property ownership or lease documents |
+| 6 | Layout plan of premises |
+| 7 | GST registration (if applicable) |
+| 8 | Police verification certificate |
+| 9 | Application form under State Excise Rules |
+| 10 | Financial statements (in some states) |
 
 ## 7) Process / Procedure
 
@@ -24442,16 +24522,18 @@ Fixed serving hours defined by state law.
 
 ## 6) Documents / Information Required
 
-- Identity proof of applicant (PAN, Aadhaar, etc.)
-- Business registration (Company/LLP/Proprietorship)
-- Shop/restaurant ownership or lease agreement
-- GST registration certificate
-- Food safety license (FSSAI)
-- Property layout plan
-- Police clearance certificate
-- NOC from local authority (if required)
-- Application form under State Excise Rules
-- Financial proof (varies by state)
+| # | Document |
+|---|----------|
+| 1 | Identity proof of applicant (PAN, Aadhaar, etc.) |
+| 2 | Business registration (Company/LLP/Proprietorship) |
+| 3 | Shop/restaurant ownership or lease agreement |
+| 4 | GST registration certificate |
+| 5 | Food safety license (FSSAI) |
+| 6 | Property layout plan |
+| 7 | Police clearance certificate |
+| 8 | NOC from local authority (if required) |
+| 9 | Application form under State Excise Rules |
+| 10 | Financial proof (varies by state) |
 
 ## 7) Process / Procedure
 
@@ -24615,16 +24697,18 @@ Cannot be transferred to another location.
 
 ## 6) Documents / Information Required
 
-- Application form for temporary excise permission
-- Identity proof of applicant/organizer
-- Event details (date, time, and purpose)
-- Venue ownership or rental proof
-- Police NOC (in many states)
-- GST or business registration (if applicable)
-- Estimated number of attendees
-- Layout plan of event venue
-- Security arrangement details
-- Undertaking for compliance with excise rules
+| # | Document |
+|---|----------|
+| 1 | Application form for temporary excise permission |
+| 2 | Identity proof of applicant/organizer |
+| 3 | Event details (date, time, and purpose) |
+| 4 | Venue ownership or rental proof |
+| 5 | Police NOC (in many states) |
+| 6 | GST or business registration (if applicable) |
+| 7 | Estimated number of attendees |
+| 8 | Layout plan of event venue |
+| 9 | Security arrangement details |
+| 10 | Undertaking for compliance with excise rules |
 
 ## 7) Process / Procedure
 
@@ -24795,16 +24879,18 @@ Excise officers may monitor compliance.
 
 ## 6) Documents / Information Required
 
-- Application form for temporary excise permission
-- Identity proof of applicant/organizer
-- Event invitation or details (date, time, purpose)
-- Venue ownership or rental agreement
-- Police NOC (in many states)
-- Estimated guest list
-- Layout plan of venue
-- Security arrangements details
-- GST or business registration (if applicable)
-- Undertaking for compliance with excise rules
+| # | Document |
+|---|----------|
+| 1 | Application form for temporary excise permission |
+| 2 | Identity proof of applicant/organizer |
+| 3 | Event invitation or details (date, time, purpose) |
+| 4 | Venue ownership or rental agreement |
+| 5 | Police NOC (in many states) |
+| 6 | Estimated guest list |
+| 7 | Layout plan of venue |
+| 8 | Security arrangements details |
+| 9 | GST or business registration (if applicable) |
+| 10 | Undertaking for compliance with excise rules |
 
 ## 7) Process / Procedure
 
@@ -24989,17 +25075,19 @@ Includes timing restrictions and zoning compliance.
 
 ## 6) Documents / Information Required
 
-- Business registration (Company / LLP / Firm)
-- Identity proof of owners/directors
-- PAN and address proof
-- Property ownership or lease agreement
-- GST registration certificate
-- FSSAI license (for restaurants/hotels)
-- Layout plan of premises
-- Police clearance certificate
-- Application under State Excise Act
-- Financial proof or solvency certificate (in some states)
-- Fire safety and municipal approvals (if required)
+| # | Document |
+|---|----------|
+| 1 | Business registration (Company / LLP / Firm) |
+| 2 | Identity proof of owners/directors |
+| 3 | PAN and address proof |
+| 4 | Property ownership or lease agreement |
+| 5 | GST registration certificate |
+| 6 | FSSAI license (for restaurants/hotels) |
+| 7 | Layout plan of premises |
+| 8 | Police clearance certificate |
+| 9 | Application under State Excise Act |
+| 10 | Financial proof or solvency certificate (in some states) |
+| 11 | Fire safety and municipal approvals (if required) |
 
 ## 7) Process / Procedure
 
@@ -25162,16 +25250,18 @@ License must be renewed periodically.
 
 ## 6) Documents / Information Required
 
-- Business registration (Company/LLP/Firm/Proprietorship)
-- PAN and identity proof of owners
-- Property ownership or rental agreement
-- Layout plan showing permit room area
-- GST registration certificate
-- FSSAI license (for restaurants/hotels)
-- Police clearance certificate
-- Fire safety certificate (where applicable)
-- Application form under State Excise Rules
-- Financial documents (varies by state)
+| # | Document |
+|---|----------|
+| 1 | Business registration (Company/LLP/Firm/Proprietorship) |
+| 2 | PAN and identity proof of owners |
+| 3 | Property ownership or rental agreement |
+| 4 | Layout plan showing permit room area |
+| 5 | GST registration certificate |
+| 6 | FSSAI license (for restaurants/hotels) |
+| 7 | Police clearance certificate |
+| 8 | Fire safety certificate (where applicable) |
+| 9 | Application form under State Excise Rules |
+| 10 | Financial documents (varies by state) |
 
 ## 7) Process / Procedure
 
@@ -25345,16 +25435,18 @@ Cannot be transferred or reused elsewhere.
 
 ## 6) Documents / Information Required
 
-- Application form for temporary excise license
-- Identity proof of applicant/organizer
-- Event details (date, time, purpose)
-- Venue ownership or rental agreement
-- Police NOC (mandatory in many states)
-- Estimated guest list
-- Layout plan of venue
-- Security arrangement details
-- GST or business registration (if applicable)
-- Undertaking for compliance with excise rules
+| # | Document |
+|---|----------|
+| 1 | Application form for temporary excise license |
+| 2 | Identity proof of applicant/organizer |
+| 3 | Event details (date, time, purpose) |
+| 4 | Venue ownership or rental agreement |
+| 5 | Police NOC (mandatory in many states) |
+| 6 | Estimated guest list |
+| 7 | Layout plan of venue |
+| 8 | Security arrangement details |
+| 9 | GST or business registration (if applicable) |
+| 10 | Undertaking for compliance with excise rules |
 
 ## 7) Process / Procedure
 
@@ -25521,16 +25613,18 @@ Issued annually or as per excise policy cycle.
 
 ## 6) Documents / Information Required
 
-- Business registration certificate (Company/LLP/Firm)
-- PAN and identity proof of owners/directors
-- GST registration certificate
-- Shop/warehouse ownership or lease agreement
-- Financial statements and solvency proof
-- Police verification certificate
-- Application form under State Excise Rules
-- Layout plan of warehouse/storage facility
-- Security deposit documents (if applicable)
-- Compliance undertaking for excise regulations
+| # | Document |
+|---|----------|
+| 1 | Business registration certificate (Company/LLP/Firm) |
+| 2 | PAN and identity proof of owners/directors |
+| 3 | GST registration certificate |
+| 4 | Shop/warehouse ownership or lease agreement |
+| 5 | Financial statements and solvency proof |
+| 6 | Police verification certificate |
+| 7 | Application form under State Excise Rules |
+| 8 | Layout plan of warehouse/storage facility |
+| 9 | Security deposit documents (if applicable) |
+| 10 | Compliance undertaking for excise regulations |
 
 ## 7) Process / Procedure
 
@@ -25693,16 +25787,18 @@ License validity depends on state excise policy.
 
 ## 6) Documents / Information Required
 
-- Business registration (Company/LLP/Firm)
-- PAN and identity proof of directors/owners
-- GST registration certificate
-- Warehouse ownership or lease agreement
-- Financial statements and solvency proof
-- Police verification certificate
-- Application under State Excise Rules
-- Layout plan of storage facility
-- Security deposit details (if applicable)
-- Compliance undertaking for excise regulations
+| # | Document |
+|---|----------|
+| 1 | Business registration (Company/LLP/Firm) |
+| 2 | PAN and identity proof of directors/owners |
+| 3 | GST registration certificate |
+| 4 | Warehouse ownership or lease agreement |
+| 5 | Financial statements and solvency proof |
+| 6 | Police verification certificate |
+| 7 | Application under State Excise Rules |
+| 8 | Layout plan of storage facility |
+| 9 | Security deposit details (if applicable) |
+| 10 | Compliance undertaking for excise regulations |
 
 ## 7) Process / Procedure
 
@@ -25866,16 +25962,18 @@ License validity depends on state policy cycle.
 
 ## 6) Documents / Information Required
 
-- Business registration certificate (Company/LLP/Firm)
-- PAN and identity proof of owners/directors
-- GST registration certificate
-- Warehouse ownership or lease agreement
-- Financial statements / solvency certificate
-- Police verification certificate
-- Application under State Excise Rules
-- Layout plan of storage facility
-- Security deposit documentation (if applicable)
-- Compliance undertaking for excise regulations
+| # | Document |
+|---|----------|
+| 1 | Business registration certificate (Company/LLP/Firm) |
+| 2 | PAN and identity proof of owners/directors |
+| 3 | GST registration certificate |
+| 4 | Warehouse ownership or lease agreement |
+| 5 | Financial statements / solvency certificate |
+| 6 | Police verification certificate |
+| 7 | Application under State Excise Rules |
+| 8 | Layout plan of storage facility |
+| 9 | Security deposit documentation (if applicable) |
+| 10 | Compliance undertaking for excise regulations |
 
 ## 7) Process / Procedure
 
@@ -26038,16 +26136,18 @@ Service allowed only during permitted timings.
 
 ## 6) Documents / Information Required
 
-- Business registration (Company / LLP / Firm)
-- PAN and identity proof of owners/directors
-- Property ownership or lease agreement
-- GST registration certificate
-- FSSAI license (mandatory for food establishments)
-- Layout plan of premises
-- Police clearance certificate
-- Fire safety certificate (if applicable)
-- Application under State Excise Rules
-- Financial documents (varies by state)
+| # | Document |
+|---|----------|
+| 1 | Business registration (Company / LLP / Firm) |
+| 2 | PAN and identity proof of owners/directors |
+| 3 | Property ownership or lease agreement |
+| 4 | GST registration certificate |
+| 5 | FSSAI license (mandatory for food establishments) |
+| 6 | Layout plan of premises |
+| 7 | Police clearance certificate |
+| 8 | Fire safety certificate (if applicable) |
+| 9 | Application under State Excise Rules |
+| 10 | Financial documents (varies by state) |
 
 ## 7) Process / Procedure
 
@@ -26212,16 +26312,18 @@ License validity depends on excise policy cycle.
 
 ## 6) Documents / Information Required
 
-- Identity proof of applicant (PAN, Aadhaar, etc.)
-- Business registration (Company / Firm / LLP)
-- Property ownership or lease agreement
-- GST registration certificate
-- Police verification certificate
-- Financial solvency proof (in many states)
-- Application form under State Excise Rules
-- Layout plan of shop premises
-- Security deposit details (if applicable)
-- Undertaking for excise compliance
+| # | Document |
+|---|----------|
+| 1 | Identity proof of applicant (PAN, Aadhaar, etc.) |
+| 2 | Business registration (Company / Firm / LLP) |
+| 3 | Property ownership or lease agreement |
+| 4 | GST registration certificate |
+| 5 | Police verification certificate |
+| 6 | Financial solvency proof (in many states) |
+| 7 | Application form under State Excise Rules |
+| 8 | Layout plan of shop premises |
+| 9 | Security deposit details (if applicable) |
+| 10 | Undertaking for excise compliance |
 
 ## 7) Process / Procedure
 
@@ -26390,17 +26492,19 @@ License must be renewed as per state rules.
 
 ## 6) Documents / Information Required
 
-- Factory registration application form
-- Identity proof of owner/directors
-- PAN and Aadhaar details
-- Business registration (Company/LLP/Firm)
-- Factory premises ownership or lease agreement
-- Building plan approved by competent authority
-- Machinery details and layout plan
-- List of workers/employees
-- Fire safety clearance (if applicable)
-- Pollution Control Board NOC (if applicable)
-- Power connection details
+| # | Document |
+|---|----------|
+| 1 | Factory registration application form |
+| 2 | Identity proof of owner/directors |
+| 3 | PAN and Aadhaar details |
+| 4 | Business registration (Company/LLP/Firm) |
+| 5 | Factory premises ownership or lease agreement |
+| 6 | Building plan approved by competent authority |
+| 7 | Machinery details and layout plan |
+| 8 | List of workers/employees |
+| 9 | Fire safety clearance (if applicable) |
+| 10 | Pollution Control Board NOC (if applicable) |
+| 11 | Power connection details |
 
 ## 7) Process / Procedure
 
@@ -26574,16 +26678,18 @@ Needs periodic renewal based on local rules.
 
 ## 6) Documents / Information Required
 
-- Application form for health license
-- Identity proof of owner
-- Business registration certificate
-- Property ownership or rental agreement
-- Layout plan of premises
-- Water quality report (in some cases)
-- Waste disposal system details
-- Fire safety certificate (if applicable)
-- GST registration (if applicable)
-- NOC from local municipal authority
+| # | Document |
+|---|----------|
+| 1 | Application form for health license |
+| 2 | Identity proof of owner |
+| 3 | Business registration certificate |
+| 4 | Property ownership or rental agreement |
+| 5 | Layout plan of premises |
+| 6 | Water quality report (in some cases) |
+| 7 | Waste disposal system details |
+| 8 | Fire safety certificate (if applicable) |
+| 9 | GST registration (if applicable) |
+| 10 | NOC from local municipal authority |
 
 ## 7) Process / Procedure
 
@@ -26761,15 +26867,17 @@ Monthly/quarterly/annual returns depending on state.
 
 ## 6) Documents / Information Required
 
-- PAN card of applicant/business
-- Aadhaar or identity proof
-- Business registration certificate (Company/LLP/Firm)
-- GST registration certificate (if applicable)
-- Address proof of business premises
-- Employee details (for employer registration)
-- Salary structure (for payroll registration)
-- Bank account details
-- Application form as per state authority
+| # | Document |
+|---|----------|
+| 1 | PAN card of applicant/business |
+| 2 | Aadhaar or identity proof |
+| 3 | Business registration certificate (Company/LLP/Firm) |
+| 4 | GST registration certificate (if applicable) |
+| 5 | Address proof of business premises |
+| 6 | Employee details (for employer registration) |
+| 7 | Salary structure (for payroll registration) |
+| 8 | Bank account details |
+| 9 | Application form as per state authority |
 
 ## 7) Process / Procedure
 
