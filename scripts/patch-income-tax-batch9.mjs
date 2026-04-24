@@ -1,0 +1,49 @@
+#!/usr/bin/env node
+/**
+ * Patches data/content.json + public/content.json for Income Tax Services Batch 9.
+ * Run: node scripts/patch-income-tax-batch9.mjs
+ */
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.join(__dirname, '..');
+const BATCH_DIR = path.join(ROOT, 'tmp/income-tax-batch9');
+
+const IDS = [
+  'form-15ca-15cb',
+  'itr-u-filing',
+  'itr-1-filing',
+  'itr-2-filing',
+  'itr-3-filing',
+  'itr-4-filing',
+  'itr-5-filing',
+  'itr-6-filing',
+  'itr-7-filing',
+  'pan-card-application',
+  'tan-registration',
+  'tds-return-filing',
+];
+
+function loadMd(id) {
+  const f = path.join(BATCH_DIR, `${id}.md`);
+  if (!fs.existsSync(f)) throw new Error(`Missing ${f}`);
+  return fs.readFileSync(f, 'utf8').replace(/\r\n/g, '\n').replace(/\u2014/g, ', ').trim() + '\n';
+}
+
+const byId = Object.fromEntries(IDS.map((id) => [id, loadMd(id)]));
+
+for (const file of ['data/content.json', 'public/content.json']) {
+  const abs = path.join(ROOT, file);
+  const json = JSON.parse(fs.readFileSync(abs, 'utf8'));
+  if (!Array.isArray(json.services)) throw new Error(`No services in ${file}`);
+  for (const id of IDS) {
+    const idx = json.services.findIndex((s) => s && s.id === id);
+    if (idx < 0) throw new Error(`Service ${id} not found in ${file}`);
+    json.services[idx] = { ...json.services[idx], content: byId[id] };
+  }
+  fs.writeFileSync(abs, JSON.stringify(json, null, 2) + '\n', 'utf8');
+  console.log('Patched', file);
+}
+console.log('Done.', IDS.length, 'income tax service pages.');
