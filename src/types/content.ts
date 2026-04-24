@@ -2,6 +2,7 @@ export type ServicePackage = {
   name: string;
   price: string;
   description: string;
+  /** Bullet lines; use `**text**` for bold and newlines for multi-line bullets (see site help text in admin). */
   features?: string[];
   popular?: boolean;
   /** State-wise pricing: highlighted plan per state (separate from default-service "Most Popular") */

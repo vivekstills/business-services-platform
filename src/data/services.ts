@@ -1010,6 +1010,24 @@ export const SERVICES: Service[] = [
 
   // NEW BUSINESS – Other business registrations (from master list)
   {
+    id: 'huf-registration',
+    name: 'HUF Registration',
+    mainHead: 'FORM NEW BUSINESS',
+    categoryId: 'new-business',
+    shortDescription:
+      'HUF deed, separate PAN, bank account, and ITR-2 support for family tax planning.',
+    content:
+      'We help families formalize a Hindu Undivided Family (HUF) with a proper deed, PAN for the HUF, bank account opening, and annual income tax support.',
+    packages: [
+      {
+        name: 'Custom',
+        price: 'On request',
+        description:
+          'Scoped to family structure, state stamp rules, and whether bank or demat is required.',
+      },
+    ],
+  },
+  {
     id: 'partnership-registration',
     name: 'Partnership Registration',
     mainHead: 'FORM NEW BUSINESS',

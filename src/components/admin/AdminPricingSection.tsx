@@ -8,6 +8,7 @@ import {
   emptyTabGroup,
   newTabId,
 } from '../../utils/pricingTabs';
+import { PRICING_FEATURE_FORMAT_HINT } from '../PricingFeatureText';
 
 type Plan = PricingPlan;
 type ServiceRef = { id: string; name: string };
@@ -162,9 +163,12 @@ function PlanFields({
         Highlight (featured card)
       </label>
       <div>
-        <div className="flex items-center justify-between mb-2">
-          <span className="text-xs font-medium text-gray-500">Features</span>
-          <button type="button" onClick={() => addFeature(t, i)} className="text-xs text-blue-600 font-medium">
+        <div className="flex items-center justify-between mb-1">
+          <div>
+            <span className="text-xs font-medium text-gray-500">Features (per plan)</span>
+            <p className="text-[10px] text-gray-400 mt-0.5 max-w-lg">{PRICING_FEATURE_FORMAT_HINT}</p>
+          </div>
+          <button type="button" onClick={() => addFeature(t, i)} className="text-xs text-blue-600 font-medium shrink-0">
             + Add
           </button>
         </div>
@@ -173,13 +177,15 @@ function PlanFields({
           onReorder={(features) => reorderFeatures(t, i, features)}
           getItemId={(f, j) => `f-${t}-${i}-${j}-${f.slice(0, 12)}`}
           renderItem={(f, j) => (
-            <div className="flex gap-2">
-              <input
+            <div className="flex gap-2 items-start">
+              <textarea
                 value={f}
                 onChange={(e) => updateFeature(t, i, j, e.target.value)}
-                className="flex-1 px-3 py-2 rounded-lg border border-gray-200 text-sm"
+                rows={2}
+                placeholder="e.g. Everything in Standard"
+                className="flex-1 min-w-0 px-3 py-2 rounded-lg border border-gray-200 text-sm resize-y min-h-[2.5rem]"
               />
-              <button type="button" onClick={() => removeFeature(t, i, j)} className="p-2 text-red-500 hover:bg-red-50 rounded-lg">
+              <button type="button" onClick={() => removeFeature(t, i, j)} className="p-2 text-red-500 hover:bg-red-50 rounded-lg shrink-0">
                 <Trash2 className="w-4 h-4" />
               </button>
             </div>

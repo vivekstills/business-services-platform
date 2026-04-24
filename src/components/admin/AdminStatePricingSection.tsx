@@ -6,6 +6,7 @@ import {
 import { SortableList } from './SortableList';
 import { INDIAN_STATES } from '../../data/stateData';
 import type { ServicePackage } from '../../types/content';
+import PricingFeatureText, { PRICING_FEATURE_FORMAT_HINT } from '../PricingFeatureText';
 
 type Pkg = ServicePackage & { description: string };
 
@@ -93,12 +94,12 @@ function CardPreview({ pkg, idx }: { pkg: Pkg; idx: number }) {
       </div>
       {(pkg.features ?? []).length > 0 && (
         <ul className="space-y-1.5 mb-4 flex-1">
-          {(pkg.features ?? []).slice(0, 4).map((f, fi) => (
+          {(pkg.features ?? []).map((f, fi) => (
             <li key={fi} className={`flex items-start gap-1.5 text-[11px] ${isGradient ? 'text-blue-100' : 'text-gray-600'}`}>
               <div className={`mt-0.5 w-3.5 h-3.5 rounded-full flex items-center justify-center flex-shrink-0 ${isGradient ? 'bg-white/20' : 'bg-emerald-50'}`}>
                 <Check className={`w-2 h-2 ${isGradient ? 'text-white' : 'text-emerald-600'}`} />
               </div>
-              {f}
+              <PricingFeatureText text={f} className="min-w-0" />
             </li>
           ))}
         </ul>
@@ -227,12 +228,15 @@ function PlanEditor({
 
       {/* Features */}
       <div>
-        <div className="flex items-center justify-between mb-1.5">
-          <label className="text-xs font-medium text-gray-500">What's Included (features)</label>
+        <div className="flex items-start justify-between gap-2 mb-1.5">
+          <div>
+            <label className="text-xs font-medium text-gray-500">What&apos;s included (per plan)</label>
+            <p className="text-[10px] text-gray-400 mt-0.5 max-w-md">{PRICING_FEATURE_FORMAT_HINT}</p>
+          </div>
           <button
             type="button"
             onClick={addFeature}
-            className="flex items-center gap-1 text-xs text-blue-600 font-semibold hover:text-blue-800"
+            className="flex items-center gap-1 text-xs text-blue-600 font-semibold hover:text-blue-800 shrink-0"
           >
             <Plus className="w-3 h-3" /> Add item
           </button>
@@ -242,18 +246,19 @@ function PlanEditor({
         ) : (
           <div className="space-y-1.5">
             {(pkg.features ?? []).map((f, i) => (
-              <div key={i} className="flex items-center gap-1.5">
-                <Check className="w-3 h-3 text-emerald-500 flex-shrink-0" />
-                <input
+              <div key={i} className="flex items-start gap-1.5">
+                <Check className="w-3 h-3 text-emerald-500 flex-shrink-0 mt-1" />
+                <textarea
                   value={f}
                   onChange={(e) => updateFeature(i, e.target.value)}
                   placeholder={`Feature ${i + 1}`}
-                  className="flex-1 px-2.5 py-1.5 rounded-lg border border-gray-200 text-xs bg-white focus:border-blue-400 focus:ring-1 focus:ring-blue-100"
+                  rows={2}
+                  className="flex-1 min-w-0 px-2.5 py-1.5 rounded-lg border border-gray-200 text-xs bg-white focus:border-blue-400 focus:ring-1 focus:ring-blue-100 resize-y min-h-[2.5rem]"
                 />
                 <button
                   type="button"
                   onClick={() => removeFeature(i)}
-                  className="p-1 rounded text-red-400 hover:bg-red-50"
+                  className="p-1 rounded text-red-400 hover:bg-red-50 shrink-0"
                 >
                   <Trash2 className="w-3 h-3" />
                 </button>

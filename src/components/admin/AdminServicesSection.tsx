@@ -541,12 +541,17 @@ function PackageFeaturesEditor({
 
   return (
     <div className="space-y-1.5">
-      <div className="flex items-center justify-between mb-1">
-        <label className="text-[calc(11px+3pt)] font-bold uppercase tracking-wider text-gray-400">What's Included</label>
+      <div className="flex items-start justify-between gap-2 mb-1">
+        <div>
+          <label className="text-[calc(11px+3pt)] font-bold uppercase tracking-wider text-gray-400 block">What&apos;s included</label>
+          <p className="text-[10px] text-gray-400 mt-0.5 max-w-md">
+            Use <code className="text-gray-500">**double asterisks**</code> for bold. Line breaks are supported in one bullet.
+          </p>
+        </div>
         <button
           onClick={add}
           type="button"
-          className="flex items-center gap-1 text-[calc(11px+3pt)] text-blue-500 hover:text-blue-700 font-semibold"
+          className="flex items-center gap-1 text-[calc(11px+3pt)] text-blue-500 hover:text-blue-700 font-semibold shrink-0"
         >
           <Plus className="w-3 h-3" /> Add item
         </button>
@@ -555,13 +560,14 @@ function PackageFeaturesEditor({
         <p className="text-[calc(11px+3pt)] text-gray-300 italic">No items yet. Click "Add item" to add bullet points.</p>
       )}
       {features.map((f, i) => (
-        <div key={i} className="flex items-center gap-1.5">
-          <Check className="w-3 h-3 text-emerald-500 flex-shrink-0" />
-          <input
+        <div key={i} className="flex items-start gap-1.5">
+          <Check className="w-3 h-3 text-emerald-500 flex-shrink-0 mt-1.5" />
+          <textarea
             value={f}
             onChange={(e) => update(i, e.target.value)}
             placeholder={`Feature ${i + 1}`}
-            className="flex-1 px-2.5 py-1 rounded border border-gray-200 text-[calc(12.5px+3pt)] focus:border-blue-400 focus:ring-1 focus:ring-blue-100"
+            rows={2}
+            className="flex-1 min-w-0 px-2.5 py-1.5 rounded border border-gray-200 text-[calc(12.5px+3pt)] focus:border-blue-400 focus:ring-1 focus:ring-blue-100 resize-y min-h-[2.5rem]"
           />
           <button
             onClick={() => remove(i)}
