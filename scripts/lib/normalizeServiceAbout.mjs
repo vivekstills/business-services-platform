@@ -12,9 +12,30 @@
 const FAQ_H2 = /##\s*Frequently\s+asked\s+questions\b[^\n]*/i;
 const PROCESS_H2 = /##\s*Process\b[^\n]*/i;
 
+/**
+ * Removes Chat / batch instructions that were accidentally pasted into the About field
+ * (e.g. "Here are all service contents…", "You are a senior frontend…", dashed
+ * "CONTENT CLEANING" / "STRUCTURE" blocks). These are not user-facing service copy.
+ */
+export function stripPastedMetaInstructions(raw) {
+  if (typeof raw !== 'string' || !raw.trim()) return raw;
+  let t = raw;
+  // Meta lines sometimes appended right after a valid disclaimer
+  t = t.replace(/\n+Here are all service contents[\s\S]*$/i, '');
+  t = t.replace(/\n+You are a senior frontend engineer and content formatter\.[\s\S]*$/i, '');
+  t = t.replace(
+    /\n+[\s-]{3,}[^\n]*\bCONTENT CLEANING\b[^\n]*-*\s*\n+[\s\S]*$/i,
+    ''
+  );
+  t = t.replace(/\n+={5,}[\s\n]*-+\s*OUTPUT EXPECTATION[-\s]*\n*[\s\S]*$/i, '');
+  t = t.replace(/\n+[-]{3,}\s*EXECUTION:\s*[-]{3,}[\s\S]*$/i, '');
+  return t.trimEnd();
+}
+
 export function normalizeServiceAbout(raw) {
   if (typeof raw !== 'string' || !raw.trim()) return raw;
-  let t = raw.replace(/\u2014/g, ', ');
+  let t = stripPastedMetaInstructions(raw);
+  t = t.replace(/\u2014/g, ', ');
   t = t.replace(/\s+,/g, ',');
   t = t.replace(/ ,  /g, ', ');
   t = normalizeProcessSection(t);
