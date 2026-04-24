@@ -516,14 +516,6 @@ export const EXCEL_STUB_SERVICES: Service[] = [
     categoryId: 'new-business',
     routeMainCategorySlug: 'starts-new-business',
   }),
-  stub({
-    id: 'ccfs-scheme',
-    name: 'CCFS (Credit Guarantee & Support Schemes)',
-    mainHead: 'START NEW BUSINESS',
-    categoryId: 'new-business',
-    routeMainCategorySlug: 'starts-new-business',
-  }),
-
   // Legal compliance — additional catalogue entries
   stub({
     id: 'certificate-of-incumbency',
@@ -560,6 +552,27 @@ export const EXCEL_STUB_SERVICES: Service[] = [
   stub({
     id: 'mgt-7-filing',
     name: 'MGT-7 Filing',
+    mainHead: 'ROC COMPLIANCE',
+    categoryId: 'roc-compliance',
+    routeMainCategorySlug: 'roc-compliance',
+  }),
+  stub({
+    id: 'ccfs-scheme',
+    name: 'CCFS scheme (Compromises, arrangements and amalgamations)',
+    mainHead: 'ROC COMPLIANCE',
+    categoryId: 'roc-compliance',
+    routeMainCategorySlug: 'roc-compliance',
+  }),
+  stub({
+    id: 'inc-20a-filing',
+    name: 'Commencement of business (Form INC-20A)',
+    mainHead: 'ROC COMPLIANCE',
+    categoryId: 'roc-compliance',
+    routeMainCategorySlug: 'roc-compliance',
+  }),
+  stub({
+    id: 'dormant-status-filing',
+    name: 'Dormant company status (Section 455, MSC-1)',
     mainHead: 'ROC COMPLIANCE',
     categoryId: 'roc-compliance',
     routeMainCategorySlug: 'roc-compliance',
