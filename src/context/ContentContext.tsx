@@ -259,19 +259,38 @@ function unionCodeDefinedServices(merged: Content): Content {
   };
 }
 
-/** Prefer structured About copy from the shipped `public/content.json` over API short blurbs. */
-function applyRichAboutFromPublicSnapshot(merged: Content, snapshot: unknown): Content {
+/**
+ * Prefer structured About copy from the shipped `public/content.json` when the API
+ * response did not supply a full `services` array (merge would keep long-form
+ * defaults from `SERVICE_ABOUT_CONTENT` in code, which never gets updated by JSON patches).
+ * When the API did return a non-empty `services` array, trust that payload and only
+ * overlay public where the merged service still has non-rich or empty content.
+ */
+function applyRichAboutFromPublicSnapshot(
+  merged: Content,
+  snapshot: unknown,
+  apiData?: object | null
+): Content {
   if (!snapshot || typeof snapshot !== 'object') return merged;
   const list = (snapshot as { services?: Service[] }).services;
   if (!Array.isArray(list) || list.length === 0) return merged;
   const byId = new Map(list.map((s) => [s.id, s] as const));
+  const apiServices = apiData && typeof apiData === 'object' ? (apiData as { services?: Service[] }).services : undefined;
+  const apiHasFullServices = Array.isArray(apiServices) && apiServices.length > 0;
+
   let changed = false;
   const next = (merged.services ?? []).map((s) => {
     const pub = byId.get(s.id);
     const c = pub?.content;
     if (typeof c !== 'string' || !c.trim() || !isRichMarkdown(c)) return s;
-    if (s.content && isRichMarkdown(s.content)) return s;
     if (c === s.content) return s;
+
+    if (apiHasFullServices) {
+      if (s.content && isRichMarkdown(s.content)) return s;
+      changed = true;
+      return { ...s, content: c };
+    }
+
     changed = true;
     return { ...s, content: c };
   });
@@ -308,7 +327,7 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
           if (apiData && typeof apiData === 'object' && Object.keys(apiData).length > 0) {
             const publicSnap = await fetchPublicContentJson();
             const base = unionCodeDefinedServices(deepMerge(defaultContent, apiData) as Content);
-            setContent(applyRichAboutFromPublicSnapshot(base, publicSnap));
+            setContent(applyRichAboutFromPublicSnapshot(base, publicSnap, apiData));
             return;
           }
         }
@@ -322,7 +341,8 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
       if (staticRes.ok) {
         const staticData = await staticRes.json();
         if (staticData && typeof staticData === 'object' && Object.keys(staticData).length > 0) {
-          setContent(unionCodeDefinedServices(deepMerge(defaultContent, staticData) as Content));
+          const merged = unionCodeDefinedServices(deepMerge(defaultContent, staticData) as Content);
+          setContent(applyRichAboutFromPublicSnapshot(merged, staticData, staticData));
           return;
         }
       }
