@@ -1,92 +1,56 @@
-# DPIIT registration (startup recognition)
+# Dpiit Registration
 
 ## Overview
 
-DPIIT registration (startup recognition by DPIIT) is official recognition of an eligible startup under the Startup India initiative, administered by the Department for Promotion of Industry and Internal Trade (DPIIT), Ministry of Commerce and Industry. Recognition is obtained on the Startup India portal (startupindia.gov.in). There is no government fee. The certificate shows a unique DPIIT recognition number. Recognition is the usual first step before separate applications for income tax benefits (for example Section 80-IAC through the IMB), capital gains-related benefits where applicable, IP fee rebates, GeM startup seller status, and other programme-specific benefits. Eligibility and caps (age of entity, turnover, innovation or scalable model) are as on the portal for the year you apply.
+DPIIT Registration ,  also known as Startup Recognition by DPIIT ,  is the government recognition accorded to eligible startups under the Startup India initiative of the Government of India, administered by the Department for Promotion of Industry and Internal Trade (DPIIT), Ministry of Commerce and Industry. When a startup is recognised by DPIIT, it is officially acknowledged by the Government of India as a "Startup" under the Startup India framework. This recognition unlocks a range of regulatory benefits, tax incentives, funding access, and compliance relaxations that are available exclusively to DPIIT-recognised startups. DPIIT Recognition is the foundation of the Startup India ecosystem. It is the prerequisite for: Income tax exemption under Section 80-IAC of the Income Tax Act (3 years exemption out of 10) Capital gains tax exemption under Section 54EE DPIIT's various startup-specific regulatory benefits (IPO norms, labour law exemptions, etc.) Funding access through the Fund of Funds for Startups (FFS) managed by SIDBI Participation in government startup schemes, challenges, and procurement pilots DPIIT Recognition is obtained through the Startup India portal (startupindia.gov.in) and is free of cost.
 
-## Key features
+## Features
 
-- Free, end-to-end online process on the Startup India portal.
-- Self-declaration of facts; DPIIT reviews the file and may ask for clarification.
-- Unique DPIIT recognition number and downloadable certificate.
-- Gateway to tax, IP, procurement, and regulatory benefits that require recognition, each with its own rules.
-- Profile on the Startup India platform for visibility to investors and partners.
-- Not a substitute for Udyam (MSME) or other registrations; those are separate.
+Free recognition: DPIIT Recognition is completely free ,  no government fee is charged Self-certification: The recognition process is largely self-certification based ,  the startup declares its eligibility and DPIIT verifies Online process: End-to-end online on the Startup India portal ,  no physical visits or document submissions Unique DPIIT Recognition Number: Each recognised startup receives a unique recognition certificate with a DPIIT recognition number Facilitates tax exemption applications: DPIIT Recognition is the gateway to applying for income tax exemption and capital gains exemption under Startup India Regulatory benefits: Recognised startups enjoy relaxations in labour and environment law self-certification, faster IPR registration, and simplified winding-up procedures Investor visibility: DPIIT-recognised startups are listed on the Startup India portal ,  discoverable by investors, government departments, and ecosystem stakeholders Government procurement: Recognised startups can participate in GeM (Government e-Marketplace) as startup sellers with relaxed eligibility norms
 
 ## Benefits
 
-- Access to Startup India benefits that list DPIIT recognition as a condition.
-- Self-certification under six labour laws and three environment laws for five years for recognised startups, as per the extant notification.
-- Path to apply for Section 80-IAC (separate IMB process) and related tax items where eligible.
-- Patent and trademark fee rebates for recognised startups under the notified rules.
-- Fast-track patent examination for eligible recognised startups.
-- GeM and some government procurement relaxations for recognised startups, subject to rules.
-- Easier formal exit for eligible companies under the IBC fast-track track for startups.
+Regulatory compliance relaxations: DPIIT-recognised startups can self-certify compliance under 6 labour laws (including CLRA, Maternity Benefit Act, EPF and MP Act) and 3 environmental laws for 5 years ,  significantly reducing compliance burden Tax benefits gateway: Recognition is the mandatory first step for applying for 3-year income tax holiday (Section 80-IAC) and capital gains exemption (Section 54EE and 54GB) IPR fee concessions: Up to 80% rebate on patent filing fees and 50% rebate on trademark filing fees for recognised startups Fast-track patent examination: DPIIT-recognised startups get expedited patent examination under the Fast-Track scheme ,  patents are examined within 30 days of request Fund of Funds access: DPIIT-recognised startups can receive funding from SEBI-registered AIFs that are funded through SIDBI's Fund of Funds ,  a ₹10,000 crore government fund for startups Government procurement without turnover requirement: Recognised startups can bid for government procurement contracts without meeting the minimum turnover and prior experience criteria that apply to regular vendors Easy winding up: Under the Insolvency and Bankruptcy Code, DPIIT-recognised startups (classified as "fast-track" companies) can be wound up within 90 days, compared to the regular process Networking and visibility: Access to the Startup India Hub, government startup events, international delegations, and investor forums
 
 ## Limitations
 
-- Turnover above rupees one hundred crore in any year, or age beyond ten years from incorporation, or loss of “startup” status under the definition, ends eligibility for future startup benefits.
-- Innovation or scalable high-employment model must be credible; generic trading or passive holding companies do not fit.
-- DPIIT recognition alone does not grant the three-year income tax holiday; IMB approval is separate for 80-IAC.
-- Does not change FEMA or FDI compliance.
-- Benefits are time-limited by the startup policy window; keep the portal profile updated after funding or product changes.
-
-## Process
-
-1. Register on startupindia.gov.in with the entity’s email and create the company profile.
-2. Complete incorporation type, CIN or LLPIN, PAN, sector, and founder details.
-3. Write the innovation or scalable model description (this section is heavily reviewed).
-4. Upload the certificate of incorporation or partnership registration as required.
-5. Submit the self-declaration that all eligibility tests are met.
-6. DPIIT reviews; many files are decided in about two to ten working days; some need more information.
-7. Download the DPIIT recognition certificate and use the number for GeM, tax, IP, and other follow-on applications.
-
-## Documents required
-
-| Document | Details |
-|----------|---------|
-| Certificate of incorporation / registration | Pvt Ltd, LLP, or registered partnership |
-| PAN of the entity | Company, LLP, or firm |
-| Innovation or business write-up | Usually about five hundred words on product, technology, and scale |
-| Website or product link | If any |
-| Pitch deck or demo | Optional support for the story |
-| Founder and director details | Name, DIN or DPIN, PAN, Aadhaar as asked |
-| Patents or IP | If any |
-| Revenue information | To show sub-rupees one hundred crore turnover |
-
-## Fees (indicative)
-
-| Service | Government fee |
-|--------|-----------------|
-| DPIIT startup recognition | Nil (free) |
-
-| Professional (est.) | Fee |
-|----------------------|-----|
-| DPIIT recognition support | ₹3,000 – ₹8,000 |
-| Innovation write-up drafting | ₹2,000 – ₹5,000 |
-| Section 80-IAC IMB support | ₹15,000 – ₹40,000 |
-| Full Startup India compliance package | ₹10,000 – ₹30,000 |
-
-Professional fees are often exclusive of GST at 18%.
+Eligibility caps: Companies with turnover exceeding ₹100 crore or those incorporated more than 10 years ago are not eligible ,  limiting recognition to early-stage companies Innovation requirement: The company must work towards innovation, development, deployment, or commercialisation of new products, processes, or services driven by technology or intellectual property ,  pure trading, manufacturing, or services without innovation do not qualify Scalability requirement: The startup must have potential to generate employment or create wealth ,  passive investment companies or holding companies do not qualify Recognition ≠ tax exemption: DPIIT Recognition alone does not grant income tax exemption ,  a separate application to the Inter-Ministerial Board (IMB) is required for Section 80-IAC exemption Time-bound: Recognition and its benefits are available only for 10 years from incorporation ,  after which the entity is no longer considered a "startup" for DPIIT purposes No FDI facilitation: DPIIT Recognition does not directly affect FEMA/FDI compliance ,  foreign investment compliance remains unchanged
 
 ## Applicability
 
-Private limited companies, LLPs, and registered partnership firms that are within ten years of incorporation, have turnover below rupees one hundred crore in every year since incorporation, and are developing or scaling an innovative product, process, or service (or a scalable model with strong employment or wealth creation potential), and are not a split or reconstruction of an existing business only to obtain benefits. Pan-India.
+DPIIT Recognition is available to entities that meet ALL of the following criteria: Criterion Requirement Entity type Private Limited Company, Registered Partnership Firm, or LLP Age Incorporated/registered within the last 10 years Annual turnover Less than ₹100 crore in any financial year since incorporation Nature of work Working towards innovation/development of product, process, or service; or a scalable business model with high potential for employment/wealth creation Not formed by splitting Not formed by splitting up or reconstruction of an existing business
+
+Applicable pan-India ,  startups across all states and UTs, including those in Tier 1 (Bengaluru, Mumbai, Delhi, Hyderabad), Tier 2 (Pune, Ahmedabad, Jaipur, Kochi, Chandigarh), and Tier 3 cities can obtain DPIIT Recognition.
+
+## Documents Required
+
+| Document | Details |
+| --- | --- |
+| Certificate of Incorporation / Registration certificate | For private limited company, LLP, or partnership firm |
+| PAN of the entity | Company/LLP/firm PAN |
+| Brief description of innovation/business | 500-word write-up on the product/service and innovation element |
+| Website URL (if any) | Company website or product link |
+| Pitch deck or product demo (optional) | To support the innovation description |
+| Founders' details | Name, DIN/DPIN, PAN, Aadhaar of founders/directors |
+| Details of patents or IP (if any) | Patent application numbers, trademark registrations |
+| Previous year's revenue (if any) | To confirm sub-₹100 crore turnover threshold |
+
+## Process
+
+Step 1 ,  Startup India Portal Registration Register on startupindia.gov.in with the company's email ID. Create a login account for the entity. Step 2 ,  Entity Profile Complete the entity profile ,  incorporation details, type, CIN/LLPIN, PAN, and founder details. Step 3 ,  Innovation Description Write a compelling, accurate description of the startup's innovation ,  the product/service being developed, the problem it solves, the technology/IP involved, and its scalability potential. This is the most critical part of the application. Step 4 ,  Document Upload Upload the Certificate of Incorporation and other required documents. Step 5 ,  Self-Declaration Submit the self-declaration certifying that all eligibility criteria are met. Step 6 ,  DPIIT Review DPIIT reviews the application. For most applications, DPIIT grants recognition within 2–10 working days. If additional information is needed, DPIIT may seek clarification. Step 7 ,  Recognition Certificate Upon approval, the DPIIT Recognition Certificate with unique recognition number is issued digitally on the Startup India portal. Step 8 ,  Subsequent Applications Use the DPIIT Recognition Number to apply for Section 80-IAC tax exemption, IPR fee concessions, GeM startup registration, and other Startup India benefits.
+
+Fees Service Government Fee DPIIT Startup Recognition Nil (Free)
+
+## Professional Service
+
+Estimated Fee DPIIT Recognition application support ₹3,000 – ₹8,000 Innovation write-up drafting ₹2,000 – ₹5,000 Section 80-IAC IMB application support ₹15,000 – ₹40,000 Complete Startup India compliance package ₹10,000 – ₹30,000
+
+Professional fees exclusive of GST @18%.
 
 ## Validity
 
-Recognition lasts while the entity meets the startup definition: within ten years of incorporation and annual turnover below rupees one hundred crore. There is no yearly “renewal” of the certificate by itself; update the portal when material facts change. If you cross turnover or age limits, you are no longer a “startup” for these benefits even if an old PDF still exists on your drive.
+DPIIT Recognition is valid until the startup reaches 10 years from its date of incorporation or its annual turnover exceeds ₹100 crore ,  whichever occurs first. The recognition does not need to be periodically renewed; it remains valid as long as the startup continues to meet the eligibility criteria. The startup must update its profile on the Startup India portal with material changes (funding rounds, new products, team changes).
 
 ## Frequently asked questions
 
-**Is a service company eligible?** Yes, if you can show innovation in the service, technology use, or a truly scalable model. Pure traditional services with no differentiator may be denied.
-
-**We pivoted to tech after eight years. Can we apply?** Yes if you are still within ten years of incorporation, under the turnover cap, and the current business is innovative. The ten-year clock starts at incorporation.
-
-**Is Startup India registration the same as DPIIT recognition?** Yes, in common language. The official name is DPIIT recognition under Startup India.
-
-**What if turnover crosses rupees one hundred crore after recognition?** You are no longer treated as an eligible startup for new benefits from that point forward. Past benefits already taken are governed by their own law; update your status honestly on the portal.
-
-**Does DPIIT help us raise VC?** Recognition does not guarantee funding. It helps with visibility, some investor filters, Fund of Funds routes where applicable, and tax story if 80-IAC is approved. The investment case is still your business.
-
-*All content is for informational purposes. Specific government registration, tax, and compliance advice should be obtained from qualified professionals based on your entity’s circumstances, state, and business activities.*
+1. We are a service company ,  not a product or tech startup. Can we get DPIIT Recognition? Yes. DPIIT Recognition is not limited to product or technology startups. A service company can be recognised if it is working towards innovation in service delivery, developing a new service model driven by technology or intellectual property, or has a highly scalable business model with significant employment or wealth creation potential. The key is demonstrating the innovative or scalable element. Pure conventional service businesses (traditional consulting, standard outsourcing) without any innovative element may not qualify. 2. Our company was incorporated 8 years ago and just pivoted to a tech product. Can we still get DPIIT Recognition? Yes, provided your company was incorporated within the last 10 years (from the date of application), your annual turnover has not exceeded ₹100 crore in any year, and the current business involves innovation/technology. The 10-year clock runs from incorporation date ,  so if your company was incorporated 8 years ago, you have 2 more years of eligibility. Apply immediately if you qualify ,  do not wait until year 10. 3. Is DPIIT Recognition the same as Startup India Registration? Yes. "DPIIT Recognition" and "Startup India Registration" refer to the same thing ,  the recognition granted by DPIIT under the Startup India initiative, obtained through the startupindia.gov.in portal. The output is the DPIIT Recognition Certificate with a unique recognition number. This recognition is the foundation for all other Startup India benefits including tax exemptions, IPR concessions, and regulatory relaxations. 4. What happens if our startup's turnover crosses ₹100 crore after getting DPIIT Recognition? If a DPIIT-recognised startup's annual turnover crosses ₹100 crore in any financial year, it is no longer considered a "startup" for DPIIT purposes and ceases to be eligible for startup-specific benefits going forward. The recognition is not automatically revoked, but the entity should self-declare the change in status and is no longer entitled to claim startup-specific benefits. Tax benefits already availed (e.g., 80-IAC exemption for prior years) are not retrospectively reversed. 5. Does DPIIT Recognition help in raising venture capital funding? DPIIT Recognition itself does not directly attract or guarantee venture capital funding. However, it provides indirect facilitation: (a) it is a prerequisite for receiving funding from AIFs backed by SIDBI's Fund of Funds; (b) some institutional investors and family offices use DPIIT Recognition as a basic credibility filter; (c) the Startup India portal lists recognised startups, providing visibility to registered investors. The more significant funding impact comes from the income tax holiday (Section 80-IAC) which the recognition enables ,  making the startup more attractive to investors by improving post-tax returns for founders.

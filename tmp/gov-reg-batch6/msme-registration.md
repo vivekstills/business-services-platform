@@ -1,91 +1,53 @@
-# MSME registration (Udyam)
+# Msme Registration (udyam Registration)
 
 ## Overview
 
-Udyam Registration, often called Udyam or MSME registration, is the free, online, paperless self-declaration of an enterprise as micro, small, or medium under the Micro, Small and Medium Enterprises Development Act, 2006, as read with the 2020 turn-over and plant & machinery (or service equipment) limits. The portal is udyamregistration.gov.in. The output is a Udyam Registration Certificate and a 19-digit Udyam number. It replaced UAM and the older EM I and II. For MSME, investment in plant and machinery or equipment, and for services the investment and turnover, are the two axes of classification; the Udyam engine uses linked income tax and GST data where a GSTIN is present to reduce fake figures.
+MSME Registration ,  officially known as Udyam Registration ,  is the government registration for Micro, Small, and Medium Enterprises (MSMEs) in India under the Micro, Small and Medium Enterprises Development Act, 2006 (MSMED Act). Since July 1, 2020, the registration is done online through the Udyam Registration portal (udyamregistration.gov.in) ,  entirely paperless, free of cost, and based on self-declaration. The Udyam Registration portal is integrated with the Income Tax and GST databases ,  turnover and investment figures are verified directly from PAN and GSTIN data, eliminating the need for manual document submission. The output is the Udyam Registration Certificate with a unique 19-digit Udyam Registration Number (URN). MSMEs are classified as follows under the revised MSMED Act criteria (effective since June 2020): Category Investment in Plant & Machinery/Equipment Annual Turnover Micro Up to ₹1 crore Up to ₹5 crore Small Up to ₹10 crore Up to ₹50 crore Medium Up to ₹50 crore Up to ₹250 crore
 
-| Category | Plant & machinery or equipment, manufacturing | Service equipment | Turnover (both types) |
-|----------|---------------------------------------------|------------------|------------------------|
-| Micro | Up to ₹1 crore | Up to ₹1 crore | Up to ₹5 crore |
-| Small | Up to ₹10 crore | Up to ₹10 crore | Up to ₹50 crore |
-| Medium | Up to ₹50 crore | Up to ₹50 crore | Up to ₹250 crore |
+Udyam Registration replaced the earlier EM Part-I & II system and the Udyog Aadhaar Memorandum (UAM) system. Businesses registered under UAM were required to migrate to Udyam by June 30, 2022. Udyam Registration is free ,  no government fee is charged.
 
-(Confirm the year’s table on the Udyam site; the government may from time to time change limits.)
+## Features
 
-## Key features
-
-- No fee and no document upload: core fields are from PAN, GST, and where relevant IT and GST return data, under the 2020 process.
-- Aadhaar OTP of the main promoter, partner, or authorising partner or director, as the form routes.
-- One Udyam per person for that enterprise pattern; a single number covers all branches and activities of the same legal person.
-- Auto-reclassification: when IT or GST data shows a breach of limits, the Udyam side can move the firm out of a lower band or out of MSME. Not the same as “loss of the number,” but the benefit side changes.
-- Udyam is not Startup India, not FSSAI, and not ISO; it is the MSME identity for central credit and public procurement and many state tools.
+Completely online and paperless: No document upload required ,  data pulled from PAN and GST systems automatically Aadhaar-based verification: Proprietors/managing partners/directors verify identity through Aadhaar OTP ,  no physical presence required Unique Udyam Registration Number: A permanent 19-digit Udyam number (format: UDYAM-XX-00-0000000) issued on registration Udyam Registration Certificate: Downloadable digital certificate with QR code for instant verification Classification auto-revised: UDYAM system auto-updates MSME classification annually based on tax return data ,  no need to manually revise as business grows Free of cost: Government does not charge any fee for Udyam Registration Self-declaration based: The registration is based on the applicant's self-declaration ,  incorrect declarations attract cancellation and penalties NIC code-based classification: Businesses are classified by their National Industry Classification (NIC) code ,  covering manufacturing and service activities
 
 ## Benefits
 
-- Public procurement: the 25% from MSME policy and 4% sub-target for certain categories use Udyam as the proof, subject to the exact tender.
-- CGTMSE and priority sector: banks and NBFCs use Udyam in the KYC and scheme fit for collateral-free and PS lending where allowed.
-- GeM, Samadhaan, and MSE dispute resolution, and a string of subventions (CLCSS, ZED, and others) with their own add-on terms.
-- Late payment: MSME interest on some buyer delays if you fit the MSE part of the Act and the buyer is a class that must pay 45 days.
-- Stamp duty, power tariff, and state hand-outs where a state has linked them to a valid Udyam in that state.
-- 50% trademark fee and patent rebate, when the scheme in force and your category match.
+Priority Sector Lending: Banks are directed by RBI to provide priority sector lending to MSMEs at lower interest rates ,  Udyam Registration is proof of MSME status for bank loan applications Credit Guarantee: Access to CGTMSE (Credit Guarantee Fund Trust for Micro and Small Enterprises) ,  collateral-free loans up to ₹5 crore for micro and small enterprises; Udyam Registration is mandatory for this Government tenders: Public procurement policy mandates that 25% of government procurement must come from MSMEs ,  with 4% reserved for SC/ST-owned MSMEs; Udyam Registration enables participation GeM portal MSME benefits: MSMEs on the Government e-Marketplace (GeM) get preferential treatment, special seller categories, and access to MSME-specific tenders Delayed payment protection: The MSMED Act mandates that buyers pay MSMEs within 45 days; registered MSMEs can file complaints for delayed payment through the MSME Samadhaan portal Subsidies and incentive schemes: Udyam Registration is a prerequisite for MSME-specific subsidies ,  technology upgradation (CLCSS), cluster development (CDP), quality certification (ZED), ISO reimbursement, and export promotion Tax benefits: MSMEs registered under Udyam may be eligible for certain state-level tax exemptions, electricity tariff concessions, and stamp duty exemptions ,  varying by state Trademark and patent fee concession: MSMEs with Udyam Registration get 50% concession on trademark filing fees and rebates on patent fees
 
 ## Limitations
 
-- Aadhaar and PAN are almost always needed; a promoter without a linked Aadhaar is stuck until they fix the UID and mobile link.
-- One Udyam for one enterprise idea; you cannot have three Udyams for three branches of the same legal person.
-- If your turnover and investment outgrow the medium line, you fall out of MSME benefits, even if the old PDF still says “Udyam.”
-- Udyam does not, by itself, get you a loan; the bank’s credit, collateral, and scheme rules still apply.
-- The engine’s link to ITR and GST can surprise firms that filed wrong; wrong self-declare can be traced.
-
-## Process
-
-1. Open udyamregistration.gov.in and start “For new entrepreneurs not yet registered as MSME.”
-2. Enter Aadhaar of the owning partner, director, or karta, and verify OTP.
-3. Enter PAN: company and, where asked, the lead person; the back-end can pull the IT base.
-4. If GST-registered, enter GSTIN. Turnover can auto-fill in part from the GST network.
-5. Add NIC code, business address, bank, and employee and investment fields as needed for your fact pattern. Review pre-filled and manual lines.
-6. Self-declare under penalty of law that the class is true.
-7. The certificate and Udyam number appear at once, most times. Download and use for the bank, GeM, and other schemes. Update when name, activity, or scale moves.
-
-## Documents required (paperless, but you must have the facts)
-
-| Information or credential | Notes |
-|---------------------------|--------|
-| Aadhaar of the signing promoter | As per entity type: proprietor, karta, partner, director |
-| PAN of the entity and people | The portal validates |
-| GSTIN, if in GST | Data pull where enabled |
-| Bank account, IFSC, branch | For verification in some use cases |
-| NIC code, activity, address | You pick and enter |
-| Investment in plant, machinery, or equipment | For class; ITR and GST can cross-check in linked cases |
-| Number of people | As asked |
-
-## Fees (indicative)
-
-| Service | Government | Professional (est.) |
-|--------|------------|---------------------|
-| Udyam | Nil (free) | ₹500 – ₹2,000 |
-| UAM to Udyam migration, if any old case is left | Nil | ₹1,000 – ₹3,000 |
-| NIC and class advisory | - | ₹1,000 – ₹2,500 |
-| “Use your benefits” consulting | - | ₹3,000 – ₹10,000 |
+Aadhaar mandatory: The registration process requires Aadhaar of the proprietor/managing partner/director ,  entities without Aadhaar-linked proprietors face registration challenges Turnover-based auto-reclassification: As the business grows, the Udyam system auto-upgrades classification based on GST/IT return data ,  a business may suddenly find itself classified as "Medium" or even beyond MSME limits without awareness, losing certain MSME benefits PAN and GSTIN mandatory: GST registration is required for Udyam Registration (for businesses above GST threshold); businesses below GST threshold can register with a self-declaration on turnover Single registration per Aadhaar: An individual can hold only one Udyam Registration ,  businesses with diverse activities must consolidate under a single registration Not for large enterprises: Once turnover exceeds ₹250 crore or investment exceeds ₹50 crore, the entity exits MSME classification and all MSME benefits cease No retrospective benefit: MSME benefits apply from the date of Udyam Registration ,  delayed registration means delayed access to benefits
 
 ## Applicability
 
-Sole proprietorship, HUF, partnership, LLP, company, co-operative, trust that runs a business, and more, in manufacturing and services, with capital and turnover in the Udyam band. All states; no physical office visit for the main flow.
+Udyam Registration is available to: Entity Type
+
+## Eligibility
+
+Proprietorship Individual proprietors running business Hindu Undivided Family (HUF) Karta of HUF Partnership Firm Managing partner Limited Liability Partnership (LLP) Designated Partner Private Limited Company Director/Authorised Signatory Public Limited Company Director/Authorised Signatory Cooperative Society Authorised representative Trust (for business activities) Trustee/Authorised representative Self Help Groups (SHGs) Authorised representative
+
+Activities covered: Manufacturing enterprises (producing goods) and Service enterprises (rendering services). Both are eligible for Udyam Registration under the MSME classification. Applicable pan-India ,  all states and UTs. State governments also run state-level MSME schemes that reference Udyam Registration as the qualifying credential.
+
+## Documents Required
+
+Note: Udyam Registration is paperless ,  no document upload is required. However, the following information/credentials must be available: Information/Credential Details Aadhaar number Of proprietor / managing partner / director PAN card Of the business entity GSTIN (if applicable) GST registration number Bank account details For verification NIC code of business activity National Industry Classification code Business address Registered/principal place of business Number of employees Approximate headcount Investment details Plant and machinery / equipment investment amount
+
+## Process
+
+Step 1 ,  Visit Udyam Registration Portal Go to udyamregistration.gov.in. Click on "For New Entrepreneurs who are not Registered yet as MSME." Step 2 ,  Aadhaar Verification Enter Aadhaar number of the proprietor/managing partner/director. Verify via OTP sent to Aadhaar-linked mobile number. Step 3 ,  PAN Verification Enter the PAN of the individual and the business entity. The system auto-populates investment and turnover data from the IT database. Step 4 ,  GSTIN Entry Enter the GSTIN (for GST-registered businesses). Turnover data is auto-populated from the GST database. Step 5 ,  Business Details Enter the business name, registered address, bank details, NIC activity code, number of employees, and other required details. Step 6 ,  Self-Declaration and Submission Review all pre-filled and manually entered details. Submit the self-declaration and final application. Step 7 ,  Udyam Registration Certificate The Udyam Registration Certificate with unique Udyam Registration Number is generated instantly and can be downloaded from the portal.
+
+Fees Service Government Fee Udyam Registration Nil (Free) Udyam Certificate download Nil
+
+## Professional Service
+
+Estimated Fee Udyam Registration assistance ₹500 – ₹2,000 UAM to Udyam migration support ₹1,000 – ₹3,000 NIC code identification and classification advisory ₹1,000 – ₹2,500 MSME benefit utilisation consulting ₹3,000 – ₹10,000
+
+Professional fees exclusive of GST @18%.
 
 ## Validity
 
-The Udyam number does not “expire” like a drug or FSSAI licence, but the **class** and whether you are still in MSME can change every year on data. Firms with dead Udyam and no ITR and no GST, when the engine expects them, can be flagged. Keep filings honest and the NIC real.
+Udyam Registration is permanent ,  it does not expire and does not require periodic renewal. The registration remains valid as long as the enterprise continues to meet MSME classification criteria. The Udyam system auto-updates classification annually based on ITR and GST return data. If turnover or investment crosses MSME thresholds, the enterprise is automatically reclassified or exits MSME status ,  but the registration record itself is permanent.
 
 ## Frequently asked questions
 
-**We have UAM from the old Udyog Aadhaar. Is it still valid?** The government asked firms to move to Udyam by 30 June 2022. If you still only have UAM, you should re-register in Udyam; many schemes and banks will not use UAM alone.
-
-**Startup India and Udyam: need both?** If you are under the MSME caps, both can help, but for different help: Startup India and DPIIT for the startup stack; Udyam for MSME credit and 25% procurement, Samadhaan, and the rest.
-
-**One factory in Pune and one in Coimbatore: two Udyams?** For one company, one Udyam, all plants under that legal person, unless you are truly two different legal persons, which is not the usual one-company, two-plant case.
-
-**Turnover 260 crore: are we out?** Yes, the medium line is 250; you are not “medium” any more; most MSME-only benefits will stop, though your Udyam line may still show a status until the engine and your ITR process you.
-
-**Freelance IT, can I file?** If you are a service MSME under the size rules, yes; use proprietorship, LLP, or company, your Aadhaar and PAN, and a fair NIC. Many consultants use 62 or other service codes, pick the one that is true to your work.
-
-*All content is for informational purposes. Specific government registration, tax, and compliance advice should be obtained from qualified professionals based on your entity’s circumstances, state, and business activities.*
+1. I already have Udyog Aadhaar (UAM). Do I need to re-register on Udyam? Yes. The Government of India mandated migration from Udyog Aadhaar Memorandum (UAM) to Udyam Registration by June 30, 2022. Businesses still operating only with UAM (without Udyam Registration) are no longer officially recognised as MSMEs for benefit purposes, bank lending, and government procurement. If you haven't migrated yet, you should do so immediately on the Udyam Registration portal under the "For those already having registration as UAM" option. 2. Does a startup with DPIIT Recognition also need Udyam Registration separately? Yes ,  DPIIT Recognition and Udyam Registration are separate registrations with different benefits. DPIIT Recognition unlocks Startup India benefits (tax exemption, IPR concessions, regulatory relaxations). Udyam Registration unlocks MSME benefits (priority sector lending, CGTMSE, government procurement preference, delayed payment protection). If your startup meets the MSME classification criteria (turnover below ₹250 crore and investment below ₹50 crore), obtaining both DPIIT Recognition and Udyam Registration maximises the benefits available to you. 3. Can my company have different Udyam Registrations for different branches or activities? No. Udyam Registration is a single registration covering all activities and all plants/offices/branches of the enterprise. You cannot have separate Udyam Registrations for different branches or business activities of the same legal entity. All activities (including multiple NIC codes) and all locations are covered under one Udyam Registration. The registration reflects the enterprise as a whole ,  not individual units. 4. We are a manufacturing company that has grown significantly and now have a turnover of ₹260 crore. Do we lose MSME status automatically? Under the Udyam system, MSME classification is auto-updated annually based on ITR and GST return data. If your annual turnover crosses ₹250 crore (the Medium Enterprise threshold), your enterprise will be reclassified as "beyond MSME" ,  losing MSME benefits prospectively. The reclassification happens at the beginning of the new financial year following the one in which the threshold was crossed. Existing benefits and contracts (like ongoing CGTMSE-guaranteed loans) continue under the original terms ,  but new benefit applications would not be available after reclassification. 5. I'm a freelancer providing IT services. Can I register on Udyam? Yes. Service enterprises ,  including independent professionals and freelancers providing IT services, consulting, design, or other services ,  are eligible for Udyam Registration as service MSMEs, provided their annual turnover is below ₹250 crore. A freelancer can register as a proprietorship on the Udyam portal using their Aadhaar and PAN. Udyam Registration as a service MSME gives access to priority sector lending benefits, delayed payment protection (if you invoice corporate clients), and potential eligibility for government service contracts on GeM.

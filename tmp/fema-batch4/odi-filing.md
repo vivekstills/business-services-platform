@@ -1,116 +1,66 @@
-# ODI filing (overseas direct investment)
+# Odi Filing
 
 ## Overview
 
-Overseas Direct Investment (ODI) is when a person resident in India, whether an individual or an entity, invests in a foreign company. The investment can be by equity, loan, or corporate guarantee, within the 2022 FEMA (Overseas Investment) framework. The 2022 rules and regulations, effective 22 August 2022, replaced the older ODI setup. ODI is reported on the RBI FIRMS portal, with pre-remittance, post-commitment, annual, and change-of-position filings.
-
-A wholly owned subsidiary or joint venture outside India, a loan or guarantee to that entity, and many cross-border M&A or greenfield projects all need a defensible ODI file before and after the wire.
-
-> [!TIP] ODI, step-down subsidiaries, APR, and the India-side FLA return can stack. Map the full group and timelines before the first tranche is sent.
+Overseas Direct Investment (ODI) refers to investment made by a person resident in India ,  an individual or an Indian entity ,  in a foreign entity, whether by way of equity contribution, loan, or issuance of a guarantee. ODI is governed by the Foreign Exchange Management Act (FEMA), 1999 and the Foreign Exchange Management (Overseas Investment) Rules, 2022 and Regulations, 2022, which replaced the earlier ODI framework effective August 22, 2022. ODI filing involves reporting the overseas investment to the Reserve Bank of India through the FIRMS portal (previously through an AD bank in Form ODI). Every Indian entity making an overseas direct investment ,  whether setting up a wholly owned subsidiary (WOS) abroad, entering a joint venture (JV) with a foreign partner, extending a loan to an overseas subsidiary, or providing a corporate guarantee ,  must file the prescribed forms with RBI within the specified timelines. The 2022 regulatory overhaul significantly expanded the scope of what constitutes "Overseas Investment" and introduced new categories of compliances, making expert guidance more critical than ever for Indian companies with global ambitions.
 
 ## Applicability
 
-ODI compliance typically matters when you:
+ODI filing applies to: Indian companies (private limited, public limited, LLPs) making equity investment in foreign companies Indian residents (individuals) making overseas direct investment under LRS (Liberalised Remittance Scheme) in foreign entities (with restrictions) Indian entities extending loans to foreign JVs/WOS Indian entities providing corporate guarantees or personal guarantees on behalf of foreign JVs/WOS Investment in foreign entities through acquisition (share purchase), subscription (fresh issuance), or creation of a new entity Restructuring of overseas investments ,  additional investment, disinvestment, write-off, or winding up of foreign JV/WOS Key restriction: Under the 2022 framework, an Indian entity cannot make ODI in a foreign entity that is engaged in real estate activities, gambling, financial products linked to Indian rupee without RBI approval, or in a country identified as non-cooperative by FATF. State-wide applicability: ODI regulations are central laws under FEMA applicable uniformly to Indian entities and residents across all states ,  Maharashtra, Karnataka, Delhi, Tamil Nadu, Gujarat, Telangana, West Bengal, Rajasthan, Kerala, Punjab, and all others.
 
-- Make equity or quasi-equity investment in a non-India company from an Indian company, LLP, or a resident (subject to LRS and other personal limits);
-- Lend to or give a corporate guarantee for a foreign JV or WOS;
-- Buy or subscribe in an existing company or form a new company overseas;
-- Restructure, add money, write off, divest, or close the foreign company.
+## Key Provisions
 
-**Restrictions to study** in the 2022 text and current RBI and FATF lists: prohibited sectors, certain countries, the three-year loss test on the Indian entity for the automatic path, and caps on “financial commitment” (equity, loans, guarantees combined).
+Governing Framework: FEMA (Overseas Investment) Rules, 2022 FEMA (Overseas Investment) Regulations, 2022 RBI Master Direction on Overseas Investment, 2022 FIRMS portal for online reporting Investment Limits: Category Automatic Route Limit Indian company ODI in JV/WOS 400% of net worth of Indian entity Resident individual ODI Under LRS ,  USD 2,50,000 per financial year Overseas Portfolio Investment (OPI) Listed foreign entity securities under LRS
 
-FEMA and ODI are central laws, so the India-side company follows the same RBI position in every state.
+Key Forms under the 2022 Framework: Form Purpose
 
-## Key provisions
+## Timeline
 
-| Topic | What to check on the live RBI text |
-|--------|-----------------------------------|
-| **Financial commitment (FC) cap** | Indian company: generally 400% of its net worth for approved FC, not only equity. |
-| **LRS / individual** | Residents use the LRS and ODI rules in force, including the USD per FY cap where it applies. |
-| **Key forms** | Pre-investment: Form OI. Post-commitment: Form FC (within 30 days of the commitment event). Annual: APR by 31 December for each foreign company in scope. |
-| **Structures** | WOS, JV, and step-down subsidiaries can each have their own reporting and APR. |
+Form OI (Part I) Reporting ODI by Indian entity Before remittance/investment Form OI (Part II) Reporting ODI by resident individual Before remittance Form FC Reporting financial commitment (equity + loan + guarantee) Within 30 days of commitment APR (Annual Performance Report) Annual reporting on foreign JV/WOS performance By December 31 each year Disinvestment reporting On divestment of ODI stake Within 30 days
 
-**Financial commitment** under the 2022 framework is equity, loans, and guarantees together for the 400% net worth test, not just share capital.
+Eligible Structures: Structure Description Wholly Owned Subsidiary (WOS) 100% owned by Indian entity abroad Joint Venture (JV) Foreign entity with Indian entity as co-owner Step-down subsidiary Subsidiary of a WOS/JV outside India
+
+Financial Commitment (FC): Under the 2022 framework, "Financial Commitment" covers equity investment + loans + guarantees extended to the foreign entity. The 400% of net worth limit applies to the total FC, not just equity.
 
 ## Benefits
 
-- Legal global expansion for Indian groups, with a clear record for banks and regulators.
-- Dividends, interest, and capital returns flow more easily when the outward leg and APR history are in order.
-- IP holding and group structures that fit transfer pricing, tax treaties, and FEMA, when you design them with tax and FEMA advice together.
-- M&A, lenders, and boards get UIN/ack files instead of a narrative-only story.
+Global expansion compliance: Enables Indian companies to set up operations, subsidiaries, and joint ventures abroad in a legally compliant manner Tax efficiency: Properly structured overseas holding entities (particularly in treaty-friendly jurisdictions like Singapore, Netherlands, or Mauritius) can optimise the global tax footprint of Indian business groups Market access: WOS/JV structures enable access to foreign markets, contracts, and customers that require local presence Repatriation of profits: Dividends, interest, and capital repatriation from foreign JV/WOS to India are facilitated by proper ODI structure and reporting Government incentives: The Production Linked Incentive (PLI) and export-oriented schemes work better when supported by a global presence ,  ODI enables this Intellectual property holding: Indian groups can hold IP in overseas entities and license back to Indian operations as part of efficient IP structuring (within FEMA and transfer pricing limits) Regulatory clarity: The 2022 framework brought greater clarity to what constitutes overseas investment and streamlined reporting
 
 ## Limitations
 
-- The 400% cap and the three-year loss rule for the automatic route can block a fast deal until RBI engagement or structure changes;
-- Prohibited sectors, FATF concerns, and sensitive industries need extra RBI and legal work;
-- Annual APR (per entity) and India-side FLA add recurring cost;
-- Step-downs and group guarantees multiply the form set;
-- Write-offs and unilateral clean-up are not a DIY story with RBI; INR loans to overseas are narrow under RBI, so do not assume an INR tranche is allowed;
-- If you have legacy pre-2022 ODI, you may need a one-time 2022 mapping exercise.
+Financial commitment cap: The 400% of net worth limit restricts very large overseas investments without special RBI approval Prohibited activities: ODI cannot be made in entities engaged in real estate (buying/selling of real estate for own account), gambling, chain marketing schemes, or in FATF non-cooperative countries Approval route complexities: Investments beyond the automatic route limit, in financial services sector, or in certain structures require prior RBI approval ,  which can take considerable time Loss-making entity restriction: Under the 2022 framework, an Indian entity that has made losses in the immediately preceding 3 financial years cannot make ODI without specific justification and RBI scrutiny APR compliance burden: Annual Performance Reports for each foreign JV/WOS must be filed by December 31 ,  missing this is a FEMA violation Step-down subsidiary complexity: Multiple layers of overseas structures generate compounding ODI reporting requirements Write-off limitations: Writing off investments in loss-making foreign entities requires RBI approval; cannot be done unilaterally 2022 framework transition: Companies with older ODI structures need to assess alignment with the new 2022 framework ,  a non-trivial exercise
+
+## Documents Required
+
+| Document | Details |
+| --- | --- |
+| Board resolution | Approving ODI and authorising signatories |
+| Net worth certificate | From statutory auditor ,  to verify 400% cap |
+| Valuation report | For acquisition of existing foreign entity's shares |
+| Memorandum of Understanding / shareholders' agreement | For JV structures |
+| Certificate of incorporation of foreign entity | Or draft incorporation documents for new entities |
+| Business plan for foreign entity | Particularly important for government route or approval route cases |
+| Bank statement / net worth details | For resident individuals under LRS |
+| Audited financials of Indian entity | To confirm no losses in preceding 3 years |
+| Form OI duly filled | Pre-investment form to be filed on FIRMS portal |
+| Existing ODI records | All prior Form ODI filings and UIN numbers |
+| APR of foreign entity | For additional investment in existing JV/WOS |
+| KYC of foreign entity and promoters | As per AD bank requirements |
 
 ## Process
 
-1. **Eligibility:** Check three-year loss position, 400% FC vs net worth, target sector, host country, and LRS/entity route.
-2. **Design:** WOS or JV, jurisdiction, and what sits in the FC basket (equity, loan, guarantee).
-3. **Form OI:** File on FIRMS (entity or individual path) before you remit or close the buy.
-4. **AD bank:** KYC, FIRMS ref, and outward remit or acquisition.
-5. **Close:** Allot, disburse, or put the guarantee in place.
-6. **Form FC:** Within 30 days of the financial commitment event, as the rules in force define it.
-7. **APR:** By 31 December each year for each foreign company in the APR set.
-8. **Divest or wind up:** Report inside the event window, repatriate per RBI norms, and align the next India FLA and APR so nothing remains ghost-held on FIRMS.
-9. **If there was a default:** Compounding with RBI or other FEMA work as your counsel suggests.
+Step 1 ,  Eligibility Assessment Verify eligibility: check if the Indian entity is profitable (no losses in preceding 3 years for automatic route), compute net worth and ensure proposed Financial Commitment is within 400%, confirm the target foreign entity is in a permissible sector and country. Step 2 ,  Structure Planning Determine the optimal structure ,  WOS vs JV, jurisdiction of incorporation, nature of financial commitment (equity/loan/guarantee), and whether the transaction qualifies for automatic route or requires prior RBI approval. Step 3 ,  FIRMS Portal ,  Form OI Filing (Pre-Investment) Register on the FIRMS portal and file Form OI Part I (for entities) or Part II (for individuals) before making the remittance/investment. Step 4 ,  AD Bank Coordination Submit Form OI and supporting documents to the AD bank. The AD bank validates the filing and facilitates the remittance through the SWIFT/wire transfer process. Step 5 ,  Remittance / Investment Execution Make the overseas investment through proper banking channels. Obtain confirmation/swift copies from the AD bank. Step 6 ,  Post-Investment Reporting (Form FC) File Form FC within 30 days of the financial commitment (equity allotment, loan disbursement, guarantee issuance) on the FIRMS portal. Step 7 ,  Annual Performance Report (APR) File the APR for each foreign JV/WOS by December 31 each year ,  covering audited financials of the foreign entity, performance details, and updated investment position. Step 8 ,  Disinvestment / Changes Reporting Report any disinvestment, write-off, restructuring, or winding up of the foreign entity within 30 days on the FIRMS portal.
 
-## Documents (typical)
+Fees Service Component Estimated Professional Fee ODI eligibility assessment and structuring advice ₹10,000 – ₹25,000 Form OI filing (automatic route, single investment) ₹10,000 – ₹20,000 Form FC filing ₹8,000 – ₹15,000 Annual Performance Report (APR) ,  per entity ₹8,000 – ₹15,000 Government / approval route ODI application ₹40,000 – ₹1,00,000 Disinvestment / closure reporting ₹10,000 – ₹20,000 ODI structure review under 2022 framework ₹20,000 – ₹50,000 Compounding for ODI violations ₹35,000 – ₹1,50,000+ Comprehensive ODI compliance package (annual) ₹30,000 – ₹75,000 per entity
 
-| Document | Role |
-|----------|------|
-| Board resolution, SHA/JVA, MOU | Approve the ODI and who signs |
-| Net worth certificate from statutory auditor | 400% FC check |
-| Valuation, IM, SPA | M&A in listed or unlisted foreign targets, as the deal needs |
-| Certificate of incorporation of the foreign company | New set-up or acquisition |
-| Business plan, financial model | For RBI-approval cases where a narrative is required |
-| Form OI pack and APR inputs | Annual operating and financials of the foreign company |
-| KYC, FIRMS, bank | AD bank and portal evidence |
+Fees exclusive of GST @18%. Foreign legal/incorporation fees for the overseas entity are separate.
 
-## Cost / professional fees (indicative, plus GST at 18%)
-
-| Item | INR range (typical) |
-|------|----------------------|
-| ODI scoping and structure | 10,000 – 25,000 |
-| Form OI (one automatic route deal) | 10,000 – 20,000 |
-| Form FC | 8,000 – 15,000 |
-| APR, one company, one year | 8,000 – 15,000 |
-| RBI approval-route application | 40,000 – 1,00,000+ |
-| Divestment or closure reporting | 10,000 – 20,000 |
-| 2022 framework mapping for old ODI | 20,000 – 50,000 |
-| Compounding, ODI default | 35,000 – 1,50,000+ |
-| Annual ODI and FIRMS retainer, per company | 30,000 – 75,000 p.a. |
-
-Overseas legal and notary fees, and the foreign counsel side, are extra.
-
-## Compliance requirements (summary)
-
-- Form OI before you move money or complete the buy (it is a pre, not a post, filing);
-- Form FC in 30 days of the financial commitment;
-- APR by 31 December for each in-scope foreign company;
-- India FLA by 15 July if you have ODI stock;
-- Repatriation of profit within the window the RBI frame sets for the fact pattern;
-- Step-downs and new layers must be on FIRMS;
-- Personal and corporate guarantee limits, as the ODI and corporate rules in force set them;
-- Retain a ten-year, dated dataroom for ODI, APR, and bank tickets.
+Compliance Requirements Pre-investment reporting: Form OI must be filed before remittance ,  not a post-facto filing Financial commitment reporting: Form FC within 30 days of making financial commitment Annual Performance Report: By December 31 each year ,  covers each foreign JV/WOS separately FLA Return: Indian entities with ODI must also file the FLA Return with RBI by July 15 each year Repatriation of profits: Dividends/profits received from foreign JV/WOS must be repatriated to India within 90 days of declaration Step-down subsidiary reporting: Investments made by the foreign WOS in further foreign entities (step-down subsidiaries) must be reported to RBI No personal guarantee without reporting: Personal guarantees extended by Indian residents/promoters on behalf of foreign JV/WOS require specific filing and cannot exceed prescribed limits Documentation retention: All ODI-related records must be maintained for a minimum of 10 years
 
 ## Frequently asked questions
 
-**Can a loss-making start-up in India do ODI on the automatic route?** The 2022 rules generally bar automatic-route ODI if the Indian company had losses in any of the three previous financial years. You may go to RBI with a business case, or your founders as individuals can look at LRS and overseas portfolio options where those rules help. The answer is case-specific.
+1. Can an Indian startup (less than 3 years old) make overseas direct investment? Under the 2022 ODI framework, an Indian entity that has incurred losses in any of the preceding 3 financial years is ineligible for ODI under the automatic route. Most early-stage startups are loss-making, so they would not qualify. However, there is an approval route ,  they can approach RBI with a business justification for the overseas investment. Additionally, Overseas Portfolio Investments (OPI) in listed foreign securities are permitted under LRS (for founders as individuals, not the company). 2. Is ODI required for setting up a branch office or representative office abroad? Setting up a branch office or representative office abroad is regulated under FEMA but under a slightly different framework (not strictly ODI). A Liaison Office (LO) or Branch Office (BO) abroad requires prior RBI approval under a separate set of regulations. Only the establishment of a foreign company (WOS or JV) as a separate legal entity falls under the ODI framework with Form OI/FC filing requirements. 3. What is an Annual Performance Report (APR) and what happens if it is not filed? The APR is an annual return that the Indian entity must file by December 31 for each of its foreign JV/WOS entities. It captures the financial performance, investment position, and other details of the overseas entity, certified by an auditor. Non-filing of APR is a FEMA contravention and requires compounding before RBI. RBI uses APR data to monitor the performance and compliance of Indian overseas investment and to flag underperforming or dormant structures. 4. Can the loan extended to an overseas subsidiary be in Indian Rupees (INR)? Loans to overseas JV/WOS (as part of Financial Commitment) must generally be in freely convertible foreign currency. INR-denominated loans to overseas entities are only permissible in specific circumstances permitted by RBI (such as under certain bilateral trade arrangements). Extending an INR loan to an overseas entity without specific RBI permission would be a FEMA violation. 5. What is the process if we want to close/wind up our overseas subsidiary? Closure of an overseas JV/WOS requires: (a) completion of the winding-up process under the foreign country's law; (b) repatriation of all sale proceeds/liquidation proceeds to India within 90 days; (c) filing a disinvestment report on the FIRMS portal within 30 days of completion; and (d) updation of the next FLA Return and APR. If the entity is closed at a loss (i.e., write-off of investment), prior RBI approval is required before the write-off is recognised. Failure to report closure leads to continued APR and FLA filing obligations as well as FEMA violations.
 
-**Is ODI the same as opening a foreign branch?** A branch or rep office in another country can sit under a different FEMA line than a WOS. Only the 2022 ODI (Form OI, FC, APR) set applies in the WOS and JV case we describe in this service note.
+All content is for informational purposes. Specific FEMA advice should be sought from qualified professionals based on individual transaction and entity facts.
 
-**What is APR, and if we skip it?** APR is the annual report on the foreign company’s position and results. If you do not file, it is a FEMA default to cure with compounding. RBI uses APR in supervision.
-
-**INR to the foreign sub?** In general, loans to a foreign company should be in freely convertible currency; INR abroad is a narrow, RBI specific story. Get written RBI comfort before you book an INR tranche to an overseas person.
-
-**How do we close a foreign WOS?** You complete local law winding-up, repatriate funds to India in the time RBI expects, file the disinvestment/closure line on FIRMS, and true up APR and the India FLA so the position is not left as open on RBI systems. Write-offs of loss-making subs often need advance RBI work.
-
----
-
-*This page is for general information. It is not FEMA, tax, or company law advice for a particular transaction. Foreign counsel may be required in the host country.*
+also it should be perfecly reflect to the website and deployed to vercel

@@ -1,114 +1,75 @@
+# Proprietorship Annual Compliance
+
 ## Overview
 
-A sole proprietorship is the simplest business structure in India, owned and managed by one person. It is not governed by a single statute but by the Income Tax Act, GST, Shops and Establishment, professional tax, and other labour rules. The owner and the business are generally treated as one for tax and compliance.
+A sole proprietorship is the simplest business structure in India, owned and managed by a single individual. It is not governed by any specific law but operates under various tax and labour laws such as the Income Tax Act, GST Act, Shops & Establishment Act, and Professional Tax regulations. It is not a separate legal entity ,  the owner and the business are treated as one for tax and liability purposes.
 
 ## Applicability
 
-Proprietorship compliance applies across all states and Union Territories. State rules for Shops and Establishment and professional tax vary.
+Proprietorship compliance applies across India in all states ,  Maharashtra, Karnataka, Tamil Nadu, Gujarat, Delhi, Telangana, West Bengal, Haryana, Uttar Pradesh, Kerala, Rajasthan, Punjab, Madhya Pradesh, Odisha, Bihar, Assam, and UTs. State-specific laws like Shops & Establishment and Professional Tax vary across states.
 
-## Key features
-
-| Theme | What it covers |
-| --- | --- |
-| Income tax | ITR-3 or ITR-4 (presumptive) where eligible |
-| GST | Registration and return cycle if required |
-| Labour / state | PT, ESI, PF, Shops Act, trade licence |
-| Record-keeping | Invoices, bank records, TDS as applicable |
-
-## Compliance requirements
+## Compliance Requirements
 
 | Compliance | Form | Authority | Frequency |
 | --- | --- | --- | --- |
-| Income tax return | ITR-3 / ITR-4 | IT Dept | Annual |
-| Tax audit | Form 3CB-3CD | IT Dept | If applicable |
-| GST returns | GSTR-1, 3B, 9 | GST Dept | Monthly / annual |
-| TDS returns | 24Q, 26Q | IT Dept | Quarterly |
-| Professional tax | State PT return | State | Monthly / annual |
-| Shops and Establishment | Renewal | State | As per state |
-| ESI / PF | If applicable | EPFO / ESIC | Monthly |
-| Trade licence | Renewal | Municipal | Annual |
+| Income Tax Return | ITR-3 / ITR-4 | IT Dept | Annual |
+| Tax Audit | Form 3CB-3CD | IT Dept | If applicable |
+| GST Returns | GSTR-1, 3B, 9 | GST Dept | Monthly/Annual |
+| TDS Returns | 24Q, 26Q | IT Dept | Quarterly |
+| Professional Tax | State PT Return | State | Monthly/Annual |
+| Shops & Establishment | Renewal | State | As per state |
+| ESI/PF Returns | If applicable | EPFO/ESIC | Monthly |
+| Trade License | Renewal | Municipal body | Annual |
 
 ## Benefits
 
-- Avoids penalties and interest on late filings
-- Supports loan and overdraft access with clean tax history
-- Eligibility for tenders and B2B contracts where tax proof is required
-- Easier transition to LLP or company if the business scales
+Timely compliance helps proprietors avoid penalties, claim legitimate tax deductions, access business loans easily, build credit history, participate in tenders, and maintain uninterrupted business operations. It also helps smoothly transition into an LLP or private limited company when the business scales.
 
-> [!TIP] ITR-4
-> If turnover and digital payment conditions are met, a proprietor may use the presumptive scheme under Section 44AD and file ITR-4, subject to law.
+## Penalties / Risks
 
-## Penalties and risks
+| Default | Penalty | Late ITR | Rs. 1,000 to Rs. 10,000 |
+| --- | --- | --- | --- |
+| Tax audit default | 0.5% of turnover (max Rs. 1.5 lakh) | GST return delay | Rs. 50/day (Rs. 20 nil) + 18% interest |
+| TDS default | 1-1.5% interest/month + penalty | Professional tax default | Rs. 5-1,000 depending on state |
+| Shops Act default | Rs. 1,000 to Rs. 5,000 | GST non-registration | 10% of tax or Rs. 10,000 |
 
-| Default | Penalty |
+## Documents Required
+
+PAN and Aadhaar of proprietor, GST registration certificate, bank statements, sales and purchase invoices, books of accounts (simple bookkeeping), TDS challans, rent agreements, utility bills, Shops & Establishment certificate, and professional tax payment records.
+
+## Process / Timeline
+
+Proprietorships maintain simple books of accounts. ITR-4 (presumptive scheme) or ITR-3 (regular) is filed by July 31. If turnover exceeds Rs. 1 crore (business) or Rs. 50 lakh (profession), tax audit is required and ITR is filed by October 31. GST returns are filed monthly, and annual return (GSTR-9) by December 31.
+
+## Government Fees
+
+| Compliance | Fee | Income Tax Return | Nil |
+| --- | --- | --- | --- |
+| GST Registration | Nil | GST Late Filing | Rs. 50/day |
+| Professional Tax (state-dependent) | Rs. 200-2,500/annum | Shops & Establishment | Rs. 500-5,000 (state-dependent) |
+
+Trade License Rs. 500-10,000 (municipal)
+
+## Compliance Calendar
+
+| Month | Activity |
 | --- | --- |
-| Late ITR | Rs. 1,000 to Rs. 10,000 |
-| Tax audit default | 0.5% of turnover (max Rs. 1.5 lakh) |
-| GST return delay | Rs. 50 per day (Rs. 20 for nil) + 18% interest |
-| TDS default | 1 to 1.5% per month interest + penalty |
-| Professional tax | Rs. 5 to 1,000 depending on state |
-| Shops Act | Rs. 1,000 to Rs. 5,000 (state-specific) |
-| GST non-registration | 10% of tax or Rs. 10,000 in many cases of liability |
-
-## Documents required
-
-| Category | Examples |
-| --- | --- |
-| Identity | PAN and Aadhaar of proprietor |
-| Tax | GST certificate if registered |
-| Business | Invoices, bank statements, simple books |
-| TDS / labour | Challans, salary records, ESI, PF as applicable |
-| Premises | Rent agreements, utility bills, Shops certificate |
-
-## Process and timeline
-
-1. Reconcile sales, purchases, and bank for the year.
-2. File ITR-4 or ITR-3 by July 31 (or October 31 with tax audit).
-3. If turnover tests are met, complete tax audit by September 30 and file ITR by October 31.
-4. File GST and TDS on schedule; GSTR-9 by December 31.
-5. Renew state licences and PT as per local due dates.
-
-## Government fees (indicative)
-
-| Compliance | Fee |
-| --- | --- |
-| Income tax return | Nil |
-| GST registration | Nil (late fee if returns delayed) |
-| GST late filing | Rs. 50 per day (capped as per law) |
-| Professional tax | Rs. 200 to 2,500 per annum (varies) |
-| Shops and Establishment | Rs. 500 to 5,000 (varies) |
-| Trade licence | Rs. 500 to 10,000 (municipal) |
-
-## Compliance calendar (typical)
-
-| When | Activity |
-| --- | --- |
-| Monthly | GSTR-1, GSTR-3B (if registered) |
-| Quarterly | TDS returns |
+| Monthly | GSTR-1, GSTR-3B |
+| Quarterly | TDS Returns |
 | July 31 | ITR (non-audit) |
-| September 30 | Tax audit completion (if due) |
+| September 30 | Tax audit |
 | October 31 | ITR (audit cases) |
 | December 31 | GSTR-9 |
-| March 31 | PT annual return in many states |
+| March 31 | PT annual return (most states) |
 
-## Frequently asked questions
+## FAQs
 
-### Q1. Is a separate PAN required for a proprietorship?
+**Q1. Is separate PAN required for a proprietorship?** No, the proprietor's personal PAN is used for all business transactions. The proprietorship does not have a separate legal identity.
 
-No, the proprietor's personal PAN is used. The business does not have a separate legal identity for most purposes.
+**Q2. Is GST registration mandatory for proprietorships?** GST is mandatory only if turnover crosses Rs. 20 lakh (services) or Rs. 40 lakh (goods), or if the business engages in interstate supply, e-commerce, or other specified cases.
 
-### Q2. Is GST registration mandatory?
+**Q3. Can a proprietor file ITR-4?** Yes, if turnover is below Rs. 2 crore (Rs. 3 crore with 95% digital transactions), the proprietor can opt for the presumptive scheme under Section 44AD and file ITR-4.
 
-GST is mandatory if turnover crosses current thresholds, or in interstate supply, e-commerce, and other specific cases. Verify active notifications.
+**Q4. Does a proprietor need to maintain books of accounts?** Books must be maintained if income exceeds Rs. 2.5 lakh or turnover exceeds Rs. 25 lakh in any of the 3 preceding years. Presumptive taxpayers are exempt if they declare prescribed income.
 
-### Q3. Can a proprietor file ITR-4?
-
-Yes, if presumptive conditions under Section 44AD and turnover limits are met, ITR-4 can be used. Otherwise ITR-3 for full business books.
-
-### Q4. Does a proprietor need books of account?
-
-Required when income and turnover cross prescribed limits in any of the three preceding years, unless exempted under a presumptive scheme. Reconcile with your CA.
-
-### Q5. How is a proprietorship different from a one-person company?
-
-A proprietorship has no separate legal identity and has unlimited personal liability, while an OPC is a company with limited liability and MCA compliances.
+**Q5. How does a proprietorship differ from a one-person company?** A proprietorship has no separate legal identity and unlimited liability, while an OPC is a separate legal entity with limited liability and mandatory MCA compliance.

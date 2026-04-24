@@ -1,115 +1,52 @@
-# FLA return filing (foreign liabilities and assets)
+# Fla Return Filing
 
 ## Overview
 
-The FLA (Foreign Liabilities and Assets) Return is an annual return under FEMA, 1999, filed with the **Reserve Bank of India (RBI)**. The **RBI** compiles **Balance of Payments** and **international investment position** data from it. If your **Indian** company or **LLP** has FDI on the books or has made ODI, you file every year, even with no new investment in the year. The return reports the 31 **March** **stock** of foreign liabilities and assets, not just new flows in that year.
-
-**FC-GPR** and ODI event filings cover individual tranches. The **FLA** return is the year-end snapshot, usually on the **FLAIR** (Foreign Liabilities and Assets Information Reporting) portal. Check the current **RBI** portal, form, and the deadline in force. The **usual** due date is **15 July** for the **financial** year that ended the previous 31 **March**, unless the **RBI** extends the date in a public circular.
-
-> [!TIP] Tie **FLA** numbers to audited financials, **FIRMS** UINs, and last year’s **FLA** before you press submit, so **RBI** and diligence teams do not see a break.
+The Foreign Liabilities and Assets (FLA) Return is an annual statutory return mandated by the Reserve Bank of India (RBI) under FEMA, 1999. It must be filed by every Indian company or LLP that has received Foreign Direct Investment (FDI) or made Overseas Direct Investment (ODI) ,  regardless of whether any transaction occurred during the reporting year. The FLA Return is a critical tool used by the RBI for compiling India's Balance of Payments (BoP) statistics and the International Investment Position (IIP) ,  key macroeconomic indicators. It captures the stock of foreign investment received by Indian entities and the stock of overseas investments made by Indian entities as of the end of each financial year (March 31). Importantly, the FLA Return is separate from and in addition to transactional filings like FC-GPR (for FDI received) and Form ODI (for overseas investments). While those forms report individual transactions, the FLA Return provides the RBI with an annual snapshot of the total stock of foreign liabilities and assets on the company's books. Filing deadline: July 15 of each year, covering the financial year ending March 31 of the same year.
 
 ## Applicability
 
-File when, as of 31 **March**, you have:
+The FLA Return is mandatory for: Indian companies (private limited, public limited) that have received FDI (equity, preference shares, convertible instruments) from foreign investors at any point ,  even if no fresh investment was received during the current year Indian companies or LLPs that have made ODI (equity investment in foreign entities, loans to foreign subsidiaries/JVs) ,  even if no fresh ODI was made during the year Branch offices, project offices, and liaison offices of foreign companies are separately required to file the Annual Activity Certificate (AAC) ,  they do not file the FLA Return Companies/LLPs where the FDI or ODI investment has been fully divested but the entity itself still holds FEMA records of past investment ,  must file until the investment position is fully closed and reported Not required for: Companies that have never received any foreign investment or made any overseas investment Entities where all FDI has been redeemed/repaid and ODI fully wound up, with confirmatory reporting done Applicability across India: Uniform across all states ,  Karnataka (Bengaluru tech ecosystem), Maharashtra (Mumbai BFSI hub), Delhi NCR, Tamil Nadu, Gujarat, Telangana, Rajasthan, West Bengal, and all other states and UTs.
 
-- FDI stock (equity, preference, convertibles) in an **Indian** company, or
-- ODI stock (equity, loans, guarantees) from an **Indian** company or **LLP** to an overseas **JV** / **WOS**,
+## Key Provisions
 
-even if there was no new round that year.
+Legal Basis: FEMA, 1999 (Section 6) RBI Circular on Annual Return on Foreign Liabilities and Assets (FLA Return) RBI Master Direction on Reporting under FEMA Key Data Points Captured in the FLA Return: Section Data Captured Part I Basic company details ,  CIN, PAN, industry, turnover Part II FDI received ,  equity, preference shares, reinvested earnings, other capital Part III ODI made ,  equity, loans, guarantees to foreign subsidiaries/JVs Part IV Foreign trade credits (advance payments, suppliers' credit) Part V External Commercial Borrowings (ECB) on books Part VI Other foreign liabilities/assets not covered above
 
-Branch offices, project offices, and liaison offices of foreign companies often use the **annual activity** line with **RBI** instead of this entity-level return. Map your structure in the current master direction.
-
-You may be able to stop only after **RBI**-consistent closure of the **FDI** / **ODI** position, not merely because a company board says the investment is “done” on paper. Take advice on the facts.
-
-**FEMA** is a central law; the **FLA** obligation is **pan-India** (all states and UTs).
-
-## Key provisions
-
-| Part | What it usually covers |
-|------|------------------------|
-| Part I | CIN, PAN, industry, turnover, entity basics |
-| Part II | FDI received (equity, preference, reinvested earnings, other capital) |
-| Part III | ODI made (equity, loans, guarantees) |
-| Part IV | Foreign trade credits (e.g. advances, suppliers’ credit) |
-| Part V | ECB on books, where the return asks for it |
-| Part VI | Other foreign assets and liabilities as defined for that return |
-
-**FX:** Convert to INR using the **RBI** reference rate as on 31 **March** of the reporting year, as the **RBI** instruction in force for that year states.
+Reference Rate for Reporting: All foreign currency figures must be converted to INR using the RBI reference rate as of March 31 of the reporting year. Filing Platform: The FLA Return is filed on the RBI's FLAIR (Foreign Liabilities and Assets Information Reporting) system ,  a dedicated online portal. (Note: Previously filed through a manual Excel-based system submitted by email; now migrated to the FLAIR online portal.)
 
 ## Benefits
 
-- Meets the **RBI** annual reporting line and cuts compounding risk from **non-filing**.
-- A consistent **FLA** history helps **M&A** and **IPO** diligence and **follow-on** investment confidence.
-- The preparation process often **surfaces** **FIRMS** / **book** **mismatches** before a regulator or investor does.
-- The **RBI** uses the data in national **BoP** and **IIP** statistics.
+RBI compliance: Avoids penalty notices and compounding applications that arise from non-filing Clean compliance record: A consistent FLA filing history strengthens the company's regulatory standing ,  important during M&A due diligence, IPO preparation, and future fundraising Macroeconomic contribution: Accurate FLA data contributes to India's BoP and IIP statistics used by RBI and Ministry of Finance for policy decisions Internal accuracy: The process of preparing the FLA Return helps companies reconcile their foreign investment records, identify discrepancies in earlier transactional filings, and correct historical errors before they become audit issues Pre-IPO hygiene: SEBI due diligence for DRHP review requires clean FEMA history; FLA Returns are examined by merchant bankers during pre-IPO due diligence M&A due diligence: Acquirers' legal counsel routinely verify FLA Returns as part of FEMA compliance review in M&A transactions Investor confidence: Foreign investors and their legal advisors verify FLA filing compliance before making follow-on investments
 
 ## Limitations
 
-- Catching up on missed years is expensive and can trigger compounding.
-- Reconciliation is time-heavy for many funding rounds, **ECB** layers, and ODI in several jurisdictions.
-- The **July 15** date is **usually** not automatically extended; treat it as a hard line unless a circular says otherwise.
-- If **FC-GPR** (or ODI) reporting was always wrong, **FLA** alone does not cure **FEMA**; you need a joined-up fix.
+Retroactive penalty for non-filing: Companies that have never filed FLA Returns despite having foreign investment face compounding liability for all prior years ,  this can be substantial for companies with significant FDI Data reconciliation complexity: Aligning FLA Return data with audited financials, FC-GPR records, share certificates, and foreign investor confirmations can be time-consuming, especially for companies with multiple rounds of foreign investment No automatic extension: The July 15 deadline is fixed; there is generally no automatic extension (though RBI has occasionally extended in specific years). Late filing requires compounding Currency conversion complexity: Different vintages of investment at different historical exchange rates must be correctly identified and converted No filing = no record: Companies that have received FDI without proper transactional filings (FC-GPR) and then fail to file FLA Returns have compounding FEMA violations that need to be resolved simultaneously
+
+## Documents Required
+
+| Document | Purpose |
+| --- | --- |
+| Certificate of Incorporation and PAN | Basic entity identification |
+| Audited financial statements (balance sheet) | To extract foreign liability/asset data |
+| List of foreign shareholders with shareholding | To populate Part II (FDI received) |
+| FIRC / bank certificates for FDI received | To corroborate FDI amounts |
+| FC-GPR filing acknowledgements (UIN) | Reference for prior reporting |
+| ODI Form filing acknowledgements | Reference for prior ODI reporting |
+| Foreign subsidiary/JV financial details | To populate Part III (ODI made) |
+| ECB loan agreements and repayment schedules | For Part V (ECB data) |
+| RBI reference rate (March 31) | For INR conversion of all foreign currency figures |
+| Previous year's FLA Return | For cross-checking opening balances |
 
 ## Process
 
-1. Confirm **FDI** or **ODI** stock on 31 **March** for the reporting year.
-2. Collect audited financials, cap table, **FIRC** set, **FC-GPR** UINs, ODI acks, **ECB** docs, and prior **FLA**.
-3. Reconcile to **FIRMS**; convert with 31 **March** **RBI** reference rates.
-4. Log in to **FLAIR** with current **authorised** user data.
-5. Complete all return parts (entity, **FDI, ODI**, trade credit, **ECB**, other).
-6. Second-pass review against the audit and last **FLA**.
-7. File before 15 **July** (or extended date); keep the acknowledgement.
-8. Retain the signed-off pack for at least ten years, or as your board policy says.
+Step 1 ,  Determine Applicability Confirm whether the company has outstanding FDI or ODI as of March 31. Even if no fresh investment occurred during the year, filing is required if any prior investment remains on books. Step 2 ,  Data Collection Gather audited financial statements, foreign investor details, FIRC records, ODI records, ECB details, and all prior FLA Returns and transactional filing acknowledgements. Step 3 ,  Data Reconciliation Reconcile foreign investment data from financial statements with FIRMS portal records (FC-GPR/ODI filings). Identify and resolve discrepancies. Convert all foreign currency figures to INR using RBI March 31 reference rates. Step 4 ,  FLAIR Portal Registration Register or log in on the RBI's FLAIR portal. Ensure entity details, CIN, PAN, and authorised user details are current. Step 5 ,  FLA Return Preparation Populate all parts of the FLA Return ,  entity information, FDI stock data, ODI stock data, trade credits, ECBs, and other foreign assets/liabilities. Step 6 ,  Internal Review Review the prepared return against audited financials and prior-year FLA Return for consistency. Step 7 ,  Submission on FLAIR Portal Submit the FLA Return online on the FLAIR portal before July 15. Download and preserve the submission acknowledgement. Step 8 ,  Post-Filing Record Keeping Archive the filed return, acknowledgement, and all supporting documents for at least 10 years.
 
-## Documents
+Fees Service Component Estimated Professional Fee FLA Return filing (simple ,  single round FDI) ₹5,000 – ₹10,000 FLA Return filing (moderate ,  multiple rounds/ODI) ₹10,000 – ₹20,000 FLA Return filing (complex ,  multi-entity, ECB, ODI) ₹20,000 – ₹40,000 Data reconciliation and FEMA records cleanup ₹15,000 – ₹50,000 Retrospective FLA filing (multiple prior years) ₹20,000 – ₹75,000 Compounding for non-filing / late filing ₹30,000 – ₹1,00,000+ FLAIR portal registration assistance ₹2,000 – ₹5,000
 
-| Document | Purpose |
-|----------|---------|
-| Incorporation + PAN | Identity |
-| Audited financial statements | **FLA** line items from books |
-| Foreign shareholder and ODI entity schedules | **FDI** / **ODI** parts |
-| FIRC, bank statements | Inward FDI and cash trail |
-| FC-GPR / UIN references | **FIRMS** cross-check |
-| ODI form references | ODI leg |
-| ECB loan agreements, repayment tables | **ECB** part where applicable |
-| **RBI** 31 **March** ref rate | FX to INR |
-| Prior **FLA** return | Continuity, opening position |
+Fees exclusive of GST @18%. Compounding fees payable to RBI are separate from professional fees.
 
-## Cost / professional fees (indicative, plus GST at 18%)
-
-| Item | INR range |
-|------|-----------|
-| **FLA** filing, one simple **FDI** line | 5,000 – 10,000 |
-| **FLA** filing, several rounds and/or ODI | 10,000 – 20,000 |
-| Complex, multi-entity, **ECB** + ODI | 20,000 – 40,000 |
-| Data clean-up and reconciliation | 15,000 – 50,000 |
-| Retrospective (multiple years) | 20,000 – 75,000 |
-| Compounding support (non/late file) | 30,000 – 1,00,000+ |
-| **FLAIR** access help | 2,000 – 5,000 |
-
-**RBI** compounding fees, if any, are separate from professional fees.
-
-## Compliance requirements
-
-- **15 July** for the **FY** ended 31 **March** (see live circular for the year in question).
-- **Mandatory** even when no new investment if **FDI/ODI** **stock** remains.
-- **RBI** can compare **FLA** with **FIRMS**; explain material differences in your file.
-- **Numbers** should align with audited financials; use **CA** or **FEMA** help when books are complex.
-- **Non-filing** is a FEMA default; you may need compounding.
-- **Keep** **FLAIR** credentials and **signatory** data current with **RBI** **/ MCA** **changes**.
+Compliance Requirements Filing deadline: July 15 of each year (for FY ending March 31) Mandatory even if no fresh investment: Entities with outstanding FDI/ODI must file annually until the investment position is fully closed Data accuracy: RBI cross-checks FLA Return data with FC-GPR/ODI filings on the FIRMS portal; discrepancies trigger queries Auditor coordination: The balance sheet data used in the FLA Return should be consistent with the audited financials; auditors may be required to certify certain figures Penalty for non-filing: Non-filing or late filing of the FLA Return constitutes a contravention under FEMA; compounding before RBI is required FLAIR portal maintenance: Authorised user credentials must be kept current; changes in company officials require portal access updates
 
 ## Frequently asked questions
 
-**We received FDI years ago; no new money. Do we file?** Yes, while **FDI** or **ODI** **stock** remains on the books on 31 **March** and has not been **RBI**-closed, you continue to file. The return is about **outstanding** position, not this year’s news alone.
-
-**Penalty for not filing?** FEMA **penalty** can be up to 3x the **forex** amount or **INR 2** lakh if not **quantifiable**, plus **continuing** default amounts. The cost of not filing is usually higher than a timely, supported **FLA** run.
-
-**FDI and ODI both?** One **FLA** return, with **FDI** in the liability / equity lines and ODI in the asset / outward lines as the form asks for that year.
-
-**We missed several years. What do we do?** File retrospective **FLA** with full reconciliation, then use the **RBI** compounding path for delay or **non**-filing, with a **FEMA** adviser on the facts.
-
-**Does a CA have to sign the return?** The **FLAIR** submission is usually filed by the company (for example, **CFO** or company secretary) without a mandatory **CA** certificate on the form. The data must still match audited **financials**; complex files often use **CA** or **FEMA** support to prepare the numbers.
-
----
-
-*General information only, not case-specific FEMA, tax, or company law advice.*
+1. Is the FLA Return required if our company received FDI five years ago but no fresh investment has come in since? Yes, absolutely. The FLA Return is required every year as long as the foreign investment (FDI or ODI) remains outstanding on the company's books ,  regardless of whether any fresh transaction occurred during the year. The return captures the stock position as of March 31, not just new flows. Filing is mandatory until the entire foreign investment is redeemed and properly reported as closed. 2. What is the penalty for not filing the FLA Return? Non-filing is a contravention under FEMA, 1999. The penalty can be up to 3 times the foreign exchange involved or ₹2 lakh where the amount is not quantifiable, plus ₹5,000 per day for continuing violations. In practice, RBI has been issuing compounding notices to entities that fail to file. The cost of compounding (including professional fees and RBI-imposed penalties) significantly exceeds the cost of timely filing. 3. Our company has both FDI received and ODI made. Do we file one FLA Return covering both? Yes. A single FLA Return captures both foreign liabilities (FDI received) and foreign assets (ODI made) in different parts of the same return. Part II covers FDI received and Part III covers ODI made. All data must be reported in INR using RBI March 31 reference rates. 4. We recently discovered we never filed FLA Returns for the past three years despite having FDI. What should we do? You should immediately engage a FEMA compliance expert to file retrospective FLA Returns for all missed years and simultaneously file a compounding application with the RBI for the delay/non-filing. Proactive compounding demonstrates good faith and typically results in lower penalties than waiting for RBI to issue a show-cause notice. 5. Does the FLA Return need to be certified by a Chartered Accountant or auditor? The FLA Return itself does not require mandatory CA certification for submission on the FLAIR portal ,  it is filed by the company directly (typically through its CFO or Company Secretary). However, the underlying data must be consistent with the audited financial statements. For complex cases, or where there are discrepancies between book records and FIRMS filings, professional assistance from a CA or FEMA expert is essential to ensure accuracy and avoid future queries from RBI.

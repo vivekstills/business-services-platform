@@ -1,108 +1,58 @@
-# FSSAI renewal (FoSCoS)
+# Fssai Renewal
 
 ## Overview
 
-FSSAI Renewal extends the life of a Basic Registration, State License, or Central License before the end date. Every certificate has 1 to 5 years of validity, chosen at issue or at last renewal. After expiry, the FBO is not lawfully in business under that FSSAI line and is exposed to penalties, show-cause, and stop-work risk.
-
-Start early, ideally 60 days out and at least 30 days before the end date, as FSSAI practice recommends. Late renewal after expiry can add a 100 per day late fee in the standard FoSCoS rule. If the file lapses for a long time, you may need a fresh application and a new 14-digit number, with all the customer and listing updates that follow.
-
-## Key features
-
-- Online renewal on FoSCoS, often with pre-filled data from the current certificate.
-- Time to update address, product list, owners, and to upgrade the licence class if the business has grown.
-- 1 to 5 year extension when you pay the matching government fee.
-- For State and Central, renewal can include inspection if the law or the authority schedules it.
-- FSSAI may send 60- and 30-day reminders to the email and phone on the account, if they are up to date; you still need your own compliance calendar.
-
-> [!TIP] If turnover crossed the line for a higher class (for example from Basic to State, or from State to Central, including multi-state), use renewal to upgrade instead of only renewing the wrong class.
+FSSAI Renewal is the process of extending the validity of an existing FSSAI Registration Certificate or License before it expires. Every FSSAI certificate ,  whether Basic Registration, State License, or Central License ,  has a validity period ranging from 1 to 5 years, chosen at the time of initial application or last renewal. Once the certificate expires, the Food Business Operator (FBO) loses legal authorisation to operate and is subject to penalties, closure notices, and forced shutdown by food safety officers. Renewal is not merely an administrative formality ,  it is a mandatory compliance checkpoint that reaffirms the food business's commitment to food safety standards. The renewal process also provides an opportunity to update any changes in business details (address, product list, proprietor) that should have been modified earlier, and to upgrade the license category if the business has grown. Under FSSAI rules, renewal applications should be filed at least 30 days before the certificate's expiry date. Late renewal (filed after expiry) attracts a late fee of ₹100 per day. If the certificate lapses entirely without renewal, the FBO must apply for a fresh registration ,  losing continuity of their 14-digit FSSAI number. The renewal is processed through the FoSCoS portal with minimal paperwork if the business details remain unchanged, making it a relatively quick and straightforward process when done on time.
 
 ## Applicability
 
-Renewal is for any FBO with FSSAI Basic, State, or Central that is due to expire or that has lapsed, including:
-
-- Petty and small FBOs on Basic;
-- State manufacturers, restaurants, stores, and distributors;
-- Central: large plant, importers, exporters, e-commerce, and multi-state.
-
-State renewals are with the state licensing line on FoSCoS; Central with the Central authority. Basic is often at district-level processing in many states, still through FoSCoS.
+FSSAI Renewal applies to: All holders of FSSAI Basic Registration whose certificate validity is approaching or has expired All holders of FSSAI State License ,  manufacturers, processors, restaurants, hotels, caterers, retailers, distributors ,  whose license is due for renewal All holders of FSSAI Central License ,  large manufacturers, importers/exporters, multi-state operators, e-commerce food businesses ,  due for renewal FBOs who received their certificate on an auto-renewal basis must verify the renewal status on FoSCoS FBOs whose certificate has lapsed (expired without renewal) and who need to reinstate their authorisation Applicability across India: Uniform across all states and UTs. State License renewals are processed by the respective State Food Safety Department through FoSCoS. Central License renewals are processed by FSSAI's Central Licensing Authority. Basic Registration renewals are processed at the district level in most states.
 
 ## Benefits
 
-- Unbroken legal right to make, store, and sell food under that certificate.
-- Avoids 100 per day style late fees and operating-with-expired risk.
-- Keeps the same 14-digit number when you renew in time, so packs and platforms need fewer changes.
-- Marketplaces: Swiggy, Zomato, Amazon, and others expect current FSSAI; expired shows get suspended.
-- Bank and some GST and audit use-cases for food often want a current FSSAI.
-- A clean string of on-time renewals is a good sign in M&A, franchise, or funding work.
-- One window to fix old modifications you forgot and to add products or locations if rules allow in renewal.
+Uninterrupted legal operation: A valid, renewed FSSAI certificate is the only legal basis for operating a food business ,  renewal ensures no gap in authorisation Avoidance of late fees: Timely renewal (30+ days before expiry) prevents the ₹100/day late fee that accumulates rapidly on delayed applications Continuation of 14-digit FSSAI number: Renewal maintains the existing FSSAI number which is printed on products, listed on marketplaces, and known to customers ,  a fresh application after lapsing means a new number and all associated updates E-commerce platform continuity: Zomato, Swiggy, Amazon, BigBasket, and other platforms deactivate food sellers when their FSSAI certificate expires ,  timely renewal prevents delisting and revenue loss GST and bank compliance: Some banks and GST authorities require valid FSSAI certificates for food businesses during audits and annual reviews Compliance track record: A long and uninterrupted FSSAI compliance history (evidenced by successive timely renewals) strengthens the business's regulatory standing during M&A, franchise, or investment transactions Opportunity to update details: Renewal is the ideal time to incorporate changes in business details, update product categories, or upgrade the license type ,  all in one process
 
 ## Limitations
 
-- There is no legal grace day after printed expiry, operation in the gap is a defect.
-- Late fee is 100 per day in the common FSSAI rule, so long delay is costly.
-- Lapsed a long time: authority may only allow a new application, not renewal.
-- State and Central renewals can include inspection, hidden problems if you never filed modifications.
-- FSSAI will not backdate, any gap in the line stays a compliance gap in the fact pattern.
-- At renewal, turnover may be rechecked, you may be told to move to a higher class.
+No grace period after expiry: FSSAI does not provide a formal grace period post-expiry; the moment a certificate expires, operating the food business becomes technically illegal Late fee accumulates quickly: At ₹100 per day, a 3-month delay in renewal results in ₹9,000 in late fees alone ,  before professional fees and potential penalties for operating with an expired certificate Lapsed certificate = fresh application: If the certificate lapses beyond a certain period without renewal, the authority may not accept a renewal application and may require a fresh registration/license application ,  losing the existing FSSAI number Inspection on renewal: For State and Central Licenses, the renewal may trigger a fresh inspection of the premises ,  if the business has made changes (new products, expanded area, new machinery) without proper modification filings, these discrepancies surface during inspection No retroactive renewal: FSSAI does not allow backdating of renewals; any gap between expiry and renewed certificate issuance is a period of non-compliance Annual turnover re-assessment: At renewal, if the business's turnover has grown beyond the current license category threshold, the authority may direct the FBO to upgrade to the appropriate license category
+
+## Documents Required
+
+| Document | Details |
+| --- | --- |
+| Existing FSSAI Certificate | Current certificate being renewed |
+| Renewal application (Form B / Form D) on FoSCoS | Filled renewal application on the portal |
+| Updated address proof | If address has changed since last certificate |
+| Updated list of food products | If product categories have changed |
+| Photo ID and address proof of proprietor/director | Aadhaar, PAN, or passport |
+| Partnership deed / MoA (if changed) | Updated constitutional documents if there have been changes |
+| Latest audited financials / CA turnover certificate | To confirm correct license category at renewal |
+| Photographs of food premises | Front view, production area, storage area |
+| Water test report | For manufacturers ,  potable water testing certificate |
+| Medical fitness certificates of food handlers | For manufacturing and processing units |
+| Pest control certificate | For food manufacturing and storage facilities |
+| NOC from municipality / fire NOC | As applicable based on state requirements |
 
 ## Process
 
-1. Check the expiry date on FoSCoS and in your compliance calendar, and start 60 days out where possible.
-2. Compare the live business to the certificate: if anything is wrong, plan modification, renewal, or both.
-3. Check turnover and activity for a possible upgrade in licence type.
-4. On FoSCoS, use Renewal, confirm pre-filled data, and correct any field that is now old.
-5. Upload fresh proofs as the portal and state checklist ask (premises, products, KYC, water, pest, medical for handlers, as applicable).
-6. Choose 1 to 5 years; longer periods can cut the number of future deadlines.
-7. Pay renewal fee; if you are in the late period, the portal usually adds the late part.
-8. If inspection is required, show the site and clear observations in time.
-9. Download the renewed certificate and put it on packs, in stores, and on every online profile; update the QR pack if a new one is issued.
+Step 1 ,  Renewal Timeline Check Check the expiry date of your FSSAI certificate on the FoSCoS portal. Set a reminder to begin the renewal process at least 60 days before expiry (30 days is the minimum, but 60 days provides buffer for any delays). Step 2 ,  Business Details Review Review all details on the existing certificate ,  address, product list, installed capacity, proprietor/partners/directors, contact details. Identify any changes that need to be incorporated and determine whether a modification should be filed before or alongside the renewal. Step 3 ,  Turnover Assessment Assess current annual turnover. If the business has grown beyond the current license category threshold, plan for a category upgrade at renewal. Step 4 ,  FoSCoS Portal ,  Renewal Application Log in to FoSCoS, navigate to the "Renewal" section, and complete the online renewal application. Pre-filled details from the existing certificate will be available ,  update any that have changed. Step 5 ,  Document Upload Upload all required documents in the prescribed format. Ensure documents are current, clearly legible, and in the correct file format. Step 6 ,  Choose Validity Period Select the renewal validity period (1 to 5 years). Longer periods reduce compliance overhead and protect against future late renewals. Step 7 ,  Fee Payment Pay the renewal fee online through FoSCoS via net banking, UPI, or debit/credit card. If filing late, the system calculates and adds the applicable late fee automatically. Step 8 ,  Application Processing and Inspection (if applicable) Basic Registrations are typically renewed without inspection. State and Central Licenses may trigger inspection. Cooperate with the Food Safety Officer during inspection and address any observations. Step 9 ,  Receipt of Renewed Certificate Download the renewed FSSAI Certificate from FoSCoS upon approval. Update the certificate on all food packaging, business premises signage, and digital platforms.
 
-## Documents required
+Fees Certificate Type Government Renewal Fee Validity Options Basic Registration ₹100 per year 1 to 5 years State License ₹2,000 – ₹5,000 per year (varies by activity type) 1 to 5 years Central License ₹7,500 per year 1 to 5 years Late renewal fee ₹100 per day (all categories) Applicable after expiry date
 
-| Document | When |
-|----------|------|
-| Current FSSAI certificate | Always |
-| Renewal form on FoSCoS | As per product |
-| Updated address, product list, KYC, MoA, deed | If changed |
-| Turnover or CA certificate if class may change | When upgrading |
-| Site photos, water test, medical, pest, NOC, fire NOC | When State or Central and local rules ask |
+## Professional Service
 
-## Government fees and validity (illustrative)
+Estimated Fee Basic Registration renewal ₹1,500 – ₹3,000 State License renewal ₹3,000 – ₹7,000 Central License renewal ₹6,000 – ₹15,000 Late renewal with penalty computation ₹3,000 – ₹8,000 Renewal + modification (combined) ₹4,000 – ₹12,000 Fresh registration after lapse ₹3,000 – ₹10,000
 
-| Type | Renew fee (per year) | Validity you can pick |
-|------|----------------------|------------------------|
-| Basic | 100 | 1 to 5 years |
-| State | 2,000 to 5,000, varies by activity | 1 to 5 years |
-| Central | 7,500 | 1 to 5 years |
-| Late renewal | 100 per day, after expiry, per usual FoSCoS rule | N/A |
+Government fees are paid directly through FoSCoS. Professional fees are exclusive of GST @18%.
 
-## Professional fees (indicative, plus GST at 18%)
+## Validity
 
-| Service | INR range |
-|---------|------------|
-| Basic renewal | 1,500 to 3,000 |
-| State renewal | 3,000 to 7,000 |
-| Central renewal | 6,000 to 15,000 |
-| Late renewal with penalty | 3,000 to 8,000 |
-| Combined renewal and modification | 4,000 to 12,000 |
-| New file after long lapse | 3,000 to 10,000 |
+Certificate Type Minimum Validity Maximum Validity Basic Registration 1 year 5 years State License 1 year 5 years Central License 1 year 5 years
 
-## Validity and renewal (cycle)
+The renewed certificate's validity period runs from the date of renewal grant, not from the original expiry date. FBOs are advised to choose 5-year validity at renewal to minimise future administrative overhead. The renewed certificate carries a new expiry date and a new QR code for verification.
 
-A renewed certificate gets a new end date from the date of the renewal order, not a silent extension of the old line. A five year choice at renewal is common for less admin. After that, the same cycle repeats, set 90, 60, and 30 day internal reminders, do not wait only for FSSAI email.
+Renewal Renewal of a renewed certificate follows the same process as the first renewal. Key reminders: FSSAI does not send automatic expiry reminders ,  the FBO is solely responsible for tracking expiry dates Set calendar reminders for 90, 60, and 30 days before expiry Monitor the FoSCoS portal for any communications or queries from the licensing authority on the pending renewal application Ensure the renewal is fully processed (certificate issued) before the expiry date ,  do not wait for the last day to apply, as processing can take up to 30 days For businesses that have expanded during the validity period, the renewal is the appropriate checkpoint to upgrade from Basic Registration to State License, or from State to Central License
 
 ## Frequently asked questions
 
-**Expired 2 months ago, can I renew?** It depends on state practice and how long the gap is. In many areas a short post-expiry renewal is still possible with late fee. A long break may need a new registration or licence, and the period of operation without a valid FSSAI can still be a past violation, take advice for your state.
-
-**Run the kitchen while renewal is in progress?** If you applied before the old end date, continuation during pendency is often read as allowed under the deemed / continuation type principles in the FSSAI / FoSCoS world, as your professional will explain. If you apply only after expiry, the gap is usually unlawful operation.
-
-**Add products and renew together?** Yes, FoSCoS can run a joint modification and renewal, often with one inspection, file early to avoid a gap at the end date.
-
-**One outlet, now five, two states.** Multi-state and scale usually needs Central, not a simple State renew on one unit. Get a design before the old licence expires, often surrender old state blocks and one Central.
-
-**Does FSSAI remind you?** FSSAI and FoSCoS can email or SMS, but the FBO is responsible for the date; keep a calendar, wrong contact in FoSCoS means no reminder to you.
-
----
-
-*This note is for awareness. Use qualified FSSAI and food-safety help for your licence class and state.*
+1. My FSSAI certificate expired 2 months ago and I didn't realise. Can I still renew it or do I need a fresh registration? Whether you can renew an expired certificate or must apply fresh depends on the state and the specific facts. In many cases, FSSAI permits renewal of recently expired certificates (within a few months of expiry) with payment of the applicable late fee of ₹100 per day for the period of delay. However, if the certificate has been expired for a longer period, the authority may direct you to apply fresh. Additionally, operating with an expired certificate for 2 months is technically a FSSAI violation ,  you may receive a notice for this period of non-compliance. Engage a FSSAI professional immediately to assess your specific situation and file the renewal or fresh application at the earliest. 2. Can I continue operating my food business while the renewal application is pending? If you filed the renewal application before your certificate's expiry date, your certificate is considered to be in force during the pendency of the renewal application (under the deemed renewal/continuation principle). However, if you allowed the certificate to expire before filing, you are operating without a valid certificate during the gap period ,  which is non-compliant. This is the primary reason why timely renewal (30+ days before expiry) is strongly advised. 3. I have a 5-year State License that expires next month. I want to also add two new product categories. Can I handle modification and renewal together? Yes. The FoSCoS portal allows you to club modification and renewal in a single application. You should flag this to your FSSAI consultant to ensure the application correctly captures both the renewal request and the modification (addition of product categories). The combined application may trigger a physical inspection (due to the category addition), so filing well in advance of expiry is critical to avoid any gap in your authorised status. 4. Our restaurant expanded from a single outlet to 5 locations across 2 states during the license period. What should we do at renewal? Multi-state operations require a Central License, not individual State Licenses. Since you now operate in 2 states, you should upgrade to a Central License at the time of renewal. You would apply for a Central License through FoSCoS (covering the head office and all locations) and surrender/close the existing State Licenses for individual locations. Each location under the Central License is covered under the same license but may be listed as a separate branch/unit. Consult a FSSAI specialist before renewal to plan the upgrade smoothly. 5. Does FSSAI send any notification or reminder when my certificate is about to expire? FSSAI does send automated email/SMS reminders to the registered email and mobile number of the FBO through the FoSCoS portal when the certificate is approaching expiry ,  typically 60 and 30 days before the expiry date. However, these reminders are not guaranteed and depend on whether the contact details registered on FoSCoS are current and correct. FBOs should not rely solely on FSSAI reminders ,  it is the FBO's sole legal responsibility to renew on time. Maintaining a compliance calendar with expiry date tracking is strongly recommended.

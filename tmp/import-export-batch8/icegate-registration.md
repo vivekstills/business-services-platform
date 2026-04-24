@@ -1,148 +1,62 @@
-# ICEGATE registration
+# Icegate Registration
 
 ## Overview
 
-**ICEGATE** (Indian Customs Electronic Gateway) is the national portal of the **Central Board of Indirect Taxes and Customs (CBIC)**, Government of India. It is the single electronic interface between trade, cargo, and Indian Customs: e-filing of import and export documents, online payment of customs duties, consignment tracking, and access to customs-related services. Developed and maintained by the **National Informatics Centre (NIC)** with **CBIC**, it handles a very large volume of customs transactions each year.
-
-The portal links to **ICES** (Indian Customs EDI System), the **DGFT** portal for EXIM policy, **RBI** for FEMA reporting, the **GST** portal for e-way bill and refund linkages, and **Port Community Systems (PCS)** at major seaports and airports.
-
-**ICEGATE registration** is how an importer, exporter, **customs house agent (CHA)**, freight forwarder, shipping line, airline, port operator, or other trade entity registers on ICEGATE to use these services. Without a valid ICEGATE registration, you cannot electronically file **Bills of Entry** (imports) or **Shipping Bills** (exports), which are central to customs clearance.
-
-**ICEGATE** is distinct from **IEC**: **IEC** is DGFT-issued permission to carry on import or export; **ICEGATE** is the customs channel through which filings and payments are processed.
-
-## Key services after registration
-
-- Electronic filing of **Bills of Entry** and **Shipping Bills**
-- Online payment of customs duty, **IGST**, and other levies through **ICEPAY**
-- Real-time tracking of consignment status and clearance progress
-- Duty drawback status and refund tracking
-- **e-Sanchit**, paperless upload of supporting documents
-- **SWIFT** (Single Window Interface for Facilitating Trade) for imports needing NOC from multiple agencies
-- Export promotion scheme tracking: **MEIS**, **RoDTEP**, **Advance Authorisation**, and similar
-- **Risk Management System (RMS)** for assessment and examination
-- **IGST** refund for exporters, linked to **GSTN** where the process is automated for eligible categories
+ICEGATE (Indian Customs Electronic Gateway) is the national portal of the Central Board of Indirect Taxes and Customs (CBIC), Government of India, that serves as the single electronic interface between trade, cargo, and the Indian Customs department. It is the digital backbone of India's customs clearance system ,  enabling the electronic filing of import and export documents, online payment of customs duties, tracking of consignments, and access to a wide range of customs-related services. ICEGATE was developed and is maintained by the National Informatics Centre (NIC) in collaboration with CBIC, and handles millions of customs transactions every year. The portal integrates with other critical trade systems including the Indian Customs EDI System (ICES), the DGFT portal for EXIM policy, the Reserve Bank of India for FEMA reporting, the GST portal for e-way bill and refund linkages, and various Port Community Systems (PCS) at major seaports and airports. ICEGATE Registration is the process by which an importer, exporter, customs broker (CHA ,  Customs House Agent), freight forwarder, shipping line, airline, port operator, or any other trade facilitation entity registers on the ICEGATE portal to gain access to its digital customs services. Without a valid ICEGATE registration, importers and exporters cannot electronically file Bills of Entry (for imports) or Shipping Bills (for exports) ,  the foundational documents of customs clearance. Key services accessible through ICEGATE after registration include: Electronic filing of Bills of Entry and Shipping Bills Online payment of customs duty, IGST, and other levies through ICEPAY Real-time tracking of consignment status and customs clearance progress Access to customs duty drawback status and refund tracking e-Sanchit ,  electronic document upload system (paperless customs) SWIFT (Single Window Interface for Facilitating Trade) ,  for importing of goods requiring NOC from multiple government agencies Export Promotion Schemes ,  MEIS, RoDTEP, Advance Authorisation tracking Risk Management System (RMS) ,  automated customs assessment and examination IGST Refund for exporters ,  automated refund linked to GSTN ICEGATE registration is distinct from IEC (Import Export Code) registration ,  IEC is the DGFT-issued authorisation to conduct import/export; ICEGATE is the customs portal through which the actual transactions are processed.
 
 ## Applicability
 
-**ICEGATE registration** is needed by:
-
-- **Importers** who file or cause **Bills of Entry** to be filed
-- **Exporters** who file or cause **Shipping Bills** to be filed
-- **CHAs** / customs brokers filing on behalf of others
-- **Freight forwarders**, **shipping lines**, **airlines** (e.g. **IGM** / **EGM** where applicable)
-- **Port operators**, **ICDs**, **CFS** operators, **steamer agents**, **air cargo agents**
-- **Banks** in the online duty payment chain
-- **Export promotion councils** for **RCMC** and related data links
-
-**Geography:** Pan-India across major customs stations, e.g. **JNCH** (Nhava Sheva), Chennai, Kolkata, Mundra, Kandla, Hazira, **IGIA** Delhi, **CSIA** Mumbai, Bengaluru, Hyderabad, and other notified ports, **ICDs**, and **CFSs**.
+ICEGATE registration is required by: Importers: All entities importing goods into India who file or cause to be filed Bills of Entry Exporters: All entities exporting goods from India who file or cause to be filed Shipping Bills Customs House Agents (CHAs) / Customs Brokers: Licensed intermediaries who file customs documents on behalf of importers and exporters Freight Forwarders: Companies coordinating international shipment and customs clearance Shipping Lines and Airlines: Carriers who file Import General Manifest (IGM) and Export General Manifest (EGM) with customs Port Operators and ICDs (Inland Container Depots): For cargo management and customs coordination Steamer Agents: Representing shipping lines for port operations Air Cargo Agents: Filing cargo manifests with customs authorities Banks: Participating in online customs duty payment Export Promotion Councils: For RCMC and export data reporting Geographical applicability: ICEGATE is a pan-India system covering all major customs ports ,  JNCH (Nhava Sheva, Mumbai), Chennai Seaport, Kolkata Port, Mundra, Kandla, Hazira, IGIA (Delhi airport), CSIA (Mumbai airport), Bengaluru airport, Hyderabad airport, and all other designated customs ports, ICDs, and CFSs (Container Freight Stations) across India.
 
 ## Benefits
 
-- **Paperless clearance:** BoE, SB, manifests, and annexures filed electronically; less physical submission at customs houses
-- **24×7 access** for filing, duty payment, and tracking
-- **Faster clearance:** Data flows into **ICES** and **RMS** for risk-based processing; compliant cargo can clear with minimal examination
-- **e-Sanchit:** Upload invoices, packing lists, certificates, licences, reference by **IRN**-style linkage in filings
-- **SWIFT:** Single-window applications for **FSSAI**, quarantine, **BIS**, **CDSCO**, and other NOCs where the module applies
-- **ICEPAY:** Net banking, **NEFT**, **RTGS**, or duty credit scrip, with quicker credit confirmation
-- **IGST** refund automation where **ICEGATE** and **GSTN** data match for the category
-- **Drawback**, **RoDTEP**, **MEIS** / **FPS** tracking and credit visibility where rules allow
-- **Business insight** from consignment-level data for cost and cycle time analysis
+Paperless customs clearance: ICEGATE enables the complete digitisation of customs documentation ,  Bills of Entry, Shipping Bills, manifests, and annexures are filed electronically, eliminating physical document submission at customs houses 24x7 operations: ICEGATE is available round-the-clock ,  importers and exporters can file customs documents, pay duty, and track consignments at any time, from anywhere Faster customs clearance: Electronic filing through ICEGATE feeds directly into the ICES (Indian Customs EDI System) ,  enabling automated risk profiling under the Risk Management System (RMS), which allows compliant consignments to be cleared with minimal or no physical examination e-Sanchit document repository: Supporting documents (invoices, packing lists, certificates of origin, licenses) are uploaded on e-Sanchit and referenced in customs filings ,  eliminating physical submission of paper documents at the customs house SWIFT ,  single window clearance: For imports requiring NOC/clearance from agencies like FSSAI, Plant Quarantine, Animal Quarantine, Drug Controller, BIS, etc., the SWIFT module on ICEGATE enables single-window electronic application ,  avoiding separate applications to each agency Real-time duty payment (ICEPAY): Customs duty can be paid online 24x7 through net banking, NEFT, RTGS, or duty credit scrip ,  immediate duty credit confirmation speeds up clearance IGST refund automation: Exporters' IGST refund claims are processed automatically through the ICEGATE-GSTN data linkage ,  no separate refund application needed for most categories Duty drawback tracking: ICEGATE provides real-time tracking of duty drawback claims ,  giving exporters visibility on claim status and credit timelines RoDTEP and MEIS/FPS tracking: Export incentive scheme credits are tracked and credited through ICEGATE ,  enabling exporters to monitor and utilise their EXIM scheme benefits Business intelligence: Consignment-level import and export data accessible through ICEGATE enables businesses to analyse trade volumes, duty costs, and clearance timelines
 
 ## Limitations
 
-- **Learning curve** for first-time users; correct user type and format matter
-- **IEC** must be active on **DGFT** before **ICEGATE** validates successfully
-- **Class 3 DSC** is often mandatory for **CHA**, shipping lines, and airline agents (extra cost and setup)
-- **Port-specific** registration codes: multi-port operations may need multiple registrations or correct port mapping
-- **Downtime** during maintenance can affect time-sensitive filings
-- Many **SMEs** rely on a **CHA** and may not operate **ICEGATE** directly without support
-- **Post-filing amendments** are harder; data quality at first submission is critical
-- **e-Sanchit** file size limits can pinch large consignments
+Technical complexity: ICEGATE has a steep learning curve ,  first-time users often require assistance to navigate the portal, register correctly, and file documents in the correct format IEC prerequisite: IEC from DGFT is mandatory before ICEGATE registration ,  importers/exporters without an active IEC cannot complete the ICEGATE registration process DSC mandatory for certain users: CHAs, Shipping Lines, and Airline Agents require a Class 3 Digital Signature Certificate (DSC) for ICEGATE registration ,  adding to setup cost and time Port-specific codes: ICEGATE uses port-specific ICEGATE codes ,  the same entity may need to register separately for different customs ports if they operate from multiple ports System downtime: ICEGATE maintenance windows and technical issues can disrupt time-sensitive customs filings ,  backup procedures exist but cause delays Customs broker dependency: Most first-time importers/exporters are not registered directly on ICEGATE and rely on CHAs ,  direct ICEGATE access requires technical capability that many SMEs lack Data accuracy pressure: Errors in electronically filed documents (BoE/SB) are difficult to amend post-submission ,  the electronic system requires higher data accuracy than paper-based systems e-Sanchit document size restrictions: Document upload size limits on e-Sanchit can cause issues with large multi-document consignments
+
+## Documents
+
+| Document | Details |
+| --- | --- |
+| IEC (Import Export Code) | Active DGFT-issued IEC ,  mandatory prerequisite |
+| PAN of the entity | Business PAN matching IEC records |
+| GSTIN | Active GST registration |
+| Certificate of Incorporation / Partnership Deed | Legal entity proof |
+| Bank account details | Account linked to IEC and ICEGATE for duty payments |
+| Email ID and mobile number | For ICEGATE account creation and OTP verification |
+| Digital Signature Certificate (Class 3) | For CHA/Shipping Line/Airline registrations ,  individual DSC |
+| CHA License number | For Customs House Agents ,  CBIC-issued CHA license |
+| ICEGATE registration form | Online form with entity and user details |
+| Authorisation letter | For multi-user accounts ,  authorising specific individuals as ICEGATE users |
+| Port of operation | Specific customs port for which registration is sought |
+| KYC documents of key personnel | PAN, Aadhaar, photos of directors/partners |
 
 ## Process
 
-1. **IEC from DGFT:** Ensure **IEC** is active and aligned on **dgft.gov.in**; stale data blocks **ICEGATE** validation.
-2. **Portal:** Open **icegate.gov.in**, use **Register** / **New User Registration**.
-3. **User type:** **IE** (importer/exporter), **CHA**, **SL** (shipping line), **AIR**, port, bank, etc. Forms and documents differ by type.
-4. **Form:** Entity name, **IEC**, **GSTIN**, **PAN**, contact, bank, port of operation; for **CHA**, licence number and **DSC** details.
-5. **Upload:** **IEC**, **PAN**, **GST** proof, incorporation or partnership papers, authorisation where multi-user.
-6. **DSC:** For **CHA** and carriers, register **Class 3 DSC** on the portal for signing filings.
-7. **Verification:** **CBIC** / system checks against **IEC**, **PAN**, **GST**; many **IE** paths are largely automated.
-8. **ICEGATE code:** User ID issued for future transactions; keep email and credentials secure.
-9. **ICEPAY:** Link bank account for duty payment and complete bank-side checks.
-10. **e-Sanchit:** If you upload supporting documents electronically, complete **e-Sanchit** setup for **IRN**-style references in **BoE** / **SB**.
+Step 1 ,  Obtain IEC from DGFT Before ICEGATE registration, ensure your IEC (Import Export Code) is active and updated on the DGFT portal (dgft.gov.in). ICEGATE validates IEC details during registration ,  outdated IEC records will cause ICEGATE registration errors. Step 2 ,  Visit ICEGATE Portal Go to icegate.gov.in. Navigate to the "Register" or "New User Registration" section. ICEGATE has separate registration pathways for different user types ,  Importer/Exporter, Customs Broker/CHA, Shipping Line, Airline, Port Operator, and Bank. Step 3 ,  Select User Type Choose the appropriate user type ,  "IE" (Importer/Exporter), "CHA" (Customs Broker), "SL" (Shipping Line), "AIR" (Airline Agent), etc. The registration form and required documents differ by user type. Step 4 ,  Fill Registration Form Complete the ICEGATE registration form ,  entity details (name, IEC, GSTIN, PAN), contact details (email, mobile), bank account details, and port of operation. For CHA: enter CHA license number, GSTIN, and DSC details. Step 5 ,  Document Upload Upload all required documents ,  IEC certificate, PAN, GSTIN certificate, Incorporation certificate, and authorisation letter (for CHA filings on behalf of importers/exporters). Step 6 ,  DSC Registration (for CHAs and carriers) CHAs, Shipping Lines, and Airline Agents must register their Class 3 DSC on ICEGATE ,  the DSC is used for digital signing of customs filings. Connect the DSC token to the computer and register the certificate on the ICEGATE portal. Step 7 ,  ICEGATE Verification and Approval ICEGATE authorities verify the submitted information against IEC, PAN, and GST databases. For Importer/Exporter registrations, the process is largely automated ,  ICEGATE code is generated upon successful data validation. Step 8 ,  Receive ICEGATE Code Upon successful registration, an ICEGATE code (user ID) is issued to the entity ,  this is the identifier used for all future customs filings and transactions. Email confirmation and ICEGATE login credentials are provided. Step 9 ,  ICEPAY Bank Account Linkage Link your bank account to ICEPAY (ICEGATE's payment gateway) for online customs duty payment. This involves a net banking setup verification with your bank. Step 10 ,  e-Sanchit Registration (if needed) For importers who upload supporting documents electronically, complete the e-Sanchit module setup ,  enabling document upload and reference number generation for customs clearance.
 
-## Documents required
+Fees Registration Type Government Fee Remarks Importer/Exporter ICEGATE registration Nil Free registration CHA (Customs Broker) ICEGATE registration Nil CHA License fee separate Shipping Line ICEGATE registration Nil
 
-| Document | Details |
-|----------|---------|
-| **IEC** | Active **DGFT** **IEC**, mandatory prerequisite |
-| **PAN** | Entity **PAN** matching **IEC** |
-| **GSTIN** | Active **GST** registration |
-| **Constitution proof** | Certificate of incorporation, partnership deed, or equivalent |
-| **Bank** | Account linked for **IEC** and **ICEPAY** |
-| **Email, mobile** | For account creation and **OTP** |
-| **Class 3 DSC** | For **CHA** / shipping / airline paths |
-| **CHA licence** | **CBIC**-issued, for customs brokers |
-| **Authorisation letter** | For additional users, where used |
-| **Port** | Customs station for which registration is sought |
-| **KYC of key persons** | **PAN**, **Aadhaar**, photos of directors or partners as asked |
+Airline Agent ICEGATE registration Nil
 
-## Fees
+ICEGATE DSC registration Nil DSC itself costs ₹800–₹3,000
 
-**Government (typical):**
+## Professional Service
 
-| Registration type | Government fee | Remarks |
-|-------------------|---------------|--------|
-| Importer / exporter | Nil | Free |
-| **CHA** | Nil | Licence cost is separate |
-| Shipping / airline (portal) | Nil | |
-| **DSC** | Nil on portal | **DSC** device often **₹800**–**₹3,000** or so to vendors |
+Estimated Fee ICEGATE registration (importer/exporter) ₹2,000 – ₹5,000 ICEGATE registration (CHA/freight forwarder) ₹5,000 – ₹12,000 DSC procurement and ICEGATE setup ₹2,000 – ₹5,000 ICEPAY bank linkage setup ₹1,000 – ₹3,000 e-Sanchit module setup and training ₹2,000 – ₹5,000 Full ICEGATE onboarding package ₹8,000 – ₹20,000 ICEGATE error resolution / troubleshooting ₹3,000 – ₹8,000
 
-**Professional (indicative, excl. GST @ 18%):**
+Government registration on ICEGATE is free. Professional fees are exclusive of GST @18%.
 
-| Service | Estimated fee (INR) |
-|---------|---------------------|
-| **IE** registration | 2,000 – 5,000 |
-| **CHA** / forwarder | 5,000 – 12,000 |
-| **DSC** + setup | 2,000 – 5,000 |
-| **ICEPAY** bank linkage | 1,000 – 3,000 |
-| **e-Sanchit** setup / training | 2,000 – 5,000 |
-| Full onboarding | 8,000 – 20,000 |
-| Error / troubleshooting | 3,000 – 8,000 |
+## Timeline
 
-## Timeline (typical)
+Step Typical Timeline IEC obtention (prerequisite) 1–3 working days (if not already held) ICEGATE registration form submission 1 working day ICEGATE data validation and code issuance 2–5 working days DSC procurement and registration (for CHAs) 3–7 working days (token delivery) ICEPAY bank account linkage 1–3 working days e-Sanchit module activation Same day or next working day Total end-to-end (first-time setup) 5–15 working days
 
-| Step | Timeline |
-|------|----------|
-| **IEC** (if not held) | 1–3 working days |
-| Form submission | 1 day |
-| Validation and code | 2–5 working days |
-| **DSC** (where needed) | 3–7 working days for token and registration |
-| **ICEPAY** linkage | 1–3 working days |
-| **e-Sanchit** | Same or next day often |
-| **End-to-end first time** | 5–15 working days |
+For importers/exporters who already have an IEC, ICEGATE registration is often completed within 3–7 working days. CHAs with DSC requirements may take up to 15 working days.
 
-**CHAs** needing **DSC** may take up to about 15 working days. **IE** with **IEC** already in hand often land in about 3–7 working days for registration.
-
-## Use cases (short)
-
-1. **First-time machinery import:** **BoE**, duty on **ICEPAY**, track status in **ICES**, with **e-Sanchit** documents.
-2. **Garment exporter, RoDTEP:** **Shipping bill** and scheme credit visibility through integrated data, with **RCMC** / **LUT** as applicable elsewhere.
-3. **CHA onboarding:** **DSC**-based **ICEGATE** account to file for clients; licence plus portal registration.
-4. **Pharma, SWIFT:** **CDSCO** / drug agency NOC in single-window flow with **BoE** where configured.
-5. **E-commerce exports, IGST:** Track refund linkage between **ICEGATE** and **GSTR-1** / **GSTN** for eligible cases.
+Use Cases 1. First-Time Importer of Industrial Machinery A manufacturing company importing CNC machines from Germany for the first time needs to register on ICEGATE to file their Bill of Entry electronically, pay customs duty online, and track their cargo through the ICES system. Without ICEGATE registration, they cannot directly file or even monitor their customs clearance ,  they would be entirely dependent on their CHA without any direct access to their shipment status. 2. Garment Exporter Using RoDTEP Scheme A Tiruppur-based garment exporter shipping to Europe uses ICEGATE to file Shipping Bills electronically, reference their RCMC and LUT details, and receive automatic credit of RoDTEP (Remission of Duties and Taxes on Exported Products) scrips. The RoDTEP credit is directly linked to the Shipping Bill data on ICEGATE and credited to the exporter's Electronic Credit Ledger ,  making ICEGATE the operational backbone of their export incentive claim. 3. Customs House Agent (CHA) Onboarding A logistics company in Chennai that has obtained a CHA license from CBIC registers on ICEGATE with their DSC to begin filing customs documents on behalf of their importer and exporter clients. The CHA's ICEGATE registration enables them to act as the legal agent for customs filings ,  without it, the CHA cannot operate digitally even with a valid CHA license. 4. Pharmaceutical Importer Using SWIFT A pharmaceutical company importing Active Pharmaceutical Ingredients (APIs) from China uses ICEGATE's SWIFT (Single Window Interface) module to simultaneously apply for clearance from the Drug Controller (CDSCO) as part of the Bill of Entry filing ,  avoiding separate manual applications to CDSCO and integrating the NOC approval directly into the customs clearance workflow. 5. E-Commerce Exporter Tracking IGST Refund A Bengaluru-based e-commerce company exporting handicrafts to US consumers (with IGST paid on export) uses ICEGATE to track the automated processing of their IGST refund ,  the Shipping Bill data on ICEGATE is matched with their GSTR-1 on the GSTN portal, and the refund is processed automatically and credited to their bank account. ICEGATE provides real-time status of refund processing at each stage.
 
 ## Frequently asked questions
 
-**Is ICEGATE the same as IEC?** No. **IEC** is **DGFT**’s authorisation to trade; **ICEGATE** is the **CBIC** portal for customs filings. **IEC** is almost always a prerequisite; you may still use only a **CHA**’s **ICEGATE** account, but you then lack direct visibility.
-
-**We only use a CHA. Do we need our own ICEGATE?** Not strictly; the **CHA** can file. A direct account gives you live status, **ICEPAY**, drawback / incentive views, and direct communication, which many firms want as volume grows.
-
-**We export only software. Do we need ICEGATE?** **ICEGATE** is for **goods** crossing customs. Pure digital service exports use **DGFT** / **GST** / **STPI**-**SOFTEX** and banking paths; **ICEGATE** matters if you ship tangible media, hardware, or other physical goods.
-
-**We lost CHA login; how to recover?** **Helpdesk** at **icegate.gov.in** (e.g. helpdesk@icegate.gov.in, **1800-3010-1000**), with **IEC** and **PAN**; re-registration may be possible if recovery fails.
-
-**Is e-Sanchit mandatory?** For electronic **BoE**, officers increasingly expect **e-Sanchit**-referenced documents instead of only paper. Treat it as effectively standard for clean clearance.
-
-*All service content is for informational purposes. Specific import and customs advice should be obtained from qualified **DGFT** / **CHA** / customs practitioners based on your products, ports, and transactions.*
+1. Is ICEGATE registration the same as IEC registration? Can one be used in place of the other? No ,  they are distinct registrations from different government bodies serving different purposes. IEC (Import Export Code) is a 10-digit authorisation code issued by the DGFT (Directorate General of Foreign Trade) under the Ministry of Commerce ,  it is the fundamental licence to conduct import/export transactions in India. ICEGATE registration is a portal account on the Indian Customs Electronic Gateway ,  it gives the entity access to file customs documents (Bills of Entry and Shipping Bills) electronically and use customs-related digital services. IEC is the prerequisite for ICEGATE registration (ICEGATE validates your IEC during registration), but having an IEC without an ICEGATE account means you can still conduct imports/exports but only through a CHA who is registered on ICEGATE ,  you wouldn't have direct access to your customs transactions. 2. Do small importers and exporters who use a Customs House Agent (CHA) also need their own ICEGATE registration? Not necessarily ,  if you are a small importer/exporter who exclusively uses a licensed CHA for all your customs filings, the CHA files all documents on ICEGATE using their own registration and acts on your behalf. You don't need your own ICEGATE account for this model. However, having your own ICEGATE account provides significant operational benefits: direct real-time visibility into your consignment's customs status, direct customs duty payment capability, direct access to drawback and RoDTEP credit tracking, and the ability to communicate directly with customs authorities ,  particularly valuable as your import/export volumes grow. 3. We are a startup that recently got our IEC and want to start exporting software services. Do we need ICEGATE registration for software/service exports? ICEGATE is primarily relevant for physical goods ,  it processes Bills of Entry (for goods imports) and Shipping Bills (for goods exports) at customs ports. Software and services exported digitally (via electronic transfer, cloud, or internet) do not pass through physical customs and do not require ICEGATE filing. For software service exports, your primary compliance platforms are the DGFT portal (for IEC), the GSTN portal (for LUT filing and GSTR-1 reporting of exports), STPI (Software Technology Parks of India ,  for SOFTEX filing for software exports above USD 25,000), and your AD bank (for FEMA compliance on foreign remittances). ICEGATE would only be relevant if you are exporting physical goods like packaged software CDs, hardware, or other tangible items. 4. Our ICEGATE registration was done by our previous CHA and we've lost access to it. How do we recover or re-register? This is a common challenge when companies change their CHA. ICEGATE accounts registered by a CHA on behalf of an importer/exporter are generally in the entity's name (using the entity's IEC and PAN) even if the CHA set them up. To recover access: contact ICEGATE helpdesk (helpdesk@icegate.gov.in or 1800-3010-1000) with your IEC, PAN, and entity details ,  they can assist with password reset and user credential recovery. If the original account cannot be recovered, you may need to register a fresh ICEGATE account ,  ICEGATE generally allows re-registration when the original account credentials are entirely lost and the entity's IEC/PAN is verified. 5. How does ICEGATE's e-Sanchit system work and is it mandatory? e-Sanchit (Electronic Storage and Computerised Handling of Indirect Tax Documents) is a document management system on ICEGATE where importers/exporters upload supporting documents digitally ,  commercial invoices, packing lists, bills of lading, certificates of origin, licenses, and permits. These uploaded documents are assigned a unique IRN (Image Reference Number) that is referenced in the Bill of Entry or Shipping Bill ,  replacing the physical submission of documents at the customs house. e-Sanchit is effectively mandatory for importers filing Bills of Entry electronically, as customs officers are increasingly expecting document references rather than physical paper copies. For exporters, Shipping Bills typically reference fewer documents, but e-Sanchit upload of licenses, RCMC, and certificates is increasingly expected for smooth clearance.

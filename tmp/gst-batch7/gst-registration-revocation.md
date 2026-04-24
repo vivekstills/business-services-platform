@@ -1,54 +1,108 @@
-# GST registration revocation (Form GST REG-21)
+# Gst Registration Revocation
 
 ## Overview
 
-When a GST registration is cancelled, you may be able to apply to revoke that cancellation in Form GST REG-21, within the time limit the Act and the year’s form give, for example when default in filing or payment is cured, a wrong PPOB is fixed, or a show-cause is fully answered. The officer, on the facts and law, can restore the same GSTIN. If the window in law is missed, a fresh application for registration, not 21, may be the only route. This service is a CA-led, evidence-heavy path, with the cancel order, catch-up 1, 2B, 3B, and DRC, and 16 and 10- class work only where your case needs it.
-
-## Key features
-
-- One shot in time, with clear proof of the root fix, not a repeat of the same gap next month.
-- No new GSTIN, if 21 is allowed and granted, the old GSTIN is back on the day the order says.
-- Appeal, writ, and 21 can sit in a stack in hard cases, on a brief from your team.
-
-## Benefits
-
-- Same GSTIN, so old bank, 26AS, 2A, 2B, 1 chain, and customer MSA need less surgery than a new GSTIN.
-- Fewer 50 and DRC- class fights when you fix the true cause, not a shell story.
-
-## Process
-
-1. Read the cancel order, map the time limit, and list the fix: pay, 1, 3B, 12, 16, 10, or 03 as your case may need, on a one-page from your CA.
-2. File REG-21 in the portal, with a clean, short brief and a full bundle of the fix.
-3. Track query, show-cause, and order; if 21 is lost, re-register and map the new GSTIN to your 9 and bank.
-
-## Documents
-
-| Item | Use |
-|------|-----|
-| Cancel order, 16, 10 if any, last 1, 2B, 3B, DRC, bank | 21 brief |
-| Board, PPOB, NOC, rent, if the cause was PPOB | 21 and root cause |
-| Email to officer, 21 ack, 21 and order, when done | One pack for 9, bank, and board |
-
-## Fees (indicative, professional, excl. GST 18%)
-
-| Service | Band (rupees) |
-|---------|-----------------|
-| Simple: late 3B, 1, pay, and 21 | 8,000 to 20,000 |
-| PPOB, fraud, and 21 with appeal, writ | 40,000 to 2,00,000 plus |
-| Government | Nil for 21, as in many years on the portal |
+GST Registration Revocation is the process of reinstating a GST registration that has been cancelled by the GST officer on a suo motu basis (compulsory cancellation). When a GST officer cancels a taxpayer's registration ,  typically due to non-filing of returns for 6 or more consecutive months (regular taxpayer) or 3 consecutive quarters (composition dealer) ,  the taxpayer can apply for revocation of cancellation within 90 days of the cancellation order, to resume their GST registration and compliance obligations. Revocation is specifically a remedy against officer-initiated (compulsory) cancellation ,  it is not available for voluntary cancellation (where the taxpayer themselves applied for cancellation in Form GST REG-16). If a taxpayer voluntarily cancelled their registration and wants to re-register, they must apply for fresh GST registration. The revocation process under Section 30 of the CGST Act requires the taxpayer to: (a) file all pending GST returns up to the date of cancellation order; (b) pay all pending tax, interest, and late fees; and (c) file the revocation application in Form GST REG-21 within the prescribed period. The GST Council has periodically announced amnesty schemes extending the revocation deadline and waiving late fees ,  businesses with cancelled GSTINs should monitor such schemes to take advantage of relaxed conditions.
 
 ## Applicability
 
-Assessees with a valid cancel and a true fix, in the time the Act gives for 21, not only a wish to delay tax.
+GST Registration Revocation is applicable for: Taxpayers whose GST registration was cancelled by the officer under Section 29(2) of the CGST Act for: Non-filing of returns for 6 consecutive months (regular taxpayers) Non-filing of returns for 3 consecutive quarters (composition scheme) Failure to commence business within 6 months of registration (for voluntary registrants) Non-existence at the declared principal place of business Obtaining registration through fraud or misrepresentation Not available for: Voluntary cancellations (taxpayer applied for REG-16) ,  must apply for fresh registration Cancellations pursuant to court/tribunal orders without specific revocation provisions Applicable pan-India ,  all states and UTs.
 
-## Common mistakes (short)
+## Features
 
-- 21 with no 3B, 1, or DRC, when the cause was a gap in 3B, 1, and tax in pay.
-- 21 on day thirty-one, when the law says thirty, with no 50 or 74 class extension story.
-- New REG-01 in the same state, same name, the same day, in a 21, re-register race with no one-page plan on which GSTIN the bank, 1, 2A, 2B, 26AS set use.
+90-day revocation window: The application for revocation must be filed within 90 days of the service of the cancellation order ,  this is the standard statutory period Extended timelines (GST Council discretion): CBIC/GST Council has extended revocation timelines on multiple occasions through special amnesty schemes ,  monitor CBIC notifications Form GST REG-21: The revocation application is filed online on the GST portal using Form GST REG-21 Prior compliance mandatory: All pending GSTR-1 and GSTR-3B returns (up to the effective date of cancellation) must be filed before the revocation application can be submitted on the portal Tax, interest, and late fee payment: All outstanding tax liability, interest (18% p.a.), and late fees must be paid before or at the time of revocation application 30-day officer processing: The GST officer must process the revocation application within 30 working days and either revoke the cancellation or issue a show-cause notice GSTIN restoration: Upon revocation, the original GSTIN is restored ,  the taxpayer can resume operations, file returns, and claim ITC from the period after revocation Commissioner's discretion: In certain cases (after the initial 90-day window), the GST Commissioner can allow revocation on application ,  subject to satisfactory explanation for the delay
+
+## Benefits
+
+GSTIN restoration without fresh registration: Revocation restores the original GSTIN ,  the taxpayer does not lose their registration history, ITC balance in the credit ledger, or B2B invoice trail Business continuity: Revocation enables the taxpayer to resume legal GST-compliant business operations ,  issue tax invoices, claim ITC, and file returns Avoidance of fresh registration hassles: A fresh registration application involves re-registering with all documents ,  revocation avoids this effort by restoring the existing registration Supplier relationship restoration: B2B buyers require a valid GSTIN from their supplier ,  revocation restores the GSTIN and enables buyers to continue claiming ITC on the supplier's invoices E-commerce platform reinstatement: E-commerce platforms (Amazon, Flipkart) suspend sellers with cancelled GSTINs ,  revocation enables reinstatement of the seller account GST Council amnesty schemes: During amnesty periods, late fees are often waived ,  making revocation even more cost-effective for non-compliant taxpayers
+
+## Documents
+
+| Document | Details |
+| --- | --- |
+| Form GST REG-21 (online) | Revocation application on GST portal |
+| Cancellation order (GST REG-19) | The officer's cancellation order ,  contains the effective cancellation date |
+| All pending GSTR-1 returns (filed) | Must be filed before revocation application |
+| All pending GSTR-3B returns (filed) | Must be filed and tax/interest paid before revocation application |
+| Payment challans for all pending tax and interest | Evidence of payment of outstanding dues |
+| Late fee payment proof | All late fees paid |
+| Reason for non-filing (explanation) | To be stated in the revocation application |
+| Supporting documentation (if applicable) | For illness, litigation, or other genuine hardship ,  supporting documents |
+
+## Process
+
+Step 1 ,  Identify the Cancellation Order Log in to the GST portal and locate the cancellation order (GST REG-19) ,  note the effective date of cancellation and the date the order was served (as the 90-day clock runs from the date of service). Step 2 ,  Compile Pending Returns Identify all unfiled GSTR-1 and GSTR-3B returns from the last filed period to the effective date of cancellation. This is often the primary obstacle ,  compiling months of pending data. Step 3 ,  File All Pending GSTR-1 Returns File all pending GSTR-1 returns in chronological order (earliest period first). The portal requires sequential filing ,  a later period cannot be filed if an earlier period is pending. Step 4 ,  File All Pending GSTR-3B Returns File all pending GSTR-3B returns, paying all tax liability, interest (18% p.a.), and late fees for each period. The portal calculates late fees automatically. Step 5 ,  Pay Any Additional Dues Ensure the Electronic Cash Ledger has sufficient balance for all payments. Pay any shortfall through net banking/UPI. Step 6 ,  File GST REG-21 Once all pending returns are filed and all dues are paid, navigate to Registration → Application for Revocation of Cancellation on the GST portal. File Form GST REG-21 with the reason for revocation. Step 7 ,  Officer Processing The GST officer reviews the revocation application within 30 working days. The officer may: (a) revoke the cancellation (Form GST REG-22); or (b) issue a show-cause notice (Form GST REG-23) if not satisfied. Step 8 ,  Respond to SCN (if issued) If GST REG-23 is issued, respond within the specified timeframe explaining the reasons for past non-compliance and providing assurance of future compliance. The officer then issues the final order. Step 9 ,  Revocation Order (GST REG-22) Upon satisfactory processing, the officer issues GST REG-22 restoring the GSTIN. Update all business systems with the restored GSTIN.
+
+Fees Service Government Fee Revocation Application (GST REG-21) Nil Pending returns late fee (government) ₹20–₹50 per day per return (subject to amnesty)
+
+## Professional Service
+
+Estimated Fee GST revocation application filing ₹3,000 – ₹8,000 Pending returns filing (per return) ₹500 – ₹2,000 per return Bulk pending returns filing package ₹8,000 – ₹25,000 SCN response drafting ₹5,000 – ₹15,000 End-to-end revocation package ₹15,000 – ₹40,000
+
+Professional fees exclusive of GST @18%. Late fees paid to the government are additional.
+
+Compliance File the revocation application within 90 days of the cancellation order service date All pending returns must be filed before the revocation application Pay all outstanding tax, interest (18% p.a.), and late fees before applying Monitor CBIC notifications for amnesty schemes that may waive late fees or extend the revocation timeline After revocation, maintain strict return filing compliance to prevent repeat cancellation
+
+## Common Mistakes
+
+Filing revocation application without filing all pending returns: The GST portal will not allow REG-21 submission if any GSTR-3B returns are pending ,  the portal enforces this sequentially Missing the 90-day deadline: Not tracking the 90-day window from the cancellation order service date ,  after 90 days, revocation requires Commissioner-level approval, which is more complex Not paying interest on pending tax: Paying only the principal tax without the 18% p.a. interest ,  the returns cannot be filed (and hence revocation cannot proceed) without paying interest Confusing voluntary cancellation with compulsory cancellation: Attempting to file REG-21 for a voluntarily cancelled GSTIN ,  revocation is only for compulsory (officer-initiated) cancellation Assuming revocation is automatic after filing returns: Filing all pending returns does not automatically restore the GSTIN ,  the REG-21 revocation application must be separately filed after returns are filed
 
 ## Frequently asked questions
 
-**Cancel for fake bill. Can 21 work?** Very fact-heavy; 21 is not a free pass, and 74, 18, 69 can still run, on a deep brief by your team.
+1. Our GSTIN was cancelled 6 months ago and we missed the 90-day revocation window. Can we still get revocation? After the initial 90-day window has passed, revocation requires approval from the Commissioner of GST (or a designated officer at the Commissionerate level). File a formal application to the Commissioner explaining the reasons for the delay in seeking revocation and the steps taken to file pending returns and pay all dues. The Commissioner has discretion to allow revocation beyond the 90-day period ,  particularly where the taxpayer has genuine hardship reasons and has now brought their compliance fully current. Additionally, watch for CBIC amnesty schemes ,  the GST Council has periodically announced special revocation windows with extended timelines and waived late fees. 2. How much would the total cost be to revoke a GSTIN cancelled for non-filing of 12 months of returns? The total cost depends on: (a) tax liability for the 12 months of unfiled returns ,  this is the biggest variable and depends on actual business volumes; (b) interest at 18% p.a. on the unpaid tax from the due date of each return ,  12 months of non-filing can result in substantial interest; (c) late fees per return ,  approximately ₹50/day per return (capped at ₹10,000 per return under normal provisions, often reduced under amnesty schemes); (d) professional fees for filing 24 returns (12 GSTR-1 + 12 GSTR-3B) and the revocation application. For a business with ₹5 lakh/month in taxable supplies, the total outflow could easily be ₹10–₹20 lakh ,  primarily from tax + interest + late fees. 3. Can we continue operating our business using our PAN (without GSTIN) while the revocation is being processed? Technically, a business that is required to be GST-registered (i.e., meets the mandatory registration criteria) cannot legally make taxable supplies without a valid GSTIN ,  even while awaiting revocation. However, on a practical level, many businesses continue operations during the revocation period while keeping records of all supplies for retroactive reporting. If customers require a GSTIN for ITC purposes, they will not be able to claim ITC on your invoices during the period your GSTIN is cancelled ,  which may affect B2B relationships significantly. 4. After GSTIN revocation, will the ITC balance in my Electronic Credit Ledger be restored? Yes. Upon revocation of cancellation (GST REG-22), the GSTIN is fully restored ,  including the Electronic Credit Ledger balance that existed at the time of cancellation (subject to any reversals or adjustments made during the cancellation period). The ITC balance is not forfeited during compulsory cancellation ,  it is effectively "frozen" and is restored upon revocation. However, any ITC that was incorrectly claimed before cancellation and was identified during the pending return filing process must be reversed ,  reducing the effective balance. 5. Our GSTIN was cancelled, but we have ongoing contracts with government clients who require a valid GSTIN. Can we get emergency/expedited revocation? There is no specific "expedited" revocation mechanism under the CGST Act ,  the standard processing time is 30 working days from the revocation application. However, where government contracts are at risk, a representation can be made to the jurisdictional Commissioner with documentation of the specific urgency (contract details, government client correspondence) to request priority processing. In parallel, file all pending returns and the revocation application immediately ,  minimising the processing time by ensuring the application is complete and all dues are paid without any delays on your side.
 
-*All service content is for informational purposes. Specific GST advice should be obtained from qualified practitioners based on your business facts, transactions, and the law in force.*
+All service content is for informational purposes. Specific GST advice should be obtained from qualified GST practitioners based on your business's specific facts, transactions, and state of operations.
+
+Here are all service contents. Integrate them into the About section using the system. push all of them You are a senior frontend engineer and content formatter.
+
+Your task is to take multiple service descriptions and integrate them into the ABOUT section of the website in a clean, structured, and visually balanced way.
+
+-------------------------------------------------- CONTENT CLEANING: --------------------------------------------------
+
+- Scan all content before rendering - Remove all em dashes (, ) and replace them naturally with commas or proper sentence breaks - Fix any awkward phrasing caused by removal - Preserve meaning and clarity - Do NOT rewrite content unnecessarily
+
+-------------------------------------------------- STRUCTURE (VERY IMPORTANT): --------------------------------------------------
+
+- Each service must be clearly separated - Use consistent section structure for each service:
+
+Service Section Layout: 1. Service Title (H2) 2. Short Overview (2–3 lines) 3. Key Features (card/grid format) 4. Benefits (bullet or card format) 5. Process (step-by-step mapped clearly) 6. Documents Required (table format) 7. Cost / Fees (table format if available) 8. Applicability (short paragraph)
+
+- Maintain uniform structure across all services - Ensure no overlap or merging between services
+
+-------------------------------------------------- UI & DESIGN SYSTEM: --------------------------------------------------
+
+TYPOGRAPHY: - Use ONE consistent font family across the section - Maintain hierarchy: - H1 (About section title) - H2 (Service titles) - H3 (subsections) - Body text readable and clean - Ensure proper line height and readability
+
+COLORS: - Use soft pastel tones - Keep consistent across all service blocks - Avoid harsh or saturated colors
+
+SPACING: - Balanced spacing between services - Consistent padding within sections - No excessive gaps - No cramped layout
+
+-------------------------------------------------- UI COMPONENT USAGE: --------------------------------------------------
+
+FACT CARDS: - Use cards for: - Features - Benefits - Keep minimal, clean, aligned - Equal height and spacing
+
+TABLES: - Use tables for: - Documents - Fees / cost - Keep clean borders and readable spacing - Ensure consistent styling across all tables
+
+PROCESS / STEPS: - Convert processes into: - Numbered steps OR - Step cards (vertical layout) - Keep flow logical and easy to follow
+
+ICONS: - Use simple, clean, professional icons - No flashy or AI-generated styles - Maintain consistency
+
+-------------------------------------------------- LAYOUT RULES: --------------------------------------------------
+
+- Use a centered container layout - Maintain consistent width - Avoid full-width text blocks - Ensure all elements align properly
+
+-------------------------------------------------- MOBILE RESPONSIVENESS: --------------------------------------------------
+
+- Stack all sections vertically on mobile - Ensure no horizontal scrolling - Cards should stack cleanly - Tables should: - Either scroll horizontally OR - Convert into stacked format - Maintain readable font sizes (≥16px) - Reduce spacing slightly for mobile
+
+-------------------------------------------------- QUALITY CONTROL: --------------------------------------------------
+
+Before finalizing: - Check all em dashes are removed - Check spacing consistency - Check font consistency - Ensure all services follow same structure - Ensure no UI clutter - Ensure readability is high - Ensure visual balance
+
+-------------------------------------------------- EXECUTION: --------------------------------------------------
+
+- Process all services - Clean content - Apply structure - Apply UI system - Integrate into About section seamlessly
+
+-------------------------------------------------- OUTPUT EXPECTATION: --------------------------------------------------
+
+- Clean, structured About section - Each service clearly separated - Balanced UI with cards + tables - Consistent design system - Fully responsive layout - Professional look (not AI-generated feel)

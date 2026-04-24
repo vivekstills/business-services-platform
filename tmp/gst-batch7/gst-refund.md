@@ -1,70 +1,45 @@
-# GST refund (Form RFD-01)
+# Gst Refund Filing
 
 ## Overview
 
-A **GST** refund is a repayment of tax paid in excess, or a payment of unutilized **ITC** or other eligible amounts, through **Form RFD-01** on the **GST** portal. Categories include export of **goods** and **services,** **SEZ**-linked supplies, inverted duty, excess in electronic **ledgers,** and unutilized **ITC** on **zero-rated** supplies, each with its own time limits, **BRC-**tied and **FIRC-**sensible evidence rules, and checks by the **GST** system and officers. A clean match between **GSTR-1,** **3B,** and **2B,** and your physical records, improves success rates and reduces **BRC-**mismatch and **DRC-** class exposure.
+GST Refund Filing is the process by which a GST-registered taxpayer claims back excess GST paid to the government ,  whether due to zero-rated exports, inverted duty structure, excess cash in the electronic cash ledger, or other specified situations under the GST law. GST refunds are governed by Section 54 of the CGST Act, 2017 and the CGST Rules, 2017, and are filed in Form RFD-01 on the GST portal. India's GST refund framework covers the following categories of refund claims: Refund Category Description Export of goods/services (IGST paid route) Refund of IGST paid on exports Export under LUT (ITC refund route) Refund of accumulated ITC due to zero-rated exports Inverted duty structure Refund of accumulated ITC where input GST rate is higher than output GST rate Excess cash in electronic cash ledger Refund of unutilised cash balance in GST cash ledger Deemed exports Refund of IGST/ITC on supplies treated as deemed exports Finalisation of provisional assessment Refund where final assessment results in tax excess paid Force Majeure / tax paid in error Tax paid by mistake on an exempt supply On account of Supreme Court / tribunal order Refund pursuant to court order
 
-## Key features (summary)
-
-| Refund type (illustrative) | Typical touchpoints |
-|----------------------------|--------------------|
-| Export of **services** (unutilized **ITC**) | **FIRC,** **BRC,** time limits, **GSTR-1** export line |
-| Export of **goods** | **Shipping** bill, **RFD-01** class, **IGST** / **ITC** path |
-| **SEZ** supplies | **LUT** or **IGST** plus **RFD-01,** as applicable |
-| Inverted duty / **ITC** cases | Relevant **RFD-01** row, may need **BOM-** or cost **certs** |
-| Excess in **cash** **ledger** | As portal category lists for that tranche |
-
-## Benefits
-
-- Recovers **cash** tied up in **IGST,** unutilized **ITC,** and mistaken **payments.**
-- Aligns with **BRC** and **FIRC** on cross-border and **SEZ** **GST** for neutral economics where the law allows.
-- Timely **RFD-01** work reduces protracted follow-up, interest, and **DRC-** class disputes on weak claims.
-
-## Process
-
-1. Reconcile **GSTR-1, 3B,** books, and **2B** for the **periods** in the claim.
-2. Open **RFD-01,** select the sub-category, upload **FIRC,** **shipping bill,** **BRC,** **CA-**certs, and the **self**-**declarations** the form **asks.**
-3. **Sign** with **DSC** or **EVC**; track **acknowledgement** and **provisional** or **final** order on the portal.
-4. If **BRC-**mismatch, correct **1**-**/****3B-** class issues through the proper return **amend** and **DRC-03** paths on **advice,** then **re**-**file** or **re**-**open** the claim as the portal allows.
-5. Respect the **2**-**year**-style and other time limits the Act applies to your class of **refund,** in the exact wording in force (your **CA** confirms the date).
-
-## Documents
-
-| Document | Use |
-|----------|-----|
-| **FIRC,** **contract,** remittance | Service export and similar **RFD-01** |
-| **Shipping** bill, **EGM,** as applicable | Export of **goods** |
-| **BRC,** in **BRC-**driven **categories** | B2B and export-style claims |
-| **GSTR-1, GSTR-3B,** **2B,** **ledgers** | All **refund** types for **recon** |
-| **CA** or **CMA** certificate | When the **RFD-01** row requires it |
-| **LUT** or **IGST-** path + **RFD-01** set | **SEZ** and **export** where law maps that way |
-
-## Fees (indicative, professional, excl. GST 18%)
-
-| Service | Band (₹) |
-|---------|----------|
-| Simple **RFD-01,** one **quarter** | 5,000 – 15,000 |
-| **FIRC-** heavy B2B service export, one **RFD-01** | 10,000 – 30,000+ |
-| Ongoing support with **BRC** and **FIRC-** tranches | 8,000 – 25,000+ |
-| High turnover, multi-**year** and litigation-grade | 25,000 – 1,00,000+ |
-| **Government** to **file** **RFD-01** on portal | **Nil** (TDS and **net-** of **refund** as **per** **law** **where** **applies**) |
+The time limit for claiming a GST refund is 2 years from the "relevant date" (which varies by refund category ,  e.g., date of export for export refunds, end of financial year for ITC refunds). Timely filing is critical ,  missed deadlines are generally not condoned.
 
 ## Applicability
 
-Registered persons with an eligible excess in the electronic cash or credit **ledger,** or unutilized **ITC** in a **notified** **RFD-01** class, where **GSTR-1, 3B,** and **2B** (and any **BRC-**gated data) support the story for the year and **periods** in the application.
+GST refund filing is relevant for: Exporters of goods: Who paid IGST on export shipping bills and want IGST refund Exporters of services: Who exported under LUT and have accumulated ITC Manufacturers with inverted duty structure: Inputs taxed at higher GST rate than the finished product (e.g., textile manufacturers where fabrics are taxed at 12% but readymade garments are taxed at 5%) SEZ suppliers: Suppliers to SEZ units and developers with accumulated ITC Businesses with excess cash in GST ledger: Due to excess advance tax payment or inadvertent deposits Buyers under deemed export: Recipient of supplies made under Section 147 of the CGST Act Applicable pan-India ,  all GST-registered taxpayers across all states and UTs who have a valid refund claim can file RFD-01 on the GST portal.
 
-## Common mistakes (short)
+## Features
 
-- **Wrong** **RFD-01** sub-type: unutilized **ITC** *versus* **IGST** on **goods,** and similar category splits.
-- **BRC-**mismatch: **GSTR-1** and **3B** do not match **BRC** and **FIRC**-class realisation and export lines.
-- Filing the claim after the time limit the Act applies, without a valid extension or **adjudication**-class story.
+Online filing via RFD-01: All refund claims are filed through Form RFD-01 on the GST portal ,  no physical filing required for most categories Provisional refund: For export refunds, 90% of the claim is provisionally refunded within 7 working days of acknowledgement ,  the balance after final processing Processing timeline: Full processing of the refund application should be completed within 60 days of the date of filing the complete application Interest on delayed refund: If the refund is not processed within 60 days, the government must pay interest at 6% p.a. on the delayed amount (Section 56) Refund on shipping bill (for IGST export refunds): IGST refunds on goods exports are processed through a linkage between the GST portal and ICEGATE (Customs) ,  refunds are often credited directly without a manual RFD-01 for this category Statement of invoices: The refund application must be accompanied by a Statement of Invoices (Annex B or Statement 3A/3B as applicable) ,  invoice-wise details of the claim CA certification (for large claims): Refund claims above ₹2 lakh for ITC refund (non-export) categories require a certificate from a Chartered Accountant or Cost Accountant
+
+## Benefits
+
+Working capital recovery: GST refunds ,  particularly ITC refund for exporters and inverted duty refund for manufacturers ,  can represent significant cash flow recovery, directly improving working capital Business viability for affected sectors: Inverted duty structure refunds are lifelines for sectors like textiles, footwear, and fertiliser manufacturers ,  without refunds, accumulated ITC creates a permanent cost that erodes margins Zero effective tax on exports: Combination of LUT filing + ITC refund ensures Indian exporters effectively bear zero GST cost on their exports ,  keeping them competitive globally Automated IGST refund for goods exporters: IGST paid on export shipping bills is refunded automatically through the ICEGATE-GSTN data linkage ,  with minimal manual intervention, directly to the exporter's bank account Interest on delayed refunds: If the GST department delays refund processing beyond 60 days, the taxpayer is entitled to interest at 6% p.a. ,  this provides a legal remedy for bureaucratic delays
+
+## Documents
+
+Document Refund Category Form RFD-01 (online) All categories Statement of invoices (Annex B / Statement 3A/3B) Export and ITC refund Copy of GSTR-1 and GSTR-3B (relevant periods) All categories Shipping bills / bill of export Export refund categories FIRC / BRC from bank Service export ITC refund CA certificate (for claims above ₹2 lakh ,  non-export) ITC refund (non-export categories) LUT ARN For export under LUT category Purchase invoices (input invoices) For ITC refund claims Bank account details (pre-validated on portal) For refund credit RCM invoices If RCM ITC is part of refund claim
+
+## Process
+
+Step 1 ,  Identify Refund Category Determine the applicable refund category under Section 54 ,  export IGST, LUT ITC refund, inverted duty, or excess cash. Each category has different procedures and statement formats. Step 2 ,  Data Compilation Compile all relevant invoices, shipping bills, FIRC, and GSTR data for the refund period. Reconcile ITC claimed in GSTR-3B with GSTR-2B for the refund period. Step 3 ,  Compute Refund Amount For ITC refund under LUT route: apply the formula ,  (Turnover of zero-rated supply / Adjusted total turnover) × Net ITC for the period. For inverted duty: (Net ITC × Turnover of inverted rated supply / Adjusted total turnover) minus tax paid on inverted supplies. Step 4 ,  File RFD-01 on GST Portal Log in to the GST portal. Go to Refunds → Application for Refund → Select Category → Select period → Fill Form RFD-01 with computed refund amount and upload required documents. Step 5 ,  Acknowledgement (RFD-02) The GST portal acknowledges the refund application with Form RFD-02 containing the ARN. The 60-day processing clock starts from the date of RFD-02. Step 6 ,  Deficiency Memo (RFD-03) ,  if issued If documents are incomplete or the application has deficiencies, the officer issues RFD-03 within 15 days. Resubmit the corrected application within the prescribed period. Step 7 ,  Provisional Refund (RFD-04) ,  for exports For export categories, the officer issues a provisional refund order (RFD-04) for 90% of the claim within 7 working days. Step 8 ,  Final Order and Credit (RFD-06) The officer issues the final refund order (RFD-06) for the balance amount. The refund is credited directly to the pre-validated bank account linked to the GSTIN.
+
+Fees Service Government Fee GST Refund Application (RFD-01) Nil
+
+## Professional Service
+
+Estimated Fee Export IGST refund filing ₹3,000 – ₹8,000 per application LUT ITC refund filing ₹5,000 – ₹15,000 per application Inverted duty refund filing ₹8,000 – ₹25,000 Refund claim above ₹50 lakh (complex) ₹20,000 – ₹75,000 Refund tracking and follow-up ₹3,000 – ₹8,000 Refund rejection response / appeal ₹10,000 – ₹35,000
+
+Professional fees exclusive of GST @18%.
+
+Compliance File refund within 2 years of the relevant date ,  no extension is available All GSTR-1 and GSTR-3B for the refund period must be filed before filing RFD-01 Pre-validate the bank account on the GST portal before filing refund ,  refunds are credited only to the pre-validated bank account Respond to deficiency memos (RFD-03) promptly ,  delays in response restart the processing timeline Maintain all refund application records and correspondence with GST authorities for 6 years
+
+## Common Mistakes
+
+Filing refund for a period where GSTR-3B has not been filed: RFD-01 cannot be filed if there are pending GSTR-3B returns for the refund period Incorrect refund formula application: Using the wrong denominator (adjusted total turnover vs. total turnover) in the ITC refund formula leads to under or over-claiming Not pre-validating bank account: Refund is credited only to a pre-validated bank account ,  failing to pre-validate causes the refund amount to sit in a "withheld" state Missing 2-year deadline: Particularly common for inverted duty refunds where the entitlement accumulates over multiple months ,  businesses sometimes miss the 2-year deadline for earlier periods Including blocked ITC in refund claim: Claiming refund of ITC that is blocked under Section 17(5) ,  such claims are rejected and may attract scrutiny
 
 ## Frequently asked questions
 
-**We have remittance and **BRC,** but **2B** is low. Can we file **RFD-01?** Improve **2B,** **vendor** compliance, and **3B** **ITC** with your **CA;** a claim on a weak **2B** and **3B** line carries **BRC-**mismatch and **DRC-** class **risk.**
-
-**RFD-01** is **provisional.** How long until **final?** Timelines vary with **BRC,** case load, and how deep **FIRC-**tied work goes; your adviser tracks the portal order and any review rounds the department runs.
-
-**Inverted duty: do we file one **RFD-01** or several?** Follow the **inverted** duty / **ITC** rule and the portal category in force; your **CA** usually **bundles** **periods** in one **RFD-01** where the **law** and **form** allow, with **BOM-** or **cost** **certs** if the department **asks.**
-
-*All service content is for informational purposes. Specific GST advice should be obtained from qualified practitioners based on your business facts, transactions, and the law in force.*
+1. Our export IGST refund has been pending for 4 months without any update. What should we do? First, check the status of your refund application on the GST portal ,  the ARN (RFD-02) status will show whether it is pending with the officer, has a deficiency memo issued, or is at the payment stage. If the status shows "Pending with officer" for more than 60 days from the date of RFD-02, the government is liable to pay interest at 6% p.a. on the delayed amount under Section 56 of the CGST Act. File a grievance on the GST portal's grievance redressal mechanism and send a written representation to the jurisdictional GST Commissionerate. If still unresolved, escalate to the Commissioner and ultimately consider filing a writ petition before the High Court ,  courts have been consistently protective of taxpayer refund rights. 2. We have ₹25 lakh accumulated ITC from exports under LUT. Can we use this ITC to pay our GST liability instead of claiming a refund? Yes. Accumulated ITC in the Electronic Credit Ledger can be used to offset any future GST liability (output tax) ,  CGST credit for CGST/IGST liability, SGST credit for SGST/IGST, and IGST credit for any GST liability. Using accumulated export ITC to offset future domestic GST liabilities is perfectly valid and avoids the refund application process. However, if the business is predominantly an exporter with minimal domestic supplies, there will be limited output tax to offset ,  making the refund claim route the only practical option for recovering the ITC. 3. What is the inverted duty structure refund and which industries benefit most from it? Inverted duty structure occurs when the GST rate on inputs (purchases) is higher than the GST rate on outputs (sales/finished goods). The accumulated ITC (because input tax exceeds output tax) cannot be fully utilised against output tax ,  leading to a permanent ITC balance. This is refundable under Section 54(3)(ii) of the CGST Act. Industries with significant inverted duty structure include: textiles (fabric at 12%, garments at 5%), footwear (materials at 12-18%, footwear below ₹1000 at 5%), construction materials, agricultural pumps, and certain engineering goods. Manufacturers in these sectors should proactively file quarterly inverted duty refund claims to avoid ITC getting stuck. 4. We received an RFD-03 (deficiency memo) on our refund application. What happens to our 2-year filing deadline? When an RFD-03 deficiency memo is issued, the original RFD-01 application is effectively rejected ,  and the taxpayer must file a fresh application with the deficiencies corrected. The 2-year limitation period continues to run from the original relevant date ,  receiving a deficiency memo does not pause or extend the 2-year deadline. This means if your original application was close to the 2-year deadline, and you receive an RFD-03, you must file the corrected application quickly to remain within the limitation period. Always file refund claims well in advance of the 2-year deadline to allow time for deficiency correction. 5. Can a composition scheme dealer claim a GST refund? Composition scheme dealers are not eligible for Input Tax Credit and therefore cannot claim ITC-based refunds. The only refund available to a composition dealer would be in the rare scenario of tax paid in excess (e.g., due to computation error) or tax paid on transactions later determined to be exempt. Composition dealers making exports are in a peculiar position ,  they cannot use LUT or claim ITC refunds, making the export model financially unviable for most composition scheme businesses. Businesses planning to export significantly should consider switching to the regular GST scheme.

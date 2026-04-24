@@ -53,7 +53,7 @@ const NEW_PUBLIC = {
 function loadMd(id) {
   const f = path.join(BATCH_DIR, `${id}.md`);
   if (!fs.existsSync(f)) throw new Error(`Missing ${f}`);
-  return fs.readFileSync(f, 'utf8').replace(/\r\n/g, '\n').trim() + '\n';
+  return fs.readFileSync(f, 'utf8').replace(/\r\n/g, '\n').replace(/\u2014/g, ', ').trim() + '\n';
 }
 
 function patch() {

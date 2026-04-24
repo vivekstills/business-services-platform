@@ -1,76 +1,54 @@
+# Private Limited Company Annual Compliance
+
 ## Overview
 
-A Private Limited Company is the most preferred business structure in India, governed by the Companies Act, 2013. It has a separate legal identity, limited liability, and perpetual succession. It comes with extensive annual compliance: board meetings, AGMs, statutory audit, MCA filings, and income tax filings. These are non-negotiable irrespective of turnover.
+A Private Limited Company is the most preferred business structure in India, governed by the Companies Act, 2013. It enjoys a separate legal identity, limited liability, and perpetual succession. However, it comes with extensive annual compliance requirements including board meetings, AGMs, statutory audit, MCA filings, and income tax filings ,  all of which are non-negotiable irrespective of turnover.
 
 ## Applicability
 
-Annual compliance applies to every private limited company registered across India. It applies equally to operational, startup, and dormant companies.
+Annual compliance applies to every private limited company registered across India ,  Maharashtra, Karnataka, Delhi NCR, Tamil Nadu, Telangana, Gujarat, West Bengal, Haryana, Uttar Pradesh, Kerala, Andhra Pradesh, Rajasthan, Punjab, Madhya Pradesh, Odisha, Bihar, Jharkhand, and all Union Territories. It applies equally to operational, startup, and dormant companies.
 
-## Key features
+## Compliance Requirements
 
-| Theme | What it covers |
-| --- | --- |
-| Governance | First board meeting, minimum 4 board meetings per year, AGM |
-| MCA | AOC-4, MGT-7, ADT-1, DPT-3, MSME-1 where applicable |
-| Directors | DIR-3 KYC, DSC discipline |
-| Tax | ITR-6, tax audit by September 30 where applicable |
-
-## Compliance requirements
-
-| Compliance | Form | Authority | Due date |
+| Compliance | Form | Authority | Due Date |
 | --- | --- | --- | --- |
-| First board meeting | N/A | Internal | Within 30 days of incorporation |
-| Board meetings | Minutes | Internal | Min 4 per year (120-day gap) |
+| First Board Meeting | N/A | Internal | Within 30 days of incorporation |
+| Board Meetings | Minutes | Internal | Min 4/year (120-day gap) |
 | Annual General Meeting | Minutes | Internal | Within 6 months of FY end |
-| Financial statements | AOC-4 | MCA | Within 30 days of AGM |
-| Annual return | MGT-7 | MCA | Within 60 days of AGM |
+| Financial Statements | AOC-4 | MCA | Within 30 days of AGM |
+| Annual Return | MGT-7 | MCA | Within 60 days of AGM |
 | Director KYC | DIR-3 KYC | MCA | September 30 |
-| Auditor appointment | ADT-1 | MCA | Within 15 days of AGM |
-| Deposits return | DPT-3 | MCA | June 30 |
+| Auditor Appointment | ADT-1 | MCA | Within 15 days of AGM |
+| DPT-3 (Deposits) | DPT-3 | MCA | June 30 |
 | MSME-1 | MSME-1 | MCA | Half-yearly |
-| Income tax return | ITR-6 | IT Dept | October 31 |
-| Tax audit | 3CA-3CD | IT Dept | September 30 |
+| Income Tax Return | ITR-6 | IT Dept | October 31 |
+| Tax Audit | 3CA-3CD | IT Dept | September 30 |
 
 ## Benefits
 
-- Credibility with banks, investors, and customers
-- Reduces risk of heavy penalties and director disqualification
-- Smoother fundraising, M&A, and exit options
-- Protects limited liability status of shareholders
+Staying compliant helps private limited companies maintain credibility with banks, investors, and customers, avoid heavy penalties, prevent director disqualification, raise funding smoothly, and facilitate mergers, acquisitions, or exits. Compliance also safeguards the limited liability status of shareholders.
 
-> [!WARNING] Dormant companies
-> Even dormant private limited companies must file AOC-4 and MGT-7. You may consider dormant status under Section 455 for reduced requirements where eligible.
+## Penalties / Risks
 
-## Penalties and risks
-
-| Non-compliance | Penalty |
+| Non-Compliance | Penalty |
 | --- | --- |
-| AOC-4 / MGT-7 delay | Rs. 100 per day (no cap) |
-| Non-holding of AGM | Rs. 1 lakh + Rs. 5,000 per day |
+| AOC-4 / MGT-7 delay | Rs. 100/day (no cap) |
+| Non-holding of AGM | Rs. 1 lakh + Rs. 5,000/day |
 | Director KYC default | Rs. 5,000 + DIN deactivation |
 | Auditor appointment default | Rs. 25,000 to Rs. 5 lakh |
-| ITR default | 1% interest per month + penalty up to Rs. 10,000 |
-| Continued default | Director disqualification, strike off |
+| Continuous default | Director disqualification for 5 years |
+| Non-filing for 2+ years | Company strike off |
+| ITR default | 1% interest/month + penalty up to Rs. 10,000 |
 
-## Documents required
+## Documents Required
 
-| Category | Examples |
-| --- | --- |
-| Incorporation | COI, MOA, AOA, PAN, TAN |
-| Financials | Books, invoices, bank statements, financial statements |
-| Tax | GST, TDS challans, prior ITR |
-| Corporate | Shareholder list, board resolutions, minutes, auditor report |
-| Signatures | DSC of directors |
+Certificate of Incorporation, MOA, AOA, PAN, TAN, bank statements, books of accounts, sales and purchase invoices, TDS challans, GST returns, list of shareholders, board resolutions, minutes of meetings, auditor's report, financial statements, DSC of directors, and previous year ITR.
 
-## Process and timeline
+## Process / Timeline
 
-1. Close books and complete statutory audit.
-2. Hold AGM within 6 months of FY end (by September 30 for March year-end).
-3. File ADT-1 within 15 days of AGM, AOC-4 within 30 days, MGT-7 within 60 days of AGM.
-4. File ITR-6 by October 31 and tax audit by September 30 if applicable.
-5. File DPT-3 by June 30; MSME-1 on half-yearly dates.
+The year begins with closing books, preparing financials, and getting them audited. An AGM is held within 6 months of the FY end (by September 30). ADT-1 is filed within 15 days of the AGM. AOC-4 is filed within 30 days of AGM, and MGT-7 within 60 days. ITR-6 is filed by October 31 for audit cases.
 
-## Government fees (indicative)
+## Government Fees
 
 | Form | Fee |
 | --- | --- |
@@ -79,41 +57,31 @@ Annual compliance applies to every private limited company registered across Ind
 | ADT-1 | Rs. 200 to Rs. 600 |
 | DIR-3 KYC | Nil (if on time) |
 | DPT-3 | Rs. 200 to Rs. 600 |
-| Late filing | Rs. 100 per day |
+| Late filing | Rs. 100/day |
 
-## Compliance calendar (typical)
+## Compliance Calendar
 
-| When | Activity |
+| Month | Activity |
 | --- | --- |
-| April | Q4 board meeting, close books |
+| April | Board meeting Q4, close books |
 | April 30 | MSME-1 (Oct-Mar) |
-| June 30 | DPT-3 |
-| July | Q1 board meeting |
-| September 30 | AGM, tax audit, DIR-3 KYC |
-| October 14 | ADT-1 (illustrative) |
-| October 29 | AOC-4 (illustrative) |
+| June 30 | DPT-3 Return |
+| July | Q1 Board meeting |
+| September 30 | AGM, Tax Audit, DIR-3 KYC |
+| October 14 | ADT-1 |
+| October 29 | AOC-4 |
 | October 30 | MSME-1 (Apr-Sep) |
 | October 31 | ITR-6 |
-| November 29 | MGT-7 (illustrative) |
+| November 29 | MGT-7 |
 
-## Frequently asked questions
+## FAQs
 
-### Q1. Is compliance required for a dormant private limited company?
+**Q1. Is compliance required for a dormant private limited company?** Yes, every private limited company must file AOC-4 and MGT-7 annually. However, they may apply for Dormant Status under Section 455 for reduced compliance.
 
-Yes, every private limited company must file AOC-4 and MGT-7 annually. Dormant status under Section 455 may reduce requirements where approved.
+**Q2. Can the same auditor continue every year?** An individual auditor can serve for one term of 5 consecutive years, and an audit firm for two terms of 5 years each, after which mandatory rotation applies.
 
-### Q2. Can the same auditor continue every year?
+**Q3. What is DPT-3 and who must file it?** DPT-3 is a return of deposits filed annually by every company (other than government companies) to report money received from sources other than share capital, due by June 30.
 
-An individual auditor can serve one term of 5 consecutive years, and an audit firm two terms of 5 years each, after which rotation may apply. Confirm at appointment time.
+**Q4. Is digital signature mandatory for all directors?** Yes, every director must have a valid DSC to sign MCA filings. It must be renewed before expiry to avoid disruption in compliance.
 
-### Q3. What is DPT-3 and who must file it?
-
-DPT-3 reports deposits / amounts received other than share capital, due by June 30 for most companies, subject to law.
-
-### Q4. Is digital signature mandatory for all directors?
-
-Yes, every director should hold a valid DSC for MCA filings; renew before expiry.
-
-### Q5. What happens if directors miss DIR-3 KYC?
-
-DIN is deactivated, Rs. 5,000 fee may apply to reactivate, and the director cannot sign filings while deactivated.
+**Q5. What happens if directors miss DIR-3 KYC?** The Director Identification Number (DIN) is deactivated, and a Rs. 5,000 penalty must be paid to reactivate it. A director cannot sign filings during deactivation.

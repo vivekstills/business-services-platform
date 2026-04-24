@@ -1,85 +1,57 @@
-# Legal entity identifier (LEI code)
+# Legal Entity Identifier (lei Code)
 
 ## Overview
 
-A Legal Entity Identifier (LEI) is a 20-character alphanumeric code that identifies a legal entity in financial and regulatory use. The global LEI system was strengthened after the 2008 financial crisis to make counterparty and group exposure more transparent. The Global Legal Entity Identifier Foundation (GLEIF) hosts the public database. In India, the Reserve Bank of India (RBI) has mandated the LEI for a growing set of products and message types: large credit from banks, certain derivatives and G-Sec markets, high-value NEFT/RTGS in ranges notified by the RBI, and more. SEBI also references LEI for several market participants. Indian entities typically obtain a LEI from LEIL, the local operating unit promoted by the Clearing Corporation of India (see the LEIL portal). Natural persons in their personal capacity do not take an LEI; the code is for legal persons (companies, LLPs, trusts with corporate characteristics in scope, and similar).
+A Legal Entity Identifier (LEI) is a unique 20-character alphanumeric code that identifies legal entities participating in financial transactions globally. It is analogous to a PAN for individuals but designed for legal entities engaged in financial markets. The LEI system is a global standard established by the G20 and the Financial Stability Board (FSB) following the 2008 global financial crisis ,  with the aim of improving transparency and risk management in the global financial system by uniquely identifying every party to every financial transaction. In India, the LEI system is administered by the Reserve Bank of India (RBI) in alignment with the Global LEI System (GLEIS) managed by the Global Legal Entity Identifier Foundation (GLEIF) headquartered in Basel, Switzerland. The LEI code is issued by Local Operating Units (LOUs) ,  accredited issuers recognised by GLEIF. In India, the primary LOU is the Legal Entity Identifier India Ltd. (LEIL), promoted by The Clearing Corporation of India Ltd. (CCIL). RBI has made LEI mandatory for increasing categories of entities and transactions: Large corporate borrowers (credit facilities above ₹5 crore from banks) Participants in OTC derivatives markets (interest rate, currency, credit derivatives) Participants in the RTGS and NEFT payment systems above prescribed thresholds Non-individual participants in government securities markets Large-value transactions in financial markets
 
-## Key features
+## Features
 
-- 18-character payload plus two check digits, unique worldwide in the GLEIF database.
-- Public reference name, address, and legal form; Level 2 data for parent and group links where filled.
-- Annual renewal: the LEI is “Lapsed” in the GLEIF public file if you do not pay and confirm data in time, and some regulated transactions are blocked in that state.
-- LEIL is a common first stop for an Indian company’s new LEI and renewal, subject to the live RBI list of approved LOUs for your use case.
-- The LEI is not a substitute for PAN, CIN, or GST, but is an extra global identity tag for the financial system.
+Globally unique: Each LEI code is unique worldwide ,  no two entities can have the same LEI 20-character code: Structured as 18 alphanumeric characters + 2 check digits Reference data: Each LEI is linked to a set of reference data ,  legal name, registered address, legal form, country of incorporation, registration authority, and ownership/parent information (Level 2 data) Annual renewal mandatory: LEI codes must be renewed annually; lapsed LEIs (marked "Lapsed" in the GLEIF database) cannot be used for regulated transactions GLEIF public database: All LEI codes and their reference data are publicly searchable on the GLEIF website (gleif.org) ,  promoting transparency Local issuance: In India, LEI is obtained from LEIL (leil.in) which is the RBI-designated LOU Relationship data (Level 2): GLEIF's Level 2 data captures the ownership/control hierarchy ,  who owns whom ,  providing a complete picture of a legal entity's corporate group
 
 ## Benefits
 
-- Meet RBI, SEBI, and depository/ clearing rules that name LEI, so the bank, CCIL, and exchange systems can file your side of the deal.
-- Faster counterparty and group checking for banks and for large corporate treasuries.
-- Trade finance, correspondent bank, and some export invoice flows now ask for LEI in the chain.
-- One LEI per legal entity, then Level 2 links your holding structure for exposure limits.
+Regulatory compliance: LEI is mandatory for OTC derivatives reporting, large RTGS/NEFT transactions, government securities transactions, and corporate borrowers above ₹5 crore ,  non-compliance means inability to execute these transactions Financial market access: Without an LEI, entities cannot participate in regulated financial markets, execute large-value bank transfers, or access borrowing facilities from banks (for large borrowers) Global counterparty identification: In cross-border financial transactions, LEI enables instant, verified identification of counterparties ,  reducing counterparty risk and due diligence time Transparency and trust: An active, current LEI signals to counterparties, regulators, and investors that the entity is legitimate, transparent, and compliant ,  a mark of institutional credibility Trade finance: International trade finance platforms, correspondent banking, and supply chain finance systems increasingly use LEI for entity identification ,  LEI holders have faster access to trade finance instruments Risk management: Banks and financial institutions use LEI data to aggregate exposure to corporate groups ,  entities with LEI enable banks to better manage systemic risk, potentially facilitating better credit terms Regulatory reporting: The RBI, SEBI, and IRDAI use LEI data for regulatory reporting, systemic risk monitoring, and enforcement ,  entities with current LEI face smoother regulatory interactions
 
 ## Limitations
 
-- Annual cost and a strict renewal calendar; a lapsed LEI is often unusable in regulated product until reactivated, and that gap is a compliance risk.
-- Level 2 parent data in complex groups is easy to get wrong; errors can hit bank exposure and reporting.
-- Individuals and sole props without a separate legal person file under other KYC, not an LEI.
-- Some domestic-only MSMEs never touch a product that needs LEI; they can ignore the code until the bank or market asks.
-
-## Process
-
-1. Open an account on the LEIL or other approved LOU portal you use, with company email and mobile.
-2. Enter legal name, English address, CIN, LLPIN, or other incorporation id, and PAN, as the form needs.
-3. Upload incorporation, PAN, address proof, and constitutional files for Indian companies, as the LOU’s checklist says.
-4. Add Level 2: immediate parent, ultimate parent, and their LEI if they already have one; if not, full legal reference as GLEIF rules allow.
-5. Pay the registration fee online.
-6. The LOU validates; queries are common in large groups. On success, the GLEIF record goes live with status Active.
-7. On each annual renewal, confirm or update data, pay, and keep status Active. Set reminders 60 to 90 days before the anniversary.
-
-## Documents required (typical)
-
-| Document | Notes |
-|----------|--------|
-| Certificate of incorporation, LLP agreement, or trust/ society certificate | Proves the legal person |
-| PAN, GST, address proof, bank proof | KYC and address |
-| MoA, AoA, or equivalent | If the LOU or bank asks in border cases |
-| CIN, LLPIN, or foreign reg number | Global LEI need |
-| Parent CoI, parent LEI, and group map | For Level 2, where parents exist |
-| List of board or partners | If needed for the LOU’s file |
-
-## Fees (indicative)
-
-| Service | LEIL (approx., includes GST) |
-|--------|----------------------------------|
-| New LEI | ₹4,000 – ₹5,000 |
-| Annual renewal | ₹3,000 – ₹4,000 |
-
-| Professional (est.) | Fee |
-|---------------------|-----|
-| New LEI file | ₹2,000 – ₹5,000 |
-| Level 2 and group support | ₹2,000 – ₹4,000 |
-| Ongoing renewals | ₹1,500 – ₹3,000 |
-
-LEIL and LOU list prices move; use the site at application time. Professional fees are often plus GST if they are advisory only.
+Annual renewal required: LEI codes lapse if not renewed annually ,  a lapsed LEI cannot be used for regulated transactions, causing potential disruption Cost of renewal: Annual renewal fees, while modest, are a recurring cost ,  and the consequences of non-renewal (inability to transact) are disproportionate Level 2 data complexity: Populating and maintaining accurate ownership/parent data (Level 2) can be complex for entities within multi-layered corporate groups Restricted to legal entities: Individuals cannot obtain LEI codes ,  only legally constituted entities (companies, LLPs, banks, insurance companies, funds, trusts with legal personality, etc.) Limited domestic utility beyond regulated transactions: For entities not engaged in large-value financial transactions or financial markets, LEI may appear to have limited day-to-day utility ,  though its applicability is expanding GLEIF data accuracy: The GLEIF public database is only as accurate as the data submitted by the LEI holder ,  entities must proactively update reference data when there are changes (name, address, ownership)
 
 ## Applicability
 
-Banks, NBFCs, large borrowers, FPI and AIF style entities, listed companies in certain filings, and large-value payment and security market use cases, as the RBI, SEBI, and the exchange circulars in force for your date. Pan-India: any incorporated entity in scope can get an LEI through an approved path.
+RBI mandates LEI for: Category LEI Requirement Large corporate borrowers Credit facilities ≥ ₹5 crore from banks/NBFCs OTC derivatives participants All non-individual entities in interest rate, FX, and credit derivatives markets Government securities market All non-individual participants in G-Sec markets Large RTGS/NEFT transactions Transactions above ₹50 crore (both originator and beneficiary) Non-individual borrowers All entities with aggregate fund-based and non-fund-based credit ≥ ₹25 crore
+
+SEBI also mandates LEI for: Listed entities for certain regulatory filings Alternative Investment Funds (AIFs), Portfolio Management Services (PMS), and FPIs Applicable across all states and UTs in India ,  any Indian legal entity falling within RBI/SEBI's LEI mandate must obtain the code regardless of the state of incorporation.
+
+## Documents Required
+
+| Document | Details |
+| --- | --- |
+| Certificate of Incorporation / Registration | Legal entity existence proof |
+| PAN card of the entity | Corporate PAN |
+| GST Registration Certificate | GSTIN |
+| Registered address proof | Electricity bill, lease agreement, or registered document |
+| MoA and AoA (for companies) / LLP Agreement | Constitutional documents |
+| List of directors / designated partners | With DIN/DPIN |
+| Bank account details | For verification purposes |
+| CIN / LLPIN | Company or LLP identification number |
+| Ownership/parent entity details (Level 2) | For entities with parent companies ,  parent LEI or parent entity details |
+
+## Process
+
+Step 1 ,  Visit LEIL Portal Go to leil.in ,  the official LEI issuer for India operated by CCIL. Register an account. Step 2 ,  Application Form Complete the LEI application form with entity details ,  legal name, registered address, legal form, country of incorporation, registration authority, CIN/LLPIN, PAN. Step 3 ,  Document Upload Upload all required documents ,  Incorporation Certificate, PAN, address proof, constitutional documents. Step 4 ,  Level 2 Data Submission Provide ownership hierarchy data ,  immediate parent, ultimate parent (if applicable) ,  with their LEI codes (if they have LEIs). If parent entities do not have LEIs, provide their registration details. Step 5 ,  Fee Payment Pay the LEI registration fee online. Step 6 ,  LEIL Verification LEIL verifies the submitted documents and reference data. Queries or additional document requests may be raised. Step 7 ,  LEI Code Issuance Upon successful verification, LEIL issues the 20-character LEI code. The code and reference data are published on the GLEIF database and are publicly searchable. Step 8 ,  Annual Renewal Renew the LEI annually on the LEIL portal before the expiry date. Update reference data if there are any changes in legal name, address, or ownership structure.
+
+Fees Service LEIL Fee (Approx.) LEI Registration (new) ₹4,000 – ₹5,000 Annual Renewal ₹3,000 – ₹4,000
+
+## Professional Service
+
+Estimated Fee LEI registration assistance ₹2,000 – ₹5,000 Level 2 data preparation ₹2,000 – ₹4,000 Annual renewal management ₹1,500 – ₹3,000
+
+LEIL fees include GST. Professional fees exclusive of GST @18%.
 
 ## Validity
 
-One year from issue or from last successful renewal, in the GLEIF model. “Active” in the GLEIF search is the standard test before a bank or exchange uses the LEI. Lapsed is fixable on payment, but the gap in between can block transactions and cause breach of mandate.
+LEI codes are valid for 1 year from the date of issuance or last renewal. Annual renewal is mandatory ,  codes that are not renewed become "Lapsed" in the GLEIF database and cannot be used for regulated transactions. Entities must renew before the expiry date to maintain "Active" status. A lapsed code can be renewed (it doesn't permanently disappear) but the period of lapse constitutes non-compliance with RBI/SEBI mandates.
 
 ## Frequently asked questions
 
-**Is an LEI needed for a ₹1 crore overdraft?** The RBI’s threshold and product list (credit five crore and above, non-individual 25-crore rule, and other notices) is what matters, not a random small loan. Check the current RBI list for your year and the bank’s product policy.
-
-**Can a person get an LEI?** The usual LEI is for a legal person. A sole firm as a person is not in scope; a company, LLP, or trust with legal form in the GLEIF schema can be, when the use case is financial market or RBI driven.
-
-**Foreign parent, what do we add?** Put the US or other parent in Level 2 with their LEI if they have one; if not, full legal and registration data as GLEIF allows, so the tree is complete and bank exposure is right.
-
-**We forgot renewal; what now?** Pay renewal and any late fee on the LOU site, update the file, and wait for GLEIF to return Active. Do not use a Lapsed LEI for a new regulated trade before it is Active.
-
-**Group of five: five LEIs?** Yes, one for each legal entity in the file; Level 2 links the tree.
-
-*All content is for informational purposes. Specific government registration, tax, and compliance advice should be obtained from qualified professionals based on your entity’s circumstances, state, and business activities.*
+1. Is LEI mandatory for all companies borrowing from banks, regardless of loan amount? No. LEI is mandatory for companies (and other legal entities) with aggregate fund-based and non-fund-based credit facilities of ₹5 crore or more from any bank or NBFC. Companies with total credit below ₹5 crore are not currently mandated to obtain LEI. However, the RBI has progressively lowered the threshold over the years ,  businesses with growing credit requirements should proactively obtain LEI in anticipation of future mandate expansion. Many banks also request LEI as a best practice KYC measure even below the mandatory threshold. 2. Can an individual proprietorship get an LEI code? LEI codes are issued to legal entities ,  companies, LLPs, registered partnerships, trusts, banks, and similar legally constituted entities. An individual sole proprietor (who is not a separately registered legal entity) is not eligible for an LEI code. If the business operates through a legal entity (e.g., a One Person Company or a registered partnership), that entity can obtain LEI. For large-value financial transactions by individuals, banks use other identification mechanisms (PAN, Aadhaar). 3. We are a subsidiary of a foreign parent company. What Level 2 data do we need to provide? Level 2 data for an Indian subsidiary requires: (a) details of the immediate parent entity ,  legal name, country, registration number, and LEI code (if the parent has one); (b) details of the ultimate parent entity (if different from immediate parent) ,  same information. If your foreign parent already has an LEI (which many large multinationals do), you simply provide their LEI code. If your parent does not have an LEI, you provide their registration authority details and legal form. Accurate Level 2 data is essential for the GLEIF database to map corporate ownership networks correctly. 4. What happens if our LEI lapses (expires without renewal)? If an LEI lapses, the GLEIF database marks it as "Lapsed." Regulated financial transactions (OTC derivatives, large RTGS/NEFT, government securities) cannot be executed with a lapsed LEI ,  your bank or financial counterparty will reject the transaction. Lapsed LEIs can be renewed by paying the renewal fee and updating reference data ,  but the gap period constitutes regulatory non-compliance. RBI has the authority to take regulatory action against entities that violate LEI mandates. Set automated reminders 60–90 days before LEI expiry to ensure timely renewal. 5. Does every entity in a corporate group need its own LEI code? Yes. LEI codes are entity-specific ,  each legal entity in a group requires its own LEI, even if they are wholly owned subsidiaries of the same parent. The LEI system is designed to identify each individual legal entity separately. Level 2 data then links the entities within a group through parent-child relationships. So if a corporate group has 5 Indian subsidiaries, each subsidiary needs its own LEI code. However, the parent entity's LEI (if it has one) is referenced in each subsidiary's Level 2 data, creating the group map.
