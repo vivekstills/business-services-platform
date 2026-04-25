@@ -1,6 +1,83 @@
 import webDesigningAbout from './service-about/web-designing.md?raw';
 import seoServicesAbout from './service-about/seo-services.md?raw';
 import mobileAppDevelopmentAbout from './service-about/mobile-app-development.md?raw';
+import legalAnnualIndianSubsidiary from './service-about/legal-annual/indian-subsidiary-annual-compliance.md?raw';
+import legalAnnualLlp from './service-about/legal-annual/llp-annual-compliance.md?raw';
+import legalAnnualOpc from './service-about/legal-annual/opc-annual-compliance.md?raw';
+import legalAnnualPartnership from './service-about/legal-annual/partnership-annual-compliance.md?raw';
+import legalAnnualPrivateLtd from './service-about/legal-annual/private-ltd-annual-compliance.md?raw';
+import legalAnnualPublicLtd from './service-about/legal-annual/public-limited-annual-compliance.md?raw';
+import legalAnnualProprietorship from './service-about/legal-annual/proprietorship-annual-compliance.md?raw';
+import legalAnnualSection8 from './service-about/legal-annual/section-8-annual-compliance.md?raw';
+import brHuf from './service-about/business-reg-batch2/huf-registration.md?raw';
+import brIndianSubForeign from './service-about/business-reg-batch2/indian-subsidiary-foreign-company.md?raw';
+import brLlp from './service-about/business-reg-batch2/llp-registration.md?raw';
+import brLogo from './service-about/business-reg-batch2/logo-designing.md?raw';
+import brNidhi from './service-about/business-reg-batch2/nidhi-company.md?raw';
+import brOpc from './service-about/business-reg-batch2/one-person-company.md?raw';
+import brPartnership from './service-about/business-reg-batch2/partnership-registration.md?raw';
+import brPvtLtd from './service-about/business-reg-batch2/private-limited-company.md?raw';
+import brProducer from './service-about/business-reg-batch2/producer-company.md?raw';
+import brPublicLtd from './service-about/business-reg-batch2/public-limited-company.md?raw';
+import brSec8 from './service-about/business-reg-batch2/section-8-company.md?raw';
+import brSociety from './service-about/business-reg-batch2/society-registration.md?raw';
+import brTrust from './service-about/business-reg-batch2/trust-registration.md?raw';
+import convLlpToCompany from './service-about/business-conv-batch3/llp-to-company.md?raw';
+import convOpcToPrivate from './service-about/business-conv-batch3/opc-to-private-limited.md?raw';
+import convOpcToPublic from './service-about/business-conv-batch3/opc-to-public-limited.md?raw';
+import convPartnershipToCompany from './service-about/business-conv-batch3/partnership-to-company.md?raw';
+import convPartnershipToLlp from './service-about/business-conv-batch3/partnership-to-llp.md?raw';
+import convPrivateToOpc from './service-about/business-conv-batch3/private-to-opc.md?raw';
+import convPrivateToPublic from './service-about/business-conv-batch3/private-to-public-company.md?raw';
+import convProprietorshipToOpc from './service-about/business-conv-batch3/proprietorship-to-opc.md?raw';
+import convProprietorshipToPartnership from './service-about/business-conv-batch3/proprietorship-to-partnership.md?raw';
+import convPublicToPrivate from './service-about/business-conv-batch3/public-to-private-company.md?raw';
+
+/** Legal & corporate annual compliance — full copy; overrides JSON/API short blurbs. */
+const LEGAL_ANNUAL_COMPLIANCE_ABOUT: Record<string, string> = {
+  'indian-subsidiary-annual-compliance': legalAnnualIndianSubsidiary,
+  'llp-annual-compliance': legalAnnualLlp,
+  'opc-annual-compliance': legalAnnualOpc,
+  'partnership-annual-compliance': legalAnnualPartnership,
+  'private-ltd-annual-compliance': legalAnnualPrivateLtd,
+  'public-limited-annual-compliance': legalAnnualPublicLtd,
+  'proprietorship-annual-compliance': legalAnnualProprietorship,
+  'section-8-annual-compliance': legalAnnualSection8,
+};
+
+/** Business registrations batch (FORM NEW BUSINESS / NGO) — long-form about copy. */
+const BUSINESS_REG_BATCH2_ABOUT: Record<string, string> = {
+  'huf-registration': brHuf,
+  'indian-subsidiary-foreign-company': brIndianSubForeign,
+  'indian-subsidiary': brIndianSubForeign,
+  'llp': brLlp,
+  'llp-registration': brLlp,
+  'logo-designing': brLogo,
+  'nidhi-company': brNidhi,
+  'one-person-company': brOpc,
+  'partnership-registration': brPartnership,
+  'private-limited-company': brPvtLtd,
+  'producer-company': brProducer,
+  'public-limited-company': brPublicLtd,
+  'section-8-company': brSec8,
+  'society-registration': brSociety,
+  'trust-registration': brTrust,
+};
+
+/** Business conversions (BATCH 3) — long-form about copy; last spread wins. */
+const BUSINESS_CONV_BATCH3_ABOUT: Record<string, string> = {
+  'llp-to-company': convLlpToCompany,
+  'opc-to-private-limited': convOpcToPrivate,
+  'opc-to-public-limited': convOpcToPublic,
+  'partnership-to-company': convPartnershipToCompany,
+  'partnership-to-llp': convPartnershipToLlp,
+  'private-to-opc': convPrivateToOpc,
+  'private-to-public-company': convPrivateToPublic,
+  'proprietorship-to-opc': convProprietorshipToOpc,
+  'proprietorship-to-partnership': convProprietorshipToPartnership,
+  'public-to-private-company': convPublicToPrivate,
+};
+
 /**
  * Long-form, SEO-friendly "About this service" markdown content keyed by
  * service id. Rendered via <RichContent /> on the service page when present.
@@ -16,6 +93,15 @@ import mobileAppDevelopmentAbout from './service-about/mobile-app-development.md
  *   > x  → blockquote
  *   ## Frequently asked questions  → the following **Question?** answer paragraphs
  *         become an interactive accordion (one paragraph per Q, bold lead).
+ *
+ *   ## Documents (Required / List)  → always use a **markdown bullet list** (`- item`),
+ *         e.g. `- **Name** — purpose` — not a comma paragraph or a document table,
+ *         so the UI renders a clear checklist.
+ *
+ *   **Government Fees / one section = one GFM table** — Do not stack two `| a | b |`
+ *         tables in the same section. The first table can incorrectly absorb the
+ *         second header as a data row, leaving the rest as raw `|` text. Merge
+ *         all rows into a single `| Item | Fee |` (or one consistent header pair).
  *
  * Keys are `Service.id`. Content here overrides the default `content` on the
  * matching service in `SERVICES` at module load time (see services.ts).
@@ -19719,6 +19805,9 @@ Professional Tax is levied only in certain states and union territories.
 
 Professional Tax Registration in India is a mandatory state-level compliance requirement for individuals and businesses engaged in income-generating activities. It ensures structured tax collection at the state level, payroll compliance for employers, and legal recognition for professionals, making it an essential component of India's indirect tax and employment compliance system.`,
 
+  ...LEGAL_ANNUAL_COMPLIANCE_ABOUT,
+  ...BUSINESS_REG_BATCH2_ABOUT,
+  ...BUSINESS_CONV_BATCH3_ABOUT,
 };
 
 /**

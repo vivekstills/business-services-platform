@@ -1886,6 +1886,24 @@ export const SERVICES: Service[] = [
     ]
   },
   {
+    id: 'public-limited-annual-compliance',
+    name: 'Public Limited Company Annual Compliance',
+    mainHead: 'LEGAL COMPLIANCE',
+    categoryId: 'legal-compliance',
+    shortDescription:
+      'Board, AGM, MCA, SEBI (listed), audit committee, and ITR compliances for public companies.',
+    content:
+      'We support annual compliance for public limited companies including enhanced disclosures, committee meetings, MCA and SEBI filings, and coordinated tax reporting.',
+    packages: [
+      {
+        name: 'Custom',
+        price: 'On request',
+        description:
+          'Scoped to listing status, paid-up capital, and subsidiary footprint.'
+      }
+    ]
+  },
+  {
     id: 'indian-subsidiary-annual-compliance',
     name: 'Indian Subsidiary Annual Compliance',
     mainHead: 'LEGAL COMPLIANCE',

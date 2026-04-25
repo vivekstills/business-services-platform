@@ -9,6 +9,7 @@ import PaymentModal from '../components/PaymentModal';
 import RichContent from '../components/RichContent';
 import PricingFeatureText from '../components/PricingFeatureText';
 import { isRichMarkdown } from '../data/serviceAboutContent';
+import { BUSINESS_CONV_BATCH3_SERVICE_IDS } from '../data/businessConvBatch3ServiceIds';
 import { parsePriceToAmount } from '../utils/price';
 import {
   INDIAN_STATES,
@@ -474,7 +475,14 @@ export default function ServiceLeadHero({ service }: Props) {
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">About this page</h2>
         {isRichMarkdown(service.content) ? (
           <div className="bg-white rounded-xl border border-gray-200/80 px-5 sm:px-8 py-6 sm:py-8">
-            <RichContent content={service.content} stripLeadingH1 variant="service" />
+            <RichContent
+              content={service.content}
+              stripLeadingH1
+              variant="service"
+              contentPreset={
+                BUSINESS_CONV_BATCH3_SERVICE_IDS.has(service.id) ? 'business-conv-batch-3' : undefined
+              }
+            />
           </div>
         ) : (
           <div className="space-y-4 max-w-none">

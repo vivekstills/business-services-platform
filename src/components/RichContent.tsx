@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Info, AlertTriangle, Lightbulb, Sparkles, ChevronDown } from 'lucide-react';
+import { Info, AlertTriangle, Lightbulb, Sparkles, ChevronDown, FileText } from 'lucide-react';
 
 type Props = {
   content: string;
@@ -18,6 +18,11 @@ type Props = {
    * Other pages (articles, policies, admin) use `default` to preserve existing layout.
    */
   variant?: 'default' | 'service';
+  /**
+   * Optional layout preset for long-form service markdown (e.g. business conversion batch).
+   * Only applied with `variant="service"`.
+   */
+  contentPreset?: 'business-conv-batch-3';
 };
 
 type CalloutVariant = 'default' | 'note' | 'tip' | 'warn' | 'important';
@@ -206,13 +211,62 @@ function parseBlocks(raw: string): Block[] {
   return blocks;
 }
 
-/** Match `## FAQ`, `## FAQs`, `## Frequently asked questions`, with optional `N)` prefix. */
-const FAQ_H2 = /\bfaqs?\b|frequently asked questions/i;
+/**
+ * Section titles that should become FAQ accordions. Many pages use
+ * "FAQs on …", "Common questions", "Q & A" instead of "Frequently asked questions".
+ */
+const FAQ_H2 =
+  /\b(?:faqs?|frequently asked questions|common questions|questions?\s+and\s+answers?|q\s*&\s*a)\b/i;
 
 /**
- * After an FAQ H2, turn consecutive `**Question**` answer paragraphs into an
- * accordion. Merges following plain paragraphs into the same answer until the
- * next `**…**` question or H1/H2. Stops on tables, lists, or non-para blocks.
+ * `Q1. First question? Answer text Q2. Second question? …` in one or more paragraphs.
+ */
+function splitRunOnNumberedFaq(text: string): { q: string; a: string }[] {
+  const t = text.trim();
+  if (!/Q[0-9]+\./i.test(t)) return [];
+  const parts = t
+    .split(/(?=Q[0-9]+\.\s)/i)
+    .map((p) => p.trim())
+    .filter((p) => p.length);
+  return parts
+    .map((part) => parseOneNumberedFaqChunk(part))
+    .filter((x): x is { q: string; a: string } => x !== null);
+}
+
+function parseOneNumberedFaqChunk(chunk: string): { q: string; a: string } | null {
+  const m = chunk.match(/^Q[0-9]+\.\s*([\s\S]+)$/i);
+  if (!m) return null;
+  const body = m[1].trim();
+  const qIdx = body.indexOf('?');
+  if (qIdx !== -1 && qIdx <= 500) {
+    return { q: body.slice(0, qIdx + 1).trim(), a: body.slice(qIdx + 1).trim() };
+  }
+  const firstSentence = body.search(/[.?:]\s+/);
+  if (firstSentence !== -1 && firstSentence < 320) {
+    return {
+      q: body.slice(0, firstSentence + 1).trim(),
+      a: body.slice(firstSentence + 1).trim(),
+    };
+  }
+  if (body.length) {
+    return { q: body.slice(0, Math.min(160, body.length)).trim(), a: body.slice(Math.min(160, body.length)).trim() };
+  }
+  return null;
+}
+
+function tryParseFaqListItem(item: string): { q: string; a: string } | null {
+  const t = item.trim();
+  const bold = t.match(/^\*\*(.+?)\*\*\s*([\s\S]*)$/);
+  if (bold) return { q: bold[1].trim(), a: bold[2].trim() };
+  const qn = t.match(/^Q[0-9]+\.\s+([^\?]+\?)\s*([\s\S]*)$/i);
+  if (qn) return { q: qn[1].trim(), a: qn[2].trim() };
+  return null;
+}
+
+/**
+ * After an FAQ H2, collect: `**Q**` paragraphs, run-on `Q1./Q2.` blocks, and
+ * ul/ol whose items look like Q&A. Stops at the next H1/H2 or a block that
+ * cannot be interpreted as part of the FAQ.
  */
 function extractFaqAccordion(blocks: Block[]): Block[] {
   const out: Block[] = [];
@@ -226,12 +280,25 @@ function extractFaqAccordion(blocks: Block[]): Block[] {
       while (i < blocks.length) {
         const n = blocks[i];
         if (n.type === 'h2' || n.type === 'h1') break;
+
+        if (n.type === 'ul' || n.type === 'ol') {
+          const parsed = n.items.map(tryParseFaqListItem);
+          if (parsed.length && parsed.every((x) => x !== null)) {
+            for (const p of parsed) if (p) items.push(p);
+            i++;
+            continue;
+          }
+          break;
+        }
+
         if (n.type !== 'p') break;
+
         const t = n.text.trim();
         if (t === '---' || t === '***' || t === '___') {
           i++;
           continue;
         }
+
         const m = t.match(/^\*\*(.+?)\*\*\s*([\s\S]*)$/);
         if (m) {
           let a = m[2].trim();
@@ -241,10 +308,18 @@ function extractFaqAccordion(blocks: Block[]): Block[] {
             if (nb.type !== 'p') break;
             const t2 = nb.text.trim();
             if (/^\*\*(.+?)\*\*/.test(t2)) break;
+            if (splitRunOnNumberedFaq(t2).length > 0) break;
             if (t2) a = a ? `${a}\n\n${t2}` : t2;
             i++;
           }
           items.push({ q: m[1].trim(), a });
+          continue;
+        }
+
+        const run = splitRunOnNumberedFaq(t);
+        if (run.length) {
+          items.push(...run);
+          i++;
           continue;
         }
         break;
@@ -625,7 +700,12 @@ const DataTable: React.FC<DataTableProps> = ({ headers, rows }) => {
   );
 };
 
-type BlockRenderCtx = { variant: 'default' | 'service' };
+type BlockRenderCtx = {
+  variant: 'default' | 'service';
+  contentPreset?: 'business-conv-batch-3';
+  /** Normalized H2 label for the current section (when inside an H2 segment). */
+  sectionHeading?: string;
+};
 
 const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRenderCtx }> = ({
   block,
@@ -694,7 +774,91 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
         </p>
       );
 
-    case 'ul':
+    case 'ul': {
+      const preset = ctx.contentPreset;
+      const sh = (ctx.sectionHeading ?? '').trim();
+      const glassBenefits =
+        ctx.variant === 'service' && preset === 'business-conv-batch-3' && /^benefits$/i.test(sh);
+      const glassLimitations =
+        ctx.variant === 'service' && preset === 'business-conv-batch-3' && /^limitations$/i.test(sh);
+      const glassDocuments =
+        ctx.variant === 'service' && preset === 'business-conv-batch-3' && /^documents$/i.test(sh);
+
+      if (glassBenefits) {
+        return (
+          <ul
+            className="mt-2.5 grid list-none grid-cols-1 gap-3 pl-0 sm:grid-cols-2 lg:grid-cols-3"
+            role="list"
+          >
+            {block.items.map((item, j) => (
+              <li
+                key={j}
+                className="flex items-start gap-3 rounded-2xl border border-slate-200/70 bg-white/50 p-4 shadow-[0_8px_30px_-12px_rgba(15,23,42,0.12)] ring-1 ring-white/60 backdrop-blur-md"
+              >
+                <span
+                  className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-sky-500/15 text-sky-700"
+                  aria-hidden
+                >
+                  <Sparkles className="h-4 w-4" strokeWidth={2} />
+                </span>
+                <span className="min-w-0 text-[16px] leading-relaxed text-gray-800 sm:text-[17px]">
+                  {parseInline(item)}
+                </span>
+              </li>
+            ))}
+          </ul>
+        );
+      }
+      if (glassLimitations) {
+        return (
+          <ul
+            className="mt-2.5 grid list-none grid-cols-1 gap-3 pl-0 sm:grid-cols-2 lg:grid-cols-3"
+            role="list"
+          >
+            {block.items.map((item, j) => (
+              <li
+                key={j}
+                className="flex items-start gap-3 rounded-2xl border border-amber-200/80 bg-amber-50/35 p-4 shadow-[0_8px_30px_-12px_rgba(180,83,9,0.1)] ring-1 ring-amber-100/50 backdrop-blur-md"
+              >
+                <span
+                  className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-amber-500/15 text-amber-800"
+                  aria-hidden
+                >
+                  <AlertTriangle className="h-4 w-4" strokeWidth={2} />
+                </span>
+                <span className="min-w-0 text-[16px] leading-relaxed text-gray-800 sm:text-[17px]">
+                  {parseInline(item)}
+                </span>
+              </li>
+            ))}
+          </ul>
+        );
+      }
+      if (glassDocuments) {
+        return (
+          <ul
+            className="mt-2.5 grid list-none grid-cols-1 gap-3 pl-0 sm:grid-cols-2"
+            role="list"
+          >
+            {block.items.map((item, j) => (
+              <li
+                key={j}
+                className="flex items-start gap-3 rounded-2xl border border-slate-200/70 bg-slate-50/40 p-4 shadow-sm ring-1 ring-slate-100/60 backdrop-blur-sm"
+              >
+                <span
+                  className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-slate-600/10 text-slate-700"
+                  aria-hidden
+                >
+                  <FileText className="h-4 w-4" strokeWidth={2} />
+                </span>
+                <span className="min-w-0 text-[16px] leading-relaxed text-gray-800 sm:text-[17px]">
+                  {parseInline(item)}
+                </span>
+              </li>
+            ))}
+          </ul>
+        );
+      }
       return (
         <ul className="mt-2.5 space-y-1">
           {block.items.map((item, j) => (
@@ -705,6 +869,7 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
           ))}
         </ul>
       );
+    }
 
     case 'ol': {
       if (variant === 'service') {
@@ -781,6 +946,7 @@ export default function RichContent({
   showToc = true,
   stripLeadingH1 = false,
   variant: variantProp = 'default',
+  contentPreset,
 }: Props) {
   const processed = useMemo(() => {
     const safe = (content ?? '').replace(/\r\n/g, '\n');
@@ -820,7 +986,7 @@ export default function RichContent({
   }
 
   const displayToc = showToc && toc.length >= 3;
-  const blockCtx: BlockRenderCtx = { variant: variantProp };
+  const blockCtx: BlockRenderCtx = { variant: variantProp, contentPreset };
   const segments = variantProp === 'service' ? segmentByH2(blocks) : null;
 
   if (variantProp === 'service' && segments) {
@@ -843,6 +1009,8 @@ export default function RichContent({
                 </div>
               );
             }
+            const { rest: sectionHeading } = extractSectionNum(seg.h2.text);
+            const ctxInSection: BlockRenderCtx = { ...blockCtx, sectionHeading };
             return (
               <section
                 key={seg.h2.id}
@@ -856,7 +1024,7 @@ export default function RichContent({
                     key={`${seg.h2.id}-b${j}`}
                     block={b}
                     h2InSection={false}
-                    ctx={blockCtx}
+                    ctx={ctxInSection}
                   />
                 ))}
               </section>
