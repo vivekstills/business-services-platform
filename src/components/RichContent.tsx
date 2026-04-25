@@ -85,6 +85,39 @@ function isTableSeparator(line: string): boolean {
   return cells.every((c) => /^:?-{2,}:?$/.test(c));
 }
 
+function indexOfNextNonEmptyLine(lines: string[], from: number): number {
+  let j = from;
+  while (j < lines.length && !lines[j].trim()) j++;
+  return j;
+}
+
+/**
+ * GFM table where header, separator, and/or data rows are separated by blank
+ * lines (common in generated / pasted service copy). Returns null if this line
+ * is not a table header row.
+ */
+function tryParseGfmTable(
+  lines: string[],
+  start: number
+): { end: number; headers: string[]; rows: string[][] } | null {
+  const t0 = lines[start].trim();
+  if (!t0.startsWith('|') || !t0.endsWith('|') || isTableSeparator(t0)) return null;
+  const sepIdx = indexOfNextNonEmptyLine(lines, start + 1);
+  if (sepIdx >= lines.length || !isTableSeparator(lines[sepIdx])) return null;
+  const headers = splitTableRow(t0);
+  let i = sepIdx + 1;
+  const rows: string[][] = [];
+  while (i < lines.length) {
+    i = indexOfNextNonEmptyLine(lines, i);
+    if (i >= lines.length) break;
+    const row = lines[i].trim();
+    if (!row.startsWith('|') || !row.endsWith('|') || isTableSeparator(row)) break;
+    rows.push(splitTableRow(row));
+    i++;
+  }
+  return { end: i, headers, rows };
+}
+
 function parseBlocks(raw: string): Block[] {
   const lines = raw.split('\n');
   const blocks: Block[] = [];
@@ -94,6 +127,12 @@ function parseBlocks(raw: string): Block[] {
     if (!trimmed) { i++; continue; }
     if (trimmed === '---' || trimmed === '***' || trimmed === '___') {
       i++;
+      continue;
+    }
+    const gfmTable = tryParseGfmTable(lines, i);
+    if (gfmTable) {
+      i = gfmTable.end;
+      blocks.push({ type: 'table', headers: gfmTable.headers, rows: gfmTable.rows });
       continue;
     }
     if (trimmed.startsWith('## ')) {
@@ -110,24 +149,6 @@ function parseBlocks(raw: string): Block[] {
     } else if (trimmed.startsWith('# ')) {
       blocks.push({ type: 'h1', text: trimmed.slice(2).trim() });
       i++;
-    } else if (
-      trimmed.startsWith('|') &&
-      trimmed.endsWith('|') &&
-      i + 1 < lines.length &&
-      isTableSeparator(lines[i + 1])
-    ) {
-      // GFM pipe table: header row, separator row, then data rows until a
-      // non-pipe line.
-      const headers = splitTableRow(trimmed);
-      i += 2; // skip header + separator
-      const rows: string[][] = [];
-      while (i < lines.length) {
-        const next = lines[i].trim();
-        if (!next.startsWith('|') || !next.endsWith('|')) break;
-        rows.push(splitTableRow(next));
-        i++;
-      }
-      blocks.push({ type: 'table', headers, rows });
     } else if (trimmed.startsWith('> ')) {
       const bqLines: string[] = [];
       while (i < lines.length && lines[i].trim().startsWith('> ')) {
@@ -185,12 +206,13 @@ function parseBlocks(raw: string): Block[] {
   return blocks;
 }
 
-const FAQ_H2 = /frequently asked questions/i;
+/** Match `## FAQ`, `## FAQs`, `## Frequently asked questions`, with optional `N)` prefix. */
+const FAQ_H2 = /\bfaqs?\b|frequently asked questions/i;
 
 /**
- * After `## Frequently asked questions`, turn consecutive paragraphs of the form
- * `**Question?**` Answer… into a single interactive FAQ block. Stops at the next
- * H2, a non-matching paragraph (e.g. disclaimer), or other block type.
+ * After an FAQ H2, turn consecutive `**Question**` answer paragraphs into an
+ * accordion. Merges following plain paragraphs into the same answer until the
+ * next `**…**` question or H1/H2. Stops on tables, lists, or non-para blocks.
  */
 function extractFaqAccordion(blocks: Block[]): Block[] {
   const out: Block[] = [];
@@ -204,19 +226,26 @@ function extractFaqAccordion(blocks: Block[]): Block[] {
       while (i < blocks.length) {
         const n = blocks[i];
         if (n.type === 'h2' || n.type === 'h1') break;
-        if (n.type === 'p') {
-          const t = n.text.trim();
-          if (t === '---' || t === '***' || t === '___') {
+        if (n.type !== 'p') break;
+        const t = n.text.trim();
+        if (t === '---' || t === '***' || t === '___') {
+          i++;
+          continue;
+        }
+        const m = t.match(/^\*\*(.+?)\*\*\s*([\s\S]*)$/);
+        if (m) {
+          let a = m[2].trim();
+          i++;
+          while (i < blocks.length) {
+            const nb = blocks[i];
+            if (nb.type !== 'p') break;
+            const t2 = nb.text.trim();
+            if (/^\*\*(.+?)\*\*/.test(t2)) break;
+            if (t2) a = a ? `${a}\n\n${t2}` : t2;
             i++;
-            continue;
           }
-          const m = t.match(/^\*\*(.+?)\*\*\s*([\s\S]*)$/);
-          if (m) {
-            items.push({ q: m[1].trim(), a: m[2].trim() });
-            i++;
-            continue;
-          }
-          break;
+          items.push({ q: m[1].trim(), a });
+          continue;
         }
         break;
       }
@@ -529,7 +558,17 @@ const FaqAccordion: React.FC<{ items: { q: string; a: string }[] }> = ({ items }
           </span>
         </summary>
         <div className="px-4 pb-4 pl-[3.25rem] sm:pl-14 text-[16px] sm:text-[18px] text-gray-700 leading-relaxed border-t border-gray-100/80 pt-3 -mt-0.5">
-          {item.a ? <p>{parseInline(item.a)}</p> : null}
+          {item.a
+            ? item.a
+                .split(/\n\n+/)
+                .map((c) => c.trim())
+                .filter(Boolean)
+                .map((chunk, pi) => (
+                  <p key={pi} className={pi > 0 ? 'mt-3' : undefined}>
+                    {parseInline(chunk)}
+                  </p>
+                ))
+            : null}
         </div>
       </details>
     ))}
@@ -537,16 +576,22 @@ const FaqAccordion: React.FC<{ items: { q: string; a: string }[] }> = ({ items }
 );
 
 const DataTable: React.FC<DataTableProps> = ({ headers, rows }) => {
+  const h0 = (headers[0] ?? '').trim();
+  const firstColIsIndex = /^#$/i.test(h0) || /^s\.?\s*no\.?$/i.test(h0) || /^no\.?$/i.test(h0);
   return (
     <div className="my-5 rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
       <div className="overflow-x-auto">
-        <table className="w-full border-collapse text-[15px]">
+        <table className="w-full min-w-[min(100%,480px)] border-collapse text-[15px]">
           <thead>
             <tr className="bg-gradient-to-r from-slate-50 to-gray-50 border-b border-gray-200">
               {headers.map((h, i) => (
                 <th
                   key={i}
-                  className="text-left font-semibold text-gray-800 px-4 py-3 whitespace-nowrap"
+                  className={`px-4 py-3 font-semibold text-gray-800 ${
+                    firstColIsIndex && i === 0
+                      ? 'w-14 min-w-[3.25rem] text-center text-[13px] text-gray-500'
+                      : 'text-left whitespace-nowrap'
+                  }`}
                 >
                   {parseInline(h)}
                 </th>
@@ -562,7 +607,11 @@ const DataTable: React.FC<DataTableProps> = ({ headers, rows }) => {
                 {row.map((cell, cIdx) => (
                   <td
                     key={cIdx}
-                    className="align-top px-4 py-3 text-gray-700 leading-relaxed"
+                    className={`align-top px-4 py-3 text-gray-700 leading-relaxed ${
+                      firstColIsIndex && cIdx === 0
+                        ? 'w-14 min-w-[3.25rem] text-center tabular-nums text-gray-600 font-medium'
+                        : ''
+                    }`}
                   >
                     {parseInline(cell)}
                   </td>
