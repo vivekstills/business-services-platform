@@ -13,6 +13,11 @@ type Props = {
    * showing raw `#` in the browser. Default false (admin preview shows full text).
    */
   stripLeadingH1?: boolean;
+  /**
+   * `service`: grouped H2 sections in cards, stronger ordered-list (step) visuals.
+   * Other pages (articles, policies, admin) use `default` to preserve existing layout.
+   */
+  variant?: 'default' | 'service';
 };
 
 type CalloutVariant = 'default' | 'note' | 'tip' | 'warn' | 'important';
@@ -237,6 +242,41 @@ function buildToc(blocks: Block[]): TocItem[] {
       const { num, rest } = extractSectionNum(b.text);
       return { id: b.id, num, label: rest };
     });
+}
+
+type Segment =
+  | { type: 'intro'; blocks: Block[] }
+  | { type: 'h2section'; h2: Extract<Block, { type: 'h2' }>; blocks: Block[] };
+
+/**
+ * Splits the flat block list into a leading "intro" (if any) and one segment per
+ * H2+body. Preserves top-to-bottom order; does not merge or drop blocks.
+ */
+function segmentByH2(blocks: Block[]): Segment[] {
+  const segs: Segment[] = [];
+  let intro: Block[] = [];
+  let i = 0;
+  while (i < blocks.length) {
+    const b = blocks[i];
+    if (b.type === 'h2') {
+      if (intro.length) {
+        segs.push({ type: 'intro', blocks: intro });
+        intro = [];
+      }
+      i++;
+      const body: Block[] = [];
+      while (i < blocks.length && blocks[i].type !== 'h2') {
+        body.push(blocks[i]);
+        i++;
+      }
+      segs.push({ type: 'h2section', h2: b, blocks: body });
+    } else {
+      intro.push(b);
+      i++;
+    }
+  }
+  if (intro.length) segs.push({ type: 'intro', blocks: intro });
+  return segs;
 }
 
 /**
@@ -536,11 +576,162 @@ const DataTable: React.FC<DataTableProps> = ({ headers, rows }) => {
   );
 };
 
+type BlockRenderCtx = { variant: 'default' | 'service' };
+
+const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRenderCtx }> = ({
+  block,
+  h2InSection,
+  ctx,
+}) => {
+  const { variant } = ctx;
+  const defaultList = 'mt-2.5 space-y-3';
+
+  switch (block.type) {
+    case 'h1':
+      return (
+        <h1 className="text-[1.75rem] sm:text-[2rem] font-bold text-gray-900 leading-tight tracking-tight mt-2 mb-4">
+          {parseInline(block.text)}
+        </h1>
+      );
+
+    case 'faq':
+      return <FaqAccordion items={block.items} />;
+
+    case 'h2': {
+      const { rest } = extractSectionNum(block.text);
+      if (h2InSection) {
+        return (
+          <h2
+            id={`${block.id}-heading`}
+            className="text-[26px] font-bold text-gray-900 leading-snug pb-2.5 border-b border-gray-200/80 mt-0 mb-4"
+          >
+            {parseInline(rest)}
+          </h2>
+        );
+      }
+      return (
+        <div id={block.id} className="mt-8 mb-3 first:mt-0 scroll-mt-[120px]">
+          <h2 className="text-[26px] font-bold text-gray-900 leading-snug pb-2.5 border-b border-gray-200">
+            {parseInline(rest)}
+          </h2>
+        </div>
+      );
+    }
+
+    case 'h3':
+      return (
+        <h3 className="mt-4 mb-1.5 text-[20px] font-semibold text-gray-800">
+          {parseInline(block.text)}
+        </h3>
+      );
+
+    case 'h4':
+      return (
+        <h4 className="mt-3 mb-1 text-[15px] font-semibold text-gray-600">
+          {parseInline(block.text)}
+        </h4>
+      );
+
+    case 'blockquote':
+      return <Callout variant={block.variant} title={block.title} lines={block.lines} />;
+
+    case 'table':
+      return <DataTable headers={block.headers} rows={block.rows} />;
+
+    case 'p':
+      return (
+        <p className="mt-2.5 text-[18px] text-gray-700 leading-[1.75]">
+          {parseInline(block.text)}
+        </p>
+      );
+
+    case 'ul':
+      return (
+        <ul className="mt-2.5 space-y-1">
+          {block.items.map((item, j) => (
+            <li key={j} className="flex items-start gap-2.5 text-[18px] text-gray-700 leading-[1.35]">
+              <span className="mt-[0.55em] w-1.5 h-1.5 rounded-full bg-gray-400 flex-shrink-0" />
+              <span>{parseInline(item)}</span>
+            </li>
+          ))}
+        </ul>
+      );
+
+    case 'ol': {
+      if (variant === 'service') {
+        return (
+          <ol className="mt-2.5 list-none space-y-3 pl-0">
+            {block.items.map((item, j) => {
+              const dashIdx = item.indexOf(' — ');
+              const hasTitle = dashIdx !== -1;
+              const title = hasTitle ? item.slice(0, dashIdx) : null;
+              const desc = hasTitle ? item.slice(dashIdx + 3) : item;
+              return (
+                <li
+                  key={j}
+                  className="flex items-start gap-3 rounded-xl border border-gray-200/80 bg-gradient-to-b from-white to-slate-50/40 p-3.5 sm:p-4 shadow-sm ring-1 ring-gray-100/40"
+                >
+                  <span
+                    className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-600 text-[12px] font-bold text-white shadow-sm"
+                    aria-hidden
+                  >
+                    {j + 1}
+                  </span>
+                  <div className="min-w-0 text-[16px] leading-relaxed text-gray-700 sm:text-[17px]">
+                    {hasTitle && title ? (
+                      <>
+                        <span className="font-semibold text-gray-900">{parseInline(title)}</span>
+                        {desc ? (
+                          <>
+                            <span className="text-gray-500"> — </span>
+                            {parseInline(desc)}
+                          </>
+                        ) : null}
+                      </>
+                    ) : (
+                      parseInline(item)
+                    )}
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
+        );
+      }
+      return (
+        <ol className={defaultList}>
+          {block.items.map((item, j) => {
+            const dashIdx = item.indexOf(' — ');
+            const hasTitle = dashIdx !== -1;
+            const title = hasTitle ? item.slice(0, dashIdx) : null;
+            const desc = hasTitle ? item.slice(dashIdx + 3) : item;
+            return (
+              <li key={j} className="flex items-start gap-3">
+                <span className="mt-[0.25em] flex h-[20px] w-[20px] flex-shrink-0 items-center justify-center rounded-full border border-gray-200 bg-gray-100 text-[11px] font-bold text-gray-500">
+                  {j + 1}
+                </span>
+                <span className="min-w-0 text-[18px] leading-[1.35] text-gray-700">
+                  {hasTitle && title ? (
+                    <><strong className="font-semibold text-gray-900">{parseInline(title)}</strong>{' — '}{parseInline(desc)}</>
+                  ) : (
+                    parseInline(item)
+                  )}
+                </span>
+              </li>
+            );
+          })}
+        </ol>
+      );
+    }
+  }
+};
+
 export default function RichContent({
   content,
   className = '',
   showToc = true,
   stripLeadingH1 = false,
+  variant: variantProp = 'default',
 }: Props) {
   const processed = useMemo(() => {
     const safe = (content ?? '').replace(/\r\n/g, '\n');
@@ -580,104 +771,59 @@ export default function RichContent({
   }
 
   const displayToc = showToc && toc.length >= 3;
+  const blockCtx: BlockRenderCtx = { variant: variantProp };
+  const segments = variantProp === 'service' ? segmentByH2(blocks) : null;
+
+  if (variantProp === 'service' && segments) {
+    return (
+      <div className={className}>
+        {displayToc && <TableOfContents items={toc} />}
+        <div className="space-y-6 sm:space-y-7">
+          {segments.map((seg, segIdx) => {
+            if (seg.type === 'intro') {
+              return (
+                <div key={`intro-${segIdx}`}>
+                  {seg.blocks.map((b, j) => (
+                    <RichBlock
+                      key={`intro-${segIdx}-b${j}`}
+                      block={b}
+                      h2InSection={false}
+                      ctx={blockCtx}
+                    />
+                  ))}
+                </div>
+              );
+            }
+            return (
+              <section
+                key={seg.h2.id}
+                id={seg.h2.id}
+                className="scroll-mt-[120px] rounded-2xl border border-gray-200/70 bg-gradient-to-b from-white to-slate-50/30 p-4 sm:p-6 shadow-sm ring-1 ring-gray-100/50"
+                aria-labelledby={`${seg.h2.id}-heading`}
+              >
+                <RichBlock key={`${seg.h2.id}-h2`} block={seg.h2} h2InSection ctx={blockCtx} />
+                {seg.blocks.map((b, j) => (
+                  <RichBlock
+                    key={`${seg.h2.id}-b${j}`}
+                    block={b}
+                    h2InSection={false}
+                    ctx={blockCtx}
+                  />
+                ))}
+              </section>
+            );
+          })}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={className}>
       {displayToc && <TableOfContents items={toc} />}
-      {blocks.map((block, i) => {
-        switch (block.type) {
-          case 'h1':
-            return (
-              <h1 key={i} className="text-[1.75rem] sm:text-[2rem] font-bold text-gray-900 leading-tight tracking-tight mt-2 mb-4">
-                {parseInline(block.text)}
-              </h1>
-            );
-
-          case 'faq':
-            return <FaqAccordion key={i} items={block.items} />;
-
-          case 'h2': {
-            const { rest } = extractSectionNum(block.text);
-            return (
-              <div key={i} id={block.id} className="mt-8 mb-3 first:mt-0 scroll-mt-[120px]">
-                <h2 className="text-[26px] font-bold text-gray-900 leading-snug pb-2.5 border-b border-gray-200">
-                  {parseInline(rest)}
-                </h2>
-              </div>
-            );
-          }
-
-          case 'h3':
-            return (
-              <h3 key={i} className="mt-4 mb-1.5 text-[20px] font-semibold text-gray-800">
-                {parseInline(block.text)}
-              </h3>
-            );
-
-          case 'h4':
-            return (
-              <p key={i} className="mt-3 mb-1 text-[15px] font-semibold text-gray-600">
-                {parseInline(block.text)}
-              </p>
-            );
-
-          case 'blockquote':
-            return (
-              <Callout
-                key={i}
-                variant={block.variant}
-                title={block.title}
-                lines={block.lines}
-              />
-            );
-
-          case 'table':
-            return <DataTable key={i} headers={block.headers} rows={block.rows} />;
-
-          case 'p':
-            return (
-              <p key={i} className="mt-2.5 text-[18px] text-gray-700 leading-[1.75]">
-                {parseInline(block.text)}
-              </p>
-            );
-
-          case 'ul':
-            return (
-              <ul key={i} className="mt-2.5 space-y-1">
-                {block.items.map((item, j) => (
-                  <li key={j} className="flex items-start gap-2.5 text-[18px] text-gray-700 leading-[1.35]">
-                    <span className="mt-[0.55em] w-1.5 h-1.5 rounded-full bg-gray-400 flex-shrink-0" />
-                    <span>{parseInline(item)}</span>
-                  </li>
-                ))}
-              </ul>
-            );
-
-          case 'ol':
-            return (
-              <ol key={i} className="mt-2.5 space-y-3">
-                {block.items.map((item, j) => {
-                  const dashIdx = item.indexOf(' — ');
-                  const hasTitle = dashIdx !== -1;
-                  const title = hasTitle ? item.slice(0, dashIdx) : null;
-                  const desc = hasTitle ? item.slice(dashIdx + 3) : item;
-                  return (
-                    <li key={j} className="flex items-start gap-3">
-                      <span className="mt-[0.25em] w-[20px] h-[20px] rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center text-[11px] font-bold text-gray-500 flex-shrink-0">
-                        {j + 1}
-                      </span>
-                      <span className="text-[18px] text-gray-700 leading-[1.35]">
-                        {hasTitle && title ? (
-                          <><strong className="font-semibold text-gray-900">{parseInline(title)}</strong>{' — '}{parseInline(desc)}</>
-                        ) : parseInline(item)}
-                      </span>
-                    </li>
-                  );
-                })}
-              </ol>
-            );
-        }
-      })}
+      {blocks.map((block, i) => (
+        <RichBlock key={i} block={block} h2InSection={false} ctx={blockCtx} />
+      ))}
     </div>
   );
 }

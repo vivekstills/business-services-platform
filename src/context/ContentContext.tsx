@@ -6,7 +6,7 @@ import FAQS from '../data/faqs';
 import { CONTACT_EMAIL, CONTACT_PHONE } from '../data/constants';
 import type { Service } from '../data/services';
 import { defaultPolicyPages } from '../data/policyPageDefaults';
-import { isRichMarkdown } from '../data/serviceAboutContent';
+import { isRichMarkdown, SERVICE_ABOUT_CONTENT } from '../data/serviceAboutContent';
 
 const defaultContent: Content = {
   hero: {
@@ -266,6 +266,27 @@ function unionCodeDefinedServices(merged: Content): Content {
  * When the API did return a non-empty `services` array, trust that payload and only
  * overlay public where the merged service still has non-rich or empty content.
  */
+/**
+ * `defaultContent` + `data/content.json` (and API) merge replaces the
+ * `services` array. That snapshot often ships stale, paragraph-style
+ * "About" strings that have already been restructured in code under
+ * `SERVICE_ABOUT_CONTENT` (including `*.md?raw` imports). Always prefer the
+ * bundled long-form text so lists, steps, and section anchors render
+ * correctly in `RichContent`.
+ */
+function applyServiceAboutCodeOverrides(merged: Content): Content {
+  if (!merged.services?.length) return merged;
+  let changed = false;
+  const next = merged.services.map((s) => {
+    const fromCode = SERVICE_ABOUT_CONTENT[s.id];
+    if (fromCode == null) return s;
+    if (fromCode === s.content) return s;
+    changed = true;
+    return { ...s, content: fromCode };
+  });
+  return changed ? { ...merged, services: next } : merged;
+}
+
 function applyRichAboutFromPublicSnapshot(
   merged: Content,
   snapshot: unknown,
@@ -327,7 +348,7 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
           if (apiData && typeof apiData === 'object' && Object.keys(apiData).length > 0) {
             const publicSnap = await fetchPublicContentJson();
             const base = unionCodeDefinedServices(deepMerge(defaultContent, apiData) as Content);
-            setContent(applyRichAboutFromPublicSnapshot(base, publicSnap, apiData));
+            setContent(applyServiceAboutCodeOverrides(applyRichAboutFromPublicSnapshot(base, publicSnap, apiData)));
             return;
           }
         }
@@ -342,7 +363,7 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
         const staticData = await staticRes.json();
         if (staticData && typeof staticData === 'object' && Object.keys(staticData).length > 0) {
           const merged = unionCodeDefinedServices(deepMerge(defaultContent, staticData) as Content);
-          setContent(applyRichAboutFromPublicSnapshot(merged, staticData, staticData));
+          setContent(applyServiceAboutCodeOverrides(applyRichAboutFromPublicSnapshot(merged, staticData, staticData)));
           return;
         }
       }
