@@ -12,6 +12,7 @@ import { isRichMarkdown } from '../data/serviceAboutContent';
 import { BUSINESS_CONV_BATCH3_SERVICE_IDS } from '../data/businessConvBatch3ServiceIds';
 import { FEMA_BATCH4_SERVICE_IDS } from '../data/femaBatch4ServiceIds';
 import { FSSAI_BATCH5_SERVICE_IDS } from '../data/fssaiBatch5ServiceIds';
+import { GOV_REG_BATCH6_SERVICE_IDS } from '../data/govRegBatch6ServiceIds';
 import { parsePriceToAmount } from '../utils/price';
 import {
   INDIAN_STATES,
@@ -488,7 +489,9 @@ export default function ServiceLeadHero({ service }: Props) {
                     ? 'fema-batch-4'
                     : FSSAI_BATCH5_SERVICE_IDS.has(service.id)
                       ? 'fssai-batch-5'
-                      : undefined
+                      : GOV_REG_BATCH6_SERVICE_IDS.has(service.id)
+                        ? 'gov-reg-batch-6'
+                        : undefined
               }
             />
           </div>

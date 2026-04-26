@@ -40,6 +40,22 @@ import fssaiRegistration from './service-about/fssai-batch5/fssai-registration.m
 import fssaiModification from './service-about/fssai-batch5/fssai-modification.md?raw';
 import fssaiRenewal from './service-about/fssai-batch5/fssai-renewal.md?raw';
 import fssaiReturnFiling from './service-about/fssai-batch5/fssai-return-filing.md?raw';
+import gr6Barcode from './service-about/gov-reg-batch6/barcode-registration.md?raw';
+import gr6Bis from './service-about/gov-reg-batch6/bis-registration.md?raw';
+import gr6Incumbency from './service-about/gov-reg-batch6/certificate-of-incumbency.md?raw';
+import gr6Darpan from './service-about/gov-reg-batch6/darpan-registration.md?raw';
+import gr6Dsc from './service-about/gov-reg-batch6/digital-signature.md?raw';
+import gr6Osp from './service-about/gov-reg-batch6/dot-osp-license.md?raw';
+import gr6Dpiit from './service-about/gov-reg-batch6/dpiit-registration.md?raw';
+import gr6Drug from './service-about/gov-reg-batch6/drug-license-registration.md?raw';
+import gr6Fire from './service-about/gov-reg-batch6/fire-license.md?raw';
+import gr6Halal from './service-about/gov-reg-batch6/halal-license.md?raw';
+import gr6Iso from './service-about/gov-reg-batch6/iso-registration.md?raw';
+import gr6Lei from './service-about/gov-reg-batch6/legal-entity-identifier-lei.md?raw';
+import gr6Msme from './service-about/gov-reg-batch6/msme-registration.md?raw';
+import gr6Rcmc from './service-about/gov-reg-batch6/rcmc-registration.md?raw';
+import gr6StartupIndia from './service-about/gov-reg-batch6/startup-india-registration.md?raw';
+import gr6StartupTax from './service-about/gov-reg-batch6/startup-india-tax-exemption.md?raw';
 
 /** Legal & corporate annual compliance — full copy; overrides JSON/API short blurbs. */
 const LEGAL_ANNUAL_COMPLIANCE_ABOUT: Record<string, string> = {
@@ -100,6 +116,26 @@ const FSSAI_BATCH5_ABOUT: Record<string, string> = {
   'fssai-modification': fssaiModification,
   'fssai-renewal': fssaiRenewal,
   'fssai-return-filing': fssaiReturnFiling,
+};
+
+/** Government registrations (Batch 6) — long-form about copy; last spread wins. */
+const GOV_REG_BATCH6_ABOUT: Record<string, string> = {
+  'barcode-registration': gr6Barcode,
+  'bis-registration': gr6Bis,
+  'certificate-of-incumbency': gr6Incumbency,
+  'darpan-registration': gr6Darpan,
+  'digital-signature': gr6Dsc,
+  'dot-osp-license': gr6Osp,
+  'dpiit-registration': gr6Dpiit,
+  'drug-license-registration': gr6Drug,
+  'fire-license': gr6Fire,
+  'halal-license': gr6Halal,
+  'iso-registration': gr6Iso,
+  'legal-entity-identifier-lei': gr6Lei,
+  'msme-registration': gr6Msme,
+  'rcmc-registration': gr6Rcmc,
+  'startup-india-registration': gr6StartupIndia,
+  'startup-india-tax-exemption': gr6StartupTax,
 };
 
 /**
@@ -19834,6 +19870,7 @@ Professional Tax Registration in India is a mandatory state-level compliance req
   ...BUSINESS_CONV_BATCH3_ABOUT,
   ...FEMA_BATCH4_ABOUT,
   ...FSSAI_BATCH5_ABOUT,
+  ...GOV_REG_BATCH6_ABOUT,
 };
 
 /**
