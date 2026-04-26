@@ -15,6 +15,7 @@ import { FSSAI_BATCH5_SERVICE_IDS } from '../data/fssaiBatch5ServiceIds';
 import { GOV_REG_BATCH6_SERVICE_IDS } from '../data/govRegBatch6ServiceIds';
 import { GST_BATCH7_SERVICE_IDS } from '../data/gstBatch7ServiceIds';
 import { EXIM_BATCH8_SERVICE_IDS } from '../data/eximBatch8ServiceIds';
+import { INCOME_TAX_BATCH9_SERVICE_IDS } from '../data/incomeTaxBatch9ServiceIds';
 import { parsePriceToAmount } from '../utils/price';
 import {
   INDIAN_STATES,
@@ -497,7 +498,9 @@ export default function ServiceLeadHero({ service }: Props) {
                           ? 'exim-batch-8'
                           : GST_BATCH7_SERVICE_IDS.has(service.id)
                             ? 'gst-batch-7'
-                            : undefined
+                            : INCOME_TAX_BATCH9_SERVICE_IDS.has(service.id)
+                              ? 'income-tax-batch-9'
+                              : undefined
               }
             />
           </div>
