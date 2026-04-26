@@ -122,12 +122,14 @@ Instant e-PAN (for Aadhaar-holding individuals): Available free of cost on the I
 | PAN reprint / duplicate | ₹50 + postage |
 | PAN correction/update | ₹107 (Indian) / ₹1,017 (foreign) |
 | Aadhaar-PAN linking (if not done by March 31, 2023) | ₹1,000 (late linking penalty — currently applicable) |
-|  | Professional Service |
-| Estimated Fee | PAN application assistance (individual) |
-| ₹300 – ₹1,000 | PAN application (company/firm/trust) |
-| ₹500 – ₹2,000 | PAN correction/update assistance |
-| ₹500 – ₹1,500 | Foreign national PAN application |
-| ₹2,000 – ₹5,000 |  |
+
+| Professional Service | Estimated Fee |
+| --- | --- |
+| PAN application assistance (individual) | ₹300 – ₹1,000 |
+| PAN application (company/firm/trust) | ₹500 – ₹2,000 |
+| PAN correction/update assistance | ₹500 – ₹1,500 |
+| Foreign national PAN application | ₹2,000 – ₹5,000 |
+
 Government fees paid directly to NSDL/UTIITSL. Professional fees exclusive of GST @18%.
 
 ## Deadlines

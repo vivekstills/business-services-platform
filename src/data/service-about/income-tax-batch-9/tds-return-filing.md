@@ -106,7 +106,7 @@ Regulatory credibility: Companies with consistent TDS return filing history demo
 | TDS correction statement | ₹2,000 – ₹5,000 |
 | Annual TDS compliance retainer | ₹15,000 – ₹1,00,000 p.a. |
 
-Professional fees exclusive of GST @18.
+Professional fees exclusive of GST @18%.
 
 ## Deadlines
 

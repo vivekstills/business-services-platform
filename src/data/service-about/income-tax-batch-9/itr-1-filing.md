@@ -99,7 +99,8 @@ Regime optimisation: Comparing old vs. new regime during ITR-1 preparation helps
 | ITR-1 filing assistance (CA/tax consultant) | ₹500 – ₹2,000 |
 | ITR-1 with HRA / deduction optimisation | ₹1,500 – ₹4,000 |
 | ITR-1 with regime comparison and advice | ₹2,000 – ₹5,000 |
-|  | Government filing fee: Nil. Professional fees exclusive of GST @18%. |
+
+Government filing fee: Nil. Professional fees exclusive of GST @18%.
 
 ## Deadlines
 
@@ -109,7 +110,8 @@ Regime optimisation: Comparing old vs. new regime during ITR-1 preparation helps
 | Belated return filing | December 31 of the Assessment Year |
 | Revised return filing | December 31 of the Assessment Year |
 | ITR-U (updated return) | Within 4 years of end of Assessment Year |
-|  | Late filing fee: ₹1,000 (if total income ≤ ₹5 lakh) or ₹5,000 (if income > ₹5 lakh) under Section 234F. |
+
+Late filing fee: ₹1,000 (if total income ≤ ₹5 lakh) or ₹5,000 (if income > ₹5 lakh) under Section 234F.
 
 ## Errors
 

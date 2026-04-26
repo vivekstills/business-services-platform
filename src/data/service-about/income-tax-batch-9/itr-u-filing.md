@@ -5,10 +5,11 @@
 ITR-U (Updated Return) is a special provision introduced under Section 139(8A) of the Income Tax Act, 1961 by the Finance Act, 2022, that allows taxpayers to file or update their Income Tax Return within 2 years from the end of the relevant assessment year — even after the standard deadline for filing or revising a return has passed. This was a landmark reform aimed at encouraging voluntary tax compliance by providing taxpayers a mechanism to correct past omissions or errors without waiting for a notice from the Income Tax department.
 The Finance Act, 2025 extended the ITR-U filing window from 2 years to 4 years from the end of the relevant assessment year — significantly expanding the opportunity for voluntary compliance.
 ITR-U can be filed to:
-Declare income that was omitted or under-reported in the original return
-Correct errors in the original return (wrong head of income, incorrect exemption claims)
-File a fresh return where no return was originally filed
-Reduce carried forward losses or unabsorbed depreciation (only to reduce a previously over-claimed loss)
+
+- Declare income that was omitted or under-reported in the original return
+- Correct errors in the original return (wrong head of income, incorrect exemption claims)
+- File a fresh return where no return was originally filed
+- Reduce carried forward losses or unabsorbed depreciation (only to reduce a previously over-claimed loss)
 Key financial deterrent: ITR-U is not penalty-free — an additional tax is levied as a deterrent against using it as a routine filing tool:
 | Filing Period | Additional Tax on Underpaid Tax |
 | --- | --- |
@@ -94,16 +95,13 @@ Business transactions regularisation: Companies and firms can correct discrepanc
 | ITR-U filing (complex — foreign income, crypto) | ₹15,000 – ₹40,000 |
 | Additional tax computation | ₹2,000 – ₹5,000 |
 | ITR-U for companies/firms | ₹15,000 – ₹50,000 |
-|  | Government Additional Tax |
-Rate
-Filed within 1 year from AY end
-25% of additional tax + interest
-Filed between 1–2 years
-50% of additional tax + interest
-Filed between 2–3 years
-60% of additional tax + interest
-Filed between 3–4 years
-70% of additional tax + interest
+
+| Filing period | Government additional tax |
+| --- | --- |
+| Filed within 1 year from AY end | 25% of additional tax + interest |
+| Filed between 1–2 years | 50% of additional tax + interest |
+| Filed between 2–3 years | 60% of additional tax + interest |
+| Filed between 3–4 years | 70% of additional tax + interest |
 
 Professional fees exclusive of GST @18%.
 
@@ -114,10 +112,10 @@ Professional fees exclusive of GST @18%.
 | Assessment Year | ITR-U Filing Deadline (4-year window) |
 | AY 2021-22 | March 31, 2026 |
 | AY 2022-23 | March 31, 2027 |
-| AY 2022-23 | March 31, 2027 |
 | AY 2023-24 | March 31, 2028 |
 | AY 2024-25 | March 31, 2029 |
-|  | The ITR-U window runs from the end of the relevant Assessment Year — AY 2021-22 ends March 31, 2022, so ITR-U can be filed until March 31, 2026. |
+
+The ITR-U window runs from the end of the relevant Assessment Year — AY 2021-22 ends March 31, 2022, so ITR-U can be filed until March 31, 2026.
 
 ## Errors
 

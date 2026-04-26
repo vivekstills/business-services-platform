@@ -92,7 +92,7 @@ Advance tax simplicity: Single-installment advance tax by March 15 is simpler to
 | ITR-4 — with multiple deductions | ₹3,000 – ₹7,000 |
 | ITR-4 — transport operator (44AE) | ₹3,000 – ₹6,000 |
 
-Professional fees exclusive of GST @18.
+Professional fees exclusive of GST @18%.
 
 ## Deadlines
 

@@ -93,7 +93,8 @@ Transparent financials: A well-filed ITR-6 aligned with audited accounts demonst
 | ITR-6 — startup with 80-IAC exemption | ₹15,000 – ₹40,000 |
 | ITR-6 — with transfer pricing | ₹50,000 – ₹2,00,000+ |
 | Tax audit (Form 3CA/3CD) | ₹15,000 – ₹2,00,000+ |
-|  | Tax audit and transfer pricing fees are typically separate from ITR-6 preparation fees. Professional fees exclusive of GST @18%. |
+
+Tax audit and transfer pricing fees are typically separate from ITR-6 preparation fees. Professional fees exclusive of GST @18%.
 
 ## Deadlines
 

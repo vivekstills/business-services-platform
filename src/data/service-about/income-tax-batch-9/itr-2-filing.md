@@ -105,7 +105,8 @@ Professional fees exclusive of GST @18%.
 | Non-audit individuals | July 31 of the Assessment Year |
 | Belated return | December 31 of the Assessment Year |
 | Revised return | December 31 of the Assessment Year |
-|  | Late filing fee: ₹5,000 (income > ₹5 lakh) under Section 234F. |
+
+Late filing fee: ₹5,000 (income > ₹5 lakh) under Section 234F.
 
 ## Errors
 

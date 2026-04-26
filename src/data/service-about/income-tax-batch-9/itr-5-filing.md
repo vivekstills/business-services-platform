@@ -91,7 +91,8 @@ Statutory audit alignment: For firms requiring statutory audit (LLPs with turnov
 | ITR-5 — medium firm with tax audit | ₹20,000 – ₹60,000 |
 | ITR-5 — LLP with AMT computation | ₹15,000 – ₹40,000 |
 | ITR-5 — complex (capital gains + multiple activities) | ₹25,000 – ₹75,000 |
-|  | Tax audit fees are charged separately. Professional fees exclusive of GST @18%. |
+
+Tax audit fees are charged separately. Professional fees exclusive of GST @18%.
 
 ## Deadlines
 
