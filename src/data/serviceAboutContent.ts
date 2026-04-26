@@ -32,6 +32,10 @@ import convPrivateToPublic from './service-about/business-conv-batch3/private-to
 import convProprietorshipToOpc from './service-about/business-conv-batch3/proprietorship-to-opc.md?raw';
 import convProprietorshipToPartnership from './service-about/business-conv-batch3/proprietorship-to-partnership.md?raw';
 import convPublicToPrivate from './service-about/business-conv-batch3/public-to-private-company.md?raw';
+import femaFdiFiling from './service-about/fema-batch4/fdi-filing.md?raw';
+import femaServices from './service-about/fema-batch4/fema-services.md?raw';
+import femaFlaReturn from './service-about/fema-batch4/fla-return-filing.md?raw';
+import femaOdiFiling from './service-about/fema-batch4/odi-filing.md?raw';
 
 /** Legal & corporate annual compliance — full copy; overrides JSON/API short blurbs. */
 const LEGAL_ANNUAL_COMPLIANCE_ABOUT: Record<string, string> = {
@@ -76,6 +80,14 @@ const BUSINESS_CONV_BATCH3_ABOUT: Record<string, string> = {
   'proprietorship-to-opc': convProprietorshipToOpc,
   'proprietorship-to-partnership': convProprietorshipToPartnership,
   'public-to-private-company': convPublicToPrivate,
+};
+
+/** FEMA compliance (Batch 4) — long-form about copy; last spread wins. */
+const FEMA_BATCH4_ABOUT: Record<string, string> = {
+  'fdi-filing': femaFdiFiling,
+  'fema-advisory': femaServices,
+  'fla-return-filing': femaFlaReturn,
+  'odi-filing': femaOdiFiling,
 };
 
 /**
@@ -19808,6 +19820,7 @@ Professional Tax Registration in India is a mandatory state-level compliance req
   ...LEGAL_ANNUAL_COMPLIANCE_ABOUT,
   ...BUSINESS_REG_BATCH2_ABOUT,
   ...BUSINESS_CONV_BATCH3_ABOUT,
+  ...FEMA_BATCH4_ABOUT,
 };
 
 /**

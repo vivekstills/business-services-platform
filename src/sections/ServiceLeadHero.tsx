@@ -10,6 +10,7 @@ import RichContent from '../components/RichContent';
 import PricingFeatureText from '../components/PricingFeatureText';
 import { isRichMarkdown } from '../data/serviceAboutContent';
 import { BUSINESS_CONV_BATCH3_SERVICE_IDS } from '../data/businessConvBatch3ServiceIds';
+import { FEMA_BATCH4_SERVICE_IDS } from '../data/femaBatch4ServiceIds';
 import { parsePriceToAmount } from '../utils/price';
 import {
   INDIAN_STATES,
@@ -480,7 +481,11 @@ export default function ServiceLeadHero({ service }: Props) {
               stripLeadingH1
               variant="service"
               contentPreset={
-                BUSINESS_CONV_BATCH3_SERVICE_IDS.has(service.id) ? 'business-conv-batch-3' : undefined
+                BUSINESS_CONV_BATCH3_SERVICE_IDS.has(service.id)
+                  ? 'business-conv-batch-3'
+                  : FEMA_BATCH4_SERVICE_IDS.has(service.id)
+                    ? 'fema-batch-4'
+                    : undefined
               }
             />
           </div>

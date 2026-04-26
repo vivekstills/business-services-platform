@@ -1,5 +1,14 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Info, AlertTriangle, Lightbulb, Sparkles, ChevronDown, FileText } from 'lucide-react';
+import {
+  Info,
+  AlertTriangle,
+  Lightbulb,
+  Sparkles,
+  ChevronDown,
+  FileText,
+  Check,
+  CheckCircle2,
+} from 'lucide-react';
 
 type Props = {
   content: string;
@@ -19,10 +28,10 @@ type Props = {
    */
   variant?: 'default' | 'service';
   /**
-   * Optional layout preset for long-form service markdown (e.g. business conversion batch).
-   * Only applied with `variant="service"`.
+   * Optional layout preset for long-form service markdown (e.g. business conversion batch,
+   * FEMA compliance batch 4). Only applied with `variant="service"`.
    */
-  contentPreset?: 'business-conv-batch-3';
+  contentPreset?: 'business-conv-batch-3' | 'fema-batch-4';
 };
 
 type CalloutVariant = 'default' | 'note' | 'tip' | 'warn' | 'important';
@@ -616,43 +625,87 @@ const Callout: React.FC<CalloutProps> = ({ variant, title, lines }) => {
 
 type DataTableProps = { headers: string[]; rows: string[][] };
 
-const FaqAccordion: React.FC<{ items: { q: string; a: string }[] }> = ({ items }) => (
-  <div className="my-2 space-y-2" role="list">
-    {items.map((item, i) => (
-      <details
-        key={i}
-        className="group border border-gray-200/90 rounded-xl bg-slate-50/40 open:bg-white open:shadow-sm transition-shadow"
-        role="listitem"
-      >
-        <summary className="flex cursor-pointer list-none items-center gap-3 px-4 py-3.5 text-left [&::-webkit-details-marker]:hidden min-h-[3.5rem]">
-          <span className="inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-white border border-gray-200 text-gray-500 group-open:text-blue-600 group-open:border-blue-200 group-open:bg-blue-50/80 transition-colors">
-            <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" aria-hidden />
-          </span>
-          <span className="text-[17px] sm:text-[18px] font-semibold text-gray-900 leading-snug pr-2">
-            {parseInline(item.q)}
-          </span>
-        </summary>
-        <div className="px-4 pb-4 pl-[3.25rem] sm:pl-14 text-[16px] sm:text-[18px] text-gray-700 leading-relaxed border-t border-gray-100/80 pt-3 -mt-0.5">
-          {item.a
-            ? item.a
-                .split(/\n\n+/)
-                .map((c) => c.trim())
-                .filter(Boolean)
-                .map((chunk, pi) => (
-                  <p key={pi} className={pi > 0 ? 'mt-3' : undefined}>
-                    {parseInline(chunk)}
-                  </p>
-                ))
-            : null}
-        </div>
-      </details>
-    ))}
-  </div>
-);
+const FaqAccordion: React.FC<{
+  items: { q: string; a: string }[];
+  /** FEMA: flat dividers, no filled card chrome */
+  minimal?: boolean;
+}> = ({ items, minimal }) => {
+  if (minimal) {
+    return (
+      <div className="my-1 divide-y divide-gray-200 border border-gray-200/80 rounded-lg overflow-hidden bg-white" role="list">
+        {items.map((item, i) => (
+          <details key={i} className="group" role="listitem">
+            <summary className="flex cursor-pointer list-none items-start gap-2.5 px-4 py-3.5 text-left [&::-webkit-details-marker]:hidden min-h-[3.25rem]">
+              <ChevronDown
+                className="h-[18px] w-[18px] mt-0.5 flex-shrink-0 text-gray-500 transition-transform group-open:rotate-180"
+                aria-hidden
+                strokeWidth={2}
+              />
+              <span className="text-[17px] sm:text-[18px] font-semibold text-gray-900 leading-snug pr-1">
+                {parseInline(item.q)}
+              </span>
+            </summary>
+            <div className="px-4 pb-4 pl-10 sm:pl-11 text-[16px] sm:text-[18px] text-gray-700 leading-relaxed">
+              {item.a
+                ? item.a
+                    .split(/\n\n+/)
+                    .map((c) => c.trim())
+                    .filter(Boolean)
+                    .map((chunk, pi) => (
+                      <p key={pi} className={pi > 0 ? 'mt-3' : undefined}>
+                        {parseInline(chunk)}
+                      </p>
+                    ))
+                : null}
+            </div>
+          </details>
+        ))}
+      </div>
+    );
+  }
+  return (
+    <div className="my-2 space-y-2" role="list">
+      {items.map((item, i) => (
+        <details
+          key={i}
+          className="group border border-gray-200/90 rounded-xl bg-slate-50/40 open:bg-white open:shadow-sm transition-shadow"
+          role="listitem"
+        >
+          <summary className="flex cursor-pointer list-none items-center gap-3 px-4 py-3.5 text-left [&::-webkit-details-marker]:hidden min-h-[3.5rem]">
+            <span className="inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-white border border-gray-200 text-gray-500 group-open:text-blue-600 group-open:border-blue-200 group-open:bg-blue-50/80 transition-colors">
+              <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" aria-hidden />
+            </span>
+            <span className="text-[17px] sm:text-[18px] font-semibold text-gray-900 leading-snug pr-2">
+              {parseInline(item.q)}
+            </span>
+          </summary>
+          <div className="px-4 pb-4 pl-[3.25rem] sm:pl-14 text-[16px] sm:text-[18px] text-gray-700 leading-relaxed border-t border-gray-100/80 pt-3 -mt-0.5">
+            {item.a
+              ? item.a
+                  .split(/\n\n+/)
+                  .map((c) => c.trim())
+                  .filter(Boolean)
+                  .map((chunk, pi) => (
+                    <p key={pi} className={pi > 0 ? 'mt-3' : undefined}>
+                      {parseInline(chunk)}
+                    </p>
+                  ))
+              : null}
+          </div>
+        </details>
+      ))}
+    </div>
+  );
+};
 
-const DataTable: React.FC<DataTableProps> = ({ headers, rows }) => {
+const DataTable: React.FC<DataTableProps & { feeColumnRight?: boolean }> = ({
+  headers,
+  rows,
+  feeColumnRight,
+}) => {
   const h0 = (headers[0] ?? '').trim();
   const firstColIsIndex = /^#$/i.test(h0) || /^s\.?\s*no\.?$/i.test(h0) || /^no\.?$/i.test(h0);
+  const lastIdx = Math.max(0, headers.length - 1);
   return (
     <div className="my-5 rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
       <div className="overflow-x-auto">
@@ -666,6 +719,8 @@ const DataTable: React.FC<DataTableProps> = ({ headers, rows }) => {
                     firstColIsIndex && i === 0
                       ? 'w-14 min-w-[3.25rem] text-center text-[13px] text-gray-500'
                       : 'text-left whitespace-nowrap'
+                  } ${
+                    feeColumnRight && i === lastIdx ? 'text-right' : ''
                   }`}
                 >
                   {parseInline(h)}
@@ -677,7 +732,7 @@ const DataTable: React.FC<DataTableProps> = ({ headers, rows }) => {
             {rows.map((row, rIdx) => (
               <tr
                 key={rIdx}
-                className={`border-b border-gray-100 last:border-b-0 ${rIdx % 2 === 1 ? 'bg-gray-50/40' : 'bg-white'} hover:bg-blue-50/40 transition-colors`}
+                className={`border-b border-gray-100 last:border-b-0 ${rIdx % 2 === 1 ? 'bg-slate-50/50' : 'bg-white'} hover:bg-slate-50/80 transition-colors`}
               >
                 {row.map((cell, cIdx) => (
                   <td
@@ -686,7 +741,7 @@ const DataTable: React.FC<DataTableProps> = ({ headers, rows }) => {
                       firstColIsIndex && cIdx === 0
                         ? 'w-14 min-w-[3.25rem] text-center tabular-nums text-gray-600 font-medium'
                         : ''
-                    }`}
+                    } ${feeColumnRight && cIdx === lastIdx ? 'text-right tabular-nums' : ''}`}
                   >
                     {parseInline(cell)}
                   </td>
@@ -702,7 +757,7 @@ const DataTable: React.FC<DataTableProps> = ({ headers, rows }) => {
 
 type BlockRenderCtx = {
   variant: 'default' | 'service';
-  contentPreset?: 'business-conv-batch-3';
+  contentPreset?: 'business-conv-batch-3' | 'fema-batch-4';
   /** Normalized H2 label for the current section (when inside an H2 segment). */
   sectionHeading?: string;
 };
@@ -724,17 +779,37 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
       );
 
     case 'faq':
-      return <FaqAccordion items={block.items} />;
+      return (
+        <FaqAccordion
+          items={block.items}
+          minimal={ctx.contentPreset === 'fema-batch-4'}
+        />
+      );
 
     case 'h2': {
       const { rest } = extractSectionNum(block.text);
       if (h2InSection) {
+        const r = rest.trim();
+        const fema = ctx.contentPreset === 'fema-batch-4';
+        const lim = fema && /^limitations$/i.test(r);
+        const doc = fema && /^documents required$/i.test(r);
+        const comp = fema && /^compliance requirements$/i.test(r);
+        const FemaIcon = lim ? AlertTriangle : doc ? FileText : comp ? CheckCircle2 : null;
         return (
           <h2
             id={`${block.id}-heading`}
-            className="text-[26px] font-bold text-gray-900 leading-snug pb-2.5 border-b border-gray-200/80 mt-0 mb-4"
+            className={`text-[26px] font-bold text-gray-900 leading-snug pb-2.5 border-b border-gray-200/80 mt-0 mb-4 ${
+              FemaIcon ? 'flex items-center gap-2.5' : ''
+            }`}
           >
-            {parseInline(rest)}
+            {FemaIcon ? (
+              <FemaIcon
+                className="h-6 w-6 flex-shrink-0 text-sky-800/90"
+                strokeWidth={1.75}
+                aria-hidden
+              />
+            ) : null}
+            <span className="min-w-0">{parseInline(rest)}</span>
           </h2>
         );
       }
@@ -764,8 +839,19 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
     case 'blockquote':
       return <Callout variant={block.variant} title={block.title} lines={block.lines} />;
 
-    case 'table':
-      return <DataTable headers={block.headers} rows={block.rows} />;
+    case 'table': {
+      const sh = (ctx.sectionHeading ?? '').trim();
+      const feeish =
+        ctx.contentPreset === 'fema-batch-4' &&
+        (/^fees$/i.test(sh) || /\bfee\b/i.test((block.headers[1] ?? block.headers[0] ?? '').toLowerCase()));
+      return (
+        <DataTable
+          headers={block.headers}
+          rows={block.rows}
+          feeColumnRight={!!feeish}
+        />
+      );
+    }
 
     case 'p':
       return (
@@ -777,6 +863,104 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
     case 'ul': {
       const preset = ctx.contentPreset;
       const sh = (ctx.sectionHeading ?? '').trim();
+      const femaBenefits =
+        ctx.variant === 'service' && preset === 'fema-batch-4' && /^benefits$/i.test(sh);
+      if (femaBenefits) {
+        return (
+          <ul
+            className="mt-2.5 grid list-none grid-cols-1 gap-3 pl-0 sm:grid-cols-2 lg:grid-cols-3"
+            role="list"
+          >
+            {block.items.map((item, j) => {
+              const colon = item.match(/^([^:]+):\s*([\s\S]+)$/);
+              const title = colon ? colon[1].trim() : null;
+              const body = colon ? colon[2].trim() : item;
+              return (
+                <li
+                  key={j}
+                  className="flex items-start gap-3 border-l-[3px] border-sky-800/85 bg-transparent py-2 pl-3 pr-1"
+                >
+                  <Check
+                    className="mt-0.5 h-[20px] w-[20px] flex-shrink-0 text-sky-800"
+                    strokeWidth={2}
+                    aria-hidden
+                  />
+                  <div className="min-w-0 text-[16px] leading-relaxed sm:text-[17px] text-gray-800">
+                    {title && colon ? (
+                      <>
+                        <span className="font-semibold text-gray-900">{parseInline(title)}</span>
+                        <span className="text-gray-700">: {parseInline(body)}</span>
+                      </>
+                    ) : (
+                      parseInline(item)
+                    )}
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        );
+      }
+      const femaLimitations =
+        ctx.variant === 'service' && preset === 'fema-batch-4' && /^limitations$/i.test(sh);
+      if (femaLimitations) {
+        return (
+          <ul className="mt-2.5 list-disc space-y-2 pl-5 text-[16px] sm:text-[17px] text-gray-800 leading-relaxed">
+            {block.items.map((item, j) => (
+              <li key={j} className="marker:text-gray-400">
+                {parseInline(item)}
+              </li>
+            ))}
+          </ul>
+        );
+      }
+      const femaComp =
+        ctx.variant === 'service' &&
+        preset === 'fema-batch-4' &&
+        /^compliance requirements$/i.test(sh);
+      if (femaComp) {
+        return (
+          <ul className="mt-2.5 list-disc space-y-2 pl-5 text-[16px] sm:text-[17px] text-gray-800 leading-relaxed">
+            {block.items.map((item, j) => (
+              <li key={j} className="marker:text-gray-400">
+                {parseInline(item)}
+              </li>
+            ))}
+          </ul>
+        );
+      }
+      const femaDocs =
+        ctx.variant === 'service' && preset === 'fema-batch-4' && /^documents required$/i.test(sh);
+      if (femaDocs) {
+        return (
+          <ul
+            className="mt-2.5 list-none space-y-0 overflow-hidden rounded-lg border border-gray-200/80 pl-0"
+            role="list"
+          >
+            {block.items.map((item, j) => {
+              const em = item.split(/\s+—\s+/);
+              if (em.length >= 2) {
+                const left = em[0].trim();
+                const right = em.slice(1).join(' — ').trim();
+                return (
+                  <li
+                    key={j}
+                    className="grid grid-cols-1 border-b border-gray-100 bg-white/0 px-3 py-2.5 last:border-b-0 sm:grid-cols-2 sm:gap-x-5 sm:px-4"
+                  >
+                    <span className="font-semibold text-gray-900 text-[16px]">{parseInline(left)}</span>
+                    <span className="text-[15px] sm:text-[16px] text-gray-600">{parseInline(right)}</span>
+                  </li>
+                );
+              }
+              return (
+                <li key={j} className="px-3 py-2.5 text-[16px] text-gray-800 sm:px-4">
+                  {parseInline(item)}
+                </li>
+              );
+            })}
+          </ul>
+        );
+      }
       const glassBenefits =
         ctx.variant === 'service' && preset === 'business-conv-batch-3' && /^benefits$/i.test(sh);
       const glassLimitations =
@@ -872,6 +1056,43 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
     }
 
     case 'ol': {
+      const shOl = (ctx.sectionHeading ?? '').trim();
+      if (
+        ctx.variant === 'service' &&
+        ctx.contentPreset === 'fema-batch-4' &&
+        /^process$/i.test(shOl)
+      ) {
+        return (
+          <ol className="relative ml-0 mt-3 list-none border-l-2 border-sky-200/90 pl-2" role="list">
+            {block.items.map((item, j) => {
+              const m = item.match(/^Step\s+\d+\s+—\s*(.+)$/i);
+              const rest = m ? m[1].trim() : item;
+              const colon = rest.indexOf(':');
+              const stepTitle = colon > 0 ? rest.slice(0, colon).trim() : rest;
+              const stepBody = colon > 0 ? rest.slice(colon + 1).trim() : '';
+              return (
+                <li
+                  key={j}
+                  className="relative list-none pb-8 pl-6 last:pb-0 sm:pl-7"
+                >
+                  <span
+                    className="absolute left-[-0.3rem] top-[0.1rem] z-[1] flex h-7 w-7 items-center justify-center rounded-full border-2 border-sky-800 bg-white text-[12px] font-semibold text-sky-900 shadow-[0_0_0_2px_#fff]"
+                    aria-hidden
+                  >
+                    {j + 1}
+                  </span>
+                  <div className="min-w-0 text-[16px] leading-relaxed text-gray-800 sm:text-[17px]">
+                    <p className="font-semibold text-gray-900">{parseInline(stepTitle)}</p>
+                    {stepBody ? (
+                      <p className="mt-1.5 font-normal text-gray-700">{parseInline(stepBody)}</p>
+                    ) : null}
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
+        );
+      }
       if (variant === 'service') {
         return (
           <ol className="mt-2.5 list-none space-y-3 pl-0">
@@ -988,6 +1209,10 @@ export default function RichContent({
   const displayToc = showToc && toc.length >= 3;
   const blockCtx: BlockRenderCtx = { variant: variantProp, contentPreset };
   const segments = variantProp === 'service' ? segmentByH2(blocks) : null;
+  const femaClass =
+    contentPreset === 'fema-batch-4'
+      ? 'scroll-mt-[120px] rounded-xl border border-gray-200/80 bg-white p-4 sm:p-5 shadow-none ring-0'
+      : 'scroll-mt-[120px] rounded-2xl border border-gray-200/70 bg-gradient-to-b from-white to-slate-50/30 p-4 sm:p-6 shadow-sm ring-1 ring-gray-100/50';
 
   if (variantProp === 'service' && segments) {
     return (
@@ -1015,7 +1240,7 @@ export default function RichContent({
               <section
                 key={seg.h2.id}
                 id={seg.h2.id}
-                className="scroll-mt-[120px] rounded-2xl border border-gray-200/70 bg-gradient-to-b from-white to-slate-50/30 p-4 sm:p-6 shadow-sm ring-1 ring-gray-100/50"
+                className={femaClass}
                 aria-labelledby={`${seg.h2.id}-heading`}
               >
                 <RichBlock key={`${seg.h2.id}-h2`} block={seg.h2} h2InSection ctx={blockCtx} />

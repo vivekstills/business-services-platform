@@ -81,7 +81,7 @@ export const EXCEL_STUB_SERVICES: Service[] = [
   }),
   stub({
     id: 'fema-advisory',
-    name: 'FEMA Advisory',
+    name: 'FEMA Services',
     mainHead: 'FEMA COMPLIANCE',
     categoryId: 'fema-compliance',
     routeMainCategorySlug: 'fema-compliance',
