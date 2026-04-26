@@ -38,7 +38,8 @@ type Props = {
     | 'gov-reg-batch-6'
     | 'gst-batch-7'
     | 'exim-batch-8'
-    | 'income-tax-batch-9';
+    | 'income-tax-batch-9'
+    | 'intl-incorporation-batch-10';
 };
 
 /** GST / exim / income-tax long-form: shared `Documents`, `Features`, `Compliance` section styling. */
@@ -53,7 +54,8 @@ function isLongFormServicePreset(p?: string): boolean {
     p === 'gov-reg-batch-6' ||
     p === 'gst-batch-7' ||
     p === 'exim-batch-8' ||
-    p === 'income-tax-batch-9'
+    p === 'income-tax-batch-9' ||
+    p === 'intl-incorporation-batch-10'
   );
 }
 
@@ -787,7 +789,8 @@ type BlockRenderCtx = {
     | 'gov-reg-batch-6'
     | 'gst-batch-7'
     | 'exim-batch-8'
-    | 'income-tax-batch-9';
+    | 'income-tax-batch-9'
+    | 'intl-incorporation-batch-10';
   /** Normalized H2 label for the current section (when inside an H2 segment). */
   sectionHeading?: string;
 };
@@ -893,7 +896,9 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
       const longFormFema = isLongFormServicePreset(ctx.contentPreset);
       const feeish =
         longFormFema &&
-        (/^fees$/i.test(sh) || /\bfee\b/i.test((block.headers[1] ?? block.headers[0] ?? '').toLowerCase()));
+        (/^fees$/i.test(sh) ||
+          /^cost overview$/i.test(sh) ||
+          /\bfee\b/i.test((block.headers[1] ?? block.headers[0] ?? '').toLowerCase()));
       return (
         <DataTable
           headers={block.headers}
@@ -916,6 +921,7 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
       const longFormFema = isLongFormServicePreset(preset);
       const benefitOrFeaturesGrid =
         /^benefits$/i.test(sh) ||
+        (preset === 'intl-incorporation-batch-10' && /^key benefits$/i.test(sh)) ||
         (preset === 'gov-reg-batch-6' && /^features$/i.test(sh)) ||
         (isDocsFeaturesCompliancePreset(preset) && /^features$/i.test(sh));
       const femaBenefits =
@@ -1123,7 +1129,9 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
       if (
         ctx.variant === 'service' &&
         isLongFormServicePreset(ctx.contentPreset) &&
-        /^process$/i.test(shOl)
+        (/^process$/i.test(shOl) ||
+          (ctx.contentPreset === 'intl-incorporation-batch-10' &&
+            /^step-by-step process$/i.test(shOl)))
       ) {
         const n = block.items.length;
         return (
