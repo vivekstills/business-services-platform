@@ -109,7 +109,7 @@ export const EXCEL_NAME_TO_SERVICE_ID: Record<string, string> = {
   'legal entity identifier lei': 'legal-entity-identifier-lei',
   'certificate of origin coo': 'certificate-of-origin-coo',
   'startup india registration': 'startup-india-registration',
-  'dpit registration': 'dpit-registration',
+  'dpit registration': 'dpiit-registration',
   'dot osp license': 'dot-osp-license',
   'isi registration': 'isi-registration',
   'startup india tax exemption': 'startup-india-tax-exemption',

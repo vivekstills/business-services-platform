@@ -52,7 +52,7 @@ const defaultContent: Content = {
         heading: 'Form New Business',
         items: [
           { label: 'Private Limited Company', to: getServiceDetailRoute(undefined, 'private-limited-company') },
-          { label: 'LLP', to: getServiceDetailRoute(undefined, 'llp') },
+          { label: 'LLP', to: getServiceDetailRoute(undefined, 'llp-registration') },
           { label: 'One Person Company', to: getServiceDetailRoute(undefined, 'one-person-company') },
           { label: 'Partnership', to: getServiceDetailRoute(undefined, 'partnership') },
           { label: 'Nidhi Company', to: getServiceDetailRoute(undefined, 'nidhi-company') },

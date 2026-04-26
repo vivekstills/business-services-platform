@@ -425,13 +425,6 @@ export const EXCEL_STUB_SERVICES: Service[] = [
     routeMainCategorySlug: 'starts-new-business',
   }),
   stub({
-    id: 'dpit-registration',
-    name: 'DPIT Registration',
-    mainHead: 'START NEW BUSINESS',
-    categoryId: 'new-business',
-    routeMainCategorySlug: 'starts-new-business',
-  }),
-  stub({
     id: 'psic-license',
     name: 'PSIC License',
     mainHead: 'START NEW BUSINESS',

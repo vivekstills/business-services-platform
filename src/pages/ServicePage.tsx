@@ -5,6 +5,7 @@ import { useContent } from '../context/ContentContext';
 import ServiceLeadHero from '../sections/ServiceLeadHero';
 import SEOHead, { SITE_URL } from '../components/SEOHead';
 import { getRouteMainCategorySlug } from '../data/serviceExcelRouting';
+import { getCanonicalServiceId } from '../data/serviceIdRedirects';
 
 export default function ServicePage() {
   const { serviceId, service: serviceParam, mainCategory } = useParams<{
@@ -12,8 +13,21 @@ export default function ServicePage() {
     service?: string;
     mainCategory?: string;
   }>();
-  const id = serviceId ?? serviceParam ?? '';
+  const idRaw = serviceId ?? serviceParam ?? '';
   const { content } = useContent();
+  const canonical = idRaw ? getCanonicalServiceId(idRaw) : null;
+  if (idRaw && canonical) {
+    const target = getServiceById(content.services, canonical);
+    if (target) {
+      return (
+        <Navigate
+          to={`/services/${getRouteMainCategorySlug(target)}/${canonical}`}
+          replace
+        />
+      );
+    }
+  }
+  const id = idRaw;
   const service = id ? (getServiceById(content.services, id) ?? null) : null;
 
   if (!service) {

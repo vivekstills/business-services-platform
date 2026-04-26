@@ -109,7 +109,7 @@ function stateHintFallback(serviceId: string, state: IndianState | ''): string |
       return `Professional Tax is NOT applicable in ${state}. No PT registration is required here.`;
     return `${state} levies Professional Tax. Applicable rates and slabs are shown in the FAQ below.`;
   }
-  if (serviceId === 'private-limited-company' || serviceId === 'llp') {
+  if (serviceId === 'private-limited-company' || serviceId === 'llp-registration') {
     if (state === 'Maharashtra') return 'Maharashtra has higher stamp duty on MOA/AOA. State-specific pricing is reflected below.';
     if (state === 'Delhi (NCT)')  return 'Delhi has low stamp duty and NO Professional Tax — one of the most cost-effective states to incorporate.';
     if (state === 'Karnataka')    return 'Karnataka requires Shops Act + BBMP Trade Licence post-incorporation.';
