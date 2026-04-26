@@ -11,6 +11,7 @@ import PricingFeatureText from '../components/PricingFeatureText';
 import { isRichMarkdown } from '../data/serviceAboutContent';
 import { BUSINESS_CONV_BATCH3_SERVICE_IDS } from '../data/businessConvBatch3ServiceIds';
 import { FEMA_BATCH4_SERVICE_IDS } from '../data/femaBatch4ServiceIds';
+import { FSSAI_BATCH5_SERVICE_IDS } from '../data/fssaiBatch5ServiceIds';
 import { parsePriceToAmount } from '../utils/price';
 import {
   INDIAN_STATES,
@@ -485,7 +486,9 @@ export default function ServiceLeadHero({ service }: Props) {
                   ? 'business-conv-batch-3'
                   : FEMA_BATCH4_SERVICE_IDS.has(service.id)
                     ? 'fema-batch-4'
-                    : undefined
+                    : FSSAI_BATCH5_SERVICE_IDS.has(service.id)
+                      ? 'fssai-batch-5'
+                      : undefined
               }
             />
           </div>

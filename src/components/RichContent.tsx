@@ -31,7 +31,7 @@ type Props = {
    * Optional layout preset for long-form service markdown (e.g. business conversion batch,
    * FEMA compliance batch 4). Only applied with `variant="service"`.
    */
-  contentPreset?: 'business-conv-batch-3' | 'fema-batch-4';
+  contentPreset?: 'business-conv-batch-3' | 'fema-batch-4' | 'fssai-batch-5';
 };
 
 type CalloutVariant = 'default' | 'note' | 'tip' | 'warn' | 'important';
@@ -757,7 +757,7 @@ const DataTable: React.FC<DataTableProps & { feeColumnRight?: boolean }> = ({
 
 type BlockRenderCtx = {
   variant: 'default' | 'service';
-  contentPreset?: 'business-conv-batch-3' | 'fema-batch-4';
+  contentPreset?: 'business-conv-batch-3' | 'fema-batch-4' | 'fssai-batch-5';
   /** Normalized H2 label for the current section (when inside an H2 segment). */
   sectionHeading?: string;
 };
@@ -782,7 +782,7 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
       return (
         <FaqAccordion
           items={block.items}
-          minimal={ctx.contentPreset === 'fema-batch-4'}
+          minimal={ctx.contentPreset === 'fema-batch-4' || ctx.contentPreset === 'fssai-batch-5'}
         />
       );
 
@@ -790,11 +790,22 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
       const { rest } = extractSectionNum(block.text);
       if (h2InSection) {
         const r = rest.trim();
-        const fema = ctx.contentPreset === 'fema-batch-4';
-        const lim = fema && /^limitations$/i.test(r);
-        const doc = fema && /^documents required$/i.test(r);
-        const comp = fema && /^compliance requirements$/i.test(r);
-        const FemaIcon = lim ? AlertTriangle : doc ? FileText : comp ? CheckCircle2 : null;
+        const longFormFema =
+          ctx.contentPreset === 'fema-batch-4' || ctx.contentPreset === 'fssai-batch-5';
+        const lim = longFormFema && /^limitations$/i.test(r);
+        const doc = longFormFema && /^documents required$/i.test(r);
+        const comp = ctx.contentPreset === 'fema-batch-4' && /^compliance requirements$/i.test(r);
+        const ren = ctx.contentPreset === 'fssai-batch-5' && /^renewal$/i.test(r);
+        const val = longFormFema && /^validity$/i.test(r);
+        const FemaIcon = lim
+          ? AlertTriangle
+          : doc
+            ? FileText
+            : comp || ren
+              ? CheckCircle2
+              : val
+                ? Info
+                : null;
         return (
           <h2
             id={`${block.id}-heading`}
@@ -841,8 +852,9 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
 
     case 'table': {
       const sh = (ctx.sectionHeading ?? '').trim();
+      const longFormFema = ctx.contentPreset === 'fema-batch-4' || ctx.contentPreset === 'fssai-batch-5';
       const feeish =
-        ctx.contentPreset === 'fema-batch-4' &&
+        longFormFema &&
         (/^fees$/i.test(sh) || /\bfee\b/i.test((block.headers[1] ?? block.headers[0] ?? '').toLowerCase()));
       return (
         <DataTable
@@ -863,8 +875,8 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
     case 'ul': {
       const preset = ctx.contentPreset;
       const sh = (ctx.sectionHeading ?? '').trim();
-      const femaBenefits =
-        ctx.variant === 'service' && preset === 'fema-batch-4' && /^benefits$/i.test(sh);
+      const longFormFema = preset === 'fema-batch-4' || preset === 'fssai-batch-5';
+      const femaBenefits = ctx.variant === 'service' && longFormFema && /^benefits$/i.test(sh);
       if (femaBenefits) {
         return (
           <ul
@@ -901,8 +913,7 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
           </ul>
         );
       }
-      const femaLimitations =
-        ctx.variant === 'service' && preset === 'fema-batch-4' && /^limitations$/i.test(sh);
+      const femaLimitations = ctx.variant === 'service' && longFormFema && /^limitations$/i.test(sh);
       if (femaLimitations) {
         return (
           <ul className="mt-2.5 list-disc space-y-2 pl-5 text-[16px] sm:text-[17px] text-gray-800 leading-relaxed">
@@ -914,11 +925,12 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
           </ul>
         );
       }
-      const femaComp =
+      const compLikeList =
         ctx.variant === 'service' &&
-        preset === 'fema-batch-4' &&
-        /^compliance requirements$/i.test(sh);
-      if (femaComp) {
+        longFormFema &&
+        ((preset === 'fema-batch-4' && /^compliance requirements$/i.test(sh)) ||
+          (preset === 'fssai-batch-5' && /^renewal$/i.test(sh)));
+      if (compLikeList) {
         return (
           <ul className="mt-2.5 list-disc space-y-2 pl-5 text-[16px] sm:text-[17px] text-gray-800 leading-relaxed">
             {block.items.map((item, j) => (
@@ -930,7 +942,7 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
         );
       }
       const femaDocs =
-        ctx.variant === 'service' && preset === 'fema-batch-4' && /^documents required$/i.test(sh);
+        ctx.variant === 'service' && longFormFema && /^documents required$/i.test(sh);
       if (femaDocs) {
         return (
           <ul
@@ -1059,7 +1071,7 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
       const shOl = (ctx.sectionHeading ?? '').trim();
       if (
         ctx.variant === 'service' &&
-        ctx.contentPreset === 'fema-batch-4' &&
+        (ctx.contentPreset === 'fema-batch-4' || ctx.contentPreset === 'fssai-batch-5') &&
         /^process$/i.test(shOl)
       ) {
         const n = block.items.length;
@@ -1219,7 +1231,7 @@ export default function RichContent({
   const blockCtx: BlockRenderCtx = { variant: variantProp, contentPreset };
   const segments = variantProp === 'service' ? segmentByH2(blocks) : null;
   const femaClass =
-    contentPreset === 'fema-batch-4'
+    contentPreset === 'fema-batch-4' || contentPreset === 'fssai-batch-5'
       ? 'scroll-mt-[120px] rounded-xl border border-gray-200/80 bg-white p-4 sm:p-5 shadow-none ring-0'
       : 'scroll-mt-[120px] rounded-2xl border border-gray-200/70 bg-gradient-to-b from-white to-slate-50/30 p-4 sm:p-6 shadow-sm ring-1 ring-gray-100/50';
 

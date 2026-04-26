@@ -36,6 +36,10 @@ import femaFdiFiling from './service-about/fema-batch4/fdi-filing.md?raw';
 import femaServices from './service-about/fema-batch4/fema-services.md?raw';
 import femaFlaReturn from './service-about/fema-batch4/fla-return-filing.md?raw';
 import femaOdiFiling from './service-about/fema-batch4/odi-filing.md?raw';
+import fssaiRegistration from './service-about/fssai-batch5/fssai-registration.md?raw';
+import fssaiModification from './service-about/fssai-batch5/fssai-modification.md?raw';
+import fssaiRenewal from './service-about/fssai-batch5/fssai-renewal.md?raw';
+import fssaiReturnFiling from './service-about/fssai-batch5/fssai-return-filing.md?raw';
 
 /** Legal & corporate annual compliance — full copy; overrides JSON/API short blurbs. */
 const LEGAL_ANNUAL_COMPLIANCE_ABOUT: Record<string, string> = {
@@ -88,6 +92,14 @@ const FEMA_BATCH4_ABOUT: Record<string, string> = {
   'fema-advisory': femaServices,
   'fla-return-filing': femaFlaReturn,
   'odi-filing': femaOdiFiling,
+};
+
+/** FSSAI services (Batch 5) — long-form about copy; last spread wins. */
+const FSSAI_BATCH5_ABOUT: Record<string, string> = {
+  'fssai-registration': fssaiRegistration,
+  'fssai-modification': fssaiModification,
+  'fssai-renewal': fssaiRenewal,
+  'fssai-return-filing': fssaiReturnFiling,
 };
 
 /**
@@ -19821,6 +19833,7 @@ Professional Tax Registration in India is a mandatory state-level compliance req
   ...BUSINESS_REG_BATCH2_ABOUT,
   ...BUSINESS_CONV_BATCH3_ABOUT,
   ...FEMA_BATCH4_ABOUT,
+  ...FSSAI_BATCH5_ABOUT,
 };
 
 /**
