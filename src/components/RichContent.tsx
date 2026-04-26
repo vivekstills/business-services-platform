@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { preprocessIncomeTaxBatch9ServiceMarkdown } from '../utils/preprocessIncomeTaxBatch9ServiceMarkdown';
 import {
   Info,
   AlertTriangle,
@@ -723,59 +724,63 @@ const FaqAccordion: React.FC<{
   );
 };
 
-const DataTable: React.FC<DataTableProps & { feeColumnRight?: boolean }> = ({
-  headers,
-  rows,
-  feeColumnRight,
-}) => {
+const DataTable: React.FC<
+  DataTableProps & { feeColumnRight?: boolean; bare?: boolean }
+> = ({ headers, rows, feeColumnRight, bare }) => {
   const h0 = (headers[0] ?? '').trim();
   const firstColIsIndex = /^#$/i.test(h0) || /^s\.?\s*no\.?$/i.test(h0) || /^no\.?$/i.test(h0);
   const lastIdx = Math.max(0, headers.length - 1);
-  return (
-    <div className="my-5 rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
-      <div className="overflow-x-auto">
-        <table className="w-full min-w-[min(100%,480px)] border-collapse text-[15px]">
-          <thead>
-            <tr className="bg-gradient-to-r from-slate-50 to-gray-50 border-b border-gray-200">
-              {headers.map((h, i) => (
-                <th
-                  key={i}
-                  className={`px-4 py-3 font-semibold text-gray-800 ${
-                    firstColIsIndex && i === 0
-                      ? 'w-14 min-w-[3.25rem] text-center text-[13px] text-gray-500'
-                      : 'text-left whitespace-nowrap'
-                  } ${
-                    feeColumnRight && i === lastIdx ? 'text-right' : ''
-                  }`}
-                >
-                  {parseInline(h)}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map((row, rIdx) => (
-              <tr
-                key={rIdx}
-                className={`border-b border-gray-100 last:border-b-0 ${rIdx % 2 === 1 ? 'bg-slate-50/50' : 'bg-white'} hover:bg-slate-50/80 transition-colors`}
+  const wrapClass = bare
+    ? 'my-5 overflow-x-auto'
+    : 'my-5 rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden';
+  const tableClass = bare
+    ? 'w-full min-w-[min(100%,480px)] border-collapse border border-gray-200/90 text-[15px]'
+    : 'w-full min-w-[min(100%,480px)] border-collapse text-[15px]';
+  const tableEl = (
+    <table className={tableClass}>
+      <thead>
+        <tr className="bg-gradient-to-r from-slate-50 to-gray-50 border-b border-gray-200">
+          {headers.map((h, i) => (
+            <th
+              key={i}
+              className={`px-4 py-3 font-semibold text-gray-800 ${
+                firstColIsIndex && i === 0
+                  ? 'w-14 min-w-[3.25rem] text-center text-[13px] text-gray-500'
+                  : 'text-left whitespace-nowrap'
+              } ${feeColumnRight && i === lastIdx ? 'text-right' : ''}`}
+            >
+              {parseInline(h)}
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((row, rIdx) => (
+          <tr
+            key={rIdx}
+            className={`border-b border-gray-100 last:border-b-0 ${rIdx % 2 === 1 ? 'bg-slate-50/50' : 'bg-white'} hover:bg-slate-50/80 transition-colors`}
+          >
+            {row.map((cell, cIdx) => (
+              <td
+                key={cIdx}
+                className={`align-top px-4 py-3 text-gray-700 leading-relaxed ${
+                  firstColIsIndex && cIdx === 0
+                    ? 'w-14 min-w-[3.25rem] text-center tabular-nums text-gray-600 font-medium'
+                    : ''
+                } ${feeColumnRight && cIdx === lastIdx ? 'text-right tabular-nums' : ''}`}
               >
-                {row.map((cell, cIdx) => (
-                  <td
-                    key={cIdx}
-                    className={`align-top px-4 py-3 text-gray-700 leading-relaxed ${
-                      firstColIsIndex && cIdx === 0
-                        ? 'w-14 min-w-[3.25rem] text-center tabular-nums text-gray-600 font-medium'
-                        : ''
-                    } ${feeColumnRight && cIdx === lastIdx ? 'text-right tabular-nums' : ''}`}
-                  >
-                    {parseInline(cell)}
-                  </td>
-                ))}
-              </tr>
+                {parseInline(cell)}
+              </td>
             ))}
-          </tbody>
-        </table>
-      </div>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+
+  return (
+    <div className={wrapClass}>
+      {bare ? tableEl : <div className="overflow-x-auto">{tableEl}</div>}
     </div>
   );
 };
@@ -899,11 +904,14 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
         (/^fees$/i.test(sh) ||
           /^cost overview$/i.test(sh) ||
           /\bfee\b/i.test((block.headers[1] ?? block.headers[0] ?? '').toLowerCase()));
+      const bareTable =
+        ctx.contentPreset === 'income-tax-batch-9' || ctx.contentPreset === 'intl-incorporation-batch-10';
       return (
         <DataTable
           headers={block.headers}
           rows={block.rows}
           feeColumnRight={!!feeish}
+          bare={bareTable}
         />
       );
     }
@@ -1284,10 +1292,13 @@ export default function RichContent({
   contentPreset,
 }: Props) {
   const processed = useMemo(() => {
-    const safe = (content ?? '').replace(/\r\n/g, '\n');
-    if (!stripLeadingH1) return safe;
-    return stripLeadingH1Line(safe);
-  }, [content, stripLeadingH1]);
+    let safe = (content ?? '').replace(/\r\n/g, '\n');
+    if (stripLeadingH1) safe = stripLeadingH1Line(safe);
+    if (contentPreset === 'income-tax-batch-9') {
+      safe = preprocessIncomeTaxBatch9ServiceMarkdown(safe);
+    }
+    return safe;
+  }, [content, stripLeadingH1, contentPreset]);
 
   const isPlainText = useMemo(
     () =>
