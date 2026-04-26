@@ -297,27 +297,6 @@ export const EXCEL_STUB_SERVICES: Service[] = [
 
   // Misc
   stub({
-    id: 'one-day-liquor-permission-private-event',
-    name: 'One Day & Liquor Permission for Private Event',
-    mainHead: 'MISCELLANEOUS',
-    categoryId: 'liquor-licenses',
-    routeMainCategorySlug: 'miscellaneous',
-  }),
-  stub({
-    id: 'cl-3-license',
-    name: 'CL-3 License',
-    mainHead: 'MISCELLANEOUS',
-    categoryId: 'liquor-licenses',
-    routeMainCategorySlug: 'miscellaneous',
-  }),
-  stub({
-    id: 'fl-3-wine-bar-license',
-    name: 'FL-3 License & Wine Bar License',
-    mainHead: 'MISCELLANEOUS',
-    categoryId: 'liquor-licenses',
-    routeMainCategorySlug: 'miscellaneous',
-  }),
-  stub({
     id: 'frro-registration',
     name: 'Registration of Foreigner (FRRO)',
     mainHead: 'MISCELLANEOUS',

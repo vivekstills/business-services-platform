@@ -7,6 +7,9 @@ const SERVICE_ID_CANONICAL: Record<string, string> = {
   'indian-subsidiary': 'indian-subsidiary-foreign-company',
   'dpit-registration': 'dpiit-registration',
   'tan-registration-service': 'tan-registration',
+  'one-day-liquor-permission-private-event': 'temporary-one-day-function-license',
+  'cl-3-license': 'club-license',
+  'fl-3-wine-bar-license': 'wine-bar-license',
 };
 
 export function getCanonicalServiceId(id: string | undefined | null): string | null {

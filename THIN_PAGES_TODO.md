@@ -5,7 +5,6 @@ Add a SERVICE_ABOUT_CONTENT entry in src/data/serviceAboutContent.ts for each.
 ## Pending:
 - [ ] add-remove-partner
 - [ ] certificate-of-origin-coo
-- [ ] cl-3-license
 - [ ] company-strike-off-filing
 - [ ] composition-gst-registration
 - [ ] dir-12-filing
@@ -13,12 +12,10 @@ Add a SERVICE_ABOUT_CONTENT entry in src/data/serviceAboutContent.ts for each.
 - [ ] dpit-registration (resolve vs dpiit-registration first)
 - [ ] entry-tax-notice
 - [ ] epfo-registration
-- [ ] fl-3-wine-bar-license
 - [ ] frro-registration
 - [ ] gst-nil-return-filing
 - [ ] isi-registration
 - [ ] mgt-14-filing
-- [ ] one-day-liquor-permission-private-event
 - [ ] partnership
 - [ ] pas-3-filing
 - [ ] pf-registration
