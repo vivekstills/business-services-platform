@@ -1,0 +1,115 @@
+# GST Registration for Foreigners
+
+## Overview
+
+Foreign nationals, foreign companies, and entities resident outside India that make taxable supplies of goods or services within India — even temporarily — are required to obtain GST registration in India. This registration is governed by specific provisions under the CGST Act, 2017 that cater to two primary categories of foreign suppliers: Non-Resident Taxable Persons (NRTP) and suppliers of OIDAR (Online Information and Database Access and Retrieval) services.
+Non-Resident Taxable Person (NRTP): A person who occasionally undertakes taxable transactions involving supply of goods or services in India, but who does not have a fixed place of business in India. Examples include foreign artists performing in India, foreign traders selling at Indian trade fairs, foreign film production companies shooting in India, or foreign consultants on short-term India assignments.
+OIDAR Service Providers: Foreign companies providing online services to Indian consumers — including streaming services (Netflix, Spotify), cloud software, e-books, online gaming, online advertising, and data analytics services — are required to register and pay GST in India. This was introduced to create a level playing field between Indian and foreign digital service providers.
+Foreign companies with a fixed establishment in India (branch office, liaison office, project office) are treated as Indian residents for GST purposes and must register as regular taxpayers — not as NRTPs.
+
+## Applicability
+
+| Foreign Entity Type | GST Registration Type Required |
+| --- | --- |
+| Foreign person/company making occasional taxable supplies in India | Non-Resident Taxable Person (NRTP) |
+| Foreign company providing OIDAR services to Indian non-business consumers | OIDAR provider registration |
+| Foreign company with a branch/project office in India | Regular GST registration |
+| Foreign company with Liaison Office (no business activity) | No GST registration required |
+| Foreign e-commerce operator with Indian customers | May require NRTP or OIDAR registration depending on model |
+| Foreign artist/performer at events in India | NRTP registration |
+| Foreign exhibitor at India trade fairs | NRTP registration |
+
+Applicable pan-India — a single NRTP or OIDAR registration covers all-India operations; state-wise multiple registrations are generally not required for NRTPs.
+
+## Features
+
+- Advance registration for NRTP: NRTPs must register at least 5 days before commencing taxable supplies in India — Form GST REG-09
+- Advance deposit mandatory: NRTPs must make an advance tax deposit equal to the estimated GST liability for the period of supply — deposited into the Electronic Cash Ledger at the time of registration
+- Temporary nature: NRTP registration is granted for up to 90 days (extendable by another 90 days) — it is not a permanent registration
+- No ITC for NRTPs: NRTPs cannot claim Input Tax Credit — they pay GST only on output supplies
+- OIDAR registration — Simplified: OIDAR providers register in Form GST REG-10 (simplified registration for cross-border digital service providers) through a single jurisdiction
+- Authorised representative in India: NRTPs and OIDAR providers must appoint an authorised representative in India for compliance purposes
+- PAN not required for NRTPs: Unlike regular taxpayers, NRTPs are not required to have a PAN — they use their passport or tax identification number from their home country
+- Monthly GSTR-5 filing: NRTPs file monthly returns in Form GSTR-5; OIDAR providers file GSTR-5A
+
+## Benefits
+
+- Legal supply in India: Foreign entities can legally supply goods and services in India for short periods — exhibitions, events, concerts, film shoots, and professional engagements
+- Compliance simplicity: The NRTP framework is designed for occasional suppliers — simpler than the regular GST registration process and without permanent establishment implications
+- Clear liability computation: Advance deposit mechanism ensures GST liability is pre-funded — no surprise tax demands after the supply period
+- OIDAR compliance avoids penalties: Foreign digital service providers who register and pay GST avoid the risk of GST department action, blocking of websites/services in India, and reputational risk
+- Refund of excess deposit: If the actual GST liability is less than the advance deposit, the NRTP can claim a refund of the excess after filing the final return
+- Level playing field: OIDAR registration ensures foreign digital companies pay the same GST as Indian digital service providers — maintaining competitive equity
+
+## Documents
+
+| Document | NRTP | OIDAR Provider |
+| --- | --- | --- |
+| GST REG-09 / REG-10 form | REG-09 | REG-10 |
+| Passport of the foreign individual | ✓ | Not required (entity-level) |
+| Tax Identification Number from home country | ✓ | ✓ |
+| Certificate of Incorporation (for foreign company) | ✓ | ✓ |
+| Details of authorised representative in India | ✓ | ✓ |
+| Aadhaar/PAN of Indian authorised representative | ✓ | ✓ |
+| Bank account details (Indian bank account) | ✓ | ✓ |
+| Description of supplies to be made in India | ✓ | ✓ |
+| Estimated tax liability (for advance deposit) | ✓ | Not required |
+| Details of event/engagement in India | ✓ | Not applicable |
+
+## Process
+
+### For NRTP:
+
+1. Step 1 — Engage Indian Authorised Representative Appoint an Indian resident as the authorised representative who will sign and file GST applications and returns on behalf of the NRTP.
+1. Step 2 — File GST REG-09 at least 5 days before supply Complete and file Form GST REG-09 on the GST portal — entity details, supply details, period of supply, and authorised representative information.
+1. Step 3 — Make Advance Deposit Compute the estimated GST liability for the supply period. Make an advance deposit into the Electronic Cash Ledger at the time of or before registration.
+1. Step 4 — Receive GSTIN A temporary GSTIN is issued for the period specified in the application (up to 90 days).
+1. Step 5 — File GSTR-5 File monthly GSTR-5 returns for each month (or part thereof) of taxable supply in India. GSTR-5 is due by the 20th of the following month.
+1. Step 6 — File Final GSTR-5 After the supply period ends, file the final GSTR-5 within 7 days of the expiry of registration or the last day of the supply period — whichever is earlier.
+1. Step 7 — Claim Refund of Excess Deposit If actual liability is less than the advance deposit, claim a refund of the excess through Form RFD-01 after the final return is filed.
+
+### For OIDAR Provider:
+
+File Form GST REG-10 on the GST portal. Appoint an Indian representative. File monthly GSTR-5A returns by the 20th of the following month.
+
+## Fees
+
+| Service | Government Fee |
+| --- | --- |
+| NRTP / OIDAR GST Registration | Nil |
+| Advance deposit (NRTP) | Based on estimated liability (refundable) |
+
+| Professional Service | Estimated Fee |
+| --- | --- |
+| NRTP registration support | ₹10,000 – ₹25,000 |
+| OIDAR registration support | ₹15,000 – ₹35,000 |
+| GSTR-5 filing (per month) | ₹5,000 – ₹10,000 |
+| GSTR-5A filing (OIDAR, per month) | ₹5,000 – ₹10,000 |
+| Authorised representative services (annual) | ₹25,000 – ₹75,000 |
+| Refund of excess advance deposit | ₹5,000 – ₹15,000 |
+
+Professional fees exclusive of GST @18%.
+
+## Compliance
+
+- NRTP must register at least 5 days before commencing supplies — not on the day of supply
+- Advance deposit must be maintained — if actual liability exceeds the deposit, pay the additional amount promptly
+- File GSTR-5 by the 20th of each month — or within 7 days of end of registration for the final return
+- OIDAR providers must file GSTR-5A monthly by the 20th — regardless of whether any supply was made in that month
+- The authorised representative is legally responsible for all GST compliance on behalf of the NRTP/OIDAR provider in India
+
+## Common Mistakes
+
+- Registering too late: NRTPs who register on the day of supply (instead of 5 days before) are technically in violation — pre-registration with advance deposit is mandatory
+- Underestimating advance deposit: If the actual GST exceeds the deposit, the excess is a demand — compute conservatively with a margin
+- Not appointing a knowledgeable Indian representative: The Indian authorised representative bears legal compliance responsibility — choosing an uninformed or unavailable representative creates compliance gaps
+- OIDAR providers not registering: Foreign digital service providers incorrectly assuming that physical absence from India exempts them from GST — the law specifically covers cross-border digital services to Indian consumers
+- Missing the final return deadline: NRTPs must file the final GSTR-5 within 7 days of the end of registration — this short window is frequently missed
+
+## Frequently Asked Questions
+
+- **A foreign musician is coming to India for a 3-concert tour over 2 weeks. Does the promoter or the musician need NRTP registration?** The liability to register and pay GST depends on who is making the taxable supply. If the foreign musician is directly contracted with the Indian event organiser (as the supplier of entertainment services), the musician (or their management entity) is the NRTP and must register. If the Indian event organiser is contracted with the venue and audience, and the musician is contracted as a performer with the organiser, the supply is between the foreign musician and the Indian organiser — the organiser pays GST under Reverse Charge Mechanism (RCM) and the musician may not need NRTP registration. The contractual structure determines the GST treatment — professional advice before the tour is essential.
+- **Does a foreign company with a Liaison Office in India need to register for GST?** Generally no — a Liaison Office (LO) is permitted only to undertake liaison activities (market research, information gathering, promotion of the parent company's products) and is not permitted to undertake commercial activities. Since an LO makes no taxable supply, there is typically no GST liability and no registration requirement. However, if the LO is found to be performing activities beyond its permitted scope (which constitutes a supply), GST registration would be required and the LO would be treated as a fixed establishment of the foreign company in India.
+- **Netflix is a US company charging Indian subscribers for streaming services. How does their India GST compliance work?** Netflix and similar foreign streaming services fall under the OIDAR (Online Information and Database Access and Retrieval) category. OIDAR services provided by foreign suppliers to Indian non-business consumers are taxable in India at 18% GST. Netflix (or any OIDAR provider) must register under Form GST REG-10 on the GST portal, collect GST from Indian subscribers (or absorb it in pricing), and file monthly GSTR-5A returns. The CBIC has been actively enforcing OIDAR compliance for foreign digital platforms serving Indian consumers.
+- **We are a UK-based consulting firm providing advisory services to Indian corporate clients. Are we subject to Indian GST?** Services provided by a foreign entity to an Indian business entity are treated as import of services by the Indian recipient. The Indian business client pays GST under the Reverse Charge Mechanism (RCM) on such imported services. The UK consulting firm itself does not need to register for GST in India for this model — the tax compliance burden falls on the Indian recipient, not the UK supplier. However, if the UK firm has a fixed establishment (branch office, project office) in India, that establishment is treated as an Indian supplier and regular GST registration is required.
+- **A foreign company wants to participate as an exhibitor at an Indian trade fair for 10 days. What is the GST registration process and timeline?** The foreign exhibitor must register as a Non-Resident Taxable Person (NRTP) before the trade fair. The process: (a) appoint an Indian authorised representative immediately; (b) file Form GST REG-09 on the GST portal at least 5 days before the first day of the trade fair; (c) make an advance deposit into the Electronic Cash Ledger estimated to cover GST on all sales expected at the fair; (d) receive the temporary GSTIN; (e) charge GST on all sales at the fair; and (f) file the final GSTR-5 within 7 days of the last day of the fair. Begin the process at least 10–15 days before the fair date to allow time for registration processing.

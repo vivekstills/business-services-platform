@@ -1,0 +1,111 @@
+# Input Tax Credit Reconciliation
+
+## Overview
+
+Input Tax Credit (ITC) Reconciliation is the process of matching and verifying the ITC claimed in GSTR-3B returns with the ITC available in the auto-populated GSTR-2B statement, and further reconciling both with the actual purchase register (books of accounts). ITC reconciliation is one of the most critical and compliance-intensive aspects of GST management — errors in ITC claims are the single largest source of GST demand notices, interest liabilities, and penalties across India.
+Under Section 16 of the CGST Act, ITC can be availed only if:
+The taxpayer holds a valid tax invoice
+Goods/services have been received
+The supplier has filed their GSTR-1 (and the invoice appears in GSTR-2B)
+The tax has actually been paid by the supplier
+The annual return (GSTR-9) has been filed
+Rule 36(4) of the CGST Rules restricts ITC to what is reflected in GSTR-2B — any excess claim is subject to automatic interest and reversal. Rule 42 and Rule 43 govern proportionate reversal of common ITC used for both taxable and exempt supplies.
+ITC reconciliation is required at multiple levels:
+Monthly: GSTR-2B vs. purchase register vs. GSTR-3B ITC claimed
+Annual: Full-year ITC reconciliation for GSTR-9 preparation
+Special: Reconciliation for ITC refund claims, GST audits, and M&A due diligence
+
+## Applicability
+
+ITC Reconciliation is relevant for:
+
+- All regular GST-registered businesses that claim ITC
+- Businesses with significant purchase volumes and multiple suppliers
+- Companies with both taxable and exempt supplies (requiring proportionate ITC reversal)
+- Exporters claiming ITC refunds
+- Companies undergoing GST audits or scrutiny
+- Businesses preparing GSTR-9 and GSTR-9C annual returns
+- Companies involved in M&A transactions — as buyers conduct ITC due diligence on acquisition targets
+
+Applicable pan-India — all states and UTs.
+
+## Features
+
+- Three-way reconciliation: Purchase register (books) vs. GSTR-2B (portal) vs. GSTR-3B claimed (returns) — the three must align
+- Supplier-level tracking: Reconciliation identifies specific suppliers whose invoices are missing from GSTR-2B — enabling targeted follow-up
+- Automated tools available: Reconciliation software (like ClearTax, Zoho Books, Tally GST modules) can automate matching of large invoice volumes — reducing manual effort
+- ITC reversal computation: Where ITC has been over-claimed, reconciliation quantifies the reversal amount and the applicable interest
+- Section 17(5) blocked ITC identification: Reconciliation identifies ITC on blocked categories (motor vehicles, entertainment, personal expenses) that should never have been claimed
+- GSTR-2B timing: GSTR-2B is generated on the 14th of each month — the cutoff for inclusion is supplier filing by the 11th; invoices filed after the 11th appear in the next month's GSTR-2B
+
+## Benefits
+
+- Interest and penalty prevention: Proactive monthly reconciliation prevents excess ITC claims that automatically attract 18% p.a. interest — catching differences early is far cheaper than addressing them after receiving a demand notice
+- Supplier compliance management: ITC reconciliation identifies non-compliant suppliers (who don't file GSTR-1 on time) — enabling businesses to switch to compliant vendors and protect their ITC
+- GSTR-9 preparation readiness: Businesses that reconcile monthly face minimal surprises during annual GSTR-9 preparation — the year-end work is lighter and faster
+- Cash flow optimisation: Maximising legitimate ITC claims (without excess) reduces effective cash out-of-pocket GST costs — every ₹1 of ITC left unclaimed increases cash GST outflow
+- Audit defense: Documented ITC reconciliation workings are the primary defense during GST audits — showing that ITC was claimed only on the basis of GSTR-2B and with proper verification
+- Refund claim accuracy: For ITC refund claims (LUT route for exporters, inverted duty), accurate ITC reconciliation ensures refund calculations are correct — preventing deficiency memos
+
+## Documents
+
+| Document | Details |
+| --- | --- |
+| GSTR-2B (monthly, all periods) | Auto-populated ITC statement from portal |
+| Purchase register / ledger | Internal book records of all purchases with GST |
+| GSTR-3B filed copies | ITC claimed in each month's return |
+| Supplier-wise GSTR-1 filing status | For identifying non-filing suppliers |
+| Tax invoices from suppliers | Original invoices for ITC eligibility verification |
+| ITC register (maintained internally) | Running ledger of ITC claimed, reversed, and balance |
+| Rule 42/43 computation | Proportionate reversal workings (for mixed supply businesses) |
+| Credit notes received | For ITC reversal adjustments |
+| Import of services invoices | For RCM-paid ITC claims |
+
+## Process
+
+1. Step 1 — Download GSTR-2B Download GSTR-2B for the reconciliation period (month/quarter/year) from the GST portal. This contains all ITC reflected based on supplier filings.
+1. Step 2 — Extract Purchase Register Export the purchase register from your accounting software — with invoice number, supplier GSTIN, invoice date, taxable value, and tax amounts.
+1. Step 3 — Three-Way Matching Match each invoice in the purchase register against GSTR-2B. Categorize as: (a) Matched — invoice in both books and GSTR-2B; (b) In books but not in GSTR-2B — supplier hasn't filed; (c) In GSTR-2B but not in books — duplicate or unrecorded purchase.
+1. Step 4 — Identify Discrepancies Quantify the ITC difference: invoices in books but not in GSTR-2B represent ITC that cannot be claimed without risk. Invoices in GSTR-2B but not in books need to be verified and recorded.
+1. Step 5 — Supplier Follow-Up Contact suppliers whose invoices are missing from GSTR-2B — request them to file their GSTR-1 and include the missing invoices. Set a timeline (before the next GSTR-2B cutoff).
+1. Step 6 — ITC Eligibility Review Review all matched invoices for ITC eligibility — confirm goods/services received, invoice is valid, and ITC is not blocked under Section 17(5). Remove blocked ITC from the claim.
+1. Step 7 — Rule 42/43 Reversal (if applicable) For businesses with exempt supplies, compute the proportionate ITC reversal under Rule 42/43 and apply to the ITC claim.
+1. Step 8 — Reconcile with GSTR-3B Compare the final eligible ITC figure (from steps 1–7) with the ITC claimed in GSTR-3B. Quantify excess or deficit ITC claimed. Adjust in the next GSTR-3B if excess was claimed.
+1. Step 9 — Document Reconciliation Working Maintain a documented reconciliation worksheet (Excel or software-generated) for each period — this is the audit trail for ITC claims.
+
+## Fees
+
+| Professional Service | Estimated Fee |
+| --- | --- |
+| Monthly ITC reconciliation (up to 100 invoices) | ₹3,000 – ₹6,000/month |
+| Monthly ITC reconciliation (100–500 invoices) | ₹6,000 – ₹15,000/month |
+| Annual ITC reconciliation (for GSTR-9) | ₹15,000 – ₹50,000 |
+| ITC reconciliation for refund claim | ₹8,000 – ₹20,000 |
+| ITC reconciliation for GST audit defense | ₹20,000 – ₹75,000 |
+| ITC software setup and training | ₹10,000 – ₹30,000 |
+
+Professional fees exclusive of GST @18%.
+
+## Compliance
+
+- Reconcile GSTR-2B with purchase register before filing each month's GSTR-3B
+- Do not claim ITC exceeding GSTR-2B limits without documented justification
+- Apply Rule 42/43 reversal at least quarterly (monthly is best practice)
+- Maintain ITC reconciliation workings for at least 6 years
+- Follow up with non-compliant suppliers regularly — persistent non-filers should be replaced with compliant vendors
+
+## Common Mistakes
+
+- Claiming ITC on blocked categories: ITC on motor vehicles (with exceptions), foods and beverages, health club memberships, club memberships, and personal expenses is blocked under Section 17(5) — claiming it invites reversal plus interest
+- Not following up with non-filing suppliers: Assuming that GSTR-2B will eventually catch up — if the supplier never files GSTR-2B, the ITC never materialises and may be reversed with interest
+- Not reversing ITC on credit notes: When a supplier issues a credit note and it reflects in GSTR-2B as a negative ITC, businesses must reduce the ITC claim accordingly — missing this results in excess ITC
+- Claiming GSTR-2B ITC without receiving goods: GST law requires actual receipt of goods/services as a condition for ITC — claiming ITC on advance payment invoices (before receipt) is a violation
+- Forgetting RCM ITC: ITC on RCM (Reverse Charge Mechanism) payments is available only in the same period the RCM GST is paid — not on a cash basis or accrual basis from earlier periods
+
+## Frequently Asked Questions
+
+- **Our supplier has gone out of business and will never file their GSTR-1. We have paid them and have their invoice. Can we claim ITC?** This is a challenging situation. Technically, under Rule 36(4), ITC can only be claimed to the extent reflected in GSTR-2B — and if the supplier never files GSTR-1, the invoice will never appear. Some businesses have contested this in High Courts, arguing that the denial of ITC to a bona fide buyer due to supplier default violates fundamental rights — and some courts have given relief in such cases. In practice, claim the ITC with proper documentation (invoice, payment proof), disclose the situation in GSTR-9, and be prepared to contest any reversal demand legally. Document the legitimate nature of the purchase thoroughly.
+- **GSTR-2B shows ₹5 lakh ITC from a supplier, but we only have invoices worth ₹4.5 lakh in our books. What should we do with the extra ₹50,000 in GSTR-2B?** The ₹50,000 surplus in GSTR-2B could be a duplicate invoice filing by the supplier, an invoice for a different purchase period, or an error in the supplier's GSTR-1. Investigate by contacting the supplier and reviewing your purchase records. Do not claim the extra ₹50,000 unless you can match it to a specific eligible invoice in your books. Claiming ITC without a corresponding valid invoice is a violation under Section 16 — the GSTR-2B reflection is necessary but not sufficient; you also need a valid invoice and actual receipt of goods/services.
+- **We forgot to claim ITC for some invoices from 3 months ago. Can we still claim it?** Yes, subject to time limits. ITC can be claimed up to the earlier of: (a) the due date of filing GSTR-3B for September of the financial year following the year in which the invoice was issued; or (b) the date of filing of annual return (GSTR-9) for the relevant financial year. So ITC on invoices from FY 2024-25 can be claimed up to September 2025's GSTR-3B (filed October 20, 2025) or the date of filing GSTR-9 for FY 2024-25 — whichever is earlier. Beyond this deadline, the ITC lapses — making timely monthly reconciliation essential.
+- **We have a mix of taxable and GST-exempt exports. How do we calculate the ITC reversal for exempt supplies?** Rule 42 of the CGST Rules governs ITC reversal for common inputs/input services used for both taxable and exempt supplies. The formula: Reversal = (Exempt supply turnover / Total turnover) × Common ITC for the period. "Exempt supply" for this purpose includes both GST-exempt supplies AND nil-rated supplies but does not include zero-rated supplies (exports) — exports are zero-rated and do not trigger Rule 42 reversal. This is a critical distinction — ITC used for exports is fully available, while ITC used for exempt domestic supplies must be reversed. The computation is done monthly with an annual true-up.
+- **Our company was recently acquired. The new parent wants to verify our ITC history. What documents should we prepare?** For ITC due diligence in an M&A context, prepare: (a) month-wise ITC reconciliation workings for the past 3–5 years — GSTR-2B vs. GSTR-3B vs. purchase register; (b) summary of blocked ITC categories and proof that none was claimed; (c) Rule 42/43 reversal computations for all years; (d) list of suppliers with consistently missing GSTR-2B data — and status of follow-up; (e) GSTR-9 and GSTR-9C for past filed years; (f) any ITC reversal demands received and their resolution status; and (g) pending ITC claims not yet reflected in GSTR-2B. Well-maintained ITC records signal compliance maturity and reduce the risk of post-acquisition surprises.

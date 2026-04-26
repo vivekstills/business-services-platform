@@ -56,6 +56,20 @@ import gr6Msme from './service-about/gov-reg-batch6/msme-registration.md?raw';
 import gr6Rcmc from './service-about/gov-reg-batch6/rcmc-registration.md?raw';
 import gr6StartupIndia from './service-about/gov-reg-batch6/startup-india-registration.md?raw';
 import gr6StartupTax from './service-about/gov-reg-batch6/startup-india-tax-exemption.md?raw';
+import gst7Advisory from './service-about/gst-batch-7/gst-advisory.md?raw';
+import gst7AnnualReturn from './service-about/gst-batch-7/gst-annual-return.md?raw';
+import gst7Eway from './service-about/gst-batch-7/gst-e-way-bill.md?raw';
+import gst7Lut from './service-about/gst-batch-7/gst-lut-filing.md?raw';
+import gst7Refund from './service-about/gst-batch-7/gst-refund.md?raw';
+import gst7Registration from './service-about/gst-batch-7/gst-registration.md?raw';
+import gst7Cancellation from './service-about/gst-batch-7/gst-registration-cancellation.md?raw';
+import gst7Foreigners from './service-about/gst-batch-7/gst-registration-foreigners.md?raw';
+import gst7ReturnFiling from './service-about/gst-batch-7/gst-return-filing.md?raw';
+import gst7Gstr10 from './service-about/gst-batch-7/gstr-10-final-return.md?raw';
+import gst7Itc from './service-about/gst-batch-7/input-tax-credit-recon.md?raw';
+import gst7Ctp from './service-about/gst-batch-7/temporary-gst-registration.md?raw';
+import gst7Virtual from './service-about/gst-batch-7/virtual-office-gstin.md?raw';
+import gst7Revocation from './service-about/gst-batch-7/gst-registration-revocation.md?raw';
 
 /** Legal & corporate annual compliance — full copy; overrides JSON/API short blurbs. */
 const LEGAL_ANNUAL_COMPLIANCE_ABOUT: Record<string, string> = {
@@ -136,6 +150,24 @@ const GOV_REG_BATCH6_ABOUT: Record<string, string> = {
   'rcmc-registration': gr6Rcmc,
   'startup-india-registration': gr6StartupIndia,
   'startup-india-tax-exemption': gr6StartupTax,
+};
+
+/** GST services (Batch 7) — long-form about copy; last spread wins. */
+const GST_BATCH7_ABOUT: Record<string, string> = {
+  'gst-advisory': gst7Advisory,
+  'gst-annual-return': gst7AnnualReturn,
+  'gst-e-way-bill': gst7Eway,
+  'gst-lut-filing': gst7Lut,
+  'gst-refund': gst7Refund,
+  'gst-registration': gst7Registration,
+  'gst-registration-cancellation': gst7Cancellation,
+  'gst-registration-foreigners': gst7Foreigners,
+  'gst-return-filing': gst7ReturnFiling,
+  'gstr-10-final-return': gst7Gstr10,
+  'input-tax-credit-recon': gst7Itc,
+  'temporary-gst-registration': gst7Ctp,
+  'virtual-office-gstin': gst7Virtual,
+  'gst-registration-revocation': gst7Revocation,
 };
 
 /**
@@ -19871,6 +19903,7 @@ Professional Tax Registration in India is a mandatory state-level compliance req
   ...FEMA_BATCH4_ABOUT,
   ...FSSAI_BATCH5_ABOUT,
   ...GOV_REG_BATCH6_ABOUT,
+  ...GST_BATCH7_ABOUT,
 };
 
 /**

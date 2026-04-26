@@ -31,11 +31,16 @@ type Props = {
    * Optional layout preset for long-form service markdown (e.g. business conversion batch,
    * FEMA compliance batch 4). Only applied with `variant="service"`.
    */
-  contentPreset?: 'business-conv-batch-3' | 'fema-batch-4' | 'fssai-batch-5' | 'gov-reg-batch-6';
+  contentPreset?: 'business-conv-batch-3' | 'fema-batch-4' | 'fssai-batch-5' | 'gov-reg-batch-6' | 'gst-batch-7';
 };
 
 function isLongFormServicePreset(p?: string): boolean {
-  return p === 'fema-batch-4' || p === 'fssai-batch-5' || p === 'gov-reg-batch-6';
+  return (
+    p === 'fema-batch-4' ||
+    p === 'fssai-batch-5' ||
+    p === 'gov-reg-batch-6' ||
+    p === 'gst-batch-7'
+  );
 }
 
 type CalloutVariant = 'default' | 'note' | 'tip' | 'warn' | 'important';
@@ -761,7 +766,7 @@ const DataTable: React.FC<DataTableProps & { feeColumnRight?: boolean }> = ({
 
 type BlockRenderCtx = {
   variant: 'default' | 'service';
-  contentPreset?: 'business-conv-batch-3' | 'fema-batch-4' | 'fssai-batch-5' | 'gov-reg-batch-6';
+  contentPreset?: 'business-conv-batch-3' | 'fema-batch-4' | 'fssai-batch-5' | 'gov-reg-batch-6' | 'gst-batch-7';
   /** Normalized H2 label for the current section (when inside an H2 segment). */
   sectionHeading?: string;
 };
@@ -794,13 +799,19 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
       const { rest } = extractSectionNum(block.text);
       if (h2InSection) {
         const r = rest.trim();
-        const longFormFema = isLongFormServicePreset(ctx.contentPreset);
+        const preset = ctx.contentPreset;
+        const longFormFema = isLongFormServicePreset(preset);
         const lim = longFormFema && /^limitations$/i.test(r);
-        const doc = longFormFema && /^documents required$/i.test(r);
-        const comp = ctx.contentPreset === 'fema-batch-4' && /^compliance requirements$/i.test(r);
+        const commonMist = preset === 'gst-batch-7' && /^common mistakes$/i.test(r);
+        const doc =
+          longFormFema &&
+          (/^documents required$/i.test(r) || (preset === 'gst-batch-7' && /^documents$/i.test(r)));
+        const comp =
+          (ctx.contentPreset === 'fema-batch-4' && /^compliance requirements$/i.test(r)) ||
+          (preset === 'gst-batch-7' && /^compliance$/i.test(r));
         const ren = ctx.contentPreset === 'fssai-batch-5' && /^renewal$/i.test(r);
         const val = longFormFema && /^validity$/i.test(r);
-        const FemaIcon = lim
+        const FemaIcon = lim || commonMist
           ? AlertTriangle
           : doc
             ? FileText
@@ -880,7 +891,9 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
       const sh = (ctx.sectionHeading ?? '').trim();
       const longFormFema = isLongFormServicePreset(preset);
       const benefitOrFeaturesGrid =
-        /^benefits$/i.test(sh) || (preset === 'gov-reg-batch-6' && /^features$/i.test(sh));
+        /^benefits$/i.test(sh) ||
+        (preset === 'gov-reg-batch-6' && /^features$/i.test(sh)) ||
+        (preset === 'gst-batch-7' && /^features$/i.test(sh));
       const femaBenefits =
         ctx.variant === 'service' && longFormFema && benefitOrFeaturesGrid;
       if (femaBenefits) {
@@ -919,7 +932,10 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
           </ul>
         );
       }
-      const femaLimitations = ctx.variant === 'service' && longFormFema && /^limitations$/i.test(sh);
+      const femaLimitations =
+        ctx.variant === 'service' &&
+        ((longFormFema && /^limitations$/i.test(sh)) ||
+          (preset === 'gst-batch-7' && /^common mistakes$/i.test(sh)));
       if (femaLimitations) {
         return (
           <ul className="mt-2.5 list-disc space-y-2 pl-5 text-[16px] sm:text-[17px] text-gray-800 leading-relaxed">
@@ -935,7 +951,8 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
         ctx.variant === 'service' &&
         longFormFema &&
         ((preset === 'fema-batch-4' && /^compliance requirements$/i.test(sh)) ||
-          (preset === 'fssai-batch-5' && /^renewal$/i.test(sh)));
+          (preset === 'fssai-batch-5' && /^renewal$/i.test(sh)) ||
+          (preset === 'gst-batch-7' && /^compliance$/i.test(sh)));
       if (compLikeList) {
         return (
           <ul className="mt-2.5 list-disc space-y-2 pl-5 text-[16px] sm:text-[17px] text-gray-800 leading-relaxed">
@@ -948,7 +965,9 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
         );
       }
       const femaDocs =
-        ctx.variant === 'service' && longFormFema && /^documents required$/i.test(sh);
+        ctx.variant === 'service' &&
+        longFormFema &&
+        (/^documents required$/i.test(sh) || (preset === 'gst-batch-7' && /^documents$/i.test(sh)));
       if (femaDocs) {
         return (
           <ul
