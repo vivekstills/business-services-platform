@@ -94,6 +94,57 @@ import intl10My from './service-about/intl-incorporation-batch-10/incorporation-
 import intl10Sg from './service-about/intl-incorporation-batch-10/incorporation-singapore.md?raw';
 import intl10Uk from './service-about/intl-incorporation-batch-10/incorporation-uk.md?raw';
 import intl10Us from './service-about/intl-incorporation-batch-10/incorporation-usa.md?raw';
+import lp11Beer from './service-about/licenses-permits-batch-11/beer-shop-license.md?raw';
+import lp11Club from './service-about/licenses-permits-batch-11/club-license.md?raw';
+import lp11Mild from './service-about/licenses-permits-batch-11/mild-liquor-wine-bar.md?raw';
+import lp11Country1d from './service-about/licenses-permits-batch-11/one-day-country-liquor.md?raw';
+import lp11Foreign1d from './service-about/licenses-permits-batch-11/one-day-foreign-liquor.md?raw';
+import lp11YrLife from './service-about/licenses-permits-batch-11/one-year-lifelong-foreign-liquor.md?raw';
+import lp11PermitRoom from './service-about/licenses-permits-batch-11/permit-room-license.md?raw';
+import lp11Temp1d from './service-about/licenses-permits-batch-11/temporary-one-day-function-license.md?raw';
+import lp11WhCountry from './service-about/licenses-permits-batch-11/wholesale-country-liquor.md?raw';
+import lp11WhForeign from './service-about/licenses-permits-batch-11/wholesale-foreign-liquor.md?raw';
+import lp11WhWine from './service-about/licenses-permits-batch-11/wholesale-wine-license.md?raw';
+import lp11WineBar from './service-about/licenses-permits-batch-11/wine-bar-license.md?raw';
+import lp11WineShop from './service-about/licenses-permits-batch-11/wine-shop-license.md?raw';
+import lp11Factory from './service-about/licenses-permits-batch-11/factory-license-registration.md?raw';
+import lp11Health from './service-about/licenses-permits-batch-11/health-license.md?raw';
+import lp11Pt from './service-about/licenses-permits-batch-11/professional-tax-registration.md?raw';
+import lp11Psara from './service-about/licenses-permits-batch-11/psara-registration.md?raw';
+import lp11ReraAgent from './service-about/licenses-permits-batch-11/rera-registration-for-agents.md?raw';
+import lp11ReraProj from './service-about/licenses-permits-batch-11/rera-registration-for-projects.md?raw';
+import lp11Trade from './service-about/licenses-permits-batch-11/trade-license.md?raw';
+import lp11Vat from './service-about/licenses-permits-batch-11/vat-registration.md?raw';
+import lp11Clra from './service-about/licenses-permits-batch-11/contract-labour-license-registration.md?raw';
+import lp11ClraRen from './service-about/licenses-permits-batch-11/contract-labour-license-renewal.md?raw';
+import lp11FactoryRen from './service-about/licenses-permits-batch-11/factory-license-renewal.md?raw';
+import lp11Cte from './service-about/licenses-permits-batch-11/pcb-consent-establish.md?raw';
+import lp11Cto from './service-about/licenses-permits-batch-11/pcb-consent-operate.md?raw';
+import lp11Pe from './service-about/licenses-permits-batch-11/principal-employer-registration.md?raw';
+import mca12Aoc4 from './service-about/mca-compliance-batch-12/aoc-4-filing.md?raw';
+import mca12Mgt7 from './service-about/mca-compliance-batch-12/mgt-7-filing.md?raw';
+import mca12Mgt7a from './service-about/mca-compliance-batch-12/mgt-7a-filing.md?raw';
+import mca12Xbrl from './service-about/mca-compliance-batch-12/xbrl-filing.md?raw';
+import mca12AddDir from './service-about/mca-compliance-batch-12/add-director.md?raw';
+import mca12AddPartner from './service-about/mca-compliance-batch-12/add-partner-llp.md?raw';
+import mca12Aoa from './service-about/mca-compliance-batch-12/aoa-amendment.md?raw';
+import mca12Adt1 from './service-about/mca-compliance-batch-12/adt-1-filing.md?raw';
+import mca12Ccfs from './service-about/mca-compliance-batch-12/ccfs-scheme.md?raw';
+import mca12LlpAgr from './service-about/mca-compliance-batch-12/change-llp-agreement.md?raw';
+import mca12RegOff from './service-about/mca-compliance-batch-12/change-registered-office.md?raw';
+import mca12CloseCo from './service-about/mca-compliance-batch-12/close-company.md?raw';
+import mca12CloseLlp from './service-about/mca-compliance-batch-12/close-llp.md?raw';
+import mca12Inc20a from './service-about/mca-compliance-batch-12/inc-20a-filing.md?raw';
+import mca12Demat from './service-about/mca-compliance-batch-12/demat-of-shares.md?raw';
+import mca12Dormant from './service-about/mca-compliance-batch-12/dormant-status-filing.md?raw';
+import mca12Dpt3 from './service-about/mca-compliance-batch-12/dpt-3-filing.md?raw';
+import mca12Cap from './service-about/mca-compliance-batch-12/increase-authorised-capital.md?raw';
+import mca12Llp11 from './service-about/mca-compliance-batch-12/llp-form-11-filing.md?raw';
+import mca12Moa from './service-about/mca-compliance-batch-12/moa-amendment.md?raw';
+import mca12Msme1 from './service-about/mca-compliance-batch-12/msme-1-form-filing.md?raw';
+import mca12Name from './service-about/mca-compliance-batch-12/name-change-company.md?raw';
+import mca12RemDir from './service-about/mca-compliance-batch-12/remove-director.md?raw';
+import mca12Share from './service-about/mca-compliance-batch-12/share-transfer.md?raw';
 
 /** Legal & corporate annual compliance — full copy; overrides JSON/API short blurbs. */
 const LEGAL_ANNUAL_COMPLIANCE_ABOUT: Record<string, string> = {
@@ -210,6 +261,65 @@ const INT_INCORPORATION_BATCH10_ABOUT: Record<string, string> = {
   'incorporation-singapore': intl10Sg,
   'incorporation-uk': intl10Uk,
   'incorporation-usa': intl10Us,
+};
+
+/** Licenses & permits (Batch 11) — long-form about copy; last spread wins. */
+const LICENSES_PERMITS_BATCH11_ABOUT: Record<string, string> = {
+  'beer-shop-license': lp11Beer,
+  'club-license': lp11Club,
+  'mild-liquor-wine-bar': lp11Mild,
+  'one-day-country-liquor': lp11Country1d,
+  'one-day-foreign-liquor': lp11Foreign1d,
+  'one-year-lifelong-foreign-liquor': lp11YrLife,
+  'permit-room-license': lp11PermitRoom,
+  'temporary-one-day-function-license': lp11Temp1d,
+  'wholesale-country-liquor': lp11WhCountry,
+  'wholesale-foreign-liquor': lp11WhForeign,
+  'wholesale-wine-license': lp11WhWine,
+  'wine-bar-license': lp11WineBar,
+  'wine-shop-license': lp11WineShop,
+  'factory-license-registration': lp11Factory,
+  'health-license': lp11Health,
+  'professional-tax-registration': lp11Pt,
+  'psara-registration': lp11Psara,
+  'rera-registration-for-agents': lp11ReraAgent,
+  'rera-registration-for-projects': lp11ReraProj,
+  'trade-license': lp11Trade,
+  'vat-registration': lp11Vat,
+  'contract-labour-license-registration': lp11Clra,
+  'contract-labour-license-renewal': lp11ClraRen,
+  'factory-license-renewal': lp11FactoryRen,
+  'pcb-consent-establish': lp11Cte,
+  'pcb-consent-operate': lp11Cto,
+  'principal-employer-registration': lp11Pe,
+};
+
+/** MCA / ROC compliance (Batch 12) — long-form about copy; last spread wins. */
+const MCA_COMPLIANCE_BATCH12_ABOUT: Record<string, string> = {
+  'aoc-4-filing': mca12Aoc4,
+  'mgt-7-filing': mca12Mgt7,
+  'mgt-7a-filing': mca12Mgt7a,
+  'xbrl-filing': mca12Xbrl,
+  'add-director': mca12AddDir,
+  'add-partner-llp': mca12AddPartner,
+  'aoa-amendment': mca12Aoa,
+  'adt-1-filing': mca12Adt1,
+  'ccfs-scheme': mca12Ccfs,
+  'change-llp-agreement': mca12LlpAgr,
+  'change-registered-office': mca12RegOff,
+  'close-company': mca12CloseCo,
+  'close-llp': mca12CloseLlp,
+  'inc-20a-filing': mca12Inc20a,
+  'demat-of-shares': mca12Demat,
+  'dormant-status-filing': mca12Dormant,
+  'dpt-3-filing': mca12Dpt3,
+  'increase-authorised-capital': mca12Cap,
+  'llp-form-11-filing': mca12Llp11,
+  'moa-amendment': mca12Moa,
+  'msme-1-form-filing': mca12Msme1,
+  'name-change-company': mca12Name,
+  'remove-director': mca12RemDir,
+  'share-transfer': mca12Share,
 };
 
 const GST_BATCH7_ABOUT: Record<string, string> = {
@@ -16870,6 +16980,8 @@ Professional Tax Registration in India is a mandatory state-level compliance req
   ...EXIM_BATCH8_ABOUT,
   ...INCOME_TAX_BATCH9_ABOUT,
   ...INT_INCORPORATION_BATCH10_ABOUT,
+  ...LICENSES_PERMITS_BATCH11_ABOUT,
+  ...MCA_COMPLIANCE_BATCH12_ABOUT,
 };
 
 /**

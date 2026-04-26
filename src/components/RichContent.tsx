@@ -40,7 +40,9 @@ type Props = {
     | 'gst-batch-7'
     | 'exim-batch-8'
     | 'income-tax-batch-9'
-    | 'intl-incorporation-batch-10';
+    | 'intl-incorporation-batch-10'
+    | 'licenses-permits-batch-11'
+    | 'mca-compliance-batch-12';
 };
 
 /** GST / exim / income-tax long-form: shared `Documents`, `Features`, `Compliance` section styling. */
@@ -56,7 +58,9 @@ function isLongFormServicePreset(p?: string): boolean {
     p === 'gst-batch-7' ||
     p === 'exim-batch-8' ||
     p === 'income-tax-batch-9' ||
-    p === 'intl-incorporation-batch-10'
+    p === 'intl-incorporation-batch-10' ||
+    p === 'licenses-permits-batch-11' ||
+    p === 'mca-compliance-batch-12'
   );
 }
 
@@ -799,7 +803,9 @@ type BlockRenderCtx = {
     | 'gst-batch-7'
     | 'exim-batch-8'
     | 'income-tax-batch-9'
-    | 'intl-incorporation-batch-10';
+    | 'intl-incorporation-batch-10'
+    | 'licenses-permits-batch-11'
+    | 'mca-compliance-batch-12';
   /** Normalized H2 label for the current section (when inside an H2 segment). */
   sectionHeading?: string;
 };
@@ -906,10 +912,14 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
       const feeish =
         longFormFema &&
         (/^fees$/i.test(sh) ||
+          /^government fees$/i.test(sh) ||
           /^cost overview$/i.test(sh) ||
           /\bfee\b/i.test((block.headers[1] ?? block.headers[0] ?? '').toLowerCase()));
       const bareTable =
-        ctx.contentPreset === 'income-tax-batch-9' || ctx.contentPreset === 'intl-incorporation-batch-10';
+        ctx.contentPreset === 'income-tax-batch-9' ||
+        ctx.contentPreset === 'intl-incorporation-batch-10' ||
+        ctx.contentPreset === 'licenses-permits-batch-11' ||
+        ctx.contentPreset === 'mca-compliance-batch-12';
       return (
         <DataTable
           headers={block.headers}
@@ -933,6 +943,7 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
       const longFormFema = isLongFormServicePreset(preset);
       const benefitOrFeaturesGrid =
         /^benefits$/i.test(sh) ||
+        (preset === 'licenses-permits-batch-11' && /^advantages \/ benefits$/i.test(sh)) ||
         (preset === 'intl-incorporation-batch-10' && /^key benefits$/i.test(sh)) ||
         (preset === 'gov-reg-batch-6' && /^features$/i.test(sh)) ||
         (isDocsFeaturesCompliancePreset(preset) && /^features$/i.test(sh));
@@ -977,6 +988,7 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
       const femaLimitations =
         ctx.variant === 'service' &&
         ((longFormFema && /^limitations$/i.test(sh)) ||
+          (longFormFema && /^disadvantages \/ limitations$/i.test(sh)) ||
           (isDocsFeaturesCompliancePreset(preset) && /^common mistakes$/i.test(sh)) ||
           (preset === 'income-tax-batch-9' && /^errors$/i.test(sh)));
       if (femaLimitations) {
@@ -1143,7 +1155,8 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
         isLongFormServicePreset(ctx.contentPreset) &&
         (/^process$/i.test(shOl) ||
           (ctx.contentPreset === 'intl-incorporation-batch-10' &&
-            /^step-by-step process$/i.test(shOl)))
+            /^step-by-step process$/i.test(shOl)) ||
+          /^process \/ procedure$/i.test(shOl))
       ) {
         const n = block.items.length;
         return (

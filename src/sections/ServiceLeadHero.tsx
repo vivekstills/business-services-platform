@@ -17,6 +17,8 @@ import { GST_BATCH7_SERVICE_IDS } from '../data/gstBatch7ServiceIds';
 import { EXIM_BATCH8_SERVICE_IDS } from '../data/eximBatch8ServiceIds';
 import { INCOME_TAX_BATCH9_SERVICE_IDS } from '../data/incomeTaxBatch9ServiceIds';
 import { INTL_INCORPORATION_BATCH10_SERVICE_IDS } from '../data/intlIncorporationBatch10ServiceIds';
+import { LICENSES_PERMITS_BATCH11_SERVICE_IDS } from '../data/licensesPermitsBatch11ServiceIds';
+import { MCA_COMPLIANCE_BATCH12_SERVICE_IDS } from '../data/mcaComplianceBatch12ServiceIds';
 import { parsePriceToAmount } from '../utils/price';
 import {
   INDIAN_STATES,
@@ -503,7 +505,11 @@ export default function ServiceLeadHero({ service }: Props) {
                               ? 'income-tax-batch-9'
                               : INTL_INCORPORATION_BATCH10_SERVICE_IDS.has(service.id)
                                 ? 'intl-incorporation-batch-10'
-                                : undefined
+                                : LICENSES_PERMITS_BATCH11_SERVICE_IDS.has(service.id)
+                                  ? 'licenses-permits-batch-11'
+                                  : MCA_COMPLIANCE_BATCH12_SERVICE_IDS.has(service.id)
+                                    ? 'mca-compliance-batch-12'
+                                    : undefined
               }
             />
           </div>
