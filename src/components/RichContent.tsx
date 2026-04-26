@@ -1062,8 +1062,9 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
         ctx.contentPreset === 'fema-batch-4' &&
         /^process$/i.test(shOl)
       ) {
+        const n = block.items.length;
         return (
-          <ol className="relative ml-0 mt-3 list-none border-l-2 border-sky-200/90 pl-2" role="list">
+          <ol className="mt-3 list-none space-y-0 pl-0" role="list">
             {block.items.map((item, j) => {
               const m = item.match(/^Step\s+\d+\s+—\s*(.+)$/i);
               const rest = m ? m[1].trim() : item;
@@ -1073,15 +1074,23 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
               return (
                 <li
                   key={j}
-                  className="relative list-none pb-8 pl-6 last:pb-0 sm:pl-7"
+                  className="flex min-h-0 list-none pb-8 last:pb-0"
                 >
-                  <span
-                    className="absolute left-[-0.3rem] top-[0.1rem] z-[1] flex h-7 w-7 items-center justify-center rounded-full border-2 border-sky-800 bg-white text-[12px] font-semibold text-sky-900 shadow-[0_0_0_2px_#fff]"
+                  <div
+                    className="flex w-7 shrink-0 flex-col items-center self-stretch sm:w-8"
                     aria-hidden
                   >
-                    {j + 1}
-                  </span>
-                  <div className="min-w-0 text-[16px] leading-relaxed text-gray-800 sm:text-[17px]">
+                    {j > 0 ? (
+                      <div className="h-2 w-0.5 shrink-0 bg-sky-200/90 sm:h-3" />
+                    ) : null}
+                    <div className="z-[1] flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full border-2 border-sky-800 bg-white text-[12px] font-semibold text-sky-900">
+                      {j + 1}
+                    </div>
+                    {j < n - 1 ? (
+                      <div className="min-h-6 w-0.5 flex-1 bg-sky-200/90" />
+                    ) : null}
+                  </div>
+                  <div className="min-w-0 flex-1 pl-3 text-[16px] leading-relaxed text-gray-800 sm:pl-3.5 sm:text-[17px]">
                     <p className="font-semibold text-gray-900">{parseInline(stepTitle)}</p>
                     {stepBody ? (
                       <p className="mt-1.5 font-normal text-gray-700">{parseInline(stepBody)}</p>
