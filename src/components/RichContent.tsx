@@ -148,6 +148,10 @@ function tryParseGfmTable(
   let i = sepIdx + 1;
   const rows: string[][] = [];
   while (i < lines.length) {
+    // A blank line ends the table so a second GFM table (e.g. Government vs
+    // Professional fees) is not merged into the first — without this, the
+    // next header row is misparsed as a data row and | --- | shows as raw text.
+    if (!lines[i].trim()) break;
     i = indexOfNextNonEmptyLine(lines, i);
     if (i >= lines.length) break;
     const row = lines[i].trim();
