@@ -1,26 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, Navigate } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { BookOpen, ChevronRight, Clock, Calendar, User, Tag, ArrowLeft, ArrowRight, AlignLeft } from 'lucide-react';
+import { BookOpen, ChevronRight, Clock, Calendar, User, ArrowLeft, ArrowRight, AlignLeft } from 'lucide-react';
 import { useContent } from '../context/ContentContext';
 import RichContent from '../components/RichContent';
 import type { Article } from '../types/content';
 import SEOHead, { SITE_URL } from '../components/SEOHead';
 import { formatReadingTimeLabel } from '../utils/readingTime';
-
-const CATEGORY_COLORS: Record<string, string> = {
-  'GST & Tax': 'bg-orange-50 text-orange-700 border-orange-200',
-  'Company Registration': 'bg-blue-50 text-blue-700 border-blue-200',
-  'Trademark & IP': 'bg-purple-50 text-purple-700 border-purple-200',
-  'Compliance': 'bg-red-50 text-red-700 border-red-200',
-  'Registrations': 'bg-teal-50 text-teal-700 border-teal-200',
-  'Income Tax': 'bg-green-50 text-green-700 border-green-200',
-  'Licensing': 'bg-yellow-50 text-yellow-700 border-yellow-200',
-};
+import { getArticleCategoryBadgeClasses, normalizeArticleCategory } from '../data/articleCategories';
 
 function CategoryBadge({ cat }: { cat: string }) {
-  const cls = CATEGORY_COLORS[cat] ?? 'bg-gray-100 text-gray-600 border-gray-200';
-  return <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold border ${cls}`}>{cat}</span>;
+  const label = normalizeArticleCategory(cat) || cat;
+  const cls = getArticleCategoryBadgeClasses(cat);
+  return <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold border ${cls}`}>{label}</span>;
 }
 
 function RelatedCard({ article }: { article: Article }) {

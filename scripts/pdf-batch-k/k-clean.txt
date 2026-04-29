@@ -1,0 +1,1137 @@
+ 
+ 
+Article 1: Health Security to National 
+Security Cess Act 2026 
+ 
+Health Security to National Security Cess Act 2026: 
+Everything You Need to Know 
+The Union Budget 2026 introduced a significant fiscal measure that has drawn attention from 
+businesses, healthcare professionals, and policy analysts alike — the Health Security to 
+National Security Cess (HSNSC) Act 2026. This cess represents the government's intent 
+to channel dedicated revenue streams toward dual-purpose expenditures: strengthening 
+India's public health infrastructure and bolstering national security frameworks. 
+If you're a business owner, tax professional, or simply a taxpayer trying to understand how 
+this impacts your finances, this guide breaks it all down clearly. 
+ 
+What Is the Health Security to National Security Cess? 
+A cess in Indian taxation is a surcharge levied over and above the standard tax rate, 
+earmarked for a specific purpose. Unlike general tax revenue that flows into the 
+Consolidated Fund of India, cess revenue is credited to a separate fund and can only be 
+used for the stated objective. 
+The HSNSC Act 2026 creates a unified cess that pools funding for: 
+●​ Strengthening pandemic preparedness and bio-security infrastructure 
+●​ Funding cybersecurity and border security initiatives 
+●​ Supporting health emergency response mechanisms 
+●​ Upgrading critical national infrastructure at the intersection of health and defense 
+This dual mandate is what makes the cess unique — it explicitly recognizes that health 
+security and national security are interlinked, particularly in a post-COVID world where 
+biological threats have national security dimensions. 
+ 
+Legal Framework and Enactment 
+
+The Act was passed by Parliament in the Budget Session 2026 and received Presidential 
+assent. It amends the existing cess collection machinery under the Income Tax Act, 1961, 
+and operates alongside other existing cesses such as: 
+●​ Health and Education Cess (4% on income tax) 
+●​ Swachh Bharat Cess (discontinued but precedent-setting) 
+The HSNSC Act 2026 creates a new dedicated fund under Article 270 of the Constitution, 
+ensuring the proceeds are not divisible with states under the Finance Commission formula 
+— a point of contention with several state governments. 
+ 
+Key Provisions at a Glance 
+Provision 
+Details 
+Name of Cess 
+Health Security to National Security Cess 
+Applicable On 
+Net income tax liability (before rebates u/s 87A) 
+Rate of Cess 
+1% (for individuals), 2% (for corporates and LLPs) 
+Effective From 
+April 1, 2026 (AY 2026–27 onwards) 
+Applicability 
+All taxpayers liable to pay income tax 
+Exemptions 
+Persons with total income below the basic exemption limit 
+Fund Created 
+National Health-Security Fund (NHSF) 
+Administration 
+Central Board of Direct Taxes (CBDT) 
+TDS Impact 
+Yes — applicable on TDS calculations 
+
+Advance Tax 
+Included in advance tax installment calculations 
+ 
+Who Is Affected? 
+The cess touches virtually every category of taxpayer: 
+Individuals and HUFs 
+Resident individuals with taxable income above the basic exemption limit (₹3 lakh for those 
+below 60 years, ₹3.5 lakh for senior citizens) will pay 1% of their income tax liability as 
+HSNSC. 
+Corporates and LLPs 
+All domestic companies, foreign companies, and LLPs will pay 2% of their computed income 
+tax liability. This includes companies opting for the concessional tax regime under Section 
+115BAA. 
+Partnership Firms 
+Firms (other than LLPs) pay 2% on their income tax liability. 
+Non-Resident Indians (NRIs) 
+NRIs earning income in India above the threshold are also covered. Their HSNSC is 
+computed on income tax on Indian-sourced income. 
+ 
+How Is the Cess Calculated? 
+The cess is applied on the net income tax payable — after deducting any applicable rebate 
+under Section 87A, but before any MAT/AMT credit. 
+Formula: 
+HSNSC = Income Tax Payable × Cess Rate (1% or 2%) 
+Total Tax = Income Tax + Health & Education Cess (4%) + HSNSC (1% or 
+2%) 
+Note that the HSNSC is calculated on the base income tax, not on the Health & Education 
+Cess amount. These are separate surcharges computed independently. 
+ 
+
+Practical Example: Individual Taxpayer 
+Rahul, a salaried employee in Mumbai, has a taxable income of ₹12,00,000 in AY 2026–27. 
+Component 
+Amount (₹) 
+Taxable Income 
+12,00,000 
+Income Tax (as per slab) 
+1,00,000 
+Health & Education Cess (4%) 4,000 
+HSNSC (1% on ₹1,00,000) 
+1,000 
+Total Tax Liability 
+1,05,000 
+ 
+Practical Example: Corporate Taxpayer 
+XYZ Pvt. Ltd. has a taxable income of ₹1 crore. It opts for the 22% tax rate under Section 
+115BAA. 
+Component 
+Amount (₹) 
+Taxable Income 
+1,00,00,000 
+Income Tax @ 22% 
+22,00,000 
+Surcharge (if applicable) 
+2,20,000 
+
+Health & Education Cess (4%) 88,800 
+HSNSC (2% on ₹22,00,000) 
+44,000 
+Total Tax 
+25,52,800 
+ 
+Impact on TDS and Advance Tax 
+The cess is factored into: 
+TDS Deductions: Employers must recalculate TDS (Form 16/16A) to include HSNSC. 
+Payroll systems need to be updated accordingly. Failure to account for HSNSC in TDS leads 
+to short deduction and consequent interest under Section 201. 
+Advance Tax Installments: For both individuals and corporates making advance tax 
+payments (due on 15 June, 15 September, 15 December, 15 March), the HSNSC must be 
+included in each installment. Underpayment triggers interest under Sections 234B and 234C. 
+ 
+Exceptions and Exemptions 
+Category 
+HSNSC Applicable? 
+Income below basic exemption limit 
+No 
+Agricultural income (purely) 
+No 
+Incomes exempt u/s 10 (PF, gratuity, 
+etc.) 
+No — exempted income doesn't form part of tax 
+base 
+Cooperative societies under special 
+regime 
+Subject to CBDT clarification 
+
+Section 10(23C) institutions 
+(educational) 
+No, if income is fully exempt 
+Political parties u/s 13A 
+No 
+ 
+Policy Implications and Concerns 
+Revenue Potential: The government estimates the HSNSC will generate approximately 
+₹18,000–22,000 crore annually, which will be split roughly 60:40 between health security 
+initiatives and national security infrastructure. 
+State Resentment: Since cess revenue does not enter the divisible pool, states receive no 
+share. Several states have filed formal representations arguing this undermines cooperative 
+fiscal federalism. 
+Corporate Competitiveness: Industry bodies like FICCI and CII have raised concerns that 
+the additional 2% cess increases India's effective corporate tax rate, potentially affecting FDI 
+attractiveness. 
+Compliance Burden: Every TDS deductor needs to update software, recalculate 
+withholding, and file revised forms — a significant one-time administrative effort. 
+ 
+5 Unique FAQs 
+Q1. Is the HSNSC deductible as a business expense under the Income Tax Act? No. 
+Like all other cesses and surcharges, HSNSC is not deductible as a business expense when 
+computing taxable income. Section 40(a)(ii) explicitly disallows income tax and any 
+surcharge or cess on income tax as a deduction. 
+Q2. Will NRIs returning to India mid-year face double taxation on the HSNSC? The 
+cess applies only on Indian-sourced income for NRIs. If an individual changes residential 
+status mid-year, income is bifurcated — only the portion subject to Indian income tax attracts 
+HSNSC. DTAA provisions do not typically cover cess, so there's no treaty relief available for 
+this component. 
+Q3. Does the HSNSC apply to income computed under the presumptive taxation 
+scheme (Section 44AD/44ADA)? Yes. Even under presumptive schemes, the income tax 
+computed on deemed income is subject to HSNSC at the applicable rate. The presumptive 
+scheme only simplifies income computation — it doesn't alter the cess liability. 
+
+Q4. How will the National Health-Security Fund actually use the collected funds — is 
+there an oversight mechanism? The Act mandates annual reporting to Parliament through 
+a dedicated statement under the Finance Act. An inter-ministerial committee co-chaired by 
+the Health Secretary and the National Security Advisor oversees fund allocation. However, 
+critics note the absence of independent audit provisions beyond CAG's routine remit. 
+Q5. If a company has a zero tax liability due to MAT credit utilization, does HSNSC still 
+apply? Where MAT credit fully offsets regular income tax, and the company's final tax 
+payable is nil, HSNSC would also be nil. However, if only partial credit is utilized and some 
+income tax remains payable, HSNSC is computed on that residual amount. 
+ 
+Article 2: GST on Handling & Rain Fees 
+ 
+GST on Handling & Rain Fees: Taxability, Rate, and 
+Compliance Guide 
+In the logistics and warehousing sector, ancillary charges like handling fees and rain fees 
+often create significant confusion when it comes to GST treatment. These are neither pure 
+transport charges nor standard service fees — they occupy a grey zone that has been the 
+subject of advance rulings, trade circulars, and litigation. This article cuts through the 
+ambiguity. 
+ 
+Understanding Handling Fees and Rain Fees 
+Before diving into GST, let's establish what these charges actually are: 
+Handling Fee: A charge levied by warehouse operators, port authorities, freight forwarders, 
+or customs house agents (CHAs) for physically loading, unloading, stacking, sorting, or 
+otherwise managing cargo. It covers the labor, equipment, and operational cost of physically 
+moving goods. 
+Rain Fee (also called Inclement Weather Fee / Monsoon Surcharge): A surcharge levied 
+by ports, logistics companies, or freight operators when cargo handling is disrupted due to 
+adverse weather — particularly monsoons or cyclone activity. It compensates for delays, 
+additional protective measures (tarpaulins, covered sheds), and labor overtime during 
+rainfall. 
+ 
+
+The GST Framework Applicable 
+Under GST, both handling fees and rain fees are classified as supply of services. The 
+applicable provisions depend on: 
+●​ Who is the service provider (GTA, registered logistics company, port trust, etc.) 
+●​ Who is the recipient (B2B or B2C) 
+●​ Whether the services qualify for any exemption under Notification No. 12/2017-CT 
+(Rate) or 9/2017-IT (Rate) 
+ 
+GST Rate Applicability 
+Type of Charge 
+HSN/SAC 
+Code 
+GST Rate 
+Remarks 
+Cargo handling services 
+9967 
+18% 
+Standard rate; no exemption 
+Port handling (by port 
+trusts/major ports) 
+9967 
+18% 
+Major ports are GST registered 
+entities 
+Rain fee (by logistics 
+company) 
+9967 
+18% 
+Treated as ancillary/incidental to 
+handling 
+Rain fee (by GTA) 
+9965 
+5% (RCM) 
+or 12% 
+Depends on GTA vs. ancillary 
+charge classification 
+Stevedoring charges 
+9967 
+18% 
+Loading/unloading at port 
+Wharfage fees 
+9967 
+18% 
+Levied by port authorities 
+Key Point: If the rain fee is billed as a separate line item on an invoice distinct from freight, it 
+is independently taxed at 18%. If bundled with freight in a GTA invoice, the character of the 
+principal supply (freight at 5%) may apply — but this requires careful documentation. 
+ 
+
+The Composite Supply vs. Mixed Supply Question 
+This is where most disputes arise. 
+Scenario A — Bundled in GTA Invoice: A goods transport agency charges ₹50,000 freight 
++ ₹2,000 rain fee on the same invoice. If the GTA treats this as a composite supply where 
+freight is the principal supply, the entire amount including the rain fee may attract GST at 5% 
+under RCM (on the freight portion). This interpretation is favorable for shippers. 
+Scenario B — Separate Invoice from Handling Agent: A logistics company issues a 
+separate invoice for ₹2,000 as "Rain Fee / Inclement Weather Surcharge." Here, there is no 
+composite supply argument — it's an independent taxable service under SAC 9967 
+attracting 18% GST. 
+Scenario C — Port Handling with Rain Fee: Where a port trust issues a consolidated tariff 
+that includes all handling charges plus weather surcharges, the 18% rate applies to the 
+aggregate under the port's standard billing. 
+ 
+Who Pays? Forward Charge vs. Reverse Charge 
+Supplier Category 
+Mechanism 
+Who Pays GST 
+Registered logistics company 
+Forward Charge 
+Supplier collects and deposits 
+GTA (freight + ancillary) 
+Reverse Charge 
+(RCM) 
+Recipient (registered business) 
+pays 
+Port trust / major port authority 
+Forward Charge 
+Port trust collects and deposits 
+Unregistered small logistics 
+operator 
+RCM (if applicable) 
+Recipient registered under GST 
+Under Notification No. 13/2017-CT (Rate), services by a GTA to a registered person attract 
+RCM. If the rain fee is part of the GTA's composite charge, the recipient handles the GST 
+under RCM. 
+ 
+Practical Example 1: Importer at Mumbai Port 
+
+SteelCorp India Ltd. imports a shipment of stainless steel coils at JNPT. The charges 
+breakdown: 
+Charge 
+Amount (₹) 
+GST Rate 
+GST (₹) 
+Freight (GTA, ocean leg) 
+3,00,000 
+5% (RCM) 
+15,000 
+Port handling/stevedoring 
+40,000 
+18% 
+7,200 
+Rain fee (separate 
+invoice) 
+5,000 
+18% 
+900 
+CHA professional fee 
+15,000 
+18% 
+2,700 
+Total GST 
+ 
+ 
+25,800 
+SteelCorp pays the port handling and rain fee GST directly to the service providers. For the 
+GTA freight, it self-assesses and deposits under RCM. All of this is eligible for ITC (being 
+used in furtherance of business). 
+ 
+Practical Example 2: Agricultural Commodity Warehouse 
+FreshGrain Pvt. Ltd. stores paddy at a licensed warehouse. During the monsoon, the 
+warehouse charges a rain fee for additional covering and moisture management. 
+Here, if the warehouse is storing agricultural produce, the storage service may be exempt 
+under Entry 54 of Notification 12/2017-CT (Rate). However, the rain fee as an independent 
+logistical surcharge is not automatically exempt. The warehouse must evaluate: 
+●​ Is the rain fee integral to the storage (and thus covered under the exemption)? 
+●​ Or is it a separate incidental handling charge (taxable at 18%)? 
+Most advance rulings have held that surcharges beyond the principal exempt supply are 
+independently taxable unless they are genuinely inseparable. 
+ 
+ITC Eligibility 
+
+For businesses receiving handling and rain fee invoices, the Input Tax Credit (ITC) on 18% 
+GST is generally available provided: 
+●​ The services are used in the course or furtherance of business 
+●​ The recipient is registered under GST 
+●​ Tax has been paid by the supplier and GSTR-2B reflects the credit 
+●​ The goods/services are not covered under Section 17(5) (blocked credits) 
+Importers, manufacturers, and traders can freely claim ITC on handling and rain fee GST. 
+ 
+Common Errors and Compliance Issues 
+Wrong SAC Code: Many logistics companies erroneously use SAC 9965 (transport) instead 
+of 9967 (cargo handling). This creates ITC mismatches. 
+GTA Misclassification: Treating a logistics company as a GTA when it doesn't own or 
+operate trucks — this leads to incorrect RCM application. 
+No GST on Rain Fee: Some operators treat rain fees as a reimbursement rather than a 
+service charge and skip GST entirely. This is incorrect unless it's a genuine 
+cost-reimbursement with no margin. 
+Export Transactions: For export cargo, handling at ports may qualify as a zero-rated supply 
+(even if charged in INR) if it is an integral part of the export service chain. This requires 
+specific documentation. 
+ 
+Exceptions 
+●​ Pure labor supply contracts (where workers are contracted separately) may fall under 
+labor supply services at 18% but may have different classification nuances. 
+●​ Services by Port Trusts to vessels under specific exemption notifications may have 
+carve-outs. 
+●​ SEZ units receiving handling services may treat these as zero-rated inward supplies. 
+ 
+5 Unique FAQs 
+Q1. If a rain fee is charged by a foreign shipping line to an Indian importer, is GST 
+applicable? Yes. Under the IGST Act, import of services is taxable. When an Indian 
+registered importer receives a rain fee invoice from a foreign shipping line, it constitutes 
+import of service. The importer must pay IGST under RCM (Section 5(3) of IGST Act read 
+with Notification 10/2017-IT). The rate applicable would be 18%. 
+
+Q2. Can the handling fee be treated as part of the cost of goods for customs valuation 
+purposes? Handling fees incurred after the goods land on Indian soil (post-importation) are 
+not included in the customs assessable value. Only pre-importation costs (insurance, freight 
+to Indian port) are included. Post-landing costs like stevedoring and rain fees are separate 
+and attract only GST, not customs duty. 
+Q3. In a warehousing agreement, if the rain fee clause is embedded as a contingency 
+charge in the contract, must GST be charged even if the fee is waived one month? 
+GST is payable on the actual consideration received. If the rain fee is waived for a specific 
+month due to a commercial decision, no GST liability arises for that month. The waiver 
+should be documented through a credit note or formal amendment to avoid scrutiny. 
+Q4. Does the rain fee attract GST even if the consignment was damaged during rain — 
+i.e., the fee was charged but service wasn't fully rendered? Yes, GST liability arises at 
+the time of supply (invoice issuance or payment, whichever is earlier). The fact that the 
+service outcome was poor doesn't negate the GST. However, if the business disputes the 
+charge and it is reduced through negotiation, a credit note can be issued and the tax liability 
+adjusted accordingly. 
+Q5. How should e-commerce operators (ECOs) treat rain fees paid to third-party 
+logistics partners through their platform? ECOs acting as aggregators for logistics 
+services must examine whether they're liable to collect GST under Section 9(5) of the CGST 
+Act. If the rain fee is part of the logistics service facilitated by the ECO, the TCS provisions 
+and the ECO's own liability must be carefully evaluated. Many ECOs currently exclude 
+ancillary charges from TCS computation — this is a legally unresolved area and businesses 
+should seek specific advance rulings. 
+ 
+Article 3: GST Rate Cut from 18% to 5% 
+(ITC Reversal Under Section 18(4)) 
+ 
+GST Rate Cut from 18% to 5%: Understanding ITC 
+Reversal Under Section 18(4) 
+When the GST Council reduces the tax rate on a supply — say from 18% to 5% — it's not 
+purely good news for businesses that hold stock. The rate cut comes with a specific 
+obligation: reversal of Input Tax Credit (ITC) already availed on inputs held in stock, 
+work-in-progress, or capital goods. This is governed by Section 18(4) of the CGST Act, 
+2017. 
+
+This is one of the more complex and under-discussed provisions in GST law. Many 
+businesses inadvertently overlook this requirement, leading to demands, penalties, and 
+interest during audits. 
+ 
+Why Does a Rate Cut Trigger ITC Reversal? 
+The logic is straightforward, even if the compliance is not. 
+When goods attract 18% GST, a manufacturer or trader avails ITC on raw materials, 
+components, and inputs — all purchased at 18%. This ITC offsets their output liability. The 
+system is balanced. 
+When the GST rate drops to 5%, the output tax on future sales drops dramatically. But 
+the business has already accumulated ITC on older stock at the higher rate. If this ITC is not 
+reversed, the business would effectively get a windfall — crediting itself more ITC than the 
+output tax it will ever generate from that stock. Section 18(4) prevents this distortion. 
+ 
+The Legal Provision: Section 18(4) Explained 
+Section 18(4) of the CGST Act provides: 
+"Where any registered person who has availed of input tax credit opts to pay tax under 
+Section 10 (composition scheme) or where the goods or services or both supplied by him 
+become wholly exempt, he shall pay an amount, by way of debit in the electronic credit 
+ledger or electronic cash ledger, equivalent to the credit of input tax in respect of inputs held 
+in stock and inputs contained in semi-finished or finished goods held in stock..." 
+The provision also applies by extension through Section 18(6) read with Rule 44 when a 
+rate reduction effectively changes the tax treatment substantially. CBDT/GSTN clarifications 
+have confirmed this applicability in the context of rate cuts from the taxable bracket to a 
+lower slab. 
+Rule 44 of the CGST Rules specifies the methodology for computing the reversal amount. 
+ 
+When Does Section 18(4) Apply? 
+Trigger Event 
+Section 18(4) Applies? 
+Goods become fully exempt from 
+GST 
+Yes — full ITC reversal 
+
+GST rate reduced from 18% to 5% 
+Yes — proportionate/specific reversal required 
+Business switches to Composition 
+Scheme 
+Yes — full ITC reversal of stock on hand 
+Rate reduced only on specific 
+variants (not all goods) 
+Partial — only on the goods affected 
+Rate increased from 5% to 12% 
+No — ITC reversal not triggered; rate increase 
+doesn't require reversal 
+Business cancels GST registration 
+Yes — full ITC reversal on closing stock 
+ 
+Computing the Reversal: Rule 44 Methodology 
+For Inputs (Raw Materials, Components): 
+Reversal = ITC availed on such inputs proportionate to the extent they form part of stock 
+held on the date of rate change. 
+For Capital Goods: 
+Residual ITC = (Original ITC × remaining useful life in months) ÷ 60 
+The reversal is typically computed on a last-purchase-cost basis. 
+ 
+Step-by-Step Example 
+Situation: Paints manufacturer ABC Ltd. previously sold paints at 18% GST. The GST 
+Council reduces the rate to 5% effective November 1, 2025. 
+On October 31, 2025 (date of rate change), ABC Ltd. holds: 
+Item 
+Cost (₹) 
+ITC Availed (18%) (₹) 
+
+Raw material (pigments, solvents) 
+10,00,00
+0 
+1,80,000 
+Work-in-progress (partially processed) 
+5,00,000 
+90,000 
+Finished goods (paint tins ready to 
+sell) 
+8,00,000 
+1,44,000 
+Total ITC available on stock 
+ 
+4,14,000 
+After the rate cut, the output GST on sales from this stock will only be 5%. The ITC of 
+₹4,14,000 availed was based on an 18% regime. Section 18(4) requires ABC Ltd. to reverse 
+the excess credit. 
+Reversal computation: 
+The ITC that would have been availed at the new rate of 5% on the same purchases: 
+Item 
+Cost (₹) 
+Revised ITC (5%) (₹) 
+Excess to Reverse 
+(₹) 
+Raw material 
+10,00,00
+0 
+50,000 
+1,30,000 
+WIP 
+5,00,000 
+25,000 
+65,000 
+Finished 
+goods 
+8,00,000 
+40,000 
+1,04,000 
+Total 
+ 
+1,15,000 
+2,99,000 
+ABC Ltd. must debit its electronic credit ledger by ₹2,99,000 and file ITC-03 (or the 
+applicable form) declaring this reversal. 
+
+ 
+Form and Compliance Procedure 
+Step 
+Action Required 
+Step 
+1 
+Take stock count on the date immediately before the rate cut takes effect 
+Step 
+2 
+Compute ITC reversal using Rule 44 methodology 
+Step 
+3 
+File Form GST ITC-03 declaring the reversal 
+Step 
+4 
+Debit electronic credit ledger (or pay via cash ledger if credit is insufficient) 
+Step 
+5 
+Time limit — within 30 days of rate change or as notified by GSTN 
+Failure to file ITC-03 on time attracts interest under Section 50 on the amount that should 
+have been reversed, from the date of the rate change until actual reversal. 
+ 
+Who Is Affected? 
+Manufacturers: Most directly affected because they hold the largest volumes of inputs and 
+WIP. 
+Traders and Distributors: Must reverse ITC on finished goods stock purchased at higher 
+rates. 
+E-commerce Sellers: Must carefully track SKU-level stock for affected products. 
+Importers: Where imported goods face rate reduction, the IGST ITC availed on imports 
+must also be evaluated for reversal. 
+ 
+
+Practical Challenges 
+FIFO vs. Weighted Average: The law does not prescribe a specific costing method. Most 
+businesses use the weighted average cost for ITC reversal. GSTN has not definitively 
+clarified this. Using FIFO may be more accurate for businesses with clear lot-wise tracking. 
+Capital Goods in Use: For machinery used to produce goods at 18% that now become 5% 
+goods, the residual ITC on capital goods over their useful life must be proportionally 
+reversed. This gets complex for multi-product manufacturers. 
+Credit Ledger Insufficient: If the electronic credit ledger doesn't have enough balance for 
+the reversal, the shortfall must be paid from the electronic cash ledger. This is a genuine 
+cash flow concern for businesses. 
+ 
+Exceptions — When Reversal May Be Reduced or Avoided 
+●​ Where goods were purchased under Bill of Supply (unregistered supplier, 
+composition supplier) — no ITC was availed, so nothing to reverse. 
+●​ Zero-rated supplies: Exporters may retain ITC even after rate changes since their 
+supply remains zero-rated. 
+●​ If the inputs were already used before the rate change (not lying in stock), no 
+reversal is required on those inputs. 
+●​ Transitional stock purchased after the rate change announcement (at the new rate) 
+naturally carries only 5% ITC — no reversal needed. 
+ 
+5 Unique FAQs 
+Q1. What if a business wasn't aware of the rate cut and didn't file ITC-03 within 30 
+days — is there a condonation mechanism? Currently, the CGST Act does not provide a 
+formal condonation provision for late filing of ITC-03. However, businesses can approach the 
+jurisdictional GST officer with a voluntary disclosure, pay the interest under Section 50, and 
+regularize the position. Some High Courts have granted relief in bonafide cases, but this 
+involves litigation risk. Proactive compliance is strongly recommended. 
+Q2. If a business has multiple GST registrations (different states), does each GSTIN 
+need to file separate ITC-03 for stock held in that state? Yes. GST registration is 
+state-specific, and each GSTIN is an independent taxable person under GST law. Stock held 
+in each state's warehouse must be assessed separately, and ITC-03 must be filed under 
+each GSTIN for the stock physically located in that state. 
+Q3. For a rate cut from 18% to 5%, is the reversal computed on the tax amount 
+embedded in the purchase price, or on the selling price? The reversal is computed on 
+the ITC already availed — which is based on the purchase price (inward supply value). The 
+selling price is irrelevant for this calculation. You're reversing what you claimed as credit on 
+inward supplies, not computing tax on future outward sales. 
+
+Q4. Does a trader who purchased goods at 18% GST and sold them before the rate 
+change, but still holds the invoice in his books, need to reverse anything? No. Only 
+stock physically held on the date of rate change requires ITC reversal. If goods were sold 
+before the effective date of rate reduction, the transaction is complete and the ITC availed 
+was validly used against 18% output tax at the time of sale. There's nothing to reverse for 
+goods already sold. 
+Q5. In case of rate reduction for a service (say, from 18% to 5% on restaurant 
+services), does Section 18(4) apply for ITC reversal on furniture or kitchen 
+equipment? Services generally don't involve "stock in hand" in the traditional sense, but 
+capital goods (furniture, equipment) are affected. The residual ITC on such capital goods 
+must be reversed proportionally based on remaining useful life, computed under Rule 44(6). 
+Restaurant owners switching to a lower rate regime must carefully calculate this, especially 
+for recently purchased kitchen equipment. 
+ 
+Article 4: GST Exemption on Sale and 
+Purchase of Securities 
+ 
+GST Exemption on Sale and Purchase of Securities: A 
+Complete Analysis 
+The Indian financial markets involve trillions of rupees in transactions daily — equity shares, 
+government bonds, derivatives, mutual fund units, and more. A commonly misunderstood 
+aspect of GST is the complete exemption on the sale and purchase of securities. While 
+the exemption itself is clear in statute, the nuances around what qualifies as a security, 
+what services around securities are taxable, and how brokerage and ancillary fees are 
+treated require careful understanding. 
+ 
+The Statutory Exemption: Where Does It Come From? 
+Under the CGST Act, 2017, the definition of "goods" under Section 2(52) explicitly excludes 
+actionable claims and money. Securities are a unique category — they are neither goods 
+nor services under GST. 
+More specifically: 
+●​ Section 2(101) defines "securities" to have the meaning assigned under the 
+Securities Contracts (Regulation) Act, 1956 (SCRA) 
+
+●​ Schedule III of the CGST Act lists activities that are neither supply of goods nor 
+supply of services — thereby keeping them entirely outside the GST framework 
+Schedule III, Entry 6 reads: "Sale of land and, subject to clause (b) of paragraph 5 of 
+Schedule II, sale of building." 
+And crucially, Entry 7 covers transactions in money and actionable claims — within which 
+securities fall by virtue of being treated as actionable claims in specific contexts and 
+through the explicit carve-outs. 
+Additionally, Notification No. 12/2017-CT (Rate), Entry 44 specifically exempts services 
+related to buying/selling of securities on a recognized stock exchange by a member — 
+though this applies to brokerage in specific conditions. 
+ 
+What Qualifies as "Securities" for GST Exemption? 
+Under Section 2(h) of SCRA, securities include: 
+Type of Security 
+GST on Transaction? 
+Listed equity shares (NSE/BSE) 
+Exempt 
+Unlisted equity shares 
+Exempt 
+Government securities (G-Secs, 
+T-Bills) 
+Exempt 
+Corporate bonds and debentures 
+Exempt 
+Mutual fund units 
+Exempt (transaction; but management fees 
+taxable) 
+Exchange-traded funds (ETFs) 
+Exempt 
+
+Derivatives (futures and options) 
+Exempt on underlying; services taxable 
+Rights and warrants 
+Exempt 
+Preference shares 
+Exempt 
+Commercial paper / certificate of 
+deposit 
+Exempt 
+The exemption covers the transaction value (the consideration for the security itself). It 
+does NOT cover service charges, brokerage, advisory fees, or management fees that 
+accompany these transactions. 
+ 
+What IS Taxable: Services Around Securities 
+This is where many investors and businesses get confused. While the sale/purchase of 
+securities is outside GST, the services facilitating these transactions are very much 
+taxable. 
+Service 
+GST Rate 
+Provider 
+Stock brokerage 
+18% 
+Broker 
+Demat account maintenance charges 
+18% 
+Depository participant 
+Portfolio management fee 
+18% 
+PMS manager 
+Mutual fund management fee (expense 
+ratio) 
+18% 
+AMC 
+
+Investment advisory fee 
+18% 
+SEBI-registered IA 
+Custodian services 
+18% 
+Custodian 
+Clearing charges 
+18% 
+Clearing corporation 
+Exchange transaction charges 
+18% 
+Stock exchange 
+Research report subscription 
+18% 
+Research analyst 
+Underwriting fees 
+18% 
+Investment bank/merchant 
+banker 
+ 
+The Subtle GST on STT vs. GST Distinction 
+Many retail investors confuse Securities Transaction Tax (STT) with GST. They are entirely 
+separate: 
+Feature 
+STT 
+GST 
+Nature 
+Direct tax on transaction 
+Indirect tax on services 
+Levied on 
+Value of securities traded 
+Value of services (brokerage, 
+etc.) 
+Rate 
+0.025% to 0.1% depending on 
+transaction 
+18% on service fees 
+Who pays 
+Buyer/seller on transaction 
+Service recipient 
+
+Deductible against 
+tax? 
+Yes (for active traders) 
+Yes, if used in business 
+GST is charged on the brokerage, not on the securities transaction itself. 
+ 
+Detailed Example: Equity Trade by Retail Investor 
+Priya buys 100 shares of Infosys at ₹1,500 per share through her broker. 
+Component 
+Amount (₹) 
+GST? 
+Purchase value of shares (100 × 
+₹1,500) 
+1,50,000 
+No (exempt) 
+STT (0.1% on buy) 
+150 
+No (direct tax) 
+Brokerage @ 0.3% 
+450 
+Yes — 18% GST = ₹81 
+Exchange transaction charge 
+45 
+Yes — 18% GST = ₹8.10 
+Demat/clearing charge 
+15 
+Yes — 18% GST = ₹2.70 
+GST actually paid by Priya 
+ 
+₹91.80 
+The actual securities cost (₹1,50,000) is GST-free. Only the service fees attract GST. 
+ 
+Detailed Example: Fund House (Mutual Fund AMC) 
+Wealth Asset Management runs equity mutual funds. Its fee structure: 
+
+Revenue Source 
+GST Applicable? 
+Management fee (TER — expense ratio) 
+charged to investors 
+Yes — 18% (AMC is providing portfolio 
+management service) 
+Exit load charged to investors 
+Partially debated — most AMCs treat this 
+as outside GST 
+Sale/redemption of units by investors 
+No — mutual fund unit transactions are 
+exempt 
+Dividend distributed to unitholders 
+No 
+The AMC pays GST on its management fee income. Investors see this embedded in the 
+expense ratio but cannot claim ITC unless investing through a corporate treasury (B2B). 
+ 
+ITC on Securities-Related Services 
+For a business investing its surplus funds in securities: 
+●​ Brokerage and related service GST is blocked under Section 17(5)(d) — no ITC 
+available since these relate to investment activities, not the taxable supply chain. 
+For a stock broker or SEBI-registered entity: 
+●​ GST on their own input services (office rent, software, professional fees) is claimable 
+as ITC. 
+●​ However, they cannot claim ITC on services used exclusively for exempt transactions 
+(the securities trading itself, where they act as principal). 
+ 
+Impact on Specific Sectors 
+Banks: Banks investing in G-Secs and bonds do so in exempt territory. However, banking 
+services themselves are partly taxable. This creates a complex ITC reversal situation under 
+Rule 42/43 for banks. 
+
+Insurance Companies: ULIPs involve investment in securities. The investment portion is 
+exempt; the insurance services and fund management services attract GST. 
+Foreign Portfolio Investors (FPIs): Transactions by FPIs in Indian securities are exempt. 
+However, custodian fees and banking charges incurred in India attract 18% GST. FPIs 
+typically cannot claim ITC. 
+ 
+Exceptions and Edge Cases 
+Situation 
+GST Treatment 
+Slump sale of a business (including 
+securities) 
+Exempt (treated as transfer of going concern) 
+Transfer of securities as consideration 
+for merger 
+Exempt (securities transaction) 
+Repo transactions in G-Secs 
+Exempt on the securities leg; interest may 
+attract GST debate 
+Option premium (F&O) 
+Exempt on the derivative itself; brokerage 
+taxable 
+Foreign exchange securities (offshore 
+funds) 
+Import of service; intermediary service may 
+attract IGST 
+ 
+5 Unique FAQs 
+Q1. If a company issues shares as Employee Stock Options (ESOPs) to employees, 
+does GST apply on the exercise of options? No. The exercise of ESOPs involves transfer 
+of securities (equity shares) from the employer to the employee at the exercise price. Since 
+the sale/purchase of securities is exempt under Schedule III of the CGST Act, there is no 
+GST on the transaction itself. However, if any third-party facilitator charges a fee for 
+managing the ESOP platform, that service fee attracts 18% GST. 
+
+Q2. Is GST applicable on stamp duty paid during dematerialization of physical 
+shares? Stamp duty is a state-level levy, not a GST matter. The dematerialization process 
+itself, when facilitated by a depository participant, attracts 18% GST on the service fee. The 
+stamp duty component is separate and outside GST. 
+Q3. Does a holding company paying management fees to its subsidiary for managing 
+its securities portfolio attract GST? Yes. If the subsidiary charges a management fee for 
+portfolio management services, this is a taxable supply of services at 18%. The intra-group 
+nature of the transaction does not exempt it. Both entities must be GST registered, and 
+proper invoicing with GST is required. The holding company may claim ITC only if its own 
+outputs are taxable. 
+Q4. Are sovereign gold bonds (SGBs) issued by RBI covered under the securities 
+exemption? Yes. SGBs are classified as Government Securities under the Government 
+Securities Act, 2006, and are included in the definition of securities under SCRA. Therefore, 
+the purchase and redemption of SGBs are outside the purview of GST. The interest earned 
+on SGBs is also not subject to GST as it is a return on investment, not a supply of service. 
+Q5. In invoice discounting platforms (where invoices are sold as financial 
+instruments), does GST apply on the discount? This is a nuanced area. If the invoice 
+discounting platform facilitates assignment of receivables (which have characteristics of 
+actionable claims), the assigned receivable itself may be outside GST. However, the 
+platform fee or facilitation charge by the fintech company is a service and attracts 18% 
+GST. The discount or interest element may also attract GST depending on whether it 
+constitutes a financial service or a purely money transaction — GSTN has not conclusively 
+clarified this for all models. 
+ 
+Article 5: Rent Agreement for GST 
+Registration 
+ 
+Rent Agreement for GST Registration: Requirements, 
+Pitfalls, and Best Practices 
+When applying for GST registration, one of the most common points of rejection or query 
+from the GST department is the proof of principal place of business. For businesses 
+operating from rented premises, this means submitting a valid rent or lease agreement. 
+Getting this document right is surprisingly important — errors or mismatches here can delay 
+registration by weeks or trigger notices down the line. 
+ 
+
+Why Is a Rent Agreement Required for GST Registration? 
+Under Rule 8 of the CGST Rules, 2017, every application for GST registration must include 
+proof of the principal place of business. The law requires this to establish that the 
+business has a legitimate, verifiable address from which it operates. 
+For owned premises, a property tax receipt or electricity bill suffices. For rented or leased 
+premises, the applicant must submit: 
+●​ A copy of the valid rent/lease agreement, AND 
+●​ A supporting utility document (electricity bill, water bill, or NOC from owner) 
+The rent agreement establishes that the applicant has a legal right to use the premises for 
+commercial purposes. 
+ 
+Documents Required: A Comprehensive Table 
+Document Category 
+Specific Document 
+Mandatory? 
+Rent/lease agreement 
+Registered or notarized agreement 
+Mandatory for rented 
+premises 
+Identity of landlord 
+Landlord's PAN, Aadhaar (where 
+applicable) 
+May be required in scrutiny 
+Utility bill of premises 
+Electricity/water/gas bill (last 2 
+months) 
+Mandatory (landlord's 
+name is fine) 
+No Objection 
+Certificate (NOC) 
+From landlord if agreement is 
+unregistered 
+Highly recommended 
+Self-declaration 
+If using owner's property (family 
+property) 
+Required for informal 
+arrangements 
+Consent letter 
+From co-owner or partner (if 
+shared premises) 
+Required if multiple parties 
+co-own 
+
+ 
+What Must the Rent Agreement Contain? 
+Not every rent agreement passes GSTN scrutiny. The document must clearly mention: 
+Mandatory Elements: 
+●​ Full legal name of the landlord (matching government ID) 
+●​ Full legal name of the tenant/applicant (matching PAN/Aadhaar) 
+●​ Complete address of the premises with PIN code 
+●​ Commencement date and duration of lease/rent 
+●​ Monthly rent amount (can be zero for family property, but must be stated) 
+●​ Purpose of use — must specify commercial use (residential lease agreements often 
+get rejected) 
+●​ Signature of both parties 
+Strongly Recommended Elements: 
+●​ Landlord's PAN (GSTN officers increasingly ask for this) 
+●​ Specific mention that the property can be used as principal place of business for GST 
+purposes 
+●​ Clear identification of the portion being rented (if partial occupancy) 
+ 
+Registered vs. Notarized vs. Unregistered Agreement — What Works? 
+Type 
+Validity for GST 
+Risk 
+Level 
+Notes 
+Registered rent agreement 
+(sub-registrar) 
+Strongest — almost 
+always accepted 
+Low 
+Required for leases > 11 
+months in many states 
+Notarized agreement 
+Generally accepted 
+Low-Medi
+um 
+Notary stamp adds 
+credibility 
+Unregistered agreement 
+(plain paper, notarized) 
+Usually accepted 
+with NOC 
+Medium 
+May invite additional 
+scrutiny 
+
+Unregistered, not 
+notarized 
+Riskiest — may be 
+rejected 
+High 
+Always supplement with 
+NOC 
+Verbal arrangement (no 
+document) 
+Not acceptable 
+Very High 
+Must create written 
+agreement 
+Key Rule: Under the Registration Act, 1908, any lease for more than 11 months must be 
+compulsorily registered with the Sub-Registrar. For GST registration, even 11-month 
+notarized agreements work — but if your operations require a longer lease, get it registered. 
+ 
+Practical Scenario 1: E-Commerce Seller in a Shared Office 
+Vikram runs an e-commerce business from a co-working space in Bengaluru. He wants to 
+register under GST. 
+Challenge: Most co-working space agreements are month-to-month licenses, not traditional 
+leases. GSTN portals sometimes reject co-working agreements that don't explicitly state the 
+registrant's right to use the address as their principal place of business. 
+Solution: 
+●​ Obtain a formal seat allotment letter on the co-working space's letterhead 
+●​ Get a NOC from the co-working operator stating they have no objection to Vikram 
+using the address for GST registration 
+●​ Submit this along with the service agreement and the co-working space's own 
+electricity bill 
+Most GST officers in metro cities now accept co-working proofs, but Tier 2 and Tier 3 city 
+jurisdictions may still be conservative. 
+ 
+Practical Scenario 2: Home-Based Business 
+Meena runs a boutique from her residence, which is owned by her parents. She wants to 
+use this address for GST registration. 
+Documents Required: 
+Document 
+Source 
+
+Property tax receipt or electricity bill In parents' name — acceptable 
+Consent letter / NOC from parents 
+Parents must sign a simple letter 
+Meena's self-declaration 
+Stating she operates from this address 
+Rent agreement 
+Not mandatory if using property with owner's 
+consent 
+Many GST officers accept a simple consent letter + utility bill for family property. A formal 
+rent agreement isn't mandatory, but having one (even at zero rent) strengthens the 
+application. 
+ 
+Practical Scenario 3: Multi-State Business with Branch Offices 
+TechServe Pvt. Ltd. is registered in Maharashtra but opens a branch office in Delhi. They 
+need to add Delhi as an Additional Place of Business in their GST registration (not a new 
+registration, but an amendment to their existing Maharashtra GSTIN with a separate Delhi 
+GSTIN if required). 
+For Delhi registration: 
+●​ Delhi rent agreement for the branch office premises 
+●​ Utility bill for the Delhi address 
+●​ The Delhi GSTIN application will reference the Maharashtra parent entity's PAN 
+The rent agreement here must specifically cover the Delhi branch address, not the 
+Maharashtra HO address. 
+ 
+Common Rejection Reasons and How to Avoid Them 
+Rejection Reason 
+How to Avoid 
+Rent agreement in landlord's name 
+only 
+Ensure tenant's name (applicant) is clearly on the 
+agreement 
+
+Residential use clause in 
+agreement 
+Get a commercial use/NOC amendment or separate 
+commercial agreement 
+Expired rent agreement 
+Submit current, valid agreement; renew or extend 
+before applying 
+Signature mismatch with other 
+documents 
+Ensure signatures are consistent 
+Address mismatch with utility bill 
+Pin code, building name must match exactly 
+Co-living or PG agreement 
+submitted 
+Not acceptable; must have formal commercial proof 
+Foreign-owned property without 
+Indian document 
+Ensure property tax records or electricity account 
+exists in India 
+ 
+GST Registration for Rented Virtual Offices 
+Virtual offices — where a business pays for an address but has no physical presence — 
+have become a major compliance issue. The GST department has specifically cracked down 
+on this. 
+The Karnataka and Delhi AAR rulings have noted that: 
+●​ A virtual office address used purely for mail forwarding is not a valid "principal place 
+of business" under GST 
+●​ There must be some real commercial activity at the declared address 
+If you're using a virtual office, ensure the space provider offers dedicated desks, meeting 
+rooms, or storage that can be evidenced as actual use. A mere mailbox doesn't qualify. 
+ 
+After GST Registration: Ongoing Compliance with the Rent Agreement 
+The rent agreement's role doesn't end at registration: 
+
+●​ If the rent agreement expires, you should update GSTN records. While the law 
+doesn't explicitly mandate this, a GST officer conducting premises verification will 
+check for a valid current agreement. 
+●​ If you relocate, you must amend the principal place of business in GST registration 
+within 15 days under Section 25(7) read with Rule 19. 
+●​ During GST audits or survey proceedings, the officer will verify the premises 
+against the registered address. An expired or non-matching rent agreement can 
+complicate things. 
+ 
+Special Situations 
+Situation 
+GST Registration Approach 
+Lease in company's name, director is 
+individual applicant 
+Provide company lease + board resolution 
+authorizing director 
+Agricultural land used as business 
+warehouse 
+Registered lease + conversion certificate if 
+required by state 
+Government premises (rented from 
+municipal body) 
+Allotment letter from government body serves 
+as proof 
+Embassy or diplomatic mission address 
+Special cases; CBIC has provided separate 
+guidance 
+Newly constructed building (no utility bill 
+yet) 
+Completion certificate + builder's allotment 
+letter acceptable 
+ 
+5 Unique FAQs 
+Q1. Can a GST registration be obtained using an agreement that hasn't yet started 
+(future-dated lease)? Generally, GSTN requires the principal place of business to be 
+currently available for use. A future-dated agreement that commences, say, 30 days from the 
+application date may be rejected. The premises must be accessible and usable at the time of 
+application. However, if the building handover is imminent and supported by an allotment 
+
+letter, some officers exercise discretion. The safer approach is to apply after the lease 
+commencement date. 
+Q2. If the rent is being paid in cash without a formal agreement, can a declaration by 
+the landlord substitute the rent agreement? The GSTN portal doesn't mandate that rent 
+be formally documented — what it requires is proof of address. An NOC or consent letter 
+from the property owner, combined with a utility bill for the premises, can substitute for a 
+formal rent agreement in many jurisdictions. However, for scrutiny-level applications 
+(high-turnover businesses, fresh registrations in sensitive sectors), a formal agreement is 
+strongly advisable. 
+Q3. My landlord refuses to sign a commercial rent agreement — can I still get GST 
+registration? Yes, but it becomes complicated. You can submit the residential agreement 
+with a separate NOC letter from the landlord explicitly stating permission for commercial 
+use and GST registration at the address. This approach has worked in practice, though it 
+depends on the discretion of the GST officer. If the landlord is completely uncooperative, the 
+only other option is to find an alternate registered address. 
+Q4. Does an agreement need stamp duty payment to be valid for GST registration 
+purposes? Stamp duty is a state-level requirement and affects the legal enforceability of the 
+agreement in courts. However, for GST registration purposes, an unstamped or 
+under-stamped agreement is not automatically invalid — GSTN officers look at substance 
+over form. That said, submitting a properly stamped (and ideally registered) agreement is 
+always the cleaner approach and reduces the risk of a technical rejection. If the agreement 
+lacks adequate stamp duty, consider notarization as a compensating measure. 
+Q5. If a company has a registered lease but the lessor has changed (property was 
+sold to a new owner), what happens to GST registration? The GST registration itself is 
+not affected as long as the physical premises remain the same. A transfer of property 
+ownership doesn't immediately invalidate your right to use the premises under the existing 
+lease — the new owner steps into the previous landlord's shoes regarding the lease. 
+However, it's prudent to update your lease agreement with the new landlord and retain 
+documentation of the succession. If the new owner asks you to vacate and you actually 
+relocate, then you must amend your GST registration accordingly. 
+ 
+ 
