@@ -1,0 +1,59 @@
+# Fssai Registration
+
+## Overview
+
+FSSAI Registration is the foundational compliance requirement for any food business operating in India. Governed by the Food Safety and Standards Act, 2006 and administered by the Food Safety and Standards Authority of India (FSSAI), this registration is mandatory for every entity involved in the manufacture, processing, storage, distribution, sale, or import of food products. FSSAI operates under the Ministry of Health and Family Welfare, Government of India, and functions as the apex regulatory body for food safety standards across the country. Every food business operator (FBO) ,  from a small home baker or street food vendor to a mid-sized catering company or grocery retailer ,  must obtain the appropriate level of FSSAI authorisation before commencing operations. FSSAI authorisation exists in three tiers: Basic Registration (for petty food businesses), State License (for mid-size operators), and Central License (for large-scale or multi-state operators). This page covers Basic FSSAI Registration ,  the entry-level authorisation for petty food business operators (PFBOs) with an annual turnover of up to ₹12 lakh. Operating without FSSAI Registration is a punishable offence under the FSS Act, attracting fines of up to ₹5 lakh and imprisonment in severe cases. Getting registered is not just a legal requirement ,  it is your food business's licence to operate legitimately and build consumer trust.
+
+## Applicability
+
+FSSAI Basic Registration applies to: Petty food manufacturers with an annual turnover not exceeding ₹12 lakh Small retailers, hawkers, itinerant vendors, and temporary stall holders Home-based food businesses (cloud kitchens, tiffin services, home bakers) Cottage industry food producers Dhaba operators and small roadside eateries with limited turnover Small-scale food storage operators Distributor/supplier/retailer of food products with low turnover Who needs State License instead of Registration: Operators with annual turnover between ₹12 lakh and ₹20 crore Mid-size manufacturers, processors, restaurants, hotels (up to 3-star), caterers (up to 100 persons) Who needs Central License instead: Operators with annual turnover above ₹20 crore Importers, exporters of food products Food businesses operating in more than one state FCI-approved warehouses and large cold chain operators State-wise applicability: FSSAI Registration is applicable pan-India ,  across all 28 states and 8 union territories including Maharashtra, Karnataka, Tamil Nadu, Delhi, Uttar Pradesh, West Bengal, Gujarat, Rajasthan, Kerala, Telangana, Punjab, Haryana, Madhya Pradesh, Bihar, Odisha, and all others. The State Food Safety Departments in each state are the licensing authorities for State Licenses; Basic Registration is processed centrally through the FSSAI FoSCoS portal.
+
+## Benefits
+
+Legal authorisation to operate: FSSAI Registration is a prerequisite to legally run any food business; prevents fines, raids, and closure orders from food safety officers Consumer trust and credibility: Displaying the 14-digit FSSAI Registration number on food products and packaging builds consumer confidence and brand legitimacy E-commerce marketplace access: Platforms like Zomato, Swiggy, Amazon Fresh, BigBasket, and Flipkart Grocery mandate valid FSSAI Registration before onboarding any food seller Business expansion readiness: A registered food business can more easily upgrade to a State or Central License as it scales ,  maintaining compliance continuity Bank finance eligibility: Banks and NBFCs require FSSAI Registration for food business loan applications and working capital financing FSSAI logo usage: Registered FBOs can use the FSSAI logo on their products and marketing material, enhancing brand perception Government scheme access: Access to government food processing schemes (PM-FME Scheme, PMKVY food processing modules) often requires valid FSSAI Registration Reduced legal liability: Compliance with FSSAI standards reduces the risk of product liability claims and consumer complaints
+
+## Limitations
+
+Turnover cap: Basic Registration is only for businesses with annual turnover up to ₹12 lakh ,  exceeding this requires upgrade to a State License Limited scope of activities: Some food business activities (e.g., food import, large-scale manufacturing) are not eligible for Basic Registration regardless of turnover No multi-state coverage: Basic Registration is location-specific and covers only the registered premises; each additional location requires separate registration/licensing Mandatory upgrade: If the business grows beyond the ₹12 lakh threshold, the FBO must proactively apply for a State License ,  failure to upgrade is a violation Product restrictions: Certain high-risk food categories (proprietary foods, nutraceuticals, novel food) cannot be manufactured under Basic Registration ,  a State or Central License is required No import authorisation: Importing food products requires a Central License; Basic Registration does not authorise food imports
+
+## Documents Required
+
+| Document | Details |
+| --- | --- |
+| Photo of the applicant | Recent passport-size photograph |
+| Photo ID proof | Aadhaar card, voter ID, passport, or driving licence |
+| Address proof of business premises | Electricity bill, rent agreement, NOC from owner |
+| Proof of business activity | Declaration of food business type and products |
+| Form B (FSSAI Registration Form) | Filled application on the FoSCoS portal |
+| Bank account details | Cancelled cheque or passbook copy |
+| List of food products to be handled | Category-wise list of food articles |
+| NOC from municipality/panchayat | For certain types of food businesses |
+| Partnership deed / MoA (if applicable) | For firms and companies (not mandatory for individuals) |
+
+## Process
+
+Step 1 ,  Determine Registration Category Assess annual turnover and nature of food business to confirm eligibility for Basic Registration vs. State/Central License. Step 2 ,  FoSCoS Portal Registration Create an account on FSSAI's FoSCoS (Food Safety Compliance System) portal at foscos.fssai.gov.in. This is the single-window portal for all FSSAI applications. Step 3 ,  Application Submission (Form B) Fill in Form B with business details, food product categories, premises address, and proprietor/partner/director information. Upload required documents. Step 4 ,  Fee Payment Pay the prescribed registration fee online through the FoSCoS portal via net banking, UPI, or debit/credit card. Step 5 ,  Application Processing The Registering Authority reviews the application. For Basic Registration, there is typically no physical inspection requirement ,  the application is processed based on submitted documents. Step 6 ,  Grant of Registration Certificate Upon approval, the FSSAI Registration Certificate with the unique 14-digit Registration Number is issued digitally and can be downloaded from the FoSCoS portal. Step 7 ,  Display and Compliance Display the FSSAI Registration Certificate at the business premises. Print the 14-digit Registration Number on all food products, packaging, menus (for restaurants), and marketing materials.
+
+Fees Registration Type Annual Turnover Government Fee
+
+## Validity
+
+Basic Registration Up to ₹12 lakh ₹100 per year 1–5 years State License ₹12 lakh – ₹20 crore ₹2,000 – ₹5,000 per year 1–5 years Central License Above ₹20 crore / importers ₹7,500 per year 1–5 years
+
+## Professional Service
+
+Estimated Fee Basic FSSAI Registration (end-to-end) ₹1,500 – ₹3,000 State License application support ₹3,000 – ₹8,000 Central License application support ₹8,000 – ₹20,000 Document preparation and review ₹1,000 – ₹2,500 Upgrade from Registration to License ₹2,500 – ₹5,000
+
+Government fees are paid directly to FSSAI via the FoSCoS portal. Professional fees are exclusive of GST @18%.
+
+## Validity
+
+Registration/License Type Minimum Validity Maximum Validity Basic Registration 1 year 5 years State License 1 year 5 years Central License 1 year 5 years
+
+The FBO chooses the validity period (1 to 5 years) at the time of application. Fees are charged proportionally for the chosen period. Opting for a longer validity period reduces administrative burden and renewal compliance risk. The certificate expires on the end date specified on it and must be renewed before expiry to avoid lapsing.
+
+Renewal FSSAI Registration must be renewed before the expiry date to maintain continuity of authorisation Renewal applications should be filed at least 30 days before the expiry date Renewal is done through the FoSCoS portal under the "Renewal" section using the existing Registration Number A late fee of ₹100 per day is applicable for delayed renewal applications (filed after expiry) If the registration lapses without renewal, the FBO must apply for a fresh registration ,  this may involve re-inspection and delays All documents must be re-verified at the time of renewal; updated documents (new premises lease, updated product list) must be submitted if there are any changes Renewals are processed within 30 days from the date of application submission under the deemed approval mechanism
+
+## Frequently asked questions
+
+1. I sell homemade pickles and chutneys online through Instagram. Do I need FSSAI Registration? Yes, without exception. Any commercial food business ,  including home-based operations selling through social media, WhatsApp, or online marketplaces ,  requires valid FSSAI authorisation. If your annual turnover is below ₹12 lakh, Basic Registration suffices. Online food sales platforms also require you to display a valid FSSAI number before listing your products. Operating without it exposes you to penalties and delisting from platforms. 2. Can I operate multiple food businesses from the same premises under one FSSAI Registration? Yes, if all food activities are conducted from the same physical address and the combined turnover falls within the Basic Registration threshold. However, the FSSAI Registration Certificate is premises-specific. If you operate from multiple locations ,  even within the same city ,  each location requires its own FSSAI Registration or License. You cannot use one Registration number across different business premises. 3. How long does it take to get FSSAI Basic Registration? For Basic Registration, the FoSCoS portal processes applications within 7–10 working days from the date of complete application submission. In practice, if the application is complete and documents are in order, approvals are often granted within 3–5 working days. If the Registering Authority does not grant or reject the application within 7 days, it is deemed approved. State Licenses and Central Licenses have longer timelines of 30–60 days. 4. Is FSSAI Registration mandatory for a cloud kitchen that only does delivery ,  no dine-in? Absolutely yes. Cloud kitchens are food businesses under FSSAI's framework regardless of whether they have dine-in or takeaway service. In fact, FSSAI has issued specific guidelines for cloud kitchens requiring registration, hygiene compliance, and mandatory display of FSSAI numbers on delivery packaging and on aggregator platforms like Swiggy and Zomato. Cloud kitchens with revenues above ₹12 lakh need to upgrade to a State License. 5. What food categories are covered under Basic FSSAI Registration? Basic FSSAI Registration covers a wide range of food products including cereals and cereal products, pulses and pulse products, milk and milk products (small-scale), fruits and vegetables (fresh and processed), meat and meat products (small scale), bakery products, condiments, spices, edible oils, beverages (non-alcoholic), and packaged drinking water (small scale). However, certain high-risk and specialised categories ,  infant foods, nutraceuticals, proprietary foods, health supplements, and food additives ,  require a State or Central License even at low turnover levels.

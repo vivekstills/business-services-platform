@@ -32,7 +32,7 @@ export const SERVICES_NAV_CATEGORIES: ServicesNavCategory[] = [
     slug: 'start-business',
     title: 'Start Business',
     categoryId: 'new-business',
-    featuredServiceIds: ['proprietorship', 'partnership', 'llp', 'private-limited-company'],
+    featuredServiceIds: ['proprietorship', 'partnership', 'llp-registration', 'private-limited-company'],
   },
   {
     slug: 'tax-filing',

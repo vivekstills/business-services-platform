@@ -6,6 +6,7 @@ import FAQS from '../data/faqs';
 import { CONTACT_EMAIL, CONTACT_PHONE } from '../data/constants';
 import type { Service } from '../data/services';
 import { defaultPolicyPages } from '../data/policyPageDefaults';
+import { isRichMarkdown, SERVICE_ABOUT_CONTENT } from '../data/serviceAboutContent';
 
 const defaultContent: Content = {
   hero: {
@@ -51,7 +52,7 @@ const defaultContent: Content = {
         heading: 'Form New Business',
         items: [
           { label: 'Private Limited Company', to: getServiceDetailRoute(undefined, 'private-limited-company') },
-          { label: 'LLP', to: getServiceDetailRoute(undefined, 'llp') },
+          { label: 'LLP', to: getServiceDetailRoute(undefined, 'llp-registration') },
           { label: 'One Person Company', to: getServiceDetailRoute(undefined, 'one-person-company') },
           { label: 'Partnership', to: getServiceDetailRoute(undefined, 'partnership') },
           { label: 'Nidhi Company', to: getServiceDetailRoute(undefined, 'nidhi-company') },
@@ -258,6 +259,76 @@ function unionCodeDefinedServices(merged: Content): Content {
   };
 }
 
+/**
+ * Prefer structured About copy from the shipped `public/content.json` when the API
+ * response did not supply a full `services` array (merge would keep long-form
+ * defaults from `SERVICE_ABOUT_CONTENT` in code, which never gets updated by JSON patches).
+ * When the API did return a non-empty `services` array, trust that payload and only
+ * overlay public where the merged service still has non-rich or empty content.
+ */
+/**
+ * `defaultContent` + `data/content.json` (and API) merge replaces the
+ * `services` array. That snapshot often ships stale, paragraph-style
+ * "About" strings that have already been restructured in code under
+ * `SERVICE_ABOUT_CONTENT` (including `*.md?raw` imports). Always prefer the
+ * bundled long-form text so lists, steps, and section anchors render
+ * correctly in `RichContent`.
+ */
+function applyServiceAboutCodeOverrides(merged: Content): Content {
+  if (!merged.services?.length) return merged;
+  let changed = false;
+  const next = merged.services.map((s) => {
+    const fromCode = SERVICE_ABOUT_CONTENT[s.id];
+    if (fromCode == null) return s;
+    if (fromCode === s.content) return s;
+    changed = true;
+    return { ...s, content: fromCode };
+  });
+  return changed ? { ...merged, services: next } : merged;
+}
+
+function applyRichAboutFromPublicSnapshot(
+  merged: Content,
+  snapshot: unknown,
+  apiData?: object | null
+): Content {
+  if (!snapshot || typeof snapshot !== 'object') return merged;
+  const list = (snapshot as { services?: Service[] }).services;
+  if (!Array.isArray(list) || list.length === 0) return merged;
+  const byId = new Map(list.map((s) => [s.id, s] as const));
+  const apiServices = apiData && typeof apiData === 'object' ? (apiData as { services?: Service[] }).services : undefined;
+  const apiHasFullServices = Array.isArray(apiServices) && apiServices.length > 0;
+
+  let changed = false;
+  const next = (merged.services ?? []).map((s) => {
+    const pub = byId.get(s.id);
+    const c = pub?.content;
+    if (typeof c !== 'string' || !c.trim() || !isRichMarkdown(c)) return s;
+    if (c === s.content) return s;
+
+    if (apiHasFullServices) {
+      if (s.content && isRichMarkdown(s.content)) return s;
+      changed = true;
+      return { ...s, content: c };
+    }
+
+    changed = true;
+    return { ...s, content: c };
+  });
+  if (!changed) return merged;
+  return { ...merged, services: next };
+}
+
+async function fetchPublicContentJson(): Promise<unknown | null> {
+  try {
+    const r = await fetch('/content.json');
+    if (!r.ok) return null;
+    return await r.json();
+  } catch {
+    return null;
+  }
+}
+
 const ContentContext = createContext<ContentContextValue | null>(null);
 
 export function ContentProvider({ children }: { children: React.ReactNode }) {
@@ -275,7 +346,9 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
         if (apiRes.ok) {
           const apiData = await apiRes.json();
           if (apiData && typeof apiData === 'object' && Object.keys(apiData).length > 0) {
-            setContent(unionCodeDefinedServices(deepMerge(defaultContent, apiData) as Content));
+            const publicSnap = await fetchPublicContentJson();
+            const base = unionCodeDefinedServices(deepMerge(defaultContent, apiData) as Content);
+            setContent(applyServiceAboutCodeOverrides(applyRichAboutFromPublicSnapshot(base, publicSnap, apiData)));
             return;
           }
         }
@@ -289,7 +362,8 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
       if (staticRes.ok) {
         const staticData = await staticRes.json();
         if (staticData && typeof staticData === 'object' && Object.keys(staticData).length > 0) {
-          setContent(unionCodeDefinedServices(deepMerge(defaultContent, staticData) as Content));
+          const merged = unionCodeDefinedServices(deepMerge(defaultContent, staticData) as Content);
+          setContent(applyServiceAboutCodeOverrides(applyRichAboutFromPublicSnapshot(merged, staticData, staticData)));
           return;
         }
       }

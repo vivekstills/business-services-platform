@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { useContent } from '../context/ContentContext';
 import { getPricingTabGroups } from '../utils/pricingTabs';
 import type { PricingPlan } from '../types/content';
+import PricingFeatureText from './PricingFeatureText';
 
 function desktopGridColsClass(n: number): string {
   if (n <= 1) return 'sm:grid-cols-1';
@@ -41,13 +42,23 @@ function PlanGrid({ plans }: { plans: PricingPlan[] }) {
           </div>
 
           <div className="flex-1 mb-2 sm:mb-5">
-            <ul className="hidden sm:block sm:space-y-3">
-              {plan.features.slice(0, 4).map((f) => (
-                <li key={f} className={`flex items-start gap-2 text-xs sm:text-[calc(13.5px+3pt)] ${plan.highlight ? 'text-blue-100' : 'text-gray-600'}`}>
+            <p
+              className={`text-[10.5px] sm:text-[calc(10.5px+3pt)] font-bold uppercase tracking-[0.15em] mb-2 sm:mb-3 ${
+                plan.highlight ? 'text-blue-300' : 'text-gray-400'
+              }`}
+            >
+              What&apos;s included
+            </p>
+            <ul className="space-y-2 sm:space-y-3">
+              {plan.features.map((f, i) => (
+                <li
+                  key={`${f}-${i}`}
+                  className={`flex items-start gap-2 text-xs sm:text-[calc(13.5px+3pt)] ${plan.highlight ? 'text-blue-100' : 'text-gray-600'}`}
+                >
                   <div className={`mt-0.5 w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 ${plan.highlight ? 'bg-white/20' : 'bg-emerald-50'}`}>
                     <Check className={`w-2.5 h-2.5 ${plan.highlight ? 'text-white' : 'text-emerald-600'}`} />
                   </div>
-                  {f}
+                  <PricingFeatureText text={f} className="min-w-0" />
                 </li>
               ))}
             </ul>

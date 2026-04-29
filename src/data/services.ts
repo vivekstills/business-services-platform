@@ -540,38 +540,6 @@ export const SERVICES: Service[] = [
     ]
   },
 
-  // FORM NEW BUSINESS – LLP
-  {
-    id: 'llp',
-    name: 'Limited Liability Partnership (LLP)',
-    mainHead: 'FORM NEW BUSINESS',
-    categoryId: 'new-business',
-    shortDescription:
-      'Incorporation of LLP with DSC, LLP agreement, PAN, TAN and optional GST & TDS filing.',
-    content:
-      'A Limited Liability Partnership (LLP) is a hybrid business structure combining features of a company and a traditional partnership. It provides limited liability to partners while allowing operational flexibility through an LLP Agreement.\n\nAn LLP is a separate legal entity with perpetual succession. Partners’ liability is generally limited to their agreed contribution, and they are insulated from liabilities arising out of other partners’ wrongful acts or misconduct. Compared to companies, LLPs enjoy more contractual flexibility, a simpler governance structure and lower compliance burden.\n\nWe provide end‑to‑end support in forming LLPs, drafting LLP Agreements, obtaining approvals and setting up tax registrations and compliance.',
-    packages: [
-      {
-        name: 'Standard',
-        price: '₹8,000',
-        description:
-          'Formation of LLP with DSC, LLP Deed drafting, name approval, government incorporation fees, PAN and TAN Registration.'
-      },
-      {
-        name: 'Deluxe',
-        price: '₹14,000',
-        description:
-          'Everything in Standard plus TDS Return filing for 1 year.'
-      },
-      {
-        name: 'Premium',
-        price: '₹18,000',
-        description:
-          'Standard package plus PAN, GST and TAN Registration along with TDS Return filing for 1 year.'
-      }
-    ]
-  },
-
   // FORM NEW BUSINESS – Private Limited Company
   {
     id: 'private-limited-company',
@@ -1010,6 +978,24 @@ export const SERVICES: Service[] = [
 
   // NEW BUSINESS – Other business registrations (from master list)
   {
+    id: 'huf-registration',
+    name: 'HUF Registration',
+    mainHead: 'FORM NEW BUSINESS',
+    categoryId: 'new-business',
+    shortDescription:
+      'HUF deed, separate PAN, bank account, and ITR-2 support for family tax planning.',
+    content:
+      'We help families formalize a Hindu Undivided Family (HUF) with a proper deed, PAN for the HUF, bank account opening, and annual income tax support.',
+    packages: [
+      {
+        name: 'Custom',
+        price: 'On request',
+        description:
+          'Scoped to family structure, state stamp rules, and whether bank or demat is required.',
+      },
+    ],
+  },
+  {
     id: 'partnership-registration',
     name: 'Partnership Registration',
     mainHead: 'FORM NEW BUSINESS',
@@ -1029,37 +1015,31 @@ export const SERVICES: Service[] = [
   },
   {
     id: 'llp-registration',
-    name: 'LLP Registration',
+    name: 'Limited Liability Partnership (LLP)',
     mainHead: 'FORM NEW BUSINESS',
     categoryId: 'new-business',
     shortDescription:
-      'End‑to‑end Limited Liability Partnership registration with MCA.',
+      'Incorporation of LLP with DSC, LLP agreement, PAN, TAN and optional GST & TDS filing.',
     content:
       'We provide complete support for LLP formation from DSCs and name reservation to filing incorporation forms, drafting the LLP Agreement and obtaining PAN/TAN for the new entity.',
     packages: [
       {
-        name: 'Custom',
-        price: 'On request',
+        name: 'Standard',
+        price: '₹8,000',
         description:
-          'Price varies with partner count and capital contribution. Share your details for an exact quote.'
-      }
-    ]
-  },
-  {
-    id: 'indian-subsidiary',
-    name: 'Indian Subsidiary',
-    mainHead: 'FORM NEW BUSINESS',
-    categoryId: 'new-business',
-    shortDescription:
-      'Formation of Indian subsidiary entities for resident groups and foreign parents.',
-    content:
-      'We help you evaluate the right structure, prepare shareholders/directors documentation and complete incorporation formalities with the MCA and tax departments for Indian subsidiaries.',
-    packages: [
+          'Formation of LLP with DSC, LLP Deed drafting, name approval, government incorporation fees, PAN and TAN Registration.'
+      },
       {
-        name: 'Custom',
-        price: 'On request',
+        name: 'Deluxe',
+        price: '₹14,000',
         description:
-          'Quotation based on capital structure, number of shareholders and foreign participation.'
+          'Everything in Standard plus TDS Return filing for 1 year.'
+      },
+      {
+        name: 'Premium',
+        price: '₹18,000',
+        description:
+          'Standard package plus PAN, GST and TAN Registration along with TDS Return filing for 1 year.'
       }
     ]
   },
@@ -1430,6 +1410,24 @@ export const SERVICES: Service[] = [
     ]
   },
   {
+    id: 'gst-registration-revocation',
+    name: 'GST Registration Revocation',
+    mainHead: 'GOODS & SERVICES TAX',
+    categoryId: 'gst-services',
+    shortDescription:
+      'Revocation of compulsory GST registration cancellation, REG-21 and follow-ups.',
+    content:
+      'We help you file pending returns, pay dues, and file Form GST REG-21 to restore a GSTIN that was cancelled by the department, and follow the officer to REG-22.',
+    packages: [
+      {
+        name: 'Custom',
+        price: 'On request',
+        description:
+          'Covers return catch-up, fee computation, REG-21 and post-revocation compliance.'
+      }
+    ]
+  },
+  {
     id: 'gst-refund',
     name: 'GST Refund',
     mainHead: 'GOODS & SERVICES TAX',
@@ -1500,24 +1498,6 @@ export const SERVICES: Service[] = [
         price: 'On request',
         description:
           'Covers documentation, application and basic guidance only.'
-      }
-    ]
-  },
-  {
-    id: 'tan-registration-service',
-    name: 'TAN Registration (Additional)',
-    mainHead: 'INCOME TAX',
-    categoryId: 'income-tax',
-    shortDescription:
-      'Additional support for TAN applications linked to income tax compliance.',
-    content:
-      'Beyond our core TAN Registration package, we can bundle TAN applications with broader income tax and TDS compliance mandates as needed.',
-    packages: [
-      {
-        name: 'Custom',
-        price: 'On request',
-        description:
-          'Pricing tailored to whether the TAN is part of a larger compliance engagement.'
       }
     ]
   },
@@ -1846,6 +1826,24 @@ export const SERVICES: Service[] = [
         price: 'On request',
         description:
           'Retainer‑style packages available for small and mid‑size companies.'
+      }
+    ]
+  },
+  {
+    id: 'public-limited-annual-compliance',
+    name: 'Public Limited Company Annual Compliance',
+    mainHead: 'LEGAL COMPLIANCE',
+    categoryId: 'legal-compliance',
+    shortDescription:
+      'Board, AGM, MCA, SEBI (listed), audit committee, and ITR compliances for public companies.',
+    content:
+      'We support annual compliance for public limited companies including enhanced disclosures, committee meetings, MCA and SEBI filings, and coordinated tax reporting.',
+    packages: [
+      {
+        name: 'Custom',
+        price: 'On request',
+        description:
+          'Scoped to listing status, paid-up capital, and subsidiary footprint.'
       }
     ]
   },

@@ -310,7 +310,7 @@ const FAQS: FAQMap = {
     },
   ],
 
-  'llp': [
+  'llp-registration': [
     {
       q: 'What is an LLP and how is it different from a Partnership firm?',
       a: 'An LLP (Limited Liability Partnership) is a hybrid entity combining the flexibility of a partnership with limited liability like a company. Unlike a traditional partnership firm, each partner\'s liability in an LLP is limited to their agreed contribution, and partners are not liable for other partners\' wrongful acts.',

@@ -463,7 +463,7 @@ export const STATE_FAQS: StateSpecificFAQs = {
     ],
   },
 
-  'llp': {
+  'llp-registration': {
     'Maharashtra': [
       {
         q: 'What is the stamp duty for an LLP Agreement in Maharashtra?',
@@ -672,7 +672,7 @@ export const STATE_PACKAGES: StatePackages = {
     ],
   },
 
-  'llp': {
+  'llp-registration': {
     'Maharashtra': [
       { name: 'Standard', price: '₹6,999', description: 'LLP incorporation + LLP Agreement (with Maharashtra stamp duty on agreement) + DPIN + DSC.' },
       { name: 'Complete', price: '₹10,999', description: 'Standard + GST Registration + PTRC (if employing staff) + 1 year Form 8 & 11 filing.' },

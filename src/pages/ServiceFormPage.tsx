@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import { getServiceBySlug } from '../data/servicesData';
 import { getRouteMainCategorySlug } from '../data/serviceExcelRouting';
+import { getCanonicalServiceId } from '../data/serviceIdRedirects';
 
 export default function ServiceFormPage() {
   const { category, service } = useParams();
-  const data = getServiceBySlug(service);
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
-
   const [form, setForm] = useState({
     name: '',
     phone: '',
@@ -17,6 +16,21 @@ export default function ServiceFormPage() {
     message: '',
     file: null as File | null,
   });
+
+  const raw = service ?? '';
+  const canonical = raw ? getCanonicalServiceId(raw) : null;
+  if (raw && canonical) {
+    const dataCanon = getServiceBySlug(canonical);
+    if (dataCanon) {
+      return (
+        <Navigate
+          to={`/services/${getRouteMainCategorySlug(dataCanon)}/${canonical}/form`}
+          replace
+        />
+      );
+    }
+  }
+  const data = getServiceBySlug(service);
 
   if (!data || !category) {
     return <Navigate to="/services" replace />;

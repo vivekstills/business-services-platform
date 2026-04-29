@@ -81,7 +81,7 @@ export const EXCEL_STUB_SERVICES: Service[] = [
   }),
   stub({
     id: 'fema-advisory',
-    name: 'FEMA Advisory',
+    name: 'FEMA Services',
     mainHead: 'FEMA COMPLIANCE',
     categoryId: 'fema-compliance',
     routeMainCategorySlug: 'fema-compliance',
@@ -297,27 +297,6 @@ export const EXCEL_STUB_SERVICES: Service[] = [
 
   // Misc
   stub({
-    id: 'one-day-liquor-permission-private-event',
-    name: 'One Day & Liquor Permission for Private Event',
-    mainHead: 'MISCELLANEOUS',
-    categoryId: 'liquor-licenses',
-    routeMainCategorySlug: 'miscellaneous',
-  }),
-  stub({
-    id: 'cl-3-license',
-    name: 'CL-3 License',
-    mainHead: 'MISCELLANEOUS',
-    categoryId: 'liquor-licenses',
-    routeMainCategorySlug: 'miscellaneous',
-  }),
-  stub({
-    id: 'fl-3-wine-bar-license',
-    name: 'FL-3 License & Wine Bar License',
-    mainHead: 'MISCELLANEOUS',
-    categoryId: 'liquor-licenses',
-    routeMainCategorySlug: 'miscellaneous',
-  }),
-  stub({
     id: 'frro-registration',
     name: 'Registration of Foreigner (FRRO)',
     mainHead: 'MISCELLANEOUS',
@@ -425,13 +404,6 @@ export const EXCEL_STUB_SERVICES: Service[] = [
     routeMainCategorySlug: 'starts-new-business',
   }),
   stub({
-    id: 'dpit-registration',
-    name: 'DPIT Registration',
-    mainHead: 'START NEW BUSINESS',
-    categoryId: 'new-business',
-    routeMainCategorySlug: 'starts-new-business',
-  }),
-  stub({
     id: 'psic-license',
     name: 'PSIC License',
     mainHead: 'START NEW BUSINESS',
@@ -516,14 +488,6 @@ export const EXCEL_STUB_SERVICES: Service[] = [
     categoryId: 'new-business',
     routeMainCategorySlug: 'starts-new-business',
   }),
-  stub({
-    id: 'ccfs-scheme',
-    name: 'CCFS (Credit Guarantee & Support Schemes)',
-    mainHead: 'START NEW BUSINESS',
-    categoryId: 'new-business',
-    routeMainCategorySlug: 'starts-new-business',
-  }),
-
   // Legal compliance — additional catalogue entries
   stub({
     id: 'certificate-of-incumbency',
@@ -560,6 +524,27 @@ export const EXCEL_STUB_SERVICES: Service[] = [
   stub({
     id: 'mgt-7-filing',
     name: 'MGT-7 Filing',
+    mainHead: 'ROC COMPLIANCE',
+    categoryId: 'roc-compliance',
+    routeMainCategorySlug: 'roc-compliance',
+  }),
+  stub({
+    id: 'ccfs-scheme',
+    name: 'CCFS scheme (Compromises, arrangements and amalgamations)',
+    mainHead: 'ROC COMPLIANCE',
+    categoryId: 'roc-compliance',
+    routeMainCategorySlug: 'roc-compliance',
+  }),
+  stub({
+    id: 'inc-20a-filing',
+    name: 'Commencement of business (Form INC-20A)',
+    mainHead: 'ROC COMPLIANCE',
+    categoryId: 'roc-compliance',
+    routeMainCategorySlug: 'roc-compliance',
+  }),
+  stub({
+    id: 'dormant-status-filing',
+    name: 'Dormant company status (Section 455, MSC-1)',
     mainHead: 'ROC COMPLIANCE',
     categoryId: 'roc-compliance',
     routeMainCategorySlug: 'roc-compliance',
