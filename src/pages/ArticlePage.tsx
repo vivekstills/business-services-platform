@@ -186,7 +186,7 @@ export default function ArticlePage() {
           {/* Content */}
           <div>
             <div className="bg-white rounded-xl border border-gray-200/80 px-6 sm:px-8 py-8">
-              <RichContent content={article.content} stripLeadingH1 />
+              <RichContent content={article.content} stripLeadingH1 pastelArticle />
             </div>
 
             {(prev || next) && (

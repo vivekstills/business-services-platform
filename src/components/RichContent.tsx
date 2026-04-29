@@ -43,6 +43,10 @@ type Props = {
     | 'intl-incorporation-batch-10'
     | 'licenses-permits-batch-11'
     | 'mca-compliance-batch-12';
+  /** Softer pastel borders/backgrounds on tables, TOC, FAQ — for editorial SEO articles. */
+  pastelArticle?: boolean;
+  /** Softer pastel presentation for editorial long-form SEO articles */
+  pastelArticle?: boolean;
 };
 
 /** GST / exim / income-tax long-form: shared `Documents`, `Features`, `Compliance` section styling. */
@@ -467,7 +471,7 @@ function shortChipLabel(label: string): string {
  *   - The chip strip itself never auto-scrolls horizontally; on mobile the
  *     user can swipe freely.
  */
-function TableOfContents({ items }: { items: TocItem[] }) {
+function TableOfContents({ items, pastelArticle }: { items: TocItem[]; pastelArticle?: boolean }) {
   const [activeId, setActiveId] = useState<string | null>(items[0]?.id ?? null);
   const [isFloating, setIsFloating] = useState(false);
   /** Sentinel placed at the pill's natural (in-flow) position. */
@@ -572,7 +576,11 @@ function TableOfContents({ items }: { items: TocItem[] }) {
     >
       <div
         style={pillPositionStyle}
-        className="pointer-events-auto inline-flex max-w-[calc(100vw-24px)] rounded-full border border-gray-200 bg-white/85 backdrop-blur-xl shadow-[0_10px_30px_-12px_rgba(17,24,39,0.18)] ring-1 ring-black/5"
+        className={`pointer-events-auto inline-flex max-w-[calc(100vw-24px)] rounded-full backdrop-blur-xl ${
+          pastelArticle
+            ? 'border border-violet-100/90 bg-[#fbf9ff]/90 shadow-[0_8px_28px_-10px_rgba(91,73,154,0.12)] ring-1 ring-violet-100/50'
+            : 'border border-gray-200 bg-white/85 shadow-[0_10px_30px_-12px_rgba(17,24,39,0.18)] ring-1 ring-black/5'
+        }`}
       >
         <div
           className="flex items-center gap-1.5 max-w-full overflow-x-auto px-2 py-1.5 rounded-full hide-scrollbar toc-fade-mask"
@@ -591,14 +599,24 @@ function TableOfContents({ items }: { items: TocItem[] }) {
                 onClick={() => onJump(it.id)}
                 className={`inline-flex items-center gap-1.5 shrink-0 rounded-full border px-3 py-1.5 text-[12.5px] font-medium transition-all whitespace-nowrap ${
                   isActive
-                    ? 'border-gray-900 bg-gray-900 text-white'
-                    : 'border-gray-200 bg-white text-gray-600 hover:border-gray-400 hover:text-gray-900'
+                    ? pastelArticle
+                      ? 'border-violet-400/70 bg-gradient-to-r from-violet-500 to-indigo-500 text-white shadow-sm'
+                      : 'border-gray-900 bg-gray-900 text-white'
+                    : pastelArticle
+                      ? 'border-violet-100/90 bg-white/80 text-gray-600 hover:border-violet-200 hover:bg-violet-50/70 hover:text-gray-800'
+                      : 'border-gray-200 bg-white text-gray-600 hover:border-gray-400 hover:text-gray-900'
                 }`}
               >
                 {it.num && (
                   <span
                     className={`inline-flex items-center justify-center w-[18px] h-[18px] rounded-full text-[10px] font-bold tabular-nums ${
-                      isActive ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-500'
+                      isActive
+                        ? pastelArticle
+                          ? 'bg-white/25 text-white'
+                          : 'bg-white/20 text-white'
+                        : pastelArticle
+                          ? 'bg-violet-100/70 text-violet-600'
+                          : 'bg-gray-100 text-gray-500'
                     }`}
                   >
                     {it.num}
@@ -661,14 +679,23 @@ type DataTableProps = { headers: string[]; rows: string[][] };
 
 const FaqAccordion: React.FC<{
   items: { q: string; a: string }[];
-  /** FEMA: flat dividers, no filled card chrome */
   minimal?: boolean;
-}> = ({ items, minimal }) => {
+  pastelArticle?: boolean;
+}> = ({ items, minimal, pastelArticle }) => {
   if (minimal) {
     return (
-      <div className="my-1 divide-y divide-gray-200 border border-gray-200/80 rounded-lg overflow-hidden bg-white" role="list">
+      <div
+        className={`my-1 divide-y rounded-lg overflow-hidden bg-white ${
+          pastelArticle ? 'divide-teal-50 border border-teal-100/85' : 'divide-gray-200 border border-gray-200/80'
+        }`}
+        role="list"
+      >
         {items.map((item, i) => (
-          <details key={i} className="group" role="listitem">
+        <details
+          key={i}
+          className={`group rounded-lg overflow-hidden bg-white ${pastelArticle ? 'border border-teal-100/85' : 'border border-gray-200/80'}`}
+          role="listitem"
+        >
             <summary className="flex cursor-pointer list-none items-start gap-2.5 px-4 py-3.5 text-left [&::-webkit-details-marker]:hidden min-h-[3.25rem]">
               <ChevronDown
                 className="h-[18px] w-[18px] mt-0.5 flex-shrink-0 text-gray-500 transition-transform group-open:rotate-180"
@@ -702,7 +729,11 @@ const FaqAccordion: React.FC<{
       {items.map((item, i) => (
         <details
           key={i}
-          className="group border border-gray-200/90 rounded-xl bg-slate-50/40 open:bg-white open:shadow-sm transition-shadow"
+          className={
+            pastelArticle
+              ? 'group border border-emerald-100/90 rounded-xl bg-emerald-50/20 open:bg-white open:shadow-sm transition-shadow'
+              : 'group border border-gray-200/90 rounded-xl bg-slate-50/40 open:bg-white open:shadow-sm transition-shadow'
+          }
           role="listitem"
         >
           <summary className="flex cursor-pointer list-none items-center gap-3 px-4 py-3.5 text-left [&::-webkit-details-marker]:hidden min-h-[3.5rem]">
@@ -733,21 +764,29 @@ const FaqAccordion: React.FC<{
 };
 
 const DataTable: React.FC<
-  DataTableProps & { feeColumnRight?: boolean; bare?: boolean }
-> = ({ headers, rows, feeColumnRight, bare }) => {
+  DataTableProps & { feeColumnRight?: boolean; bare?: boolean; pastelArticle?: boolean }
+> = ({ headers, rows, feeColumnRight, bare, pastelArticle }) => {
   const h0 = (headers[0] ?? '').trim();
   const firstColIsIndex = /^#$/i.test(h0) || /^s\.?\s*no\.?$/i.test(h0) || /^no\.?$/i.test(h0);
   const lastIdx = Math.max(0, headers.length - 1);
   const wrapClass = bare
     ? 'my-5 overflow-x-auto'
-    : 'my-5 rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden';
+    : pastelArticle
+      ? 'my-5 rounded-2xl border border-violet-100/90 bg-[#fafaff] shadow-[0_4px_24px_-8px_rgba(91,73,154,0.12)] overflow-hidden'
+      : 'my-5 rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden';
   const tableClass = bare
     ? 'w-full min-w-[min(100%,480px)] border-collapse border border-gray-200/90 text-[15px]'
     : 'w-full min-w-[min(100%,480px)] border-collapse text-[15px]';
+  const theadCls = pastelArticle
+    ? 'bg-gradient-to-r from-violet-50/90 via-indigo-50/50 to-emerald-50/40 border-b border-violet-100/80'
+    : 'bg-gradient-to-r from-slate-50 to-gray-50 border-b border-gray-200';
+  const zebraEven = pastelArticle ? 'bg-white' : 'bg-white';
+  const zebraOdd = pastelArticle ? 'bg-emerald-50/25' : 'bg-slate-50/50';
+  const zebraHover = pastelArticle ? 'hover:bg-violet-50/50' : 'hover:bg-slate-50/80';
   const tableEl = (
     <table className={tableClass}>
       <thead>
-        <tr className="bg-gradient-to-r from-slate-50 to-gray-50 border-b border-gray-200">
+        <tr className={theadCls}>
           {headers.map((h, i) => (
             <th
               key={i}
@@ -766,7 +805,7 @@ const DataTable: React.FC<
         {rows.map((row, rIdx) => (
           <tr
             key={rIdx}
-            className={`border-b border-gray-100 last:border-b-0 ${rIdx % 2 === 1 ? 'bg-slate-50/50' : 'bg-white'} hover:bg-slate-50/80 transition-colors`}
+            className={`border-b ${pastelArticle ? 'border-violet-100/60 last:border-violet-100/40' : 'border-gray-100'} last:border-b-0 ${rIdx % 2 === 1 ? zebraOdd : zebraEven} ${zebraHover} transition-colors`}
           >
             {row.map((cell, cIdx) => (
               <td
@@ -795,6 +834,7 @@ const DataTable: React.FC<
 
 type BlockRenderCtx = {
   variant: 'default' | 'service';
+  pastelArticle?: boolean;
   contentPreset?:
     | 'business-conv-batch-3'
     | 'fema-batch-4'
@@ -831,6 +871,7 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
         <FaqAccordion
           items={block.items}
           minimal={isLongFormServicePreset(ctx.contentPreset)}
+          pastelArticle={ctx.pastelArticle}
         />
       );
 
@@ -891,7 +932,13 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
 
     case 'h3':
       return (
-        <h3 className="mt-4 mb-1.5 text-[20px] font-semibold text-gray-800">
+        <h3
+          className={
+            ctx.pastelArticle
+              ? 'mt-4 mb-1.5 text-[18px] sm:text-[20px] font-semibold text-slate-700'
+              : 'mt-4 mb-1.5 text-[20px] font-semibold text-gray-800'
+          }
+        >
           {parseInline(block.text)}
         </h3>
       );
@@ -926,6 +973,7 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
           rows={block.rows}
           feeColumnRight={!!feeish}
           bare={bareTable}
+          pastelArticle={ctx.pastelArticle}
         />
       );
     }
@@ -1140,7 +1188,13 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
         <ul className="mt-2.5 space-y-1">
           {block.items.map((item, j) => (
             <li key={j} className="flex items-start gap-2.5 text-[18px] text-gray-700 leading-[1.35]">
-              <span className="mt-[0.55em] w-1.5 h-1.5 rounded-full bg-gray-400 flex-shrink-0" />
+              <span
+                className={
+                  ctx.pastelArticle
+                    ? 'mt-[0.55em] w-1.5 h-1.5 rounded-full bg-emerald-200/95 flex-shrink-0'
+                    : 'mt-[0.55em] w-1.5 h-1.5 rounded-full bg-gray-400 flex-shrink-0'
+                }
+              />
               <span>{parseInline(item)}</span>
             </li>
           ))}
@@ -1307,6 +1361,7 @@ export default function RichContent({
   stripLeadingH1 = false,
   variant: variantProp = 'default',
   contentPreset,
+  pastelArticle,
 }: Props) {
   const processed = useMemo(() => {
     let safe = (content ?? '').replace(/\r\n/g, '\n');
@@ -1349,7 +1404,11 @@ export default function RichContent({
   }
 
   const displayToc = showToc && toc.length >= 3;
-  const blockCtx: BlockRenderCtx = { variant: variantProp, contentPreset };
+  const blockCtx: BlockRenderCtx = {
+    variant: variantProp,
+    contentPreset,
+    pastelArticle,
+  };
   const segments = variantProp === 'service' ? segmentByH2(blocks) : null;
   const femaClass = isLongFormServicePreset(contentPreset)
     ? 'scroll-mt-[120px] rounded-xl border border-gray-200/80 bg-white p-4 sm:p-5 shadow-none ring-0'
@@ -1358,7 +1417,7 @@ export default function RichContent({
   if (variantProp === 'service' && segments) {
     return (
       <div className={className}>
-        {displayToc && <TableOfContents items={toc} />}
+        {displayToc && <TableOfContents items={toc} pastelArticle={pastelArticle} />}
         <div className="space-y-6 sm:space-y-7">
           {segments.map((seg, segIdx) => {
             if (seg.type === 'intro') {
@@ -1403,7 +1462,7 @@ export default function RichContent({
 
   return (
     <div className={className}>
-      {displayToc && <TableOfContents items={toc} />}
+      {displayToc && <TableOfContents items={toc} pastelArticle={pastelArticle} />}
       {blocks.map((block, i) => (
         <RichBlock key={i} block={block} h2InSection={false} ctx={blockCtx} />
       ))}
