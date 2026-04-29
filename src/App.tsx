@@ -40,10 +40,10 @@ function AppContent() {
   const isAdmin = loc.pathname.startsWith('/admin');
 
   return (
-    <div className="min-h-screen app-soft-bg font-sans antialiased">
+    <div className="min-h-screen flex flex-col app-soft-bg font-sans antialiased">
       <ScrollToTop />
       {!isAdmin && <Navbar />}
-      <main className="pb-[70px] md:pb-0">
+      <main className="flex-1 min-h-0 w-full pb-[70px] md:pb-0">
         <Routes>
           <Route path="/"                       element={<HomePage />} />
           <Route path="/category/:categoryId"   element={<CategoryPage />} />

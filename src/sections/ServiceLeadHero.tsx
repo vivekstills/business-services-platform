@@ -9,6 +9,7 @@ import PaymentModal from '../components/PaymentModal';
 import RichContent from '../components/RichContent';
 import { isRichMarkdown } from '../data/serviceAboutContent';
 import { parsePriceToAmount } from '../utils/price';
+import { formatReadingTimeLabel } from '../utils/readingTime';
 import { isDeveloperView } from '../utils/visibility';
 import {
   INDIAN_STATES,
@@ -19,7 +20,7 @@ import {
   isNEHillyState,
 } from '../data/stateData';
 import {
-  AlertCircle, CheckCircle2, Mail, Phone, User, ChevronRight, Check, MapPin, Info, CreditCard,
+  AlertCircle, CheckCircle2, Mail, Phone, User, ChevronRight, Check, MapPin, Info, CreditCard, Clock,
 } from 'lucide-react';
 
 type Props = { service: Service };
@@ -177,6 +178,7 @@ export default function ServiceLeadHero({ service }: Props) {
   const packagesToRender: ServicePackage[] = onRequestPackages.length > 0 ? [onRequestPackages[0]] : displayPackages;
   const aboutParagraphs = useMemo(() => getAboutParagraphs(service.content), [service.content]);
   const keyPoints = useMemo(() => steps.slice(0, 3), [steps]);
+  const readTimeLabel = useMemo(() => formatReadingTimeLabel(service.content), [service.content]);
 
   const packageVisuals = (pkg: ServicePackage) => {
     const isRecommended = usingStatePackages && Boolean(pkg.recommended);
@@ -292,6 +294,11 @@ export default function ServiceLeadHero({ service }: Props) {
               >
                 {service.shortDescription || 'Get complete expert support from documentation to filing and follow-ups, all handled by specialists.'}
               </motion.p>
+
+              <p className="flex items-center gap-1.5 text-[12px] text-gray-400 mb-5 sm:mb-6">
+                <Clock className="w-3.5 h-3.5 shrink-0" aria-hidden />
+                <span>{readTimeLabel}</span>
+              </p>
 
               <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2.5 mb-8 sm:mb-10">
                 <button

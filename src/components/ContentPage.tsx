@@ -1,6 +1,42 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Clock, Calendar, Tag } from 'lucide-react';
+import { formatReadingTimeLabel } from '../utils/readingTime';
+
+/** Plain text of on-page copy; if you edit the page body, update this so the estimate stays accurate. */
+const CONTENT_PAGE_READ_SOURCE = [
+  'Complete Guide to Private Limited Company Registration in India',
+  'Everything you need to know about starting a Pvt Ltd company, from eligibility and documents to the step-by-step registration process.',
+  'Introduction',
+  'A Private Limited Company is the most popular legal structure for businesses in India. It offers limited liability protection to its shareholders, ability to raise equity funds, and separate legal entity status. This structure is ideal for startups and growing businesses looking to scale operations.',
+  'Eligibility Criteria',
+  'Before starting the registration process, ensure you meet the following requirements:',
+  'Minimum 2 Directors (at least one Indian resident)',
+  'Minimum 2 Shareholders (can be same as directors)',
+  'Registered Office Address in India',
+  'Digital Signature Certificate (DSC) for all directors',
+  'Required Documents',
+  'Documentation is a crucial part of the process. You will need to prepare the following:',
+  'For Directors & Shareholders',
+  'PAN Card (Mandatory for Indians)',
+  'Passport (Mandatory for Foreigners)',
+  'Voter ID / Driving License / Passport',
+  'Latest Bank Statement / Electricity Bill',
+  'For Registered Office',
+  'Latest Electricity Bill / Gas Bill',
+  'Notarized Rental Agreement (if rented)',
+  'No Objection Certificate (NOC) from owner',
+  'Registration Process',
+  'The registration process is fully online and typically takes 10-15 days. It involves obtaining DSC, name approval, and filing the SPICe+ form with the Ministry of Corporate Affairs (MCA).',
+  'Step 1: Digital Signature',
+  'Obtain DSC for all proposed directors.',
+  'Step 2: Name Reservation',
+  'Apply for unique name via SPICe+ Part A.',
+  'Step 3: Incorporation',
+  'File SPICe+ Part B with all documents.',
+  'Step 4: PAN & TAN',
+  'Auto-generated with Certificate of Incorporation.',
+].join('\n\n');
 
 const TABLE_OF_CONTENTS = [
   { id: 'introduction', title: 'Introduction' },
@@ -11,6 +47,7 @@ const TABLE_OF_CONTENTS = [
 ];
 
 export default function ContentPage() {
+  const contentReadLabel = formatReadingTimeLabel(CONTENT_PAGE_READ_SOURCE);
   return (
     <section className="bg-[#0A0B0D] min-h-screen pt-32 pb-20 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,7 +65,7 @@ export default function ContentPage() {
             >
               <div className="flex items-center gap-4 text-sm text-[#666666] mb-6 font-medium">
                 <span className="flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5" /> 5 min read
+                  <Clock className="w-3.5 h-3.5" /> {contentReadLabel}
                 </span>
                 <span className="w-1 h-1 rounded-full bg-[#333333]" />
                 <span className="flex items-center gap-1.5">

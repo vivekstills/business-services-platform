@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Clock, Tag, Calendar, User, Mail, Phone, AlertCircle, CheckCircle2 } from 'lucide-react';
 import type { Service } from '../data/services';
+import { formatReadingTimeLabel } from '../utils/readingTime';
 
 type Props = {
   service: Service | null;
@@ -66,7 +67,7 @@ export default function ServiceDetail({ service }: Props) {
             >
               <div className="flex flex-wrap items-center gap-4 text-sm text-[#666666] mb-6 font-medium">
                 <span className="flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5" /> 3–5 min read
+                  <Clock className="w-3.5 h-3.5" /> {formatReadingTimeLabel(service.content)}
                 </span>
                 <span className="w-1 h-1 rounded-full bg-[#333333]" />
                 <span className="flex items-center gap-1.5">

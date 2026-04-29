@@ -6,6 +6,7 @@ import { useContent } from '../context/ContentContext';
 import RichContent from '../components/RichContent';
 import type { Article } from '../types/content';
 import SEOHead, { SITE_URL } from '../components/SEOHead';
+import { formatReadingTimeLabel } from '../utils/readingTime';
 
 const CATEGORY_COLORS: Record<string, string> = {
   'GST & Tax': 'bg-orange-50 text-orange-700 border-orange-200',
@@ -34,7 +35,7 @@ function RelatedCard({ article }: { article: Article }) {
       </div>
       <div className="flex-1 min-w-0">
         <p className="text-sm font-medium text-gray-700 group-hover:text-blue-600 transition-colors leading-snug line-clamp-2">{article.title}</p>
-        <p className="text-xs text-gray-400 mt-1">{article.readingTime}</p>
+        <p className="text-xs text-gray-400 mt-1">{formatReadingTimeLabel(article.content)}</p>
       </div>
     </Link>
   );
@@ -157,7 +158,7 @@ export default function ArticlePage() {
               {new Date(article.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}
             </span>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-gray-200 text-gray-400 text-xs font-medium">
-              <Clock className="w-3 h-3" /> {article.readingTime}
+              <Clock className="w-3 h-3" /> {formatReadingTimeLabel(article.content)}
             </span>
             {article.tags.map((tag, idx) => {
               const palettes = [
@@ -220,18 +221,37 @@ export default function ArticlePage() {
                 )}
               </div>
             )}
+
+            {/* Related articles (below prev/next on all screens) */}
+            {sidebar.length > 0 && (
+              <div className="mt-6 bg-white rounded-xl border border-gray-200/80 p-4">
+                <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-3">More Articles</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 divide-y sm:divide-y-0 divide-gray-50">
+                  {sidebar.map((a) => <RelatedCard key={a.id} article={a} />)}
+                </div>
+                <Link to="/articles" className="mt-3 flex items-center gap-1 text-xs font-medium text-blue-600 hover:text-blue-800 transition-colors pt-3 border-t border-gray-100">
+                  View all articles <ArrowRight className="w-3 h-3" />
+                </Link>
+              </div>
+            )}
+
+            <Link to="/articles" className="mt-4 flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-600 transition-colors">
+              <ArrowLeft className="w-3.5 h-3.5" /> Back to articles
+            </Link>
           </div>
 
           {/* Sidebar */}
-          <aside className="space-y-4">
+          <aside className="hidden lg:flex flex-col gap-4 sticky top-20 self-start max-h-[calc(100vh-5.5rem)]">
 
-            {/* TOC */}
+            {/* TOC — scrolls internally; grows to fill available space */}
             {toc.length > 0 && (
-              <div className="sticky top-20 bg-white rounded-xl border border-gray-200/80 p-4">
-                <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
-                  <AlignLeft className="w-3 h-3" /> Contents
-                </p>
-                <nav className="space-y-0.5">
+              <div className="bg-white rounded-xl border border-gray-200/80 overflow-hidden flex flex-col min-h-0">
+                <div className="px-4 pt-4 pb-2 border-b border-gray-100 flex-shrink-0">
+                  <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider flex items-center gap-1.5">
+                    <AlignLeft className="w-3 h-3" /> Contents
+                  </p>
+                </div>
+                <nav className="overflow-y-auto flex-1 px-2 py-2 space-y-0.5">
                   {toc.map(({ id, label }, idx) => (
                     <button key={id} onClick={() => scrollToSection(id)}
                       className={`w-full text-left flex items-start gap-2 px-2 py-1.5 rounded-lg text-xs transition-all ${
@@ -247,8 +267,8 @@ export default function ArticlePage() {
               </div>
             )}
 
-            {/* CTA */}
-            <div className="bg-gray-900 rounded-xl p-5 text-white">
+            {/* CTA — always fully visible, never overlaps TOC */}
+            <div className="bg-gray-900 rounded-xl p-5 text-white flex-shrink-0">
               <h3 className="font-semibold text-sm mb-1">Need expert help?</h3>
               <p className="text-gray-400 text-xs mb-4 leading-relaxed">Our specialists handle this end-to-end.</p>
               <Link to="/contact-us"
@@ -257,22 +277,6 @@ export default function ArticlePage() {
               </Link>
             </div>
 
-            {/* Related */}
-            {sidebar.length > 0 && (
-              <div className="bg-white rounded-xl border border-gray-200/80 p-4">
-                <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-3">More Articles</p>
-                <div className="divide-y divide-gray-50">
-                  {sidebar.map((a) => <RelatedCard key={a.id} article={a} />)}
-                </div>
-                <Link to="/articles" className="mt-3 flex items-center gap-1 text-xs font-medium text-blue-600 hover:text-blue-800 transition-colors pt-3 border-t border-gray-100">
-                  View all <ArrowRight className="w-3 h-3" />
-                </Link>
-              </div>
-            )}
-
-            <Link to="/articles" className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-600 transition-colors">
-              <ArrowLeft className="w-3.5 h-3.5" /> Back to articles
-            </Link>
           </aside>
 
         </div>

@@ -12,6 +12,7 @@ import {
   getArticleCategoryBadgeClasses,
   normalizeArticleCategory,
 } from '../../data/articleCategories';
+import { formatReadingTimeLabel } from '../../utils/readingTime';
 
 type Props = {
   data: Article[];
@@ -294,7 +295,7 @@ function emptyArticle(): Article {
     date: new Date().toISOString().slice(0, 10),
     published: false,
     tags: [],
-    readingTime: '3 min read',
+    readingTime: formatReadingTimeLabel(''),
   };
 }
 
@@ -354,16 +355,20 @@ export default function AdminArticlesSection({ data, categories, onSave, saving 
   const updateDraft = (field: keyof Article, value: unknown) => {
     setDraft((prev) => {
       if (!prev) return prev;
-      const updated = { ...prev, [field]: value };
+      const updated = { ...prev, [field]: value } as Article;
       if (field === 'title') updated.slug = toSlug(value as string);
+      if (field === 'content' && typeof value === 'string') {
+        updated.readingTime = formatReadingTimeLabel(value);
+      }
       return updated;
     });
   };
 
   const saveDraft = () => {
     if (!draft) return;
-    const exists = articles.find((a) => a.id === draft.id);
-    const next = exists ? articles.map((a) => (a.id === draft.id ? draft : a)) : [...articles, draft];
+    const finalDraft: Article = { ...draft, readingTime: formatReadingTimeLabel(draft.content) };
+    const exists = articles.find((a) => a.id === finalDraft.id);
+    const next = exists ? articles.map((a) => (a.id === finalDraft.id ? finalDraft : a)) : [...articles, finalDraft];
     setArticles(next);
     onSave(next, cats);
     setEditingId(null);
@@ -461,9 +466,11 @@ export default function AdminArticlesSection({ data, categories, onSave, saving 
                 className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm focus:border-blue-400 focus:ring-1 focus:ring-blue-100" />
             </div>
             <div>
-              <label className="block text-xs font-medium text-gray-500 mb-1 flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> Reading Time</label>
-              <input value={draft.readingTime} onChange={(e) => updateDraft('readingTime', e.target.value)} placeholder="e.g. 5 min read"
-                className="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm focus:border-blue-400 focus:ring-1 focus:ring-blue-100" />
+              <label className="block text-xs font-medium text-gray-500 mb-1 flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> Reading time</label>
+              <div className="w-full px-3 py-2 rounded-lg border border-gray-100 bg-gray-50 text-sm text-gray-700">
+                {formatReadingTimeLabel(draft.content)}
+              </div>
+              <p className="text-[10px] text-gray-400 mt-1">Estimated from article body; updates as you edit content.</p>
             </div>
             <div>
               <label className="block text-xs font-medium text-gray-500 mb-1 flex items-center gap-1"><Tag className="w-3.5 h-3.5" /> Tags (comma-separated)</label>
@@ -611,7 +618,7 @@ export default function AdminArticlesSection({ data, categories, onSave, saving 
                   <div className="flex items-center gap-3 mt-2 text-[calc(11px+3pt)] text-gray-400">
                     <span className="flex items-center gap-1"><User className="w-3 h-3" /> {article.author}</span>
                     <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {article.date}</span>
-                    <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> {article.readingTime}</span>
+                    <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> {formatReadingTimeLabel(article.content)}</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 flex-shrink-0">
