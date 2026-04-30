@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { extractSectionNum, articleSectionIdFromRest } from '../utils/articleSectionIds';
 import { preprocessIncomeTaxBatch9ServiceMarkdown } from '../utils/preprocessIncomeTaxBatch9ServiceMarkdown';
 import {
   Info,
@@ -9,6 +10,7 @@ import {
   FileText,
   Check,
   CheckCircle2,
+  Pin,
 } from 'lucide-react';
 
 type Props = {
@@ -45,6 +47,11 @@ type Props = {
     | 'mca-compliance-batch-12';
   /** Softer pastel borders/backgrounds on tables, TOC chips, FAQ — for editorial SEO articles. */
   pastelArticle?: boolean;
+  /**
+   * Premium editorial layout for `/articles/*`: typography, data tables, callouts,
+   * steppers, FAQ accordion, section pills — global design language for articles.
+   */
+  articlePremium?: boolean;
 };
 
 /** GST / exim / income-tax long-form: shared `Documents`, `Features`, `Compliance` section styling. */
@@ -68,6 +75,9 @@ function isLongFormServicePreset(p?: string): boolean {
 
 type CalloutVariant = 'default' | 'note' | 'tip' | 'warn' | 'important';
 
+/** Emoji-led blockquotes map to premium left-rail callouts when `articlePremium` is on. */
+export type PremiumCalloutTint = 'info' | 'warning' | 'success' | 'neutral';
+
 type Block =
   | { type: 'h1'; text: string }
   | { type: 'h2'; text: string; id: string }
@@ -76,44 +86,91 @@ type Block =
   | { type: 'p'; text: string }
   | { type: 'ul'; items: string[] }
   | { type: 'ol'; items: string[] }
-  | { type: 'blockquote'; lines: string[]; variant: CalloutVariant; title: string | null }
+  | {
+      type: 'blockquote';
+      lines: string[];
+      variant: CalloutVariant;
+      title: string | null;
+      premiumTint?: PremiumCalloutTint;
+    }
   | { type: 'table'; headers: string[]; rows: string[][] }
   | { type: 'faq'; items: { q: string; a: string }[] };
 
-function parseInline(text: string): React.ReactNode[] {
-  const parts = text.split(/(\*\*.*?\*\*|\[([^\]]+)\]\(([^)]+)\))/g);
-  const nodes: React.ReactNode[] = [];
-  let i = 0;
-  while (i < parts.length) {
-    const part = parts[i];
-    if (!part) { i++; continue; }
-    if (part.startsWith('**') && part.endsWith('**') && part.length > 4) {
-      nodes.push(<strong key={i} className="font-semibold text-gray-900">{part.slice(2, -2)}</strong>);
-      i += 1;
-    } else if (part.startsWith('[') && part.includes('](')) {
-      const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
-      if (match) {
+function stripPremiumCalloutEmoji(firstLine: string): { tint?: PremiumCalloutTint; line: string } {
+  const s = firstLine.trimStart();
+  if (s.startsWith('⚠️')) return { tint: 'warning', line: s.slice(2).trimStart() };
+  if (s.startsWith('✅')) return { tint: 'success', line: s.slice(2).trimStart() };
+  if (s.startsWith('📌')) return { tint: 'neutral', line: s.slice(2).trimStart() };
+  if (s.startsWith('ℹ️')) return { tint: 'info', line: s.slice(2).trimStart() };
+  return { line: firstLine };
+}
+
+function parseInline(text: string, opts?: { articlePremium?: boolean }): React.ReactNode[] {
+  const premium = !!opts?.articlePremium;
+  const strongCls = premium ? 'font-semibold text-[#1e293b]' : 'font-semibold text-gray-900';
+
+  function inner(seg: string, keyPrefix: string): React.ReactNode[] {
+    const parts = seg.split(/(\*\*.*?\*\*|\[([^\]]+)\]\(([^)]+)\))/g);
+    const nodes: React.ReactNode[] = [];
+    let i = 0;
+    while (i < parts.length) {
+      const part = parts[i];
+      if (!part) {
+        i++;
+        continue;
+      }
+      if (part.startsWith('**') && part.endsWith('**') && part.length > 4) {
         nodes.push(
-          <a key={i} href={match[2]} target="_blank" rel="noopener noreferrer"
-            className="text-blue-600 underline underline-offset-2 hover:text-blue-800 transition-colors">
-            {match[1]}
-          </a>
+          <strong key={`${keyPrefix}-${i}`} className={strongCls}>
+            {part.slice(2, -2)}
+          </strong>
         );
-        i += 3;
-      } else { nodes.push(part); i++; }
-    } else { nodes.push(part); i++; }
+        i += 1;
+      } else if (part.startsWith('[') && part.includes('](')) {
+        const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        if (match) {
+          nodes.push(
+            <a
+              key={`${keyPrefix}-${i}`}
+              href={match[2]}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline underline-offset-2 hover:text-blue-800 transition-colors"
+            >
+              {match[1]}
+            </a>
+          );
+          i += 3;
+        } else {
+          nodes.push(part);
+          i++;
+        }
+      } else {
+        nodes.push(part);
+        i++;
+      }
+    }
+    return nodes;
   }
-  return nodes;
-}
 
-function sectionIdOf(rest: string): string {
-  return `section-${rest.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40)}`;
-}
+  if (!premium || !text.includes('==')) {
+    return inner(text, 'p');
+  }
 
-function extractSectionNum(text: string): { num: string | null; rest: string } {
-  const m = text.match(/^(\d+)[\).:]\s+(.+)$/);
-  if (m) return { num: m[1], rest: m[2] };
-  return { num: null, rest: text };
+  const chunks = text.split(/(==[^=]+==)/g);
+  const out: React.ReactNode[] = [];
+  chunks.forEach((chunk, ci) => {
+    if (chunk.startsWith('==') && chunk.endsWith('==') && chunk.length > 4) {
+      out.push(
+        <span key={`ks-${ci}`} className="key-stat font-bold text-[1.05em] text-[#4f46e5]">
+          {chunk.slice(2, -2)}
+        </span>
+      );
+    } else if (chunk) {
+      out.push(...inner(chunk, `c${ci}`));
+    }
+  });
+  return out;
 }
 
 /** Pipe-split a GFM table row. Trims cells and drops leading/trailing empties
@@ -168,7 +225,8 @@ function tryParseGfmTable(
   return { end: i, headers, rows };
 }
 
-function parseBlocks(raw: string): Block[] {
+function parseBlocks(raw: string, opts?: { articlePremium?: boolean }): Block[] {
+  const ap = !!opts?.articlePremium;
   const lines = raw.split('\n');
   const blocks: Block[] = [];
   let i = 0;
@@ -188,7 +246,7 @@ function parseBlocks(raw: string): Block[] {
     if (trimmed.startsWith('## ')) {
       const text = trimmed.slice(3).trim();
       const { rest } = extractSectionNum(text);
-      blocks.push({ type: 'h2', text, id: sectionIdOf(rest) });
+      blocks.push({ type: 'h2', text, id: articleSectionIdFromRest(rest) });
       i++;
     } else if (trimmed.startsWith('### ')) {
       blocks.push({ type: 'h3', text: trimmed.slice(4).trim() });
@@ -223,7 +281,24 @@ function parseBlocks(raw: string): Block[] {
           bqLines.shift();
         }
       }
-      blocks.push({ type: 'blockquote', lines: bqLines, variant, title });
+      let premiumTint: PremiumCalloutTint | undefined;
+      if (opts?.articlePremium && bqLines.length > 0) {
+        const { tint, line } = stripPremiumCalloutEmoji(bqLines[0]);
+        if (tint) {
+          premiumTint = tint;
+          bqLines[0] = line;
+        } else if (variant === 'note' || variant === 'important') {
+          premiumTint = 'info';
+        } else if (variant === 'tip') {
+          premiumTint = 'success';
+        } else if (variant === 'warn') {
+          premiumTint = 'warning';
+        }
+      }
+      if (ap && !premiumTint && variant === 'default') {
+        premiumTint = 'info';
+      }
+      blocks.push({ type: 'blockquote', lines: bqLines, variant, title, premiumTint });
     } else if (/^[-*] /.test(trimmed)) {
       const items: string[] = [];
       while (i < lines.length && /^[-*] /.test(lines[i].trim())) {
@@ -469,7 +544,15 @@ function shortChipLabel(label: string): string {
  *   - The chip strip itself never auto-scrolls horizontally; on mobile the
  *     user can swipe freely.
  */
-function TableOfContents({ items, pastelArticle }: { items: TocItem[]; pastelArticle?: boolean }) {
+function TableOfContents({
+  items,
+  pastelArticle,
+  articlePremium,
+}: {
+  items: TocItem[];
+  pastelArticle?: boolean;
+  articlePremium?: boolean;
+}) {
   const [activeId, setActiveId] = useState<string | null>(items[0]?.id ?? null);
   const [isFloating, setIsFloating] = useState(false);
   /** Sentinel placed at the pill's natural (in-flow) position. */
@@ -548,12 +631,11 @@ function TableOfContents({ items, pastelArticle }: { items: TocItem[]; pastelArt
   const onJump = (id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
-    // Offset clears the fixed site header (~64px) + floating TOC pill (~55px).
     const offset = 120;
     const top = el.getBoundingClientRect().top + window.scrollY - offset;
     suppressObserverUntil.current = performance.now() + 600;
     setActiveId(id);
-    window.scrollTo(0, Math.max(0, top));
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
   };
 
   // When floating, the pill is rendered as `position: fixed` so the chrome
@@ -575,9 +657,11 @@ function TableOfContents({ items, pastelArticle }: { items: TocItem[]; pastelArt
       <div
         style={pillPositionStyle}
         className={`pointer-events-auto inline-flex max-w-[calc(100vw-24px)] rounded-full backdrop-blur-xl ${
-          pastelArticle
-            ? 'border border-violet-100/90 bg-[#fbf9ff]/90 shadow-[0_8px_28px_-10px_rgba(91,73,154,0.12)] ring-1 ring-violet-100/50'
-            : 'border border-gray-200 bg-white/85 shadow-[0_10px_30px_-12px_rgba(17,24,39,0.18)] ring-1 ring-black/5'
+          articlePremium
+            ? 'border border-slate-200 bg-white/95 shadow-sm shadow-slate-200/50'
+            : pastelArticle
+              ? 'border border-violet-100/90 bg-[#fbf9ff]/90 shadow-[0_8px_28px_-10px_rgba(91,73,154,0.12)] ring-1 ring-violet-100/50'
+              : 'border border-gray-200 bg-white/85 shadow-[0_10px_30px_-12px_rgba(17,24,39,0.18)] ring-1 ring-black/5'
         }`}
       >
         <div
@@ -595,27 +679,41 @@ function TableOfContents({ items, pastelArticle }: { items: TocItem[]; pastelArt
                 role="tab"
                 aria-selected={isActive}
                 onClick={() => onJump(it.id)}
-                className={`inline-flex items-center gap-1.5 shrink-0 rounded-full border px-3 py-1.5 text-[12.5px] font-medium transition-all whitespace-nowrap ${
-                  isActive
-                    ? pastelArticle
-                      ? 'border-violet-400/70 bg-gradient-to-r from-violet-500 to-indigo-500 text-white shadow-sm'
-                      : 'border-gray-900 bg-gray-900 text-white'
-                    : pastelArticle
-                      ? 'border-violet-100/90 bg-white/80 text-gray-600 hover:border-violet-200 hover:bg-violet-50/70 hover:text-gray-800'
-                      : 'border-gray-200 bg-white text-gray-600 hover:border-gray-400 hover:text-gray-900'
-                }`}
+                className={
+                  articlePremium
+                    ? `inline-flex items-center gap-1.5 shrink-0 rounded-full border px-[0.9rem] py-[0.35rem] text-[0.8rem] font-semibold transition-all whitespace-nowrap ${
+                        isActive
+                          ? 'border-transparent bg-[#4f46e5] text-white shadow-sm shadow-indigo-200/40'
+                          : 'border-transparent bg-[#f1f5f9] text-[#64748b] hover:bg-slate-200/90 hover:text-slate-700'
+                      }`
+                    : `inline-flex items-center gap-1.5 shrink-0 rounded-full border px-3 py-1.5 text-[12.5px] font-medium transition-all whitespace-nowrap ${
+                        isActive
+                          ? pastelArticle
+                            ? 'border-violet-400/70 bg-gradient-to-r from-violet-500 to-indigo-500 text-white shadow-sm'
+                            : 'border-gray-900 bg-gray-900 text-white'
+                          : pastelArticle
+                            ? 'border-violet-100/90 bg-white/80 text-gray-600 hover:border-violet-200 hover:bg-violet-50/70 hover:text-gray-800'
+                            : 'border-gray-200 bg-white text-gray-600 hover:border-gray-400 hover:text-gray-900'
+                      }`
+                }
               >
                 {it.num && (
                   <span
-                    className={`inline-flex items-center justify-center w-[18px] h-[18px] rounded-full text-[10px] font-bold tabular-nums ${
-                      isActive
-                        ? pastelArticle
-                          ? 'bg-white/25 text-white'
-                          : 'bg-white/20 text-white'
-                        : pastelArticle
-                          ? 'bg-violet-100/70 text-violet-600'
-                          : 'bg-gray-100 text-gray-500'
-                    }`}
+                    className={
+                      articlePremium
+                        ? `inline-flex items-center justify-center w-[18px] h-[18px] rounded-full text-[10px] font-bold tabular-nums ${
+                            isActive ? 'bg-white/20 text-white' : 'bg-slate-200/90 text-slate-600'
+                          }`
+                        : `inline-flex items-center justify-center w-[18px] h-[18px] rounded-full text-[10px] font-bold tabular-nums ${
+                            isActive
+                              ? pastelArticle
+                                ? 'bg-white/25 text-white'
+                                : 'bg-white/20 text-white'
+                              : pastelArticle
+                                ? 'bg-violet-100/70 text-violet-600'
+                                : 'bg-gray-100 text-gray-500'
+                          }`
+                    }
                   >
                     {it.num}
                   </span>
@@ -642,9 +740,74 @@ const CALLOUT_STYLES: Record<
   important: { wrap: 'border-violet-200 bg-violet-50/70',  iconWrap: 'bg-violet-100 text-violet-700',Icon: Sparkles,       label: 'Important' },
 };
 
-type CalloutProps = { variant: CalloutVariant; title: string | null; lines: string[] };
+const PREMIUM_CALLOUT: Record<
+  PremiumCalloutTint,
+  { wrap: string; Icon: React.ComponentType<{ className?: string }>; iconClass: string }
+> = {
+  info: { wrap: 'bg-[#eff6ff] border-l-[4px] border-l-[#3b82f6]', Icon: Info, iconClass: 'text-[#1d4ed8]' },
+  warning: { wrap: 'bg-[#fffbeb] border-l-[4px] border-l-[#f59e0b]', Icon: AlertTriangle, iconClass: 'text-[#92400e]' },
+  success: { wrap: 'bg-[#f0fdf4] border-l-[4px] border-l-[#22c55e]', Icon: CheckCircle2, iconClass: 'text-[#15803d]' },
+  neutral: { wrap: 'bg-[#f8fafc] border-l-[4px] border-l-[#94a3b8]', Icon: Pin, iconClass: 'text-[#475569]' },
+};
 
-const Callout: React.FC<CalloutProps> = ({ variant, title, lines }) => {
+type CalloutProps = {
+  variant: CalloutVariant;
+  title: string | null;
+  lines: string[];
+  premiumTint?: PremiumCalloutTint;
+  articlePremium?: boolean;
+};
+
+function PremiumCallout({
+  tint,
+  title,
+  lines,
+  articlePremium,
+}: {
+  tint: PremiumCalloutTint;
+  title: string | null;
+  lines: string[];
+  articlePremium: boolean;
+}) {
+  const cfg = PREMIUM_CALLOUT[tint];
+  const Icon = cfg.Icon;
+  return (
+    <aside
+      className={`my-[1.5rem] rounded-lg ${cfg.wrap} px-5 py-4 shadow-sm`}
+      role="note"
+    >
+      <div className="flex gap-3">
+        <span className={`mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-md bg-white/60 ${cfg.iconClass}`} aria-hidden>
+          <Icon className="h-5 w-5" strokeWidth={2} />
+        </span>
+        <div className="min-w-0 flex-1 text-[#334155]">
+          {title ? (
+            <p className="mb-1.5 font-semibold text-[#1e293b]">
+              {parseInline(title, { articlePremium })}
+            </p>
+          ) : null}
+          <div className="space-y-2 text-base leading-relaxed">
+            {lines.map((line, j) => (
+              <p key={j}>{parseInline(line, { articlePremium })}</p>
+            ))}
+          </div>
+        </div>
+      </div>
+    </aside>
+  );
+}
+
+const Callout: React.FC<CalloutProps> = ({ variant, title, lines, premiumTint, articlePremium }) => {
+  if (articlePremium && premiumTint) {
+    return (
+      <PremiumCallout
+        tint={premiumTint}
+        title={title ?? (variant === 'default' ? null : CALLOUT_STYLES[variant].label)}
+        lines={lines}
+        articlePremium={!!articlePremium}
+      />
+    );
+  }
   const cfg = CALLOUT_STYLES[variant];
   const Icon = cfg.Icon;
   const heading = title ?? (variant === 'default' ? null : cfg.label);
@@ -679,7 +842,45 @@ const FaqAccordion: React.FC<{
   items: { q: string; a: string }[];
   minimal?: boolean;
   pastelArticle?: boolean;
-}> = ({ items, minimal, pastelArticle }) => {
+  articlePremium?: boolean;
+}> = ({ items, minimal, pastelArticle, articlePremium }) => {
+  if (articlePremium) {
+    return (
+      <div className="my-2 space-y-2" role="list">
+        {items.map((item, i) => (
+          <details
+            key={i}
+            className="group rounded-lg border border-[#e2e8f0] bg-white open:border-[#6366f1] transition-colors"
+            role="listitem"
+          >
+            <summary className="flex cursor-pointer list-none items-start gap-3 px-5 py-4 text-left [&::-webkit-details-marker]:hidden">
+              <ChevronDown
+                className="mt-0.5 h-5 w-5 shrink-0 text-[#64748b] transition-transform group-open:rotate-180 group-open:text-[#4f46e5]"
+                aria-hidden
+                strokeWidth={2}
+              />
+              <span className="min-w-0 flex-1 font-semibold text-[#1e293b] group-open:text-[#4f46e5] text-[15px] leading-snug pr-2">
+                {parseInline(item.q, { articlePremium: true })}
+              </span>
+            </summary>
+            <div className="px-5 pb-4 pt-0 text-[15px] text-[#475569] leading-[1.75]">
+              {item.a
+                ? item.a
+                    .split(/\n\n+/)
+                    .map((c) => c.trim())
+                    .filter(Boolean)
+                    .map((chunk, pi) => (
+                      <p key={pi} className={pi > 0 ? 'mt-3' : undefined}>
+                        {parseInline(chunk, { articlePremium: true })}
+                      </p>
+                    ))
+                : null}
+            </div>
+          </details>
+        ))}
+      </div>
+    );
+  }
   if (minimal) {
     return (
       <div
@@ -762,8 +963,56 @@ const FaqAccordion: React.FC<{
 };
 
 const DataTable: React.FC<
-  DataTableProps & { feeColumnRight?: boolean; bare?: boolean; pastelArticle?: boolean }
-> = ({ headers, rows, feeColumnRight, bare, pastelArticle }) => {
+  DataTableProps & {
+    feeColumnRight?: boolean;
+    bare?: boolean;
+    pastelArticle?: boolean;
+    articlePremium?: boolean;
+  }
+> = ({ headers, rows, feeColumnRight, bare, pastelArticle, articlePremium }) => {
+  if (articlePremium) {
+    const lastIdx = Math.max(0, headers.length - 1);
+    return (
+      <div className="my-6 overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm">
+        <table className="w-full min-w-[min(100%,560px)] border-collapse text-[0.95rem]">
+          <thead>
+            <tr>
+              {headers.map((h, i) => (
+                <th
+                  key={i}
+                  className={`bg-[#1e293b] px-4 py-3 text-left text-[0.8rem] font-semibold uppercase tracking-[0.06em] text-white ${
+                    feeColumnRight && i === lastIdx ? 'text-right' : ''
+                  }`}
+                >
+                  {parseInline(h, { articlePremium: true })}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row, rIdx) => (
+              <tr
+                key={rIdx}
+                className={`border-b border-[#e2e8f0] last:border-b-0 ${rIdx % 2 === 1 ? 'bg-[#f8fafc]' : 'bg-white'}`}
+              >
+                {row.map((cell, cIdx) => (
+                  <td
+                    key={cIdx}
+                    className={`align-top px-4 py-3 leading-relaxed text-[#334155] ${
+                      cIdx === lastIdx ? 'font-semibold text-[#1e40af]' : ''
+                    } ${feeColumnRight && cIdx === lastIdx ? 'text-right tabular-nums' : ''}`}
+                  >
+                    {parseInline(cell, { articlePremium: true })}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+
   const h0 = (headers[0] ?? '').trim();
   const firstColIsIndex = /^#$/i.test(h0) || /^s\.?\s*no\.?$/i.test(h0) || /^no\.?$/i.test(h0);
   const lastIdx = Math.max(0, headers.length - 1);
@@ -833,6 +1082,7 @@ const DataTable: React.FC<
 type BlockRenderCtx = {
   variant: 'default' | 'service';
   pastelArticle?: boolean;
+  articlePremium?: boolean;
   contentPreset?:
     | 'business-conv-batch-3'
     | 'fema-batch-4'
@@ -870,6 +1120,7 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
           items={block.items}
           minimal={isLongFormServicePreset(ctx.contentPreset)}
           pastelArticle={ctx.pastelArticle}
+          articlePremium={ctx.articlePremium}
         />
       );
 
@@ -920,9 +1171,15 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
         );
       }
       return (
-        <div id={block.id} className="mt-8 mb-3 first:mt-0 scroll-mt-[120px]">
-          <h2 className="text-[26px] font-bold text-gray-900 leading-snug pb-2.5 border-b border-gray-200">
-            {parseInline(rest)}
+        <div id={block.id} className="scroll-mt-[120px] first:mt-0 [&:not(:first-child)]:mt-10 mb-3">
+          <h2
+            className={
+              ctx.articlePremium
+                ? 'pb-2 text-[1.35rem] font-bold leading-snug tracking-tight text-[#1e293b] border-b-2 border-[#e2e8f0]'
+                : 'pb-2.5 text-[26px] font-bold leading-snug text-gray-900 border-b border-gray-200'
+            }
+          >
+            {parseInline(rest, { articlePremium: ctx.articlePremium })}
           </h2>
         </div>
       );
@@ -932,12 +1189,14 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
       return (
         <h3
           className={
-            ctx.pastelArticle
-              ? 'mt-4 mb-1.5 text-[18px] sm:text-[20px] font-semibold text-slate-700'
-              : 'mt-4 mb-1.5 text-[20px] font-semibold text-gray-800'
+            ctx.articlePremium
+              ? 'mt-7 text-[1.1rem] font-semibold text-[#334155]'
+              : ctx.pastelArticle
+                ? 'mt-4 mb-1.5 text-[18px] sm:text-[20px] font-semibold text-slate-700'
+                : 'mt-4 mb-1.5 text-[20px] font-semibold text-gray-800'
           }
         >
-          {parseInline(block.text)}
+          {parseInline(block.text, { articlePremium: ctx.articlePremium })}
         </h3>
       );
 
@@ -949,7 +1208,15 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
       );
 
     case 'blockquote':
-      return <Callout variant={block.variant} title={block.title} lines={block.lines} />;
+      return (
+        <Callout
+          variant={block.variant}
+          title={block.title}
+          lines={block.lines}
+          premiumTint={block.premiumTint}
+          articlePremium={ctx.articlePremium}
+        />
+      );
 
     case 'table': {
       const sh = (ctx.sectionHeading ?? '').trim();
@@ -972,14 +1239,21 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
           feeColumnRight={!!feeish}
           bare={bareTable}
           pastelArticle={ctx.pastelArticle}
+          articlePremium={ctx.articlePremium}
         />
       );
     }
 
     case 'p':
       return (
-        <p className="mt-2.5 text-[18px] text-gray-700 leading-[1.75]">
-          {parseInline(block.text)}
+        <p
+          className={
+            ctx.articlePremium
+              ? 'mb-5 text-[1rem] leading-[1.8] text-[#334155]'
+              : 'mt-2.5 text-[18px] leading-[1.75] text-gray-700'
+          }
+        >
+          {parseInline(block.text, { articlePremium: ctx.articlePremium })}
         </p>
       );
 
@@ -1183,17 +1457,26 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
         );
       }
       return (
-        <ul className="mt-2.5 space-y-1">
+        <ul className={ctx.articlePremium ? 'mt-4 space-y-2' : 'mt-2.5 space-y-1'}>
           {block.items.map((item, j) => (
-            <li key={j} className="flex items-start gap-2.5 text-[18px] text-gray-700 leading-[1.35]">
+            <li
+              key={j}
+              className={
+                ctx.articlePremium
+                  ? 'flex items-start gap-2.5 text-[1rem] leading-relaxed text-[#334155]'
+                  : 'flex items-start gap-2.5 text-[18px] text-gray-700 leading-[1.35]'
+              }
+            >
               <span
                 className={
-                  ctx.pastelArticle
-                    ? 'mt-[0.55em] w-1.5 h-1.5 rounded-full bg-emerald-200/95 flex-shrink-0'
-                    : 'mt-[0.55em] w-1.5 h-1.5 rounded-full bg-gray-400 flex-shrink-0'
+                  ctx.articlePremium
+                    ? 'mt-[0.55em] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-indigo-400'
+                    : ctx.pastelArticle
+                      ? 'mt-[0.55em] w-1.5 h-1.5 rounded-full bg-emerald-200/95 flex-shrink-0'
+                      : 'mt-[0.55em] w-1.5 h-1.5 rounded-full bg-gray-400 flex-shrink-0'
                 }
               />
-              <span>{parseInline(item)}</span>
+              <span>{parseInline(item, { articlePremium: ctx.articlePremium })}</span>
             </li>
           ))}
         </ul>
@@ -1202,6 +1485,43 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
 
     case 'ol': {
       const shOl = (ctx.sectionHeading ?? '').trim();
+      if (ctx.articlePremium) {
+        const n = block.items.length;
+        return (
+          <ol className="relative mt-6 list-none space-y-0 pl-0" role="list">
+            {block.items.map((item, j) => {
+              const colon = item.indexOf(':');
+              const stepTitle = colon > 0 ? item.slice(0, colon).trim() : item.trim();
+              const stepBody = colon > 0 ? item.slice(colon + 1).trim() : '';
+              return (
+                <li key={j} className="relative flex gap-4">
+                  <div className="flex w-9 shrink-0 flex-col items-center" aria-hidden>
+                    {j > 0 ? (
+                      <div className="mb-2 ml-[15px] h-5 w-0 shrink-0 border-l-2 border-dashed border-[#e2e8f0]" />
+                    ) : null}
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#6366f1] to-[#4f46e5] text-[13px] font-bold text-white shadow-sm">
+                      {j + 1}
+                    </div>
+                    {j < n - 1 ? (
+                      <div className="mt-2 ml-[15px] min-h-[1.5rem] w-0 shrink-0 border-l-2 border-dashed border-[#e2e8f0]" />
+                    ) : null}
+                  </div>
+                  <div className="min-w-0 flex-1 pb-8 pt-0.5 last:pb-2">
+                    <p className="font-semibold text-[#1e293b]">
+                      {parseInline(stepTitle, { articlePremium: true })}
+                    </p>
+                    {stepBody ? (
+                      <p className="mt-1.5 text-[0.95rem] leading-relaxed text-[#475569]">
+                        {parseInline(stepBody, { articlePremium: true })}
+                      </p>
+                    ) : null}
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
+        );
+      }
       if (
         ctx.variant === 'service' &&
         isLongFormServicePreset(ctx.contentPreset) &&
@@ -1360,6 +1680,7 @@ export default function RichContent({
   variant: variantProp = 'default',
   contentPreset,
   pastelArticle,
+  articlePremium,
 }: Props) {
   const processed = useMemo(() => {
     let safe = (content ?? '').replace(/\r\n/g, '\n');
@@ -1386,8 +1707,11 @@ export default function RichContent({
   );
 
   const blocks = useMemo(
-    () => (processed.trim() && !isPlainText ? extractFaqAccordion(parseBlocks(processed)) : []),
-    [processed, isPlainText]
+    () =>
+      processed.trim() && !isPlainText
+        ? extractFaqAccordion(parseBlocks(processed, { articlePremium: !!articlePremium }))
+        : [],
+    [processed, isPlainText, articlePremium]
   );
   const toc = useMemo(() => buildToc(blocks), [blocks]);
 
@@ -1406,6 +1730,7 @@ export default function RichContent({
     variant: variantProp,
     contentPreset,
     pastelArticle,
+    articlePremium: !!articlePremium,
   };
   const segments = variantProp === 'service' ? segmentByH2(blocks) : null;
   const femaClass = isLongFormServicePreset(contentPreset)
@@ -1414,8 +1739,10 @@ export default function RichContent({
 
   if (variantProp === 'service' && segments) {
     return (
-      <div className={className}>
-        {displayToc && <TableOfContents items={toc} pastelArticle={pastelArticle} />}
+      <div className={`${className} ${articlePremium ? 'article-premium-prose' : ''}`.trim()}>
+        {displayToc && (
+          <TableOfContents items={toc} pastelArticle={pastelArticle} articlePremium={articlePremium} />
+        )}
         <div className="space-y-6 sm:space-y-7">
           {segments.map((seg, segIdx) => {
             if (seg.type === 'intro') {
@@ -1459,8 +1786,10 @@ export default function RichContent({
   }
 
   return (
-    <div className={className}>
-      {displayToc && <TableOfContents items={toc} pastelArticle={pastelArticle} />}
+    <div className={`${className} ${articlePremium ? 'article-premium-prose' : ''}`.trim()}>
+      {displayToc && (
+        <TableOfContents items={toc} pastelArticle={pastelArticle} articlePremium={articlePremium} />
+      )}
       {blocks.map((block, i) => (
         <RichBlock key={i} block={block} h2InSection={false} ctx={blockCtx} />
       ))}

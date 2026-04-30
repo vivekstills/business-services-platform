@@ -48,6 +48,16 @@ export function getArticleCategoryBadgeClasses(category: string): string {
   return CATEGORY_COLOR_MAP[normalizeArticleCategory(category)] ?? 'bg-gray-50 text-gray-600 border-gray-200';
 }
 
+export function getArticleCategoryPremiumHeaderBadge(category: string): string {
+  const n = normalizeArticleCategory(category);
+  const solid: Record<string, string> = {
+    'Income Tax & ITR': 'bg-[#dbeafe] text-[#1d4ed8]',
+    'GST & Indirect Tax': 'bg-[#dcfce7] text-[#15803d]',
+    'TDS & TCS': 'bg-[#fef9c3] text-[#854d0e]',
+  };
+  return solid[n] ?? 'bg-slate-100 text-slate-700';
+}
+
 export function getArticleCategoryPillClasses(category: string, active: boolean): string {
   const base = CATEGORY_COLOR_MAP[normalizeArticleCategory(category)] ?? 'bg-gray-100 text-gray-700 border-gray-200';
   /* Inset ring only — outer ring + outline-offset clash with overflow-y-hidden on the articles filter strip */

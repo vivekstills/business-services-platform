@@ -1,46 +1,70 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, Navigate } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { BookOpen, ChevronRight, Clock, Calendar, User, ArrowLeft, ArrowRight, AlignLeft } from 'lucide-react';
+import { BookOpen, ChevronRight, ArrowLeft, ArrowRight, AlignLeft } from 'lucide-react';
 import { useContent } from '../context/ContentContext';
 import RichContent from '../components/RichContent';
 import type { Article } from '../types/content';
 import SEOHead, { SITE_URL } from '../components/SEOHead';
 import { formatReadingTimeLabel } from '../utils/readingTime';
-import { getArticleCategoryBadgeClasses, normalizeArticleCategory } from '../data/articleCategories';
+import {
+  getArticleCategoryPremiumHeaderBadge,
+  normalizeArticleCategory,
+} from '../data/articleCategories';
 import { ARTICLE_REDIRECTS } from '../data/articleRedirects';
+import { articleSectionIdFromMarkdownH2Line } from '../utils/articleSectionIds';
 
 function CategoryBadge({ cat }: { cat: string }) {
   const label = normalizeArticleCategory(cat) || cat;
-  const cls = getArticleCategoryBadgeClasses(cat);
-  return <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold border ${cls}`}>{label}</span>;
+  const cls = getArticleCategoryPremiumHeaderBadge(cat);
+  return (
+    <span className={`inline-flex items-center rounded-full px-3 py-1 text-[0.75rem] font-semibold ${cls}`}>
+      {label}
+    </span>
+  );
 }
 
 function RelatedCard({ article }: { article: Article }) {
   return (
-    <Link to={`/articles/${article.slug}`}
-      className="group flex gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors">
-      <div className={`w-12 h-12 rounded-lg flex-shrink-0 overflow-hidden ${article.coverImage ? '' : 'bg-gray-100 flex items-center justify-center'}`}>
-        {article.coverImage
-          ? <img src={article.coverImage} alt={article.title} className="w-full h-full object-cover" />
-          : <BookOpen className="w-4 h-4 text-gray-300" />
-        }
-      </div>
-      <div className="flex-1 min-w-0">
-        <p className="text-sm font-medium text-gray-700 group-hover:text-blue-600 transition-colors leading-snug line-clamp-2">{article.title}</p>
-        <p className="text-xs text-gray-400 mt-1">{formatReadingTimeLabel(article.content)}</p>
+    <Link
+      to={`/articles/${article.slug}`}
+      className="group/card flex flex-col gap-2 rounded-xl border border-[#e2e8f0] bg-white p-4 transition-all hover:border-[#c7d2fe] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+    >
+      <div className="flex gap-3">
+        <div
+          className={`h-12 w-12 shrink-0 overflow-hidden rounded-lg ${article.coverImage ? '' : 'flex items-center justify-center bg-slate-50'}`}
+        >
+          {article.coverImage ? (
+            <img src={article.coverImage} alt={article.title} className="h-full w-full object-cover" />
+          ) : (
+            <BookOpen className="h-4 w-4 text-slate-300" aria-hidden />
+          )}
+        </div>
+        <div className="min-w-0 flex-1">
+          {article.category ? (
+            <span
+              className={`mb-1 inline-block rounded-full px-2 py-0.5 text-[10px] font-semibold ${getArticleCategoryPremiumHeaderBadge(article.category)}`}
+            >
+              {normalizeArticleCategory(article.category)}
+            </span>
+          ) : null}
+          <p className="line-clamp-2 text-[0.95rem] font-semibold leading-snug text-[#1e293b] group-hover/card:text-indigo-700">
+            {article.title}
+          </p>
+          <p className="mt-1 text-[0.8rem] text-[#94a3b8]">{formatReadingTimeLabel(article.content)}</p>
+        </div>
       </div>
     </Link>
   );
 }
 
 function extractTOC(content: string): { id: string; label: string }[] {
-  return content.split('\n')
+  return content
+    .split('\n')
     .filter((l) => l.trim().startsWith('## '))
     .map((l) => {
       const text = l.trim().slice(3).trim();
-      const id = `section-${text.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 40)}`;
-      return { id, label: text };
+      return { id: articleSectionIdFromMarkdownH2Line(l.trim()), label: text };
     });
 }
 
@@ -135,44 +159,45 @@ export default function ArticlePage() {
 
           <motion.h1
             initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
-            className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight tracking-tight mb-4"
+            className="mb-4 text-[2.25rem] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0f172a]"
           >
             {article.title}
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.05 }}
-            className="text-gray-500 text-[15px] leading-relaxed mb-6 max-w-2xl"
+            className="mb-6 max-w-[680px] text-[1.05rem] leading-[1.7] text-[#475569]"
           >
             {article.excerpt}
           </motion.p>
 
-          <div className="flex flex-wrap items-center gap-2 pb-4 border-b border-gray-100">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-violet-300 text-violet-500 text-xs font-medium">
-              <User className="w-3 h-3" /> {article.author}
+          <div className="flex flex-wrap items-center gap-x-1 gap-y-2 pb-6 text-[0.875rem] text-[#94a3b8]">
+            <span className="inline-flex items-center gap-1">{article.author}</span>
+            <span aria-hidden className="px-1">
+              ·
             </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-gray-200 text-gray-400 text-xs font-medium">
-              <Calendar className="w-3 h-3" />
-              {new Date(article.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}
+            <span>
+              {new Date(article.date).toLocaleDateString('en-IN', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric',
+              })}
             </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-gray-200 text-gray-400 text-xs font-medium">
-              <Clock className="w-3 h-3" /> {formatReadingTimeLabel(article.content)}
+            <span aria-hidden className="px-1">
+              ·
             </span>
-            {article.tags.map((tag, idx) => {
-              const palettes = [
-                'border-blue-300 text-blue-500',
-                'border-emerald-300 text-emerald-600',
-                'border-orange-300 text-orange-500',
-                'border-pink-300 text-pink-500',
-                'border-teal-300 text-teal-600',
-                'border-amber-300 text-amber-600',
-              ];
-              return (
-                <span key={tag} className={`inline-flex items-center px-3 py-1 rounded-full bg-white border text-xs font-medium ${palettes[idx % palettes.length]}`}>
-                  {tag}
-                </span>
-              );
-            })}
+            <span>{formatReadingTimeLabel(article.content)}</span>
+          </div>
+
+          <div className="flex flex-wrap gap-2 border-b border-[#e2e8f0] pb-6">
+            {article.tags.map((tag) => (
+              <span
+                key={tag}
+                className="inline-flex items-center rounded-full border border-[#e2e8f0] px-3 py-1 text-[0.75rem] font-medium text-[#475569] transition-colors hover:bg-[#f1f5f9]"
+              >
+                {tag}
+              </span>
+            ))}
           </div>
         </div>
       </div>
@@ -191,29 +216,43 @@ export default function ArticlePage() {
 
           {/* Content */}
           <div>
-            <div className="bg-white rounded-xl border border-gray-200/80 px-6 sm:px-8 py-8">
-              <RichContent content={article.content} stripLeadingH1 pastelArticle />
+            <div className="rounded-xl border border-[#e2e8f0]/80 bg-white px-6 py-8 sm:px-8">
+              <RichContent content={article.content} stripLeadingH1 articlePremium />
             </div>
 
             {(prev || next) && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+              <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {prev ? (
-                  <Link to={`/articles/${prev.slug}`}
-                    className="group flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-gray-300 hover:shadow-sm transition-all">
-                    <ArrowLeft className="w-4 h-4 text-gray-300 group-hover:text-blue-500 mt-0.5 flex-shrink-0 transition-colors" />
-                    <div>
-                      <p className="text-[10px] text-gray-400 uppercase tracking-wider mb-1">Previous</p>
-                      <p className="text-sm font-medium text-gray-700 group-hover:text-blue-600 leading-snug line-clamp-2 transition-colors">{prev.title}</p>
+                  <Link
+                    to={`/articles/${prev.slug}`}
+                    className="group flex items-start gap-3 rounded-xl border border-[#e2e8f0] bg-[#f8fafc] p-4 transition-colors hover:border-[#c7d2fe] sm:p-5"
+                  >
+                    <ArrowLeft className="mt-0.5 h-4 w-4 shrink-0 text-[#94a3b8] transition-colors group-hover:text-indigo-600" />
+                    <div className="min-w-0">
+                      <p className="mb-1 text-[0.75rem] font-semibold uppercase tracking-wide text-[#94a3b8]">
+                        Previous
+                      </p>
+                      <p className="line-clamp-2 text-[0.95rem] font-semibold leading-snug text-[#1e293b] group-hover:text-indigo-700">
+                        {prev.title}
+                      </p>
                     </div>
                   </Link>
-                ) : <div />}
+                ) : (
+                  <div />
+                )}
                 {next && (
-                  <Link to={`/articles/${next.slug}`}
-                    className="group flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-gray-300 hover:shadow-sm transition-all sm:flex-row-reverse text-right">
-                    <ArrowRight className="w-4 h-4 text-gray-300 group-hover:text-blue-500 mt-0.5 flex-shrink-0 transition-colors" />
-                    <div>
-                      <p className="text-[10px] text-gray-400 uppercase tracking-wider mb-1">Next</p>
-                      <p className="text-sm font-medium text-gray-700 group-hover:text-blue-600 leading-snug line-clamp-2 transition-colors">{next.title}</p>
+                  <Link
+                    to={`/articles/${next.slug}`}
+                    className="group flex items-start gap-3 rounded-xl border border-[#e2e8f0] bg-[#f8fafc] p-4 text-right transition-colors hover:border-[#c7d2fe] sm:flex-row-reverse sm:p-5"
+                  >
+                    <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-[#94a3b8] transition-colors group-hover:text-indigo-600" />
+                    <div className="min-w-0 flex-1 sm:text-right">
+                      <p className="mb-1 text-[0.75rem] font-semibold uppercase tracking-wide text-[#94a3b8]">
+                        Next
+                      </p>
+                      <p className="line-clamp-2 text-[0.95rem] font-semibold leading-snug text-[#1e293b] group-hover:text-indigo-700">
+                        {next.title}
+                      </p>
                     </div>
                   </Link>
                 )}
@@ -222,13 +261,18 @@ export default function ArticlePage() {
 
             {/* Related articles (below prev/next on all screens) */}
             {sidebar.length > 0 && (
-              <div className="mt-6 bg-white rounded-xl border border-gray-200/80 p-4">
-                <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-3">More Articles</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 divide-y sm:divide-y-0 divide-gray-50">
-                  {sidebar.map((a) => <RelatedCard key={a.id} article={a} />)}
+              <div className="mt-6 rounded-xl border border-[#e2e8f0]/80 bg-white p-4">
+                <p className="mb-3 text-[0.7rem] font-bold uppercase tracking-[0.1em] text-[#94a3b8]">More Articles</p>
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  {sidebar.map((a) => (
+                    <RelatedCard key={a.id} article={a} />
+                  ))}
                 </div>
-                <Link to="/articles" className="mt-3 flex items-center gap-1 text-xs font-medium text-blue-600 hover:text-blue-800 transition-colors pt-3 border-t border-gray-100">
-                  View all articles <ArrowRight className="w-3 h-3" />
+                <Link
+                  to="/articles"
+                  className="mt-4 flex items-center gap-1 border-t border-[#f1f5f9] pt-4 text-xs font-semibold text-indigo-600 hover:text-indigo-800"
+                >
+                  View all articles <ArrowRight className="h-3 w-3" />
                 </Link>
               </div>
             )}
@@ -243,21 +287,25 @@ export default function ArticlePage() {
 
             {/* TOC — scrolls internally; grows to fill available space */}
             {toc.length > 0 && (
-              <div className="bg-white rounded-xl border border-gray-200/80 overflow-hidden flex flex-col min-h-0">
-                <div className="px-4 pt-4 pb-2 border-b border-gray-100 flex-shrink-0">
-                  <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider flex items-center gap-1.5">
-                    <AlignLeft className="w-3 h-3" /> Contents
+              <div className="flex min-h-0 flex-col overflow-hidden rounded-xl border border-[#e2e8f0]/80 bg-white">
+                <div className="flex-shrink-0 border-b border-[#f1f5f9] px-4 pb-2 pt-4">
+                  <p className="flex items-center gap-1.5 text-[0.7rem] font-bold uppercase tracking-[0.1em] text-[#94a3b8]">
+                    <AlignLeft className="h-3 w-3" aria-hidden /> Contents
                   </p>
                 </div>
-                <nav className="overflow-y-auto flex-1 px-2 py-2 space-y-0.5">
+                <nav className="max-h-[min(40vh,320px)] flex-1 space-y-0.5 overflow-y-auto px-2 py-2">
                   {toc.map(({ id, label }, idx) => (
-                    <button key={id} onClick={() => scrollToSection(id)}
-                      className={`w-full text-left flex items-start gap-2 px-2 py-1.5 rounded-lg text-xs transition-all ${
+                    <button
+                      key={id}
+                      type="button"
+                      onClick={() => scrollToSection(id)}
+                      className={`w-full rounded-md py-[0.35rem] text-left text-[0.85rem] transition-colors ${
                         activeSection === id
-                          ? 'text-blue-600 font-semibold bg-blue-50'
-                          : 'text-gray-500 hover:text-gray-800 hover:bg-gray-50'
-                      }`}>
-                      <span className="text-[10px] text-gray-300 font-bold pt-0.5 w-3 flex-shrink-0">{idx + 1}</span>
+                          ? 'border-l-2 border-[#4f46e5] pl-3 font-semibold text-[#4f46e5]'
+                          : 'border-l-2 border-transparent pl-3 font-normal text-[#64748b] hover:text-[#1e293b]'
+                      }`}
+                    >
+                      <span className="mr-2 inline-block w-4 tabular-nums text-[0.7rem] text-[#cbd5e1]">{idx + 1}</span>
                       <span className="leading-snug">{label}</span>
                     </button>
                   ))}
@@ -266,11 +314,15 @@ export default function ArticlePage() {
             )}
 
             {/* CTA — always fully visible, never overlaps TOC */}
-            <div className="bg-gray-900 rounded-xl p-5 text-white flex-shrink-0">
-              <h3 className="font-semibold text-sm mb-1">Need expert help?</h3>
-              <p className="text-gray-400 text-xs mb-4 leading-relaxed">Our specialists handle this end-to-end.</p>
-              <Link to="/contact-us"
-                className="block w-full text-center py-2 rounded-lg bg-white text-gray-900 font-semibold text-sm hover:bg-gray-100 transition-colors">
+            <div className="flex-shrink-0 rounded-2xl bg-gradient-to-br from-[#1e293b] to-[#0f172a] p-6 text-white shadow-lg shadow-slate-900/20">
+              <h3 className="mb-1 text-sm font-bold text-white">Need expert help?</h3>
+              <p className="mb-5 text-xs leading-relaxed text-[#94a3b8]">
+                Our specialists handle this end-to-end.
+              </p>
+              <Link
+                to="/contact-us"
+                className="block w-full rounded-full bg-[#4f46e5] py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-[#4338ca]"
+              >
                 Get Free Consultation
               </Link>
             </div>
