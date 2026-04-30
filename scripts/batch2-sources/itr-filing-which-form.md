@@ -1,15 +1,3 @@
----
-title: 'ITR filing 2024-25: Which ITR Form Should You Use?'
-slug: 'itr-filing-which-form'
-description: 'AY 2024-25 ITR guide: compare ITR-1 to ITR-7, exclusions, decision chart, key deadlines, defective return Section 139(9), penalties, FAQs.'
-category: 'Tax & Compliance'
-tags: ['ITR', 'Income Tax', 'AY 2024-25', 'tax filing', 'Section 139']
-date_published: '2026-04-30'
-last_updated: '2026-04-30'
-author: 'Editorial Team'
-reading_time: '8 minutes'
----
-
 # ITR filing 2024-25: which ITR form should you use?
 
 ## Why choosing the right ITR form matters

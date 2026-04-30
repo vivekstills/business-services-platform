@@ -1,15 +1,3 @@
----
-title: 'Complete Guide to GST Registration in India 2024'
-slug: 'gst-registration-guide-2024'
-description: 'GST registration India 2024: turnover thresholds, mandatory cases, REG-01 flow, GSTIN structure, GSTR-1 and 3B basics, composition scheme, penalties, FAQs.'
-category: 'Tax & Compliance'
-tags: ['GST', 'GST registration', 'GSTIN', 'CGST', 'compliance']
-date_published: '2026-04-30'
-last_updated: '2026-04-30'
-author: 'Editorial Team'
-reading_time: '8 minutes'
----
-
 # Complete guide to GST registration in India 2024
 
 The Goods and Services Tax (GST), introduced on July 1, 2017, replaced over a dozen central and state taxes with a unified indirect tax structure. Every business supplying taxable goods or services above the prescribed threshold must obtain GST registration. Operating without GST registration when required is a serious legal offence, attracting penalties equal to 100% of the tax evaded (subject to a minimum of Rs. 10,000).

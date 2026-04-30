@@ -1,15 +1,3 @@
----
-title: 'Trademark Registration in India: Complete Process & Classes'
-slug: 'trademark-registration-india'
-description: 'Trademark registration India: Nice classes, TM search, fees, examination, journal opposition, renewal every ten years, infringement remedies, FAQs.'
-category: 'Legal & IP'
-tags: ['Trademark', 'IP India', 'Nice classification', 'brand protection']
-date_published: '2026-04-30'
-last_updated: '2026-04-30'
-author: 'Editorial Team'
-reading_time: '8 minutes'
----
-
 # Trademark registration in India: complete process and classes
 
 A trademark is any sign, symbol, word, phrase, logo, design, or combination thereof that distinguishes your goods or services from those of competitors. It is the visual and linguistic identity of your brand.

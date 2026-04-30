@@ -1,15 +1,3 @@
----
-title: 'Section 80CCD(1B): The Extra Rs. 50,000 Deduction Most People Miss'
-slug: 'deductions-under-section-80ccd'
-description: 'Section 80CCD(1B): extra Rs. 50,000 NPS Tier I deduction outside 80C; eligibility, tax saved, withdrawals, maturity tax treatment, FAQs.'
-category: 'Tax & Compliance'
-tags: ['80CCD(1B)', 'NPS', 'tax deduction', 'retirement', 'old regime']
-date_published: '2026-04-30'
-last_updated: '2026-04-30'
-author: 'Editorial Team'
-reading_time: '7 minutes'
----
-
 # Section 80CCD(1B): the extra Rs. 50,000 deduction most people miss
 
 Most salaried taxpayers know about Section 80C and its Rs. 1.5 lakh limit. But a surprisingly large number are unaware of Section 80CCD(1B), which allows an additional deduction of up to Rs. 50,000 per year over and above the Rs. 1.5 lakh ceiling, specifically for contributions made to the National Pension System (NPS) Tier I account.

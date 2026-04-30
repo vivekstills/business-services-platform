@@ -5,7 +5,6 @@
 export const ARTICLE_REDIRECTS: Record<string, string> = {
   'section-80c-cornerstone-tax-planning-india':
     'section-80c-complete-guide-india-popular-tax-deduction',
-  'deductions-under-section-80ccd': 'section-80ccd-1b-nps-extra-50000-deduction',
   'save-tax-every-income-level-india-10l-to-1cr':
     'how-save-tax-different-income-levels-complete-strategy-guide',
   'home-loan-tax-benefit-how-save-income-tax-your-home-loan':
@@ -14,5 +13,6 @@ export const ARTICLE_REDIRECTS: Record<string, string> = {
     'children-education-allowance-tax-benefits-parents-india',
   'section-80ggc-income-tax-act-deduction-limit-exceptions':
     'section-80ggc-political-party-donation-deduction',
-  'itr-filing-which-form': 'which-itr-file-types-itr-forms-applicability',
+  /** Old URL; canonical slug is now deductions-under-section-80ccd */
+  'section-80ccd-1b-nps-extra-50000-deduction': 'deductions-under-section-80ccd',
 };
