@@ -495,6 +495,8 @@ export default function ServiceLeadHero({ service }: Props) {
               content={service.content}
               stripLeadingH1
               variant="service"
+              pastelArticle={service.id === 'web-maintenance'}
+              articlePremium={service.id === 'web-maintenance'}
               contentPreset={
                 BUSINESS_CONV_BATCH3_SERVICE_IDS.has(service.id)
                   ? 'business-conv-batch-3'
