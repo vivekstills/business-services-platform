@@ -31,12 +31,12 @@ const START_MARKERS = [
 /** CMS metadata (slug = id). */
 const BATCH = [
   {
-    id: 'section-80c-cornerstone-tax-planning-india',
-    slug: 'section-80c-cornerstone-tax-planning-india',
-    title: 'Section 80C: The Cornerstone of Tax Planning in India',
+    id: 'section-80c-complete-guide-india-popular-tax-deduction',
+    slug: 'section-80c-complete-guide-india-popular-tax-deduction',
+    title: "Section 80C: The Complete Guide to India's Most Popular Tax Deduction",
     category: 'Income Tax & ITR',
     excerpt:
-      'Section 80C deduction limit, eligible instruments (EPF, PPF, ELSS, LIC, tuition fees), slab-wise savings, examples, optimization tips, mistakes to avoid, and FAQs.',
+      'Complete guide to Section 80C deductions in India — the Rs. 1.5 lakh limit, eligible instruments (EPF, PPF, ELSS, LIC, tuition fees, home loan principal), slab-wise savings, optimization tips, mistakes to avoid, and FAQs.',
     tags: ['Section 80C', 'Tax Saving', 'FY 2024-25', 'Old Tax Regime', 'Deduction'],
   },
   {
@@ -94,12 +94,13 @@ const BATCH = [
     tags: ['Education Allowance', 'Section 80C', 'Section 80E', 'Tax Saving', 'Parents'],
   },
   {
-    id: 'save-tax-every-income-level-india-10l-to-1cr',
-    slug: 'save-tax-every-income-level-india-10l-to-1cr',
-    title: 'How to Save Tax at Every Income Level: 10L, 20L, 30L, 50L, and 1 Crore+',
+    id: 'how-save-tax-different-income-levels-complete-strategy-guide',
+    slug: 'how-save-tax-different-income-levels-complete-strategy-guide',
+    title:
+      'How to Save Tax at Different Income Levels: Complete Strategy Guide for Rs. 10L to Rs. 1 Crore+',
     category: 'Income Tax & ITR',
     excerpt:
-      'Old vs New regime snapshot, bracket-wise strategies for Rs. 10L–Rs. 1Cr+, surcharge notes, optimization tips, mistakes, and FAQs.',
+      'Income-level-specific tax saving strategies for Rs. 10L, 20L, 30L, 50L, and 1 Crore+ — old vs new regime comparison, surcharge notes, deduction stacking, and actionable tips for every bracket.',
     tags: ['Tax Planning', 'Income Tax Slabs', 'Old vs New Regime', 'FY 2024-25', 'Rebate 87A'],
   },
 ];

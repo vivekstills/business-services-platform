@@ -530,14 +530,14 @@ def main() -> None:
     lines = [ln.rstrip() for ln in RAW.read_text(encoding="utf-8").split("\n")]
     starts = [0, 103, 170, 243, 316, 401, 484, 565]
     ids = [
-        "section-80c-cornerstone-tax-planning-india",
+        "section-80c-complete-guide-india-popular-tax-deduction",
         "section-80ccd-1b-nps-extra-50000-deduction",
         "section-80dd-disabled-dependent-tax-relief",
         "section-80ggc-political-party-donation-deduction",
         "home-loan-tax-benefits-claim-2024-25",
         "personal-loan-tax-benefits-when-save-tax",
         "children-education-allowance-tax-benefits-parents-india",
-        "save-tax-every-income-level-india-10l-to-1cr",
+        "how-save-tax-different-income-levels-complete-strategy-guide",
     ]
     out = {}
     for ix, start in enumerate(starts):

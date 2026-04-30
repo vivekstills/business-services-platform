@@ -50,6 +50,7 @@ export function getArticleCategoryBadgeClasses(category: string): string {
 
 export function getArticleCategoryPillClasses(category: string, active: boolean): string {
   const base = CATEGORY_COLOR_MAP[normalizeArticleCategory(category)] ?? 'bg-gray-100 text-gray-700 border-gray-200';
-  if (active) return `${base} ring-2 ring-offset-1 ring-blue-200`;
+  /* Inset ring only — outer ring + outline-offset clash with overflow-y-hidden on the articles filter strip */
+  if (active) return `${base} opacity-100 ring-2 ring-inset ring-black/[0.08] shadow-sm`;
   return `${base} opacity-80 hover:opacity-100`;
 }

@@ -8,6 +8,7 @@ import type { Article } from '../types/content';
 import SEOHead, { SITE_URL } from '../components/SEOHead';
 import { formatReadingTimeLabel } from '../utils/readingTime';
 import { getArticleCategoryBadgeClasses, normalizeArticleCategory } from '../data/articleCategories';
+import { ARTICLE_REDIRECTS } from '../data/articleRedirects';
 
 function CategoryBadge({ cat }: { cat: string }) {
   const label = normalizeArticleCategory(cat) || cat;
@@ -49,6 +50,11 @@ export default function ArticlePage() {
   const [activeSection, setActiveSection] = useState('');
 
   const articles: Article[] = (content.articles ?? []).filter((a) => a.published);
+
+  if (slug && ARTICLE_REDIRECTS[slug]) {
+    return <Navigate to={`/articles/${ARTICLE_REDIRECTS[slug]}`} replace />;
+  }
+
   const article = articles.find((a) => a.slug === slug);
 
   if (!article) return <Navigate to="/articles" replace />;

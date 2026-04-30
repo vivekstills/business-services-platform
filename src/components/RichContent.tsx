@@ -43,9 +43,7 @@ type Props = {
     | 'intl-incorporation-batch-10'
     | 'licenses-permits-batch-11'
     | 'mca-compliance-batch-12';
-  /** Softer pastel borders/backgrounds on tables, TOC, FAQ — for editorial SEO articles. */
-  pastelArticle?: boolean;
-  /** Softer pastel presentation for editorial long-form SEO articles */
+  /** Softer pastel borders/backgrounds on tables, TOC chips, FAQ — for editorial SEO articles. */
   pastelArticle?: boolean;
 };
 

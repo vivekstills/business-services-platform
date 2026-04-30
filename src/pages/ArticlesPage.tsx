@@ -241,10 +241,10 @@ export default function ArticlesPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="mt-6 min-w-0 max-w-full overflow-x-hidden md:mt-8"
+            className="mt-6 min-w-0 max-w-full overflow-x-hidden overflow-y-visible md:mt-8"
           >
             <div
-              className="flex w-full min-w-0 flex-nowrap gap-2 overflow-x-auto overflow-y-hidden pb-1 [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] md:flex-wrap md:overflow-x-visible md:pb-0 [&::-webkit-scrollbar]:hidden"
+              className="flex w-full min-w-0 flex-nowrap gap-2 overflow-x-auto overflow-y-visible py-1 pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] md:flex-wrap md:overflow-x-visible md:py-0 md:pb-0 [&::-webkit-scrollbar]:hidden"
               role="tablist"
               aria-label="Filter by category"
             >
@@ -253,7 +253,7 @@ export default function ArticlesPage() {
                 role="tab"
                 aria-selected={!activeCat}
                 onClick={() => setActiveCat('')}
-                className={`shrink-0 whitespace-nowrap rounded-full px-3.5 py-2 text-sm font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 min-h-9 md:px-4 ${
+                className={`shrink-0 whitespace-nowrap rounded-full px-3.5 py-2 text-sm font-medium outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gray-900/25 min-h-9 md:px-4 ${
                   !activeCat
                     ? 'bg-blue-600 text-white shadow-md shadow-blue-200'
                     : 'border border-gray-200 bg-white text-gray-600 [@media(hover:hover)]:md:hover:border-blue-200 [@media(hover:hover)]:md:hover:text-blue-700'
@@ -274,7 +274,7 @@ export default function ArticlesPage() {
                       role="tab"
                       aria-selected={selected}
                       onClick={() => setActiveCat(selected ? '' : cat)}
-                      className={`max-w-[min(100%,20rem)] shrink-0 whitespace-nowrap rounded-full border px-3.5 py-2 text-left text-sm font-medium [overflow-wrap:anywhere] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 min-h-9 max-md:pr-2 md:max-w-none md:px-4 ${getArticleCategoryPillClasses(cat, selected)}`}
+                      className={`max-w-[min(100%,20rem)] shrink-0 whitespace-nowrap rounded-full border px-3.5 py-2 text-left text-sm font-medium [overflow-wrap:anywhere] outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gray-900/15 min-h-9 max-md:pr-2 md:max-w-none md:px-4 ${getArticleCategoryPillClasses(cat, selected)}`}
                       style={{ minHeight: 36 }}
                     >
                       {cat} ({count})
