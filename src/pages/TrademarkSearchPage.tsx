@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 import { Search, FileText, ExternalLink, ChevronRight } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
-const TM_SEARCH_URL = 'https://tmrsearch.ipindia.gov.in/tmrpublicsearch/';
+const TM_SEARCH_URL = 'https://tmsearch.ipindia.gov.in/tmrpublicsearch/';
 
 export default function TrademarkSearchPage() {
   const [query, setQuery] = useState('');
@@ -74,7 +74,7 @@ export default function TrademarkSearchPage() {
               disabled={!query.trim()}
               className="h-12 px-6 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-emerald-200 transition-all hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
             >
-              Search on tmrsearch.ipindia.gov.in <ExternalLink className="w-4 h-4" />
+              Search on tmsearch.ipindia.gov.in <ExternalLink className="w-4 h-4" />
             </button>
           </form>
 
