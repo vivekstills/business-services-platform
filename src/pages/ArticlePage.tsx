@@ -18,7 +18,7 @@ function CategoryBadge({ cat }: { cat: string }) {
   const label = normalizeArticleCategory(cat) || cat;
   const cls = getArticleCategoryPremiumHeaderBadge(cat);
   return (
-    <span className={`inline-flex items-center rounded-full px-3 py-1 text-[0.75rem] font-semibold ${cls}`}>
+    <span className={`inline-flex max-w-full items-center rounded-full px-3 py-1 text-[length:clamp(12px,1vw,13px)] font-semibold leading-normal ${cls}`}>
       {label}
     </span>
   );
@@ -116,7 +116,7 @@ export default function ArticlePage() {
   };
 
   return (
-    <div className="min-h-screen bg-transparent pt-16 noise-overlay">
+    <div className="min-h-screen max-w-full min-w-0 overflow-x-hidden bg-transparent pt-16 noise-overlay [word-break:break-word] [overflow-wrap:break-word]">
       <SEOHead
         title={article.title}
         description={article.excerpt}
@@ -137,43 +137,43 @@ export default function ArticlePage() {
         }}
       />
 
-      {/* Header */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -top-20 right-0 w-[500px] h-[400px] bg-gradient-to-bl from-blue-100/20 to-transparent rounded-full blur-[100px]" />
+      {/* Header — inner column matches article body for zoom-safe alignment */}
+      <div className="relative max-w-full overflow-x-hidden">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute -top-20 right-0 h-[min(50vh,400px)] w-[min(100vw,500px)] max-w-full rounded-full bg-gradient-to-bl from-blue-100/20 to-transparent blur-[100px]" />
           <div className="absolute inset-0 dot-grid" />
         </div>
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="article-page-container relative py-[clamp(24px,4vw,48px)]">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-1.5 text-xs text-gray-400 mb-6">
+          <div className="mb-[clamp(12px,2vw,24px)] flex flex-wrap items-center gap-[clamp(8px,1.5vw,12px)] text-[length:clamp(13px,1.05vw,14px)] leading-[1.5] text-gray-400">
             <Link to="/" className="hover:text-gray-600 transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3" />
+            <ChevronRight className="h-3 w-3 shrink-0" />
             <Link to="/articles" className="hover:text-gray-600 transition-colors">Articles</Link>
-            <ChevronRight className="w-3 h-3" />
-            <span className="text-gray-500 truncate max-w-40">{article.title}</span>
+            <ChevronRight className="h-3 w-3 shrink-0" />
+            <span className="max-w-[min(100%,16rem)] truncate text-gray-500">{article.title}</span>
           </div>
 
-          <div className="flex items-center gap-2 mb-4">
+          <div className="mb-[clamp(12px,2vw,20px)] flex flex-wrap items-center gap-2">
             {article.category && <CategoryBadge cat={article.category} />}
           </div>
 
           <motion.h1
             initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
-            className="mb-4 text-[2.25rem] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0f172a]"
+            className="mb-[clamp(12px,2vw,20px)] max-w-[800px] text-[length:clamp(28px,3vw,40px)] font-extrabold leading-[1.25] tracking-[-0.02em] text-[#0f172a]"
           >
             {article.title}
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.05 }}
-            className="mb-6 max-w-[680px] text-[1.05rem] leading-[1.7] text-[#475569]"
+            className="mb-[clamp(16px,3vw,28px)] max-w-[800px] text-[length:clamp(14px,1.2vw,16px)] leading-[1.65] text-[#475569]"
           >
             {article.excerpt}
           </motion.p>
 
-          <div className="flex flex-wrap items-center gap-x-1 gap-y-2 pb-6 text-[0.875rem] text-[#94a3b8]">
-            <span className="inline-flex items-center gap-1">{article.author}</span>
-            <span aria-hidden className="px-1">
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-2 pb-[clamp(16px,3vw,28px)] text-[length:clamp(13px,1.05vw,14px)] leading-[1.5] text-[#94a3b8]">
+            <span className="inline-flex min-w-0 items-center gap-1">{article.author}</span>
+            <span aria-hidden className="px-0.5">
               ·
             </span>
             <span>
@@ -183,17 +183,17 @@ export default function ArticlePage() {
                 year: 'numeric',
               })}
             </span>
-            <span aria-hidden className="px-1">
+            <span aria-hidden className="px-0.5">
               ·
             </span>
             <span>{formatReadingTimeLabel(article.content)}</span>
           </div>
 
-          <div className="flex flex-wrap gap-2 border-b border-[#e2e8f0] pb-6">
+          <div className="flex flex-wrap gap-2 border-b border-[#e2e8f0] pb-[clamp(16px,3vw,28px)]">
             {article.tags.map((tag) => (
               <span
                 key={tag}
-                className="inline-flex items-center rounded-full border border-[#e2e8f0] px-3 py-1 text-[0.75rem] font-medium text-[#475569] transition-colors hover:bg-[#f1f5f9]"
+                className="inline-flex max-w-full items-center rounded-full border border-[#e2e8f0] px-3 py-1 text-[length:clamp(12px,1vw,13px)] font-medium leading-normal text-[#475569] transition-colors hover:bg-[#f1f5f9]"
               >
                 {tag}
               </span>
@@ -203,20 +203,24 @@ export default function ArticlePage() {
       </div>
 
       {article.coverImage && (
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-          <div className="rounded-xl overflow-hidden h-56 md:h-72 shadow-sm">
-            <img src={article.coverImage} alt={article.title} className="w-full h-full object-cover" />
+        <div className="article-page-container pb-[clamp(24px,4vw,48px)]">
+          <div className="overflow-hidden rounded-xl shadow-sm">
+            <img
+              src={article.coverImage}
+              alt={article.title}
+              className="aspect-[16/9] w-full object-cover"
+            />
           </div>
         </div>
       )}
 
       {/* Body */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_260px] gap-10">
+      <div className="article-page-container pb-16">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_300px]">
 
           {/* Content */}
-          <div>
-            <div className="rounded-xl border border-[#e2e8f0]/80 bg-white px-6 py-8 sm:px-8">
+          <div className="min-w-0">
+            <div className="rounded-xl border border-[#e2e8f0]/80 bg-white p-[clamp(16px,3vw,32px)]">
               <RichContent content={article.content} stripLeadingH1 articlePremium />
             </div>
 
@@ -283,7 +287,7 @@ export default function ArticlePage() {
           </div>
 
           {/* Sidebar */}
-          <aside className="hidden lg:flex flex-col gap-4 sticky top-20 self-start max-h-[calc(100vh-5.5rem)]">
+          <aside className="hidden min-w-0 flex-col gap-[clamp(12px,2vw,24px)] lg:flex lg:sticky lg:top-20 lg:self-start lg:max-h-[calc(100vh-5.5rem)]">
 
             {/* TOC — scrolls internally; grows to fill available space */}
             {toc.length > 0 && (

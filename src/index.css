@@ -80,6 +80,25 @@
 }
 
 @layer utilities {
+  /**
+   * Article detail pages: one horizontal rhythm for hero, media, and body grid.
+   * Matches zoom across hero + prose (px-based clamp scales with browser zoom).
+   */
+  .article-page-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(16px, 4vw, 32px);
+    padding-right: clamp(16px, 4vw, 32px);
+    box-sizing: border-box;
+  }
+
+  .article-premium-prose {
+    font-size: clamp(14px, 1.2vw, 16px);
+    line-height: 1.65;
+  }
+
   .animate-gradient {
     animation: gradient 8s linear infinite;
   }

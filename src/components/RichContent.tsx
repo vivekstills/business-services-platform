@@ -562,9 +562,8 @@ function TableOfContents({
    * the clicked chip's "active" state doesn't flicker mid-jump.
    */
   const suppressObserverUntil = useRef(0);
-  /** Height of the pill — used both to reserve space in flow and to decide
-   *  when the article bottom has scrolled past the floating pill. */
-  const PILL_RESERVED_HEIGHT = 56;
+  /** Height reserved in-flow so toggling `fixed` does not jump; premium may wrap to two rows. */
+  const pillReservedHeight = articlePremium ? 96 : 56;
   const FLOATING_TOP = 80;
 
   // H2-in-viewport observer — drives chip highlight only.
@@ -609,7 +608,7 @@ function TableOfContents({
       const wrapperRect = wrapper ? wrapper.getBoundingClientRect() : sentinelRect;
 
       const pastTop = sentinelRect.top <= FLOATING_TOP;
-      const stillInArticle = wrapperRect.bottom > FLOATING_TOP + PILL_RESERVED_HEIGHT;
+      const stillInArticle = wrapperRect.bottom > FLOATING_TOP + pillReservedHeight;
       setIsFloating(pastTop && stillInArticle);
     };
 
@@ -647,25 +646,30 @@ function TableOfContents({
     : { position: 'relative' };
 
   return (
-    // Outer sentinel wrapper reserves a constant height (~56px) regardless
-    // of floating state, which prevents a layout shift when the pill lifts.
+    // Outer sentinel reserves vertical space so toggling `fixed` does not jump.
     <div
       ref={sentinelRef}
-      className="relative mb-6 flex justify-center"
-      style={{ minHeight: PILL_RESERVED_HEIGHT }}
+      className="relative mb-6 flex w-full min-w-0 justify-center"
+      style={{ minHeight: pillReservedHeight }}
     >
       <div
         style={pillPositionStyle}
-        className={`pointer-events-auto inline-flex max-w-[calc(100vw-24px)] rounded-full backdrop-blur-xl ${
+        className={
           articlePremium
-            ? 'border border-slate-200 bg-white/95 shadow-sm shadow-slate-200/50'
-            : pastelArticle
-              ? 'border border-violet-100/90 bg-[#fbf9ff]/90 shadow-[0_8px_28px_-10px_rgba(91,73,154,0.12)] ring-1 ring-violet-100/50'
-              : 'border border-gray-200 bg-white/85 shadow-[0_10px_30px_-12px_rgba(17,24,39,0.18)] ring-1 ring-black/5'
-        }`}
+            ? 'pointer-events-auto w-full max-w-[min(100vw-1.5rem,1200px)]'
+            : `pointer-events-auto inline-flex max-w-[calc(100vw-24px)] rounded-full backdrop-blur-xl ${
+                pastelArticle
+                  ? 'border border-violet-100/90 bg-[#fbf9ff]/90 shadow-[0_8px_28px_-10px_rgba(91,73,154,0.12)] ring-1 ring-violet-100/50'
+                  : 'border border-gray-200 bg-white/85 shadow-[0_10px_30px_-12px_rgba(17,24,39,0.18)] ring-1 ring-black/5'
+              }`
+        }
       >
         <div
-          className="flex items-center gap-1.5 max-w-full overflow-x-auto px-2 py-1.5 rounded-full hide-scrollbar toc-fade-mask"
+          className={
+            articlePremium
+              ? 'flex w-full max-w-full flex-wrap justify-center gap-2 py-1'
+              : 'flex max-w-full items-center gap-1.5 overflow-x-auto rounded-full px-2 py-1.5 hide-scrollbar toc-fade-mask'
+          }
           role="tablist"
           aria-label="Section navigation"
         >
@@ -681,7 +685,7 @@ function TableOfContents({
                 onClick={() => onJump(it.id)}
                 className={
                   articlePremium
-                    ? `inline-flex items-center gap-1.5 shrink-0 rounded-full border px-[0.9rem] py-[0.35rem] text-[0.8rem] font-semibold transition-all whitespace-nowrap ${
+                    ? `inline-flex max-w-full min-w-0 items-center gap-1.5 rounded-full border px-[0.9rem] py-[0.35rem] text-[length:clamp(12px,1.05vw,14px)] font-semibold leading-normal transition-all ${
                         isActive
                           ? 'border-transparent bg-[#4f46e5] text-white shadow-sm shadow-indigo-200/40'
                           : 'border-transparent bg-[#f1f5f9] text-[#64748b] hover:bg-slate-200/90 hover:text-slate-700'
@@ -786,7 +790,7 @@ function PremiumCallout({
               {parseInline(title, { articlePremium })}
             </p>
           ) : null}
-          <div className="space-y-2 text-base leading-relaxed">
+          <div className="space-y-2 text-[length:clamp(14px,1.2vw,16px)] leading-[1.65]">
             {lines.map((line, j) => (
               <p key={j}>{parseInline(line, { articlePremium })}</p>
             ))}
@@ -859,11 +863,11 @@ const FaqAccordion: React.FC<{
                 aria-hidden
                 strokeWidth={2}
               />
-              <span className="min-w-0 flex-1 font-semibold text-[#1e293b] group-open:text-[#4f46e5] text-[15px] leading-snug pr-2">
+              <span className="min-w-0 flex-1 pr-2 text-[length:clamp(14px,1.15vw,16px)] font-semibold leading-snug text-[#1e293b] group-open:text-[#4f46e5]">
                 {parseInline(item.q, { articlePremium: true })}
               </span>
             </summary>
-            <div className="px-5 pb-4 pt-0 text-[15px] text-[#475569] leading-[1.75]">
+            <div className="px-5 pb-4 pt-0 text-[length:clamp(14px,1.2vw,16px)] leading-[1.65] text-[#475569]">
               {item.a
                 ? item.a
                     .split(/\n\n+/)
@@ -973,14 +977,14 @@ const DataTable: React.FC<
   if (articlePremium) {
     const lastIdx = Math.max(0, headers.length - 1);
     return (
-      <div className="my-6 overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm">
-        <table className="w-full min-w-[min(100%,560px)] border-collapse text-[0.95rem]">
+      <div className="my-6 max-w-full overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm">
+        <table className="w-full min-w-[min(100%,560px)] max-w-full border-collapse text-[length:clamp(13px,1.05vw,15px)]">
           <thead>
             <tr>
               {headers.map((h, i) => (
                 <th
                   key={i}
-                  className={`bg-[#1e293b] px-4 py-3 text-left text-[0.8rem] font-semibold uppercase tracking-[0.06em] text-white ${
+                  className={`bg-[#1e293b] px-4 py-3 text-left text-[length:clamp(11px,0.95vw,13px)] font-semibold uppercase tracking-[0.06em] text-white ${
                     feeColumnRight && i === lastIdx ? 'text-right' : ''
                   }`}
                 >
@@ -1109,7 +1113,13 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
   switch (block.type) {
     case 'h1':
       return (
-        <h1 className="text-[1.75rem] sm:text-[2rem] font-bold text-gray-900 leading-tight tracking-tight mt-2 mb-4">
+        <h1
+          className={
+            ctx.articlePremium
+              ? 'mt-2 mb-4 text-[length:clamp(28px,3vw,40px)] font-bold leading-[1.25] tracking-tight text-[#1e293b]'
+              : 'mt-2 mb-4 text-[1.75rem] font-bold leading-tight tracking-tight text-gray-900 sm:text-[2rem]'
+          }
+        >
           {parseInline(block.text)}
         </h1>
       );
@@ -1175,7 +1185,7 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
           <h2
             className={
               ctx.articlePremium
-                ? 'pb-2 text-[1.35rem] font-bold leading-snug tracking-tight text-[#1e293b] border-b-2 border-[#e2e8f0]'
+                ? 'pb-2 text-[length:clamp(22px,2.2vw,30px)] font-bold leading-snug tracking-tight text-[#1e293b] border-b-2 border-[#e2e8f0]'
                 : 'pb-2.5 text-[26px] font-bold leading-snug text-gray-900 border-b border-gray-200'
             }
           >
@@ -1190,9 +1200,9 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
         <h3
           className={
             ctx.articlePremium
-              ? 'mt-7 text-[1.1rem] font-semibold text-[#334155]'
+              ? 'mt-7 text-[length:clamp(18px,1.5vw,22px)] font-semibold leading-[1.5] text-[#334155]'
               : ctx.pastelArticle
-                ? 'mt-4 mb-1.5 text-[18px] sm:text-[20px] font-semibold text-slate-700'
+                ? 'mt-4 mb-1.5 text-[18px] font-semibold text-slate-700 sm:text-[20px]'
                 : 'mt-4 mb-1.5 text-[20px] font-semibold text-gray-800'
           }
         >
@@ -1249,7 +1259,7 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
         <p
           className={
             ctx.articlePremium
-              ? 'mb-5 text-[1rem] leading-[1.8] text-[#334155]'
+              ? 'mb-5 text-[length:clamp(14px,1.2vw,16px)] leading-[1.65] text-[#334155]'
               : 'mt-2.5 text-[18px] leading-[1.75] text-gray-700'
           }
         >
@@ -1463,7 +1473,7 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
               key={j}
               className={
                 ctx.articlePremium
-                  ? 'flex items-start gap-2.5 text-[1rem] leading-relaxed text-[#334155]'
+                  ? 'flex items-start gap-2.5 text-[length:clamp(14px,1.2vw,16px)] leading-[1.65] text-[#334155]'
                   : 'flex items-start gap-2.5 text-[18px] text-gray-700 leading-[1.35]'
               }
             >
@@ -1507,11 +1517,11 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
                     ) : null}
                   </div>
                   <div className="min-w-0 flex-1 pb-8 pt-0.5 last:pb-2">
-                    <p className="font-semibold text-[#1e293b]">
+                    <p className="font-semibold text-[length:clamp(16px,1.35vw,18px)] leading-snug text-[#1e293b]">
                       {parseInline(stepTitle, { articlePremium: true })}
                     </p>
                     {stepBody ? (
-                      <p className="mt-1.5 text-[0.95rem] leading-relaxed text-[#475569]">
+                      <p className="mt-1.5 text-[length:clamp(14px,1.15vw,16px)] leading-[1.65] text-[#475569]">
                         {parseInline(stepBody, { articlePremium: true })}
                       </p>
                     ) : null}
