@@ -143,7 +143,7 @@ export default function ArticlePage() {
           <div className="absolute -top-20 right-0 w-[500px] h-[400px] bg-gradient-to-bl from-blue-100/20 to-transparent rounded-full blur-[100px]" />
           <div className="absolute inset-0 dot-grid" />
         </div>
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="relative mx-auto max-w-[960px] px-4 py-10 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <div className="flex items-center gap-1.5 text-xs text-gray-400 mb-6">
             <Link to="/" className="hover:text-gray-600 transition-colors">Home</Link>
@@ -159,19 +159,19 @@ export default function ArticlePage() {
 
           <motion.h1
             initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
-            className="mb-4 text-[2.25rem] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0f172a]"
+            className="mb-4 text-[38px] font-extrabold leading-[1.14] tracking-normal text-[#0f172a] sm:text-[44px] lg:text-[52px]"
           >
             {article.title}
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.05 }}
-            className="mb-6 max-w-[680px] text-[1.05rem] leading-[1.7] text-[#475569]"
+            className="mb-6 max-w-[720px] text-[20px] leading-[1.65] text-[#475569]"
           >
             {article.excerpt}
           </motion.p>
 
-          <div className="flex flex-wrap items-center gap-x-1 gap-y-2 pb-6 text-[0.875rem] text-[#94a3b8]">
+          <div className="flex flex-wrap items-center gap-x-1 gap-y-2 pb-6 text-[15px] text-[#94a3b8]">
             <span className="inline-flex items-center gap-1">{article.author}</span>
             <span aria-hidden className="px-1">
               ·
@@ -193,7 +193,7 @@ export default function ArticlePage() {
             {article.tags.map((tag) => (
               <span
                 key={tag}
-                className="inline-flex items-center rounded-full border border-[#e2e8f0] px-3 py-1 text-[0.75rem] font-medium text-[#475569] transition-colors hover:bg-[#f1f5f9]"
+                className="inline-flex items-center rounded-full border border-[#e2e8f0] px-3 py-1 text-[14px] font-medium text-[#475569] transition-colors hover:bg-[#f1f5f9]"
               >
                 {tag}
               </span>
@@ -203,7 +203,7 @@ export default function ArticlePage() {
       </div>
 
       {article.coverImage && (
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+        <div className="mx-auto max-w-[960px] px-4 pb-8 sm:px-6 lg:px-8">
           <div className="rounded-xl overflow-hidden h-56 md:h-72 shadow-sm">
             <img src={article.coverImage} alt={article.title} className="w-full h-full object-cover" />
           </div>
@@ -211,12 +211,12 @@ export default function ArticlePage() {
       )}
 
       {/* Body */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_260px] gap-10">
+      <div className="mx-auto max-w-[1180px] px-4 pb-16 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 justify-center gap-8 lg:grid-cols-[minmax(0,780px)_280px] lg:gap-10">
 
           {/* Content */}
-          <div>
-            <div className="rounded-xl border border-[#e2e8f0]/80 bg-white px-6 py-8 sm:px-8">
+          <div className="min-w-0">
+            <div className="rounded-xl border border-[#e2e8f0]/80 bg-white px-5 py-7 shadow-sm shadow-slate-200/40 sm:px-7 lg:px-8">
               <RichContent content={article.content} stripLeadingH1 articlePremium />
             </div>
 
@@ -299,13 +299,13 @@ export default function ArticlePage() {
                       key={id}
                       type="button"
                       onClick={() => scrollToSection(id)}
-                      className={`w-full rounded-md py-[0.35rem] text-left text-[0.85rem] transition-colors ${
+                      className={`w-full rounded-md py-2 text-left text-[15px] transition-colors ${
                         activeSection === id
                           ? 'border-l-2 border-[#4f46e5] pl-3 font-semibold text-[#4f46e5]'
                           : 'border-l-2 border-transparent pl-3 font-normal text-[#64748b] hover:text-[#1e293b]'
                       }`}
                     >
-                      <span className="mr-2 inline-block w-4 tabular-nums text-[0.7rem] text-[#cbd5e1]">{idx + 1}</span>
+                      <span className="mr-2 inline-block w-4 tabular-nums text-[12px] text-[#cbd5e1]">{idx + 1}</span>
                       <span className="leading-snug">{label}</span>
                     </button>
                   ))}

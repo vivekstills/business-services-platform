@@ -681,7 +681,7 @@ function TableOfContents({
                 onClick={() => onJump(it.id)}
                 className={
                   articlePremium
-                    ? `inline-flex items-center gap-1.5 shrink-0 rounded-full border px-[0.9rem] py-[0.35rem] text-[0.8rem] font-semibold transition-all whitespace-nowrap ${
+                    ? `inline-flex items-center gap-1.5 shrink-0 rounded-full border px-[18px] py-[7px] text-[15px] font-semibold transition-all whitespace-nowrap ${
                         isActive
                           ? 'border-transparent bg-[#4f46e5] text-white shadow-sm shadow-indigo-200/40'
                           : 'border-transparent bg-[#f1f5f9] text-[#64748b] hover:bg-slate-200/90 hover:text-slate-700'
@@ -1175,7 +1175,7 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
           <h2
             className={
               ctx.articlePremium
-                ? 'pb-2 text-[1.35rem] font-bold leading-snug tracking-tight text-[#1e293b] border-b-2 border-[#e2e8f0]'
+                ? 'pb-2 text-[28px] font-bold leading-snug tracking-normal text-[#1e293b] border-b-2 border-[#e2e8f0]'
                 : 'pb-2.5 text-[26px] font-bold leading-snug text-gray-900 border-b border-gray-200'
             }
           >
@@ -1190,7 +1190,7 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
         <h3
           className={
             ctx.articlePremium
-              ? 'mt-7 text-[1.1rem] font-semibold text-[#334155]'
+              ? 'mt-7 text-[21px] font-semibold text-[#334155]'
               : ctx.pastelArticle
                 ? 'mt-4 mb-1.5 text-[18px] sm:text-[20px] font-semibold text-slate-700'
                 : 'mt-4 mb-1.5 text-[20px] font-semibold text-gray-800'
@@ -1249,7 +1249,7 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
         <p
           className={
             ctx.articlePremium
-              ? 'mb-5 text-[1rem] leading-[1.8] text-[#334155]'
+              ? 'mb-5 text-[18px] leading-[1.8] text-[#334155]'
               : 'mt-2.5 text-[18px] leading-[1.75] text-gray-700'
           }
         >
@@ -1463,7 +1463,7 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
               key={j}
               className={
                 ctx.articlePremium
-                  ? 'flex items-start gap-2.5 text-[1rem] leading-relaxed text-[#334155]'
+                  ? 'flex items-start gap-2.5 text-[18px] leading-relaxed text-[#334155]'
                   : 'flex items-start gap-2.5 text-[18px] text-gray-700 leading-[1.35]'
               }
             >
@@ -1511,7 +1511,7 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
                       {parseInline(stepTitle, { articlePremium: true })}
                     </p>
                     {stepBody ? (
-                      <p className="mt-1.5 text-[0.95rem] leading-relaxed text-[#475569]">
+                      <p className="mt-1.5 text-[17px] leading-relaxed text-[#475569]">
                         {parseInline(stepBody, { articlePremium: true })}
                       </p>
                     ) : null}
