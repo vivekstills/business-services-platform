@@ -1,0 +1,164 @@
+ARTICLE 3 OF 9 | CORPORATE TAXATION 
+Minimum Alternate Tax (MAT): Eligibility, 
+Calculation and Credit 
+Updated: May 2026 Read time: 9 min read AY: 2026-27 
+ 
+ARTICLE SUMMARY 
+Minimum Alternate Tax (MAT) under Section 115JB ensures that companies that report 
+book profits in their financial statements but show zero or negligible taxable income due to 
+various deductions and exemptions pay at least a minimum amount of tax. The MAT rate is 
+15% of book profit (plus surcharge and cess). MAT paid in excess of regular tax can be 
+carried forward as MAT Credit Entitlement for up to 15 years. This article explains the MAT 
+computation, the book profit adjustments, MAT credit mechanism, exemptions from MAT, 
+and the interaction with the new concessional tax regime under Section 115BAA. 
+ 
+What is MAT and Why Does It Exist? 
+Companies use various legitimate deductions and exemptions under the Income Tax Act to 
+reduce their taxable income to very low levels or even to zero, despite showing healthy book 
+profits in their financial statements. MAT was introduced to ensure that such companies pay a 
+minimum level of tax proportionate to their reported profitability. It prevents the situation where a 
+company reports Rs. 100 crore profit to its shareholders but pays zero income tax due to 
+exemptions and deductions. 
+MAT applies when the tax payable under regular provisions is less than 15% of book profit. In 
+that case, the company pays MAT at 15% of book profit. The excess (MAT paid over regular 
+tax) is available as MAT Credit, which can be used in future years when regular tax exceeds 
+MAT. 
+ 
+MAT Rate and Its Components 
+Component Rate 
+Base MAT rate 15% of book profit 
+Surcharge (if book profit tax base > Rs. 1 
+crore) 
+7% on MAT (for net income > Rs. 1 crore to Rs. 10 crore) 
+Surcharge (if book profit tax base > Rs. 10 
+crore) 
+12% on MAT (for net income above Rs. 10 crore) 
+Health and Education Cess 4% on (MAT + Surcharge) 
+Effective MAT rate (no surcharge) 15% + 4% cess = 15.6% 
+Component Rate 
+Effective MAT rate (with 12% surcharge) 15% + 12% surcharge + 4% cess = 17.47% 
+approximately 
+ 
+Book Profit Computation Under Section 115JB 
+Book profit is the net profit as per the Profit and Loss Account (prepared under the Companies 
+Act), after making the following adjustments: 
+Amounts Added Back to Net Profit 
+• Income tax paid or payable and any provision for tax (including deferred tax) 
+• Amounts transferred to any reserves (general reserves, capital reserves, etc.) 
+• Provision for unascertained liabilities (including contingency provisions) 
+• Provision for losses of subsidiary companies 
+• Dividends paid or proposed 
+• Expenditure related to exempt income under Section 10 (other than Section 10(38) 
+which no longer applies) 
+• Notional loss on transfer of capital assets to special economic zones 
+ 
+Amounts Deducted from Net Profit 
+• Amount withdrawn from reserves (if credited to P&L, now reversed) 
+• Income exempt under Section 10 (dividends, long-term capital gains in certain cases) 
+• Depreciation debited to P&L (then added back at book value depreciation under 
+Companies Act) 
+• Loss brought forward or unabsorbed depreciation, whichever is less 
+ 
+MAT vs Regular Tax: Which is Payable? 
+Example: MAT vs Regular Tax Decision 
+Company XYZ Ltd | FY 2025-26 
+Book Profit (as per P&L after adjustments):     Rs. 10,00,00,000  
+Taxable Income (after IT Act deductions):        Rs.  1,00,00,000  
+ 
+Regular Tax @ 25% (domestic company):           Rs.     25,00,000  
+Add: Surcharge 7% (income > Rs. 1 crore):       Rs.      1,75,000  
+Add: Cess 4%:                                    Rs.      1,07,000  
+Total Regular Tax:                               Rs.     27,82,000 
+ 
+MAT @ 15% of Rs. 10 crore book profit:          Rs.  1,50,00,000  
+Add: Surcharge 12% (book profit > Rs. 10 crore): Rs.    18,00,000  
+Add: Cess 4%:                                    Rs.      6,72,000  
+Total MAT:                                       Rs.  1,74,72,000 
+ 
+Since MAT (Rs. 1.74 crore) > Regular Tax (Rs. 27.82 lakh): 
+Company pays MAT of Rs. 1,74,72,000. 
+MAT Credit = Rs. 1,74,72,000 minus Rs. 27,82,000 = Rs. 1,46,90,000  
+ 
+MAT Credit Entitlement Under Section 115JAA 
+The excess of MAT paid over the regular tax payable in any year is available as MAT Credit. 
+This credit can be carried forward for up to 15 assessment years immediately following the year 
+in which it arose. The credit can be utilised in a future year when regular tax payable exceeds 
+MAT - the excess of regular tax over MAT in that year can be set off against the brought-forward 
+MAT credit. 
+MAT Credit Rule Detail 
+Carry forward period 15 assessment years from the year of credit 
+Utilisation condition Regular tax in future year must exceed MAT in that year 
+Amount utilisable Regular tax minus MAT in the utilisation year (not the full credit at 
+once) 
+Interest on MAT credit No interest is paid on MAT credit carried forward 
+MAT credit on amalgamation The transferee company can carry forward the transferor's MAT 
+credit (subject to conditions) 
+ 
+Who is Exempt from MAT? 
+MAT does not apply to the following: 
+• Companies opting for the new concessional tax rate under Section 115BAA (22% base 
+rate) are exempt from MAT. Once a company opts for 115BAA, it cannot pay MAT and 
+cannot utilise any MAT credit brought forward from earlier years. 
+• New manufacturing companies opting for Section 115BAB (15% base rate for new 
+domestic manufacturers set up after October 1, 2019) are also exempt from MAT. 
+• Income accruing or arising to a company from life insurance business (taxed under the 
+Insurance Act framework). 
+• Shipping companies opting for the Tonnage Tax Scheme under Sections 115V to 
+115VZC. 
+ 
+Pro Tip 
+Companies with large accumulated MAT credit should carefully evaluate whether to switch to the 
+Section 115BAA regime. Opting for 115BAA (which offers a lower 22% tax rate) means forfeiting 
+all accumulated MAT credit permanently. Compute the present value of the MAT credit versus 
+the annual tax saving from the lower rate before making the switch. For some companies with 
+large MAT credit balances, continuing under the regular regime may be more beneficial. 
+ 
+KEY TAKEAWAYS 
+1.  MAT at 15% of book profit applies when regular tax payable is lower than 15% of the 
+company's book profit as per its financial statements. 
+2.  Book profit is the P&L net profit adjusted for items like tax provisions, reserves, contingencies, 
+and exempt income. 
+3.  The effective MAT rate including surcharge and cess can range from 15.6% to 17.47% 
+depending on income level. 
+4.  Excess MAT over regular tax generates MAT Credit Entitlement, carry-forwardable for 15 
+years under Section 115JAA. 
+5.  MAT credit is utilised in future years when regular tax exceeds MAT in those years. 
+6.  Companies opting for Section 115BAA (22% concessional rate) or Section 115BAB are 
+exempt from MAT but lose all prior MAT credit. 
+7.  Accumulated MAT credit must be evaluated before switching regimes since the switch forfeits 
+the credit permanently. 
+ 
+Frequently Asked Questions 
+Q1. A company has Rs. 5 crore book profit but Rs. 20 lakh regular taxable income due to 
+80IC deduction. What is payable? 
+Regular tax on Rs. 20 lakh at 25% = Rs. 5 lakh (plus cess). MAT on Rs. 5 crore at 15% = 
+Rs. 75 lakh (plus surcharge and cess). Since MAT (Rs. 75 lakh+) exceeds regular tax (Rs. 5 
+lakh+), the company pays MAT. MAT credit = MAT paid minus regular tax = approximately 
+Rs. 70 lakh. This credit can be carried forward for 15 years. 
+Q2. Can a company utilise MAT credit and carry-forward business loss in the same year? 
+Yes, but in a specific order. First, the regular tax is computed after setting off carry-forward 
+business losses and unabsorbed depreciation. Then MAT is computed on book profit. If 
+regular tax is lower than MAT, the company pays MAT. The business losses are still set off 
+(reducing regular tax), and MAT credit is generated. In a future year when regular tax 
+exceeds MAT, the MAT credit is used. The business losses and MAT credit operate in 
+parallel but through different mechanisms. 
+Q3. My company switched to Section 115BAA last year. Can I now switch back to regular 
+provisions? 
+No. The option to avail Section 115BAA is a one-time, irrevocable choice. Once a company 
+opts for the 22% concessional rate under Section 115BAA, it cannot revert to the regular 
+provisions in any subsequent year. The switch is permanent. Additionally, all MAT credit 
+accumulated prior to the switch is forfeited permanently once the company opts for 115BAA. 
+Q4. Does MAT apply to foreign companies operating in India? 
+MAT under Section 115JB applies to domestic companies. Foreign companies (those 
+registered outside India) are subject to a separate provision - Section 115JB applies to them 
+only to the extent their income is computed under the Companies Act provisions. In practice, 
+foreign companies operating through a branch in India are subject to MAT only on that 
+portion of book profit attributable to their Indian operations. The full MAT provisions are 
+primarily designed for domestic companies. 
+Q5. If MAT credit is not utilised within 15 years, does it lapse? 
+Yes. MAT credit entitlement that is not set off within 15 assessment years following the year 
+in which it was generated lapses and cannot be carried forward further or refunded. This is 
+one reason why companies evaluate MAT credit utilisation as part of their long-term tax 
+planning. If a company has accumulated large MAT credit that is unlikely to be utilised within 
+15 years (because it has transitioned to a low-profit phase), the credit may effectively be 
+lost.

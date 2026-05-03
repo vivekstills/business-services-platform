@@ -1,4 +1,4 @@
-# Trademark registration in India: complete process and classes
+# Trademark Registration in India: Complete Process and Classes
 
 A trademark is any sign, symbol, word, phrase, logo, design, or combination thereof that distinguishes your goods or services from those of competitors. It is the visual and linguistic identity of your brand.
 

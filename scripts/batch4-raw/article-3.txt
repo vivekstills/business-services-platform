@@ -1,0 +1,155 @@
+ARTICLE 3 OF 5  ·  MARKET TAXATION
+Securities Transaction Tax (STT) — Latest Rates, 
+F&O Hike & Updates
+ Updated: May 2026📅  8 min read⏱  FY 2025-26📋
+ARTICLE SUMMARY
+Securities Transaction Tax (STT) is a tax levied on purchase and sale of securities listed 
+on Indian stock exchanges. Introduced in 2004, STT replaced the earlier capital gains 
+exemption on listed securities and has since become a significant revenue source. Budget 
+2024 significantly hiked STT on F&O (Futures & Options) — index futures rate doubled and 
+options STT increased by 60%. This article covers all current STT rates across equity, 
+F&O, and mutual funds, how STT is collected, its deductibility, and the impact of the 
+Budget 2024 F&O hike.
+What is STT and Why Does It Exist?
+Securities Transaction Tax (STT) is a direct tax levied under the Securities Transaction Tax Act, 
+2004. It is collected at source by the stock exchange or mutual fund house at the time of the 
+securities transaction. STT is paid by the buyer and/or seller depending on the transaction type. 
+It cannot be avoided, refunded, or set off (with limited exceptions) — it is a transaction cost, 
+similar to stamp duty, built into every securities trade.
+STT was introduced as part of a policy package: the government abolished the long-term capital 
+gains exemption on equities in 2004 (which was re-introduced only in 2018) and replaced it with 
+STT. The logic was to make tax collection seamless and reduce avoidance. STT is a significant 
+recurring transaction cost for active traders and must be factored into return calculations.
+Current STT Rates — All Securities (FY 2025-26)
+Security Type Transaction STT Rate Paid By
+Equity shares (delivery) Purchase 0.1% of transaction value Buyer
+Equity shares (delivery) Sale 0.1% of transaction value Seller
+Equity shares (intraday — 
+no delivery)
+Sale only 0.025% of transaction value Seller
+Equity futures Sale 0.02% of price x lot size 
+(Budget 2024 hike)
+Seller
+Equity options (on premium) Sale 0.1% of option premium Seller
+Index futures (e.g., 
+Nifty/Sensex futures)
+Sale 0.02% of price x lot size 
+(Budget 2024: doubled from 
+Seller
+Security Type Transaction STT Rate Paid By
+0.01%)
+Index options (on premium) Sale 0.1% of option premium 
+(Budget 2024: increased from 
+0.0625%)
+Seller
+Equity mutual fund units 
+(buy)
+Purchase 
+(through 
+exchange)
+0.001% of transaction value Buyer
+Equity mutual fund units 
+(sell/redemption)
+Sale 0.001% of transaction value Seller
+Unlisted securities, bonds, 
+debentures
+Not applicable NIL — STT not levied N/A
+Budget 2024 — F&O STT Hike
+Budget 2024 (Finance Act 2024) significantly increased STT on F&O contracts with effect from 
+October 1, 2024. The government's stated aim was to curb excessive retail participation in F&O 
+markets, which SEBI data showed was resulting in losses for ~90% of individual F&O traders.
+Instrument Old STT Rate New STT Rate (from Oct 1, 
+2024)
+Change
+Index Futures (Nifty, 
+Sensex)
+0.01% of price x quantity 0.02% of price x quantity Doubled 
+(+100%)
+Index Options (Nifty, 
+Sensex)
+0.0625% of premium 0.1% of premium +60% 
+increase
+Equity Futures 0.01% of price x quantity 0.02% of price x quantity Doubled 
+(+100%)
+Equity Options 0.0625% of premium 0.1% of premium +60% 
+increase
+ STT Impact on a Nifty Options Trade📊
+Trade: Sell 1 lot of Nifty Call Option (lot size: 25 units) at premium of 
+Rs. 200
+Transaction value = 25 x Rs. 200 = Rs. 5,000
+STT BEFORE Oct 1, 2024 (rate: 0.0625% of premium):
+  STT = 0.0625% x Rs. 5,000 = Rs. 3.125
+STT AFTER Oct 1, 2024 (rate: 0.1% of premium):
+  STT = 0.1% x Rs. 5,000 = Rs. 5.00
+For an active options trader doing 50 trades/month:
+  Monthly STT increase: ~Rs. 93.75 (Rs. 1.875 per trade x 50)
+  Annual STT increase:  ~Rs. 1,125
+For high-volume traders: the cumulative STT increase is significant.
+Factor STT into per-trade P&L calculations.
+Is STT Deductible as an Expense?
+STT paid is NOT deductible as an expense for computing capital gains on delivery-based equity 
+transactions. The gain is simply: Sale price minus Purchase price (no adjustment for STT paid). 
+However, for F&O traders (where income is classified as business income), STT paid is 
+deductible as a business expense — it reduces the net F&O profit or increases the F&O loss. 
+This is one of the practical differences between capital gains treatment (STT not deductible) and 
+business income treatment (STT deductible) for securities transactions.
+STT and the LTCG/STCG Framework
+For listed equity shares, the lower LTCG rate of 12.5% and STCG rate of 20% are available 
+ONLY if STT has been paid on both the purchase and sale of the shares (for delivery-based 
+transactions). If shares are sold off-market (not through a recognised stock exchange), or if STT 
+was not paid, the normal capital gains rates apply — LTCG at 12.5% (without the preferential 
+rate) for listed shares and slab rate for STCG. In practice, off-market transfers of listed shares 
+are rare, but the condition is important for shares transferred through private deals.
+ Pro Tip💡
+Active F&O and intraday traders should review their annual STT outflow carefully. With the 
+Budget 2024 rate hike, STT has become a larger drag on returns. When comparing pre- and 
+post-tax returns, include STT (as a transaction cost that reduces gross P&L). For F&O business 
+income reporting, ensure STT is claimed as a deductible expense in the ITR-3 business income 
+computation.
+KEY TAKEAWAYS
+1.  STT is a transaction-level tax on securities purchases and sales, collected by exchanges at 
+source — it cannot be avoided or refunded.
+2.  Delivery equity purchase and sale: 0.1% each; Intraday sale only: 0.025%.
+3.  Budget 2024 (effective Oct 1, 2024): Index and equity futures STT doubled to 0.02%; options 
+STT increased to 0.1% on premium.
+4.  STT is NOT deductible for capital gains computation on delivery shares — but IS deductible 
+as a business expense for F&O traders.
+5.  LTCG/STCG preferential rates on listed equity are available only when STT has been paid on 
+both purchase and sale.
+6.  Unlisted securities, bonds, and debentures are not subject to STT.
+7.  F&O traders must factor the higher post-Budget 2024 STT into their per-trade profitability 
+calculations.
+Frequently Asked Questions
+Q1. I bought shares off-market (not through a broker). Will my LTCG still be taxed at 
+12.5%?
+For off-market purchase (no STT paid on purchase), the LTCG at sale is taxed at 12.5% 
+without the STT-condition issue — because the STT condition for the preferential rate 
+applies primarily to the sale side for listed shares. However, if both purchase and sale are 
+off-market (STT not paid at either end), the preferential LTCG rate may be denied and 
+normal rates apply. Most litigation in this area involves inherited shares, ESOP shares, or 
+bonus shares where the 'purchase' was off-market. Consult a CA for specific off-market 
+transactions.
+Q2. Is STT included in the purchase price of shares for LTCG computation?
+No. STT paid on purchase of shares is NOT added to the cost of acquisition for capital gains 
+purposes. The cost is the actual price paid for the shares (excluding STT and brokerage). 
+Similarly, STT paid on sale is not deducted from the sale consideration. Both STT payments 
+are ignored entirely in the capital gains computation for delivery-based shares. Only the 
+purchase price and sale price matter.
+Q3. I am a foreign portfolio investor (FPI). Do I pay STT?
+Yes. Foreign Portfolio Investors (FPIs) pay STT on their equity transactions in India at the 
+same rates as resident investors. STT is a transaction-level tax regardless of the investor's 
+residency status. FPIs cannot claim a credit for Indian STT against tax payable in their home 
+country in most cases — it is an unrecoverable transaction cost.
+Q4. I trade Nifty options. After Budget 2024, how much more STT am I paying annually?
+The STT on index options increased from 0.0625% to 0.1% of option premium — a 60% 
+increase. For every Rs. 1 lakh of option premium sold, STT increased from Rs. 62.50 to Rs. 
+100. For an active trader selling Rs. 50 lakh of option premium monthly, the annual STT 
+increase = (0.1% - 0.0625%) x Rs. 50L x 12 = 0.0375% x Rs. 6 crore = Rs. 22,500 
+additional STT per year. High-frequency options traders face significantly larger absolute 
+increases.
+Q5. Can I get a refund of STT if I cancel my trade or a trade is rejected?
+If a trade is not executed (rejected before execution), no STT is deducted since STT arises 
+only on executed transactions. If a trade is executed and then reversed/cancelled (which is 
+rare — most cancellations happen before execution), the STT on both legs may be 
+recoverable through the exchange's dispute mechanism. In normal circumstances, once an 
+equity transaction is executed and confirmed, the STT is final and not refundable.

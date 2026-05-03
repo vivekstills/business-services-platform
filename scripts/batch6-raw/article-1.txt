@@ -1,0 +1,207 @@
+ARTICLE 1 OF 9 | TAX AUDIT 
+Section 44AB Income Tax Audit: Applicability, 
+Due Date and Penalty 
+Updated: May 2026 Read time: 10 min read AY: 2026-27 
+ 
+ARTICLE SUMMARY 
+Section 44AB of the Income Tax Act mandates that certain businesses and professionals 
+get their accounts audited by a Chartered Accountant and submit a Tax Audit Report (Form 
+3CA/3CB along with Form 3CD) on or before the due date. For FY 2025-26, the threshold 
+for businesses is Rs. 1 crore (or Rs. 10 crore if cash transactions are below 5%). The 
+penalty for non-compliance is 0.5% of turnover or Rs. 1.5 lakh, whichever is lower. This 
+article covers every applicability condition, the enhanced cash-based threshold, 
+presumptive scheme interaction, due dates, and the consequences of non-compliance. 
+ 
+Who Must Get a Tax Audit Under Section 44AB? 
+A tax audit is mandatory for the following categories of taxpayers: 
+Category Threshold for Mandatory 
+Audit 
+Condition 
+Business (general) Turnover or gross receipts 
+exceed Rs. 1 crore 
+Standard rule 
+Business (cash 
+threshold benefit) 
+Turnover exceeds Rs. 10 
+crore 
+Applies only if aggregate cash receipts are at 
+most 5% of total receipts AND aggregate cash 
+payments are at most 5% of total payments 
+during the year 
+Profession Gross receipts exceed Rs. 
+50 lakh 
+Applies to specified professionals not covered 
+by Section 44ADA 
+Business or 
+profession opting out 
+of presumptive 
+scheme (44AD or 
+44ADA) 
+Income declared below the 
+prescribed presumptive rate 
+Audit mandatory even if turnover is within the 
+normal threshold, if the taxpayer declares 
+lower income and total income exceeds the 
+basic exemption limit 
+Business under 
+Section 44AE (goods 
+vehicles) claiming 
+lower income 
+Any turnover Audit required if income declared is lower than 
+the Section 44AE prescribed amount 
+ 
+The Rs. 10 Crore Cash Threshold Benefit 
+The enhanced Rs. 10 crore threshold (introduced in Budget 2021) provides significant relief to 
+businesses that operate primarily through banking channels. To qualify for this higher threshold, 
+TWO conditions must both be satisfied throughout the financial year: 
+• Cash receipts condition: Aggregate cash receipts during the year must not exceed 5% of 
+total receipts. 
+• Cash payments condition: Aggregate cash payments during the year must not exceed 
+5% of total payments. 
+If either condition is breached at any point during the year, the standard Rs. 1 crore threshold 
+applies. This means a business with Rs. 8 crore turnover that makes even 6% of its payments in 
+cash loses the benefit and must get its accounts audited. The conditions must be monitored 
+throughout the year, not just at year-end. 
+ 
+Digital Receipts Incentive 
+The Rs. 10 crore threshold is effectively a reward for businesses that operate digitally. A trading 
+firm with Rs. 9 crore annual turnover that collects and pays entirely through NEFT, UPI, or 
+account payee cheques needs no tax audit. The same firm, if it accepts 6% of receipts in cash, 
+must get audited. This provision strongly incentivises digital transactions in the business sector. 
+ 
+Presumptive Scheme Opt-Out and Audit Requirement 
+Section 44AD allows businesses with turnover up to Rs. 3 crore to declare 6% or 8% of turnover 
+as income without maintaining books. If a taxpayer opting for Section 44AD in prior years now 
+wants to declare actual income that is lower than the prescribed 6%/8%, a tax audit becomes 
+mandatory provided their total income (including income from all other sources) exceeds the 
+basic exemption limit. 
+Example: Presumptive Opt-Out Audit Trigger 
+Business owner: Turnover Rs. 80 lakh | Prior year opted for 44AD 
+This year: Actual profit Rs. 3 lakh (below 6% of Rs. 80L = Rs. 4.8L)  
+ 
+Since declared income < prescribed 44AD rate AND total income 
+exceeds basic exemption limit of Rs. 3 lakh: 
+  Tax audit under Section 44AB is MANDATORY. 
+ 
+Even though turnover is only Rs. 80 lakh (far below Rs. 1 crore),  
+the opt-out from presumptive taxation triggers the audit requirement.  
+ 
+Forms Used in Tax Audit 
+Form When Used Who Signs 
+Form 3CA When accounts are already audited under 
+another law (e.g., Companies Act, Co-operative 
+Societies Act) 
+Chartered Accountant 
+Form When Used Who Signs 
+Form 3CB When accounts are NOT audited under any 
+other law (most businesses and professionals) 
+Chartered Accountant 
+Form 3CD Statement of particulars required under Section 
+44AB - filed along with Form 3CA or 3CB 
+Chartered Accountant (with 
+taxpayer confirmation for 
+specific clauses) 
+ 
+Due Dates for Tax Audit Report Submission 
+Category Tax Audit Due Date ITR Due Date 
+Business or professional 
+requiring tax audit (non-TP 
+case) 
+September 30 of the assessment 
+year (September 30, 2026 for AY 
+2026-27) 
+October 31 of the assessment 
+year 
+Cases involving international 
+or specified domestic 
+transactions (Transfer 
+Pricing) 
+October 31 of the assessment year November 30 of the 
+assessment year 
+Partner of a firm requiring 
+tax audit 
+Same as the firm's audit due date 
+(October 31) 
+October 31 
+ 
+Important 
+The tax audit report must be uploaded to the IT portal by the CA and then accepted by the 
+taxpayer before it is treated as filed. If the CA uploads the report but the taxpayer does not 
+accept it on the portal before the due date, it is treated as not filed. Both actions (CA upload and 
+taxpayer acceptance) must happen on or before September 30 to avoid penalty. 
+ 
+Penalty for Non-Compliance 
+Section 271B prescribes a penalty for failure to get accounts audited or failure to submit the 
+audit report by the due date: 
+• Penalty amount: 0.5% of total sales, turnover, or gross receipts for the year, OR Rs. 
+1,50,000, whichever is lower. 
+• The penalty is levied on the taxpayer, not the CA. 
+• Reasonable cause defence: The penalty can be waived if the taxpayer can demonstrate 
+a reasonable cause for the failure (e.g., natural disaster, medical emergency, CA non-
+availability). However, the burden of proof lies on the taxpayer. 
+• Prosecution: Wilful failure to get accounts audited can also attract prosecution under 
+Section 276B in addition to the Section 271B penalty. 
+ 
+Pro Tip 
+Businesses that hover near the Rs. 1 crore or Rs. 10 crore threshold should track cumulative 
+turnover from April itself. If turnover is likely to exceed the threshold, engage a CA early and start 
+maintaining accounts in audit-ready format. Engaging a CA in February or March when turnover 
+has already crossed the limit results in rushed audits, higher fees, and higher error risk in Form 
+3CD. 
+ 
+KEY TAKEAWAYS 
+1.  Section 44AB mandates a tax audit by a CA when business turnover exceeds Rs. 1 crore (or 
+Rs. 10 crore for cash-light businesses) or professional receipts exceed Rs. 50 lakh. 
+2.  The Rs. 10 crore threshold applies only when BOTH cash receipts and cash payments are 
+each at most 5% of total receipts and payments. 
+3.  Opting out of the presumptive taxation scheme (44AD/44ADA) by declaring lower income 
+triggers mandatory audit even within the normal thresholds. 
+4.  Form 3CB + Form 3CD is filed for most taxpayers; Form 3CA + Form 3CD if accounts are 
+already audited under another statute. 
+5.  Tax audit report due date: September 30 for AY 2026-27 (non-TP cases); October 31 for 
+transfer pricing cases. 
+6.  Both the CA upload and the taxpayer acceptance on the IT portal must happen before the 
+deadline for the report to be treated as filed. 
+7.  Penalty for late filing or non-filing: 0.5% of turnover or Rs. 1.5 lakh, whichever is lower, under 
+Section 271B. 
+ 
+Frequently Asked Questions 
+Q1. My business turnover is Rs. 1.1 crore but 90% of all transactions are digital. Do I still 
+need a tax audit? 
+Yes. The standard threshold is Rs. 1 crore. The enhanced Rs. 10 crore threshold requires 
+both cash receipts and cash payments to be at most 5% each. As long as those two 
+conditions are met, you would qualify for the Rs. 10 crore threshold and would NOT need a 
+tax audit at Rs. 1.1 crore turnover. Verify that your cash receipts are at most 5% of Rs. 1.1 
+crore (at most Rs. 5.5 lakh in cash received) and cash payments are similarly capped. If 
+both are within 5%, no audit is required. 
+Q2. I am a freelance architect with gross receipts of Rs. 60 lakh. Am I covered by Section 
+44ADA or Section 44AB? 
+Architecture is a specified profession under Section 44ADA. If your gross receipts are Rs. 60 
+lakh (below the Rs. 75 lakh limit) and you choose to opt for 44ADA by declaring 50% of 
+receipts as income, you are not required to maintain books and no tax audit is needed. 
+However, if you choose not to opt for 44ADA and prefer to declare actual income lower than 
+50% of receipts, a tax audit under Section 44AB becomes mandatory (since receipts exceed 
+Rs. 50 lakh and you are not in the presumptive scheme). 
+Q3. What happens if my CA misses the September 30 audit deadline through no fault of 
+mine? 
+The penalty under Section 271B is on the taxpayer, not the CA. However, if you can 
+demonstrate that the delay was due to circumstances beyond your control (illness of the CA, 
+natural calamity, platform outages on the IT portal), you can file a reasonable cause 
+explanation when responding to the penalty notice. Courts have accepted CA-related delays 
+as reasonable cause in some cases. Document all communications with your CA requesting 
+timely completion and keep evidence of the cause of delay. 
+Q4. A partnership firm's turnover is Rs. 1.5 crore. Does each partner also need a separate 
+tax audit? 
+The tax audit obligation is on the FIRM, not on individual partners. The firm gets its accounts 
+audited and files Form 3CB + Form 3CD. Partners are not individually required to get 
+audited solely because the firm's accounts are audited. However, if a partner individually 
+has business or professional income that independently triggers Section 44AB (e.g., a 
+partner also runs a separate consulting business with Rs. 60 lakh receipts), that partner 
+must get a separate audit for their individual income. 
+Q5. I filed the tax audit report on September 29 but made an error in Form 3CD. Can I 
+revise it? 
+Yes. A revised tax audit report can be filed if there is an error in the original report, provided 
+the revision is made before the ITR filing due date. The CA must upload the revised Form 
+3CD with a note explaining the reason for revision. If the error is discovered after the ITR is 
+filed, a revised ITR along with the revised audit report can be filed before December 31. 
+Revisions after a scrutiny notice is received require the approval of the assessing officer.

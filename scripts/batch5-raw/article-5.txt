@@ -1,0 +1,215 @@
+ARTICLE 5 OF 5  ·  GIFT TAXATION 
+How Are Gifts Taxed in India — Gift Tax 
+Exemption & Complete Relatives List 
+📅 Updated: May 2026 📅 9 min read 📅 AY 2026-27 
+ 
+ARTICLE SUMMARY 
+India does not have a standalone 'Gift Tax Act' (the old Gift Tax Act was repealed in 1998). 
+Instead, gifts are taxed under Section 56(2)(x) of the Income Tax Act as 'Income from Other 
+Sources' if received from non-relatives above Rs. 50,000 in a financial year. Gifts from 
+specified relatives are completely exempt without any cap. This article provides the 
+complete relatives list for different taxpayer categories (individuals, HUFs), the types of 
+taxable gifts, special occasions exemptions, how gifted property is valued, and the capital 
+gains implications of gifting appreciated assets. 
+ 
+The Legal Framework — Section 56(2)(x) 
+Section 56(2)(x), introduced with effect from April 1, 2017, provides that if any person receives 
+any sum of money or property from any person without adequate consideration (i.e., as a gift or 
+below market value), the received amount is taxable as 'Income from Other Sources' if: (a) the 
+aggregate value of all such receipts during the financial year exceeds Rs. 50,000, and (b) the 
+giver is not a 'specified relative' or the gift is not on a specified occasion. 
+Before April 1, 2017, Section 56(2)(vii) applied — Section 56(2)(x) replaced it with broader 
+coverage that now also applies to firms, companies, and trusts receiving inadequate 
+consideration, not just individuals and HUFs. However, the relative exemption and occasion 
+exemptions apply only to individuals and HUFs. 
+ 
+Gifts That Are ALWAYS Exempt — Special Occasions 
+Occasion / Source Exempt? Condition 
+Gift on occasion of marriage of 
+the recipient 
+Yes — 
+FULLY 
+EXEMPT 
+Gift must be received on the occasion of the 
+recipient's own marriage — before or after (within 
+reasonable time) 
+Gift received from specified 
+relative 
+Yes — 
+FULLY 
+EXEMPT 
+No upper limit — even Rs. 1 crore is exempt if 
+from a specified relative 
+Gift received under a Will or 
+inheritance 
+Yes — 
+FULLY 
+EXEMPT 
+Property inherited from a deceased person 
+Occasion / Source Exempt? Condition 
+Gift in contemplation of death of 
+the donor 
+Yes — 
+FULLY 
+EXEMPT 
+Gift made by a donor who is ill and in expectation 
+of death 
+Gift from local authority 
+(municipality, etc.) 
+Yes — 
+FULLY 
+EXEMPT 
+As per Section 56(2)(x) proviso 
+Gift from any fund, foundation, 
+educational institution, hospital, 
+other trust as per Section 
+10(23C) 
+Yes — 
+FULLY 
+EXEMPT 
+Institutional givers covered under Section 10(23C) 
+ 
+Complete Specified Relatives List — Individual Taxpayers 
+For an individual recipient, gifts from the following 'specified relatives' are fully exempt (no limit): 
+Relative Category Specific Relatives Included 
+Spouse Husband or wife of the recipient 
+Siblings of the recipient Brother and Sister (including half-siblings by some interpretations) 
+Siblings of the spouse Spouse's brother and spouse's sister 
+Lineal ascendants and 
+descendants 
+Parents, Grandparents, Great-grandparents (ascending); Children, 
+Grandchildren (descending) 
+Spouses of lineal 
+ascendants/descendants 
+Parents' spouses (step-parents included), children's spouses (son-in-
+law, daughter-in-law) 
+Spouses of siblings Brother-in-law (sibling's spouse), Sister-in-law (sibling's spouse) 
+Spouses of spouse's siblings Spouse's siblings' spouses 
+ 
+📅 Important 
+Relatives NOT on the List — Common Mistakes: Uncle (parent's brother), Aunt (parent's sister), 
+Nephew, Niece, Cousin — none of these are 'specified relatives' for Section 56(2)(x). Gifts from 
+these relatives are treated like gifts from unrelated persons — taxable above Rs. 50,000. Many 
+taxpayers incorrectly assume that any family member qualifies as an exempt relative. 
+ 
+Specified Relatives for HUF 
+For a Hindu Undivided Family (HUF) receiving a gift, the specified relative is defined as any 
+member of the HUF. Therefore, any gift from any HUF member to the HUF is fully exempt. 
+When the HUF receives property from a member, it is treated as a contribution to the HUF 
+capital — not as taxable income. 
+ 
+Types of Taxable Gifts — Valuation Rules 
+Type of Gift Received How It Is Valued Threshold 
+Cash / money Actual amount received Rs. 50,000 aggregate from all 
+non-relatives in a year 
+Immovable property (land, 
+house) — received without 
+consideration 
+Stamp Duty Value (SDV) of the 
+property 
+SDV > Rs. 50,000 
+Immovable property — 
+received at below market 
+price 
+SDV minus actual consideration 
+paid — if this difference > 10% of 
+consideration or Rs. 50,000 
+(whichever higher) 
+Difference taxable as Other 
+Sources 
+Movable property (shares, 
+jewellery, artwork, bullion) — 
+without consideration 
+Fair Market Value (FMV) of the 
+property 
+FMV > Rs. 50,000 
+Movable property — at 
+below market price 
+FMV minus actual consideration — if 
+difference > Rs. 50,000 
+Difference taxable 
+ 
+Marriage Gift Exemption — Important Details 
+The marriage occasion exemption is one of the most valuable gift tax provisions. Any gift 
+received by the bride or groom on the occasion of their marriage is completely exempt from 
+Section 56(2)(x) — regardless of the amount, regardless of whether the giver is a relative or 
+unrelated, and regardless of whether the gift is cash or property. The exemption is specifically 
+for the person getting married, not for their parents or other family members. Gifts to parents for 
+hosting the wedding are NOT covered by the marriage exemption. 
+There is no time limit precisely defined in the law for 'on the occasion of marriage' — gifts 
+received a few weeks before or after the wedding are generally treated as covered by this 
+exemption if there is a clear nexus to the marriage event. Large gifts received months before an 
+informal engagement but formally gifted at the wedding are sometimes challenged by the tax 
+department if the timing seems contrived. 
+ 
+Capital Gains When Gifted Property Is Later Sold  
+When a recipient sells property received as a gift, capital gains are computed based on the 
+original cost of the property (i.e., the cost paid by the original donor — not the FMV at the time 
+of gifting). The holding period also includes the donor's holding period. This means: 
+• If the donor held shares for 8 years and gifted them, the recipient is deemed to have 
+held them for 8 years from the moment they receive the gift — immediately qualifying as 
+LTCG if sold. 
+• If shares were originally purchased at Rs. 100 per share, gifted when FMV was Rs. 500, 
+and then sold by the recipient at Rs. 600 — the LTCG = Rs. 600 - Rs. 100 = Rs. 500 per 
+share (not Rs. 100 per share). 
+• The recipient pays capital gains tax on the entire appreciation — including the 
+appreciation during the donor's ownership period. 
+ 
+📅 Pro Tip 
+Gifting appreciated shares or property to a low-income family member (e.g., a non-working 
+spouse, or a student child) is a legal income-splitting strategy. The capital gains when the asset 
+is eventually sold will be taxed in the recipient's hands at their (lower) slab rate rather than the 
+donor's higher rate. The gift itself is exempt if from a specified relative. This is a common and 
+accepted tax planning technique. 
+ 
+KEY TAKEAWAYS 
+1.  Section 56(2)(x) taxes gifts from non-relatives as 'Income from Other Sources' if aggregate 
+value exceeds Rs. 50,000 in a year. 
+2.  Gifts from specified relatives are FULLY EXEMPT regardless of amount — the relatives list is 
+specific and narrow. 
+3.  Marriage gifts are fully exempt — regardless of amount, source, or type of gift (cash or 
+property). 
+4.  Inherited property and gifts received under a Will are fully exempt. 
+5.  Uncle, aunt, nephew, niece, and cousins are NOT on the specified relatives list — their gifts 
+are taxable above Rs. 50,000. 
+6.  When gifted property is sold, capital gains are computed using the original donor's cost and 
+holding period. 
+7.  For HUFs, any gift from any member of the HUF to the HUF is exempt — HUF members are 
+'specified relatives' for the HUF. 
+ 
+Frequently Asked Questions 
+Q1. My mother gave me Rs. 10 lakh to buy a house. Is this taxable? 
+No. Your mother (lineal ascendant) is a specified relative under Section 56(2)(x). Gifts from 
+specified relatives are completely exempt regardless of the amount. The Rs. 10 lakh from 
+your mother is not taxable in your hands. You do not need to report this gift as income. 
+However, if you invest the money and earn interest, that interest income is taxable in your 
+hands (clubbing provisions would not apply since you are an adult child). 
+Q2. I received Rs. 75,000 in total from various friends and colleagues during my wedding. 
+Is it taxable? 
+No. The marriage occasion exemption covers all gifts received on the occasion of marriage 
+— from anyone (relatives and non-relatives alike) and in any amount. The Rs. 50,000 
+threshold under Section 56(2)(x) does not apply to marriage gifts. The entire Rs. 75,000 is 
+exempt. Maintain a simple record of the wedding date and the gifts received as supporting 
+documentation in case it is ever questioned. 
+Q3. I gifted my daughter Rs. 5 lakh in shares (appreciated from Rs. 1 lakh original cost). 
+What are the tax consequences for me and for her? 
+For you (the giver): Gifting to a specified relative (daughter = lineal descendant) does NOT 
+trigger capital gains in your hands — the gift is not a 'transfer' that attracts capital gains 
+when given to a relative (Section 47(iii) exemption). For your daughter (the receiver): The 
+gift is exempt since you are a specified relative. When she eventually sells the shares, 
+LTCG will be computed using your original cost of Rs. 1 lakh (not the FMV at time of gift) 
+and your holding period will be included. 
+Q4. I received a plot of land worth Rs. 20 lakh from my friend as a gift. What is taxable? 
+Your friend is not a specified relative. The FMV (or stamp duty value) of Rs. 20 lakh exceeds 
+the Rs. 50,000 threshold. The ENTIRE Rs. 20 lakh is taxable as 'Income from Other 
+Sources' in your hands at the applicable slab rate — not just the amount above Rs. 50,000. 
+This is a very significant tax implication: receiving high-value property gifts from non-
+relatives creates a large income tax liability. 
+Q5. Does clubbing apply when I gift money to my spouse and they invest it? 
+Yes — the Income Tax Act has clubbing provisions for gifts to spouses. If you gift money to 
+your spouse and the spouse invests it, the income earned on that investment is clubbed with 
+your income (not your spouse's) and taxed in your hands. The clubbing applies to the 
+'immediate income' from the gifted amount. However, if the spouse reinvests the income 
+from the original investment, the income-on-income may not be clubbed — this is a nuanced 
+area. Gifting to a non-working adult child does not attract clubbing (only gifts to minor 
+children attract limited clubbing provisions).

@@ -1,4 +1,6 @@
-# Complete guide to GST registration in India 2024
+# Complete Guide to GST Registration in India 2024
+
+## Introduction: Why GST Registration is More Than Just a Formality
 
 The Goods and Services Tax (GST), introduced on July 1, 2017, replaced over a dozen central and state taxes with a unified indirect tax structure. Every business supplying taxable goods or services above the prescribed threshold must obtain GST registration. Operating without GST registration when required is a serious legal offence, attracting penalties equal to 100% of the tax evaded (subject to a minimum of Rs. 10,000).
 
@@ -15,7 +17,7 @@ Beyond compliance, GST registration enables you to collect tax from customers, c
 | Supplier of goods (special category states) | Rs. 20 lakhs aggregate turnover |
 | Supplier of services (special category states) | Rs. 10 lakhs aggregate turnover |
 
-Special Category States include Manipur, Mizoram, Nagaland, Tripura, Meghalaya, Sikkim, Uttarakhand, Himachal Pradesh, Jammu and Kashmir, and Arunachal Pradesh.
+Special Category States include Manipur, Mizoram, Nagaland, Tripura, Meghalaya, Sikkim, Uttarakhand, Himachal Pradesh, J&K, and Arunachal Pradesh.
 
 ### Mandatory registration regardless of turnover
 

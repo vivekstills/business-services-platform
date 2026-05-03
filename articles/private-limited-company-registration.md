@@ -10,7 +10,7 @@ author: 'Editorial Team'
 reading_time: '8 minutes'
 ---
 
-# How to register a private limited company in India
+# How to Register a Private Limited Company in India
 
 When entrepreneurs, investors, and startups think about incorporating a formal business entity in India, the Private Limited Company (Pvt. Ltd.) consistently tops the list. Its combination of limited liability protection, credibility with investors and banks, ability to issue equity shares, and perpetual existence makes it the default choice for serious business ventures.
 

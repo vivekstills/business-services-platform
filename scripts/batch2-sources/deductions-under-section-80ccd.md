@@ -1,4 +1,4 @@
-# Section 80CCD(1B): the extra Rs. 50,000 deduction most people miss
+# Section 80CCD(1B): The Extra Rs. 50,000 Deduction Most People Miss
 
 Most salaried taxpayers know about Section 80C and its Rs. 1.5 lakh limit. But a surprisingly large number are unaware of Section 80CCD(1B), which allows an additional deduction of up to Rs. 50,000 per year over and above the Rs. 1.5 lakh ceiling, specifically for contributions made to the National Pension System (NPS) Tier I account.
 
@@ -91,7 +91,7 @@ NPS is a long-term retirement corpus and has strict withdrawal rules. However, p
 
 ## How to contribute to NPS Tier I
 
-1. Open an NPS account through a Point of Presence (PoP), which can be a bank (SBI, HDFC, ICICI, etc.), post office, or the NPS Trust's eNPS portal (`https://enps.nsdl.com`).
+1. Open an NPS account through a Point of Presence (PoP), which can be a bank (SBI, HDFC, ICICI, etc.), post office, or the NPS Trust's [eNPS portal](https://enps.nsdl.com).
 2. Obtain your PRAN (Permanent Retirement Account Number).
 3. Make voluntary contributions online through the eNPS portal, your bank's NPS portal, or offline at any PoP.
 4. Ensure contributions are made before March 31 to claim the deduction in that financial year.

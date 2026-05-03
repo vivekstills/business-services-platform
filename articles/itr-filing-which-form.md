@@ -1,5 +1,5 @@
 ---
-title: 'ITR filing 2024-25: Which ITR Form Should You Use?'
+title: 'ITR Filing 2024-25: Which ITR Form Should You Use?'
 slug: 'itr-filing-which-form'
 description: 'AY 2024-25 ITR guide: compare ITR-1 to ITR-7, exclusions, decision chart, key deadlines, defective return Section 139(9), penalties, FAQs.'
 category: 'Tax & Compliance'
@@ -10,7 +10,7 @@ author: 'Editorial Team'
 reading_time: '8 minutes'
 ---
 
-# ITR filing 2024-25: which ITR form should you use?
+# ITR Filing 2024-25: Which ITR Form Should You Use?
 
 ## Why choosing the right ITR form matters
 
@@ -40,7 +40,7 @@ ITR-1 is designed for salaried individuals whose financial life is relatively st
 
 - You are a resident individual (not NRI or RNOR)
 - Total income does not exceed Rs. 50 lakhs
-- Income sources are: salary or pension, one house property (excluding brought-forward losses), and other sources (interest, dividends, family pension)
+- Income sources are: salary/pension, one house property (excluding brought-forward losses), and other sources (interest, dividends, family pension)
 - Agricultural income is up to Rs. 5,000
 
 **Cannot use ITR-1 if:**
@@ -143,9 +143,9 @@ Section 11 trusts, political parties, research associations, universities, hospi
 | Category | Due date |
 | --- | --- |
 | Individuals (non-audit) | July 31, 2024 |
-| Businesses or professionals requiring audit | October 31, 2024 |
+| Businesses/professionals requiring audit | October 31, 2024 |
 | Transfer pricing cases | November 30, 2024 |
-| Belated or revised return | December 31, 2024 |
+| Belated / revised return | December 31, 2024 |
 
 ## Penalties for wrong or late filing
 
@@ -155,7 +155,7 @@ Section 11 trusts, political parties, research associations, universities, hospi
 | Late filing (income above Rs. 5 lakhs) | Rs. 5,000 penalty under Section 234F |
 | Late filing (income up to Rs. 5 lakhs) | Rs. 1,000 penalty under Section 234F |
 | Non-filing | Prosecution under Section 276CC in severe cases |
-| Missing belated return deadline | Cannot carry forward capital or business losses |
+| Missing belated return deadline | Cannot carry forward capital/business losses |
 
 ## Frequently asked questions
 

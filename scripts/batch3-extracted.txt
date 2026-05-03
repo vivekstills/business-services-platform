@@ -1,0 +1,1234 @@
+---PAGE 1---
+TAXPEDIA INDIA 
+Authoritative Tax Knowledge Base 
+BATCH 3 — TAX ARTICLES 
+Salary & Allowances  ·  DA  ·  Employer Loans  ·  NPS  ·  Sec 89(1)  ·  EPF  ·  
+Partnership 
+6 In-Depth Articles  |  FY 2025-26  |  AY 2026-27 
+Updated: May 2026 
+  
+---PAGE 2---
+ARTICLE 1 OF 6  ·  SALARY TAXATION 
+Dearness Allowance (DA) — Meaning, Types, DA 
+Calculation & Tax Treatment 
+📅 Updated: May 2026 📅 9 min read 📅 AY 2026-27 
+ 
+ARTICLE SUMMARY 
+Dearness Allowance (DA) is a cost-of-living adjustment paid by the Central Government, 
+State Governments, and PSUs to their employees and pensioners to offset the impact of 
+inflation. DA is fully taxable as salary income for most employees. This article explains the 
+two types of DA — CDA and IDA — the AICPI-based calculation formula, current DA rates 
+for central government employees as of 2026, tax treatment, DA for pensioners, and how 
+DA interacts with other salary components like HRA. 
+ 
+What is Dearness Allowance? 
+Dearness Allowance is a component of the salary structure of government employees and 
+pensioners designed to protect their real purchasing power against inflation. As the price level in 
+the economy rises, the purchasing power of a fixed salary erodes. DA is periodically revised 
+upward to compensate for this erosion, ensuring that the effective salary keeps pace with 
+inflation. 
+DA was introduced post-World War II when prices rose sharply and fixed-income government 
+employees faced severe hardship. It has since become a permanent and substantial component 
+of government employee compensation. For central government employees under the 7th Pay 
+Commission, DA can form a significant percentage of the basic pay — in many cases, DA itself 
+exceeds the basic pay when accumulated revisions are considered. 
+ 
+Two Types of DA — CDA vs IDA 
+Feature Central DA (CDA) Industrial DA (IDA) 
+Applicable to Central Govt employees, All India 
+Service officers, central PSU 
+employees on CDA pay scales 
+Central PSU employees on IDA pay 
+scales (e.g., ONGC, BHEL, NTPC, 
+SAIL, BSNL) 
+Revision frequency Twice a year — January 1 and July 
+1 
+Quarterly — January, April, July, 
+October 
+Basis of calculation 12-month average of All India CPI 
+(Industrial Workers) — Base Year 
+2016=100 
+3-month average of All India CPI 
+(Industrial Workers) — Base Year 
+2016=100 
+Expressed as Percentage of basic pay Percentage of basic pay (different 
+formula) 
+---PAGE 3---
+Feature Central DA (CDA) Industrial DA (IDA) 
+Announcement body Cabinet Committee on Economic 
+Affairs (CCEA) 
+Board of Directors of respective PSU / 
+DPE guidelines 
+Merger with basic Never merged (unlike earlier pay 
+commissions) 
+Partially merged at regular pay 
+revision intervals 
+ 
+How DA is Calculated — The AICPI Formula (CDA) 
+For central government employees under CDA, the DA rate is determined using the All India 
+Consumer Price Index for Industrial Workers (AICPI-IW) with base year 2016=100. The formula 
+used by the 7th Central Pay Commission is: 
+📊 CDA Calculation Formula 
+DA% = [ (Average AICPI-IW for past 12 months - 261.33) / 261.33 ] x 100 
+ 
+Where: 261.33 is the AICPI-IW index value corresponding to the 
+        basic pay of the 7th CPC (January 2016 base). 
+ 
+Example (Illustrative for January 2026 revision): 
+  12-month average AICPI (Feb 2025 - Jan 2026):    ~645 
+  DA% = [(645 - 261.33) / 261.33] x 100 
+       = [383.67 / 261.33] x 100 
+       = 146.8% (rounded to nearest whole number) 
+ 
+This DA% is applied to the 7th CPC Basic Pay to compute DA amount. 
+Employee with Basic Pay Rs. 50,000: 
+  DA @ 147% = Rs. 73,500 per month 
+ 
+Current DA Rates — Central Government Employees (2025-26) 
+Effective Date DA Rate Increment Over 
+Previous 
+Announcement 
+January 1, 2024 50% +4% over 46% Cabinet approval March 
+2024 
+July 1, 2024 53% +3% over 50% Cabinet approval October 
+2024 
+January 1, 2025 55% +2% over 53% Cabinet approval March 
+2025 
+July 1, 2025 58% +3% over 55% Cabinet approval October 
+2025 
+January 1, 2026 To be announced Based on AICPI data Expected March 2026 
+ 
+---PAGE 4---
+DA and HRA Linkage 
+House Rent Allowance (HRA) for central government employees is linked to the city 
+classification (X, Y, Z cities) as a percentage of basic pay. However, when DA crosses 25% and 
+50% thresholds, HRA rates are revised upward. When DA crossed 50% (January 2024), HRA 
+rates for X-cities moved from 27% to 30%, Y-cities from 18% to 20%, and Z-cities from 9% to 
+10% of basic pay. This DA-HRA linkage means DA revisions indirectly increase HRA as well. 
+ 
+Tax Treatment of Dearness Allowance 
+Dearness Allowance is fully taxable as salary income for all employees — both government and 
+private sector. There are no exemptions available for DA under the Income Tax Act for regular 
+employees. DA is included in gross salary and subject to TDS by the employer. 
+Category Tax Treatment of DA Special Rule 
+Central Govt / State Govt 
+employees 
+Fully taxable — included in 
+salary 
+No exemption; standard deduction of 
+Rs. 75,000 applies on total salary 
+including DA 
+PSU employees (CDA 
+scale) 
+Fully taxable Same as above 
+PSU employees (IDA 
+scale) 
+Fully taxable Same as above 
+Private sector employees 
+receiving DA 
+Fully taxable Same treatment 
+Pensioners receiving DR 
+(Dearness Relief) 
+Fully taxable DR is treated as salary income; family 
+pension DR is partly exempt 
+ 
+Dearness Allowance for Pensioners — Dearness Relief (DR) 
+Retired central government employees receive Dearness Relief (DR) on their basic pension, in 
+lieu of the DA paid to serving employees. DR is revised at the same rate as DA and follows the 
+same AICPI-based calculation. DR is fully taxable as pension income. The employer (paying 
+authority — pension sanctioning authority) deducts TDS on pension plus DR under Section 192. 
+For family pensioners (spouse/dependents receiving family pension after death of pensioner), 
+the basic family pension and DR thereon are taxable under 'Income from Other Sources'. A 
+standard deduction of 1/3rd of family pension or Rs. 25,000 (whichever is lower) is available 
+under Section 57(iia) — this limit was enhanced to Rs. 25,000 in Budget 2024. 
+ 
+DA and Its Role in Other Salary Calculations 
+DA is not merely an inflation compensator — it forms the base for computing several other 
+salary benefits: 
+---PAGE 5---
+• Provident Fund (EPF/GPF): Employer and employee PF contributions are computed on 
+Basic Pay + DA in many PSUs. This increases the PF accumulation significantly. 
+• Gratuity: Under the Payment of Gratuity Act, gratuity is computed as (Last Drawn Salary 
+including DA / 26) x 15 x years of service. Higher DA = higher gratuity. 
+• Leave Encashment: Leave encashment at retirement is computed on Basic Pay + DA. 
+The tax exemption ceiling under Section 10(10AA) is Rs. 25 lakh. 
+• HRA: As explained above, DA thresholds trigger HRA revisions for government 
+employees. 
+• House Building Advance (HBA): The loan limit for HBA from government is based on 34 
+months of Basic Pay + DA. 
+ 
+📅 Pro Tip 
+Government employees should ensure their DA arrears (if received for prior months) are 
+correctly reflected in Form 16 for the year of actual receipt. Arrear DA is taxable in the year of 
+receipt. If the arrear relates to prior years and results in a higher tax burden, claim relief under 
+Section 89(1) by filing Form 10E on the IT portal before filing your ITR. 
+ 
+KEY TAKEAWAYS 
+1.  DA is a cost-of-living adjustment paid to government and PSU employees — it is fully taxable 
+as salary income with no exemption. 
+2.  CDA (Central DA) is revised twice yearly (January and July) based on 12-month average 
+AICPI-IW; IDA is revised quarterly. 
+3.  For central govt employees under 7th CPC, DA as of July 2025 stands at 58% of basic pay. 
+4.  When DA crosses 25% and 50% thresholds, HRA rates for government employees are 
+revised upward. 
+5.  Gratuity, leave encashment, EPF, and HBA are all calculated on Basic Pay + DA — higher 
+DA directly increases these benefits. 
+6.  Dearness Relief (DR) for pensioners follows the same rates as DA and is fully taxable as 
+pension income. 
+7.  DA arrears received in a lump sum can trigger higher tax — claim Section 89(1) relief by filing 
+Form 10E before filing ITR. 
+ 
+Frequently Asked Questions 
+Q1. Is there any DA exemption for private sector employees? 
+No. Dearness Allowance paid by private sector employers is fully taxable under the head 
+'Salaries' without any exemption. Unlike HRA (which has a partial exemption formula), there 
+is no provision in the Income Tax Act that exempts DA for private sector employees. The 
+entire DA amount is added to gross salary and subject to TDS. Only employees of certain 
+---PAGE 6---
+state governments who receive DA under notified conditions (prior to service rules for 
+retirement benefit computation) may have limited specific exemptions — but these are rare 
+and state-specific. 
+Q2. My DA was merged with basic pay during a pay revision. Is the merged amount 
+treated differently for tax purposes? 
+No. Once DA is merged with basic pay (as happened during earlier Pay Commission 
+revisions), it becomes part of basic pay for all purposes — including tax. The merged 
+amount is fully taxable as salary. However, for computation of perquisites, the 'basic salary' 
+used in formulas (like HRA, PF, gratuity) is the revised basic after merger. The merger does 
+not create any tax benefit or disadvantage — it is purely a structural change in how salary is 
+presented. 
+Q3. How is DA different from HRA? Can both be exempt from tax? 
+DA and HRA serve different purposes. DA compensates for inflation and is fully taxable. 
+HRA compensates for accommodation costs and has a partial exemption formula under 
+Section 10(13A) — the exempt portion is the least of: actual HRA received, rent paid minus 
+10% of basic salary, or 50%/40% of basic salary (metro/non-metro). So HRA has a 
+conditional partial exemption; DA has none. A government employee receives both DA and 
+HRA, but only HRA qualifies for partial exemption. 
+Q4. Are DA arrears (for previous years) taxed in the year of receipt or accrual? 
+DA arrears are taxed in the year of actual receipt (cash basis for salary income), not the 
+year they relate to. If DA for April 2024 to September 2024 is received in January 2025, the 
+entire arrear is taxable in FY 2024-25 (AY 2025-26). This bunching of income may push you 
+into a higher slab. To mitigate this, file Form 10E on the IT portal and claim relief under 
+Section 89(1) when filing your ITR, which spreads the tax over the years to which the 
+arrears relate. 
+Q5. A central government employee retired with DA at 58%. Is their pension calculated on 
+basic pay alone or basic pay plus DA? 
+Pension for central government employees is calculated on the last drawn basic pay only — 
+NOT on basic pay + DA. The pension formula under the 7th CPC is: Pension = Last Basic 
+Pay / 2. After retirement, Dearness Relief (DR) is added separately on the basic pension, 
+starting at 0% and revised periodically in line with DA revisions for serving employees. So 
+the pensioner eventually receives pension + DR, which replicates the DA benefit on their 
+pension amount. 
+ 
+  
+---PAGE 7---
+ARTICLE 2 OF 6  ·  SALARY PERQUISITES 
+Is an Interest-Free Loan from Employer Taxable? 
+📅 Updated: May 2026 📅 7 min read 📅 AY 2026-27 
+ 
+ARTICLE SUMMARY 
+When an employer provides a loan to an employee at zero interest or at a rate below the 
+SBI benchmark rate, the interest subsidy is treated as a taxable perquisite under the 
+Income Tax Act. However, there are important exemptions — loans up to Rs. 20,000 are 
+fully exempt, and loans for medical treatment of specified diseases are entirely exempt 
+regardless of amount. This article explains the valuation rules, the SBI benchmark rate 
+mechanism, tax computation, Form 12BA reporting, and practical examples. 
+ 
+Legal Framework — When Does a Loan Become a Taxable 
+Perquisite? 
+Under Section 17(2)(viii) read with Rule 3(7)(i) of the Income Tax Rules, 1962, any loan 
+provided by an employer to an employee (or any member of the employee's household) at an 
+interest rate lower than the SBI benchmark lending rate is treated as a perquisite in the hands of 
+the employee. The taxable value of the perquisite is the interest concession — the difference 
+between what the employee actually pays and what they would have paid at the SBI benchmark 
+rate. 
+This rule applies to both interest-free loans (where the employee pays zero interest) and 
+concessional rate loans (where the employee pays some interest, but at a rate below SBI's 
+benchmark). The perquisite is calculated on a monthly basis on the maximum outstanding loan 
+balance during each month of the financial year. 
+ 
+The SBI Benchmark Rate — How It Works 
+The benchmark rate used for computing the taxable perquisite is the State Bank of India's 
+lending rate for the same type of loan (as of April 1 of the relevant financial year). Different SBI 
+rates apply for different types of loans: 
+Loan Type Benchmark Rate Reference Typical Rate (FY 2025-26) 
+Housing loan SBI Home Loan Rate (1-year MCLR 
+or repo-linked) 
+~8.75% p.a. 
+Car loan / vehicle loan SBI Car Loan Rate ~9.00% p.a. 
+Personal loan / 
+multipurpose 
+SBI Personal Loan Rate ~11.00% p.a. 
+Education loan SBI Education Loan Rate ~9.15% p.a. 
+---PAGE 8---
+Loan Type Benchmark Rate Reference Typical Rate (FY 2025-26) 
+Any other type SBI's applicable rate for that 
+category 
+Varies by category 
+ 
+SBI Rate as of April 1 Is Used for the Full Year 
+The SBI benchmark rate prevailing on April 1 of the financial year is used for the entire year's 
+perquisite computation — even if SBI revises its rates during the year. For FY 2025-26, the rate 
+prevailing on April 1, 2025 applies for the entire April 2025 to March 2026 period. Employers 
+must note this rate at the start of the year for payroll computation. 
+ 
+Exemptions — When Is the Loan Not Taxable? 
+Exemption Category Condition Limit 
+Small loans Aggregate loan balance at any time 
+during the year does not exceed Rs. 
+20,000 
+Full exemption — no perquisite 
+at all 
+Medical treatment loans Loan taken for medical treatment of 
+employee or family member for 
+specified diseases listed in Rule 3A 
+Full exemption — no cap on 
+amount 
+Loan repaid in full before 
+March 31 
+If entire loan is repaid during the 
+year and balance is zero at year end 
+No perquisite (no outstanding 
+balance) 
+Loans covered under 
+medical insurance 
+If medical treatment expenses are 
+reimbursed by insurer 
+Loan to that extent is excluded 
+from perquisite 
+ 
+📅 Important 
+The Rs. 20,000 exemption is on the AGGREGATE outstanding loan balance across all loans 
+from the employer at any time during the year — not per loan. If an employee has a housing loan 
+of Rs. 15,000 outstanding and a personal loan of Rs. 10,000 outstanding simultaneously, the 
+aggregate is Rs. 25,000 which exceeds the threshold, making the entire outstanding balance 
+taxable. 
+ 
+Valuation: How is the Perquisite Calculated? 
+The taxable perquisite value is computed as follows: for each month, take the maximum 
+outstanding loan balance during that month, apply the SBI benchmark rate, and compute the 
+monthly interest. Subtract any interest actually paid by the employee. The balance is the 
+monthly perquisite. Sum all 12 months to get the annual perquisite value. 
+📊 Perquisite Calculation — Interest-Free Housing Loan 
+---PAGE 9---
+Employee receives Rs. 10,00,000 housing loan at 0% from employer on April 
+1, 2025. 
+Employee repays Rs. 20,000 per month. SBI Home Loan Rate (April 1, 2025): 
+8.75% p.a. 
+ 
+Month 1 (April 2025): 
+  Maximum outstanding balance:   Rs. 10,00,000 
+  SBI Interest @ 8.75% p.a.:     Rs. 10,00,000 x 8.75% / 12 = Rs. 7,292 
+  Interest paid by employee:     Rs. 0 (interest-free loan) 
+  Perquisite for April:           Rs. 7,292 
+ 
+Month 2 (May 2025): 
+  Outstanding balance:           Rs. 9,80,000 (after Rs. 20,000 repayment) 
+  SBI Interest:                  Rs. 9,80,000 x 8.75% / 12 = Rs. 7,146 
+  Perquisite for May:             Rs. 7,146 
+ 
+Annual perquisite (approx.):     ~Rs. 82,000 - Rs. 86,000 (declining 
+balance) 
+This amount is added to salary income and subject to TDS. 
+ 
+Tax Treatment and Form 12BA Reporting 
+The annual perquisite value is added to the employee's gross salary and is taxable at the 
+applicable income tax slab rate. The employer includes the perquisite value in the TDS 
+computation. It is reported in Form 12BA (Statement showing particulars of perquisites, other 
+fringe benefits or amenities and profits in lieu of salary) which the employer must provide to the 
+employee along with Form 16. 
+In the employee's ITR, the perquisite value appears under 'Salary as per Form 16' under the 
+head 'Salaries' — it is already included in the salary figure provided by the employer. The 
+employee does not need to separately compute or report it as long as the employer has 
+correctly valued it in Form 12BA and TDS has been deducted accordingly. 
+ 
+Concessional Rate Loan — Partial Perquisite 
+If the employer charges some interest but at a rate below the SBI benchmark, only the 
+difference is a perquisite. For example, if SBI rate is 8.75% and employer charges 4%, the 
+perquisite is based on 4.75% (8.75% minus 4%) applied on the outstanding balance. This partial 
+perquisite is computed in the same way as for a zero-interest loan — monthly, on maximum 
+outstanding balance. 
+ 
+📅 Pro Tip 
+If you have a large interest-free loan from your employer and want to reduce the perquisite tax, 
+consider paying nominal interest at or above the SBI benchmark rate. Once you pay interest at 
+or above the benchmark rate, there is zero perquisite. Many well-structured employee loan 
+---PAGE 10---
+policies are designed with interest at SBI rate to avoid any perquisite tax burden while still 
+providing attractive financing. 
+ 
+KEY TAKEAWAYS 
+1.  Interest-free or concessional loans from employers are taxable perquisites under Section 
+17(2)(viii) read with Rule 3(7)(i). 
+2.  The taxable value is the interest concession: SBI benchmark rate minus actual rate paid, 
+applied to monthly maximum outstanding balance. 
+3.  Loans up to Rs. 20,000 aggregate outstanding at any time are fully exempt — no perquisite 
+arises. 
+4.  Loans for medical treatment of specified diseases are fully exempt regardless of the 
+outstanding amount. 
+5.  The SBI rate as on April 1 of the financial year is used for the entire year's computation. 
+6.  The perquisite is included in gross salary in Form 16 / Form 12BA and taxed at the 
+employee's slab rate. 
+7.  Paying interest at or above the SBI benchmark rate eliminates the perquisite entirely. 
+ 
+Frequently Asked Questions 
+Q1. My employer gave me a loan of Rs. 15,000 at zero interest. Is any perquisite taxable? 
+No. Since the outstanding loan balance of Rs. 15,000 is below the Rs. 20,000 threshold, no 
+perquisite arises at any time during the year. The exemption applies as long as the 
+aggregate outstanding loan balance from the employer never exceeds Rs. 20,000 at any 
+point during the financial year. If you take another loan later in the year that pushes the 
+aggregate above Rs. 20,000, the entire outstanding balance (not just the excess) becomes 
+taxable from that point. 
+Q2. Can an employee get both a housing loan interest deduction under Section 24(b) and 
+avoid perquisite tax on an employer housing loan? 
+For Section 24(b) deduction (interest on home loan for self-occupied or let-out property), the 
+loan must be from a bank, NBFC, or employer. Loans from employers do qualify for Section 
+24(b) deduction. However, the Section 24(b) deduction and the employer loan perquisite 
+operate independently. If the employer charges zero interest, a perquisite arises (taxed as 
+salary). Simultaneously, there is zero actual interest paid, so there is nothing to deduct 
+under Section 24(b). If the employer charges the SBI rate, no perquisite, but the interest 
+paid qualifies for Section 24(b) deduction. 
+Q3. What diseases qualify for the medical loan exemption under Rule 3A? 
+Rule 3A specifies the following diseases for which medical loans are exempt: cancer, full-
+blown AIDS, chronic renal failure, haematological disorders (haemophilia, thalassaemia), 
+---PAGE 11---
+neurological diseases (dementia, dystonia musculorum deformans, motor neuron disease, 
+ataxia, chorea, hemiballismus, aphasia, Parkinson's disease), and any illness requiring 
+surgery. The loan must be for treatment of the employee, spouse, children, parents, or 
+dependents. The treating specialist's certificate may be required as evidence. 
+Q4. What if the employee takes the loan from a group company (not the direct 
+employer)? 
+If the loan is from an associated employer, group company, or subsidiary that is a connected 
+employer, it is still treated as a loan from the employer for perquisite computation purposes. 
+The definition of 'employer' in the perquisite rules includes connected employers and group 
+entities. Loan from an unrelated third party (e.g., friend, bank) even at zero interest is not a 
+perquisite — the rule specifically covers employer-provided benefits. 
+Q5. If the employer adjusts the perquisite value incorrectly in Form 12BA, what should 
+the employee do? 
+The employee should first bring the error to the employer's attention before Form 16 is 
+issued. If the employer issues a wrong Form 16, the employee should request a revised 
+Form 16. If the error is not corrected by the employer, the employee must independently 
+compute the correct perquisite value, declare the correct amount in their ITR (which may 
+differ from the employer's figures), and maintain supporting documentation. Filing a revised 
+ITR after receiving the correct Form 16 later is also an option if the original return was filed 
+with wrong data. 
+ 
+  
+---PAGE 12---
+ARTICLE 3 OF 6  ·  NPS & RETIREMENT 
+Employer's Contribution to NPS in Taxable 
+Salary — Section 80CCD(2) 
+📅 Updated: May 2026 📅 8 min read 📅 AY 2026-27 
+ 
+ARTICLE SUMMARY 
+Employer contributions to the National Pension System (NPS) on behalf of employees are 
+one of the most tax-efficient benefits available in India's compensation structure. Under 
+Section 80CCD(2), the employer's NPS contribution — up to 10% of salary for private 
+sector and 14% for Central Government employees — is deductible from the employee's 
+taxable income, and this benefit is available even under the new tax regime. This article 
+covers the full deduction mechanism, how it appears in Form 16, interaction with the 
+additional 80CCD(1B) deduction, and a worked payroll example. 
+ 
+NPS — A Brief Overview 
+The National Pension System (NPS) is a voluntary, defined contribution retirement savings 
+scheme regulated by the Pension Fund Regulatory and Development Authority (PFRDA). It was 
+originally introduced for central government employees in 2004 and opened to all citizens in 
+2009. NPS offers market-linked returns through investment in equity (E), corporate bonds (C), 
+government securities (G), and alternative assets (A). 
+From a taxation standpoint, NPS has one of the most generous deduction structures: employee 
+contributions are deductible under Section 80CCD(1) within the overall Section 80C limit of Rs. 
+1.5 lakh, an additional Rs. 50,000 deduction is available under Section 80CCD(1B) over and 
+above 80C, and employer contributions are deductible under Section 80CCD(2) without any 
+overlap with the 80C limit. 
+ 
+Section 80CCD(2) — The Employer Contribution Deduction 
+Section 80CCD(2) provides that where an employer contributes to the NPS account of an 
+employee, the amount so contributed is deductible from the employee's gross total income 
+subject to a limit. The employee does not pay any tax on the employer's NPS contribution up to 
+this limit — it is as if the contribution was never received as taxable salary. 
+Employer Category Deduction Limit Under 80CCD(2) Effective From 
+Private sector employers 10% of salary (Basic + DA) Originally 10%; not changed 
+Central Government 
+employers 
+14% of salary (Basic + DA) Enhanced to 14% from FY 
+2019-20 (Budget 2019) 
+State Government 
+employers 
+14% of salary (Basic + DA) Enhanced to 14% from FY 
+2024-25 (Budget 2024) 
+---PAGE 13---
+Employer Category Deduction Limit Under 80CCD(2) Effective From 
+Any employer (above limits) Excess is fully taxable as salary income Applies to any contribution 
+above the respective cap 
+ 
+Available in New Tax Regime Too 
+Section 80CCD(2) deduction is one of the very few deductions available under the new tax 
+regime (Section 115BAC). While most deductions (80C, 80D, HRA, home loan) are disallowed 
+under the new regime, employer NPS contribution deduction under 80CCD(2) continues. This 
+makes it a powerful tax-saving tool for employees who have opted for the new regime and 
+cannot claim other deductions. 
+ 
+How Employer NPS Contribution Appears in Salary and Form 16  
+Here is how the employer NPS contribution flows through the payroll and tax documentation: 
+1. The employer decides to contribute X% of the employee's basic salary to NPS. This is 
+typically structured as part of the CTC (Cost to Company). 
+2. Every month, the employer deducts the employee's share of NPS from the salary and 
+also contributes the employer's share. Both are deposited into the employee's NPS Tier I 
+account. 
+3. For income tax purposes, the employer's contribution is first included in the employee's 
+gross salary (it is a benefit paid by the employer on behalf of the employee). 
+4. Section 80CCD(2) then allows a deduction of this amount (up to 10%/14% of salary) 
+from gross total income — effectively removing it from the tax base. 
+5. In Form 16, the employer's NPS contribution appears as a deduction under Part B — 
+specifically under 'Deductions under Chapter VI-A, Section 80CCD(2)'. 
+ 
+📊 Payroll Example — Private Sector Employee 
+Employee: Rahul Sharma | Designation: Senior Manager 
+Basic Salary:             Rs. 1,00,000 per month 
+DA:                       Rs.     0 (private sector — no DA) 
+HRA:                      Rs.   40,000 per month 
+Special Allowance:        Rs.   60,000 per month 
+Employer NPS (10% of Basic): Rs. 10,000 per month 
+ 
+Annual Gross Salary (incl. employer NPS): 
+  Basic:                  Rs. 12,00,000 
+  HRA:                    Rs.  4,80,000 
+  Special Allowance:      Rs.  7,20,000 
+  Employer NPS:           Rs.  1,20,000 
+  Total Gross:            Rs. 25,20,000 
+ 
+UNDER NEW TAX REGIME: 
+  Less: Standard Deduction:  Rs.    75,000 
+  Less: Sec 80CCD(2) (10% of Rs. 12L Basic): Rs. 1,20,000 
+---PAGE 14---
+  Taxable Income:            Rs. 23,25,000 
+ 
+Tax Saving vs no NPS: Rs. 1,20,000 x 30% = Rs. 36,000 saved 
+ 
+Section 80CCD(1B) — The Additional Employee Deduction 
+Over and above the employer contribution benefit under 80CCD(2), employees can also claim a 
+personal deduction under Section 80CCD(1B) for their own voluntary NPS contributions of up to 
+Rs. 50,000 per year. This is over and above the Section 80C limit of Rs. 1.5 lakh. However, 
+unlike 80CCD(2), the 80CCD(1B) deduction is NOT available under the new tax regime. 
+Deduction Type Section Limit Available in 
+New Regime? 
+Counted within 
+80C? 
+Employee's own NPS 
+contribution 
+80CCD(1) 10% of salary or 
+20% of GTI 
+(individual) 
+No Yes — within 
+Rs. 1.5L 
+Extra voluntary NPS 
+contribution 
+80CCD(1B) Rs. 50,000 per year No No — over and 
+above 
+Employer's NPS 
+contribution 
+80CCD(2) 10% (private) / 14% 
+(govt) of salary 
+Yes No — 
+completely 
+separate 
+ 
+📅 Pro Tip 
+For employees under the new tax regime, the employer NPS contribution under 80CCD(2) is the 
+single most valuable tax deduction available. If your employer currently does not structure NPS 
+as part of your CTC, consider requesting a salary restructuring to include employer NPS 
+contributions. A 10% employer NPS contribution on basic salary can reduce taxable income by 
+Rs. 1.2 lakh per year for someone with Rs. 10 lakh basic — saving Rs. 12,000 to Rs. 36,000 in 
+tax depending on the slab. 
+ 
+KEY TAKEAWAYS 
+1.  Employer NPS contributions under Section 80CCD(2) are deductible up to 10% of salary 
+(private sector) or 14% (Central/State Govt from FY 2024-25). 
+2.  This deduction is available even under the new tax regime (Section 115BAC) — making it 
+one of the most important new regime tax-saving tools. 
+3.  The deduction is completely separate from the Section 80C limit of Rs. 1.5 lakh — it is an 
+additional benefit. 
+4.  Employer NPS contributions are first included in gross salary, then reduced via the 80CCD(2) 
+deduction in the tax computation. 
+---PAGE 15---
+5.  Employee's own additional NPS contribution (80CCD(1B) — Rs. 50,000) is available only 
+under the old regime. 
+6.  Both employee and employer NPS contributions must go to the employee's NPS Tier I 
+account to qualify for deductions. 
+7.  Form 16 Part B shows the 80CCD(2) deduction; employees should verify this against their 
+NPS statement from their PRAN account. 
+ 
+Frequently Asked Questions 
+Q1. My employer contributes 12% of my basic to NPS. Is the excess 2% (above 10%) 
+taxable? 
+Yes. The Section 80CCD(2) deduction is capped at 10% of salary (Basic + DA) for private 
+sector employees. If the employer contributes 12%, the excess 2% is included in the 
+employee's gross salary and taxed as a perquisite / salary income at the applicable slab 
+rate. There is no way to claim deduction on the excess. This is an important structuring point 
+— the employer NPS contribution should ideally be set at exactly 10% of basic to maximise 
+the deduction without creating taxable income. 
+Q2. What does 'salary' mean for the 80CCD(2) calculation — does it include allowances? 
+For the purpose of Section 80CCD(2), 'salary' means Basic Pay + Dearness Allowance (only 
+if DA is part of retirement benefits). It does NOT include HRA, special allowances, 
+conveyance allowance, or any other allowances. This is the same definition of salary used 
+for PF contribution computation. If an employee has Basic Pay of Rs. 50,000 and DA of Rs. 
+10,000 (which forms part of retirement benefits), the salary for 80CCD(2) = Rs. 60,000 and 
+the max deductible employer NPS = Rs. 6,000 per month. 
+Q3. Is the NPS Tier II account contribution by the employer also deductible under 
+80CCD(2)? 
+No. Section 80CCD(2) deduction is available only for contributions to the NPS Tier I 
+(pension account). Employer contributions to Tier II (which is essentially a 
+savings/investment account without pension lock-in) do not qualify for the Section 80CCD(2) 
+deduction. Similarly, employee contributions to Tier II do not qualify for 80CCD(1) or 
+80CCD(1B) deductions. All NPS-related tax benefits are exclusively for Tier I contributions. 
+Q4. If I withdraw from NPS during my employment (partial withdrawal), does it affect the 
+80CCD(2) deduction taken earlier? 
+Partial withdrawals from NPS Tier I (permitted for specified purposes like home purchase, 
+medical treatment, children's education after 3 years of NPS membership) are tax-free up to 
+25% of the employee's own contributions. However, these withdrawals do not reverse or 
+affect the 80CCD(2) deductions taken in prior years on employer contributions. The 
+employer contribution and its deduction history remain intact regardless of the employee's 
+withdrawal decisions. 
+Q5. My employer did not contribute to my NPS but I contributed voluntarily. Can I claim 
+80CCD(2)? 
+No. Section 80CCD(2) is specifically for employer contributions — it cannot be claimed for 
+the employee's own contributions. Your own NPS contributions are covered under 
+---PAGE 16---
+80CCD(1) (within the Rs. 1.5 lakh 80C umbrella) and 80CCD(1B) (additional Rs. 50,000 
+under old regime). Only the amount actually contributed by your employer to your NPS Tier I 
+PRAN account qualifies for the 80CCD(2) deduction. 
+ 
+  
+---PAGE 17---
+ARTICLE 4 OF 6  ·  SALARY RELIEF 
+Claiming Relief Under Section 89(1) on Salary 
+Arrears — Complete Guide 
+📅 Updated: May 2026 📅 9 min read 📅 AY 2026-27 
+ 
+ARTICLE SUMMARY 
+When employees receive salary arrears, advance salary, or gratuity in a lump sum that 
+relates to prior financial years, this income — though taxed in the year of receipt — may 
+attract a higher rate than if it had been received in the years it was earned. Section 89(1) 
+provides relief from this additional tax burden by computing tax as if the income had been 
+received in the respective years. Critically, Form 10E must be filed on the IT portal before 
+filing the ITR — failing to do so results in the relief being denied, even if the calculation is 
+correct. 
+ 
+Why Section 89(1) Relief is Needed 
+Under the Income Tax Act, salary income is taxed on a receipt basis — it is taxed in the year it 
+is received, regardless of which year it relates to. This creates a potential inequity when a 
+taxpayer receives arrears for several prior years in a single year. The bunching of multiple 
+years' income into one year can push the taxpayer into a higher tax bracket than would have 
+applied if the income had been received in the respective years. 
+Section 89(1) provides relief by computing a hypothetical tax — what the total tax would have 
+been if the lump sum income had been received in the year(s) to which it relates. If this 
+hypothetical tax is lower than the actual tax on the bunched income, the difference is allowed as 
+relief — reducing the current year's tax liability. 
+ 
+Types of Income Eligible for Section 89(1) Relief 
+Income Type Eligible for 
+89(1)? 
+Common Examples 
+Salary arrears Yes Pay commission arrears, court-ordered back pay, 
+delayed increments, pending promotions 
+Advance salary Yes Salary received in advance for future months 
+Arrears of family pension Yes Family pension arrears for deceased employee's 
+family 
+Gratuity in excess of 
+exemption 
+Yes — limited 
+relief 
+Gratuity over Rs. 20 lakh for non-govt employees 
+Compensation on 
+voluntary retirement 
+Yes VRS compensation over the Rs. 5 lakh exemption 
+---PAGE 18---
+Income Type Eligible for 
+89(1)? 
+Common Examples 
+Commuted pension Yes — specific 
+provisions 
+Lump sum pension commutation above exemption 
+limit 
+ 
+Form 10E — Mandatory Filing Before ITR 
+The most critical compliance requirement for Section 89(1) is the mandatory filing of Form 10E 
+on the IT portal before submitting the ITR. This was made mandatory by the IT department from 
+FY 2014-15 onwards. If Form 10E is not filed before the ITR, the relief will be disallowed — 
+even if the mathematical calculation is perfectly correct and the relief is legitimately due. 
+📅 Important 
+If you claim Section 89(1) relief in your ITR without first filing Form 10E on the portal, the Income 
+Tax Department's CPC will automatically disallow the relief and raise a demand for the unpaid 
+tax. This is one of the most common causes of CPC demand notices for salaried taxpayers. 
+Always file Form 10E first, get the acknowledgment, then file the ITR. 
+ 
+Form 10E is available on the IT portal under: e-File > Income Tax Forms > File Income Tax 
+Forms > Form 10E. It must be submitted and verified (via Aadhaar OTP or other e-verification) 
+online. The portal automatically links the Form 10E filing to your PAN — you do not need to 
+attach any document to your ITR; the portal verifies it internally. 
+ 
+Step-by-Step Calculation of Section 89(1) Relief 
+The calculation involves the following steps — we illustrate with an example of a government 
+employee receiving 7th Pay Commission arrears: 
+📊 Section 89(1) — Worked Calculation Example 
+Employee: A govt employee receiving pay revision arrears in FY 2025-26 
+Arrears received in FY 2025-26 relating to FY 2023-24: Rs. 1,00,000 
+Arrears received in FY 2025-26 relating to FY 2024-25: Rs. 1,20,000 
+Total arrears received in FY 2025-26:                  Rs. 2,20,000 
+Regular salary income in FY 2025-26 (excluding arrears): Rs. 8,00,000 
+ 
+STEP 1: Tax on total income in FY 2025-26 (with arrears): 
+  Total Income = Rs. 8,00,000 + Rs. 2,20,000 = Rs. 10,20,000 
+  Tax (new regime, after std deduction Rs. 75,000 = Rs. 9,45,000 taxable): 
+  Approx Tax: Rs. 97,500   [Amount A] 
+ 
+STEP 2: Tax on regular income without arrears: 
+  Income = Rs. 8,00,000 (less std deduction Rs. 75,000 = Rs. 7,25,000) 
+  Tax: Rs. 0 (below Rs. 12L rebate threshold)  [Amount B] 
+ 
+STEP 3: Difference (A - B) = Rs. 97,500 - Rs. 0 = Rs. 97,500 
+---PAGE 19---
+ 
+STEP 4: Hypothetical tax if arrears had been received in prior years: 
+  FY 2023-24: Income + Rs. 1,00,000 — tax increase: Rs. 0 (still below 
+threshold) 
+  FY 2024-25: Income + Rs. 1,20,000 — tax increase: Rs. 0 (still below 
+threshold) 
+  Total hypothetical additional tax [Amount C] = Rs. 0 
+ 
+STEP 5: Relief = A - B - C = Rs. 97,500 - Rs. 0 - Rs. 0 = Rs. 97,500 
+Employee claims Rs. 97,500 relief under Section 89(1). 
+ 
+How to Enter Section 89(1) in ITR 
+After filing Form 10E, the Section 89(1) relief appears in your ITR under the head 'Relief under 
+Section 89' in the Tax Computation section. In the online ITR form, there is a specific row for 
+Section 89 relief — enter the amount of relief computed (which Form 10E has already 
+captured). This amount reduces the gross tax liability before application of rebates and after 
+applying surcharge and cess. 
+ 
+Common Situations — Pay Commission Arrears 
+The most common scenario for Section 89(1) claims is government pay commission revisions. 
+When the Central Government implements a new pay commission (e.g., 8th Pay Commission 
+recommendations expected to be implemented from FY 2026-27), employees receive large 
+arrears relating to prior years. These arrears, if taxed entirely in the year of receipt, can create 
+significant additional tax burden that Section 89(1) is designed to mitigate. 
+State government pay revisions, PSU wage settlements, and delayed salary increments 
+following promotions or court orders are other common triggers. Private sector employees may 
+also receive Section 89(1) benefits from settlement arrears, back-dated salary revisions, or 
+severance packages. 
+ 
+📅 Pro Tip 
+Government employees who received 7th CPC arrears in prior years may receive 8th CPC 
+arrears in FY 2026-27 or later. Start maintaining year-wise salary details now. When arrears are 
+announced, compute your Section 89(1) relief early and file Form 10E as soon as the arrear is 
+credited — do not wait until the last moment before the ITR deadline. 
+ 
+KEY TAKEAWAYS 
+1.  Section 89(1) relief prevents over-taxation when salary arrears, advance salary, or similar 
+payments are received as a lump sum relating to prior years. 
+---PAGE 20---
+2.  Form 10E MUST be filed on the IT portal before submitting the ITR — non-filing results in 
+automatic disallowance of the relief. 
+3.  Relief = (Tax on total income including arrears) minus (Tax without arrears) minus 
+(Hypothetical tax if arrears received in respective years). 
+4.  Eligible income includes salary arrears, advance salary, gratuity over exemption, VRS 
+compensation over limit, and commuted pension. 
+5.  Form 10E is available under e-File > Income Tax Forms on the IT portal and requires 
+Aadhaar OTP e-verification. 
+6.  The relief is particularly valuable for government employees receiving Pay Commission 
+arrears spanning multiple prior years. 
+7.  Section 89(1) relief does not require any additional payment — it is a reduction in current year 
+tax computed during ITR filing. 
+ 
+Frequently Asked Questions 
+Q1. I received salary arrears from my employer but my employer already deducted TDS 
+on the full amount. Should I still file Form 10E? 
+Yes. Even if your employer has deducted TDS on the arrears without computing Section 
+89(1) relief, you should file Form 10E and claim the relief in your ITR. The relief will reduce 
+your net tax payable, and the excess TDS already deducted will be refunded by the Income 
+Tax Department when your return is processed. The employer's TDS computation and the 
+Section 89(1) relief are separate — the employer is not required to compute 89(1) relief; you 
+must claim it yourself in the ITR. 
+Q2. What if the arrears relate to years before FY 2018-19? How far back can the 
+calculation go? 
+Section 89(1) requires computation going back to the actual years to which the arrears 
+relate — there is no statutory time limit on how far back you can go. However, practically, 
+you need to know your actual taxable income for each prior year to perform the calculation 
+in Form 10E. The Form 10E on the IT portal currently supports calculations going back to FY 
+2000-01. You should have records of your prior year tax returns or Form 16s to accurately 
+compute the relief for older arrears. 
+Q3. If Section 89(1) relief results in zero tax liability, do I still need to file Form 10E? 
+Yes. Filing Form 10E is mandatory irrespective of whether the relief is large or small, or 
+whether it reduces the tax to zero. The CPC's automated processing checks the Form 10E 
+database before allowing the relief in the ITR. If it is not on record, the claim is rejected. Do 
+not skip Form 10E even if you believe the relief is obvious or the amounts are small. 
+Q4. Can I claim Section 89(1) on a bonus received in advance for future years? 
+Yes. Advance salary and advance bonus are explicitly covered by Section 89(1). If you 
+receive a bonus in FY 2025-26 that relates to work that will be performed in FY 2026-27, this 
+can be treated as advance salary and the relief computation in Form 10E will project the 
+---PAGE 21---
+hypothetical tax for the future year. The calculation determines whether receiving it in 
+advance causes a higher tax than if it were received in the applicable future year. 
+Q5. My arrears were for a period when I was in a lower tax bracket. Will Section 89(1) 
+always provide relief? 
+Not necessarily. Section 89(1) relief is the difference between (a) actual tax on bunched 
+income and (b) hypothetical tax if spread over the relevant years. If you were in a lower slab 
+in the arrear years and the bunching does not actually push you to a higher slab in the 
+current year either, the relief may be zero. The relief is mathematically zero when the 
+bunching does not result in more tax than the sum of taxes in the respective years. Form 
+10E performs this calculation automatically and shows the relief (even if zero). 
+ 
+  
+---PAGE 22---
+ARTICLE 5 OF 6  ·  EPF COMPLIANCE 
+Joint Declaration Form EPF — Complete Guide 
+to Corrections and Process 
+📅 Updated: May 2026 📅 8 min read 📅 FY 2025-26 
+ 
+ARTICLE SUMMARY 
+The EPF Joint Declaration Form is used to correct errors in an employee's EPF records — 
+name, date of birth, father's or husband's name, date of joining, date of exit, or gender. It is 
+called 'joint' because both the employee and the employer must sign and submit it. This 
+article covers when a joint declaration is needed, the difference between Form 11 and joint 
+declaration, the online EPFO portal process, required documents, the employer's role, and 
+timelines for correction. 
+ 
+What is the EPF Joint Declaration Form? 
+The EPF Joint Declaration Form is a formal request submitted to the Employees' Provident 
+Fund Organisation (EPFO) to correct demographic or service details recorded in a member's 
+EPF account. Errors in EPF records can arise from data entry mistakes at the time of account 
+creation, discrepancies between Aadhaar and employer-submitted records, or changes in 
+personal information (e.g., name after marriage). 
+The form is called 'joint' because it requires the signatures of both the employee (member) and 
+the employer — the EPFO will not act on corrections submitted by just one party. This dual-
+signature requirement ensures that the correction is acknowledged by both parties and reduces 
+fraud. Once submitted and approved by EPFO, the correction is reflected in the member's UAN 
+(Universal Account Number) profile. 
+ 
+When Is a Joint Declaration Needed? 
+Field Requiring Correction Common Cause of Error Joint Declaration Required? 
+Name of member Spelling error by employer at 
+onboarding; name change 
+after marriage 
+Yes 
+Date of Birth Wrong DOB entered; 
+mismatch with Aadhaar 
+Yes 
+Father's/Husband's name Typing error in employer 
+submission 
+Yes 
+Gender Incorrect selection at time of 
+registration 
+Yes 
+---PAGE 23---
+Field Requiring Correction Common Cause of Error Joint Declaration Required? 
+Date of Joining (DOJ) Wrong employment start date 
+entered 
+Yes 
+Date of Exit (DOE) Employer has not marked exit 
+or marked wrong date 
+Yes 
+National ID (Aadhaar) 
+mismatch 
+Aadhaar name differs from 
+EPF records 
+Yes — with Aadhaar supporting 
+document 
+Nominee update Adding or changing PF 
+nominee details 
+No — separate nomination form 
+(Form 2) used 
+Bank account details Changing bank account for PF 
+withdrawal 
+No — KYC update on UAN portal 
+ 
+Form 11 vs Joint Declaration — Understanding the Difference 
+Many employees confuse Form 11 with the Joint Declaration. They serve entirely different 
+purposes: 
+Aspect Form 11 (New Employee 
+Declaration) 
+Joint Declaration Form 
+Purpose Declaration by new employee at 
+time of joining about prior PF 
+membership, KYC details, and 
+Aadhaar consent 
+Correction of errors in existing EPF 
+member records 
+When filed At the time of joining a new 
+employer 
+When errors are discovered in existing 
+records 
+Who signs Employee only (employer may 
+countersign for submission) 
+Both employee AND employer — 
+mandatory joint signature 
+Submitted to Employer (who maintains records) EPFO via employer's EPFO employer 
+portal 
+Effect Establishes PF membership; 
+enables UAN auto-transfer 
+Corrects specific field in UAN profile 
+Online availability Available as PDF; employer submits 
+electronically 
+Available on EPFO employer portal 
+(unified portal) 
+ 
+Online Process for Filing Joint Declaration on EPFO Portal  
+6. The employer logs in to the EPFO Unified Portal at unifiedportal-emp.epfindia.gov.in 
+using employer credentials (Username and Password). 
+7. Navigate to: Member > Member Details > Member Profile. Search for the employee's 
+UAN to pull up their profile. 
+---PAGE 24---
+8. Click on 'Modify Basic Details' (for name, DOB, gender, father's name corrections). The 
+system shows the current recorded value and allows the employer to enter the corrected 
+value. 
+9. The employer submits the correction request. The EPFO system automatically 
+generates a Joint Declaration request that is sent to the employee's registered mobile 
+number via OTP for consent. 
+10. The employee logs in to the EPFO Member Portal (unifiedportal-mem.epfindia.gov.in) or 
+the UMANG app, goes to 'Profile > Pending Requests' and approves the joint declaration 
+request using Aadhaar OTP e-verification. 
+11. Once both employer submission and employee approval are done, the joint declaration 
+is forwarded to EPFO for verification. 
+12. EPFO processes the correction — for Aadhaar-linked corrections, approval is often 
+automatic. For other corrections, a field officer may verify and approve within 30 to 60 
+working days. 
+ 
+Aadhaar-Seeded Corrections Are Faster 
+If the correction being requested matches exactly with the details in the member's Aadhaar 
+database (e.g., correcting name in EPF to match Aadhaar name), EPFO processes the 
+correction through an automated Aadhaar-matching system and approval is typically faster — 
+sometimes within 7 to 15 days. For corrections that differ from Aadhaar (e.g., different date of 
+birth in Aadhaar and other documents), manual verification by EPFO is needed and takes 
+longer. 
+ 
+Documents Required for Joint Declaration 
+Type of Correction Supporting Documents Needed 
+Name correction Aadhaar card (if corrected name matches Aadhaar), or PAN card, 
+passport, voter ID in the corrected name + affidavit if significant change 
+Date of Birth correction Birth certificate, Aadhaar, School leaving certificate, PAN card, 
+passport showing correct DOB 
+Father's/Husband's name 
+correction 
+Aadhaar, PAN, school leaving certificate, affidavit 
+Date of Joining correction Appointment letter, salary slip for the correct DOJ, employment 
+agreement 
+Date of Exit correction Resignation letter or employer's letter confirming exit date, relieving 
+letter 
+ 
+📅 Important 
+If the Aadhaar database itself has an error (wrong DOB in Aadhaar), the EPF correction cannot 
+be approved until the Aadhaar is first corrected through the UIDAI portal. EPFO uses Aadhaar as 
+the master database for identity verification. A mismatch between Aadhaar and the corrected 
+---PAGE 25---
+EPF details will cause the joint declaration to be rejected. Always ensure Aadhaar details are 
+correct before initiating EPF corrections. 
+ 
+Impact of Errors on EPF Claims and Withdrawals  
+Errors in EPF records — particularly name and date of birth mismatches — are the leading 
+cause of rejection of EPF withdrawal, transfer, and pension (EPS) claims. When a member 
+applies for PF withdrawal at retirement or resignation, EPFO cross-checks the claim details 
+against the member's registered profile. Any mismatch results in rejection or pending status for 
+the claim. 
+Similarly, for EPS (Employees' Pension Scheme) pension commencement at age 58, the date 
+of birth in EPF records must exactly match the date of birth in the pension application. A one-
+digit DOB error can delay pension start by months. Correcting these errors proactively — rather 
+than waiting until a claim is filed — prevents significant hardship. 
+ 
+📅 Pro Tip 
+Check your EPF member passbook on the EPFO portal or UMANG app at least once a year to 
+verify that all details are correct — name, DOB, date of joining, date of exit (for previous 
+employers), and Aadhaar linkage status. Minor errors discovered early are easier to correct than 
+errors discovered only when you file a claim after decades of service. 
+ 
+KEY TAKEAWAYS 
+1.  The EPF Joint Declaration Form is used to correct errors in EPF member records — name, 
+DOB, father's name, gender, joining/exit dates. 
+2.  It requires BOTH employee and employer signatures/approvals — corrections cannot be 
+made by either party alone. 
+3.  The online process is via the EPFO Unified Employer Portal; the employee approves via the 
+EPFO Member Portal using Aadhaar OTP. 
+4.  Aadhaar-matching corrections are processed faster (7-15 days) compared to manual 
+corrections (30-60 days). 
+5.  Form 11 (new employee declaration at joining) is entirely different from the Joint Declaration 
+— do not confuse the two. 
+6.  Errors in EPF records — especially name and DOB — are the primary cause of withdrawal 
+and pension claim rejections. 
+7.  Always verify Aadhaar details are correct before initiating EPF corrections since EPFO uses 
+Aadhaar as the master identity database. 
+ 
+---PAGE 26---
+Frequently Asked Questions 
+Q1. My previous employer has closed down. How can I get the Joint Declaration signed 
+by them? 
+If the employer has closed or is untraceable, EPFO has a provision for corrections through 
+the concerned Regional PF Commissioner (RPFC) without the employer's signature. You 
+must submit a written application to the RPFC with supporting documents (Aadhaar, PAN, 
+birth certificate, affidavit) and explain why the employer's signature cannot be obtained. The 
+RPFC may approve the correction based on the supporting documents after due verification. 
+This process takes longer than the regular joint declaration route. 
+Q2. My name in Aadhaar is in a different format from my EPF records (e.g., initials vs full 
+name). Which should I correct? 
+EPFO requires the EPF name to match the Aadhaar name exactly — including the format 
+(expanded name vs initials). If your Aadhaar shows 'Rajesh Kumar Sharma' but EPF shows 
+'R. K. Sharma', a joint declaration is needed to update the EPF name to match Aadhaar 
+exactly. It is generally easier to correct the EPF record (via joint declaration) than to change 
+the Aadhaar name. However, if the Aadhaar name itself has an error, correct Aadhaar first, 
+then update EPF. 
+Q3. How long does EPFO take to approve a joint declaration for date of birth correction? 
+Date of birth corrections are among the most sensitive and time-consuming because DOB 
+affects retirement age, pension eligibility, and EPS pension amount. The standard 
+processing time is 30 to 60 working days. If the Aadhaar DOB matches the requested 
+correction, it may be faster. If documents are inconsistent (e.g., birth certificate shows one 
+date, school certificate shows another), EPFO may seek additional clarification through the 
+employer, extending the timeline further. 
+Q4. Can an employee independently update their EPF profile without employer 
+involvement? 
+Very limited changes can be made directly by employees on the UAN member portal — 
+such as bank account updates (KYC), mobile number, email, and nomination details. For 
+demographic corrections (name, DOB, father's name, gender, dates of service), employer 
+involvement is mandatory — both the submission through the employer portal and the 
+employee's Aadhaar OTP approval. This dual-control is an EPFO governance requirement 
+to prevent fraudulent changes. 
+Q5. I transferred my PF from a previous employer but the service period from the old 
+employer shows incorrectly. Is a joint declaration needed? 
+For service period corrections relating to a previous employer, the joint declaration must be 
+initiated by the previous employer (not the current one) since the service records originate 
+from them. If the previous employer is inaccessible, the current employer may assist by 
+submitting supporting documents to the RPFC. The transfer of PF brings the accumulated 
+balance but the underlying service records remain with the originating establishment. 
+Pension calculations under EPS depend on the total qualifying service, so correct service 
+period recording is critical for pension benefit computation. 
+ 
+  
+---PAGE 27---
+ARTICLE 6 OF 6  ·  PARTNERSHIP TAXATION 
+Partner's Remuneration and How It Is Calculated 
+— Section 40(b) 
+📅 Updated: May 2026 📅 9 min read 📅 AY 2026-27 
+ 
+ARTICLE SUMMARY 
+In a partnership firm, partners can be remunerated (salary, bonus, commission, fee) for 
+their work and also earn interest on their capital contributions. However, the Income Tax 
+Act imposes strict limits on how much remuneration and interest can be claimed as a 
+deduction by the firm under Section 40(b). Beyond these limits, the excess is disallowed, 
+increasing the firm's taxable income. This article explains the book profit concept, 
+remuneration calculation formula, interest limits, tax treatment in partners' hands, and the 
+distinction between working and non-working partners. 
+ 
+Overview — Why Section 40(b) Exists 
+In an unregulated scenario, a partnership firm could pay excessive remuneration to its partners, 
+reducing the firm's taxable income (and thus the 30% firm-level tax) while shifting income to 
+partners who might be in a lower tax bracket. Section 40(b) was introduced to prevent this 
+income-shifting arrangement by capping the deductible remuneration and interest at prescribed 
+limits. 
+Any remuneration or interest paid to partners beyond these limits is disallowed as a deduction in 
+the firm's computation, which increases the firm's taxable profit. The disallowed amount is still 
+taxable — but at the firm level at 30%, rather than being split among partners at potentially 
+lower slab rates. This ensures that the overall tax collection is protected. 
+ 
+Who is a Working Partner? 
+Remuneration under Section 40(b) can only be paid to working partners — not to all partners. A 
+working partner is defined as an individual who is actively engaged in conducting the affairs of 
+the business or profession of the firm. The partnership deed must specify which partners are 
+working partners. A partner who merely contributes capital and receives profit share but does 
+not actively work in the business is a non-working (sleeping) partner and cannot receive 
+deductible remuneration. 
+Feature Working Partner Non-Working / Sleeping Partner 
+Definition Actively engaged in firm's 
+business/profession 
+Contributes capital only; not active in 
+business 
+Remuneration 
+allowed? 
+Yes — subject to Section 40(b) 
+limits 
+No — remuneration not deductible for firm 
+---PAGE 28---
+Feature Working Partner Non-Working / Sleeping Partner 
+Interest on capital 
+allowed? 
+Yes — up to 12% p.a. Yes — up to 12% p.a. 
+Tax on remuneration Taxable as 'Income from 
+Business/Profession' in 
+partner's hands 
+N/A — no remuneration received 
+Mentioned in deed? Must be specified in 
+partnership deed 
+Typically also specified in deed 
+ 
+Book Profit — The Foundation of the Calculation 
+The entire Section 40(b) remuneration calculation is based on 'Book Profit.' Book Profit is the 
+net profit of the firm computed under the normal provisions of the Income Tax Act, but BEFORE 
+deducting the partner's remuneration (but after allowing all other legitimate deductions — 
+expenses, depreciation, etc.). It is essentially the firm's taxable profit computed as if no 
+remuneration had been paid to partners. 
+Book Profit calculation steps: Start with the firm's Profit & Loss Account net profit. Add back any 
+remuneration paid to partners (since we need profit before remuneration). Adjust for any income 
+tax disallowances (Section 40A, 43B, etc.). Adjust for any depreciation excess or shortfall. The 
+result is the Book Profit for Section 40(b) purposes. 
+ 
+Maximum Deductible Remuneration — The Section 40(b) Formula 
+Book Profit Slab Maximum Deductible Remuneration 
+First Rs. 3,00,000 of book profit (or in case of 
+loss) 
+Rs. 1,50,000 or 90% of book profit, whichever is 
+higher 
+On the balance of book profit (above Rs. 
+3,00,000) 
+60% of book profit above Rs. 3,00,000 
+ 
+📊 Section 40(b) — Remuneration Limit Calculation 
+Partnership Firm ABC & Co. — FY 2025-26 
+Net Profit (before partner remuneration):  Rs. 20,00,000 (Book Profit) 
+ 
+Applying Section 40(b) formula: 
+  On first Rs. 3,00,000:                   90% = Rs. 2,70,000 
+  On balance Rs. 17,00,000 (@ 60%):        Rs. 10,20,000 
+  Maximum Deductible Remuneration:         Rs. 12,90,000 
+ 
+Scenario 1: Actual remuneration paid = Rs. 10,00,000 
+  Allowed deduction:      Rs. 10,00,000 (within limit) 
+  Firm's Taxable Income: Rs. 20,00,000 - Rs. 10,00,000 = Rs. 10,00,000 
+  Firm Tax @ 30%:         Rs. 3,00,000 
+---PAGE 29---
+ 
+Scenario 2: Actual remuneration paid = Rs. 15,00,000 
+  Allowed deduction:      Rs. 12,90,000 (capped at limit) 
+  Disallowed:             Rs. 2,10,000 (added back to firm income) 
+  Firm's Taxable Income: Rs. 20,00,000 - Rs. 12,90,000 = Rs. 7,10,000 
+  Note: The full Rs. 15,00,000 is STILL taxable in partners' hands as 
+income 
+ 
+Interest on Partner's Capital — Section 40(b) Limit 
+Apart from remuneration, partners also earn interest on the capital they contribute to the firm. 
+Section 40(b) allows the firm to deduct interest paid to partners on their capital, subject to a 
+maximum rate of 12% per annum. Interest paid above 12% is disallowed. 
+• Maximum interest rate: 12% per annum simple interest on the partner's capital account 
+balance. 
+• Both working and non-working partners can receive interest on capital — the 12% limit 
+applies to all. 
+• Interest is computed on the opening balance of the partner's capital account for the year. 
+• Any excess interest above 12% is disallowed in the firm's computation but remains 
+taxable in the partner's hands. 
+ 
+Tax Treatment in Partners' Hands 
+Remuneration and interest received by partners from the firm are taxed as follows: 
+Income Component Head of Income in 
+Partner's ITR 
+Tax Treatment 
+Remuneration (salary, 
+bonus, commission) within 
+40(b) limits 
+Income from Business or 
+Profession 
+Taxed at applicable slab rates; partner can 
+claim related business expenses 
+Interest on capital within 
+12% p.a. 
+Income from Business or 
+Profession 
+Taxed at slab rates 
+Share of profit from firm Exempt under Section 
+10(2A) 
+Fully exempt — no tax in partner's hands 
+Remuneration beyond 40(b) 
+limits 
+Income from Business or 
+Profession (still taxable 
+in partner's hands) 
+Taxable even though firm cannot deduct it 
+— double exposure 
+Interest above 12% p.a. Income from Business or 
+Profession 
+Taxable in partner's hands; firm gets no 
+deduction 
+ 
+Share of Profit is Tax-Free for Partners 
+---PAGE 30---
+The most important tax benefit in partnership taxation: a partner's share of profit from the firm is 
+completely exempt under Section 10(2A), since the firm has already paid 30% tax on the profit. 
+This prevents double taxation of the same income. Only the remuneration and interest 
+components are additionally taxable in partners' hands. Partners should structure their 
+withdrawals to maximise the exempt profit share and minimise the taxable remuneration where 
+possible. 
+ 
+Partnership Deed Requirements for Deductible Remuneration  
+For remuneration paid to partners to be deductible under Section 40(b), two conditions must be 
+simultaneously met: 
+• The partnership deed must expressly authorise the payment of remuneration to the 
+specific working partners (naming them or their designations). A general clause 
+permitting 'remuneration to partners' is acceptable. 
+• The remuneration must be paid only for the period covered by the partnership deed — 
+not for any prior period to which the deed does not apply. A retrospective deed cannot 
+authorise deductible remuneration for prior periods. 
+If either condition is not met, the entire remuneration paid is disallowed under Section 40(b)(iv), 
+even if the amount is within the prescribed limits. Courts have consistently held that 
+remuneration without a properly authorising partnership deed is fully disallowed. Firms should 
+review their partnership deed at the start of each year to ensure both conditions are met. 
+ 
+📅 Pro Tip 
+Partnership firms with high book profits can optimise tax by paying partners the maximum 
+allowable remuneration under Section 40(b). For a book profit of Rs. 20 lakh, the maximum 
+deductible remuneration is Rs. 12.9 lakh. If paid to partners who are in lower tax brackets (say 
+20% or below), the overall tax burden is lower than if the income remained with the firm at 30%. 
+Always compute both scenarios before finalising remuneration for the year. 
+ 
+KEY TAKEAWAYS 
+1.  Section 40(b) limits the deductible remuneration a firm can pay to its working partners — 
+excess remuneration is disallowed at the firm level. 
+2.  Book Profit is the firm's net profit before deducting partner remuneration — this is the base for 
+Section 40(b) calculation. 
+3.  Maximum deductible remuneration: 90% of first Rs. 3 lakh of book profit (or Rs. 1.5 lakh if 
+higher) + 60% of balance book profit. 
+4.  Interest on partner's capital is deductible only up to 12% per annum — interest above this 
+rate is disallowed. 
+5.  Partner's share of profit is fully exempt in the partner's hands under Section 10(2A) — no 
+double taxation of profits. 
+---PAGE 31---
+6.  Remuneration and interest received by partners are taxable as 'Business Income' in the 
+partner's hands at slab rates. 
+7.  The partnership deed must expressly authorise remuneration to specific working partners — 
+absence of this clause results in full disallowance. 
+ 
+Frequently Asked Questions 
+Q1. Can a limited liability partnership (LLP) also claim remuneration deduction under 
+Section 40(b)? 
+Yes. Section 40(b) applies to all forms of partnerships including LLPs. The designated 
+partners of an LLP who are actively involved in the business qualify as working partners for 
+Section 40(b) purposes. The LLP agreement must authorise the payment of remuneration to 
+designated partners (equivalent to the partnership deed requirement). The same book profit 
+formula and limits apply to LLPs as to traditional partnership firms. 
+Q2. What if the firm has a loss (negative book profit)? Can partners still receive 
+deductible remuneration? 
+Yes. In case of a loss (negative book profit), Section 40(b) provides a floor: the maximum 
+deductible remuneration is Rs. 1,50,000 or 90% of book profit, whichever is higher. Since 
+90% of a negative number would be even more negative, the floor of Rs. 1,50,000 applies. 
+This means a loss-making firm can still deduct up to Rs. 1,50,000 as partner remuneration 
+— which would further increase the business loss and allow it to be carried forward. This is a 
+useful provision for firms in their startup or loss-making years. 
+Q3. A partner received Rs. 5 lakh remuneration but the firm can only deduct Rs. 3 lakh 
+under 40(b). Is the Rs. 2 lakh disallowance also taxable in the partner's hands? 
+Yes. The Rs. 2 lakh disallowed at the firm level is still fully taxable as business income in the 
+partner's hands. Section 40(b) disallowance operates at the firm level for deduction 
+purposes — it does not affect the taxability of the amount in the recipient's hands. This is 
+one of the harsh consequences of exceeding Section 40(b) limits: the firm pays tax on the 
+disallowed amount (as part of increased firm income at 30%) AND the partner pays tax on 
+the entire remuneration at their slab rate. Careful planning to stay within 40(b) limits avoids 
+this double exposure. 
+Q4. Can a partner claim deduction for expenses incurred personally for the firm's 
+business against the remuneration income? 
+Yes. Remuneration received by a partner is taxable as 'Income from Business or 
+Profession'. The partner can claim all expenses incurred wholly and exclusively for the 
+purposes of earning that remuneration as deductions — for example, professional 
+subscriptions, books, travel for business purposes (not reimbursed by firm), home office 
+expenses. However, expenses must be genuine and supported by bills. The partner's capital 
+contribution to the firm is not an expense but a balance sheet item. 
+Q5. Is it mandatory for all working partners to receive the same remuneration, or can it 
+vary? 
+There is no requirement for equal remuneration among working partners. The partnership 
+deed can specify different remuneration for different working partners based on their roles, 
+expertise, seniority, or contribution. The Section 40(b) limit applies to the total remuneration 
+---PAGE 32---
+paid to all working partners collectively — not to each partner individually. As long as the 
+total remuneration paid to all working partners is within the overall 40(b) limit, the distribution 
+among partners can be in any ratio as specified in the deed. 
+ 

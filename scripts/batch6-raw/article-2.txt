@@ -1,0 +1,172 @@
+ARTICLE 2 OF 9 | PRESUMPTIVE TAXATION 
+Section 44ADA: Presumptive Tax Scheme for 
+Professionals 
+Updated: May 2026 Read time: 8 min read AY: 2026-27 
+ 
+ARTICLE SUMMARY 
+Section 44ADA provides a simplified tax computation for resident individual professionals 
+by allowing them to declare 50% of gross receipts as their taxable income, without 
+maintaining books of accounts or undergoing a tax audit. For FY 2025-26, the gross 
+receipts threshold is Rs. 75 lakh (provided cash receipts are at most 5%; otherwise Rs. 50 
+lakh). This article covers eligible professions, the receipt threshold in detail, how the 
+deduction works, interaction with the new and old tax regimes, advance tax rules, and the 
+consequences of opting out. 
+ 
+Eligible Professions Under Section 44ADA 
+Section 44ADA applies to resident individuals carrying on any of the following professions as 
+specified under Section 44AA(1): 
+Profession Category Examples 
+Legal Advocates, barristers, solicitors, notaries 
+Medical Doctors, dentists, physiotherapists, anaesthetists, radiologists, 
+pathologists 
+Engineering Civil engineers, structural engineers, mechanical engineers in 
+consulting practice 
+Architectural Architects, town planners, landscape designers 
+Accountancy Chartered Accountants, Cost Accountants, Company Secretaries in 
+practice 
+Technical Consultancy IT consultants, management consultants, software development 
+consultants 
+Interior Decoration Interior designers, space planners 
+Other notified professions Any profession notified by CBDT under the relevant rule 
+ 
+Who Is NOT Eligible 
+Section 44ADA is available only to resident individuals. Partnership firms (including LLPs), 
+companies, HUFs, and non-resident individuals cannot use this scheme. A firm of doctors or 
+architects must maintain full books of accounts and cannot opt for 44ADA at the firm level, even 
+though the individual partners may be eligible for 44ADA on their individual professional income. 
+ 
+The Gross Receipts Threshold for FY 2025-26 
+Cash Receipt Condition Applicable Gross Receipts Limit 
+Cash receipts are at most 5% of total gross 
+professional receipts 
+Rs. 75 lakh (enhanced limit) 
+Cash receipts exceed 5% of total gross 
+professional receipts 
+Rs. 50 lakh (standard limit) 
+ 
+The 5% condition is assessed at the end of the financial year based on the actual cash versus 
+digital split of total receipts. A professional who receives Rs. 4 lakh in cash out of Rs. 70 lakh 
+total receipts (5.7%) would be treated as exceeding the 5% threshold and the Rs. 50 lakh limit 
+applies. Since Rs. 70 lakh exceeds Rs. 50 lakh, that professional must either opt out (and 
+maintain full books with audit) or stay in 44ADA but note that their receipts now exceed the 
+applicable threshold. 
+ 
+How the Income Computation Works 
+Under Section 44ADA, the professional's income from the profession is deemed to be 50% of 
+gross professional receipts. No further deductions are allowed from this deemed income on 
+account of any business expenses such as rent, salaries to staff, equipment, depreciation, or 
+professional subscriptions. The presumed 50% income is the final income from the profession 
+for all purposes. 
+Deductions under Chapter VI-A (such as Section 80C, 80D, 80G) are still available against the 
+total income (which includes the Section 44ADA professional income) to arrive at the net 
+taxable income. The standard deduction of Rs. 75,000 available to salaried individuals does not 
+apply to professional income under 44ADA. 
+Example: Section 44ADA Computation 
+CA in practice: Gross professional receipts for FY 2025-26: Rs. 68,00,000 
+Cash receipts: Rs. 2,00,000 (2.9% of total - within 5%) 
+Eligible for Rs. 75 lakh threshold. Rs. 68L is within limit. 
+ 
+Presumed Income (50% of Rs. 68L):          Rs. 34,00,000 
+ 
+Old Tax Regime Deductions: 
+  Section 80C (LIC, PPF, ELSS):            Rs.  1,50,000 
+  Section 80D (health insurance):           Rs.    25,000 
+  Section 80CCD(1B) (NPS):                 Rs.    50,000 
+  Total Deductions:                         Rs.  2,25,000 
+ 
+Net Taxable Income (old regime):            Rs. 31,75,000 
+ 
+Benefits: No books, no audit, no Form 3CD. 
+File ITR-4 by July 31. 
+ 
+Interaction With New Tax Regime 
+Section 44ADA can be used under both the old and new tax regimes. The 50% presumed 
+income figure is the same regardless of the regime chosen. The difference lies in which 
+deductions are then available: 
+Aspect Old Tax Regime New Tax Regime 
+80C, 80D, 80G deductions Available Not available 
+80CCD(2) employer NPS Available (if applicable) Available (one of few deductions 
+permitted) 
+Standard deduction Not applicable to professionals Not applicable to professionals under 
+44ADA 
+Tax slabs Old slabs with higher rates New slabs with lower rates and Rs. 
+12L rebate 
+Overall verdict Better if deductions exceed 
+roughly Rs. 3-4 lakh 
+Better for those with few deductions 
+ 
+Advance Tax Under Section 44ADA 
+One of the compliance advantages of Section 44ADA is the simplified advance tax schedule. 
+Instead of the four quarterly instalments required under the regular regime (15% by June 15, 
+45% by September 15, 75% by December 15, and 100% by March 15), professionals under 
+Section 44ADA are required to pay only ONE instalment of advance tax equal to 100% of the 
+estimated tax liability for the year, by March 15. Missing this single deadline attracts interest 
+under Section 234B and 234C. 
+ 
+Opting Out and the 5-Year Restriction 
+Section 44ADA does not have the same strict 5-year lock-out as Section 44AD. A professional 
+can freely opt in or opt out of 44ADA from year to year without any restriction. This flexibility 
+makes it particularly suitable for professionals whose receipts or expense ratios fluctuate year to 
+year. However, if the professional opts out in a year and their gross receipts exceed Rs. 50 lakh, 
+they must maintain full books and get a tax audit under Section 44AB. 
+ 
+Pro Tip 
+Professionals whose actual net profit margin is higher than 50% of receipts benefit most from 
+Section 44ADA. For example, a doctor working from a hospital where the hospital provides all 
+facilities (equipment, staff, space) may earn 70% to 80% net margins. By opting for 44ADA, only 
+50% is taxed, effectively sheltering 20%-30% of actual profit from tax. Always compare actual 
+profit versus 50% of receipts before deciding. 
+ 
+KEY TAKEAWAYS 
+1.  Section 44ADA allows specified resident individual professionals to declare 50% of gross 
+receipts as income without maintaining books or getting an audit. 
+2.  Eligible professions include legal, medical, engineering, architecture, accountancy, technical 
+consultancy, and interior decoration. 
+3.  Gross receipts threshold: Rs. 75 lakh if cash receipts are at most 5% of total; Rs. 50 lakh if 
+cash exceeds 5%. 
+4.  No business expense deductions are allowed from the 50% presumed income. Chapter VI-A 
+deductions (80C, 80D, etc.) remain available from total income. 
+5.  Advance tax is a single 100% instalment due by March 15 - no quarterly payments. 
+6.  Section 44ADA has no 5-year lock-out on opting out, unlike Section 44AD. 
+7.  Professionals with actual profit margins above 50% benefit most since the excess profit 
+above 50% is effectively untaxed. 
+ 
+Frequently Asked Questions 
+Q1. Can a radiologist employed full-time in a hospital also use Section 44ADA for 
+freelance professional work? 
+Yes. If the radiologist earns professional income from freelance consultations (outside the 
+employment) in addition to their salary, the freelance professional receipts can be declared 
+under Section 44ADA (50% deemed income) provided the total freelance receipts are within 
+the applicable threshold. The salary component remains taxable as regular salary income. 
+Both income heads are reported separately in ITR-4. 
+Q2. My professional receipts are Rs. 80 lakh with only 2% cash. I am outside the 44ADA 
+threshold. What are my options? 
+Since Rs. 80 lakh exceeds the Rs. 75 lakh enhanced threshold (even though the 5% cash 
+condition is met), you cannot opt for Section 44ADA. You must maintain books of accounts 
+under Section 44AA and since gross receipts exceed Rs. 50 lakh, you are required to get a 
+tax audit under Section 44AB and file Form 3CB plus Form 3CD by September 30. The 
+44ADA option is not available above the threshold regardless of cash ratio. 
+Q3. I am a technical consultant. My actual expenses are only Rs. 5 lakh on receipts of Rs. 
+40 lakh (actual profit Rs. 35 lakh = 87.5%). Should I use 44ADA? 
+Section 44ADA would deem your income at Rs. 20 lakh (50% of Rs. 40 lakh), which is much 
+lower than your actual profit of Rs. 35 lakh. You would pay tax only on Rs. 20 lakh (less any 
+Chapter VI-A deductions) instead of Rs. 35 lakh. This is a significant tax saving. Yes, in this 
+situation 44ADA is highly beneficial. The only consideration is whether the scheme fits your 
+overall tax planning (old vs new regime comparison). 
+Q4. Can a Section 44ADA professional claim deduction for home loan interest under 
+Section 24(b)? 
+Yes. Section 24(b) home loan interest deduction (for self-occupied property, up to Rs. 2 
+lakh) is available under the old tax regime regardless of whether income is computed under 
+44ADA or actual books. The home loan deduction is against the 'Income from House 
+Property' head, not against professional income. Since 44ADA only restricts deductions from 
+the professional income head, deductions under other income heads are unaffected. Under 
+the new tax regime, Section 24(b) deduction is not available. 
+Q5. Is a management consultant covered under Section 44ADA's 'technical consultancy' 
+category? 
+The term 'technical consultancy' in Section 44ADA refers to consultancy in technical fields 
+such as engineering, IT, science, or technology. Pure management consulting (strategy, 
+HR, operations) may or may not qualify depending on the nature of work. Several ITAT 
+decisions have held that management consultancy can fall under technical consultancy if it 
+involves technical knowledge or expertise. However, there is no definitive ruling, and the 
+classification is fact-specific. A CA's guidance on whether your specific consulting activity 
+qualifies is advisable.

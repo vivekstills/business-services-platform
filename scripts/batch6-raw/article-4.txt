@@ -1,0 +1,167 @@
+ARTICLE 4 OF 9 | TAX COMPUTATION 
+Income Tax Surcharge Rates and Marginal Relief 
+for AY 2026-27 
+Updated: May 2026 Read time: 8 min read AY: 2026-27 
+ 
+ARTICLE SUMMARY 
+Income tax surcharge is an additional tax levied on the income tax payable by taxpayers 
+whose income exceeds specified thresholds. For individuals, surcharge rates range from 
+10% to 25% (or 37% under old regime for income above Rs. 5 crore). Marginal relief 
+ensures that the extra tax payable due to crossing a surcharge slab does not exceed the 
+marginal income that caused the slab to be breached. This article covers all surcharge 
+rates for individuals, HUFs, firms, and companies under both regimes, the marginal relief 
+mechanism with worked examples, and the Budget 2023 cap on surcharge under the new 
+regime. 
+ 
+Surcharge Rates for Individuals and HUFs (AY 2026-27) 
+Total Income Range Surcharge Rate - Old 
+Regime 
+Surcharge Rate - New Regime 
+(115BAC) 
+Up to Rs. 50 lakh Nil Nil 
+Above Rs. 50 lakh to Rs. 1 
+crore 
+10% on income tax 10% on income tax 
+Above Rs. 1 crore to Rs. 2 
+crore 
+15% on income tax 15% on income tax 
+Above Rs. 2 crore to Rs. 5 
+crore 
+25% on income tax 25% on income tax 
+Above Rs. 5 crore 37% on income tax (old 
+regime) 
+25% on income tax (NEW 
+REGIME CAP - Budget 2023) 
+ 
+New Regime Surcharge Cap at 25% 
+Budget 2023 reduced the maximum surcharge rate under the new tax regime (Section 115BAC) 
+from 37% to 25% for income above Rs. 5 crore. This means the maximum effective tax rate 
+under the new regime is lower than under the old regime for very high incomes. For a taxpayer 
+with income above Rs. 5 crore, the new regime surcharge cap is one of the key reasons why the 
+new regime may be more attractive despite the loss of deductions. 
+ 
+Surcharge Rates for Other Taxpayer Categories 
+Taxpayer Category Income Range Surcharge Rate 
+Domestic companies 
+(regular) 
+Income up to Rs. 1 crore Nil 
+Domestic companies 
+(regular) 
+Income Rs. 1 crore to Rs. 10 
+crore 
+7% 
+Domestic companies 
+(regular) 
+Income above Rs. 10 crore 12% 
+Domestic companies under 
+115BAA/115BAB 
+Any income 10% flat (regardless of income level) 
+Foreign companies Income up to Rs. 1 crore Nil 
+Foreign companies Income Rs. 1 crore to Rs. 10 
+crore 
+2% 
+Foreign companies Income above Rs. 10 crore 5% 
+Partnership firms and LLPs Any income 12% flat (no income threshold) 
+Co-operative societies (new 
+regime 115BAD) 
+Any income 10% flat 
+ 
+Marginal Relief: What It Is and How It Works 
+Marginal relief is a provision that ensures a taxpayer does not pay more additional tax on 
+account of surcharge than the amount by which their income exceeds the surcharge threshold. 
+Without marginal relief, a taxpayer earning Rs. 50,00,001 (just Rs. 1 above the Rs. 50 lakh 
+surcharge threshold) would pay 10% surcharge on their entire tax, resulting in a 
+disproportionately large jump in total tax for just Rs. 1 extra income. 
+The marginal relief formula ensures: (Total tax with surcharge at income X) minus (Total tax 
+without surcharge at the threshold) must not exceed (Income X minus the threshold income). 
+Example: Marginal Relief Worked Example 
+Taxpayer income: Rs. 50,10,000 (just Rs. 10,000 above Rs. 50 lakh 
+threshold) 
+New Tax Regime | AY 2026-27 
+ 
+STEP 1: Tax on Rs. 50,10,000 (before surcharge): 
+  Using new regime slabs (approx):          Rs.  9,00,000 
+  Surcharge @ 10% on Rs. 9,00,000:         Rs.    90,000 
+  Total Tax with surcharge:                 Rs.  9,90,000 
+  Add: Cess 4%:                             Rs.    39,600 
+  TOTAL TAX SCENARIO A:                     Rs. 10,29,600 
+ 
+STEP 2: Tax on Rs. 50,00,000 (threshold, no surcharge): 
+  Tax on Rs. 50 lakh (approx):              Rs.  8,97,500 
+  Add: Cess 4%:                             Rs.    35,900 
+  TOTAL TAX SCENARIO B:                     Rs.  9,33,400 
+ 
+STEP 3: Without marginal relief, extra tax = Rs. 10,29,600 - Rs. 9,33,400 
+= Rs. 96,200 
+STEP 4: Marginal income = Rs. 50,10,000 - Rs. 50,00,000 = Rs. 10,000 
+ 
+Since Rs. 96,200 > Rs. 10,000, marginal relief applies. 
+Marginal Relief = Rs. 96,200 - Rs. 10,000 = Rs. 86,200 
+Actual surcharge payable after marginal relief = Rs. 90,000 - Rs. 86,200 = 
+Rs. 3,800 
+ 
+Surcharge on Capital Gains with Special Tax Rates 
+For capital gains that are subject to special tax rates (such as LTCG at 12.5% on equity or 
+STCG at 20%), the surcharge rate is capped at 15% regardless of the total income of the 
+taxpayer. This cap applies to: 
+• LTCG under Section 112A (equity shares and equity mutual funds) 
+• STCG under Section 111A (equity shares and equity mutual funds) 
+• LTCG under Section 112 (other than equity) 
+This means that even a very high income taxpayer with income above Rs. 5 crore pays only 
+15% surcharge (not 25% or 37%) on their LTCG and STCG from listed equity transactions. 
+ 
+Pro Tip 
+Taxpayers with income near a surcharge threshold should carefully time income receipts across 
+financial years. For example, a business owner expecting Rs. 1.05 crore total income (crossing 
+the Rs. 1 crore threshold for 15% surcharge) might consider deferring Rs. 6 lakh of income to the 
+next financial year by invoicing in April instead of March. However, this must be done genuinely 
+and must reflect actual transaction timing, not just paper deferral. 
+ 
+KEY TAKEAWAYS 
+1.  Surcharge is an additional levy on income tax for higher income taxpayers: 10% for income 
+above Rs. 50 lakh, up to 37% (old regime) or 25% (new regime) for income above Rs. 5 crore. 
+2.  Budget 2023 capped the new regime surcharge at 25% (maximum) for income above Rs. 5 
+crore, making the new regime more attractive for ultra-high earners. 
+3.  Marginal relief ensures that the extra tax from crossing a surcharge threshold does not 
+exceed the extra income that caused the threshold breach. 
+4.  Capital gains with special rates (LTCG/STCG on equity under Sections 111A, 112A, 112) 
+attract a maximum surcharge of 15% regardless of total income. 
+5.  Partnership firms and LLPs pay a flat 12% surcharge on all income. 
+6.  Domestic companies under the regular regime pay 7% surcharge (income Rs. 1-10 crore) or 
+12% (above Rs. 10 crore). 
+7.  Companies under 115BAA and 115BAB pay a flat 10% surcharge regardless of income level. 
+ 
+Frequently Asked Questions 
+Q1. My total income is Rs. 52 lakh. What is my effective total tax under the new regime? 
+Under the new regime for AY 2026-27: Tax on Rs. 52 lakh using new regime slabs 
+(approximate) is around Rs. 9,60,000. Surcharge at 10% = Rs. 96,000. However, marginal 
+relief applies since income is just Rs. 2 lakh above the Rs. 50 lakh threshold. The marginal 
+relief computation ensures your total tax does not exceed tax on Rs. 50 lakh plus Rs. 2 lakh 
+(the marginal income). Consult an ITR calculator for the precise figure with marginal relief 
+applied. 
+Q2. I have salary income of Rs. 60 lakh and LTCG on shares of Rs. 40 lakh. What 
+surcharge rates apply? 
+Two different surcharge rates apply to different parts of your income. On the salary income 
+portion, surcharge is at 10% (total income above Rs. 50 lakh). On the LTCG on listed equity 
+shares (Section 112A), the surcharge is capped at 15% regardless of total income. The tax 
+computation splits the income into regular income and special rate income, applies the 
+respective surcharge caps, and totals them. 
+Q3. Does a partnership firm get marginal relief on surcharge? 
+Partnership firms pay a flat 12% surcharge regardless of income level. There are no 
+graduated surcharge slabs for firms. Since there is no threshold beyond which the 
+surcharge rate jumps (it is 12% from the first rupee of income), the concept of marginal relief 
+does not apply to partnership firms or LLPs. 
+Q4. How is surcharge calculated when a company has both regular income and income 
+from capital gains? 
+For companies, surcharge is applied to the total tax payable on all income combined. The 
+company applies the applicable surcharge rate (7% or 12% for regular domestic companies) 
+on the total tax computed on all income heads including capital gains. Unlike individuals, 
+companies do not have a separate surcharge cap for capital gains income. 
+Q5. The new regime surcharge cap at 25% - does it apply to all income or only specific 
+types? 
+The 25% surcharge cap under the new regime applies to all income of an individual who has 
+opted for Section 115BAC, for income above Rs. 5 crore. There is no distinction between 
+regular income and capital gains for this cap under the new regime. An individual in the new 
+regime with Rs. 6 crore total income (including salary and capital gains) pays a maximum of 
+25% surcharge on all components, unlike the old regime where income above Rs. 5 crore 
+faces 37% surcharge on regular income.

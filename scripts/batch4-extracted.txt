@@ -1,0 +1,924 @@
+---PAGE 1---
+TAXPEDIA INDIA
+Authoritative Tax Knowledge Base
+BATCH 5 — TAX ARTICLES
+Crypto  ·  Share Taxation  ·  STT  ·  Diwali Gifts  ·  Gift Tax & Relatives List
+5 In-Depth Articles  |  FY 2025-26  |  AY 2026-27
+Updated: May 2026
+---PAGE 2---
+ARTICLE 1 OF 5  ·  CRYPTO TAXATION
+Taxation of Cryptocurrency & Virtual Digital 
+Assets in India (FY 2025-26)
+ Updated: May 2026📅  10 min read⏱  AY 2026-27📋
+ARTICLE SUMMARY
+India introduced a dedicated tax framework for Virtual Digital Assets (VDAs) — including 
+cryptocurrency, NFTs, and other digital tokens — through Finance Act 2022, effective from 
+AY 2022-23. Income from VDAs is taxed at a flat 30% (plus surcharge and 4% cess) 
+regardless of the holding period or the investor's income level. A 1% TDS under Section 
+194S applies on VDA transactions above Rs. 10,000 per year. Loss from one VDA cannot 
+be set off against gains from another, and no deductions except the cost of acquisition are 
+allowed. This article explains every aspect of India's VDA tax regime for FY 2025-26.
+What are Virtual Digital Assets (VDAs)?
+Section 2(47A) of the Income Tax Act defines Virtual Digital Asset to include: any information or 
+code or number or token generated through cryptographic means or otherwise (Bitcoin, 
+Ethereum, and all other cryptocurrencies), non-fungible tokens (NFTs), and any other digital 
+asset notified by the Central Government. Traditional currencies (including digital forms of fiat 
+currency like the RBI's Digital Rupee / e-Rupee) and gift cards are excluded from the VDA 
+definition.
+The term 'cryptocurrency' is not used in the Income Tax Act — the law uses 'Virtual Digital 
+Asset' as the umbrella term. All VDAs — regardless of their specific technology, use case 
+(currency, utility token, governance token), or underlying blockchain — are covered by the same 
+tax regime under Section 115BBH.
+The Flat 30% Tax Rate — Section 115BBH
+Feature Rule Under Section 115BBH
+Tax rate on VDA income 30% flat rate — regardless of the investor's income tax slab or 
+total income
+Surcharge applicable Yes — at normal rates (10% if income > Rs. 50L; 15% if > Rs. 1 
+crore; etc.)
+Health & Education Cess 4% on tax + surcharge
+Holding period matters? No — whether held for 1 day or 10 years, tax is always 30%
+New tax regime vs old? No difference — 30% flat rate applies regardless of regime chosen
+Set-off of VDA loss against other PROHIBITED — VDA losses cannot reduce salary, business, or 
+---PAGE 3---
+Feature Rule Under Section 115BBH
+income other income
+Set-off of loss from one VDA 
+against gain from another
+PROHIBITED — even within VDAs, inter-asset loss set-off is not 
+allowed
+Carry forward of VDA losses NOT PERMITTED — VDA losses lapse in the same year; cannot 
+be carried forward
+ Important⚠️
+The complete loss set-off prohibition is one of the harshest aspects of VDA taxation. If a 
+taxpayer makes Rs. 1,00,000 profit on Bitcoin and Rs. 80,000 loss on Ethereum in the same 
+year, the full Rs. 1,00,000 Bitcoin profit is taxable at 30% — the Ethereum loss provides zero 
+relief. Each VDA transaction is effectively taxed in isolation.
+What Counts as a Taxable VDA Event?
+Transaction Type Taxable? Taxable Amount
+Sale of crypto for INR (fiat 
+currency)
+Yes Sale price minus cost of acquisition
+Sale of crypto for USDT or 
+other stablecoin
+Yes INR value of USDT received minus cost of acquisition
+Crypto-to-crypto swap (BTC 
+to ETH)
+Yes Fair market value of received crypto in INR minus cost 
+of sold crypto
+Purchase of goods/services 
+using crypto
+Yes Fair market value of goods/services received minus 
+cost of crypto used
+Mining income (receiving 
+crypto as mining reward)
+Yes — at 
+receipt
+Fair market value on date of receipt — taxed as income
+Staking rewards received Yes — at 
+receipt
+Fair market value on date of receipt
+Airdrop of free tokens Yes — at 
+receipt
+Fair market value on date of receipt
+Gifting crypto to another 
+person
+Yes — for 
+giver
+FMV on date of gift minus acquisition cost
+Holding crypto (no 
+sale/transfer)
+No Unrealised gains are NOT taxable
+Transfer between own 
+wallets
+No Not a transfer to another person — not taxable
+---PAGE 4---
+TDS Under Section 194S — 1% on VDA Transactions
+Section 194S requires any person paying consideration for transfer of a VDA to deduct TDS at 
+1% before making the payment. This applies to:
+Buyer Category TDS Threshold TDS Rate
+Individual/HUF whose 
+business/professional income 
+exceeds Rs. 1 crore / Rs. 50 
+lakh
+Rs. 10,000 per year per 
+seller
+1% TDS on the transaction value
+Any other buyer (including 
+exchanges)
+Rs. 50,000 per year per 
+seller
+1% TDS
+Crypto exchanges (acting as 
+intermediary)
+Per transaction as 
+platform deductor
+1% TDS on gross transaction value; 
+buyer responsible if exchange fails to 
+deduct
+TDS deducted under Section 194S is visible in Form 26AS and the Annual Information 
+Statement (AIS). It is a credit against the final tax liability computed in the ITR. For taxpayers in 
+a tax loss position (VDA losses that cannot be offset), the TDS represents a cash outflow with 
+no immediate refund — since VDA losses cannot be carried forward to offset future gains.
+Cost of Acquisition — The Only Deductible Expense
+Section 115BBH allows only one deduction from VDA income: the cost of acquisition. No other 
+deductions are permitted — not internet charges, not exchange fees, not transaction gas fees, 
+not electricity costs for mining, not depreciation on mining hardware, not interest on loans taken 
+to buy crypto. This is significantly more restrictive than other capital assets where various 
+expenses can be deducted.
+For crypto received as salary, mining income, staking rewards, or airdrops — the FMV on the 
+date of receipt is the cost of acquisition for the purpose of computing gains when subsequently 
+sold.
+ Crypto Tax Calculation — FY 2025-26📊
+Taxpayer: Arjun | Other income: Rs. 15,00,000 (salary)
+VDA TRANSACTIONS:
+  Jan 2026: Bought 0.1 BTC at Rs. 30,00,000 (cost: Rs. 3,00,000)
+  Feb 2026: Sold 0.1 BTC at Rs. 40,00,000 (profit: Rs. 1,00,000)
+  Feb 2026: Bought Ethereum worth Rs. 2,00,000
+  Mar 2026: Sold Ethereum at Rs. 1,50,000 (loss: Rs. 50,000)
+BITCOIN GAIN:                              Rs. 1,00,000
+ETHEREUM LOSS:                             Rs.   50,000
+Set-off of Ethereum loss vs BTC gain:      NOT ALLOWED
+TAXABLE VDA INCOME:                        Rs. 1,00,000
+---PAGE 5---
+Tax @ 30%:                                 Rs.   30,000
+Surcharge (income > Rs. 50L? No):          Nil
+Cess @ 4%:                                 Rs.    1,200
+Total Tax on VDA:                          Rs.   31,200
+Ethereum loss of Rs. 50,000 is lost — cannot offset or carry forward.
+Gifts of Crypto — Tax in Giver's and Receiver's Hands
+If crypto is gifted to another person: (1) In the giver's hands: the gift is treated as a 'transfer' and 
+capital gains arise — FMV on date of gift minus the giver's cost of acquisition, taxed at 30% 
+under Section 115BBH. (2) In the receiver's hands: crypto received as a gift is taxable as 
+'Income from Other Sources' under Section 56(2)(x) if the FMV exceeds Rs. 50,000 and the 
+receiver is not a specified relative. If from a relative (as defined under gift tax provisions), it is 
+exempt. See the gift tax article for the complete relatives list.
+VDA Reporting in ITR — Schedule VDA
+From AY 2022-23, ITR forms include a dedicated 'Schedule VDA' where all VDA transactions 
+must be reported. Each transaction must be listed with: asset type, date of acquisition, cost of 
+acquisition, date of transfer, and sale consideration. Taxpayers with significant VDA activity 
+must use ITR-2 or ITR-3 (depending on other income sources). The AIS (Annual Information 
+Statement) pulls data from crypto exchanges that report transactions to the IT department — 
+always reconcile your Schedule VDA with the AIS before filing.
+ Pro Tip💡
+Use a crypto portfolio tracker (CoinTracker, Koinly, or similar tools) that supports India's tax 
+regime and generates Schedule VDA-compatible reports. These tools automatically compute 
+FIFO-based cost of acquisition across hundreds of transactions across multiple wallets and 
+exchanges — essential for accurate VDA tax compliance.
+KEY TAKEAWAYS
+1.  VDA income (crypto, NFTs) is taxed at a flat 30% under Section 115BBH — regardless of 
+holding period, slab, or tax regime chosen.
+2.  Loss from one VDA CANNOT be set off against gains from another VDA or any other income 
+head — losses lapse permanently.
+3.  Only deductible expense is the cost of acquisition — exchange fees, mining costs, gas fees, 
+and hardware are NOT deductible.
+4.  Section 194S mandates 1% TDS on VDA transactions exceeding Rs. 10,000/Rs. 50,000 per 
+year — credit available in Form 26AS.
+---PAGE 6---
+5.  Crypto-to-crypto swaps, staking rewards, airdrops, mining income, and purchase of goods 
+with crypto are all taxable events.
+6.  Gifting crypto creates a taxable event for the giver (30% on gains) and may be taxable for the 
+receiver under Section 56(2)(x).
+7.  All VDA transactions must be reported in Schedule VDA in ITR-2 or ITR-3 — reconcile with 
+AIS data from exchanges.
+Frequently Asked Questions
+Q1. I bought Bitcoin in 2019 and sold it in 2025. Is my gain taxed at LTCG rate or 30%?
+At 30% flat rate under Section 115BBH. The holding period is completely irrelevant for VDA 
+taxation — there is no LTCG/STCG distinction. Whether you held Bitcoin for 1 day or 10 
+years, the gain is taxed at 30% plus cess. The LTCG/STCG framework that applies to 
+shares, property, and gold does NOT apply to VDAs.
+Q2. I received crypto salary from my foreign employer. How is it taxed?
+Crypto received as salary is taxable as 'Salaries' at the FMV on the date of credit in INR. 
+The employer should have withheld TDS (or the equivalent in the home country). 
+Subsequently, when you sell the crypto, the gain (sale price minus FMV at receipt, which is 
+your cost of acquisition) is taxed at 30% under Section 115BBH. So crypto salary faces two 
+tax events: receipt (at slab rate as salary) and sale (at 30% on the subsequent gain).
+Q3. My crypto exchange is based outside India and does not deduct TDS. What are my 
+obligations?
+You are responsible for paying the tax directly even if no TDS is deducted. Compute your 
+VDA gains for the year, pay advance tax by March 15 (or self-assessment tax before filing), 
+and file the ITR with Schedule VDA disclosing all transactions. CBDT has been expanding 
+data-sharing agreements with overseas exchanges and using AIS data — undisclosed VDA 
+income discovered in scrutiny attracts 30% tax plus 200% penalty under the Black Money 
+Act if it involves foreign assets.
+Q4. Can I claim deduction for the losses made in the previous year on crypto?
+No. VDA losses from prior years cannot be carried forward to offset VDA gains in 
+subsequent years. This is explicitly prohibited under Section 115BBH. Each financial year's 
+VDA losses are permanently extinguished. This is in sharp contrast to stock market 
+STCG/LTCG losses, which can be carried forward for 8 years.
+Q5. I use USDT (a stablecoin pegged to USD) only for trading — never converting to INR. 
+Are my trades taxable?
+Yes. Each crypto-to-crypto trade — including trades involving stablecoins like USDT — is a 
+taxable event. When you sell Bitcoin and receive USDT, you must compute the INR value of 
+the USDT received on that date and compare it against your Bitcoin cost of acquisition. The 
+gain/loss in INR terms is taxable under Section 115BBH. The fact that you never directly 
+received INR does not exempt the transaction.
+---PAGE 7---
+ARTICLE 2 OF 5  ·  SHARE TAXATION
+Taxation of Income from Selling Shares — 
+Complete Guide for FY 2025-26
+ Updated: May 2026📅  10 min read⏱  AY 2026-27📋
+ARTICLE SUMMARY
+Gains from selling shares in India are taxed under two distinct regimes depending on the 
+type of share, how long it was held, and whether Securities Transaction Tax (STT) was 
+paid on the transaction. Budget 2024 revised LTCG on equity from 10% to 12.5% and 
+STCG from 15% to 20%, while also enhancing the annual LTCG exemption from Rs. 1 lakh 
+to Rs. 1.25 lakh. This article covers listed shares, unlisted shares, grandfathering of pre-
+2018 gains, F&O income treatment, dividend taxation, and ITR reporting for AY 2026-27.
+Classification of Share Gains — LTCG vs STCG
+Share Type Holding for LTCG LTCG Tax Rate STCG Tax Rate
+Listed equity shares 
+(BSE/NSE)
+More than 12 
+months
+12.5% above Rs. 1.25L 
+annual exemption
+20% (Budget 2024 
+increase from 15%)
+Equity mutual funds (equity-
+oriented)
+More than 12 
+months
+12.5% above Rs. 1.25L 
+annual exemption
+20%
+Unlisted equity shares More than 24 
+months
+12.5% without indexation 
+(post Budget 2024)
+Slab rate
+Preference shares (listed) More than 12 
+months
+12.5% 20%
+Debt mutual funds (post 
+April 1, 2023)
+Any period Slab rate — no LTCG 
+benefit
+Slab rate
+Foreign shares / ADRs / 
+GDRs
+More than 24 
+months
+12.5% without indexation Slab rate
+Budget 2024 Rate Changes — Before vs After
+Tax Head Rate Before Budget 
+2024
+Rate After Budget 2024 
+(July 23, 2024)
+Annual 
+Exemption
+Equity LTCG 10% (above Rs. 1L 
+exemption)
+12.5% (above Rs. 1.25L 
+exemption)
+Rs. 1.25L 
+(enhanced from 
+Rs. 1L)
+Equity STCG 15% 20% No exemption — 
+full amount 
+---PAGE 8---
+Tax Head Rate Before Budget 
+2024
+Rate After Budget 2024 
+(July 23, 2024)
+Annual 
+Exemption
+taxable
+Unlisted share LTCG 20% with indexation 12.5% without indexation None
+Equity fund LTCG 10% 12.5% Rs. 1.25L (shared 
+with equity 
+shares)
+Rs. 1.25 Lakh Annual Exemption — How It Works
+The Rs. 1.25 lakh annual exemption applies to the AGGREGATE of all equity LTCG across all 
+shares and equity mutual funds in a financial year — not per share or per fund. The first Rs. 1.25 
+lakh of total equity LTCG is tax-free. Only gains above Rs. 1.25 lakh are taxed at 12.5%. This 
+exemption cannot be carried forward — use it or lose it each year.
+Grandfathering — Pre-January 31, 2018 Gains
+For listed equity shares and equity mutual funds, gains accrued up to January 31, 2018 are 
+protected under the grandfathering provision. The cost of acquisition for LTCG purposes is the 
+HIGHER of: (a) actual cost of purchase, or (b) the lower of the FMV on January 31, 2018 and 
+the actual sale price. This prevents taxation of gains that were tax-free under the pre-2018 zero-
+LTCG regime.
+ Grandfathering Computation📊
+Example: Shares bought in 2015 at Rs. 100. FMV on Jan 31, 2018: Rs. 300. 
+Sold in FY 2025-26 at Rs. 500.
+Step 1: FMV on Jan 31, 2018 = Rs. 300
+Step 2: Lower of (FMV Jan 31, 2018 vs Actual Sale Price) = Lower of Rs. 
+300 and Rs. 500 = Rs. 300
+Step 3: Cost = Higher of (Actual cost Rs. 100 vs Rs. 300) = Rs. 300
+Step 4: LTCG = Rs. 500 - Rs. 300 = Rs. 200 per share
+Pre-2018 gain (Rs. 300 - Rs. 100 = Rs. 200) is permanently exempt.
+Only post-2018 gain (Rs. 500 - Rs. 300 = Rs. 200) is taxable at 12.5%.
+Futures & Options (F&O) — Business Income, Not Capital Gains
+Income from trading in equity Futures and Options (F&O) is NOT treated as capital gains — it is 
+classified as 'Income from Business or Profession' under the Income Tax Act. F&O is treated as 
+a non-speculative business activity. Consequences:
+• F&O profits are taxed at the applicable slab rate — not at 12.5% or 20%.
+• F&O losses CAN be set off against business income and carried forward for 8 years 
+(unlike VDA losses).
+---PAGE 9---
+• Expenses (brokerage, internet, advisory fees, subscription costs) are deductible from 
+F&O income.
+• If F&O turnover (aggregate of profit + loss on settlement) exceeds Rs. 10 crore, tax audit 
+under Section 44AB is mandatory. Below that, Section 44AD presumptive taxation at 
+6%/8% may be applicable if turnover is within Rs. 3 crore.
+• F&O traders must use ITR-3 (not ITR-2) since F&O is business income.
+Intraday Equity Trading — Speculative Business
+Gains from intraday trading (buying and selling shares on the same day without taking delivery) 
+are treated as 'Speculative Business Income' — taxable at slab rates. Speculative losses can 
+only be set off against speculative income (not against F&O or salary income) and can be 
+carried forward for 4 years (not 8 years). Intraday traders must also use ITR-3.
+Dividend Income — Now Taxable at Slab Rate
+Before April 1, 2020, dividends were exempt in the recipient's hands (Dividend Distribution Tax 
+was paid by the company). From FY 2020-21 onwards, dividends are taxable in the 
+shareholder's hands at the applicable income tax slab rate. TDS at 10% is deducted by the 
+company on dividends exceeding Rs. 5,000 per year per shareholder. The dividend income is 
+reported under 'Income from Other Sources' in the ITR.
+ITR Form to Use — Which ITR for Which Activity
+Activity ITR Form Required
+Only salary + LTCG/STCG on listed 
+shares (delivery)
+ITR-2
+Salary + LTCG/STCG + F&O trading + 
+Intraday
+ITR-3
+Business/professional income + shares + 
+F&O
+ITR-3
+Only salary + dividends (no capital gains) ITR-1 if dividend ≤ Rs. 5,000; else ITR-2
+Unlisted share gains only ITR-2 (capital gains)
+ Pro Tip💡
+Tax harvesting strategy: If your equity LTCG is approaching Rs. 1.25 lakh but not exceeding it, 
+consider selling enough units to crystallise exactly Rs. 1.25 lakh in gains before March 31 and 
+repurchasing the same shares/units. This books the annual exemption while maintaining your 
+investment position. Repeat annually to progressively step up your cost base and permanently 
+shelter gains that would otherwise be taxable in the future.
+---PAGE 10---
+KEY TAKEAWAYS
+1.  Budget 2024: Equity LTCG now 12.5% (above Rs. 1.25L exemption); Equity STCG now 20% 
+— both increased from prior rates.
+2.  Rs. 1.25 lakh annual LTCG exemption is aggregate across all equity shares and equity MFs 
+— not per asset.
+3.  Grandfathering protects pre-January 31, 2018 equity gains — cost is stepped up to FMV on 
+that date.
+4.  F&O income is taxable as non-speculative business income at slab rates — not as capital 
+gains.
+5.  Intraday trading gains are speculative business income — set-off limited to other speculative 
+income.
+6.  Dividends are taxable at slab rates from FY 2020-21 onwards — TDS at 10% for dividends 
+above Rs. 5,000/year.
+7.  Use ITR-2 for delivery-based share gains; ITR-3 if F&O or intraday trading is involved.
+Frequently Asked Questions
+Q1. I have LTCG of Rs. 2 lakh from shares and Rs. 50,000 LTCG loss from equity MFs. 
+What is my net taxable LTCG?
+LTCG losses from equity MFs can be set off against LTCG gains from shares (and vice 
+versa) since both are long-term capital gains on equity-oriented instruments. Net LTCG = 
+Rs. 2,00,000 - Rs. 50,000 = Rs. 1,50,000. After the Rs. 1.25 lakh exemption: taxable LTCG 
+= Rs. 1,50,000 - Rs. 1,25,000 = Rs. 25,000. Tax at 12.5% = Rs. 3,125. LTCG from equity 
+shares can be offset against LTCG losses from equity MFs freely.
+Q2. I sold shares at a loss. Can I carry forward the loss?
+For listed equity STCG losses: can be set off against any LTCG or STCG (equity or non-
+equity) in the same year, and carried forward for 8 years to be set off against capital gains in 
+future years. For listed equity LTCG losses: can be set off against LTCG only and carried 
+forward 8 years. The ITR must be filed on time (before the July 31 due date) to preserve the 
+carry-forward benefit.
+Q3. My F&O trading showed a loss of Rs. 5 lakh this year. Can I set it off against my 
+salary income?
+F&O is classified as non-speculative business income. A non-speculative business loss can 
+be set off against any income head EXCEPT salary in the same year — it can offset rental 
+income, capital gains, or other income but NOT salary. The remaining loss after same-year 
+set-off can be carried forward for 8 years to be set off against any future business income 
+(speculative or non-speculative).
+Q4. I am an NRI selling listed shares in India. What is the tax treatment?
+---PAGE 11---
+NRIs selling listed equity shares in India pay the same LTCG (12.5% above Rs. 1.25L 
+exemption) and STCG (20%) rates as residents. However, TDS applies on the gross sale 
+proceeds for NRIs — the buyer or broker must deduct TDS at applicable rates. NRIs can 
+claim refund of excess TDS (if actual tax liability is lower) by filing an ITR in India. NRIs also 
+have the option to invest NRI capital in shares through the PIS (Portfolio Investment 
+Scheme) route via an NRE/NRO account.
+Q5. I received bonus shares from a company I invested in. What is the cost of acquisition 
+of bonus shares?
+The cost of acquisition of bonus shares is considered as NIL (zero) for income tax purposes. 
+When you sell bonus shares, the entire sale price is taxable as LTCG (if held more than 12 
+months) or STCG. The Rs. 1.25 lakh annual exemption applies to the LTCG from bonus 
+shares as well. The holding period for bonus shares starts from the date of allotment of the 
+bonus shares — not from the date the original shares were purchased.
+---PAGE 12---
+ARTICLE 3 OF 5  ·  MARKET TAXATION
+Securities Transaction Tax (STT) — Latest Rates, 
+F&O Hike & Updates
+ Updated: May 2026📅  8 min read⏱  FY 2025-26📋
+ARTICLE SUMMARY
+Securities Transaction Tax (STT) is a tax levied on purchase and sale of securities listed 
+on Indian stock exchanges. Introduced in 2004, STT replaced the earlier capital gains 
+exemption on listed securities and has since become a significant revenue source. Budget 
+2024 significantly hiked STT on F&O (Futures & Options) — index futures rate doubled and 
+options STT increased by 60%. This article covers all current STT rates across equity, 
+F&O, and mutual funds, how STT is collected, its deductibility, and the impact of the 
+Budget 2024 F&O hike.
+What is STT and Why Does It Exist?
+Securities Transaction Tax (STT) is a direct tax levied under the Securities Transaction Tax Act, 
+2004. It is collected at source by the stock exchange or mutual fund house at the time of the 
+securities transaction. STT is paid by the buyer and/or seller depending on the transaction type. 
+It cannot be avoided, refunded, or set off (with limited exceptions) — it is a transaction cost, 
+similar to stamp duty, built into every securities trade.
+STT was introduced as part of a policy package: the government abolished the long-term capital 
+gains exemption on equities in 2004 (which was re-introduced only in 2018) and replaced it with 
+STT. The logic was to make tax collection seamless and reduce avoidance. STT is a significant 
+recurring transaction cost for active traders and must be factored into return calculations.
+Current STT Rates — All Securities (FY 2025-26)
+Security Type Transaction STT Rate Paid By
+Equity shares (delivery) Purchase 0.1% of transaction value Buyer
+Equity shares (delivery) Sale 0.1% of transaction value Seller
+Equity shares (intraday — 
+no delivery)
+Sale only 0.025% of transaction value Seller
+Equity futures Sale 0.02% of price x lot size 
+(Budget 2024 hike)
+Seller
+Equity options (on premium) Sale 0.1% of option premium Seller
+Index futures (e.g., 
+Nifty/Sensex futures)
+Sale 0.02% of price x lot size 
+(Budget 2024: doubled from 
+Seller
+---PAGE 13---
+Security Type Transaction STT Rate Paid By
+0.01%)
+Index options (on premium) Sale 0.1% of option premium 
+(Budget 2024: increased from 
+0.0625%)
+Seller
+Equity mutual fund units 
+(buy)
+Purchase 
+(through 
+exchange)
+0.001% of transaction value Buyer
+Equity mutual fund units 
+(sell/redemption)
+Sale 0.001% of transaction value Seller
+Unlisted securities, bonds, 
+debentures
+Not applicable NIL — STT not levied N/A
+Budget 2024 — F&O STT Hike
+Budget 2024 (Finance Act 2024) significantly increased STT on F&O contracts with effect from 
+October 1, 2024. The government's stated aim was to curb excessive retail participation in F&O 
+markets, which SEBI data showed was resulting in losses for ~90% of individual F&O traders.
+Instrument Old STT Rate New STT Rate (from Oct 1, 
+2024)
+Change
+Index Futures (Nifty, 
+Sensex)
+0.01% of price x quantity 0.02% of price x quantity Doubled 
+(+100%)
+Index Options (Nifty, 
+Sensex)
+0.0625% of premium 0.1% of premium +60% 
+increase
+Equity Futures 0.01% of price x quantity 0.02% of price x quantity Doubled 
+(+100%)
+Equity Options 0.0625% of premium 0.1% of premium +60% 
+increase
+ STT Impact on a Nifty Options Trade📊
+Trade: Sell 1 lot of Nifty Call Option (lot size: 25 units) at premium of 
+Rs. 200
+Transaction value = 25 x Rs. 200 = Rs. 5,000
+STT BEFORE Oct 1, 2024 (rate: 0.0625% of premium):
+  STT = 0.0625% x Rs. 5,000 = Rs. 3.125
+STT AFTER Oct 1, 2024 (rate: 0.1% of premium):
+  STT = 0.1% x Rs. 5,000 = Rs. 5.00
+For an active options trader doing 50 trades/month:
+  Monthly STT increase: ~Rs. 93.75 (Rs. 1.875 per trade x 50)
+---PAGE 14---
+  Annual STT increase:  ~Rs. 1,125
+For high-volume traders: the cumulative STT increase is significant.
+Factor STT into per-trade P&L calculations.
+Is STT Deductible as an Expense?
+STT paid is NOT deductible as an expense for computing capital gains on delivery-based equity 
+transactions. The gain is simply: Sale price minus Purchase price (no adjustment for STT paid). 
+However, for F&O traders (where income is classified as business income), STT paid is 
+deductible as a business expense — it reduces the net F&O profit or increases the F&O loss. 
+This is one of the practical differences between capital gains treatment (STT not deductible) and 
+business income treatment (STT deductible) for securities transactions.
+STT and the LTCG/STCG Framework
+For listed equity shares, the lower LTCG rate of 12.5% and STCG rate of 20% are available 
+ONLY if STT has been paid on both the purchase and sale of the shares (for delivery-based 
+transactions). If shares are sold off-market (not through a recognised stock exchange), or if STT 
+was not paid, the normal capital gains rates apply — LTCG at 12.5% (without the preferential 
+rate) for listed shares and slab rate for STCG. In practice, off-market transfers of listed shares 
+are rare, but the condition is important for shares transferred through private deals.
+ Pro Tip💡
+Active F&O and intraday traders should review their annual STT outflow carefully. With the 
+Budget 2024 rate hike, STT has become a larger drag on returns. When comparing pre- and 
+post-tax returns, include STT (as a transaction cost that reduces gross P&L). For F&O business 
+income reporting, ensure STT is claimed as a deductible expense in the ITR-3 business income 
+computation.
+KEY TAKEAWAYS
+1.  STT is a transaction-level tax on securities purchases and sales, collected by exchanges at 
+source — it cannot be avoided or refunded.
+2.  Delivery equity purchase and sale: 0.1% each; Intraday sale only: 0.025%.
+3.  Budget 2024 (effective Oct 1, 2024): Index and equity futures STT doubled to 0.02%; options 
+STT increased to 0.1% on premium.
+4.  STT is NOT deductible for capital gains computation on delivery shares — but IS deductible 
+as a business expense for F&O traders.
+5.  LTCG/STCG preferential rates on listed equity are available only when STT has been paid on 
+---PAGE 15---
+both purchase and sale.
+6.  Unlisted securities, bonds, and debentures are not subject to STT.
+7.  F&O traders must factor the higher post-Budget 2024 STT into their per-trade profitability 
+calculations.
+Frequently Asked Questions
+Q1. I bought shares off-market (not through a broker). Will my LTCG still be taxed at 
+12.5%?
+For off-market purchase (no STT paid on purchase), the LTCG at sale is taxed at 12.5% 
+without the STT-condition issue — because the STT condition for the preferential rate 
+applies primarily to the sale side for listed shares. However, if both purchase and sale are 
+off-market (STT not paid at either end), the preferential LTCG rate may be denied and 
+normal rates apply. Most litigation in this area involves inherited shares, ESOP shares, or 
+bonus shares where the 'purchase' was off-market. Consult a CA for specific off-market 
+transactions.
+Q2. Is STT included in the purchase price of shares for LTCG computation?
+No. STT paid on purchase of shares is NOT added to the cost of acquisition for capital gains 
+purposes. The cost is the actual price paid for the shares (excluding STT and brokerage). 
+Similarly, STT paid on sale is not deducted from the sale consideration. Both STT payments 
+are ignored entirely in the capital gains computation for delivery-based shares. Only the 
+purchase price and sale price matter.
+Q3. I am a foreign portfolio investor (FPI). Do I pay STT?
+Yes. Foreign Portfolio Investors (FPIs) pay STT on their equity transactions in India at the 
+same rates as resident investors. STT is a transaction-level tax regardless of the investor's 
+residency status. FPIs cannot claim a credit for Indian STT against tax payable in their home 
+country in most cases — it is an unrecoverable transaction cost.
+Q4. I trade Nifty options. After Budget 2024, how much more STT am I paying annually?
+The STT on index options increased from 0.0625% to 0.1% of option premium — a 60% 
+increase. For every Rs. 1 lakh of option premium sold, STT increased from Rs. 62.50 to Rs. 
+100. For an active trader selling Rs. 50 lakh of option premium monthly, the annual STT 
+increase = (0.1% - 0.0625%) x Rs. 50L x 12 = 0.0375% x Rs. 6 crore = Rs. 22,500 
+additional STT per year. High-frequency options traders face significantly larger absolute 
+increases.
+Q5. Can I get a refund of STT if I cancel my trade or a trade is rejected?
+If a trade is not executed (rejected before execution), no STT is deducted since STT arises 
+only on executed transactions. If a trade is executed and then reversed/cancelled (which is 
+rare — most cancellations happen before execution), the STT on both legs may be 
+recoverable through the exchange's dispute mechanism. In normal circumstances, once an 
+equity transaction is executed and confirmed, the STT is final and not refundable.
+---PAGE 16---
+ARTICLE 4 OF 5  ·  GIFT TAXATION
+Tax on Diwali and New Year Gifts — Employer, 
+Business & Personal Gifts
+ Updated: May 2026📅  7 min read⏱  AY 2026-27📋
+ARTICLE SUMMARY
+Gifts received during Diwali, New Year, and other festive occasions are subject to income 
+tax in India, but the tax treatment varies significantly depending on the source of the gift — 
+employer, business counterpart, or personal contact. Gifts from employers are taxable as 
+salary perquisites above Rs. 5,000 per year. Gifts from unrelated individuals or companies 
+are taxable under Section 56(2)(x) above Rs. 50,000 per year. Gifts from specified relatives 
+are fully exempt. This article explains every category with the applicable limits, tax rates, 
+and documentation requirements.
+Category 1: Gifts from Employer — Perquisite Taxation
+Any gift, voucher, or token received from an employer is taxable as a perquisite under Section 
+17(2)(viii) read with Rule 3(7)(iv). However, a specific exemption is available: gifts not exceeding 
+Rs. 5,000 in aggregate during a financial year are fully exempt. Beyond Rs. 5,000, the entire 
+amount (not just the excess) becomes a taxable perquisite.
+Employer Gift Scenario Tax Treatment
+Gift vouchers/hampers worth Rs. 4,000 in 
+total for the year
+Fully exempt — below Rs. 5,000 threshold
+Diwali gift worth Rs. 3,000 + New Year gift 
+worth Rs. 3,500 = Rs. 6,500 total
+Fully taxable — entire Rs. 6,500 is a perquisite (not just 
+the Rs. 1,500 excess)
+Gift in cash (any amount) Fully taxable as salary — cash gifts have no exemption 
+threshold
+Gift in kind (non-cash) up to Rs. 5,000 
+annually
+Fully exempt
+Gift in kind above Rs. 5,000 — excess 
+portion
+Taxable as perquisite at employee's slab rate
+Cash Gifts From Employer Have No Exemption
+The Rs. 5,000 exemption applies only to gifts in kind (physical gifts, gift hampers, vouchers) — 
+not to cash payments. If the employer gives Rs. 2,000 in cash as a Diwali bonus, the entire Rs. 
+2,000 is taxable as salary with no exemption. Only non-cash gifts qualify for the Rs. 5,000 
+annual threshold.
+---PAGE 17---
+Category 2: Gifts from Business Counterparts — Section 56(2)(x)
+Gifts or freebies received from business associates, clients, vendors, or any non-relative 
+individual/company are taxable under Section 56(2)(x) — Income from Other Sources — if the 
+aggregate value of all such gifts in a financial year exceeds Rs. 50,000.
+Gift Type Threshold Tax Treatment If Above Rs. 50,000
+Cash received Rs. 50,000 aggregate 
+per year
+Full amount taxable at slab rate (not just the 
+excess)
+Immovable property 
+(land, flat)
+Stamp duty value > Rs. 
+50,000
+Stamp duty value taxable as Other Sources 
+income
+Movable property 
+(jewellery, shares, 
+artwork, vehicles)
+FMV > Rs. 50,000 FMV taxable as Other Sources income
+Gift vouchers / hampers 
+from business parties
+Aggregate FMV > Rs. 
+50,000
+Entire FMV taxable at slab rate
+Gifts from specified 
+relatives (parent, spouse, 
+sibling, etc.)
+No limit ALWAYS EXEMPT — no cap on amount
+Category 3: Gifts Received in Consideration — Business Income
+Gifts received by professionals (doctors, consultants, influencers) from pharmaceutical 
+companies, brands, or other businesses in consideration for services rendered (even informally 
+— like endorsement or product promotion) are classified as taxable business/professional 
+income — not gifts. CBDT has specifically clarified that freebies given to doctors by pharma 
+companies in exchange for prescribing their products are taxable in the doctor's hands as 
+professional income.
+Corporate Diwali Gifts — Tax for the Giver (Business)
+For the business or employer providing the Diwali gift, the tax treatment of the gift expense is:
+• Gifts to employees: Deductible as business expense (salary/perquisite) — but employee 
+pays tax on amounts above Rs. 5,000.
+• Gifts to business clients/associates: Section 37(2B) explicitly disallows deduction for 
+expenses on gifts, freebies, and entertainment beyond the limits notified by CBDT — 
+typically Rs. 0 (i.e., gifts to clients are generally non-deductible). This was tightened by 
+CBDT.
+• Gifts qualifying as samples or business promotion materials (e.g., branded items with 
+company logo used for marketing): May be deductible as marketing expenses if 
+genuinely for business promotion and not personal gifts.
+ Diwali Gift Tax — Employee Example📊
+---PAGE 18---
+Employer sends a gift hamper worth Rs. 6,000 to each employee for Diwali.
+Total annual gifts from employer (no other gifts during year): Rs. 6,000.
+Threshold:                              Rs. 5,000
+Gift value:                             Rs. 6,000
+Taxable perquisite (ENTIRE amount):     Rs. 6,000
+Note: Once threshold is crossed, the FULL amount is taxable — not just
+the Rs. 1,000 excess above Rs. 5,000.
+Employee in 30% slab: Tax on Rs. 6,000 = Rs. 1,800 + Rs. 72 cess = Rs. 
+1,872.
+Had the employer given a Rs. 4,999 hamper: Zero tax — fully exempt.
+ Pro Tip💡
+Employers can optimise gift tax for employees by ensuring total annual gifts (across Diwali, New 
+Year, birthday, and other occasions) remain at or below Rs. 5,000 per employee per year. 
+Tracking cumulative gift values throughout the year prevents inadvertent crossing of the 
+threshold. Some employers split large gifts across years — e.g., a voucher worth Rs. 4,500 in 
+March (FY end) and another Rs. 4,500 in April (new FY start).
+KEY TAKEAWAYS
+1.  Employer gifts above Rs. 5,000 aggregate per year are fully taxable as perquisites — not just 
+the excess above Rs. 5,000.
+2.  Cash gifts from employer have NO Rs. 5,000 exemption — fully taxable as salary from the 
+first rupee.
+3.  Business/client gifts: taxable under Section 56(2)(x) if aggregate from all non-relatives 
+exceeds Rs. 50,000 in a year.
+4.  Gifts from specified relatives are ALWAYS fully exempt regardless of the amount.
+5.  Freebies received by professionals (doctors, influencers) in exchange for services are taxable 
+as professional income, not exempt gifts.
+6.  Businesses cannot deduct client gift expenses — Section 37(2B) disallows deduction on gifts 
+to non-employees.
+7.  Both monetary gifts and gifts in kind (jewellery, vouchers, property) are taxable — FMV is 
+used for non-cash gifts.
+---PAGE 19---
+Frequently Asked Questions
+Q1. My company gave all employees a Rs. 4,500 Diwali hamper and Rs. 1,000 bonus. 
+What is taxable?
+The Rs. 4,500 hamper is a gift in kind below the Rs. 5,000 threshold — fully exempt as a 
+perquisite. The Rs. 1,000 bonus in cash has no exemption (cash gifts from employer are 
+fully taxable as salary from the first rupee). So Rs. 1,000 cash is taxable; Rs. 4,500 hamper 
+is exempt — total taxable perquisite is Rs. 1,000.
+Q2. I received gift hampers worth Rs. 30,000 from various business associates during 
+Diwali. Is it taxable?
+The aggregate value of Rs. 30,000 is below the Rs. 50,000 threshold under Section 56(2)
+(x). Therefore, no tax arises on these gifts. The Rs. 50,000 threshold is the aggregate 
+across all non-relative givers during the entire financial year. If you receive additional gifts 
+(cash or kind) from unrelated parties before March 31 that push the total above Rs. 50,000, 
+the entire aggregate becomes taxable.
+Q3. My uncle gave me Rs. 1 lakh as a Diwali gift. Is this taxable?
+The taxability depends on whether your uncle qualifies as a 'specified relative' under Section 
+56(2)(x). For individuals, specified relatives include spouse, siblings, siblings of spouse, 
+parents, lineal ascendants/descendants and their spouses. An uncle (parent's brother) is 
+generally NOT on the specified relatives list for individuals. Therefore, the Rs. 1 lakh gift 
+from your uncle is taxable under Section 56(2)(x) as it exceeds Rs. 50,000. See the gift tax 
+and relatives list article for the complete relatives list.
+Q4. A pharmaceutical company sent me a luxury gift hamper worth Rs. 80,000 as a Diwali 
+gift. I am a doctor. Is it taxable?
+Yes, and it may be taxable as professional income, not just a gift. CBDT's Circular 5/2012 
+and subsequent clarifications specifically address pharma company gifts to doctors as 
+taxable professional income — on the grounds that such gifts are given in exchange for the 
+prescription-writing relationship (even if informal). The Rs. 50,000 Section 56(2)(x) threshold 
+does not help here since the income may be reclassified as professional income taxable at 
+slab rates. The pharma company also cannot deduct the gift expense.
+Q5. I gifted my sister-in-law Rs. 2 lakh for Diwali. Is it taxable in her hands?
+Sister-in-law (brother's wife or husband's sister) IS on the specified relatives list for the gift 
+tax provisions under Section 56(2)(x). Gifts from specified relatives are fully exempt 
+regardless of the amount. Your sister-in-law does not need to declare this Rs. 2 lakh gift as 
+income. For you (the giver), no tax arises either — gifting cash does not trigger any tax in 
+the giver's hands (unlike gifting appreciated assets, which may trigger capital gains if the 
+asset has appreciated).
+---PAGE 20---
+ARTICLE 5 OF 5  ·  GIFT TAXATION
+How Are Gifts Taxed in India — Gift Tax 
+Exemption & Complete Relatives List
+ Updated: May 2026📅  9 min read⏱  AY 2026-27📋
+ARTICLE SUMMARY
+India does not have a standalone 'Gift Tax Act' (the old Gift Tax Act was repealed in 1998). 
+Instead, gifts are taxed under Section 56(2)(x) of the Income Tax Act as 'Income from 
+Other Sources' if received from non-relatives above Rs. 50,000 in a financial year. Gifts 
+from specified relatives are completely exempt without any cap. This article provides the 
+complete relatives list for different taxpayer categories (individuals, HUFs), the types of 
+taxable gifts, special occasions exemptions, how gifted property is valued, and the capital 
+gains implications of gifting appreciated assets.
+The Legal Framework — Section 56(2)(x)
+Section 56(2)(x), introduced with effect from April 1, 2017, provides that if any person receives 
+any sum of money or property from any person without adequate consideration (i.e., as a gift or 
+below market value), the received amount is taxable as 'Income from Other Sources' if: (a) the 
+aggregate value of all such receipts during the financial year exceeds Rs. 50,000, and (b) the 
+giver is not a 'specified relative' or the gift is not on a specified occasion.
+Before April 1, 2017, Section 56(2)(vii) applied — Section 56(2)(x) replaced it with broader 
+coverage that now also applies to firms, companies, and trusts receiving inadequate 
+consideration, not just individuals and HUFs. However, the relative exemption and occasion 
+exemptions apply only to individuals and HUFs.
+Gifts That Are ALWAYS Exempt — Special Occasions
+Occasion / Source Exempt? Condition
+Gift on occasion of marriage of 
+the recipient
+Yes — 
+FULLY 
+EXEMPT
+Gift must be received on the occasion of the 
+recipient's own marriage — before or after (within 
+reasonable time)
+Gift received from specified 
+relative
+Yes — 
+FULLY 
+EXEMPT
+No upper limit — even Rs. 1 crore is exempt if 
+from a specified relative
+Gift received under a Will or 
+inheritance
+Yes — 
+FULLY 
+EXEMPT
+Property inherited from a deceased person
+Gift in contemplation of death of Yes — Gift made by a donor who is ill and in expectation 
+---PAGE 21---
+Occasion / Source Exempt? Condition
+the donor FULLY 
+EXEMPT
+of death
+Gift from local authority 
+(municipality, etc.)
+Yes — 
+FULLY 
+EXEMPT
+As per Section 56(2)(x) proviso
+Gift from any fund, foundation, 
+educational institution, hospital, 
+other trust as per Section 
+10(23C)
+Yes — 
+FULLY 
+EXEMPT
+Institutional givers covered under Section 10(23C)
+Complete Specified Relatives List — Individual Taxpayers
+For an individual recipient, gifts from the following 'specified relatives' are fully exempt (no limit):
+Relative Category Specific Relatives Included
+Spouse Husband or wife of the recipient
+Siblings of the recipient Brother and Sister (including half-siblings by some interpretations)
+Siblings of the spouse Spouse's brother and spouse's sister
+Lineal ascendants and 
+descendants
+Parents, Grandparents, Great-grandparents (ascending); Children, 
+Grandchildren (descending)
+Spouses of lineal 
+ascendants/descendants
+Parents' spouses (step-parents included), children's spouses (son-in-
+law, daughter-in-law)
+Spouses of siblings Brother-in-law (sibling's spouse), Sister-in-law (sibling's spouse)
+Spouses of spouse's siblings Spouse's siblings' spouses
+ Important⚠️
+Relatives NOT on the List — Common Mistakes: Uncle (parent's brother), Aunt (parent's sister), 
+Nephew, Niece, Cousin — none of these are 'specified relatives' for Section 56(2)(x). Gifts from 
+these relatives are treated like gifts from unrelated persons — taxable above Rs. 50,000. Many 
+taxpayers incorrectly assume that any family member qualifies as an exempt relative.
+Specified Relatives for HUF
+For a Hindu Undivided Family (HUF) receiving a gift, the specified relative is defined as any 
+member of the HUF. Therefore, any gift from any HUF member to the HUF is fully exempt. 
+When the HUF receives property from a member, it is treated as a contribution to the HUF 
+capital — not as taxable income.
+---PAGE 22---
+Types of Taxable Gifts — Valuation Rules
+Type of Gift Received How It Is Valued Threshold
+Cash / money Actual amount received Rs. 50,000 aggregate from all 
+non-relatives in a year
+Immovable property (land, 
+house) — received without 
+consideration
+Stamp Duty Value (SDV) of the 
+property
+SDV > Rs. 50,000
+Immovable property — 
+received at below market 
+price
+SDV minus actual consideration 
+paid — if this difference > 10% of 
+consideration or Rs. 50,000 
+(whichever higher)
+Difference taxable as Other 
+Sources
+Movable property (shares, 
+jewellery, artwork, bullion) — 
+without consideration
+Fair Market Value (FMV) of the 
+property
+FMV > Rs. 50,000
+Movable property — at 
+below market price
+FMV minus actual consideration — if 
+difference > Rs. 50,000
+Difference taxable
+Marriage Gift Exemption — Important Details
+The marriage occasion exemption is one of the most valuable gift tax provisions. Any gift 
+received by the bride or groom on the occasion of their marriage is completely exempt from 
+Section 56(2)(x) — regardless of the amount, regardless of whether the giver is a relative or 
+unrelated, and regardless of whether the gift is cash or property. The exemption is specifically 
+for the person getting married, not for their parents or other family members. Gifts to parents for 
+hosting the wedding are NOT covered by the marriage exemption.
+There is no time limit precisely defined in the law for 'on the occasion of marriage' — gifts 
+received a few weeks before or after the wedding are generally treated as covered by this 
+exemption if there is a clear nexus to the marriage event. Large gifts received months before an 
+informal engagement but formally gifted at the wedding are sometimes challenged by the tax 
+department if the timing seems contrived.
+Capital Gains When Gifted Property Is Later Sold
+When a recipient sells property received as a gift, capital gains are computed based on the 
+original cost of the property (i.e., the cost paid by the original donor — not the FMV at the time 
+of gifting). The holding period also includes the donor's holding period. This means:
+• If the donor held shares for 8 years and gifted them, the recipient is deemed to have 
+held them for 8 years from the moment they receive the gift — immediately qualifying as 
+LTCG if sold.
+• If shares were originally purchased at Rs. 100 per share, gifted when FMV was Rs. 500, 
+and then sold by the recipient at Rs. 600 — the LTCG = Rs. 600 - Rs. 100 = Rs. 500 per 
+share (not Rs. 100 per share).
+---PAGE 23---
+• The recipient pays capital gains tax on the entire appreciation — including the 
+appreciation during the donor's ownership period.
+ Pro Tip💡
+Gifting appreciated shares or property to a low-income family member (e.g., a non-working 
+spouse, or a student child) is a legal income-splitting strategy. The capital gains when the asset 
+is eventually sold will be taxed in the recipient's hands at their (lower) slab rate rather than the 
+donor's higher rate. The gift itself is exempt if from a specified relative. This is a common and 
+accepted tax planning technique.
+KEY TAKEAWAYS
+1.  Section 56(2)(x) taxes gifts from non-relatives as 'Income from Other Sources' if aggregate 
+value exceeds Rs. 50,000 in a year.
+2.  Gifts from specified relatives are FULLY EXEMPT regardless of amount — the relatives list is 
+specific and narrow.
+3.  Marriage gifts are fully exempt — regardless of amount, source, or type of gift (cash or 
+property).
+4.  Inherited property and gifts received under a Will are fully exempt.
+5.  Uncle, aunt, nephew, niece, and cousins are NOT on the specified relatives list — their gifts 
+are taxable above Rs. 50,000.
+6.  When gifted property is sold, capital gains are computed using the original donor's cost and 
+holding period.
+7.  For HUFs, any gift from any member of the HUF to the HUF is exempt — HUF members are 
+'specified relatives' for the HUF.
+Frequently Asked Questions
+Q1. My mother gave me Rs. 10 lakh to buy a house. Is this taxable?
+No. Your mother (lineal ascendant) is a specified relative under Section 56(2)(x). Gifts from 
+specified relatives are completely exempt regardless of the amount. The Rs. 10 lakh from 
+your mother is not taxable in your hands. You do not need to report this gift as income. 
+However, if you invest the money and earn interest, that interest income is taxable in your 
+hands (clubbing provisions would not apply since you are an adult child).
+Q2. I received Rs. 75,000 in total from various friends and colleagues during my wedding. 
+Is it taxable?
+No. The marriage occasion exemption covers all gifts received on the occasion of marriage 
+— from anyone (relatives and non-relatives alike) and in any amount. The Rs. 50,000 
+threshold under Section 56(2)(x) does not apply to marriage gifts. The entire Rs. 75,000 is 
+---PAGE 24---
+exempt. Maintain a simple record of the wedding date and the gifts received as supporting 
+documentation in case it is ever questioned.
+Q3. I gifted my daughter Rs. 5 lakh in shares (appreciated from Rs. 1 lakh original cost). 
+What are the tax consequences for me and for her?
+For you (the giver): Gifting to a specified relative (daughter = lineal descendant) does NOT 
+trigger capital gains in your hands — the gift is not a 'transfer' that attracts capital gains 
+when given to a relative (Section 47(iii) exemption). For your daughter (the receiver): The 
+gift is exempt since you are a specified relative. When she eventually sells the shares, 
+LTCG will be computed using your original cost of Rs. 1 lakh (not the FMV at time of gift) 
+and your holding period will be included.
+Q4. I received a plot of land worth Rs. 20 lakh from my friend as a gift. What is taxable?
+Your friend is not a specified relative. The FMV (or stamp duty value) of Rs. 20 lakh exceeds 
+the Rs. 50,000 threshold. The ENTIRE Rs. 20 lakh is taxable as 'Income from Other 
+Sources' in your hands at the applicable slab rate — not just the amount above Rs. 50,000. 
+This is a very significant tax implication: receiving high-value property gifts from non-
+relatives creates a large income tax liability.
+Q5. Does clubbing apply when I gift money to my spouse and they invest it?
+Yes — the Income Tax Act has clubbing provisions for gifts to spouses. If you gift money to 
+your spouse and the spouse invests it, the income earned on that investment is clubbed with 
+your income (not your spouse's) and taxed in your hands. The clubbing applies to the 
+'immediate income' from the gifted amount. However, if the spouse reinvests the income 
+from the original investment, the income-on-income may not be clubbed — this is a nuanced 
+area. Gifting to a non-working adult child does not attract clubbing (only gifts to minor 
+children attract limited clubbing provisions).

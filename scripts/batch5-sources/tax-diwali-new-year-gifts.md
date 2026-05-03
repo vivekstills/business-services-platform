@@ -1,0 +1,75 @@
+# Tax on Diwali and New Year Gifts: Employer, Business & Personal Gifts
+
+## Article summary
+
+Gifts received during Diwali, New Year, and other festive occasions are subject to income tax in India, but the tax treatment varies significantly depending on the source of the gift - employer, business counterpart, or personal contact. Gifts from employers are taxable as salary perquisites above Rs. 5,000 per year. Gifts from unrelated individuals or companies are taxable under Section 56(2)(x) above Rs. 50,000 per year. Gifts from specified relatives are fully exempt. This article explains every category with the applicable limits, tax rates, and documentation requirements.
+
+## Category 1: Gifts from employer - perquisite taxation
+
+Any gift, voucher, or token received from an employer is taxable as a perquisite under Section 17(2)(viii) read with Rule 3(7)(iv). However, a specific exemption is available: gifts not exceeding Rs. 5,000 in aggregate during a financial year are fully exempt. Beyond Rs. 5,000, the entire amount (not just the excess) becomes a taxable perquisite.
+
+| Employer gift scenario | Tax treatment |
+| --- | --- |
+| Gift vouchers/hampers worth Rs. 4,000 in total for the year | Fully exempt - below Rs. 5,000 threshold |
+| Diwali gift worth Rs. 3,000 + New Year gift worth Rs. 3,500 = Rs. 6,500 total | Fully taxable - entire Rs. 6,500 is a perquisite (not just the Rs. 1,500 excess) |
+| Gift in cash (any amount) | Fully taxable as salary - cash gifts have no exemption threshold |
+| Gift in kind (non-cash) up to Rs. 5,000 annually | Fully exempt |
+| Gift in kind above Rs. 5,000 - excess portion | Taxable as perquisite at employee's slab rate |
+
+## Cash gifts from employer have no exemption
+
+ The Rs. 5,000 exemption applies only to gifts in kind (physical gifts, gift hampers, vouchers) - not to cash payments. If the employer gives Rs. 2,000 in cash as a Diwali bonus, the entire Rs. 2,000 is taxable as salary with no exemption. Only non-cash gifts qualify for the Rs. 5,000 annual threshold.
+
+## Category 2: Gifts from business counterparts - Section 56(2)(x)
+
+Gifts or freebies received from business associates, clients, vendors, or any non-relative individual/company are taxable under Section 56(2)(x) - Income from Other Sources - if the aggregate value of all such gifts in a financial year exceeds Rs. 50,000.
+
+| Gift type | Threshold | Tax treatment if above Rs. 50,000 |
+| --- | --- | --- |
+| Cash received | Rs. 50,000 aggregate per year | Full amount taxable at slab rate (not just the excess) |
+| Immovable property (land, flat) | Stamp duty value > Rs. 50,000 | Stamp duty value taxable as Other Sources income |
+| Movable property (jewellery, shares, artwork, vehicles) | FMV > Rs. 50,000 | FMV taxable as Other Sources income |
+| Gift vouchers / hampers from business parties | Aggregate FMV > Rs. 50,000 | Entire FMV taxable at slab rate |
+| Gifts from specified relatives (parent, spouse, sibling, etc.) | No limit | ALWAYS EXEMPT - no cap on amount |
+
+## Category 3: Gifts received in consideration - business income
+
+ Gifts received by professionals (doctors, consultants, influencers) from pharmaceutical companies, brands, or other businesses in consideration for services rendered (even informally - like endorsement or product promotion) are classified as taxable business/professional income - not gifts. CBDT has specifically clarified that freebies given to doctors by pharma companies in exchange for prescribing their products are taxable in the doctor's hands as professional income.
+
+## Corporate Diwali gifts: tax for the giver (business)
+
+ For the business or employer providing the Diwali gift, the tax treatment of the gift expense is: • Gifts to employees: Deductible as business expense (salary/perquisite) - but employee pays tax on amounts above Rs. 5,000. • Gifts to business clients/associates: Section 37(2B) explicitly disallows deduction for expenses on gifts, freebies, and entertainment beyond the limits notified by CBDT - typically Rs. 0 (i.e., gifts to clients are generally non-deductible). This was tightened by CBDT. • Gifts qualifying as samples or business promotion materials (e.g., branded items with company logo used for marketing): May be deductible as marketing expenses if genuinely for business promotion and not personal gifts.
+
+📊 Diwali Gift Tax - Employee Example Employer sends a gift hamper worth Rs. 6,000 to each employee for Diwali. Total annual gifts from employer (no other gifts during year): Rs. 6,000.
+
+Threshold: Rs. 5,000 Gift value: Rs. 6,000 Taxable perquisite (ENTIRE amount): Rs. 6,000
+
+Note: Once threshold is crossed, the FULL amount is taxable - not just the Rs. 1,000 excess above Rs. 5,000.
+
+Employee in 30% slab: Tax on Rs. 6,000 = Rs. 1,800 + Rs. 72 cess = Rs. 1,872.
+
+Had the employer given a Rs. 4,999 hamper: Zero tax - fully exempt.
+
+Pro Tip Employers can optimise gift tax for employees by ensuring total annual gifts (across Diwali, New Year, birthday, and other occasions) remain at or below Rs. 5,000 per employee per year. Tracking cumulative gift values throughout the year prevents inadvertent crossing of the threshold. Some employers split large gifts across years - e.g., a voucher worth Rs. 4,500 in March (FY end) and another Rs. 4,500 in April (new FY start).
+
+## Key takeaways
+
+1. Employer gifts above Rs. 5,000 aggregate per year are fully taxable as perquisites - not just the excess above Rs. 5,000.
+2. Cash gifts from employer have NO Rs. 5,000 exemption - fully taxable as salary from the first rupee.
+3. Business/client gifts: taxable under Section 56(2)(x) if aggregate from all non-relatives exceeds Rs. 50,000 in a year.
+4. Gifts from specified relatives are ALWAYS fully exempt regardless of the amount.
+5. Freebies received by professionals (doctors, influencers) in exchange for services are taxable as professional income, not exempt gifts.
+6. Businesses cannot deduct client gift expenses - Section 37(2B) disallows deduction on gifts to non-employees.
+7. Both monetary gifts and gifts in kind (jewellery, vouchers, property) are taxable - FMV is used for non-cash gifts.
+
+## Frequently asked questions
+
+**Q1.** My company gave all employees a Rs. 4,500 Diwali hamper and Rs. 1,000 bonus. What is taxable? The Rs. 4,500 hamper is a gift in kind below the Rs. 5,000 threshold - fully exempt as a perquisite. The Rs. 1,000 bonus in cash has no exemption (cash gifts from employer are fully taxable as salary from the first rupee). So Rs. 1,000 cash is taxable; Rs. 4,500 hamper is exempt - total taxable perquisite is Rs. 1,000.
+
+**Q2.** I received gift hampers worth Rs. 30,000 from various business associates during Diwali. Is it taxable? The aggregate value of Rs. 30,000 is below the Rs. 50,000 threshold under Section 56(2)(x). Therefore, no tax arises on these gifts. The Rs. 50,000 threshold is the aggregate across all non-relative givers during the entire financial year. If you receive additional gifts (cash or kind) from unrelated parties before March 31 that push the total above Rs. 50,000, the entire aggregate becomes taxable.
+
+**Q3.** My uncle gave me Rs. 1 lakh as a Diwali gift. Is this taxable? The taxability depends on whether your uncle qualifies as a 'specified relative' under Section 56(2)(x). For individuals, specified relatives include spouse, siblings, siblings of spouse, parents, lineal ascendants/descendants and their spouses. An uncle (parent's brother) is generally NOT on the specified relatives list for individuals. Therefore, the Rs. 1 lakh gift from your uncle is taxable under Section 56(2)(x) as it exceeds Rs. 50,000. See the gift tax and relatives list article for the complete relatives list.
+
+**Q4.** A pharmaceutical company sent me a luxury gift hamper worth Rs. 80,000 as a Diwali gift. I am a doctor. Is it taxable? Yes, and it may be taxable as professional income, not just a gift. CBDT's Circular 5/2012 and subsequent clarifications specifically address pharma company gifts to doctors as taxable professional income - on the grounds that such gifts are given in exchange for the prescription-writing relationship (even if informal). The Rs. 50,000 Section 56(2)(x) threshold does not help here since the income may be reclassified as professional income taxable at slab rates. The pharma company also cannot deduct the gift expense.
+
+**Q5.** I gifted my sister-in-law Rs. 2 lakh for Diwali. Is it taxable in her hands? Sister-in-law (brother's wife or husband's sister) IS on the specified relatives list for the gift tax provisions under Section 56(2)(x). Gifts from specified relatives are fully exempt regardless of the amount. Your sister-in-law does not need to declare this Rs. 2 lakh gift as income. For you (the giver), no tax arises either - gifting cash does not trigger any tax in the giver's hands (unlike gifting appreciated assets, which may trigger capital gains if the asset has appreciated).

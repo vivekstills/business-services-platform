@@ -61,7 +61,7 @@ const updates = [
   {
     matchId: 'trademark-registration-india',
     slug: 'trademark-registration-india',
-    title: 'Trademark Registration in India: Complete Process & Classes',
+    title: 'Trademark Registration in India: Complete Process and Classes',
     category: 'Trademark & Intellectual Property',
     tags: ['Trademark', 'Nice classification', 'IP India', 'brand protection'],
     date: '2026-04-30',
@@ -115,7 +115,7 @@ let itr = data.articles.find((a) => a.slug === itrSlug);
 const itrBody = readBody(itrSlug);
 const itrMeta = {
   id: itrSlug,
-  title: 'ITR filing 2024-25: Which ITR Form Should You Use?',
+  title: 'ITR Filing 2024-25: Which ITR Form Should You Use?',
   slug: itrSlug,
   category: 'Income Tax & ITR',
   excerpt: excerptFrom(itrBody),
@@ -142,7 +142,7 @@ console.log('Wrote data/content.json and public/content.json');
 const mdExport = [
   {
     slug: 'itr-filing-which-form',
-    title: 'ITR filing 2024-25: Which ITR Form Should You Use?',
+    title: 'ITR Filing 2024-25: Which ITR Form Should You Use?',
     description:
       'AY 2024-25 ITR guide: compare ITR-1 to ITR-7, exclusions, decision chart, key deadlines, defective return Section 139(9), penalties, FAQs.',
     category: 'Tax & Compliance',
@@ -158,7 +158,7 @@ const mdExport = [
   },
   {
     slug: 'trademark-registration-india',
-    title: 'Trademark Registration in India: Complete Process & Classes',
+    title: 'Trademark Registration in India: Complete Process and Classes',
     description:
       'Trademark registration India: Nice classes, TM search, fees, examination, journal opposition, renewal every ten years, infringement remedies, FAQs.',
     category: 'Legal & IP',

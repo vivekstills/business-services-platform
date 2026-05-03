@@ -1,0 +1,1613 @@
+---PAGE 1---
+TAXPEDIA INDIA 
+Authoritative Tax Knowledge Base 
+BATCH 6 | TAX ARTICLES 
+Tax Audit | Section 44ADA | MAT | Surcharge | Section 36 | Shipping | Form 67 | 
+Helpline | Form 3CD 
+9 In-Depth Articles  |  FY 2025-26  |  AY 2026-27 
+Updated: May 2026 
+  
+---PAGE 2---
+ARTICLE 1 OF 9 | TAX AUDIT 
+Section 44AB Income Tax Audit: Applicability, 
+Due Date and Penalty 
+Updated: May 2026 Read time: 10 min read AY: 2026-27 
+ 
+ARTICLE SUMMARY 
+Section 44AB of the Income Tax Act mandates that certain businesses and professionals 
+get their accounts audited by a Chartered Accountant and submit a Tax Audit Report (Form 
+3CA/3CB along with Form 3CD) on or before the due date. For FY 2025-26, the threshold 
+for businesses is Rs. 1 crore (or Rs. 10 crore if cash transactions are below 5%). The 
+penalty for non-compliance is 0.5% of turnover or Rs. 1.5 lakh, whichever is lower. This 
+article covers every applicability condition, the enhanced cash-based threshold, 
+presumptive scheme interaction, due dates, and the consequences of non-compliance. 
+ 
+Who Must Get a Tax Audit Under Section 44AB? 
+A tax audit is mandatory for the following categories of taxpayers: 
+Category Threshold for Mandatory 
+Audit 
+Condition 
+Business (general) Turnover or gross receipts 
+exceed Rs. 1 crore 
+Standard rule 
+Business (cash 
+threshold benefit) 
+Turnover exceeds Rs. 10 
+crore 
+Applies only if aggregate cash receipts are at 
+most 5% of total receipts AND aggregate cash 
+payments are at most 5% of total payments 
+during the year 
+Profession Gross receipts exceed Rs. 
+50 lakh 
+Applies to specified professionals not covered 
+by Section 44ADA 
+Business or 
+profession opting out 
+of presumptive 
+scheme (44AD or 
+44ADA) 
+Income declared below the 
+prescribed presumptive rate 
+Audit mandatory even if turnover is within the 
+normal threshold, if the taxpayer declares 
+lower income and total income exceeds the 
+basic exemption limit 
+Business under 
+Section 44AE (goods 
+vehicles) claiming 
+lower income 
+Any turnover Audit required if income declared is lower than 
+the Section 44AE prescribed amount 
+ 
+The Rs. 10 Crore Cash Threshold Benefit 
+---PAGE 3---
+The enhanced Rs. 10 crore threshold (introduced in Budget 2021) provides significant relief to 
+businesses that operate primarily through banking channels. To qualify for this higher threshold, 
+TWO conditions must both be satisfied throughout the financial year: 
+• Cash receipts condition: Aggregate cash receipts during the year must not exceed 5% of 
+total receipts. 
+• Cash payments condition: Aggregate cash payments during the year must not exceed 
+5% of total payments. 
+If either condition is breached at any point during the year, the standard Rs. 1 crore threshold 
+applies. This means a business with Rs. 8 crore turnover that makes even 6% of its payments in 
+cash loses the benefit and must get its accounts audited. The conditions must be monitored 
+throughout the year, not just at year-end. 
+ 
+Digital Receipts Incentive 
+The Rs. 10 crore threshold is effectively a reward for businesses that operate digitally. A trading 
+firm with Rs. 9 crore annual turnover that collects and pays entirely through NEFT, UPI, or 
+account payee cheques needs no tax audit. The same firm, if it accepts 6% of receipts in cash, 
+must get audited. This provision strongly incentivises digital transactions in the business sector. 
+ 
+Presumptive Scheme Opt-Out and Audit Requirement 
+Section 44AD allows businesses with turnover up to Rs. 3 crore to declare 6% or 8% of turnover 
+as income without maintaining books. If a taxpayer opting for Section 44AD in prior years now 
+wants to declare actual income that is lower than the prescribed 6%/8%, a tax audit becomes 
+mandatory provided their total income (including income from all other sources) exceeds the 
+basic exemption limit. 
+Example: Presumptive Opt-Out Audit Trigger 
+Business owner: Turnover Rs. 80 lakh | Prior year opted for 44AD 
+This year: Actual profit Rs. 3 lakh (below 6% of Rs. 80L = Rs. 4.8L)  
+ 
+Since declared income < prescribed 44AD rate AND total income 
+exceeds basic exemption limit of Rs. 3 lakh: 
+  Tax audit under Section 44AB is MANDATORY. 
+ 
+Even though turnover is only Rs. 80 lakh (far below Rs. 1 crore),  
+the opt-out from presumptive taxation triggers the audit requirement.  
+ 
+Forms Used in Tax Audit 
+Form When Used Who Signs 
+Form 3CA When accounts are already audited under 
+another law (e.g., Companies Act, Co-operative 
+Societies Act) 
+Chartered Accountant 
+---PAGE 4---
+Form When Used Who Signs 
+Form 3CB When accounts are NOT audited under any 
+other law (most businesses and professionals) 
+Chartered Accountant 
+Form 3CD Statement of particulars required under Section 
+44AB - filed along with Form 3CA or 3CB 
+Chartered Accountant (with 
+taxpayer confirmation for 
+specific clauses) 
+ 
+Due Dates for Tax Audit Report Submission 
+Category Tax Audit Due Date ITR Due Date 
+Business or professional 
+requiring tax audit (non-TP 
+case) 
+September 30 of the assessment 
+year (September 30, 2026 for AY 
+2026-27) 
+October 31 of the assessment 
+year 
+Cases involving international 
+or specified domestic 
+transactions (Transfer 
+Pricing) 
+October 31 of the assessment year November 30 of the 
+assessment year 
+Partner of a firm requiring 
+tax audit 
+Same as the firm's audit due date 
+(October 31) 
+October 31 
+ 
+Important 
+The tax audit report must be uploaded to the IT portal by the CA and then accepted by the 
+taxpayer before it is treated as filed. If the CA uploads the report but the taxpayer does not 
+accept it on the portal before the due date, it is treated as not filed. Both actions (CA upload and 
+taxpayer acceptance) must happen on or before September 30 to avoid penalty. 
+ 
+Penalty for Non-Compliance 
+Section 271B prescribes a penalty for failure to get accounts audited or failure to submit the 
+audit report by the due date: 
+• Penalty amount: 0.5% of total sales, turnover, or gross receipts for the year, OR Rs. 
+1,50,000, whichever is lower. 
+• The penalty is levied on the taxpayer, not the CA. 
+• Reasonable cause defence: The penalty can be waived if the taxpayer can demonstrate 
+a reasonable cause for the failure (e.g., natural disaster, medical emergency, CA non-
+availability). However, the burden of proof lies on the taxpayer. 
+• Prosecution: Wilful failure to get accounts audited can also attract prosecution under 
+Section 276B in addition to the Section 271B penalty. 
+ 
+Pro Tip 
+---PAGE 5---
+Businesses that hover near the Rs. 1 crore or Rs. 10 crore threshold should track cumulative 
+turnover from April itself. If turnover is likely to exceed the threshold, engage a CA early and start 
+maintaining accounts in audit-ready format. Engaging a CA in February or March when turnover 
+has already crossed the limit results in rushed audits, higher fees, and higher error risk in Form 
+3CD. 
+ 
+KEY TAKEAWAYS 
+1.  Section 44AB mandates a tax audit by a CA when business turnover exceeds Rs. 1 crore (or 
+Rs. 10 crore for cash-light businesses) or professional receipts exceed Rs. 50 lakh. 
+2.  The Rs. 10 crore threshold applies only when BOTH cash receipts and cash payments are 
+each at most 5% of total receipts and payments. 
+3.  Opting out of the presumptive taxation scheme (44AD/44ADA) by declaring lower income 
+triggers mandatory audit even within the normal thresholds. 
+4.  Form 3CB + Form 3CD is filed for most taxpayers; Form 3CA + Form 3CD if accounts are 
+already audited under another statute. 
+5.  Tax audit report due date: September 30 for AY 2026-27 (non-TP cases); October 31 for 
+transfer pricing cases. 
+6.  Both the CA upload and the taxpayer acceptance on the IT portal must happen before the 
+deadline for the report to be treated as filed. 
+7.  Penalty for late filing or non-filing: 0.5% of turnover or Rs. 1.5 lakh, whichever is lower, under 
+Section 271B. 
+ 
+Frequently Asked Questions 
+Q1. My business turnover is Rs. 1.1 crore but 90% of all transactions are digital. Do I still 
+need a tax audit? 
+Yes. The standard threshold is Rs. 1 crore. The enhanced Rs. 10 crore threshold requires 
+both cash receipts and cash payments to be at most 5% each. As long as those two 
+conditions are met, you would qualify for the Rs. 10 crore threshold and would NOT need a 
+tax audit at Rs. 1.1 crore turnover. Verify that your cash receipts are at most 5% of Rs. 1.1 
+crore (at most Rs. 5.5 lakh in cash received) and cash payments are similarly capped. If 
+both are within 5%, no audit is required. 
+Q2. I am a freelance architect with gross receipts of Rs. 60 lakh. Am I covered by Section 
+44ADA or Section 44AB? 
+Architecture is a specified profession under Section 44ADA. If your gross receipts are Rs. 60 
+lakh (below the Rs. 75 lakh limit) and you choose to opt for 44ADA by declaring 50% of 
+receipts as income, you are not required to maintain books and no tax audit is needed. 
+However, if you choose not to opt for 44ADA and prefer to declare actual income lower than 
+50% of receipts, a tax audit under Section 44AB becomes mandatory (since receipts exceed 
+Rs. 50 lakh and you are not in the presumptive scheme). 
+---PAGE 6---
+Q3. What happens if my CA misses the September 30 audit deadline through no fault of 
+mine? 
+The penalty under Section 271B is on the taxpayer, not the CA. However, if you can 
+demonstrate that the delay was due to circumstances beyond your control (illness of the CA, 
+natural calamity, platform outages on the IT portal), you can file a reasonable cause 
+explanation when responding to the penalty notice. Courts have accepted CA-related delays 
+as reasonable cause in some cases. Document all communications with your CA requesting 
+timely completion and keep evidence of the cause of delay. 
+Q4. A partnership firm's turnover is Rs. 1.5 crore. Does each partner also need a separate 
+tax audit? 
+The tax audit obligation is on the FIRM, not on individual partners. The firm gets its accounts 
+audited and files Form 3CB + Form 3CD. Partners are not individually required to get 
+audited solely because the firm's accounts are audited. However, if a partner individually 
+has business or professional income that independently triggers Section 44AB (e.g., a 
+partner also runs a separate consulting business with Rs. 60 lakh receipts), that partner 
+must get a separate audit for their individual income. 
+Q5. I filed the tax audit report on September 29 but made an error in Form 3CD. Can I 
+revise it? 
+Yes. A revised tax audit report can be filed if there is an error in the original report, provided 
+the revision is made before the ITR filing due date. The CA must upload the revised Form 
+3CD with a note explaining the reason for revision. If the error is discovered after the ITR is 
+filed, a revised ITR along with the revised audit report can be filed before December 31. 
+Revisions after a scrutiny notice is received require the approval of the assessing officer. 
+ 
+  
+---PAGE 7---
+ARTICLE 2 OF 9 | PRESUMPTIVE TAXATION 
+Section 44ADA: Presumptive Tax Scheme for 
+Professionals 
+Updated: May 2026 Read time: 8 min read AY: 2026-27 
+ 
+ARTICLE SUMMARY 
+Section 44ADA provides a simplified tax computation for resident individual professionals 
+by allowing them to declare 50% of gross receipts as their taxable income, without 
+maintaining books of accounts or undergoing a tax audit. For FY 2025-26, the gross 
+receipts threshold is Rs. 75 lakh (provided cash receipts are at most 5%; otherwise Rs. 50 
+lakh). This article covers eligible professions, the receipt threshold in detail, how the 
+deduction works, interaction with the new and old tax regimes, advance tax rules, and the 
+consequences of opting out. 
+ 
+Eligible Professions Under Section 44ADA 
+Section 44ADA applies to resident individuals carrying on any of the following professions as 
+specified under Section 44AA(1): 
+Profession Category Examples 
+Legal Advocates, barristers, solicitors, notaries 
+Medical Doctors, dentists, physiotherapists, anaesthetists, radiologists, 
+pathologists 
+Engineering Civil engineers, structural engineers, mechanical engineers in 
+consulting practice 
+Architectural Architects, town planners, landscape designers 
+Accountancy Chartered Accountants, Cost Accountants, Company Secretaries in 
+practice 
+Technical Consultancy IT consultants, management consultants, software development 
+consultants 
+Interior Decoration Interior designers, space planners 
+Other notified professions Any profession notified by CBDT under the relevant rule 
+ 
+Who Is NOT Eligible 
+Section 44ADA is available only to resident individuals. Partnership firms (including LLPs), 
+companies, HUFs, and non-resident individuals cannot use this scheme. A firm of doctors or 
+architects must maintain full books of accounts and cannot opt for 44ADA at the firm level, even 
+though the individual partners may be eligible for 44ADA on their individual professional income. 
+---PAGE 8---
+ 
+The Gross Receipts Threshold for FY 2025-26 
+Cash Receipt Condition Applicable Gross Receipts Limit 
+Cash receipts are at most 5% of total gross 
+professional receipts 
+Rs. 75 lakh (enhanced limit) 
+Cash receipts exceed 5% of total gross 
+professional receipts 
+Rs. 50 lakh (standard limit) 
+ 
+The 5% condition is assessed at the end of the financial year based on the actual cash versus 
+digital split of total receipts. A professional who receives Rs. 4 lakh in cash out of Rs. 70 lakh 
+total receipts (5.7%) would be treated as exceeding the 5% threshold and the Rs. 50 lakh limit 
+applies. Since Rs. 70 lakh exceeds Rs. 50 lakh, that professional must either opt out (and 
+maintain full books with audit) or stay in 44ADA but note that their receipts now exceed the 
+applicable threshold. 
+ 
+How the Income Computation Works 
+Under Section 44ADA, the professional's income from the profession is deemed to be 50% of 
+gross professional receipts. No further deductions are allowed from this deemed income on 
+account of any business expenses such as rent, salaries to staff, equipment, depreciation, or 
+professional subscriptions. The presumed 50% income is the final income from the profession 
+for all purposes. 
+Deductions under Chapter VI-A (such as Section 80C, 80D, 80G) are still available against the 
+total income (which includes the Section 44ADA professional income) to arrive at the net 
+taxable income. The standard deduction of Rs. 75,000 available to salaried individuals does not 
+apply to professional income under 44ADA. 
+Example: Section 44ADA Computation 
+CA in practice: Gross professional receipts for FY 2025-26: Rs. 68,00,000 
+Cash receipts: Rs. 2,00,000 (2.9% of total - within 5%) 
+Eligible for Rs. 75 lakh threshold. Rs. 68L is within limit. 
+ 
+Presumed Income (50% of Rs. 68L):          Rs. 34,00,000 
+ 
+Old Tax Regime Deductions: 
+  Section 80C (LIC, PPF, ELSS):            Rs.  1,50,000 
+  Section 80D (health insurance):           Rs.    25,000 
+  Section 80CCD(1B) (NPS):                 Rs.    50,000 
+  Total Deductions:                         Rs.  2,25,000 
+ 
+Net Taxable Income (old regime):            Rs. 31,75,000 
+ 
+Benefits: No books, no audit, no Form 3CD. 
+File ITR-4 by July 31. 
+---PAGE 9---
+ 
+Interaction With New Tax Regime 
+Section 44ADA can be used under both the old and new tax regimes. The 50% presumed 
+income figure is the same regardless of the regime chosen. The difference lies in which 
+deductions are then available: 
+Aspect Old Tax Regime New Tax Regime 
+80C, 80D, 80G deductions Available Not available 
+80CCD(2) employer NPS Available (if applicable) Available (one of few deductions 
+permitted) 
+Standard deduction Not applicable to professionals Not applicable to professionals under 
+44ADA 
+Tax slabs Old slabs with higher rates New slabs with lower rates and Rs. 
+12L rebate 
+Overall verdict Better if deductions exceed 
+roughly Rs. 3-4 lakh 
+Better for those with few deductions 
+ 
+Advance Tax Under Section 44ADA 
+One of the compliance advantages of Section 44ADA is the simplified advance tax schedule. 
+Instead of the four quarterly instalments required under the regular regime (15% by June 15, 
+45% by September 15, 75% by December 15, and 100% by March 15), professionals under 
+Section 44ADA are required to pay only ONE instalment of advance tax equal to 100% of the 
+estimated tax liability for the year, by March 15. Missing this single deadline attracts interest 
+under Section 234B and 234C. 
+ 
+Opting Out and the 5-Year Restriction 
+Section 44ADA does not have the same strict 5-year lock-out as Section 44AD. A professional 
+can freely opt in or opt out of 44ADA from year to year without any restriction. This flexibility 
+makes it particularly suitable for professionals whose receipts or expense ratios fluctuate year to 
+year. However, if the professional opts out in a year and their gross receipts exceed Rs. 50 lakh, 
+they must maintain full books and get a tax audit under Section 44AB. 
+ 
+Pro Tip 
+Professionals whose actual net profit margin is higher than 50% of receipts benefit most from 
+Section 44ADA. For example, a doctor working from a hospital where the hospital provides all 
+facilities (equipment, staff, space) may earn 70% to 80% net margins. By opting for 44ADA, only 
+50% is taxed, effectively sheltering 20%-30% of actual profit from tax. Always compare actual 
+profit versus 50% of receipts before deciding. 
+ 
+---PAGE 10---
+KEY TAKEAWAYS 
+1.  Section 44ADA allows specified resident individual professionals to declare 50% of gross 
+receipts as income without maintaining books or getting an audit. 
+2.  Eligible professions include legal, medical, engineering, architecture, accountancy, technical 
+consultancy, and interior decoration. 
+3.  Gross receipts threshold: Rs. 75 lakh if cash receipts are at most 5% of total; Rs. 50 lakh if 
+cash exceeds 5%. 
+4.  No business expense deductions are allowed from the 50% presumed income. Chapter VI-A 
+deductions (80C, 80D, etc.) remain available from total income. 
+5.  Advance tax is a single 100% instalment due by March 15 - no quarterly payments. 
+6.  Section 44ADA has no 5-year lock-out on opting out, unlike Section 44AD. 
+7.  Professionals with actual profit margins above 50% benefit most since the excess profit 
+above 50% is effectively untaxed. 
+ 
+Frequently Asked Questions 
+Q1. Can a radiologist employed full-time in a hospital also use Section 44ADA for 
+freelance professional work? 
+Yes. If the radiologist earns professional income from freelance consultations (outside the 
+employment) in addition to their salary, the freelance professional receipts can be declared 
+under Section 44ADA (50% deemed income) provided the total freelance receipts are within 
+the applicable threshold. The salary component remains taxable as regular salary income. 
+Both income heads are reported separately in ITR-4. 
+Q2. My professional receipts are Rs. 80 lakh with only 2% cash. I am outside the 44ADA 
+threshold. What are my options? 
+Since Rs. 80 lakh exceeds the Rs. 75 lakh enhanced threshold (even though the 5% cash 
+condition is met), you cannot opt for Section 44ADA. You must maintain books of accounts 
+under Section 44AA and since gross receipts exceed Rs. 50 lakh, you are required to get a 
+tax audit under Section 44AB and file Form 3CB plus Form 3CD by September 30. The 
+44ADA option is not available above the threshold regardless of cash ratio. 
+Q3. I am a technical consultant. My actual expenses are only Rs. 5 lakh on receipts of Rs. 
+40 lakh (actual profit Rs. 35 lakh = 87.5%). Should I use 44ADA? 
+Section 44ADA would deem your income at Rs. 20 lakh (50% of Rs. 40 lakh), which is much 
+lower than your actual profit of Rs. 35 lakh. You would pay tax only on Rs. 20 lakh (less any 
+Chapter VI-A deductions) instead of Rs. 35 lakh. This is a significant tax saving. Yes, in this 
+situation 44ADA is highly beneficial. The only consideration is whether the scheme fits your 
+overall tax planning (old vs new regime comparison). 
+Q4. Can a Section 44ADA professional claim deduction for home loan interest under 
+Section 24(b)? 
+---PAGE 11---
+Yes. Section 24(b) home loan interest deduction (for self-occupied property, up to Rs. 2 
+lakh) is available under the old tax regime regardless of whether income is computed under 
+44ADA or actual books. The home loan deduction is against the 'Income from House 
+Property' head, not against professional income. Since 44ADA only restricts deductions from 
+the professional income head, deductions under other income heads are unaffected. Under 
+the new tax regime, Section 24(b) deduction is not available. 
+Q5. Is a management consultant covered under Section 44ADA's 'technical consultancy' 
+category? 
+The term 'technical consultancy' in Section 44ADA refers to consultancy in technical fields 
+such as engineering, IT, science, or technology. Pure management consulting (strategy, 
+HR, operations) may or may not qualify depending on the nature of work. Several ITAT 
+decisions have held that management consultancy can fall under technical consultancy if it 
+involves technical knowledge or expertise. However, there is no definitive ruling, and the 
+classification is fact-specific. A CA's guidance on whether your specific consulting activity 
+qualifies is advisable. 
+ 
+  
+---PAGE 12---
+ARTICLE 3 OF 9 | CORPORATE TAXATION 
+Minimum Alternate Tax (MAT): Eligibility, 
+Calculation and Credit 
+Updated: May 2026 Read time: 9 min read AY: 2026-27 
+ 
+ARTICLE SUMMARY 
+Minimum Alternate Tax (MAT) under Section 115JB ensures that companies that report 
+book profits in their financial statements but show zero or negligible taxable income due to 
+various deductions and exemptions pay at least a minimum amount of tax. The MAT rate is 
+15% of book profit (plus surcharge and cess). MAT paid in excess of regular tax can be 
+carried forward as MAT Credit Entitlement for up to 15 years. This article explains the MAT 
+computation, the book profit adjustments, MAT credit mechanism, exemptions from MAT, 
+and the interaction with the new concessional tax regime under Section 115BAA. 
+ 
+What is MAT and Why Does It Exist? 
+Companies use various legitimate deductions and exemptions under the Income Tax Act to 
+reduce their taxable income to very low levels or even to zero, despite showing healthy book 
+profits in their financial statements. MAT was introduced to ensure that such companies pay a 
+minimum level of tax proportionate to their reported profitability. It prevents the situation where a 
+company reports Rs. 100 crore profit to its shareholders but pays zero income tax due to 
+exemptions and deductions. 
+MAT applies when the tax payable under regular provisions is less than 15% of book profit. In 
+that case, the company pays MAT at 15% of book profit. The excess (MAT paid over regular 
+tax) is available as MAT Credit, which can be used in future years when regular tax exceeds 
+MAT. 
+ 
+MAT Rate and Its Components 
+Component Rate 
+Base MAT rate 15% of book profit 
+Surcharge (if book profit tax base > Rs. 1 
+crore) 
+7% on MAT (for net income > Rs. 1 crore to Rs. 10 crore) 
+Surcharge (if book profit tax base > Rs. 10 
+crore) 
+12% on MAT (for net income above Rs. 10 crore) 
+Health and Education Cess 4% on (MAT + Surcharge) 
+Effective MAT rate (no surcharge) 15% + 4% cess = 15.6% 
+---PAGE 13---
+Component Rate 
+Effective MAT rate (with 12% surcharge) 15% + 12% surcharge + 4% cess = 17.47% 
+approximately 
+ 
+Book Profit Computation Under Section 115JB 
+Book profit is the net profit as per the Profit and Loss Account (prepared under the Companies 
+Act), after making the following adjustments: 
+Amounts Added Back to Net Profit 
+• Income tax paid or payable and any provision for tax (including deferred tax) 
+• Amounts transferred to any reserves (general reserves, capital reserves, etc.) 
+• Provision for unascertained liabilities (including contingency provisions) 
+• Provision for losses of subsidiary companies 
+• Dividends paid or proposed 
+• Expenditure related to exempt income under Section 10 (other than Section 10(38) 
+which no longer applies) 
+• Notional loss on transfer of capital assets to special economic zones 
+ 
+Amounts Deducted from Net Profit 
+• Amount withdrawn from reserves (if credited to P&L, now reversed) 
+• Income exempt under Section 10 (dividends, long-term capital gains in certain cases) 
+• Depreciation debited to P&L (then added back at book value depreciation under 
+Companies Act) 
+• Loss brought forward or unabsorbed depreciation, whichever is less 
+ 
+MAT vs Regular Tax: Which is Payable? 
+Example: MAT vs Regular Tax Decision 
+Company XYZ Ltd | FY 2025-26 
+Book Profit (as per P&L after adjustments):     Rs. 10,00,00,000  
+Taxable Income (after IT Act deductions):        Rs.  1,00,00,000  
+ 
+Regular Tax @ 25% (domestic company):           Rs.     25,00,000  
+Add: Surcharge 7% (income > Rs. 1 crore):       Rs.      1,75,000  
+Add: Cess 4%:                                    Rs.      1,07,000  
+Total Regular Tax:                               Rs.     27,82,000 
+ 
+MAT @ 15% of Rs. 10 crore book profit:          Rs.  1,50,00,000  
+Add: Surcharge 12% (book profit > Rs. 10 crore): Rs.    18,00,000  
+Add: Cess 4%:                                    Rs.      6,72,000  
+Total MAT:                                       Rs.  1,74,72,000 
+---PAGE 14---
+ 
+Since MAT (Rs. 1.74 crore) > Regular Tax (Rs. 27.82 lakh): 
+Company pays MAT of Rs. 1,74,72,000. 
+MAT Credit = Rs. 1,74,72,000 minus Rs. 27,82,000 = Rs. 1,46,90,000  
+ 
+MAT Credit Entitlement Under Section 115JAA 
+The excess of MAT paid over the regular tax payable in any year is available as MAT Credit. 
+This credit can be carried forward for up to 15 assessment years immediately following the year 
+in which it arose. The credit can be utilised in a future year when regular tax payable exceeds 
+MAT - the excess of regular tax over MAT in that year can be set off against the brought-forward 
+MAT credit. 
+MAT Credit Rule Detail 
+Carry forward period 15 assessment years from the year of credit 
+Utilisation condition Regular tax in future year must exceed MAT in that year 
+Amount utilisable Regular tax minus MAT in the utilisation year (not the full credit at 
+once) 
+Interest on MAT credit No interest is paid on MAT credit carried forward 
+MAT credit on amalgamation The transferee company can carry forward the transferor's MAT 
+credit (subject to conditions) 
+ 
+Who is Exempt from MAT? 
+MAT does not apply to the following: 
+• Companies opting for the new concessional tax rate under Section 115BAA (22% base 
+rate) are exempt from MAT. Once a company opts for 115BAA, it cannot pay MAT and 
+cannot utilise any MAT credit brought forward from earlier years. 
+• New manufacturing companies opting for Section 115BAB (15% base rate for new 
+domestic manufacturers set up after October 1, 2019) are also exempt from MAT. 
+• Income accruing or arising to a company from life insurance business (taxed under the 
+Insurance Act framework). 
+• Shipping companies opting for the Tonnage Tax Scheme under Sections 115V to 
+115VZC. 
+ 
+Pro Tip 
+Companies with large accumulated MAT credit should carefully evaluate whether to switch to the 
+Section 115BAA regime. Opting for 115BAA (which offers a lower 22% tax rate) means forfeiting 
+all accumulated MAT credit permanently. Compute the present value of the MAT credit versus 
+the annual tax saving from the lower rate before making the switch. For some companies with 
+large MAT credit balances, continuing under the regular regime may be more beneficial. 
+---PAGE 15---
+ 
+KEY TAKEAWAYS 
+1.  MAT at 15% of book profit applies when regular tax payable is lower than 15% of the 
+company's book profit as per its financial statements. 
+2.  Book profit is the P&L net profit adjusted for items like tax provisions, reserves, contingencies, 
+and exempt income. 
+3.  The effective MAT rate including surcharge and cess can range from 15.6% to 17.47% 
+depending on income level. 
+4.  Excess MAT over regular tax generates MAT Credit Entitlement, carry-forwardable for 15 
+years under Section 115JAA. 
+5.  MAT credit is utilised in future years when regular tax exceeds MAT in those years. 
+6.  Companies opting for Section 115BAA (22% concessional rate) or Section 115BAB are 
+exempt from MAT but lose all prior MAT credit. 
+7.  Accumulated MAT credit must be evaluated before switching regimes since the switch forfeits 
+the credit permanently. 
+ 
+Frequently Asked Questions 
+Q1. A company has Rs. 5 crore book profit but Rs. 20 lakh regular taxable income due to 
+80IC deduction. What is payable? 
+Regular tax on Rs. 20 lakh at 25% = Rs. 5 lakh (plus cess). MAT on Rs. 5 crore at 15% = 
+Rs. 75 lakh (plus surcharge and cess). Since MAT (Rs. 75 lakh+) exceeds regular tax (Rs. 5 
+lakh+), the company pays MAT. MAT credit = MAT paid minus regular tax = approximately 
+Rs. 70 lakh. This credit can be carried forward for 15 years. 
+Q2. Can a company utilise MAT credit and carry-forward business loss in the same year? 
+Yes, but in a specific order. First, the regular tax is computed after setting off carry-forward 
+business losses and unabsorbed depreciation. Then MAT is computed on book profit. If 
+regular tax is lower than MAT, the company pays MAT. The business losses are still set off 
+(reducing regular tax), and MAT credit is generated. In a future year when regular tax 
+exceeds MAT, the MAT credit is used. The business losses and MAT credit operate in 
+parallel but through different mechanisms. 
+Q3. My company switched to Section 115BAA last year. Can I now switch back to regular 
+provisions? 
+No. The option to avail Section 115BAA is a one-time, irrevocable choice. Once a company 
+opts for the 22% concessional rate under Section 115BAA, it cannot revert to the regular 
+provisions in any subsequent year. The switch is permanent. Additionally, all MAT credit 
+accumulated prior to the switch is forfeited permanently once the company opts for 115BAA. 
+Q4. Does MAT apply to foreign companies operating in India? 
+---PAGE 16---
+MAT under Section 115JB applies to domestic companies. Foreign companies (those 
+registered outside India) are subject to a separate provision - Section 115JB applies to them 
+only to the extent their income is computed under the Companies Act provisions. In practice, 
+foreign companies operating through a branch in India are subject to MAT only on that 
+portion of book profit attributable to their Indian operations. The full MAT provisions are 
+primarily designed for domestic companies. 
+Q5. If MAT credit is not utilised within 15 years, does it lapse? 
+Yes. MAT credit entitlement that is not set off within 15 assessment years following the year 
+in which it was generated lapses and cannot be carried forward further or refunded. This is 
+one reason why companies evaluate MAT credit utilisation as part of their long-term tax 
+planning. If a company has accumulated large MAT credit that is unlikely to be utilised within 
+15 years (because it has transitioned to a low-profit phase), the credit may effectively be 
+lost. 
+ 
+  
+---PAGE 17---
+ARTICLE 4 OF 9 | TAX COMPUTATION 
+Income Tax Surcharge Rates and Marginal Relief 
+for AY 2026-27 
+Updated: May 2026 Read time: 8 min read AY: 2026-27 
+ 
+ARTICLE SUMMARY 
+Income tax surcharge is an additional tax levied on the income tax payable by taxpayers 
+whose income exceeds specified thresholds. For individuals, surcharge rates range from 
+10% to 25% (or 37% under old regime for income above Rs. 5 crore). Marginal relief 
+ensures that the extra tax payable due to crossing a surcharge slab does not exceed the 
+marginal income that caused the slab to be breached. This article covers all surcharge 
+rates for individuals, HUFs, firms, and companies under both regimes, the marginal relief 
+mechanism with worked examples, and the Budget 2023 cap on surcharge under the new 
+regime. 
+ 
+Surcharge Rates for Individuals and HUFs (AY 2026-27) 
+Total Income Range Surcharge Rate - Old 
+Regime 
+Surcharge Rate - New Regime 
+(115BAC) 
+Up to Rs. 50 lakh Nil Nil 
+Above Rs. 50 lakh to Rs. 1 
+crore 
+10% on income tax 10% on income tax 
+Above Rs. 1 crore to Rs. 2 
+crore 
+15% on income tax 15% on income tax 
+Above Rs. 2 crore to Rs. 5 
+crore 
+25% on income tax 25% on income tax 
+Above Rs. 5 crore 37% on income tax (old 
+regime) 
+25% on income tax (NEW 
+REGIME CAP - Budget 2023) 
+ 
+New Regime Surcharge Cap at 25% 
+Budget 2023 reduced the maximum surcharge rate under the new tax regime (Section 115BAC) 
+from 37% to 25% for income above Rs. 5 crore. This means the maximum effective tax rate 
+under the new regime is lower than under the old regime for very high incomes. For a taxpayer 
+with income above Rs. 5 crore, the new regime surcharge cap is one of the key reasons why the 
+new regime may be more attractive despite the loss of deductions. 
+ 
+Surcharge Rates for Other Taxpayer Categories 
+---PAGE 18---
+Taxpayer Category Income Range Surcharge Rate 
+Domestic companies 
+(regular) 
+Income up to Rs. 1 crore Nil 
+Domestic companies 
+(regular) 
+Income Rs. 1 crore to Rs. 10 
+crore 
+7% 
+Domestic companies 
+(regular) 
+Income above Rs. 10 crore 12% 
+Domestic companies under 
+115BAA/115BAB 
+Any income 10% flat (regardless of income level) 
+Foreign companies Income up to Rs. 1 crore Nil 
+Foreign companies Income Rs. 1 crore to Rs. 10 
+crore 
+2% 
+Foreign companies Income above Rs. 10 crore 5% 
+Partnership firms and LLPs Any income 12% flat (no income threshold) 
+Co-operative societies (new 
+regime 115BAD) 
+Any income 10% flat 
+ 
+Marginal Relief: What It Is and How It Works 
+Marginal relief is a provision that ensures a taxpayer does not pay more additional tax on 
+account of surcharge than the amount by which their income exceeds the surcharge threshold. 
+Without marginal relief, a taxpayer earning Rs. 50,00,001 (just Rs. 1 above the Rs. 50 lakh 
+surcharge threshold) would pay 10% surcharge on their entire tax, resulting in a 
+disproportionately large jump in total tax for just Rs. 1 extra income. 
+The marginal relief formula ensures: (Total tax with surcharge at income X) minus (Total tax 
+without surcharge at the threshold) must not exceed (Income X minus the threshold income). 
+Example: Marginal Relief Worked Example 
+Taxpayer income: Rs. 50,10,000 (just Rs. 10,000 above Rs. 50 lakh 
+threshold) 
+New Tax Regime | AY 2026-27 
+ 
+STEP 1: Tax on Rs. 50,10,000 (before surcharge): 
+  Using new regime slabs (approx):          Rs.  9,00,000 
+  Surcharge @ 10% on Rs. 9,00,000:         Rs.    90,000 
+  Total Tax with surcharge:                 Rs.  9,90,000 
+  Add: Cess 4%:                             Rs.    39,600 
+  TOTAL TAX SCENARIO A:                     Rs. 10,29,600 
+ 
+STEP 2: Tax on Rs. 50,00,000 (threshold, no surcharge): 
+  Tax on Rs. 50 lakh (approx):              Rs.  8,97,500 
+  Add: Cess 4%:                             Rs.    35,900 
+  TOTAL TAX SCENARIO B:                     Rs.  9,33,400 
+---PAGE 19---
+ 
+STEP 3: Without marginal relief, extra tax = Rs. 10,29,600 - Rs. 9,33,400 
+= Rs. 96,200 
+STEP 4: Marginal income = Rs. 50,10,000 - Rs. 50,00,000 = Rs. 10,000 
+ 
+Since Rs. 96,200 > Rs. 10,000, marginal relief applies. 
+Marginal Relief = Rs. 96,200 - Rs. 10,000 = Rs. 86,200 
+Actual surcharge payable after marginal relief = Rs. 90,000 - Rs. 86,200 = 
+Rs. 3,800 
+ 
+Surcharge on Capital Gains with Special Tax Rates 
+For capital gains that are subject to special tax rates (such as LTCG at 12.5% on equity or 
+STCG at 20%), the surcharge rate is capped at 15% regardless of the total income of the 
+taxpayer. This cap applies to: 
+• LTCG under Section 112A (equity shares and equity mutual funds) 
+• STCG under Section 111A (equity shares and equity mutual funds) 
+• LTCG under Section 112 (other than equity) 
+This means that even a very high income taxpayer with income above Rs. 5 crore pays only 
+15% surcharge (not 25% or 37%) on their LTCG and STCG from listed equity transactions. 
+ 
+Pro Tip 
+Taxpayers with income near a surcharge threshold should carefully time income receipts across 
+financial years. For example, a business owner expecting Rs. 1.05 crore total income (crossing 
+the Rs. 1 crore threshold for 15% surcharge) might consider deferring Rs. 6 lakh of income to the 
+next financial year by invoicing in April instead of March. However, this must be done genuinely 
+and must reflect actual transaction timing, not just paper deferral. 
+ 
+KEY TAKEAWAYS 
+1.  Surcharge is an additional levy on income tax for higher income taxpayers: 10% for income 
+above Rs. 50 lakh, up to 37% (old regime) or 25% (new regime) for income above Rs. 5 crore. 
+2.  Budget 2023 capped the new regime surcharge at 25% (maximum) for income above Rs. 5 
+crore, making the new regime more attractive for ultra-high earners. 
+3.  Marginal relief ensures that the extra tax from crossing a surcharge threshold does not 
+exceed the extra income that caused the threshold breach. 
+4.  Capital gains with special rates (LTCG/STCG on equity under Sections 111A, 112A, 112) 
+attract a maximum surcharge of 15% regardless of total income. 
+5.  Partnership firms and LLPs pay a flat 12% surcharge on all income. 
+---PAGE 20---
+6.  Domestic companies under the regular regime pay 7% surcharge (income Rs. 1-10 crore) or 
+12% (above Rs. 10 crore). 
+7.  Companies under 115BAA and 115BAB pay a flat 10% surcharge regardless of income level. 
+ 
+Frequently Asked Questions 
+Q1. My total income is Rs. 52 lakh. What is my effective total tax under the new regime? 
+Under the new regime for AY 2026-27: Tax on Rs. 52 lakh using new regime slabs 
+(approximate) is around Rs. 9,60,000. Surcharge at 10% = Rs. 96,000. However, marginal 
+relief applies since income is just Rs. 2 lakh above the Rs. 50 lakh threshold. The marginal 
+relief computation ensures your total tax does not exceed tax on Rs. 50 lakh plus Rs. 2 lakh 
+(the marginal income). Consult an ITR calculator for the precise figure with marginal relief 
+applied. 
+Q2. I have salary income of Rs. 60 lakh and LTCG on shares of Rs. 40 lakh. What 
+surcharge rates apply? 
+Two different surcharge rates apply to different parts of your income. On the salary income 
+portion, surcharge is at 10% (total income above Rs. 50 lakh). On the LTCG on listed equity 
+shares (Section 112A), the surcharge is capped at 15% regardless of total income. The tax 
+computation splits the income into regular income and special rate income, applies the 
+respective surcharge caps, and totals them. 
+Q3. Does a partnership firm get marginal relief on surcharge? 
+Partnership firms pay a flat 12% surcharge regardless of income level. There are no 
+graduated surcharge slabs for firms. Since there is no threshold beyond which the 
+surcharge rate jumps (it is 12% from the first rupee of income), the concept of marginal relief 
+does not apply to partnership firms or LLPs. 
+Q4. How is surcharge calculated when a company has both regular income and income 
+from capital gains? 
+For companies, surcharge is applied to the total tax payable on all income combined. The 
+company applies the applicable surcharge rate (7% or 12% for regular domestic companies) 
+on the total tax computed on all income heads including capital gains. Unlike individuals, 
+companies do not have a separate surcharge cap for capital gains income. 
+Q5. The new regime surcharge cap at 25% - does it apply to all income or only specific 
+types? 
+The 25% surcharge cap under the new regime applies to all income of an individual who has 
+opted for Section 115BAC, for income above Rs. 5 crore. There is no distinction between 
+regular income and capital gains for this cap under the new regime. An individual in the new 
+regime with Rs. 6 crore total income (including salary and capital gains) pays a maximum of 
+25% surcharge on all components, unlike the old regime where income above Rs. 5 crore 
+faces 37% surcharge on regular income. 
+ 
+  
+---PAGE 21---
+ARTICLE 5 OF 9 | BUSINESS DEDUCTIONS 
+Section 36 of Income Tax Act: Expenses Allowed 
+as Deductions 
+Updated: May 2026 Read time: 8 min read AY: 2026-27 
+ 
+ARTICLE SUMMARY 
+Section 36 of the Income Tax Act specifies a list of expenses that are expressly allowed as 
+deductions in computing income from business or profession, in addition to the general 
+deduction provision under Section 37. These include insurance premiums, employer 
+contributions to recognised provident fund and approved gratuity fund, bad debts, scientific 
+research expenditure, and several other specific items. This article covers each deduction 
+under Section 36 with the applicable conditions and limits for FY 2025-26. 
+ 
+Overview of Section 36 Deductions 
+Section 36 is a list of specific allowable deductions from business income that supplement the 
+general deduction under Section 37 (which allows any expenditure wholly and exclusively for 
+business purposes). While Section 37 has a residual catch-all character, Section 36 provides 
+explicit statutory authority for specific categories of expenditure. Understanding Section 36 is 
+important because some of these deductions have specific conditions, limits, or computational 
+rules that differ from the general principles under Section 37. 
+ 
+Section 36 Clause Deduction Allowed Key Condition or Limit 
+36(1)(i) Insurance premium against risk 
+of damage or destruction of 
+stocks in trade 
+Premium must be paid for insurance of 
+trading stock only 
+36(1)(ia) Insurance premium paid for 
+health of employees under a 
+scheme framed by the General 
+Insurance Corporation or 
+approved insurers 
+Paid on health of employees, not partners 
+or proprietors 
+36(1)(ib) Insurance premium paid under a 
+Keyman Insurance Policy 
+Deductible when premium is paid; but 
+maturity proceeds are taxable as business 
+income 
+36(1)(ii) Bonus or commission paid to 
+employees 
+Must be paid for services rendered; cannot 
+be in lieu of dividends; Section 43B 
+conditions apply (payment before ITR filing 
+date) 
+36(1)(iii) Interest on borrowed capital Capital must be borrowed for business 
+purposes; interest must actually be paid or 
+payable 
+---PAGE 22---
+Section 36 Clause Deduction Allowed Key Condition or Limit 
+36(1)(iiia) Discount on zero coupon bonds Pro-rated over the life of the bond 
+36(1)(iv) Employer's contribution to a 
+Recognised Provident Fund or 
+an approved Superannuation 
+Fund 
+Subject to overall limits under the relevant 
+fund rules and Section 43B (payment 
+timing) 
+36(1)(iva) Employer's contribution to NPS 
+for employees 
+Up to 10% of employee's salary (Basic + 
+DA); deductible in the year of payment 
+36(1)(v) Employer's contribution to an 
+approved Gratuity Fund 
+Deductible in year of payment; actuarially 
+determined contributions allowed 
+36(1)(vi) Allowance in respect of animals 
+used for business that die or 
+become useless 
+Based on actual cost minus scrap or 
+carcass value 
+36(1)(vii) Bad debts written off Debt must have been taken into account in 
+computing income of prior years; must be 
+actually written off in books 
+36(1)(viia) Provision for bad and doubtful 
+debts (banks and financial 
+institutions only) 
+Scheduled banks: 8.5% of rural advances + 
+10% of other advances; other specified 
+institutions: 5% of income 
+36(1)(viii) Special reserve created by 
+certain financial institutions 
+(housing finance, NBFC) 
+Deduction for amount transferred to special 
+reserve, subject to limits 
+36(1)(xv) Securities Transaction Tax (STT) 
+paid 
+Deductible only where the securities 
+transaction is treated as business income 
+(F&O traders, not for capital gains) 
+36(1)(xvi) Commodities Transaction Tax 
+(CTT) paid 
+Same condition as STT - deductible only if 
+underlying transaction is business income 
+ 
+Bad Debts Under Section 36(1)(vii) - Key Rules 
+Bad debt deduction is one of the most commonly claimed and contested deductions under 
+Section 36. The critical conditions are: 
+• The debt must have been taken into account in computing the income of the assessee in 
+any previous year. This means the corresponding income (sale or service revenue) must 
+have been offered to tax in an earlier year. 
+• The debt must be written off as irrecoverable in the books of account of the assessee for 
+the year in which deduction is claimed. 
+• It is not necessary to prove that the debt has become irrecoverable in fact. The Supreme 
+Court has held that the business judgment of the taxpayer regarding irrecoverability is 
+sufficient. 
+• The bad debt written off but subsequently recovered is taxable as business income in 
+the year of recovery under Section 41(4). 
+ 
+---PAGE 23---
+Important 
+Prior to Amendment in AY 2014-15: Bad debts were allowed only if actually written off in the 
+books. Post amendment, the requirement is that the debt must have been included in income in 
+a prior year. Banks and NBFCs cannot claim Section 36(1)(vii) for bad debts that were previously 
+covered by the provision for bad debts under Section 36(1)(viia). The two provisions are mutually 
+exclusive for such entities. 
+ 
+Interest on Borrowed Capital - Section 36(1)(iii) 
+Interest on capital borrowed for business purposes is deductible under Section 36(1)(iii). 
+However, there is one important restriction: interest paid on capital borrowed for acquiring a 
+capital asset for business use is not deductible for the period starting from the date of borrowing 
+to the date the asset is first put to use. This pre-use interest must be capitalised as part of the 
+asset's cost. Once the asset is in use, subsequent interest is deductible as a revenue expense. 
+ 
+Section 43B - Payment Timing Rule for Several Section 36 Items 
+Several deductions under Section 36 are subject to Section 43B, which requires that certain 
+payments must be actually paid on or before the due date of filing the income tax return for the 
+relevant year. If not paid by that date, the deduction is allowed only in the year of actual 
+payment. Section 43B applies to: 
+• Employer's contribution to PF, gratuity fund, and other welfare funds (Section 36(1)(iv), 
+(v)) 
+• Bonus and commission to employees (Section 36(1)(ii)) 
+• Interest on loans from public financial institutions and scheduled banks 
+ 
+Pro Tip 
+Businesses that claim bonus and PF contributions as deductions should ensure all such 
+payments are actually made (not just accrued or provided for) on or before the ITR filing due 
+date. A bonus accrued in the books for FY 2025-26 but not actually paid to employees by 
+October 31, 2026 (ITR due date for audit cases) will not be deductible in FY 2025-26 and will 
+shift to FY 2026-27. 
+ 
+KEY TAKEAWAYS 
+1.  Section 36 provides a specific list of deductions for business income, complementing the 
+general provision of Section 37. 
+2.  Key deductions include: insurance on stock, employee bonuses (Section 43B compliant), 
+interest on borrowed capital, PF and gratuity contributions, and bad debts written off. 
+3.  Bad debt deduction requires the corresponding income to have been offered to tax in a prior 
+year and the debt to be written off in the books. 
+---PAGE 24---
+4.  Interest on borrowings for capital assets cannot be deducted for the pre-use period and must 
+be capitalised as part of asset cost. 
+5.  STT and CTT paid are deductible under Section 36 only for traders where the securities 
+income is classified as business income. 
+6.  Several Section 36 deductions (bonus, PF, gratuity) are subject to the actual payment timing 
+condition under Section 43B. 
+7.  Banks have a special provision (Section 36(1)(viia)) for provisions for bad debts based on 
+specified percentages of advances. 
+ 
+Frequently Asked Questions 
+Q1. I run an e-commerce business. Can I claim insurance premium on my warehouse 
+stock under Section 36(1)(i)? 
+Yes. Insurance premium paid to protect your stock in trade (goods stored in the warehouse 
+for sale) against fire, flood, theft, or other damage is expressly deductible under Section 
+36(1)(i). Ensure the insurance policy covers trading stock (inventory) and not fixed assets 
+like the warehouse building itself (which would be covered under Section 37 as a general 
+business expense). 
+Q2. My company accrued Rs. 20 lakh bonus for employees in March 2026 but paid it in 
+May 2026. Can I claim the deduction in FY 2025-26? 
+No. Bonus is subject to Section 43B. Even if accrued in the books for FY 2025-26, the 
+deduction is allowed only in the year of actual payment. Since the bonus was paid in May 
+2026 (FY 2026-27), the deduction will be available only in AY 2027-28. To claim the 
+deduction in FY 2025-26, the bonus must be paid on or before the ITR filing due date for FY 
+2025-26 (October 31, 2026 for audit cases; July 31, 2026 for others). 
+Q3. A customer declared bankruptcy and owes us Rs. 5 lakh. Can we claim bad debt 
+deduction? 
+Yes, provided the following: the Rs. 5 lakh sales revenue was included in your income and 
+offered to tax in the year of sale (not just recorded as a receivable). You must write off the 
+Rs. 5 lakh as bad debt in your books for FY 2025-26. The customer's bankruptcy is strong 
+evidence of irrecoverability, but you do not need a court order - writing off the books based 
+on business judgment is sufficient. If you later recover any amount, the recovered amount 
+will be taxable as business income in the year of recovery under Section 41(4). 
+Q4. Can an individual professional claim bad debt deduction under Section 36(1)(vii)? 
+A professional can claim bad debt deduction only if they maintain their accounts on the 
+mercantile (accrual) basis. Under the mercantile system, professional fees are credited to 
+income when earned (even if not received), and subsequent write-off qualifies as bad debt. 
+Professionals maintaining accounts on the cash basis cannot claim bad debt deduction 
+because unpaid fees are never included in income in the first place - so there is nothing to 
+write off. 
+Q5. Is an employer's contribution to ESOP or ESOPs considered deductible under 
+Section 36? 
+---PAGE 25---
+Employee Stock Option Plans (ESOPs) are not specifically listed in Section 36. However, 
+the value of ESOPs at the time of exercise may be deductible as employee compensation 
+under Section 37 (general business expenditure) in certain circumstances. The treatment of 
+ESOP expense deduction is complex and depends on the structure of the plan. For 
+employers, the deduction is generally claimed in the year the options are exercised by 
+employees (when the compensation value can be ascertained), subject to judicial 
+interpretation. Seek specific CA advice on ESOP deductibility for your entity. 
+ 
+  
+---PAGE 26---
+ARTICLE 6 OF 9 | INTERNATIONAL TAXATION 
+Section 44B and Section 172: Income Tax on 
+Shipping Business 
+Updated: May 2026 Read time: 8 min read AY: 2026-27 
+ 
+ARTICLE SUMMARY 
+India has two special provisions for taxing the income of non-resident shipping companies: 
+Section 44B provides a presumptive income computation for non-resident persons engaged 
+in the shipping business, deeming 7.5% of specified receipts as their Indian income. 
+Section 172 provides a mechanism for collecting advance tax on a voyage-by-voyage basis 
+from ships of foreign companies calling at Indian ports. This article explains both provisions, 
+the taxable receipts covered, the procedures for Section 172 clearance, treaty override 
+considerations, and the interaction with the Tonnage Tax Scheme. 
+ 
+Section 44B: Presumptive Taxation for Non-Resident Shipping 
+Section 44B applies to non-resident persons (including foreign companies) engaged in the 
+business of operation of ships. It provides that the income of such a non-resident from the 
+operation of ships shall be presumed to be an amount equal to 7.5% of the aggregate of the 
+following amounts received or deemed to be received in India: 
+• The amount paid or payable (whether in or out of India) to the non-resident or to any 
+person on their behalf, on account of the carriage of passengers, livestock, mail, or 
+goods from any port in India. 
+• The amount received or deemed to be received in India on account of the carriage of 
+passengers, livestock, mail, or goods from any port outside India. 
+ 
+The 7.5% presumed income is the final income for Indian tax purposes. No further deductions 
+are allowed from this amount. The non-resident shipping company pays tax at the rate 
+applicable to foreign companies (40% base rate plus applicable surcharge and cess) on this 
+7.5% deemed income. 
+Component Amount 
+Applicable to Non-resident persons and foreign companies operating ships 
+Presumed income rate 7.5% of specified receipts from Indian voyages 
+Tax rate on deemed income 40% (foreign company rate) plus surcharge and cess 
+Effective rate as percentage of 
+receipts 
+Approximately 3% of gross shipping receipts (7.5% x 40%) 
+Deductions allowed from 7.5% No deductions are permitted from the deemed income 
+ 
+---PAGE 27---
+Section 172: Voyage-by-Voyage Tax Collection 
+Section 172 provides a separate, voyage-specific collection mechanism for non-resident 
+shipping income. It operates as follows: 
+1. When a ship of a non-resident owner or charterer carries passengers, cargo, or mail 
+from an Indian port, before the ship is granted port clearance, the owner or agent must 
+file a return of income for that voyage. 
+2. The return covers the income from that specific voyage (7.5% of voyage receipts under 
+the presumptive formula). 
+3. Tax on that voyage income must be paid at the time of filing the return. 
+4. Once the tax is paid, the port authority will issue clearance to the ship. 
+5. Any overpayment or underpayment is adjusted when the regular annual assessment is 
+completed. 
+ 
+Section 172 vs Section 44B Relationship 
+Section 172 is a collection mechanism, not a separate charging provision. The actual income 
+computation remains under Section 44B (7.5% of receipts). Section 172 ensures that the 
+government collects tax before the foreign ship leaves India and there is no enforcement risk 
+from a vessel that has departed. The voyage-by-voyage advance is credited against the final 
+annual tax liability of the shipping company. 
+ 
+Tax Treaty Override 
+India has signed Double Taxation Avoidance Agreements (DTAAs) with many countries that 
+contain specific provisions for shipping income. Under most DTAAs, shipping income of a 
+resident of one country is taxable only in that country (the country of the ship's owner). This 
+means a Norwegian shipping company operating ships that call at Indian ports may be entirely 
+exempt from Indian tax under the India-Norway DTAA, despite Section 44B. 
+Where a DTAA provides for exclusive taxation in the foreign country, the shipping company or 
+its agent can claim treaty benefits and avoid Section 44B taxation. The claim must be supported 
+by a Tax Residency Certificate (TRC) from the foreign country and a Form 10F filing in India. 
+The port clearance under Section 172 is still required procedurally, but the tax payable may be 
+nil under treaty protection. 
+ 
+Tonnage Tax Scheme: Alternative for Indian Shipping Companies 
+Indian shipping companies (domestic companies) can opt for the Tonnage Tax Scheme under 
+Sections 115V to 115VZC instead of the regular profit-based computation. Under this scheme, 
+income from the operation of ships is computed based on the net tonnage of ships in the fleet 
+(not actual profits). The scheme provides certainty and stability in tax liability and is not subject 
+to MAT. Once opted, the company must stay in the scheme for a minimum of 10 years. 
+ 
+---PAGE 28---
+Pro Tip 
+Non-resident shipping companies regularly operating in Indian waters should review applicable 
+DTAAs before paying Section 172 voyage-by-voyage taxes. Many shipping companies from 
+countries with favourable DTAAs overpay Section 172 tax and file refund claims. Setting up 
+proper treaty protection documentation (TRC, Form 10F) at the start of operations avoids this 
+cash flow issue. 
+ 
+KEY TAKEAWAYS 
+1.  Section 44B deems 7.5% of gross shipping receipts from Indian voyages as the taxable 
+income of non-resident shipping operators. 
+2.  Tax on this 7.5% deemed income is computed at the foreign company rate of 40% plus 
+applicable surcharge and cess. 
+3.  Section 172 requires voyage-by-voyage advance tax payment and return filing before a non-
+resident ship receives port clearance in India. 
+4.  Section 172 is a collection mechanism only; the income computation follows Section 44B's 
+7.5% presumptive formula. 
+5.  DTAA provisions may exempt the shipping income from Indian tax entirely if the vessel's 
+owner is resident in a treaty country with an exclusive taxation clause. 
+6.  Treaty protection requires a Tax Residency Certificate and Form 10F filing in India. 
+7.  Indian domestic shipping companies can opt for the Tonnage Tax Scheme under Sections 
+115V to 115VZC as an alternative to profit-based computation. 
+ 
+Frequently Asked Questions 
+Q1. An Indian company hires a foreign ship (time charter) to carry cargo. Is the charter 
+fee subject to Section 44B? 
+Section 44B applies to non-resident persons in the business of operating ships. If the foreign 
+ship owner is a non-resident and receives charter hire from India, the income accruing in 
+India from the charter may be subject to Section 44B or Section 9(1)(i) (income accruing in 
+India). However, under many DTAAs, charter income for ships is classified under the 
+shipping income article and may be taxable only in the owner's country. The Indian company 
+paying charter hire should check whether TDS under Section 195 applies and whether the 
+non-resident can claim treaty relief. 
+Q2. A Section 172 return was filed and tax was paid, but the voyage was cancelled. Can 
+the tax be refunded? 
+If a voyage is cancelled after the Section 172 return and tax payment have been made, the 
+advance tax paid becomes excess and is refundable. The shipping company or its agent 
+should file a claim for refund with the assessing officer, demonstrating that the voyage did 
+---PAGE 29---
+not occur and the income giving rise to the Section 172 tax did not arise. The refund is 
+processed through the regular refund mechanism of the Income Tax Department. 
+Q3. Does Section 44B apply to a non-resident company that only provides container 
+terminal services and does not operate ships itself? 
+No. Section 44B specifically covers income from the operation of ships - carriage of 
+passengers, cargo, or mail. A company providing port services, container handling, or 
+logistics support at an Indian port (without operating ships) is not covered by Section 44B. 
+Its income from Indian operations would be assessed under the regular provisions 
+applicable to non-residents (Sections 44DA or 9 depending on the nature of services) or 
+under the applicable DTAA. 
+Q4. Can a non-resident shipping company maintain books of accounts and compute 
+actual profits instead of using the Section 44B presumptive rate? 
+No. Section 44B is mandatory for non-residents in the shipping business, not optional. 
+Unlike Section 44AD or 44ADA (which are opt-in schemes), Section 44B is the statutory 
+method for computing income of non-resident shipping operators. The non-resident cannot 
+opt out and declare actual profits instead. The only alternative to Section 44B taxation is 
+treaty protection under an applicable DTAA. 
+Q5. An Indian shipping company opted for the Tonnage Tax Scheme 3 years ago. Can it 
+switch back to regular taxation this year? 
+The Tonnage Tax Scheme under Sections 115V to 115VZC requires a minimum 
+commitment of 10 years. Once opted, an Indian shipping company cannot switch back to 
+regular profit-based taxation before completing 10 years. The scheme provides stability and 
+predictability, but the 10-year lock-in means companies must carefully evaluate their long-
+term position before opting in. 
+ 
+  
+---PAGE 30---
+ARTICLE 7 OF 9 | INTERNATIONAL TAXATION 
+Form 67 and Foreign Tax Credit: How to Claim 
+Relief on Taxes Paid Abroad 
+Updated: May 2026 Read time: 8 min read AY: 2026-27 
+ 
+ARTICLE SUMMARY 
+Indian residents who earn income from foreign sources (salary, dividends, interest, capital 
+gains, or business income) may have tax withheld by the foreign country on that income. To 
+avoid double taxation, the Income Tax Act under Section 90 or 91 allows a credit for foreign 
+taxes paid against the Indian tax liability. The claim is made by filing Form 67 on the IT 
+portal on or before the ITR filing due date. This article explains the foreign tax credit 
+framework, the eligible foreign taxes, the Form 67 filing procedure, computation rules, and 
+the consequences of late filing. 
+ 
+Legal Basis for Foreign Tax Credit 
+The foreign tax credit (FTC) framework in India is governed by Section 90 (for countries with 
+which India has a Double Taxation Avoidance Agreement - DTAA) and Section 91 (for countries 
+with which India does not have a DTAA). Rule 128 of the Income Tax Rules, 1962 provides the 
+detailed computation rules and the Form 67 requirement. The FTC rules were substantially 
+revised in 2016 (effective AY 2017-18) to provide a more structured framework. 
+ 
+Who Can Claim Foreign Tax Credit? 
+Condition Details 
+Eligible claimant Resident and Ordinarily Resident (ROR) individuals, companies, and other 
+entities in India 
+RNOR and NRI Not eligible for FTC since their foreign income is generally not taxable in 
+India 
+Income type Foreign income that is included in the Indian tax computation and also 
+taxed abroad 
+Foreign tax eligible Tax paid in a foreign country on income that is also taxed in India; must be 
+an income tax (not sales tax, VAT, customs, or other non-income taxes) 
+DTAA countries Credit under Section 90; generally limited to the lower of Indian tax or 
+foreign tax on the same income 
+Non-DTAA countries Credit under Section 91; limited to the lower of Indian tax rate or foreign 
+tax rate on the doubly taxed income 
+ 
+---PAGE 31---
+Foreign Tax Credit Computation 
+The FTC is computed separately for each country and for each type or source of income. The 
+credit for any given income is limited to the LOWER of: 
+• The actual foreign tax paid on that income, converted to Indian Rupees at the 
+telegraphic transfer buying rate (TTBR) of the State Bank of India on the last day of the 
+month preceding the month of tax payment. 
+• The Indian tax payable on that foreign income (i.e., the Indian tax attributable to that 
+specific income item). 
+This ensures that FTC cannot exceed the Indian tax on the same income and does not result in 
+a net refund. 
+Example: Foreign Tax Credit Calculation 
+Resident individual: Salary from US employer in FY 2025-26 
+Gross US salary (converted to INR):         Rs. 30,00,000 
+US Federal Income Tax withheld (converted): Rs.  4,50,000 
+ 
+Indian tax computation: 
+  Total income including US salary:         Rs. 45,00,000 
+  Indian tax on total income (new regime):  Rs.  6,75,000 (approx)  
+  Indian tax attributable to US salary: 
+    = Rs. 6,75,000 x (Rs. 30L / Rs. 45L) = Rs. 4,50,000 
+ 
+FTC = LOWER of: 
+  (a) US tax paid:                          Rs. 4,50,000 
+  (b) Indian tax on US income:              Rs. 4,50,000 
+  FTC = Rs. 4,50,000 
+ 
+Indian tax payable after FTC: Rs. 6,75,000 - Rs. 4,50,000 = Rs. 2,25,000 
+(on remaining Indian income) 
+ 
+Form 67: Filing Requirement and Procedure 
+Rule 128(9) mandates that any taxpayer claiming FTC must file Form 67 on the IT portal on or 
+before the due date of filing the income tax return. Form 67 is filed separately from the ITR itself. 
+6. Log in to the IT portal at incometax.gov.in. 
+7. Navigate to: e-File > Income Tax Forms > File Income Tax Forms > Form 67. 
+8. Select the relevant Assessment Year and fill in: the country where tax was paid, the 
+nature of income (salary, dividends, interest, etc.), the amount of foreign income in the 
+foreign currency and INR, the amount of foreign tax paid in foreign currency and INR, 
+and the exchange rate used. 
+9. Upload supporting documents: Tax assessment order or withholding tax certificate from 
+the foreign country showing the tax paid (must be in the foreign country's official 
+language; if not in English, attach a certified translation). 
+10. Submit and e-verify Form 67 using Aadhaar OTP or digital signature. 
+11. Then proceed to file the ITR, which will reference the Form 67 claim. 
+---PAGE 32---
+ 
+Important 
+Form 67 must be filed ON OR BEFORE the ITR due date. If Form 67 is filed after the ITR due 
+date (even a day late), the FTC claim is denied entirely. This is one of the most common and 
+costly mistakes made by taxpayers with foreign income. The Delhi High Court has upheld the 
+denial of FTC for late Form 67 filing in multiple cases. 
+ 
+Documents Required for Form 67 
+• Tax Residency Certificate (if claiming DTAA benefits along with FTC) 
+• Foreign tax payment proof: withholding certificate issued by the foreign employer or 
+payer (e.g., W-2 form from US, P60 from UK, or equivalent) 
+• Foreign tax assessment order or foreign ITR showing taxes paid (for countries where the 
+taxpayer files their own return abroad) 
+• Bank statement showing remittance of tax to the foreign government (if self-assessed) 
+• Exchange rate certificate from SBI or authorised dealer bank for the conversion rate 
+used 
+ 
+Pro Tip 
+NRIs returning to India who become ROR in their first or second year back should track foreign 
+income and foreign taxes paid from day one. Once ROR status is attained, global income 
+becomes taxable in India. Set up the Form 67 filing as a recurring calendar reminder well before 
+July 31 each year to ensure it is never filed late. 
+ 
+KEY TAKEAWAYS 
+1.  Foreign Tax Credit (FTC) under Section 90/91 allows a credit for taxes paid in a foreign 
+country against Indian tax on the same income. 
+2.  FTC is limited to the lower of: actual foreign tax paid (in INR) or Indian tax attributable to the 
+foreign income. 
+3.  Form 67 must be filed on the IT portal on or before the ITR due date. Filing after the due date 
+results in total denial of the FTC claim. 
+4.  FTC is available to Resident and Ordinarily Resident (ROR) taxpayers only; NRIs and 
+RNORs are generally not eligible. 
+5.  Separate FTC computation is required for each country and each type of income. 
+6.  Supporting documents must include the foreign tax withholding certificate or equivalent proof 
+of tax paid abroad. 
+7.  Under Section 91, for non-DTAA countries, FTC is the lower of Indian tax rate or foreign tax 
+rate on the doubly taxed income. 
+---PAGE 33---
+ 
+Frequently Asked Questions 
+Q1. I received dividends from a US company. The US withheld 25% tax. Can I claim FTC 
+in India? 
+Yes. US-source dividends are taxable in India for ROR residents. If the US withheld 25% (or 
+the treaty rate of 15% under the India-US DTAA), you can claim FTC for the foreign tax 
+withheld. Under the India-US DTAA, the treaty rate for dividends is 15% or 25% depending 
+on shareholding. Compute the Indian tax attributable to the dividend income and claim FTC 
+for the lower of: foreign tax withheld or Indian tax on the dividend. File Form 67 before your 
+ITR due date. 
+Q2. My Form 67 was filed on August 5 but my ITR due date was July 31. What happens? 
+The FTC claim will be denied. Rule 128(9) makes filing Form 67 on or before the ITR due 
+date a mandatory condition for claiming FTC. If you missed the July 31 deadline, the late 
+Form 67 filed on August 5 does not preserve the FTC claim. You may explore whether the 
+ITR itself was filed under a condonation of delay (Section 119(2)(b)) and whether the Form 
+67 can be considered under the same condonation. However, such condonation is 
+discretionary and not guaranteed. 
+Q3. I paid tax in a country that does not have a DTAA with India. Can I still claim FTC? 
+Yes. Section 91 provides FTC for countries that do not have a DTAA with India (currently 
+applicable for a limited number of countries). The credit is computed as the lower of the 
+Indian tax rate on the income or the foreign country's tax rate on the same income, applied 
+to the doubly taxed income. The procedure (Form 67 filing) and conditions remain the same 
+as for DTAA countries. 
+Q4. Can FTC be carried forward if it exceeds my Indian tax liability in the current year? 
+No. FTC is not carrried forward or refunded. The credit is available only in the year the 
+foreign income is taxable in India. Any excess FTC (foreign tax paid exceeding Indian tax on 
+that income) is simply lost for that year. There is no mechanism to utilise the excess FTC in 
+future years. This is one of the limitations of the current FTC framework and differs from the 
+treatment in some other countries. 
+Q5. I am a returning NRI who has been RNOR for 2 years. Am I eligible for FTC? 
+During the RNOR period, foreign income that arises from a business controlled outside India 
+or from a profession set up outside India is not taxable in India. Since such income is not 
+included in Indian tax base, no FTC is applicable for those years. Once you attain ROR 
+status (from year 3 typically), your global income is taxable in India and FTC becomes 
+available for foreign taxes on that global income. Plan your Form 67 filing from the first year 
+you attain ROR status. 
+ 
+  
+---PAGE 34---
+ARTICLE 8 OF 9 | TAX COMPLIANCE 
+Income Tax Customer Care Number and 
+Helpline: All Contact Details 
+Updated: May 2026 Read time: 7 min read AY: FY 2025-26 
+ 
+ARTICLE SUMMARY 
+The Income Tax Department provides multiple channels for taxpayer assistance: phone 
+helplines, email support, the Aaykar Sampark Kendra, the online IT portal grievance 
+system, and the Centralised Processing Centre (CPC) for ITR processing queries. This 
+article consolidates all current contact details, the best channel for each type of query, the 
+Aaykar Seva Kendra network, how to raise a grievance on the portal, and tips for resolving 
+common problems efficiently. 
+ 
+Primary Helpline Numbers 
+Helpline Number Availability Best For 
+Aaykar Sampark Kendra 
+(ASK) 
+1800 180 1961 Monday to Saturday, 8 
+AM to 8 PM 
+General tax queries, 
+PAN/TAN issues, e-
+filing help, refund status 
+Income Tax Portal 
+Helpdesk 
+1800 103 0025 Monday to Saturday, 8 
+AM to 8 PM 
+Technical issues with 
+IT portal, e-filing errors, 
+login problems 
+Income Tax Portal 
+Helpdesk (alternate) 
+1800 419 0025 Monday to Saturday, 8 
+AM to 8 PM 
+Same as above 
+CPC Bengaluru (ITR 
+Processing) 
+1800 103 4455 Monday to Saturday, 8 
+AM to 8 PM 
+ITR processing status, 
+CPC intimation under 
+Section 143(1), refund 
+delay 
+Aadhaar-linked PAN 
+queries 
+Contact UIDAI: 
+1947 
+All days Aadhaar-PAN linking, 
+Aadhaar updates 
+ 
+Email Support Channels 
+Purpose Email Address 
+General income tax queries and 
+grievances 
+ask@incometax.gov.in 
+IT portal technical issues (login, e-
+filing, digital signature) 
+helpdesk@incometax.gov.in 
+---PAGE 35---
+Purpose Email Address 
+Centralized Processing Centre 
+(CPC) ITR processing queries 
+cpc.bng@incometax.gov.in 
+PAN card related issues (NSDL) tininfo@nsdl.co.in 
+PAN card (UTITSL) utiitsl.gsd@utiitsl.com 
+ 
+How to Raise a Grievance on the IT Portal 
+For unresolved issues that cannot be handled through the helpline, taxpayers can file a formal 
+grievance on the IT portal: 
+12. Log in at incometax.gov.in using your PAN and password. 
+13. Navigate to: e-Nivaran (Grievance) or the Helpdesk option in the top menu. 
+14. Select the grievance category (Refund, ITR Processing, PAN, TDS, Demand, etc.). 
+15. Describe the issue, attach supporting documents (acknowledgement number, Form 
+26AS, bank statement for refund issues), and submit. 
+16. A grievance reference number (GRN) is generated. Track the status using this GRN. 
+17. Grievances are typically resolved within 30 to 45 days. Escalation is possible if not 
+resolved within the timeframe. 
+ 
+CPC Bengaluru: For ITR Processing and Refund Issues 
+The Centralised Processing Centre (CPC) in Bengaluru processes all electronically filed ITRs. 
+For queries specifically related to ITR processing status, Section 143(1) intimation, refund not 
+received, or outstanding demand after ITR filing, the CPC helpline and email are the right 
+channels. 
+CPC Query Type Resolution Channel 
+ITR still showing as 
+'Processing' after 90 days 
+Call 1800 103 4455 or email cpc.bng@incometax.gov.in with PAN 
+and acknowledgement number 
+Refund not credited despite 
+intimation showing 'Refund 
+Determined' 
+Call CPC helpline; also check that bank account is correctly linked 
+and pre-validated on portal 
+Section 143(1) intimation 
+shows additional demand 
+File online response through 'Pending Actions > Response to 
+Outstanding Demand' on portal 
+ITR returns to 'Defective 
+Return' status 
+File a revised return correcting the defect within the time allowed in 
+the notice 
+Received Notice under Section 
+139(9) for defective return 
+Respond on portal within 15 days or file a revised return 
+ 
+Aaykar Seva Kendra: In-Person Assistance 
+---PAGE 36---
+Aaykar Seva Kendras (ASKs) are physical income tax offices set up in all major cities to provide 
+in-person assistance to taxpayers. Services available at ASK offices include: PAN card 
+application and corrections, TAN-related queries, submission of physical documents for pending 
+assessments, collection of tax demand challans, and general income tax guidance. All income 
+tax offices at the ward and range level also have taxpayer service counters. Visiting the ASK 
+with your PAN card, Aadhaar, and relevant documents typically allows same-day resolution of 
+PAN and TAN issues. 
+ 
+Pro Tip 
+When calling the helpline for an ITR processing or refund query, keep ready: your PAN number, 
+the ITR acknowledgement number (from the ITR-V), the assessment year, and the bank account 
+number linked for refund. The helpline officer can check the processing status and refund 
+dispatch status in real time with these details. 
+ 
+KEY TAKEAWAYS 
+1.  Primary helpline for general tax queries: 1800 180 1961 (Aaykar Sampark Kendra); for portal 
+technical issues: 1800 103 0025. 
+2.  CPC Bengaluru helpline 1800 103 4455 is the right channel for ITR processing status, 
+Section 143(1) intimation queries, and refund delays. 
+3.  Online grievances can be filed through the e-Nivaran system on the IT portal for formal 
+escalation with a trackable reference number. 
+4.  Email support: ask@incometax.gov.in for general queries; helpdesk@incometax.gov.in for 
+portal technical issues. 
+5.  In-person assistance is available at Aaykar Seva Kendras in all major cities for PAN, TAN, 
+and general tax guidance. 
+6.  For Section 143(1) demand response, use the 'Response to Outstanding Demand' module on 
+the IT portal rather than calling. 
+7.  All helplines are available Monday to Saturday from 8 AM to 8 PM; government holidays are 
+excluded. 
+ 
+Frequently Asked Questions 
+Q1. I filed my ITR in July 2025 for AY 2025-26 but have not received my refund. What 
+should I do? 
+First, check the refund status on the IT portal under 'My Account > Refund/Demand Status' 
+or on the TIN NSDL website using your PAN. Verify that your bank account is pre-validated 
+and ECS-enabled on the portal. If the status shows 'Refund Sent' but the amount has not 
+been credited, check with your bank or contact the CPC helpline at 1800 103 4455 with your 
+---PAGE 37---
+PAN and acknowledgement number. If the ITR is still under processing after 90 days, raise 
+a grievance on the portal. 
+Q2. I received a Section 143(1) intimation with a demand. The helpline says my case is 
+with the CPC. What is the process? 
+Respond to the Section 143(1) demand online within 30 days of the intimation date. Log in 
+to the IT portal, go to 'Pending Actions > Response to Outstanding Demand', select the 
+demand, and indicate whether you agree or disagree with the adjustment. If you disagree, 
+provide a reason and supporting documents. If you agree, pay the demanded amount using 
+Challan 280. The CPC helpline can explain the basis of the adjustment but the formal 
+response must be filed through the portal. 
+Q3. My PAN was incorrectly printed on my PAN card. How do I get it corrected? 
+For PAN card corrections (name, date of birth, address, photo), apply online through the 
+NSDL portal at onlineservices.nsdl.com or UTITSL portal at myutiitsl.com. Submit the 
+correction form with supporting documents (Aadhaar, passport, birth certificate). A corrected 
+PAN card is issued within 15 to 20 days. For corrections related to income tax records linked 
+to the PAN, contact the jurisdictional Aaykar Seva Kendra with the corrected PAN card. 
+Q4. The IT portal shows an outstanding demand from AY 2018-19. I have paid this. What 
+should I do? 
+If you have paid the demand but the portal still shows it as outstanding, raise a grievance on 
+the portal specifying the demand details and attaching the challan/payment proof. 
+Alternatively, contact the Aaykar Sampark Kendra helpline. For older demands (before e-
+filing era), you may need to visit your jurisdictional income tax ward with the payment challan 
+and request correction in the demand register. Most old demands that have been paid can 
+be resolved by submitting the challan copy. 
+Q5. I lost my ITR-V acknowledgement for a return filed 3 years ago. Can I get a copy? 
+Yes. Log in to the IT portal and navigate to e-File > View Filed Returns. Select the relevant 
+assessment year and download the ITR-V acknowledgement (PDF format). The IT portal 
+retains ITR-V copies for all years that were filed electronically. If the return was paper-filed 
+(before e-filing was mandatory), contact your jurisdictional income tax officer for a copy. 
+ 
+  
+---PAGE 38---
+ARTICLE 9 OF 9 | TAX AUDIT 
+Tax Audit Report Form 3CD: Key Clauses 
+Explained 
+Updated: May 2026 Read time: 10 min read AY: 2026-27 
+ 
+ARTICLE SUMMARY 
+Form 3CD is the Statement of Particulars to be furnished under Section 44AB of the 
+Income Tax Act as part of the tax audit report. It contains 44 clauses (as amended) 
+covering virtually every aspect of the taxpayer's business or profession: method of 
+accounting, depreciation, loans and advances, related party transactions, deductions under 
+various sections, compliance with TDS obligations, and more. This article explains the most 
+important and complex clauses in Form 3CD and what auditors and taxpayers must 
+disclose. 
+ 
+What is Form 3CD and How It Fits Into the Tax Audit 
+Form 3CD is the annexure to either Form 3CA (when accounts are audited under another law) 
+or Form 3CB (when accounts are audited only for income tax purposes). It is a detailed factual 
+statement prepared by the Chartered Accountant based on the books of account, financial 
+statements, and other documents of the taxpayer. Form 3CD does not express an opinion - it 
+discloses facts and particulars in a standardised format that allows the Income Tax Department 
+to efficiently assess the return. 
+Form 3CD has undergone significant revisions. Clause 30C on permissible deductions under 
+GAAR (General Anti-Avoidance Rules) and Clause 44 on GST turnover reconciliation were 
+added in recent amendments. The current Form 3CD has 44 clauses numbered from 1 to 44. 
+ 
+Key Clauses Grouped by Category 
+Business Information and Accounting Method (Clauses 1-8) 
+Clause Disclosure Required 
+1 and 2 Name, PAN, and address of the taxpayer; nature of business or profession 
+3 Whether accounts are maintained on mercantile (accrual) or cash basis; any 
+change in method from prior year must be disclosed and the effect quantified  
+4 Whether there is any change in the method of valuation of closing stock from the 
+prior year; if yes, the impact on profit or loss 
+5 Name and address of the firm, address of principal place of business 
+---PAGE 39---
+Clause Disclosure Required 
+6 Whether the report relates to a partnership firm; if yes, whether the partnership 
+deed authorises remuneration and interest to partners (critical for Section 40(b) 
+deductibility) 
+ 
+Related Party and Loan Transactions (Clauses 19-23) 
+Clause Disclosure Required 
+19 Amounts not credited to the P&L account: items of a capital nature, items exempt 
+under Section 10, items covered under Sections 28 to 43D, and other items - full 
+details required 
+21 Amounts debited to P&L but disallowable under Sections 40, 40A, 43B, etc. - each 
+disallowance must be separately listed with the applicable section and amount  
+22 Amount of interest inadmissible under Section 23 of the Micro, Small and Medium 
+Enterprises Development Act 2006 (interest on delayed payments to MSMEs) 
+23 Whether any payment to related persons (Section 40A(2)(b)) exceeds the fair market 
+value; excess amount to be disclosed 
+24 Amounts covered by Section 43B: PF, ESI, bonus, interest on government loans, leave 
+encashment, etc. - both the amount payable and the amount actually paid before the 
+ITR due date must be disclosed separately 
+ 
+Depreciation (Clause 18) 
+Clause 18 requires disclosure of depreciation computed under the Income Tax Act (Sections 32 
+and 35) versus depreciation debited to the P&L account as per the companies or accounting 
+standards. Key sub-clauses include: 
+• 18(a): Depreciation under Section 32 - separately for each asset block, rate applied, 
+opening WDV, additions and disposals, closing WDV, and depreciation amount. 
+• 18(b): Amounts admissible under Sections 33AB (tea/coffee/rubber development), 
+33ABA (site restoration fund), 35 (scientific research), 35ABB (telecom licence fee), 
+35AC, 35AD, 35CCC, 35CCD. 
+• Auditors must ensure that the asset additions are supported by invoices, that disposals 
+are correctly computed, and that the correct block rates are applied. 
+ 
+TDS Compliance (Clause 34) 
+Clause 34 is one of the most detailed and scrutinised clauses. It requires disclosure of: 
+• Whether TDS has been deducted at correct rates on all payments liable to TDS (salary, 
+rent, interest, professional fees, contractor payments, etc.). 
+• Whether TDS deducted has been paid on time to the government. 
+• Whether TDS returns (Form 24Q, 26Q, 27Q, 27EQ) have been filed on time. 
+• Details of any TDS deducted but not paid, or any payment made without deduction of 
+TDS where TDS was required. 
+---PAGE 40---
+• Details of interest paid or payable under Section 201 for late TDS payment or late filing 
+of TDS returns. 
+The IT Department cross-references Clause 34 disclosures with the TRACES TDS database. 
+Any mismatch between what is declared in Clause 34 and the TRACES records triggers 
+scrutiny notices. 
+ 
+GAAR and International Transactions (Clauses 30C and 30D) 
+Clause 30C (added by the 2018 amendment) requires the tax auditor to report whether any 
+impermissible avoidance arrangement within the meaning of Section 95 (GAAR) has been 
+identified in the books of the taxpayer. If the auditor identifies any arrangement, its nature, 
+parties involved, and the claimed tax benefit must be disclosed. 
+Clause 30D requires disclosure of whether the taxpayer has entered into specified domestic 
+transactions under Section 92BA or international transactions under Section 92B, and whether 
+transfer pricing documentation under Section 92D has been maintained. 
+ 
+GST Reconciliation (Clause 44) 
+Clause 44, added by a recent amendment, requires the tax auditor to provide a reconciliation 
+between the total turnover or gross receipts reported in the income tax return and the total 
+turnover reported in GST returns (GSTR-1 and GSTR-3B) for the year. This reconciliation must 
+explain all differences arising from: advance receipts, exempt supplies, zero-rated exports, non-
+GST supplies, and any other reconciling items. 
+Clause 44 has become one of the most labour-intensive clauses for tax auditors since it 
+requires co-ordination with the GST consultant and reconciliation of two different tax returns 
+prepared under two different accounting systems. 
+ 
+Form 3CD Clause What Triggers Scrutiny Risk 
+Clause 3 (change in 
+accounting method) 
+Change from cash to mercantile or vice versa without disclosure can lead 
+to income escaping tax 
+Clause 18 (depreciation) Incorrect block rates, additions claimed without invoice support, WDV 
+mismatch with prior year return 
+Clause 21 
+(disallowances) 
+Large amounts disallowable under 40A(3) (cash payments above Rs. 
+10,000), or 43B non-compliance 
+Clause 34 (TDS) Non-deduction of TDS on large contractor or professional fee payments 
+leads to 30% disallowance under Section 40(a)(ia) 
+Clause 40 (SFT 
+reporting) 
+Non-reporting of specified financial transactions (SFT) above threshold 
+amounts 
+ 
+Pro Tip 
+Taxpayers being audited for the first time should prepare a detailed workings file for each clause 
+of Form 3CD before meeting the CA. Organise supporting documents clause by clause: a 
+---PAGE 41---
+depreciation schedule for Clause 18, a TDS payment register for Clause 34, a list of cash 
+payments above Rs. 10,000 for Clause 21, and the GST turnover reconciliation for Clause 44. A 
+well-organised client file reduces audit time, reduces errors in the report, and reduces the risk of 
+incorrect disclosures. 
+ 
+KEY TAKEAWAYS 
+1.  Form 3CD is a 44-clause disclosure statement filed as part of the tax audit report under 
+Section 44AB, prepared by a Chartered Accountant. 
+2.  Clause 3 requires disclosure of accounting method and any change from the prior year, 
+quantifying the impact on profit or loss. 
+3.  Clause 18 covers depreciation under the Income Tax Act - asset blocks, rates, additions, 
+disposals, and admissible Section 35 expenses. 
+4.  Clause 21 requires itemised disclosure of all disallowable expenditure under Sections 40, 
+40A, 43B and similar provisions. 
+5.  Clause 34 is the TDS compliance clause - it discloses whether TDS was deducted correctly, 
+deposited on time, and returns filed on time. 
+6.  Clause 30C covers GAAR impermissible avoidance arrangements; Clause 30D covers 
+transfer pricing transactions. 
+7.  Clause 44 requires a reconciliation between income tax turnover and GST turnover - one of 
+the most complex and scrutinised clauses. 
+ 
+Frequently Asked Questions 
+Q1. The CA found an error in the Form 3CD after filing the tax audit report. What is the 
+process to revise it? 
+A revised tax audit report (revised Form 3CD) can be filed before the ITR due date. The CA 
+uploads the revised form with a note in the report explaining the reason for revision. If the 
+error is discovered after the ITR due date, a revised ITR along with the revised audit report 
+can be filed before December 31 of the assessment year. Both the revised audit report and 
+the revised ITR must be consistent with each other. 
+Q2. Clause 34 shows that TDS was not deducted on a Rs. 10 lakh payment to a 
+contractor. What is the consequence? 
+Non-deduction of TDS on a payment that required TDS under Section 194C results in 30% 
+of that payment being disallowed as a deduction under Section 40(a)(ia). So Rs. 3 lakh of 
+the Rs. 10 lakh payment is added back to taxable income. Additionally, the taxpayer is 
+treated as an 'assessee in default' for the TDS amount and interest under Section 201(1A) is 
+payable. The TDS disallowance is permanent unless the payee can demonstrate that they 
+have paid tax on that income (in which case disallowance under 40(a)(ia) is not triggered). 
+---PAGE 42---
+Q3. What is the consequence of reporting an impermissible avoidance arrangement 
+under Clause 30C? 
+Disclosure under Clause 30C puts the Income Tax Department on notice about the 
+arrangement. The GAAR provisions (Sections 95 to 102) allow the Commissioner of Income 
+Tax (GAAR) to examine the arrangement and if found impermissible, disregard it and 
+recompute the tax consequences. GAAR can apply to any arrangement where the main 
+purpose is to obtain a tax benefit and the arrangement lacks commercial substance. 
+Voluntary disclosure in Clause 30C (rather than concealment) is expected to be treated 
+more favourably during any GAAR examination. 
+Q4. My business has no international transactions. Do I need to fill in Clause 30D? 
+If your business has no international transactions (as defined under Section 92B) or 
+specified domestic transactions (Section 92BA), you declare 'Not Applicable' for those sub-
+clauses of Clause 30D. However, the CA must verify through the books and related party 
+schedules that no such transactions have occurred. Transactions with foreign group 
+companies or overseas subsidiaries, even if not substantial, may trigger the international 
+transaction definition. 
+Q5. Our GST turnover and income tax turnover differ by Rs. 12 lakh due to an advance 
+received. How is this handled in Clause 44? 
+Differences between GST and income tax turnover arise frequently from advances, exempt 
+supplies, exports, and timing differences. In Clause 44, the auditor is required to prepare a 
+reconciliation explaining each difference item. An advance receipt (which may be included in 
+GST turnover as supply has been deemed to occur but may not yet be income for income 
+tax purposes) would be listed as a reconciling item in Clause 44 with the amount and 
+reason. Proper reconciliation documentation reduces the risk of the IT Department treating 
+the difference as undisclosed income. 
+ 

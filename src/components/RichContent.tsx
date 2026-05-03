@@ -225,6 +225,25 @@ function tryParseGfmTable(
   return { end: i, headers, rows };
 }
 
+/**
+ * Premium article ordered lists split "Title: body" on the first `:`. URLs in markdown
+ * contain `https:` / `http:` — treat those colons as part of the title, not as separators.
+ */
+function indexOfStepTitleBodyColon(text: string): number {
+  let i = 0;
+  while (i < text.length) {
+    const colon = text.indexOf(':', i);
+    if (colon === -1) return -1;
+    const win = text.slice(Math.max(0, colon - 5), colon + 1).toLowerCase();
+    if (win.endsWith('https:') || win.endsWith('http:')) {
+      i = colon + 1;
+      continue;
+    }
+    return colon;
+  }
+  return -1;
+}
+
 function parseBlocks(raw: string, opts?: { articlePremium?: boolean }): Block[] {
   const ap = !!opts?.articlePremium;
   const lines = raw.split('\n');
@@ -562,8 +581,8 @@ function TableOfContents({
    * the clicked chip's "active" state doesn't flicker mid-jump.
    */
   const suppressObserverUntil = useRef(0);
-  /** Height reserved in-flow so toggling `fixed` does not jump; premium may wrap to two rows. */
-  const pillReservedHeight = articlePremium ? 96 : 56;
+  /** Height reserved in-flow so toggling `fixed` does not jump (single-row TOC strip). */
+  const pillReservedHeight = 56;
   const FLOATING_TOP = 80;
 
   // H2-in-viewport observer — drives chip highlight only.
@@ -667,7 +686,7 @@ function TableOfContents({
         <div
           className={
             articlePremium
-              ? 'flex w-full max-w-full flex-wrap justify-center gap-2 py-1'
+              ? 'flex w-full max-w-full flex-nowrap items-center gap-2 overflow-x-auto overflow-y-hidden py-1.5 pl-1 pr-1 [-webkit-overflow-scrolling:touch] hide-scrollbar toc-fade-mask'
               : 'flex max-w-full items-center gap-1.5 overflow-x-auto rounded-full px-2 py-1.5 hide-scrollbar toc-fade-mask'
           }
           role="tablist"
@@ -685,7 +704,7 @@ function TableOfContents({
                 onClick={() => onJump(it.id)}
                 className={
                   articlePremium
-                    ? `inline-flex max-w-full min-w-0 items-center gap-1.5 rounded-full border px-[0.9rem] py-[0.35rem] text-[length:clamp(12px,1.05vw,14px)] font-semibold leading-normal transition-all ${
+                    ? `inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full border px-[0.9rem] py-[0.35rem] text-[length:clamp(12px,1.05vw,14px)] font-semibold leading-normal transition-all ${
                         isActive
                           ? 'border-transparent bg-[#4f46e5] text-white shadow-sm shadow-indigo-200/40'
                           : 'border-transparent bg-[#f1f5f9] text-[#64748b] hover:bg-slate-200/90 hover:text-slate-700'
@@ -1002,7 +1021,7 @@ const DataTable: React.FC<
                 {row.map((cell, cIdx) => (
                   <td
                     key={cIdx}
-                    className={`align-top px-4 py-3 leading-relaxed text-[#334155] ${
+                    className={`align-middle px-4 py-3 leading-relaxed text-[#334155] ${
                       cIdx === lastIdx ? 'font-semibold text-[#1e40af]' : ''
                     } ${feeColumnRight && cIdx === lastIdx ? 'text-right tabular-nums' : ''}`}
                   >
@@ -1496,27 +1515,28 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
     case 'ol': {
       const shOl = (ctx.sectionHeading ?? '').trim();
       if (ctx.articlePremium) {
-        const n = block.items.length;
         return (
           <ol className="relative mt-6 list-none space-y-0 pl-0" role="list">
             {block.items.map((item, j) => {
-              const colon = item.indexOf(':');
+              const colon = indexOfStepTitleBodyColon(item);
               const stepTitle = colon > 0 ? item.slice(0, colon).trim() : item.trim();
               const stepBody = colon > 0 ? item.slice(colon + 1).trim() : '';
               return (
-                <li key={j} className="relative flex gap-4">
-                  <div className="flex w-9 shrink-0 flex-col items-center" aria-hidden>
-                    {j > 0 ? (
-                      <div className="mb-2 ml-[15px] h-5 w-0 shrink-0 border-l-2 border-dashed border-[#e2e8f0]" />
-                    ) : null}
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#6366f1] to-[#4f46e5] text-[13px] font-bold text-white shadow-sm">
+                <li key={j} className="flex items-stretch gap-3 sm:gap-4">
+                  {/*
+                    Rail must use self-stretch (flex) so its height matches the text column;
+                    bubble is absolutely centered in that rail (in-flow height would be 0 if only abs children).
+                  */}
+                  <div
+                    className="relative w-[1.75rem] shrink-0 self-stretch sm:w-8"
+                    aria-hidden
+                  >
+                    <div className="pointer-events-none absolute left-1/2 top-0 bottom-0 z-0 w-0 -translate-x-1/2 border-l-2 border-dashed border-[#e2e8f0]" />
+                    <div className="absolute left-1/2 top-1/2 z-[1] flex h-6 w-6 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-[#6366f1] to-[#4f46e5] text-[11px] font-bold leading-none text-white shadow-sm sm:h-7 sm:w-7 sm:text-[12px]">
                       {j + 1}
                     </div>
-                    {j < n - 1 ? (
-                      <div className="mt-2 ml-[15px] min-h-[1.5rem] w-0 shrink-0 border-l-2 border-dashed border-[#e2e8f0]" />
-                    ) : null}
                   </div>
-                  <div className="min-w-0 flex-1 pb-8 pt-0.5 last:pb-2">
+                  <div className="min-w-0 flex-1 pb-8 last:pb-2">
                     <p className="font-semibold text-[length:clamp(16px,1.35vw,18px)] leading-snug text-[#1e293b]">
                       {parseInline(stepTitle, { articlePremium: true })}
                     </p>
@@ -1540,33 +1560,24 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
             /^step-by-step process$/i.test(shOl)) ||
           /^process \/ procedure$/i.test(shOl))
       ) {
-        const n = block.items.length;
         return (
           <ol className="mt-3 list-none space-y-0 pl-0" role="list">
             {block.items.map((item, j) => {
               const m = item.match(/^Step\s+\d+\s+—\s*(.+)$/i);
               const rest = m ? m[1].trim() : item;
-              const colon = rest.indexOf(':');
+              const colon = indexOfStepTitleBodyColon(rest);
               const stepTitle = colon > 0 ? rest.slice(0, colon).trim() : rest;
               const stepBody = colon > 0 ? rest.slice(colon + 1).trim() : '';
               return (
-                <li
-                  key={j}
-                  className="flex min-h-0 list-none pb-8 last:pb-0"
-                >
+                <li key={j} className="flex items-stretch gap-2.5 pb-8 last:pb-0 sm:gap-4">
                   <div
-                    className="flex w-7 shrink-0 flex-col items-center self-stretch sm:w-8"
+                    className="relative w-6 shrink-0 self-stretch sm:w-7"
                     aria-hidden
                   >
-                    {j > 0 ? (
-                      <div className="h-2 w-0.5 shrink-0 bg-sky-200/90 sm:h-3" />
-                    ) : null}
-                    <div className="z-[1] flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full border-2 border-sky-800 bg-white text-[12px] font-semibold text-sky-900">
+                    <div className="pointer-events-none absolute left-1/2 top-0 bottom-0 z-0 w-px -translate-x-1/2 bg-sky-200/90" />
+                    <div className="absolute left-1/2 top-1/2 z-[1] flex h-6 w-6 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-sky-800 bg-white text-[11px] font-semibold leading-none text-sky-900 sm:h-7 sm:w-7 sm:text-[12px]">
                       {j + 1}
                     </div>
-                    {j < n - 1 ? (
-                      <div className="min-h-6 w-0.5 flex-1 bg-sky-200/90" />
-                    ) : null}
                   </div>
                   <div className="min-w-0 flex-1 pl-3 text-[16px] leading-relaxed text-gray-800 sm:pl-3.5 sm:text-[17px]">
                     <p className="font-semibold text-gray-900">{parseInline(stepTitle)}</p>
@@ -1593,8 +1604,8 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
               const title = hasTitle ? item.slice(0, dashIdx) : null;
               const desc = hasTitle ? item.slice(dashIdx + 3) : item;
               return (
-                <li key={j} className="flex items-start gap-3">
-                  <span className="mt-[0.25em] flex h-[20px] w-[20px] flex-shrink-0 items-center justify-center rounded-full border border-gray-200 bg-gray-100 text-[11px] font-bold text-gray-500">
+                <li key={j} className="flex items-center gap-3">
+                  <span className="flex h-[20px] w-[20px] shrink-0 items-center justify-center rounded-full border border-gray-200 bg-gray-100 text-[11px] font-bold text-gray-500">
                     {j + 1}
                   </span>
                   <span className="min-w-0 text-[18px] leading-[1.35] text-gray-700">
@@ -1625,10 +1636,10 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
               return (
                 <li
                   key={j}
-                  className="flex items-start gap-3 rounded-xl border border-gray-200/80 bg-gradient-to-b from-white to-slate-50/40 p-3.5 sm:p-4 shadow-sm ring-1 ring-gray-100/40"
+                  className="flex items-center gap-3 rounded-xl border border-gray-200/80 bg-gradient-to-b from-white to-slate-50/40 p-3.5 sm:p-4 shadow-sm ring-1 ring-gray-100/40"
                 >
                   <span
-                    className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-600 text-[12px] font-bold text-white shadow-sm"
+                    className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-blue-600 text-[11px] font-bold leading-none text-white shadow-sm sm:h-8 sm:w-8 sm:text-[12px]"
                     aria-hidden
                   >
                     {j + 1}
@@ -1662,8 +1673,8 @@ const RichBlock: React.FC<{ block: Block; h2InSection: boolean; ctx: BlockRender
             const title = hasTitle ? item.slice(0, dashIdx) : null;
             const desc = hasTitle ? item.slice(dashIdx + 3) : item;
             return (
-              <li key={j} className="flex items-start gap-3">
-                <span className="mt-[0.25em] flex h-[20px] w-[20px] flex-shrink-0 items-center justify-center rounded-full border border-gray-200 bg-gray-100 text-[11px] font-bold text-gray-500">
+              <li key={j} className="flex items-center gap-3">
+                <span className="flex h-[20px] w-[20px] shrink-0 items-center justify-center rounded-full border border-gray-200 bg-gray-100 text-[11px] font-bold text-gray-500">
                   {j + 1}
                 </span>
                 <span className="min-w-0 text-[18px] leading-[1.35] text-gray-700">

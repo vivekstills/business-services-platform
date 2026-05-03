@@ -12,6 +12,12 @@ import {
 } from '../data/articleCategories';
 import { formatReadingTimeLabel } from '../utils/readingTime';
 
+/** Newest first so recently published guides (e.g. batch articles) are easy to find. */
+function articlePublishedTime(a: Article): number {
+  const t = Date.parse(a.date ?? '');
+  return Number.isNaN(t) ? 0 : t;
+}
+
 function CategoryBadge({ cat }: { cat: string }) {
   const cls = getArticleCategoryBadgeClasses(cat);
   return (
@@ -137,7 +143,8 @@ export default function ArticlesPage() {
   const { content } = useContent();
   const allArticles: Article[] = (content.articles ?? [])
     .filter((a) => a.published)
-    .map((a) => ({ ...a, category: normalizeArticleCategory(a.category || '') }));
+    .map((a) => ({ ...a, category: normalizeArticleCategory(a.category || '') }))
+    .sort((a, b) => articlePublishedTime(b) - articlePublishedTime(a));
   const categories: string[] = (content.articleCategories ?? []).map((c) => normalizeArticleCategory(c));
 
   const [search, setSearch] = useState('');

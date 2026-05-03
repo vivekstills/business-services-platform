@@ -1,0 +1,67 @@
+# Taxation of Income from Selling Shares: Complete Guide for FY 2025-26
+
+## Article summary
+
+Gains from selling shares in India are taxed under two distinct regimes depending on the type of share, how long it was held, and whether Securities Transaction Tax (STT) was paid on the transaction. Budget 2024 revised LTCG on equity from 10% to 12.5% and STCG from 15% to 20%, while also enhancing the annual LTCG exemption from Rs. 1 lakh to Rs. 1.25 lakh. This article covers listed shares, unlisted shares, grandfathering of pre- 2018 gains, F&O income treatment, dividend taxation, and ITR reporting for AY 2026-27.
+
+## Classification of share gains: LTCG vs STCG
+
+| Share type | Holding for LTCG | LTCG tax rate | STCG tax rate |
+| --- | --- | --- | --- |
+| Listed equity shares (BSE/NSE) | More than 12 months | 12.5% above Rs. 1.25L annual exemption | 20% (Budget 2024 increase from 15%) |
+| Equity mutual funds (equity-oriented) | More than 12 months | 12.5% above Rs. 1.25L annual exemption | 20% |
+| Unlisted equity shares | More than 24 months | 12.5% without indexation (post Budget 2024) | Slab rate |
+| Preference shares (listed) | More than 12 months | 12.5% | 20% |
+| Debt mutual funds (post April 1, 2023) | Any period | Slab rate - no LTCG benefit | Slab rate |
+| Foreign shares / ADRs / GDRs | More than 24 months | 12.5% without indexation | Slab rate |
+
+## Budget 2024 rate changes: before vs after
+
+| Tax head | Rate before Budget 2024 | Rate after Budget 2024 (July 23, 2024) | Annual exemption |
+| --- | --- | --- | --- |
+| Equity LTCG | 10% (above Rs. 1L exemption) | 12.5% (above Rs. 1.25L exemption) | Rs. 1.25L (enhanced from Rs. 1L) |
+| Equity STCG | 15% | 20% | No exemption - full amount taxable |
+| Unlisted share LTCG | 20% with indexation | 12.5% without indexation | None |
+| Equity fund LTCG | 10% | 12.5% | Rs. 1.25L (shared with equity shares) |
+
+## Rs. 1.25 lakh annual exemption: how it works
+
+ The Rs. 1.25 lakh annual exemption applies to the AGGREGATE of all equity LTCG across all shares and equity mutual funds in a financial year - not per share or per fund. The first Rs. 1.25 lakh of total equity LTCG is tax-free. Only gains above Rs. 1.25 lakh are taxed at 12.5%. This exemption cannot be carried forward - use it or lose it each year.
+
+Grandfathering - Pre-January 31, 2018 Gains For listed equity shares and equity mutual funds, gains accrued up to January 31, 2018 are protected under the grandfathering provision. The cost of acquisition for LTCG purposes is the HIGHER of: (a) actual cost of purchase, or (b) the lower of the FMV on January 31, 2018 and the actual sale price. This prevents taxation of gains that were tax-free under the pre-2018 zero- LTCG regime. 📊 Grandfathering Computation Example: Shares bought in 2015 at Rs. 100. FMV on Jan 31, 2018: Rs. 300. Sold in FY 2025-26 at Rs. 500.
+
+Step 1: FMV on Jan 31, 2018 = Rs. 300 Step 2: Lower of (FMV Jan 31, 2018 vs Actual Sale Price) = Lower of Rs. 300 and Rs. 500 = Rs. 300 Step 3: Cost = Higher of (Actual cost Rs. 100 vs Rs. 300) = Rs. 300 Step 4: LTCG = Rs. 500 - Rs. 300 = Rs. 200 per share
+
+Pre-2018 gain (Rs. 300 - Rs. 100 = Rs. 200) is permanently exempt. Only post-2018 gain (Rs. 500 - Rs. 300 = Rs. 200) is taxable at 12.5%.
+
+Futures & Options (F&O) - Business Income, Not Capital Gains Income from trading in equity Futures and Options (F&O) is NOT treated as capital gains - it is classified as 'Income from Business or Profession' under the Income Tax Act. F&O is treated as a non-speculative business activity. Consequences: • F&O profits are taxed at the applicable slab rate - not at 12.5% or 20%. • F&O losses CAN be set off against business income and carried forward for 8 years (unlike VDA losses). • Expenses (brokerage, internet, advisory fees, subscription costs) are deductible from F&O income. • If F&O turnover (aggregate of profit + loss on settlement) exceeds Rs. 10 crore, tax audit under Section 44AB is mandatory. Below that, Section 44AD presumptive taxation at 6%/8% may be applicable if turnover is within Rs. 3 crore. • F&O traders must use ITR-3 (not ITR-2) since F&O is business income.
+
+Intraday Equity Trading - Speculative Business Gains from intraday trading (buying and selling shares on the same day without taking delivery) are treated as 'Speculative Business Income' - taxable at slab rates. Speculative losses can only be set off against speculative income (not against F&O or salary income) and can be carried forward for 4 years (not 8 years). Intraday traders must also use ITR-3.
+
+Dividend Income - Now Taxable at Slab Rate Before April 1, 2020, dividends were exempt in the recipient's hands (Dividend Distribution Tax was paid by the company). From FY 2020-21 onwards, dividends are taxable in the shareholder's hands at the applicable income tax slab rate. TDS at 10% is deducted by the company on dividends exceeding Rs. 5,000 per year per shareholder. The dividend income is reported under 'Income from Other Sources' in the ITR.
+
+ITR Form to Use - Which ITR for Which Activity Activity ITR Form Required Only salary + LTCG/STCG on listed shares (delivery) ITR-2 Salary + LTCG/STCG + F&O trading + Intraday ITR-3 Business/professional income + shares + F&O ITR-3 Only salary + dividends (no capital gains) ITR-1 if dividend ≤ Rs. 5,000; else ITR-2 Unlisted share gains only ITR-2 (capital gains)
+
+Pro Tip Tax harvesting strategy: If your equity LTCG is approaching Rs. 1.25 lakh but not exceeding it, consider selling enough units to crystallise exactly Rs. 1.25 lakh in gains before March 31 and repurchasing the same shares/units. This books the annual exemption while maintaining your investment position. Repeat annually to progressively step up your cost base and permanently shelter gains that would otherwise be taxable in the future.
+
+## Key takeaways
+
+1. Budget 2024: Equity LTCG now 12.5% (above Rs. 1.25L exemption); Equity STCG now 20% - both increased from prior rates.
+2. Rs. 1.25 lakh annual LTCG exemption is aggregate across all equity shares and equity MFs - not per asset.
+3. Grandfathering protects pre-January 31, 2018 equity gains - cost is stepped up to FMV on that date.
+4. F&O income is taxable as non-speculative business income at slab rates - not as capital gains.
+5. Intraday trading gains are speculative business income - set-off limited to other speculative income.
+6. Dividends are taxable at slab rates from FY 2020-21 onwards - TDS at 10% for dividends above Rs. 5,000/year.
+7. Use ITR-2 for delivery-based share gains; ITR-3 if F&O or intraday trading is involved.
+
+## Frequently asked questions
+
+**Q1.** I have LTCG of Rs. 2 lakh from shares and Rs. 50,000 LTCG loss from equity MFs. What is my net taxable LTCG? LTCG losses from equity MFs can be set off against LTCG gains from shares (and vice versa) since both are long-term capital gains on equity-oriented instruments. Net LTCG = Rs. 2,00,000 - Rs. 50,000 = Rs. 1,50,000. After the Rs. 1.25 lakh exemption: taxable LTCG = Rs. 1,50,000 - Rs. 1,25,000 = Rs. 25,000. Tax at 12.5% = Rs. 3,125. LTCG from equity shares can be offset against LTCG losses from equity MFs freely.
+
+**Q2.** I sold shares at a loss. Can I carry forward the loss? For listed equity STCG losses: can be set off against any LTCG or STCG (equity or non- equity) in the same year, and carried forward for 8 years to be set off against capital gains in future years. For listed equity LTCG losses: can be set off against LTCG only and carried forward 8 years. The ITR must be filed on time (before the July 31 due date) to preserve the carry-forward benefit.
+
+**Q3.** My F&O trading showed a loss of Rs. 5 lakh this year. Can I set it off against my salary income? F&O is classified as non-speculative business income. A non-speculative business loss can be set off against any income head EXCEPT salary in the same year - it can offset rental income, capital gains, or other income but NOT salary. The remaining loss after same-year set-off can be carried forward for 8 years to be set off against any future business income (speculative or non-speculative).
+
+**Q4.** I am an NRI selling listed shares in India. What is the tax treatment? NRIs selling listed equity shares in India pay the same LTCG (12.5% above Rs. 1.25L exemption) and STCG (20%) rates as residents. However, TDS applies on the gross sale proceeds for NRIs - the buyer or broker must deduct TDS at applicable rates. NRIs can claim refund of excess TDS (if actual tax liability is lower) by filing an ITR in India. NRIs also have the option to invest NRI capital in shares through the PIS (Portfolio Investment Scheme) route via an NRE/NRO account.
+
+**Q5.** I received bonus shares from a company I invested in. What is the cost of acquisition of bonus shares? The cost of acquisition of bonus shares is considered as NIL (zero) for income tax purposes. When you sell bonus shares, the entire sale price is taxable as LTCG (if held more than 12 months) or STCG. The Rs. 1.25 lakh annual exemption applies to the LTCG from bonus shares as well. The holding period for bonus shares starts from the date of allotment of the bonus shares - not from the date the original shares were purchased.

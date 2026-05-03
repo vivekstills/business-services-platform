@@ -1,0 +1,152 @@
+ARTICLE 7 OF 9 | INTERNATIONAL TAXATION 
+Form 67 and Foreign Tax Credit: How to Claim 
+Relief on Taxes Paid Abroad 
+Updated: May 2026 Read time: 8 min read AY: 2026-27 
+ 
+ARTICLE SUMMARY 
+Indian residents who earn income from foreign sources (salary, dividends, interest, capital 
+gains, or business income) may have tax withheld by the foreign country on that income. To 
+avoid double taxation, the Income Tax Act under Section 90 or 91 allows a credit for foreign 
+taxes paid against the Indian tax liability. The claim is made by filing Form 67 on the IT 
+portal on or before the ITR filing due date. This article explains the foreign tax credit 
+framework, the eligible foreign taxes, the Form 67 filing procedure, computation rules, and 
+the consequences of late filing. 
+ 
+Legal Basis for Foreign Tax Credit 
+The foreign tax credit (FTC) framework in India is governed by Section 90 (for countries with 
+which India has a Double Taxation Avoidance Agreement - DTAA) and Section 91 (for countries 
+with which India does not have a DTAA). Rule 128 of the Income Tax Rules, 1962 provides the 
+detailed computation rules and the Form 67 requirement. The FTC rules were substantially 
+revised in 2016 (effective AY 2017-18) to provide a more structured framework. 
+ 
+Who Can Claim Foreign Tax Credit? 
+Condition Details 
+Eligible claimant Resident and Ordinarily Resident (ROR) individuals, companies, and other 
+entities in India 
+RNOR and NRI Not eligible for FTC since their foreign income is generally not taxable in 
+India 
+Income type Foreign income that is included in the Indian tax computation and also 
+taxed abroad 
+Foreign tax eligible Tax paid in a foreign country on income that is also taxed in India; must be 
+an income tax (not sales tax, VAT, customs, or other non-income taxes) 
+DTAA countries Credit under Section 90; generally limited to the lower of Indian tax or 
+foreign tax on the same income 
+Non-DTAA countries Credit under Section 91; limited to the lower of Indian tax rate or foreign 
+tax rate on the doubly taxed income 
+ 
+Foreign Tax Credit Computation 
+The FTC is computed separately for each country and for each type or source of income. The 
+credit for any given income is limited to the LOWER of: 
+• The actual foreign tax paid on that income, converted to Indian Rupees at the 
+telegraphic transfer buying rate (TTBR) of the State Bank of India on the last day of the 
+month preceding the month of tax payment. 
+• The Indian tax payable on that foreign income (i.e., the Indian tax attributable to that 
+specific income item). 
+This ensures that FTC cannot exceed the Indian tax on the same income and does not result in 
+a net refund. 
+Example: Foreign Tax Credit Calculation 
+Resident individual: Salary from US employer in FY 2025-26 
+Gross US salary (converted to INR):         Rs. 30,00,000 
+US Federal Income Tax withheld (converted): Rs.  4,50,000 
+ 
+Indian tax computation: 
+  Total income including US salary:         Rs. 45,00,000 
+  Indian tax on total income (new regime):  Rs.  6,75,000 (approx)  
+  Indian tax attributable to US salary: 
+    = Rs. 6,75,000 x (Rs. 30L / Rs. 45L) = Rs. 4,50,000 
+ 
+FTC = LOWER of: 
+  (a) US tax paid:                          Rs. 4,50,000 
+  (b) Indian tax on US income:              Rs. 4,50,000 
+  FTC = Rs. 4,50,000 
+ 
+Indian tax payable after FTC: Rs. 6,75,000 - Rs. 4,50,000 = Rs. 2,25,000 
+(on remaining Indian income) 
+ 
+Form 67: Filing Requirement and Procedure 
+Rule 128(9) mandates that any taxpayer claiming FTC must file Form 67 on the IT portal on or 
+before the due date of filing the income tax return. Form 67 is filed separately from the ITR itself. 
+6. Log in to the IT portal at incometax.gov.in. 
+7. Navigate to: e-File > Income Tax Forms > File Income Tax Forms > Form 67. 
+8. Select the relevant Assessment Year and fill in: the country where tax was paid, the 
+nature of income (salary, dividends, interest, etc.), the amount of foreign income in the 
+foreign currency and INR, the amount of foreign tax paid in foreign currency and INR, 
+and the exchange rate used. 
+9. Upload supporting documents: Tax assessment order or withholding tax certificate from 
+the foreign country showing the tax paid (must be in the foreign country's official 
+language; if not in English, attach a certified translation). 
+10. Submit and e-verify Form 67 using Aadhaar OTP or digital signature. 
+11. Then proceed to file the ITR, which will reference the Form 67 claim. 
+ 
+Important 
+Form 67 must be filed ON OR BEFORE the ITR due date. If Form 67 is filed after the ITR due 
+date (even a day late), the FTC claim is denied entirely. This is one of the most common and 
+costly mistakes made by taxpayers with foreign income. The Delhi High Court has upheld the 
+denial of FTC for late Form 67 filing in multiple cases. 
+ 
+Documents Required for Form 67 
+• Tax Residency Certificate (if claiming DTAA benefits along with FTC) 
+• Foreign tax payment proof: withholding certificate issued by the foreign employer or 
+payer (e.g., W-2 form from US, P60 from UK, or equivalent) 
+• Foreign tax assessment order or foreign ITR showing taxes paid (for countries where the 
+taxpayer files their own return abroad) 
+• Bank statement showing remittance of tax to the foreign government (if self-assessed) 
+• Exchange rate certificate from SBI or authorised dealer bank for the conversion rate 
+used 
+ 
+Pro Tip 
+NRIs returning to India who become ROR in their first or second year back should track foreign 
+income and foreign taxes paid from day one. Once ROR status is attained, global income 
+becomes taxable in India. Set up the Form 67 filing as a recurring calendar reminder well before 
+July 31 each year to ensure it is never filed late. 
+ 
+KEY TAKEAWAYS 
+1.  Foreign Tax Credit (FTC) under Section 90/91 allows a credit for taxes paid in a foreign 
+country against Indian tax on the same income. 
+2.  FTC is limited to the lower of: actual foreign tax paid (in INR) or Indian tax attributable to the 
+foreign income. 
+3.  Form 67 must be filed on the IT portal on or before the ITR due date. Filing after the due date 
+results in total denial of the FTC claim. 
+4.  FTC is available to Resident and Ordinarily Resident (ROR) taxpayers only; NRIs and 
+RNORs are generally not eligible. 
+5.  Separate FTC computation is required for each country and each type of income. 
+6.  Supporting documents must include the foreign tax withholding certificate or equivalent proof 
+of tax paid abroad. 
+7.  Under Section 91, for non-DTAA countries, FTC is the lower of Indian tax rate or foreign tax 
+rate on the doubly taxed income. 
+ 
+Frequently Asked Questions 
+Q1. I received dividends from a US company. The US withheld 25% tax. Can I claim FTC 
+in India? 
+Yes. US-source dividends are taxable in India for ROR residents. If the US withheld 25% (or 
+the treaty rate of 15% under the India-US DTAA), you can claim FTC for the foreign tax 
+withheld. Under the India-US DTAA, the treaty rate for dividends is 15% or 25% depending 
+on shareholding. Compute the Indian tax attributable to the dividend income and claim FTC 
+for the lower of: foreign tax withheld or Indian tax on the dividend. File Form 67 before your 
+ITR due date. 
+Q2. My Form 67 was filed on August 5 but my ITR due date was July 31. What happens? 
+The FTC claim will be denied. Rule 128(9) makes filing Form 67 on or before the ITR due 
+date a mandatory condition for claiming FTC. If you missed the July 31 deadline, the late 
+Form 67 filed on August 5 does not preserve the FTC claim. You may explore whether the 
+ITR itself was filed under a condonation of delay (Section 119(2)(b)) and whether the Form 
+67 can be considered under the same condonation. However, such condonation is 
+discretionary and not guaranteed. 
+Q3. I paid tax in a country that does not have a DTAA with India. Can I still claim FTC? 
+Yes. Section 91 provides FTC for countries that do not have a DTAA with India (currently 
+applicable for a limited number of countries). The credit is computed as the lower of the 
+Indian tax rate on the income or the foreign country's tax rate on the same income, applied 
+to the doubly taxed income. The procedure (Form 67 filing) and conditions remain the same 
+as for DTAA countries. 
+Q4. Can FTC be carried forward if it exceeds my Indian tax liability in the current year? 
+No. FTC is not carrried forward or refunded. The credit is available only in the year the 
+foreign income is taxable in India. Any excess FTC (foreign tax paid exceeding Indian tax on 
+that income) is simply lost for that year. There is no mechanism to utilise the excess FTC in 
+future years. This is one of the limitations of the current FTC framework and differs from the 
+treatment in some other countries. 
+Q5. I am a returning NRI who has been RNOR for 2 years. Am I eligible for FTC? 
+During the RNOR period, foreign income that arises from a business controlled outside India 
+or from a profession set up outside India is not taxable in India. Since such income is not 
+included in Indian tax base, no FTC is applicable for those years. Once you attain ROR 
+status (from year 3 typically), your global income is taxable in India and FTC becomes 
+available for foreign taxes on that global income. Plan your Form 67 filing from the first year 
+you attain ROR status.

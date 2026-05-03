@@ -1,8 +1,10 @@
-# FSSAI registration vs FSSAI license: key differences explained
+# FSSAI Registration vs FSSAI License: Key Differences Explained
+
+## Introduction
 
 The Food Safety and Standards Authority of India (FSSAI) is the regulatory body responsible for ensuring that food sold across India meets safety and quality standards. Whether you are starting a home bakery, a cloud kitchen, a restaurant chain, or importing food products, you will need FSSAI authorisation before you can legally operate.
 
-The confusion for most food business operators is whether they need a basic registration or a state or central license. These are not interchangeable. Using the wrong category can result in penalties, cancellations, and business disruptions. This guide clarifies the differences definitively.
+The confusion for most food business operators is whether they need a basic registration or a state/central license. These are not interchangeable. Using the wrong category can result in penalties, cancellations, and business disruptions. This guide clarifies the differences definitively.
 
 ## The three types of FSSAI authorisation
 
